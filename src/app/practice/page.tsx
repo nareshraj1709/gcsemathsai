@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
@@ -48,7 +48,15 @@ type MarkResult = {
   feedback: string
 }
 
-export default function Practice() {
+export default function PracticePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center"><p className="text-purple-700 font-semibold">Loading...</p></div>}>
+      <Practice />
+    </Suspense>
+  )
+}
+
+function Practice() {
   const searchParams = useSearchParams()
   const [qIndex, setQIndex] = useState(0)
   const [answer, setAnswer] = useState('')
