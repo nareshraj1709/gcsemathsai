@@ -26,6 +26,80 @@ const sectionBg: Record<string, string> = {
   '#DC2626': '#FFF5F5',
 }
 
+// ── YouTube Sidebar ───────────────────────────────────────────
+function YoutubeSidebar({ entry }: { entry: SubtopicContent }) {
+  const terms: string[] = entry.videoSearchTerms && entry.videoSearchTerms.length > 0
+    ? entry.videoSearchTerms
+    : [`GCSE maths ${entry.subtopic}`, `${entry.topic} ${entry.subtopic} GCSE`, `GCSE maths ${entry.subtopic} explained`]
+
+  return (
+    <aside style={{
+      position: 'sticky',
+      top: 88,
+      width: 240,
+      flexShrink: 0,
+      alignSelf: 'flex-start',
+    }}>
+      {/* Header */}
+      <div style={{
+        background: '#DC2626',
+        borderRadius: '14px 14px 0 0',
+        padding: '12px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 8,
+      }}>
+        <span style={{ fontSize: 18 }}>▶️</span>
+        <div>
+          <p style={{ fontSize: 13, fontWeight: 800, color: '#fff', margin: 0 }}>Watch on YouTube</p>
+          <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.8)', margin: 0 }}>Free video lessons</p>
+        </div>
+      </div>
+
+      {/* Search term chips */}
+      <div style={{
+        background: '#fff',
+        border: '1.5px solid #FECACA',
+        borderTop: 'none',
+        borderRadius: '0 0 14px 14px',
+        padding: '14px 14px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 8,
+      }}>
+        <p style={{ fontSize: 11, fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: 0.8, margin: '0 0 4px' }}>
+          Search by keyword
+        </p>
+        {terms.map((term, i) => (
+          <a
+            key={i}
+            href={`https://www.youtube.com/results?search_query=${encodeURIComponent(term)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 8,
+              background: '#FFF5F5',
+              border: '1.5px solid #FECACA',
+              borderRadius: 10,
+              padding: '9px 12px',
+              textDecoration: 'none',
+              transition: 'all 0.15s',
+            }}
+          >
+            <span style={{ fontSize: 13, color: '#DC2626', flexShrink: 0 }}>▶</span>
+            <span style={{ fontSize: 12, fontWeight: 600, color: '#7F1D1D', lineHeight: 1.35 }}>{term}</span>
+          </a>
+        ))}
+        <p style={{ fontSize: 11, color: '#D1D5DB', margin: '4px 0 0', lineHeight: 1.4 }}>
+          Opens YouTube search — pick any free video that suits you.
+        </p>
+      </div>
+    </aside>
+  )
+}
+
 export default function StudyTopicPage({ params }: Props) {
   const entry: SubtopicContent | undefined = CONTENT.find(
     c => toSlug(c.topic, c.subtopic) === params.slug
@@ -34,7 +108,6 @@ export default function StudyTopicPage({ params }: Props) {
 
   // Not found — show coming soon with YouTube search
   if (!entry || !meta) {
-    // Try to extract a readable topic name from the slug for the YouTube search
     const readableQuery = (params.slug ?? '').replace(/-/g, ' ')
     return (
       <main className="min-h-screen bg-gray-50 px-6 py-12">
@@ -45,28 +118,25 @@ export default function StudyTopicPage({ params }: Props) {
             We&apos;re writing the study guide for this subtopic. In the meantime, search YouTube for a free video explanation.
           </p>
 
-          {/* YouTube search banner */}
           <div style={{
             background: '#FFF5F5', border: '1.5px solid #FECACA',
             borderRadius: 16, padding: '20px', marginBottom: 24, textAlign: 'left',
           }}>
             <p style={{ fontSize: 14, fontWeight: 700, color: '#DC2626', margin: '0 0 4px' }}>▶️ Watch on YouTube</p>
             <p style={{ fontSize: 13, color: '#6B7280', margin: '0 0 14px' }}>Find free GCSE Maths video explanations while we finish writing the notes.</p>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              <a
-                href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(readableQuery)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 6,
-                  background: '#DC2626', color: '#fff',
-                  padding: '9px 18px', borderRadius: 10,
-                  fontWeight: 700, fontSize: 13, textDecoration: 'none',
-                }}
-              >
-                ▶ Search on YouTube
-              </a>
-            </div>
+            <a
+              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(readableQuery)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 6,
+                background: '#DC2626', color: '#fff',
+                padding: '9px 18px', borderRadius: 10,
+                fontWeight: 700, fontSize: 13, textDecoration: 'none',
+              }}
+            >
+              ▶ Search on YouTube
+            </a>
           </div>
 
           <Link href="/study"
@@ -130,215 +200,176 @@ export default function StudyTopicPage({ params }: Props) {
         </p>
       </div>
 
-      <div style={{ maxWidth: 760, margin: '0 auto', padding: '32px 24px 60px' }}>
+      {/* Two-column layout */}
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '32px 24px 60px', display: 'flex', gap: 28, alignItems: 'flex-start' }}>
 
-        {/* Watch on YouTube */}
-        <div style={{
-          background: '#FFF5F5', border: '1.5px solid #FECACA',
-          borderRadius: 16, padding: '16px 20px', marginBottom: 20,
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12,
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 22 }}>▶️</span>
-            <div>
-              <p style={{ fontSize: 13, fontWeight: 700, color: '#DC2626', margin: 0 }}>Watch on YouTube</p>
-              <p style={{ fontSize: 12, color: '#9CA3AF', margin: 0 }}>Find free video explanations for this topic</p>
-            </div>
-          </div>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            <a
-              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(entry.subtopic)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 6,
-                background: '#DC2626', color: '#fff',
-                padding: '9px 18px', borderRadius: 10,
-                fontWeight: 700, fontSize: 13, textDecoration: 'none',
-              }}
-            >
-              ▶ Search: GCSE {entry.subtopic}
-            </a>
-            <a
-              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(entry.subtopic)}+${encodeURIComponent(entry.topic)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 6,
-                background: '#fff', color: '#DC2626',
-                border: '1.5px solid #FECACA',
-                padding: '9px 18px', borderRadius: 10,
-                fontWeight: 700, fontSize: 13, textDecoration: 'none',
-              }}
-            >
-              ▶ {entry.topic} — {entry.subtopic}
-            </a>
-          </div>
-        </div>
+        {/* ── Left: main notes content ─────────────────────── */}
+        <div style={{ flex: 1, minWidth: 0 }}>
 
-        {/* Key Facts */}
-        <Section title="Key facts to remember" emoji="🔑" color={meta.color} bg={bg}>
-          <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
-            {entry.keyFacts.map((fact, i) => (
-              <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                <span style={{
-                  width: 22, height: 22, borderRadius: '50%', flexShrink: 0,
-                  background: meta.color, color: '#fff',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 11, fontWeight: 700, marginTop: 1,
-                }}>{i + 1}</span>
-                <span style={{ fontSize: 14, color: '#1F2937', lineHeight: 1.55 }}>{fact}</span>
-              </li>
-            ))}
-          </ul>
-        </Section>
+          {/* Key Facts */}
+          <Section title="Key facts to remember" emoji="🔑" color={meta.color} bg={bg}>
+            <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {entry.keyFacts.map((fact, i) => (
+                <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                  <span style={{
+                    width: 22, height: 22, borderRadius: '50%', flexShrink: 0,
+                    background: meta.color, color: '#fff',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 11, fontWeight: 700, marginTop: 1,
+                  }}>{i + 1}</span>
+                  <span style={{ fontSize: 14, color: '#1F2937', lineHeight: 1.55 }}>{fact}</span>
+                </li>
+              ))}
+            </ul>
+          </Section>
 
-        {/* Formulas */}
-        {entry.formulas && entry.formulas.length > 0 && (
-          <Section title="Formulas" emoji="📐" color={meta.color} bg={bg}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {entry.formulas.map((f, i) => (
-                <div key={i} style={{
-                  background: '#fff', borderRadius: 12,
-                  border: `1.5px solid ${meta.color}33`,
-                  padding: '14px 18px',
-                  display: 'flex', gap: 16, alignItems: 'flex-start', flexWrap: 'wrap',
-                }}>
-                  <div style={{ flex: '0 0 auto', minWidth: 100 }}>
-                    <div style={{ fontSize: 11, fontWeight: 700, color: meta.color, marginBottom: 2 }}>
-                      {f.name}
+          {/* Formulas */}
+          {entry.formulas && entry.formulas.length > 0 && (
+            <Section title="Formulas" emoji="📐" color={meta.color} bg={bg}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {entry.formulas.map((f, i) => (
+                  <div key={i} style={{
+                    background: '#fff', borderRadius: 12,
+                    border: `1.5px solid ${meta.color}33`,
+                    padding: '14px 18px',
+                    display: 'flex', gap: 16, alignItems: 'flex-start', flexWrap: 'wrap',
+                  }}>
+                    <div style={{ flex: '0 0 auto', minWidth: 100 }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: meta.color, marginBottom: 2 }}>
+                        {f.name}
+                      </div>
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <code style={{
+                        fontSize: 15, fontWeight: 700, color: '#0D0B1A',
+                        fontFamily: "'Courier New', monospace",
+                        background: bg, padding: '3px 10px', borderRadius: 6,
+                      }}>
+                        {f.formula}
+                      </code>
+                      {f.notes && (
+                        <p style={{ fontSize: 12, color: '#6B7280', margin: '6px 0 0' }}>{f.notes}</p>
+                      )}
                     </div>
                   </div>
-                  <div style={{ flex: 1 }}>
-                    <code style={{
-                      fontSize: 15, fontWeight: 700, color: '#0D0B1A',
-                      fontFamily: "'Courier New', monospace",
-                      background: bg, padding: '3px 10px', borderRadius: 6,
-                    }}>
-                      {f.formula}
-                    </code>
-                    {f.notes && (
-                      <p style={{ fontSize: 12, color: '#6B7280', margin: '6px 0 0' }}>{f.notes}</p>
-                    )}
+                ))}
+              </div>
+            </Section>
+          )}
+
+          {/* Worked Examples */}
+          <Section title="Worked examples" emoji="✍️" color={meta.color} bg={bg}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {entry.workedExamples.map((ex, i) => (
+                <div key={i} style={{
+                  background: '#fff', border: `1.5px solid ${meta.color}33`,
+                  borderRadius: 14, overflow: 'hidden',
+                }}>
+                  <div style={{
+                    background: bg, borderBottom: `1px solid ${meta.color}22`,
+                    padding: '14px 18px',
+                  }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: meta.color }}>
+                      Example {i + 1}
+                    </span>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: '#0D0B1A', margin: '4px 0 0', lineHeight: 1.45 }}>
+                      {ex.question}
+                    </p>
+                  </div>
+
+                  <div style={{ padding: '14px 18px', borderBottom: `1px solid #F3F4F6` }}>
+                    <p style={{ fontSize: 11, fontWeight: 700, color: '#6B7280', margin: '0 0 8px', textTransform: 'uppercase', letterSpacing: 1 }}>
+                      Working
+                    </p>
+                    <ol style={{ margin: 0, paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                      {ex.steps.map((step, j) => (
+                        <li key={j} style={{ fontSize: 14, color: '#374151', lineHeight: 1.5 }}>{step}</li>
+                      ))}
+                    </ol>
+                  </div>
+
+                  <div style={{
+                    padding: '12px 18px', background: `${meta.color}08`,
+                    display: 'flex', gap: 8, alignItems: 'center',
+                  }}>
+                    <span style={{
+                      fontSize: 11, fontWeight: 700, color: '#fff',
+                      background: meta.color, padding: '2px 8px', borderRadius: 999,
+                    }}>Answer</span>
+                    <span style={{ fontSize: 14, fontWeight: 700, color: meta.color }}>{ex.answer}</span>
                   </div>
                 </div>
               ))}
             </div>
           </Section>
-        )}
 
-        {/* Worked Examples */}
-        <Section title="Worked examples" emoji="✍️" color={meta.color} bg={bg}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {entry.workedExamples.map((ex, i) => (
-              <div key={i} style={{
-                background: '#fff', border: `1.5px solid ${meta.color}33`,
-                borderRadius: 14, overflow: 'hidden',
-              }}>
-                {/* Question */}
-                <div style={{
-                  background: bg, borderBottom: `1px solid ${meta.color}22`,
-                  padding: '14px 18px',
+          {/* Common Mistakes */}
+          <Section title="Common mistakes" emoji="⚠️" color="#D97706" bg="#FFFBEB">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {entry.commonMistakes.map((m, i) => (
+                <div key={i} style={{
+                  display: 'flex', gap: 10, alignItems: 'flex-start',
+                  background: '#fff', borderRadius: 10,
+                  border: '1px solid #FDE68A', padding: '12px 14px',
                 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: meta.color }}>
-                    Example {i + 1}
-                  </span>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: '#0D0B1A', margin: '4px 0 0', lineHeight: 1.45 }}>
-                    {ex.question}
-                  </p>
+                  <span style={{ fontSize: 16, flexShrink: 0 }}>✗</span>
+                  <span style={{ fontSize: 14, color: '#92400E', lineHeight: 1.5 }}>{m}</span>
                 </div>
+              ))}
+            </div>
+          </Section>
 
-                {/* Steps */}
-                <div style={{ padding: '14px 18px', borderBottom: `1px solid #F3F4F6` }}>
-                  <p style={{ fontSize: 11, fontWeight: 700, color: '#6B7280', margin: '0 0 8px', textTransform: 'uppercase', letterSpacing: 1 }}>
-                    Working
-                  </p>
-                  <ol style={{ margin: 0, paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 6 }}>
-                    {ex.steps.map((step, j) => (
-                      <li key={j} style={{ fontSize: 14, color: '#374151', lineHeight: 1.5 }}>{step}</li>
-                    ))}
-                  </ol>
-                </div>
-
-                {/* Answer */}
-                <div style={{
-                  padding: '12px 18px', background: `${meta.color}08`,
-                  display: 'flex', gap: 8, alignItems: 'center',
+          {/* Exam Tips */}
+          <Section title="Exam tips" emoji="🎯" color="#059669" bg="#F0FDF4">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {entry.examTips.map((tip, i) => (
+                <div key={i} style={{
+                  display: 'flex', gap: 10, alignItems: 'flex-start',
+                  background: '#fff', borderRadius: 10,
+                  border: '1px solid #A7F3D0', padding: '12px 14px',
                 }}>
-                  <span style={{
-                    fontSize: 11, fontWeight: 700, color: '#fff',
-                    background: meta.color, padding: '2px 8px', borderRadius: 999,
-                  }}>Answer</span>
-                  <span style={{ fontSize: 14, fontWeight: 700, color: meta.color }}>{ex.answer}</span>
+                  <span style={{ fontSize: 16, flexShrink: 0 }}>✓</span>
+                  <span style={{ fontSize: 14, color: '#065F46', lineHeight: 1.5 }}>{tip}</span>
                 </div>
-              </div>
-            ))}
-          </div>
-        </Section>
+              ))}
+            </div>
+          </Section>
 
-        {/* Common Mistakes */}
-        <Section title="Common mistakes" emoji="⚠️" color="#D97706" bg="#FFFBEB">
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {entry.commonMistakes.map((m, i) => (
-              <div key={i} style={{
-                display: 'flex', gap: 10, alignItems: 'flex-start',
-                background: '#fff', borderRadius: 10,
-                border: '1px solid #FDE68A', padding: '12px 14px',
-              }}>
-                <span style={{ fontSize: 16, flexShrink: 0 }}>✗</span>
-                <span style={{ fontSize: 14, color: '#92400E', lineHeight: 1.5 }}>{m}</span>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* Exam Tips */}
-        <Section title="Exam tips" emoji="🎯" color="#059669" bg="#F0FDF4">
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {entry.examTips.map((tip, i) => (
-              <div key={i} style={{
-                display: 'flex', gap: 10, alignItems: 'flex-start',
-                background: '#fff', borderRadius: 10,
-                border: '1px solid #A7F3D0', padding: '12px 14px',
-              }}>
-                <span style={{ fontSize: 16, flexShrink: 0 }}>✓</span>
-                <span style={{ fontSize: 14, color: '#065F46', lineHeight: 1.5 }}>{tip}</span>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* Practice CTA */}
-        <div style={{
-          background: `linear-gradient(135deg, #4C1D95, #6D28D9)`,
-          borderRadius: 20, padding: '28px 32px', textAlign: 'center', color: '#fff',
-          marginTop: 8,
-        }}>
-          <p style={{ fontSize: 16, fontWeight: 800, fontFamily: "'Georgia', serif", margin: '0 0 6px' }}>
-            Ready to test yourself on {entry.subtopic}?
-          </p>
-          <p style={{ fontSize: 13, opacity: 0.8, margin: '0 0 18px' }}>
-            Get AI-marked practice questions on exactly this subtopic.
-          </p>
-          <Link href={practiceHref} style={{
-            display: 'inline-block',
-            background: '#fff', color: '#6D28D9',
-            padding: '11px 28px', borderRadius: 12,
-            fontWeight: 700, fontSize: 14, textDecoration: 'none',
+          {/* Practice CTA */}
+          <div style={{
+            background: `linear-gradient(135deg, #4C1D95, #6D28D9)`,
+            borderRadius: 20, padding: '28px 32px', textAlign: 'center', color: '#fff',
+            marginTop: 8,
           }}>
-            Practice this topic →
-          </Link>
+            <p style={{ fontSize: 16, fontWeight: 800, fontFamily: "'Georgia', serif", margin: '0 0 6px' }}>
+              Ready to test yourself on {entry.subtopic}?
+            </p>
+            <p style={{ fontSize: 13, opacity: 0.8, margin: '0 0 18px' }}>
+              Get AI-marked practice questions on exactly this subtopic.
+            </p>
+            <Link href={practiceHref} style={{
+              display: 'inline-block',
+              background: '#fff', color: '#6D28D9',
+              padding: '11px 28px', borderRadius: 12,
+              fontWeight: 700, fontSize: 14, textDecoration: 'none',
+            }}>
+              Practice this topic →
+            </Link>
+          </div>
+
+          {/* Breadcrumb footer */}
+          <div style={{ marginTop: 32, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            <Link href="/study" style={{ fontSize: 13, color: '#6B7280', textDecoration: 'none' }}>
+              ← All topics
+            </Link>
+            <Link href="/dashboard" style={{ fontSize: 13, color: '#6B7280', textDecoration: 'none' }}>
+              Dashboard
+            </Link>
+          </div>
         </div>
 
-        {/* Breadcrumb footer */}
-        <div style={{ marginTop: 32, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-          <Link href="/study" style={{ fontSize: 13, color: '#6B7280', textDecoration: 'none' }}>
-            ← All topics
-          </Link>
-          <Link href="/dashboard" style={{ fontSize: 13, color: '#6B7280', textDecoration: 'none' }}>
-            Dashboard
-          </Link>
-        </div>
+        {/* ── Right: YouTube sticky sidebar ────────────────── */}
+        <YoutubeSidebar entry={entry} />
       </div>
     </main>
   )
