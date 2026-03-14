@@ -205,6 +205,45 @@ export default function StudyTopicPage({ params }: Props) {
           </div>
         </Section>
 
+        {/* Watch on YouTube */}
+        <Section title="Watch on YouTube" emoji="▶️" color="#DC2626" bg="#FFF5F5">
+          <p style={{ fontSize: 13, color: '#6B7280', margin: '0 0 14px', lineHeight: 1.55 }}>
+            Search YouTube for free GCSE Maths video explanations on this topic. Look for clear, step-by-step walkthroughs that match your exam board.
+          </p>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <a
+              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(entry.subtopic)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                background: '#DC2626', color: '#fff',
+                padding: '10px 20px', borderRadius: 10,
+                fontWeight: 700, fontSize: 13, textDecoration: 'none',
+              }}
+            >
+              ▶ Search: GCSE {entry.subtopic}
+            </a>
+            <a
+              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(entry.subtopic)}+${encodeURIComponent(entry.topic)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                background: '#fff', color: '#DC2626',
+                border: '1.5px solid #FECACA',
+                padding: '10px 20px', borderRadius: 10,
+                fontWeight: 700, fontSize: 13, textDecoration: 'none',
+              }}
+            >
+              ▶ Search: {entry.topic} — {entry.subtopic}
+            </a>
+          </div>
+          <p style={{ fontSize: 11, color: '#9CA3AF', margin: '10px 0 0' }}>
+            Opens YouTube in a new tab. Pick a video that suits your learning style.
+          </p>
+        </Section>
+
         {/* Common Mistakes */}
         <Section title="Common mistakes" emoji="⚠️" color="#D97706" bg="#FFFBEB">
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
