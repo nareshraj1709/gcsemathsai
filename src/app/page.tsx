@@ -292,8 +292,13 @@ export default function Home() {
       <footer className="px-6 py-6 border-t border-gray-100 flex justify-between items-center flex-wrap gap-4">
         <span className="font-semibold text-gray-900">GCSEMathsAI</span>
         <div className="flex gap-5">
-          {['Privacy', 'Terms', 'Contact', 'Blog'].map(l => (
-            <span key={l} className="text-xs text-gray-400 cursor-pointer hover:text-gray-600 transition">{l}</span>
+          {[
+            { label: 'Privacy', href: '/privacy' },
+            { label: 'Terms', href: '/terms' },
+            { label: 'Contact', href: '/contact' },
+            { label: 'Blog', href: '/blog' },
+          ].map(l => (
+            <a key={l.label} href={l.href} className="text-xs text-gray-400 hover:text-gray-600 transition">{l.label}</a>
           ))}
         </div>
         <span className="text-xs text-gray-400">© 2026 gcsemathsai.co.uk</span>
