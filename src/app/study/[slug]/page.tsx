@@ -105,6 +105,50 @@ export default function StudyTopicPage({ params }: Props) {
 
       <div style={{ maxWidth: 760, margin: '0 auto', padding: '32px 24px 60px' }}>
 
+        {/* Watch on YouTube */}
+        <div style={{
+          background: '#FFF5F5', border: '1.5px solid #FECACA',
+          borderRadius: 16, padding: '16px 20px', marginBottom: 20,
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12,
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ fontSize: 22 }}>▶️</span>
+            <div>
+              <p style={{ fontSize: 13, fontWeight: 700, color: '#DC2626', margin: 0 }}>Watch on YouTube</p>
+              <p style={{ fontSize: 12, color: '#9CA3AF', margin: 0 }}>Find free video explanations for this topic</p>
+            </div>
+          </div>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            <a
+              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(entry.subtopic)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 6,
+                background: '#DC2626', color: '#fff',
+                padding: '9px 18px', borderRadius: 10,
+                fontWeight: 700, fontSize: 13, textDecoration: 'none',
+              }}
+            >
+              ▶ Search: GCSE {entry.subtopic}
+            </a>
+            <a
+              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(entry.subtopic)}+${encodeURIComponent(entry.topic)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 6,
+                background: '#fff', color: '#DC2626',
+                border: '1.5px solid #FECACA',
+                padding: '9px 18px', borderRadius: 10,
+                fontWeight: 700, fontSize: 13, textDecoration: 'none',
+              }}
+            >
+              ▶ {entry.topic} — {entry.subtopic}
+            </a>
+          </div>
+        </div>
+
         {/* Key Facts */}
         <Section title="Key facts to remember" emoji="🔑" color={meta.color} bg={bg}>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -203,45 +247,6 @@ export default function StudyTopicPage({ params }: Props) {
               </div>
             ))}
           </div>
-        </Section>
-
-        {/* Watch on YouTube */}
-        <Section title="Watch on YouTube" emoji="▶️" color="#DC2626" bg="#FFF5F5">
-          <p style={{ fontSize: 13, color: '#6B7280', margin: '0 0 14px', lineHeight: 1.55 }}>
-            Search YouTube for free GCSE Maths video explanations on this topic. Look for clear, step-by-step walkthroughs that match your exam board.
-          </p>
-          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            <a
-              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(entry.subtopic)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: '#DC2626', color: '#fff',
-                padding: '10px 20px', borderRadius: 10,
-                fontWeight: 700, fontSize: 13, textDecoration: 'none',
-              }}
-            >
-              ▶ Search: GCSE {entry.subtopic}
-            </a>
-            <a
-              href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(entry.subtopic)}+${encodeURIComponent(entry.topic)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: '#fff', color: '#DC2626',
-                border: '1.5px solid #FECACA',
-                padding: '10px 20px', borderRadius: 10,
-                fontWeight: 700, fontSize: 13, textDecoration: 'none',
-              }}
-            >
-              ▶ Search: {entry.topic} — {entry.subtopic}
-            </a>
-          </div>
-          <p style={{ fontSize: 11, color: '#9CA3AF', margin: '10px 0 0' }}>
-            Opens YouTube in a new tab. Pick a video that suits your learning style.
-          </p>
         </Section>
 
         {/* Common Mistakes */}
