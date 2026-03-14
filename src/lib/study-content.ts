@@ -23,6 +23,7 @@ export type SubtopicContent = {
   workedExamples: WorkedExample[]
   commonMistakes: string[]
   examTips: string[]
+  videoSearchTerms?: string[]
 }
 
 // Helper: generate a URL slug from topic + subtopic
@@ -49,6 +50,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Number',
     subtopic: 'Fractions',
+    videoSearchTerms: ['GCSE maths fractions', 'adding fractions GCSE', 'multiplying and dividing fractions GCSE', 'mixed numbers improper fractions GCSE'],
     tier: 'Both',
     overview: 'Fractions represent parts of a whole. You need to add, subtract, multiply and divide fractions, and convert between fractions, decimals and percentages.',
     keyFacts: [
@@ -99,6 +101,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Number',
     subtopic: 'Percentages',
+    videoSearchTerms: ['GCSE percentages of amounts', 'percentage multiplier GCSE', 'percentage increase decrease GCSE', 'converting fractions decimals percentages GCSE'],
     tier: 'Both',
     overview: 'Percentages mean "out of 100". You need to find percentages of amounts, convert between fractions/decimals/percentages, and use percentage multipliers.',
     keyFacts: [
@@ -144,6 +147,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Number',
     subtopic: 'Percentage change',
+    videoSearchTerms: ['GCSE percentage change', 'compound interest GCSE maths', 'percentage increase decrease GCSE', 'reverse percentage GCSE'],
     tier: 'Both',
     overview: 'Percentage change measures how much a quantity has increased or decreased relative to its original value.',
     keyFacts: [
@@ -190,6 +194,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Number',
     subtopic: 'Standard form',
+    videoSearchTerms: ['GCSE standard form', 'standard index form GCSE', 'multiplying standard form GCSE', 'standard form calculations GCSE'],
     tier: 'Both',
     overview: 'Standard form (scientific notation) is a way of writing very large or very small numbers using powers of 10.',
     keyFacts: [
@@ -237,6 +242,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Number',
     subtopic: 'Powers & roots',
+    videoSearchTerms: ['GCSE powers and indices', 'laws of indices GCSE', 'index laws GCSE maths', 'negative fractional indices GCSE'],
     tier: 'Both',
     overview: 'Powers (indices) tell you how many times to multiply a number by itself. Roots are the inverse operation.',
     keyFacts: [
@@ -278,6 +284,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Number',
     subtopic: 'Bounds & accuracy',
+    videoSearchTerms: ['GCSE upper lower bounds', 'error intervals GCSE maths', 'bounds calculations GCSE', 'truncation rounding bounds GCSE'],
     tier: 'Both',
     overview: 'When a measurement is given to a certain degree of accuracy, the true value lies within an upper and lower bound.',
     keyFacts: [
@@ -319,6 +326,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Algebra',
     subtopic: 'Solving linear equations',
+    videoSearchTerms: ['GCSE solving equations', 'linear equations GCSE maths', 'solving equations with brackets GCSE', 'equations both sides GCSE'],
     tier: 'Both',
     overview: 'A linear equation contains an unknown (usually x) to the power 1. You solve it by doing the same operation to both sides until x is isolated.',
     keyFacts: [
@@ -363,6 +371,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Algebra',
     subtopic: 'Sequences & nth term',
+    videoSearchTerms: ['GCSE nth term linear sequences', 'arithmetic sequences GCSE', 'finding nth term GCSE maths', 'quadratic sequences GCSE'],
     tier: 'Both',
     overview: 'A sequence is a list of numbers following a pattern. The nth term formula lets you find any term without listing them all.',
     keyFacts: [
@@ -410,6 +419,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Algebra',
     subtopic: 'Straight-line graphs (y = mx + c)',
+    videoSearchTerms: ['GCSE y=mx+c gradient intercept', 'straight line graphs GCSE', 'equation of a line GCSE maths', 'parallel perpendicular lines GCSE'],
     tier: 'Both',
     overview: 'The equation y = mx + c describes a straight line. m is the gradient and c is the y-intercept.',
     keyFacts: [
@@ -449,6 +459,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Algebra',
     subtopic: 'Simultaneous equations',
+    videoSearchTerms: ['GCSE simultaneous equations elimination', 'simultaneous equations substitution GCSE', 'solving simultaneous equations GCSE', 'simultaneous equations exam questions GCSE'],
     tier: 'Both',
     overview: 'Simultaneous equations are two equations with two unknowns. You solve them to find values that satisfy both equations at the same time.',
     keyFacts: [
@@ -483,6 +494,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Algebra',
     subtopic: 'Inequalities',
+    videoSearchTerms: ['GCSE inequalities number line', 'solving inequalities GCSE maths', 'linear inequalities GCSE', 'integer values inequalities GCSE'],
     tier: 'Both',
     overview: 'Inequalities show that one expression is greater than, less than, or equal to another. They are solved like equations, with one important exception.',
     keyFacts: [
@@ -524,6 +536,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Geometry & Measures',
     subtopic: "Pythagoras' theorem",
+    videoSearchTerms: ['GCSE Pythagoras theorem', 'finding hypotenuse GCSE', 'Pythagoras missing side GCSE', 'Pythagoras 3D GCSE maths'],
     tier: 'Both',
     overview: "Pythagoras' theorem relates the three sides of a right-angled triangle. It only works in right-angled triangles.",
     keyFacts: [
@@ -568,6 +581,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Geometry & Measures',
     subtopic: 'Trigonometry (SOH-CAH-TOA)',
+    videoSearchTerms: ['GCSE trigonometry SOH CAH TOA', 'trig missing sides GCSE', 'finding angles trigonometry GCSE', 'sin cos tan GCSE maths'],
     tier: 'Both',
     overview: 'Trigonometry (trig) is used to find missing sides and angles in right-angled triangles using the sine, cosine and tangent ratios.',
     keyFacts: [
@@ -618,6 +632,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Geometry & Measures',
     subtopic: 'Circle area & circumference',
+    videoSearchTerms: ['GCSE area circumference circle', 'circle formulas GCSE maths', 'arc length sector area GCSE', 'pi circle calculations GCSE'],
     tier: 'Both',
     overview: 'The two key circle formulas relate to its boundary (circumference) and enclosed area. Both use π (pi ≈ 3.14159...).',
     keyFacts: [
@@ -662,6 +677,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Geometry & Measures',
     subtopic: 'Volume of prisms',
+    videoSearchTerms: ['GCSE volume of prisms', 'volume cylinder GCSE maths', 'cross section area prism GCSE', 'volume 3D shapes GCSE'],
     tier: 'Both',
     overview: 'A prism is a 3D shape with a constant cross-section. Volume = area of cross-section × length.',
     keyFacts: [
@@ -698,6 +714,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Geometry & Measures',
     subtopic: 'Angle rules',
+    videoSearchTerms: ['GCSE angle rules triangles polygons', 'angles on straight line GCSE', 'interior exterior angles polygon GCSE', 'angle facts reasons GCSE maths'],
     tier: 'Both',
     overview: 'Angles follow a set of rules based on their position. You must know these rules and be able to give reasons in geometry questions.',
     keyFacts: [
@@ -741,6 +758,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Statistics & Probability',
     subtopic: 'Mean, median, mode & range',
+    videoSearchTerms: ['GCSE mean median mode range', 'averages GCSE maths', 'calculating mean from table GCSE', 'median even set of data GCSE'],
     tier: 'Both',
     overview: 'Averages summarise a data set with a single representative value. The range measures spread.',
     keyFacts: [
@@ -781,6 +799,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Statistics & Probability',
     subtopic: 'Basic probability',
+    videoSearchTerms: ['GCSE basic probability', 'probability scale GCSE maths', 'calculating probability GCSE', 'complementary probability GCSE'],
     tier: 'Both',
     overview: 'Probability measures how likely an event is to occur, on a scale from 0 (impossible) to 1 (certain).',
     keyFacts: [
@@ -821,6 +840,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Statistics & Probability',
     subtopic: 'Tree diagrams',
+    videoSearchTerms: ['GCSE tree diagrams probability', 'independent events tree diagram GCSE', 'without replacement tree diagram GCSE', 'combined probability GCSE'],
     tier: 'Both',
     overview: 'Tree diagrams show all possible outcomes of two or more events and their probabilities. You multiply along branches and add between branches.',
     keyFacts: [
@@ -857,6 +877,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Ratio & Proportion',
     subtopic: 'Simplifying ratios',
+    videoSearchTerms: ['GCSE simplifying ratios', 'ratio simplest form GCSE maths', 'equivalent ratios GCSE', 'ratio 1:n form GCSE'],
     tier: 'Both',
     overview: 'A ratio compares two or more quantities. Simplifying a ratio means dividing all parts by their highest common factor.',
     keyFacts: [
@@ -897,6 +918,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Ratio & Proportion',
     subtopic: 'Sharing in a ratio',
+    videoSearchTerms: ['GCSE sharing ratio', 'divide amount ratio GCSE', 'ratio sharing total GCSE maths', 'ratio word problems GCSE'],
     tier: 'Both',
     overview: 'Sharing a quantity in a given ratio means dividing it into parts proportional to the ratio.',
     keyFacts: [
@@ -931,6 +953,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Ratio & Proportion',
     subtopic: 'Direct proportion',
+    videoSearchTerms: ['GCSE direct proportion', 'proportionality constant GCSE maths', 'y proportional x GCSE', 'direct proportion graph GCSE'],
     tier: 'Both',
     overview: 'Two quantities are in direct proportion if they increase and decrease at the same rate. When one doubles, the other doubles.',
     keyFacts: [
@@ -967,6 +990,7 @@ export const CONTENT: SubtopicContent[] = [
   {
     topic: 'Ratio & Proportion',
     subtopic: 'Speed, distance & time',
+    videoSearchTerms: ['GCSE speed distance time', 'SDT formula triangle GCSE', 'average speed GCSE maths', 'speed distance time word problems GCSE'],
     tier: 'Both',
     overview: 'Speed, distance and time are connected by a formula triangle. Given any two, you can find the third.',
     keyFacts: [
