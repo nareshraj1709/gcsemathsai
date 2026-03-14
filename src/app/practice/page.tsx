@@ -1,6 +1,6 @@
 'use client'
 import { useState, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
 
@@ -42,7 +42,13 @@ const QUESTIONS = [
   },
 ]
 
-type MarkResult = {
+type MarkResult = { score: number; outOf: number; feedback: string }
+
+export type SessionAttempt = {
+  question: string
+  topic: string
+  subtopic: string
+  studentAnswer: string
   score: number
   outOf: number
   feedback: string
@@ -50,7 +56,11 @@ type MarkResult = {
 
 export default function PracticePage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center"><p className="text-purple-700 font-semibold">Loading...</p></div>}>
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
+        <p className="text-purple-700 font-semibold">Loading...</p>
+      </div>
+    }>
       <Practice />
     </Suspense>
   )
@@ -58,27 +68,31 @@ export default function PracticePage() {
 
 function Practice() {
   const searchParams = useSearchParams()
+  const router = useRouter()
+
   const [qIndex, setQIndex] = useState(0)
   const [answer, setAnswer] = useState('')
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<MarkResult | null>(null)
   const [error, setError] = useState('')
+  const [sessionAttempts, setSessionAttempts] = useState<SessionAttempt[]>([])
 
+  const topic = searchParams.get('topic') || ''
+  const subtopic = searchParams.get('subtopic') || ''
   const q = QUESTIONS[qIndex]
+  const isLastQuestion = qIndex === QUESTIONS.length - 1
+  const sessionHasAttempts = sessionAttempts.length > 0
 
   const saveAttempt = async (
-    question: string,
-    studentAnswer: string,
-    score: number,
-    outOf: number,
-    feedback: string
+    question: string, studentAnswer: string,
+    score: number, outOf: number, feedback: string
   ) => {
     const { data: { user } } = await supabase.auth.getUser()
     if (!user) return
     await supabase.from('attempts').insert({
       user_id: user.id,
-      topic: searchParams.get('topic') || q.topic,
-      subtopic: searchParams.get('subtopic') || '',
+      topic: topic || q.topic,
+      subtopic,
       year_group: searchParams.get('year') || '',
       exam_board: searchParams.get('board') || '',
       tier: searchParams.get('tier') || '',
@@ -109,8 +123,20 @@ function Practice() {
       })
       const data = await res.json()
       if (data.error) { setError(data.error); return }
+
       setResult(data)
       await saveAttempt(q.question, answer, data.score, data.outOf, data.feedback)
+
+      // Accumulate this attempt for the review page
+      setSessionAttempts(prev => [...prev, {
+        question: q.question,
+        topic: topic || q.topic,
+        subtopic,
+        studentAnswer: answer,
+        score: data.score,
+        outOf: data.outOf,
+        feedback: data.feedback,
+      }])
     } catch {
       setError('Something went wrong. Please try again.')
     } finally {
@@ -118,11 +144,18 @@ function Practice() {
     }
   }
 
+  const goToReview = () => {
+    // Include current result if present but not yet added (edge: last q just submitted)
+    const attemptsToSave = sessionAttempts
+    localStorage.setItem('gcse_session_review', JSON.stringify(attemptsToSave))
+    router.push('/review')
+  }
+
   const nextQuestion = () => {
     setAnswer('')
     setResult(null)
     setError('')
-    setQIndex((qIndex + 1) % QUESTIONS.length)
+    setQIndex(i => i + 1)
   }
 
   const scoreColor = result
@@ -133,20 +166,49 @@ function Practice() {
       : 'text-yellow-600 bg-yellow-50 border-yellow-200'
     : ''
 
+  const totalScore = sessionAttempts.reduce((s, a) => s + a.score, 0)
+  const totalOut   = sessionAttempts.reduce((s, a) => s + a.outOf, 0)
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100">
       <nav className="bg-white border-b border-gray-100 px-8 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold text-purple-700">GCSEMathsAI</Link>
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
+          {sessionHasAttempts && (
+            <button
+              onClick={goToReview}
+              className="text-sm border border-purple-300 text-purple-700 font-semibold px-4 py-1.5 rounded-lg hover:bg-purple-50 transition"
+            >
+              Review session →
+            </button>
+          )}
           <Link href="/dashboard" className="text-sm text-purple-700 font-semibold">Dashboard</Link>
         </div>
       </nav>
 
       <div className="max-w-2xl mx-auto px-4 py-12">
+
+        {/* Session score bar */}
+        {sessionHasAttempts && (
+          <div className="bg-white border border-purple-100 rounded-xl px-5 py-3 mb-6 flex items-center justify-between">
+            <span className="text-sm font-semibold text-gray-700">Session score</span>
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-bold text-purple-700">{totalScore}/{totalOut}</span>
+              <div className="w-32 h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div
+                  className="h-2 rounded-full bg-purple-600 transition-all"
+                  style={{ width: `${totalOut > 0 ? (totalScore / totalOut) * 100 : 0}%` }}
+                />
+              </div>
+              <span className="text-xs text-gray-400">{sessionAttempts.length} done</span>
+            </div>
+          </div>
+        )}
+
         {/* Progress */}
         <div className="flex items-center justify-between mb-6">
           <span className="text-sm text-purple-600 font-semibold bg-purple-100 px-3 py-1 rounded-full">
-            {q.topic}
+            {topic || q.topic}{subtopic ? ` · ${subtopic}` : ''}
           </span>
           <span className="text-sm text-gray-400">Question {qIndex + 1} of {QUESTIONS.length}</span>
         </div>
@@ -182,9 +244,7 @@ function Practice() {
         {result && (
           <div className={`rounded-2xl border p-6 mb-6 ${scoreColor}`}>
             <div className="flex items-center justify-between mb-3">
-              <span className="font-bold text-lg">
-                {result.score}/{result.outOf} marks
-              </span>
+              <span className="font-bold text-lg">{result.score}/{result.outOf} marks</span>
               <span className="text-sm font-semibold">
                 {result.score === result.outOf ? 'Full marks!' : result.score === 0 ? 'Needs work' : 'Partially correct'}
               </span>
@@ -199,13 +259,33 @@ function Practice() {
           </div>
         )}
 
+        {/* Navigation after marking */}
         {result && (
-          <button
-            onClick={nextQuestion}
-            className="w-full bg-purple-700 text-white rounded-xl py-3 font-bold text-sm hover:bg-purple-800 transition"
-          >
-            Next question →
-          </button>
+          <div className="flex gap-3">
+            {!isLastQuestion ? (
+              <>
+                <button
+                  onClick={nextQuestion}
+                  className="flex-1 bg-purple-700 text-white rounded-xl py-3 font-bold text-sm hover:bg-purple-800 transition"
+                >
+                  Next question →
+                </button>
+                <button
+                  onClick={goToReview}
+                  className="flex-none border border-purple-300 text-purple-700 rounded-xl py-3 px-5 font-semibold text-sm hover:bg-purple-50 transition"
+                >
+                  Finish &amp; Review
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={goToReview}
+                className="flex-1 bg-purple-700 text-white rounded-xl py-3 font-bold text-sm hover:bg-purple-800 transition"
+              >
+                See full review →
+              </button>
+            )}
+          </div>
         )}
       </div>
     </main>
