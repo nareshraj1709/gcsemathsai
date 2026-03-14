@@ -36,7 +36,9 @@ Reply in this exact JSON format (no markdown):
 
   const text = (message.content[0] as { type: string; text: string }).text
   try {
-    const result = JSON.parse(text)
+    // Strip markdown code fences if present (e.g. ```json ... ```)
+    const cleaned = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim()
+    const result = JSON.parse(cleaned)
     return NextResponse.json(result)
   } catch {
     return NextResponse.json({ error: 'Failed to parse AI response', raw: text }, { status: 500 })
