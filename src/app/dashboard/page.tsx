@@ -25,10 +25,32 @@ const font = {
 type Attempt = {
   id: string
   topic: string
+  subtopic: string
+  question: string
+  student_answer: string
   score: number
   out_of: number
   feedback: string
   created_at: string
+}
+
+function calcStreak(attempts: Attempt[]): number {
+  if (attempts.length === 0) return 0
+  const uniqueDates = [...new Set(
+    attempts.map(a => a.created_at.slice(0, 10))
+  )].sort((a, b) => b.localeCompare(a))
+
+  const today = new Date().toISOString().slice(0, 10)
+  const yesterday = new Date(Date.now() - 864e5).toISOString().slice(0, 10)
+  if (uniqueDates[0] !== today && uniqueDates[0] !== yesterday) return 0
+
+  let streak = 1
+  for (let i = 1; i < uniqueDates.length; i++) {
+    const diffMs = new Date(uniqueDates[i - 1]).getTime() - new Date(uniqueDates[i]).getTime()
+    if (Math.round(diffMs / 864e5) === 1) streak++
+    else break
+  }
+  return streak
 }
 
 type Profile = { name: string; year: string; board: string; goal: string }
@@ -51,11 +73,11 @@ export default function Dashboard() {
       if (!user) { router.push('/auth'); return }
 
       const { data } = await supabase
-        .from('practice_attempts')
+        .from('attempts')
         .select('*')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false })
-        .limit(50)
+        .limit(100)
 
       setAttempts(data ?? [])
       setLoading(false)
@@ -68,6 +90,8 @@ export default function Dashboard() {
   const totalScore = attempts.reduce((s, a) => s + a.score, 0)
   const totalPossible = attempts.reduce((s, a) => s + a.out_of, 0)
   const avgPct = totalPossible > 0 ? Math.round((totalScore / totalPossible) * 100) : 0
+
+  const streak = calcStreak(attempts)
 
   const now = new Date()
   const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000)
@@ -132,7 +156,7 @@ export default function Dashboard() {
             {[
               { val: `${totalAttempts}`, sub: "questions done" },
               { val: `${avgPct}%`, sub: "avg score" },
-              { val: `${topicsMastered}`, sub: "topics mastered" },
+              { val: `🔥 ${streak}`, sub: "day streak" },
             ].map(s => (
               <div key={s.sub} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: 20, fontWeight: 800 }}>{s.val}</div>
@@ -145,9 +169,9 @@ export default function Dashboard() {
         {/* Stats row */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 16, marginBottom: 24 }}>
           {[
-            { icon: "📝", val: String(weeklyCount), label: "This week" },
+            { icon: "🔥", val: `${streak} day${streak !== 1 ? 's' : ''}`, label: "Current streak" },
             { icon: "📈", val: `${avgPct}%`, label: "Avg score" },
-            { icon: "📚", val: String(totalAttempts), label: "Total questions" },
+            { icon: "📝", val: String(weeklyCount), label: "This week" },
             { icon: "🏆", val: String(topicsMastered), label: "Topics mastered" },
           ].map(s => (
             <div key={s.label} style={{
@@ -235,8 +259,8 @@ export default function Dashboard() {
                     return (
                       <div key={a.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
                         <div>
-                          <div style={{ fontSize: 14, fontWeight: 600, color: C.ink }}>{a.topic}</div>
-                          <div style={{ fontSize: 12, color: C.mid }}>{dateStr}</div>
+                          <div style={{ fontSize: 14, fontWeight: 600, color: C.ink }}>{a.subtopic || a.topic}</div>
+                          <div style={{ fontSize: 12, color: C.mid }}>{a.subtopic ? a.topic + ' · ' : ''}{dateStr}</div>
                         </div>
                         <span style={{
                           fontSize: 13, fontWeight: 700,

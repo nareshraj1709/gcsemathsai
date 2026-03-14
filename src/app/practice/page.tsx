@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
 
@@ -48,6 +49,7 @@ type MarkResult = {
 }
 
 export default function Practice() {
+  const searchParams = useSearchParams()
   const [qIndex, setQIndex] = useState(0)
   const [answer, setAnswer] = useState('')
   const [loading, setLoading] = useState(false)
@@ -55,6 +57,30 @@ export default function Practice() {
   const [error, setError] = useState('')
 
   const q = QUESTIONS[qIndex]
+
+  const saveAttempt = async (
+    question: string,
+    studentAnswer: string,
+    score: number,
+    outOf: number,
+    feedback: string
+  ) => {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return
+    await supabase.from('attempts').insert({
+      user_id: user.id,
+      topic: searchParams.get('topic') || q.topic,
+      subtopic: searchParams.get('subtopic') || '',
+      year_group: searchParams.get('year') || '',
+      exam_board: searchParams.get('board') || '',
+      tier: searchParams.get('tier') || '',
+      question,
+      student_answer: studentAnswer,
+      score,
+      out_of: outOf,
+      feedback,
+    })
+  }
 
   const submitAnswer = async () => {
     if (!answer.trim()) return
@@ -76,19 +102,7 @@ export default function Practice() {
       const data = await res.json()
       if (data.error) { setError(data.error); return }
       setResult(data)
-
-      // Save attempt to Supabase
-      const { data: { user } } = await supabase.auth.getUser()
-      if (user) {
-        await supabase.from('practice_attempts').insert({
-          user_id: user.id,
-          question_id: q.id,
-          topic: q.topic,
-          score: data.score,
-          out_of: data.outOf,
-          feedback: data.feedback,
-        })
-      }
+      await saveAttempt(q.question, answer, data.score, data.outOf, data.feedback)
     } catch {
       setError('Something went wrong. Please try again.')
     } finally {
