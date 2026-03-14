@@ -32,18 +32,45 @@ export default function StudyTopicPage({ params }: Props) {
   )
   const meta = entry ? TOPIC_META[entry.topic] : null
 
-  // Not found
+  // Not found — show coming soon with YouTube search
   if (!entry || !meta) {
+    // Try to extract a readable topic name from the slug for the YouTube search
+    const readableQuery = (params.slug ?? '').replace(/-/g, ' ')
     return (
-      <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-6">
-        <div className="text-center max-w-md">
+      <main className="min-h-screen bg-gray-50 px-6 py-12">
+        <div className="max-w-lg mx-auto text-center">
           <p className="text-5xl mb-4">🔜</p>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Notes coming soon</h1>
-          <p className="text-gray-500 text-sm mb-6">
-            We&apos;re writing the study guide for this subtopic. Check back shortly.
+          <p className="text-gray-500 text-sm mb-8">
+            We&apos;re writing the study guide for this subtopic. In the meantime, search YouTube for a free video explanation.
           </p>
+
+          {/* YouTube search banner */}
+          <div style={{
+            background: '#FFF5F5', border: '1.5px solid #FECACA',
+            borderRadius: 16, padding: '20px', marginBottom: 24, textAlign: 'left',
+          }}>
+            <p style={{ fontSize: 14, fontWeight: 700, color: '#DC2626', margin: '0 0 4px' }}>▶️ Watch on YouTube</p>
+            <p style={{ fontSize: 13, color: '#6B7280', margin: '0 0 14px' }}>Find free GCSE Maths video explanations while we finish writing the notes.</p>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              <a
+                href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(readableQuery)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 6,
+                  background: '#DC2626', color: '#fff',
+                  padding: '9px 18px', borderRadius: 10,
+                  fontWeight: 700, fontSize: 13, textDecoration: 'none',
+                }}
+              >
+                ▶ Search on YouTube
+              </a>
+            </div>
+          </div>
+
           <Link href="/study"
-            className="inline-block bg-purple-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-purple-800 transition">
+            className="inline-block border border-purple-300 text-purple-700 px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-purple-50 transition">
             ← Back to topics
           </Link>
         </div>
