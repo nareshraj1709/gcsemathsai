@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { getAllMarkdownPosts, getMarkdownPost, renderMarkdown, extractTOC } from '@/lib/markdown'
 import { BLOG_POSTS, getPost, type Block } from '@/lib/blog-posts'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 const COLOUR_MAP: Record<string, { badge: string; bar: string }> = {
   purple: { badge: 'bg-purple-100 text-purple-700', bar: 'bg-purple-500' },
@@ -23,7 +23,8 @@ export async function generateStaticParams() {
 
 // ── Metadata ─────────────────────────────────────────────────
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const md = getMarkdownPost(params.slug)
+  const { slug } = await params
+  const md = getMarkdownPost(slug)
   if (md) {
     return {
       title: md.title,
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       alternates: { canonical: `https://www.gcsemathsai.co.uk/blog/${md.slug}` },
     }
   }
-  const ts = getPost(params.slug)
+  const ts = getPost(slug)
   if (ts) {
     return {
       title: ts.title,
@@ -137,9 +138,10 @@ function RenderBlock({ block }: { block: Block }) {
 }
 
 // ── Page ─────────────────────────────────────────────────────
-export default function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
   // Try markdown first
-  const md = getMarkdownPost(params.slug)
+  const md = getMarkdownPost(slug)
 
   if (md) {
     const htmlContent = renderMarkdown(md.content)
@@ -243,7 +245,7 @@ export default function BlogPostPage({ params }: Props) {
   }
 
   // Fall back to TypeScript-based post
-  const ts = getPost(params.slug)
+  const ts = getPost(slug)
   if (!ts) notFound()
 
   const colours = COLOUR_MAP[ts.categoryColour] ?? COLOUR_MAP.purple
