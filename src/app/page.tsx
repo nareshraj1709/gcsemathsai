@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
+import Logo from '@/components/Logo'
 
 export default function Home() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, mins: 0 })
@@ -28,10 +29,9 @@ export default function Home() {
 
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 px-6 flex items-center justify-between h-14">
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg bg-purple-700 flex items-center justify-center text-white text-sm font-semibold">M</div>
-          <span className="font-semibold text-gray-900 text-base">GCSEMathsAI</span>
-        </div>
+        <a href="/">
+          <Logo size={30} nameSize={17} />
+        </a>
         <div className="hidden md:flex items-center gap-1">
           <a href="#features" className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">Features</a>
           <a href="/pricing" className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">Pricing</a>

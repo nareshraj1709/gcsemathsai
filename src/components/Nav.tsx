@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import Logo from '@/components/Logo'
 
 const C = {
   ink: "#0D0B1A",
@@ -60,19 +61,9 @@ export default function Nav() {
       }}>
         {/* Logo */}
         <button onClick={() => router.push('/')} style={{
-          background: "none", border: "none", cursor: "pointer",
-          display: "flex", alignItems: "center", gap: 8,
+          background: "none", border: "none", cursor: "pointer", padding: 0,
         }}>
-          <div style={{
-            width: 32, height: 32, borderRadius: 8,
-            background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: 16, boxShadow: `0 2px 8px ${C.purple}40`,
-          }}>✦</div>
-          <span style={{
-            fontFamily: font.display, fontWeight: 700, fontSize: 20,
-            color: C.ink, letterSpacing: -0.5,
-          }}>GCSEMathsAI</span>
+          <Logo size={34} nameSize={19} />
         </button>
 
         {/* Links */}

@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Logo from '@/components/Logo'
 
 const C = {
   ink: "#0D0B1A",
@@ -121,14 +122,8 @@ export default function Onboarding() {
           boxShadow: "0 4px 32px rgba(109,40,217,0.08)",
         }}>
           {/* Logo */}
-          <div style={{ textAlign: "center", marginBottom: 32 }}>
-            <div style={{
-              width: 48, height: 48, borderRadius: 14, margin: "0 auto 12px",
-              background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontSize: 22, boxShadow: `0 4px 16px ${C.purple}30`,
-            }}>✦</div>
-            <div style={{ fontFamily: font.display, fontWeight: 700, color: C.ink, fontSize: 18 }}>GCSEMathsAI</div>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
+            <Logo size={44} nameSize={18} />
           </div>
 
           {/* A-Level badge */}
