@@ -1,0 +1,63 @@
+name: Submit IndexNow
+
+# Runs after every push to main (i.e. after Vercel deploys).
+# Waits for the live site to reflect the new deployment, then
+# notifies IndexNow so Bing/Yandex index the changes immediately.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # allow manual trigger from GitHub Actions UI
+
+jobs:
+  submit:
+    name: Notify IndexNow
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Wait for Vercel deployment to go live
+        # Vercel typically takes 60–90 seconds for a cold deploy.
+        # Adjust if your average deploy time is longer.
+        run: sleep 90
+
+      - name: Verify key file is reachable
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            https://www.gcsemathsai.co.uk/90d06b30544c4d6eb157460b3b066cff.txt)
+          echo "Key file status: $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "::warning::Key file returned $STATUS — IndexNow verification may fail"
+          fi
+
+      - name: Fetch sitemap and extract URLs
+        id: sitemap
+        run: |
+          # Pull the live sitemap and extract every <loc> URL
+          URLS=$(curl -s https://www.gcsemathsai.co.uk/sitemap.xml \
+            | grep -oP '(?<=<loc>)[^<]+' \
+            | head -500)
+          echo "Found $(echo "$URLS" | wc -l) URLs"
+          # Convert newline-separated list to JSON array
+          JSON=$(echo "$URLS" | jq -R . | jq -sc .)
+          echo "url_list=$JSON" >> "$GITHUB_OUTPUT"
+
+      - name: Submit to IndexNow
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "www.gcsemathsai.co.uk",
+              "key": "90d06b30544c4d6eb157460b3b066cff",
+              "keyLocation": "https://www.gcsemathsai.co.uk/90d06b30544c4d6eb157460b3b066cff.txt",
+              "urlList": ${{ steps.sitemap.outputs.url_list }}
+            }')
+          HTTP_STATUS=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | head -1)
+          echo "IndexNow response: $HTTP_STATUS — $BODY"
+          # 200 = processed immediately, 202 = accepted for processing
+          if [ "$HTTP_STATUS" = "200" ] || [ "$HTTP_STATUS" = "202" ]; then
+            echo "IndexNow submission successful"
+          else
+            echo "::warning::IndexNow returned HTTP $HTTP_STATUS"
+          fi
