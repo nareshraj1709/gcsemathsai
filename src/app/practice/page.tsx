@@ -1,48 +1,12 @@
 'use client'
-import { useState, Suspense } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
 
-const QUESTIONS = [
-  {
-    id: 1,
-    topic: 'Algebra',
-    question: 'Solve 3x + 7 = 22',
-    markScheme: 'x = 5. Award 1 mark for correct rearrangement (3x = 15) and 1 mark for correct answer (x = 5).',
-    marks: 2,
-  },
-  {
-    id: 2,
-    topic: 'Number',
-    question: 'Work out 15% of 340',
-    markScheme: 'Answer: 51. Award 1 mark for a correct method (e.g. 0.15 × 340 or finding 10% + 5%) and 1 mark for the correct answer.',
-    marks: 2,
-  },
-  {
-    id: 3,
-    topic: 'Geometry',
-    question: 'A rectangle has length 12 cm and width 7 cm. Calculate the area.',
-    markScheme: 'Area = 84 cm². Award 1 mark for correct method (length × width) and 1 mark for correct answer with units.',
-    marks: 2,
-  },
-  {
-    id: 4,
-    topic: 'Algebra',
-    question: 'Expand and simplify: 3(2x + 4) − 2(x − 1)',
-    markScheme: '4x + 14. Award 1 mark for correct expansion of each bracket and 1 mark for correct simplification.',
-    marks: 2,
-  },
-  {
-    id: 5,
-    topic: 'Ratio',
-    question: 'Share £120 in the ratio 3:5',
-    markScheme: '£45 and £75. Award 1 mark for identifying one part = £15 and 1 mark for both correct values.',
-    marks: 2,
-  },
-]
-
+type Question = { question: string; markScheme: string; marks: number }
 type MarkResult = { score: number; outOf: number; feedback: string }
+type Phase = 'loading' | 'practice'
 
 export type SessionAttempt = {
   question: string
@@ -70,6 +34,14 @@ function Practice() {
   const searchParams = useSearchParams()
   const router = useRouter()
 
+  const topic = searchParams.get('topic') || ''
+  const subtopic = searchParams.get('subtopic') || ''
+  const board = searchParams.get('board') || 'AQA'
+  const tier = searchParams.get('tier') || 'Foundation'
+
+  const [phase, setPhase] = useState<Phase>('loading')
+  const [questions, setQuestions] = useState<Question[]>([])
+  const [genError, setGenError] = useState('')
   const [qIndex, setQIndex] = useState(0)
   const [answer, setAnswer] = useState('')
   const [loading, setLoading] = useState(false)
@@ -77,10 +49,38 @@ function Practice() {
   const [error, setError] = useState('')
   const [sessionAttempts, setSessionAttempts] = useState<SessionAttempt[]>([])
 
-  const topic = searchParams.get('topic') || ''
-  const subtopic = searchParams.get('subtopic') || ''
-  const q = QUESTIONS[qIndex]
-  const isLastQuestion = qIndex === QUESTIONS.length - 1
+  // Generate questions on mount
+  useEffect(() => {
+    const generate = async () => {
+      try {
+        const res = await fetch('/api/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            examBoard: board,
+            tier,
+            topic: topic || 'Mixed',
+            subtopic: subtopic || 'Mixed',
+            count: 5,
+            paperStyle: false,
+          }),
+        })
+        const data = await res.json()
+        if (data.error || !data.questions) {
+          setGenError('Failed to load questions. Please try again.')
+          return
+        }
+        setQuestions(data.questions)
+        setPhase('practice')
+      } catch {
+        setGenError('Network error. Please refresh.')
+      }
+    }
+    generate()
+  }, [board, tier, topic, subtopic])
+
+  const q = questions[qIndex]
+  const isLastQuestion = qIndex === questions.length - 1
   const sessionHasAttempts = sessionAttempts.length > 0
 
   const saveAttempt = async (
@@ -91,11 +91,11 @@ function Practice() {
     if (!user) return
     await supabase.from('attempts').insert({
       user_id: user.id,
-      topic: topic || q.topic,
+      topic,
       subtopic,
       year_group: searchParams.get('year') || '',
-      exam_board: searchParams.get('board') || '',
-      tier: searchParams.get('tier') || '',
+      exam_board: board,
+      tier,
       question,
       student_answer: studentAnswer,
       score,
@@ -105,7 +105,7 @@ function Practice() {
   }
 
   const submitAnswer = async () => {
-    if (!answer.trim()) return
+    if (!answer.trim() || !q) return
     setLoading(true)
     setResult(null)
     setError('')
@@ -119,6 +119,7 @@ function Practice() {
           markScheme: q.markScheme,
           studentAnswer: answer,
           marks: q.marks,
+          examBoard: board,
         }),
       })
       const data = await res.json()
@@ -127,10 +128,9 @@ function Practice() {
       setResult(data)
       await saveAttempt(q.question, answer, data.score, data.outOf, data.feedback)
 
-      // Accumulate this attempt for the review page
       setSessionAttempts(prev => [...prev, {
         question: q.question,
-        topic: topic || q.topic,
+        topic,
         subtopic,
         studentAnswer: answer,
         score: data.score,
@@ -145,9 +145,8 @@ function Practice() {
   }
 
   const goToReview = () => {
-    // Include current result if present but not yet added (edge: last q just submitted)
-    const attemptsToSave = sessionAttempts
-    localStorage.setItem('gcse_session_review', JSON.stringify(attemptsToSave))
+    localStorage.setItem('gcse_session_review', JSON.stringify(sessionAttempts))
+    localStorage.setItem('gcse_session_meta', JSON.stringify({ board, tier }))
     router.push('/review')
   }
 
@@ -169,6 +168,29 @@ function Practice() {
   const totalScore = sessionAttempts.reduce((s, a) => s + a.score, 0)
   const totalOut   = sessionAttempts.reduce((s, a) => s + a.outOf, 0)
 
+  // ── LOADING ──────────────────────────────────────────────────
+  if (phase === 'loading') {
+    return (
+      <main className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-4xl mb-4">📐</div>
+          <p className="text-purple-700 font-semibold text-lg">
+            {genError || `Generating ${subtopic || topic || 'mixed'} questions…`}
+          </p>
+          {genError && (
+            <button
+              onClick={() => router.push('/learn')}
+              className="mt-4 text-sm text-gray-500 hover:text-gray-700 transition"
+            >
+              ← Back to topics
+            </button>
+          )}
+        </div>
+      </main>
+    )
+  }
+
+  // ── PRACTICE ─────────────────────────────────────────────────
   return (
     <main className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100">
       <nav className="bg-white border-b border-gray-100 px-8 py-4 flex justify-between items-center">
@@ -208,37 +230,39 @@ function Practice() {
         {/* Progress */}
         <div className="flex items-center justify-between mb-6">
           <span className="text-sm text-purple-600 font-semibold bg-purple-100 px-3 py-1 rounded-full">
-            {topic || q.topic}{subtopic ? ` · ${subtopic}` : ''}
+            {topic}{subtopic ? ` · ${subtopic}` : ''}
           </span>
-          <span className="text-sm text-gray-400">Question {qIndex + 1} of {QUESTIONS.length}</span>
+          <span className="text-sm text-gray-400">Question {qIndex + 1} of {questions.length}</span>
         </div>
 
         {/* Question card */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-6">
-          <div className="flex items-start justify-between mb-4">
-            <h2 className="text-lg font-bold text-gray-800 flex-1">{q.question}</h2>
-            <span className="ml-4 text-sm text-gray-400 shrink-0">{q.marks} marks</span>
+        {q && (
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-6">
+            <div className="flex items-start justify-between mb-4">
+              <h2 className="text-lg font-bold text-gray-800 flex-1">{q.question}</h2>
+              <span className="ml-4 text-sm text-gray-400 shrink-0">{q.marks} marks</span>
+            </div>
+
+            <textarea
+              value={answer}
+              onChange={e => setAnswer(e.target.value)}
+              placeholder="Write your answer and working here..."
+              rows={4}
+              disabled={!!result}
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 resize-none disabled:bg-gray-50 disabled:text-gray-500"
+            />
+
+            {!result && (
+              <button
+                onClick={submitAnswer}
+                disabled={loading || !answer.trim()}
+                className="mt-4 w-full bg-purple-700 text-white rounded-xl py-3 font-bold text-sm hover:bg-purple-800 transition disabled:opacity-50"
+              >
+                {loading ? 'Marking...' : 'Submit answer'}
+              </button>
+            )}
           </div>
-
-          <textarea
-            value={answer}
-            onChange={e => setAnswer(e.target.value)}
-            placeholder="Write your answer and working here..."
-            rows={4}
-            disabled={!!result}
-            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 resize-none disabled:bg-gray-50 disabled:text-gray-500"
-          />
-
-          {!result && (
-            <button
-              onClick={submitAnswer}
-              disabled={loading || !answer.trim()}
-              className="mt-4 w-full bg-purple-700 text-white rounded-xl py-3 font-bold text-sm hover:bg-purple-800 transition disabled:opacity-50"
-            >
-              {loading ? 'Marking...' : 'Submit answer'}
-            </button>
-          )}
-        </div>
+        )}
 
         {/* Result */}
         {result && (

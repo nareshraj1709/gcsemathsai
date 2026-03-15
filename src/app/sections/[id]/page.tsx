@@ -7,6 +7,7 @@ import { supabase } from '@/lib/supabase'
 type Question = { question: string; markScheme: string; marks: number }
 type MarkResult = { score: number; outOf: number; feedback: string }
 type Phase = 'loading' | 'practice' | 'summary'
+type Evaluation = { summary: string; strengths: string[]; improvements: string[]; studyFocus: string }
 
 export default function SectionPage() {
   return (
@@ -37,6 +38,8 @@ function SectionPractice() {
   const [result, setResult] = useState<MarkResult | null>(null)
   const [allResults, setAllResults] = useState<Array<{ question: string; answer: string; result: MarkResult }>>([])
   const [error, setError] = useState('')
+  const [evaluation, setEvaluation] = useState<Evaluation | null>(null)
+  const [evalLoading, setEvalLoading] = useState(false)
 
   // Generate questions on mount
   useEffect(() => {
@@ -123,9 +126,32 @@ function SectionPractice() {
     setSubmitting(false)
   }
 
+  const fetchEvaluation = async (results: Array<{ question: string; answer: string; result: MarkResult }>) => {
+    setEvalLoading(true)
+    try {
+      const attempts = results.map(r => ({
+        question: r.question,
+        studentAnswer: r.answer,
+        score: r.result.score,
+        outOf: r.result.outOf,
+        topic: section!.topic,
+        subtopic: section!.subtopic,
+      }))
+      const res = await fetch('/api/evaluate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ attempts, examBoard: board, tier }),
+      })
+      const data = await res.json()
+      if (!data.error) setEvaluation(data)
+    } catch { /* ignore */ }
+    setEvalLoading(false)
+  }
+
   const nextQuestion = () => {
     if (current >= questions.length - 1) {
       setPhase('summary')
+      fetchEvaluation(allResults)
     } else {
       setCurrent(i => i + 1)
       setAnswer('')
@@ -186,6 +212,50 @@ function SectionPractice() {
               </div>
             </div>
           </div>
+
+          {/* AI Evaluation */}
+          {evalLoading && (
+            <div style={{
+              background: '#fff', border: '1.5px solid #E5E1FF', borderRadius: 16,
+              padding: '20px 24px', marginBottom: 24, textAlign: 'center',
+            }}>
+              <p style={{ fontSize: 13, color: '#6D28D9', fontWeight: 600, margin: 0 }}>
+                Generating your AI evaluation…
+              </p>
+            </div>
+          )}
+          {evaluation && (
+            <div style={{
+              background: '#fff', border: '1.5px solid #E5E1FF', borderRadius: 16,
+              padding: '20px 24px', marginBottom: 24,
+            }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: 0.8, margin: '0 0 10px' }}>
+                AI Evaluation
+              </p>
+              <p style={{ fontSize: 14, color: '#374151', lineHeight: 1.6, margin: '0 0 16px' }}>
+                {evaluation.summary}
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 14 }}>
+                <div style={{ background: '#F0FDF4', border: '1px solid #A7F3D0', borderRadius: 12, padding: '12px 14px' }}>
+                  <p style={{ fontSize: 11, fontWeight: 700, color: '#059669', margin: '0 0 8px' }}>STRENGTHS</p>
+                  {evaluation.strengths.map((s, i) => (
+                    <p key={i} style={{ fontSize: 12, color: '#065F46', margin: '0 0 4px', lineHeight: 1.4 }}>✓ {s}</p>
+                  ))}
+                </div>
+                <div style={{ background: '#FFF5F5', border: '1px solid #FECACA', borderRadius: 12, padding: '12px 14px' }}>
+                  <p style={{ fontSize: 11, fontWeight: 700, color: '#DC2626', margin: '0 0 8px' }}>TO IMPROVE</p>
+                  {evaluation.improvements.map((imp, i) => (
+                    <p key={i} style={{ fontSize: 12, color: '#7F1D1D', margin: '0 0 4px', lineHeight: 1.4 }}>→ {imp}</p>
+                  ))}
+                </div>
+              </div>
+              <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 10, padding: '10px 14px' }}>
+                <p style={{ fontSize: 12, color: '#92400E', margin: 0 }}>
+                  <strong>Study focus:</strong> {evaluation.studyFocus}
+                </p>
+              </div>
+            </div>
+          )}
 
           {/* Per question */}
           <h2 style={{ fontFamily: "'Georgia', serif", fontSize: 18, fontWeight: 800, color: '#0D0B1A', marginBottom: 16 }}>

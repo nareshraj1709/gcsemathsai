@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { CONTENT, TOPIC_META, toSlug } from '@/lib/study-content'
 import type { SessionAttempt } from '@/app/practice/page'
 
+type Evaluation = { summary: string; strengths: string[]; improvements: string[]; studyFocus: string }
+
 // ── helpers ──────────────────────────────────────────────────
 
 function findStudySlug(topic: string, subtopic: string): string | null {
@@ -80,13 +82,43 @@ function Review() {
   const router = useRouter()
   const [attempts, setAttempts] = useState<SessionAttempt[]>([])
   const [loaded, setLoaded] = useState(false)
+  const [evaluation, setEvaluation] = useState<Evaluation | null>(null)
+  const [evalLoading, setEvalLoading] = useState(false)
 
   useEffect(() => {
     const raw = localStorage.getItem('gcse_session_review')
+    const metaRaw = localStorage.getItem('gcse_session_meta')
+    let parsed: SessionAttempt[] = []
     if (raw) {
-      try { setAttempts(JSON.parse(raw)) } catch { /* ignore */ }
+      try { parsed = JSON.parse(raw) } catch { /* ignore */ }
     }
+    setAttempts(parsed)
     setLoaded(true)
+
+    if (parsed.length > 0) {
+      const meta = metaRaw ? JSON.parse(metaRaw) : {}
+      setEvalLoading(true)
+      fetch('/api/evaluate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          attempts: parsed.map(a => ({
+            question: a.question,
+            studentAnswer: a.studentAnswer,
+            score: a.score,
+            outOf: a.outOf,
+            topic: a.topic,
+            subtopic: a.subtopic,
+          })),
+          examBoard: meta.board,
+          tier: meta.tier,
+        }),
+      })
+        .then(r => r.json())
+        .then(data => { if (!data.error) setEvaluation(data) })
+        .catch(() => {})
+        .finally(() => setEvalLoading(false))
+    }
   }, [])
 
   if (!loaded) return null
@@ -199,6 +231,49 @@ function Review() {
             </p>
           </div>
         </div>
+
+        {/* AI Evaluation */}
+        {(evalLoading || evaluation) && (
+          <div style={{
+            background: '#fff', border: '1.5px solid #E5E1FF', borderRadius: 20,
+            padding: '24px 28px', marginBottom: 24,
+          }}>
+            <p style={{ fontSize: 12, fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: 0.8, margin: '0 0 12px' }}>
+              AI Evaluation
+            </p>
+            {evalLoading && (
+              <p style={{ fontSize: 14, color: '#6D28D9', fontWeight: 600, margin: 0 }}>
+                Analysing your session…
+              </p>
+            )}
+            {evaluation && (
+              <>
+                <p style={{ fontSize: 15, color: '#374151', lineHeight: 1.65, margin: '0 0 18px', fontFamily: "'Georgia', serif" }}>
+                  {evaluation.summary}
+                </p>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 14 }}>
+                  <div style={{ background: '#F0FDF4', border: '1px solid #A7F3D0', borderRadius: 14, padding: '14px 16px' }}>
+                    <p style={{ fontSize: 11, fontWeight: 700, color: '#059669', margin: '0 0 8px', textTransform: 'uppercase', letterSpacing: 0.6 }}>Strengths</p>
+                    {evaluation.strengths.map((s, i) => (
+                      <p key={i} style={{ fontSize: 13, color: '#065F46', margin: '0 0 5px', lineHeight: 1.4 }}>✓ {s}</p>
+                    ))}
+                  </div>
+                  <div style={{ background: '#FFF5F5', border: '1px solid #FECACA', borderRadius: 14, padding: '14px 16px' }}>
+                    <p style={{ fontSize: 11, fontWeight: 700, color: '#DC2626', margin: '0 0 8px', textTransform: 'uppercase', letterSpacing: 0.6 }}>To Improve</p>
+                    {evaluation.improvements.map((imp, i) => (
+                      <p key={i} style={{ fontSize: 13, color: '#7F1D1D', margin: '0 0 5px', lineHeight: 1.4 }}>→ {imp}</p>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ background: '#FFFBEB', border: '1px solid #FDE68A', borderRadius: 12, padding: '12px 16px' }}>
+                  <p style={{ fontSize: 13, color: '#92400E', margin: 0 }}>
+                    <strong>Study focus:</strong> {evaluation.studyFocus}
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
+        )}
 
         {/* Topics needing revision */}
         {weakTopics.length > 0 && (
