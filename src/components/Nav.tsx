@@ -79,8 +79,12 @@ export default function Nav() {
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
           {!user ? (
             <>
-              {["Features", "Pricing", "Blog"].map(l => (
-                <button key={l} style={{
+              {[
+                { label: "Features", path: "/features" },
+                { label: "Pricing",  path: "/pricing"  },
+                { label: "Blog",     path: "/blog"      },
+              ].map(l => (
+                <button key={l.label} onClick={() => router.push(l.path)} style={{
                   background: "none", border: "none", cursor: "pointer",
                   padding: "8px 14px", borderRadius: 8,
                   fontSize: 14, fontWeight: 500, color: C.mid,
@@ -88,7 +92,7 @@ export default function Nav() {
                 }}
                   onMouseEnter={e => e.currentTarget.style.color = C.purple}
                   onMouseLeave={e => e.currentTarget.style.color = C.mid}
-                >{l}</button>
+                >{l.label}</button>
               ))}
               <div style={{ width: 1, height: 20, background: C.border, margin: "0 8px" }} />
               <button onClick={() => router.push('/auth')} style={{

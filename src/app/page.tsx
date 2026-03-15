@@ -32,8 +32,13 @@ export default function Home() {
           <div className="w-7 h-7 rounded-lg bg-purple-700 flex items-center justify-center text-white text-sm font-semibold">M</div>
           <span className="font-semibold text-gray-900 text-base">GCSEMathsAI</span>
         </div>
+        <div className="hidden md:flex items-center gap-1">
+          <a href="#features" className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">Features</a>
+          <a href="/pricing" className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">Pricing</a>
+          <a href="/blog" className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">Blog</a>
+          <button onClick={() => setParentOpen(true)} className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">For parents</button>
+        </div>
         <div className="flex items-center gap-2">
-          <button onClick={() => setParentOpen(true)} className="text-sm text-gray-500 px-3 py-1.5 hover:text-purple-700 transition">For parents</button>
           <a href="/auth" className="text-sm border border-gray-200 px-4 py-1.5 rounded-lg text-gray-700 hover:border-purple-500 hover:text-purple-700 transition">Log in</a>
           <a href="/auth" className="text-sm bg-purple-700 text-white px-4 py-1.5 rounded-lg font-semibold hover:bg-purple-800 transition">Start free</a>
         </div>
@@ -194,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* Value props */}
-      <section className="px-6 py-16 max-w-5xl mx-auto">
+      <section id="features" className="px-6 py-16 max-w-5xl mx-auto">
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Why it works</p>
         <h2 className="text-3xl font-bold text-gray-900 mb-10">Built differently from other revision tools</h2>
         <div className="grid md:grid-cols-2 gap-6">
