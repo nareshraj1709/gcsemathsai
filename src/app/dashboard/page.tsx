@@ -278,24 +278,42 @@ export default function Dashboard() {
         </div>
 
         {/* CTAs */}
-        <div style={{ marginTop: 20, display: "flex", gap: 12 }}>
+        <div style={{ marginTop: 20, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           <button onClick={() => router.push('/study')} style={{
-            flex: 1, padding: "14px",
+            padding: "14px",
             background: "#fff", color: C.purple,
             border: `2px solid ${C.purple}`, borderRadius: 14,
-            fontSize: 15, fontWeight: 700, cursor: "pointer",
+            fontSize: 14, fontWeight: 700, cursor: "pointer",
             fontFamily: font.body,
           }}>
             📖 Study notes
           </button>
+          <button onClick={() => router.push('/sections')} style={{
+            padding: "14px",
+            background: "#fff", color: "#2563EB",
+            border: "2px solid #BFDBFE", borderRadius: 14,
+            fontSize: 14, fontWeight: 700, cursor: "pointer",
+            fontFamily: font.body,
+          }}>
+            📚 Practice sections
+          </button>
+          <button onClick={() => router.push('/papers')} style={{
+            padding: "14px",
+            background: "#fff", color: "#059669",
+            border: "2px solid #A7F3D0", borderRadius: 14,
+            fontSize: 14, fontWeight: 700, cursor: "pointer",
+            fontFamily: font.body,
+          }}>
+            📋 Past-style papers
+          </button>
           <button onClick={() => router.push('/learn')} style={{
-            flex: 2, padding: "14px",
+            padding: "14px",
             background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
             color: "#fff", border: "none", borderRadius: 14,
-            fontSize: 15, fontWeight: 700, cursor: "pointer",
+            fontSize: 14, fontWeight: 700, cursor: "pointer",
             boxShadow: `0 4px 16px ${C.purple}30`, fontFamily: font.body,
           }}>
-            🚀 Start practice session →
+            🚀 Quick practice →
           </button>
         </div>
       </div>

@@ -116,6 +116,8 @@ export default function Nav() {
               {[
                 { label: "Dashboard", path: "/dashboard" },
                 { label: "Study", path: "/study" },
+                { label: "Sections", path: "/sections" },
+                { label: "Papers", path: "/papers" },
                 { label: "Practice", path: "/learn" },
               ].map(l => (
                 <button key={l.label} onClick={() => router.push(l.path)} style={{
