@@ -1,36 +1,46 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BLOG_POSTS, type BlogPost } from '@/lib/blog-posts'
+import { getAllMarkdownPosts } from '@/lib/markdown'
+import { BLOG_POSTS } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Revision tips, GCSE Maths guides, exam strategies and updates from the GCSEMathsAI team.',
+  description: 'Revision guides, GCSE Maths tips, exam technique advice and A Level resources from the GCSEMathsAI team.',
   openGraph: {
     title: 'GCSE Maths Blog | GCSEMathsAI',
-    description: 'Revision tips, GCSE Maths guides, exam strategies and updates from the GCSEMathsAI team.',
+    description: 'Revision guides, GCSE Maths tips, exam technique advice and A Level resources from the GCSEMathsAI team.',
     url: 'https://www.gcsemathsai.co.uk/blog',
   },
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/blog' },
 }
 
-const POSTS = BLOG_POSTS
-
-const COLOUR_MAP: Record<string, { badge: string; dot: string }> = {
-  purple: { badge: 'bg-purple-100 text-purple-700', dot: 'bg-purple-500' },
-  blue:   { badge: 'bg-blue-100 text-blue-700',     dot: 'bg-blue-500'   },
-  green:  { badge: 'bg-green-100 text-green-700',   dot: 'bg-green-500'  },
-  amber:  { badge: 'bg-amber-100 text-amber-700',   dot: 'bg-amber-500'  },
+const COLOUR_MAP: Record<string, { badge: string; bar: string }> = {
+  purple: { badge: 'bg-purple-100 text-purple-700', bar: 'bg-purple-500' },
+  blue:   { badge: 'bg-blue-100 text-blue-700',     bar: 'bg-blue-500'   },
+  green:  { badge: 'bg-green-100 text-green-700',   bar: 'bg-green-500'  },
+  amber:  { badge: 'bg-amber-100 text-amber-700',   bar: 'bg-amber-500'  },
+  rose:   { badge: 'bg-rose-100 text-rose-700',     bar: 'bg-rose-500'   },
 }
 
-function PostCard({ post, featured = false }: { post: BlogPost; featured?: boolean }) {
-  const colours = COLOUR_MAP[post.categoryColour]
+type CardPost = {
+  slug: string
+  title: string
+  excerpt: string
+  category: string
+  categoryColour: string
+  author: string
+  date: string
+  readMins: number
+}
+
+function PostCard({ post, featured = false }: { post: CardPost; featured?: boolean }) {
+  const colours = COLOUR_MAP[post.categoryColour] ?? COLOUR_MAP.purple
   return (
     <Link
       href={`/blog/${post.slug}`}
       className={`group block bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-md hover:border-purple-200 transition ${featured ? 'md:col-span-2' : ''}`}
     >
-      {/* Colour bar */}
-      <div className={`h-1 w-full ${colours.dot}`} />
+      <div className={`h-1 w-full ${colours.bar}`} />
       <div className="p-6">
         <div className="flex items-center gap-2 mb-3">
           <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${colours.badge}`}>
@@ -53,45 +63,87 @@ function PostCard({ post, featured = false }: { post: BlogPost; featured?: boole
 }
 
 export default function BlogPage() {
-  const [featured, ...rest] = POSTS
+  // Markdown posts (new articles)
+  const mdPosts = getAllMarkdownPosts().map(p => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.description,
+    category: p.category,
+    categoryColour: p.categoryColour,
+    author: p.author,
+    date: p.date,
+    readMins: p.readMins,
+  }))
+
+  // Existing TypeScript-based posts
+  const tsPosts = BLOG_POSTS.map(p => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    category: p.category,
+    categoryColour: p.categoryColour,
+    author: p.author,
+    date: p.date,
+    readMins: p.readMins,
+  }))
+
+  const [featured, ...mdRest] = mdPosts
 
   return (
     <main className="min-h-screen bg-white">
+
       {/* Header */}
       <div className="bg-purple-50 border-b border-purple-100 px-6 py-12 text-center">
         <span className="text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full">Blog</span>
         <h1 className="text-3xl font-bold text-gray-900 mt-4 mb-2">Revision guides &amp; updates</h1>
         <p className="text-gray-500 text-sm max-w-md mx-auto">
-          Tips, exam strategy, and honest advice to help you get the grade you deserve.
+          Practical tips, exam strategy, and honest advice to help you get the grade you deserve.
         </p>
       </div>
 
       <div className="max-w-4xl mx-auto px-6 py-12">
 
-        {/* Featured post */}
-        <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Latest</p>
-          <div className="grid md:grid-cols-2">
-            <PostCard post={featured} featured />
+        {/* Featured markdown post */}
+        {featured && (
+          <div className="mb-4">
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Latest guide</p>
+            <div className="grid md:grid-cols-2">
+              <PostCard post={featured} featured />
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Divider */}
-        <div className="border-t border-gray-100 my-10" />
+        {/* Rest of markdown posts */}
+        {mdRest.length > 0 && (
+          <>
+            <div className="border-t border-gray-100 my-10" />
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Revision guides</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {mdRest.map(post => (
+                <PostCard key={post.slug} post={post} />
+              ))}
+            </div>
+          </>
+        )}
 
-        {/* Rest of posts */}
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">More articles</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {rest.map(post => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </div>
+        {/* TypeScript-based existing posts */}
+        {tsPosts.length > 0 && (
+          <>
+            <div className="border-t border-gray-100 my-10" />
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">More articles</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {tsPosts.map(post => (
+                <PostCard key={post.slug} post={post} />
+              ))}
+            </div>
+          </>
+        )}
 
-        {/* Coming soon banner */}
+        {/* Coming soon */}
         <div className="mt-12 bg-purple-50 border border-purple-100 rounded-2xl px-6 py-8 text-center">
           <p className="text-sm font-semibold text-purple-700 mb-1">More coming soon</p>
           <p className="text-sm text-gray-500">
-            We publish new guides and tips every week. Have a topic you&apos;d like us to cover?{' '}
+            New guides published every week. Have a topic you&apos;d like us to cover?{' '}
             <Link href="/contact" className="text-purple-700 font-semibold hover:underline">
               Let us know →
             </Link>
