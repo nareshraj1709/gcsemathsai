@@ -17,39 +17,75 @@ const font = {
   body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
 }
 
-const steps = [
-  {
-    title: "What's your name?",
-    sub: "We'll personalise your dashboard and progress reports.",
-    field: "name" as const, placeholder: "e.g. Aarav", type: "text" as const,
-  },
-  {
-    title: "Which year are you in?",
-    sub: "This helps us set the right exam timeline.",
-    field: "year" as const, options: ["Year 10", "Year 11", "Resit (Adult)"],
-  },
-  {
-    title: "Which exam board?",
-    sub: "We'll align every question to your exact specification.",
-    field: "board" as const, options: ["AQA", "Edexcel", "OCR"],
-  },
-  {
-    title: "What grade are you aiming for?",
-    sub: "We'll focus your practice on the topics that matter most.",
-    field: "goal" as const, options: ["Grade 4 (Pass)", "Grade 5", "Grade 6", "Grade 7+"],
-  },
+const YEAR_OPTIONS = [
+  "Year 9",
+  "Year 10",
+  "Year 11",
+  "Year 12 (Sixth Form)",
+  "Year 13 (Sixth Form)",
+  "Resit (Adult)",
 ]
 
+const GCSE_BOARDS = ["AQA", "Edexcel", "OCR"]
+const ALEVEL_BOARDS = ["AQA", "Edexcel", "OCR A", "OCR B (MEI)"]
+const GCSE_GOALS = ["Grade 4 (Pass)", "Grade 5", "Grade 6", "Grade 7+"]
+const ALEVEL_GOALS = ["A* (Outstanding)", "A (Excellent)", "B (Good)", "C (Satisfactory)"]
+
+const STEP_COUNT = 4
 type Data = { name: string; year: string; board: string; goal: string }
+
+function isALevel(year: string) {
+  return year.includes('Sixth Form')
+}
 
 export default function Onboarding() {
   const router = useRouter()
   const [step, setStep] = useState(0)
   const [data, setData] = useState<Data>({ name: "", year: "", board: "", goal: "" })
 
+  const aLevel = isALevel(data.year)
+  const boardOptions = aLevel ? ALEVEL_BOARDS : GCSE_BOARDS
+  const goalOptions = aLevel ? ALEVEL_GOALS : GCSE_GOALS
+
+  const steps = [
+    {
+      title: "What's your name?",
+      sub: "We'll personalise your dashboard and revision plan.",
+      field: "name" as const, type: "text" as const, placeholder: "e.g. Aarav",
+    },
+    {
+      title: "Which year are you in?",
+      sub: "This helps us set the right exam timeline and syllabus.",
+      field: "year" as const, options: YEAR_OPTIONS,
+    },
+    {
+      title: "Which exam board?",
+      sub: "We'll align every question to your exact specification.",
+      field: "board" as const, options: boardOptions,
+    },
+    {
+      title: aLevel ? "What grade are you aiming for?" : "What grade are you aiming for?",
+      sub: aLevel
+        ? "We'll focus your revision on the topics that carry the most marks."
+        : "We'll focus your practice on the topics that matter most.",
+      field: "goal" as const, options: goalOptions,
+    },
+  ]
+
   const current = steps[step]
-  const isLast = step === steps.length - 1
+  const isLast = step === STEP_COUNT - 1
   const value = data[current.field]
+
+  // Reset board/goal if year changes and they become incompatible
+  const handleYearSelect = (opt: string) => {
+    const wasALevel = isALevel(data.year)
+    const nowALevel = isALevel(opt)
+    if (wasALevel !== nowALevel) {
+      setData({ ...data, year: opt, board: "", goal: "" })
+    } else {
+      setData({ ...data, year: opt })
+    }
+  }
 
   const handleNext = () => {
     if (isLast) {
@@ -69,7 +105,7 @@ export default function Onboarding() {
       <div style={{ width: "100%", maxWidth: 480 }}>
         {/* Progress dots */}
         <div style={{ display: "flex", gap: 6, justifyContent: "center", marginBottom: 40 }}>
-          {steps.map((_, i) => (
+          {Array.from({ length: STEP_COUNT }).map((_, i) => (
             <div key={i} style={{
               height: 4, borderRadius: 999, transition: "all 0.3s",
               width: i === step ? 24 : 8,
@@ -95,6 +131,18 @@ export default function Onboarding() {
             <div style={{ fontFamily: font.display, fontWeight: 700, color: C.ink, fontSize: 18 }}>GCSEMathsAI</div>
           </div>
 
+          {/* A-Level badge */}
+          {aLevel && step >= 2 && (
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: 6,
+              background: "#FEF3C7", borderRadius: 999, padding: "4px 12px",
+              fontSize: 11, fontWeight: 700, color: "#92400E",
+              marginBottom: 16,
+            }}>
+              📘 A-Level / Sixth Form mode
+            </div>
+          )}
+
           <h2 style={{ fontFamily: font.display, fontSize: 24, color: C.ink, marginBottom: 8, textAlign: "center" }}>
             {current.title}
           </h2>
@@ -119,15 +167,19 @@ export default function Onboarding() {
           ) : (
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {'options' in current && current.options!.map(opt => (
-                <button key={opt} onClick={() => setData({ ...data, [current.field]: opt })} style={{
-                  padding: "14px 16px", borderRadius: 12, cursor: "pointer",
-                  border: `2px solid ${value === opt ? C.purple : C.border}`,
-                  background: value === opt ? C.purplePale : "#fff",
-                  color: value === opt ? C.purple : C.ink,
-                  fontWeight: value === opt ? 700 : 500,
-                  fontSize: 15, fontFamily: font.body, textAlign: "left",
-                  transition: "all 0.15s",
-                }}>
+                <button
+                  key={opt}
+                  onClick={() => current.field === 'year' ? handleYearSelect(opt) : setData({ ...data, [current.field]: opt })}
+                  style={{
+                    padding: "14px 16px", borderRadius: 12, cursor: "pointer",
+                    border: `2px solid ${value === opt ? C.purple : C.border}`,
+                    background: value === opt ? C.purplePale : "#fff",
+                    color: value === opt ? C.purple : C.ink,
+                    fontWeight: value === opt ? 700 : 500,
+                    fontSize: 15, fontFamily: font.body, textAlign: "left",
+                    transition: "all 0.15s",
+                  }}
+                >
                   {value === opt ? "✓ " : ""}{opt}
                 </button>
               ))}

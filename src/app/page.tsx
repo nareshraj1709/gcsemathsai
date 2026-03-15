@@ -56,8 +56,9 @@ export default function Home() {
             <div className="flex flex-col gap-3 mb-6">
               {[
                 'Completely free — no card needed',
-                'Real AQA, Edexcel and OCR questions',
-                'AI marks every answer with full explanation',
+                'Covers Year 9–11 GCSE and Year 12–13 A Level',
+                'AQA, Edexcel and OCR exam board support',
+                'AI marks every answer with full worked solution',
                 'Your child builds confidence at their own pace',
               ].map(f => (
                 <div key={f} className="flex items-center gap-3 text-sm text-gray-600">
@@ -76,14 +77,14 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-purple-50 px-6 pt-16 pb-12 text-center">
         <span className="inline-block text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full mb-6">
-          AQA · Edexcel · OCR · Completely free
+          Year 9–13 · GCSE &amp; A Level · AQA · Edexcel · OCR · Free
         </span>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4 max-w-2xl mx-auto">
           Practise. Get marked.<br />
           <span className="text-purple-700">Improve every day.</span>
         </h1>
         <p className="text-lg text-gray-500 max-w-xl mx-auto mb-8 leading-relaxed">
-          Real GCSE Maths questions, instant AI feedback on every answer, and a clear picture of where you stand before exam day. Free for every student.
+          Real GCSE and A Level Maths questions, instant AI feedback on every answer, and a clear picture of where you stand before your mock exams and summer sitting. Free for every student.
         </p>
         <div className="flex gap-3 justify-center flex-wrap mb-4">
           <a href="/auth" className="bg-purple-700 text-white px-7 py-3 rounded-xl font-semibold text-base hover:bg-purple-800 transition shadow-md shadow-purple-200">
@@ -118,10 +119,10 @@ export default function Home() {
       {/* Stats bar */}
       <div className="grid grid-cols-4 border-b border-gray-100">
         {[
-          { val: '50+', label: 'AQA topics covered' },
+          { val: 'Year 9–13', label: 'GCSE & A Level covered' },
           { val: '100%', label: 'Free right now' },
           { val: 'Instant', label: 'AI marking & feedback' },
-          { val: 'Every day', label: 'Build your streak' },
+          { val: 'AQA · OCR · Edexcel', label: 'All major exam boards' },
         ].map((s, i) => (
           <div key={i} className={`py-5 text-center ${i < 3 ? 'border-r border-gray-100' : ''}`}>
             <div className="text-xl font-bold text-gray-900">{s.val}</div>
