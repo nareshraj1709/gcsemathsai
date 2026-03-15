@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { BLOG_POSTS, type BlogPost } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -12,85 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/blog' },
 }
 
-type Post = {
-  slug: string
-  category: string
-  categoryColour: string
-  title: string
-  excerpt: string
-  author: string
-  date: string
-  readMins: number
-}
-
-const POSTS: Post[] = [
-  {
-    slug: 'how-to-revise-gcse-maths-effectively',
-    category: 'Revision tips',
-    categoryColour: 'purple',
-    title: 'How to revise GCSE Maths effectively (without wasting hours)',
-    excerpt:
-      'Most students revise by reading notes or watching YouTube videos. Both feel productive but neither works as well as a third technique — and it\'s exactly what GCSEMathsAI is built around.',
-    author: 'GCSEMathsAI Team',
-    date: '10 March 2026',
-    readMins: 5,
-  },
-  {
-    slug: 'aqa-gcse-maths-topics-most-likely-to-come-up',
-    category: 'Exam prep',
-    categoryColour: 'blue',
-    title: 'AQA GCSE Maths: the topics most likely to appear in your exam',
-    excerpt:
-      'We analysed ten years of AQA GCSE Maths papers and counted how often each topic appeared. Here\'s where to focus your final revision weeks.',
-    author: 'GCSEMathsAI Team',
-    date: '5 March 2026',
-    readMins: 7,
-  },
-  {
-    slug: 'foundation-vs-higher-tier-which-should-you-sit',
-    category: 'Advice',
-    categoryColour: 'green',
-    title: 'Foundation vs Higher tier: which should you sit?',
-    excerpt:
-      'The difference between tiers can mean the difference between a grade 4 and a grade 9 on your certificate. Here\'s everything you need to know to make the right choice.',
-    author: 'GCSEMathsAI Team',
-    date: '28 February 2026',
-    readMins: 4,
-  },
-  {
-    slug: 'five-calculator-tricks-gcse-maths',
-    category: 'Revision tips',
-    categoryColour: 'purple',
-    title: '5 calculator tricks every GCSE Maths student should know',
-    excerpt:
-      'Your Casio can do far more than basic arithmetic. These five techniques will save you minutes in the exam and reduce careless mistakes.',
-    author: 'GCSEMathsAI Team',
-    date: '20 February 2026',
-    readMins: 3,
-  },
-  {
-    slug: 'how-ai-marking-works',
-    category: 'How it works',
-    categoryColour: 'amber',
-    title: 'How AI marking works — and when to trust it',
-    excerpt:
-      'GCSEMathsAI uses Claude by Anthropic to mark your answers. Here\'s a transparent look at how it works, where it excels, and the edge cases where you should double-check with a teacher.',
-    author: 'GCSEMathsAI Team',
-    date: '12 February 2026',
-    readMins: 6,
-  },
-  {
-    slug: 'gcse-maths-grade-boundaries-explained',
-    category: 'Exam prep',
-    categoryColour: 'blue',
-    title: 'GCSE Maths grade boundaries explained',
-    excerpt:
-      'Grade boundaries change every year. We explain how they work, why they move, and what score you realistically need to hit your target grade.',
-    author: 'GCSEMathsAI Team',
-    date: '3 February 2026',
-    readMins: 5,
-  },
-]
+const POSTS = BLOG_POSTS
 
 const COLOUR_MAP: Record<string, { badge: string; dot: string }> = {
   purple: { badge: 'bg-purple-100 text-purple-700', dot: 'bg-purple-500' },
@@ -99,7 +22,7 @@ const COLOUR_MAP: Record<string, { badge: string; dot: string }> = {
   amber:  { badge: 'bg-amber-100 text-amber-700',   dot: 'bg-amber-500'  },
 }
 
-function PostCard({ post, featured = false }: { post: Post; featured?: boolean }) {
+function PostCard({ post, featured = false }: { post: BlogPost; featured?: boolean }) {
   const colours = COLOUR_MAP[post.categoryColour]
   return (
     <Link

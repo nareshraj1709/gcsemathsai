@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { CONTENT, toSlug } from '@/lib/study-content'
+import { BLOG_POSTS } from '@/lib/blog-posts'
 
 const BASE = 'https://www.gcsemathsai.co.uk'
 
@@ -25,5 +26,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...studyPages]
+  // Blog post pages
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map(p => ({
+    url: `${BASE}/blog/${p.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...studyPages, ...blogPages]
 }
