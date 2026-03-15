@@ -116,9 +116,8 @@ export default function Nav() {
               {[
                 { label: "Dashboard", path: "/dashboard" },
                 { label: "Study", path: "/study" },
-                { label: "Sections", path: "/sections" },
-                { label: "Papers", path: "/papers" },
                 { label: "Practice", path: "/learn" },
+                { label: "Papers", path: "/papers" },
               ].map(l => (
                 <button key={l.label} onClick={() => router.push(l.path)} style={{
                   background: pathname.startsWith(l.path) ? C.purplePale : "none",

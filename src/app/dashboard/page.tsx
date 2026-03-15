@@ -278,42 +278,33 @@ export default function Dashboard() {
         </div>
 
         {/* CTAs */}
-        <div style={{ marginTop: 20, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+        <div style={{ marginTop: 20, display: "flex", gap: 12, flexWrap: "wrap" }}>
           <button onClick={() => router.push('/study')} style={{
-            padding: "14px",
+            flex: 1, minWidth: 140, padding: "14px",
             background: "#fff", color: C.purple,
             border: `2px solid ${C.purple}`, borderRadius: 14,
             fontSize: 14, fontWeight: 700, cursor: "pointer",
             fontFamily: font.body,
           }}>
-            📖 Study notes
+            📖 Study Notes
           </button>
-          <button onClick={() => router.push('/sections')} style={{
-            padding: "14px",
+          <button onClick={() => router.push('/papers')} style={{
+            flex: 1, minWidth: 140, padding: "14px",
             background: "#fff", color: "#2563EB",
             border: "2px solid #BFDBFE", borderRadius: 14,
             fontSize: 14, fontWeight: 700, cursor: "pointer",
             fontFamily: font.body,
           }}>
-            📚 Practice sections
-          </button>
-          <button onClick={() => router.push('/papers')} style={{
-            padding: "14px",
-            background: "#fff", color: "#059669",
-            border: "2px solid #A7F3D0", borderRadius: 14,
-            fontSize: 14, fontWeight: 700, cursor: "pointer",
-            fontFamily: font.body,
-          }}>
-            📋 Past-style papers
+            📋 Exam Papers
           </button>
           <button onClick={() => router.push('/learn')} style={{
-            padding: "14px",
+            flex: 2, minWidth: 200, padding: "14px",
             background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
             color: "#fff", border: "none", borderRadius: 14,
             fontSize: 14, fontWeight: 700, cursor: "pointer",
             boxShadow: `0 4px 16px ${C.purple}30`, fontFamily: font.body,
           }}>
-            🚀 Quick practice →
+            🚀 Start Practice →
           </button>
         </div>
       </div>
