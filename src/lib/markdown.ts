@@ -1,93 +1,99 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { marked, Renderer } from 'marked'
+import { marked } from 'marked'
 
-// Custom renderer: add id to h2/h3 for TOC anchor links
-const renderer = new Renderer()
-renderer.heading = ({ text, depth }: { text: string; depth: number }) => {
-  if (depth === 2 || depth === 3) {
-    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-    return `<h${depth} id="${id}">${text}</h${depth}>\n`
-  }
-  return `<h${depth}>${text}</h${depth}>\n`
-}
-marked.use({ renderer })
+// Configure marked: add id attrs to h2/h3 headings for TOC anchor links.
+// Uses marked.use() API which is stable across marked v4-v17.
+marked.use({
+  renderer: {
+    heading({ text, depth }: { text: string; depth: number }): string {
+      const id = text
+        .replace(/<[^>]+>/g, '')   // strip any inline HTML
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '')
+      if (depth === 2 || depth === 3) {
+        return `<h${depth} id="${id}">${text}</h${depth}>\n`
+      }
+      return `<h${depth}>${text}</h${depth}>\n`
+    },
+  },
+})
 
 export type MarkdownPost = {
   slug: string
   title: string
   description: string
-  date: string          // e.g. "15 March 2026"
-  dateISO: string       // e.g. "2026-03-15"
+  date: string       // e.g. "15 March 2026"
+  dateISO: string    // e.g. "2026-03-15"
   category: string
   categoryColour: 'purple' | 'blue' | 'green' | 'amber' | 'rose'
   author: string
   readMins: number
   keywords: string[]
-  content: string       // raw markdown
+  content: string    // raw markdown
 }
 
 const CONTENT_DIR = path.join(process.cwd(), 'src', 'content', 'blog')
 
-export function getAllMarkdownPosts(): Omit<MarkdownPost, 'content'>[] {
-  if (!fs.existsSync(CONTENT_DIR)) return []
-
-  const files = fs.readdirSync(CONTENT_DIR).filter(f => f.endsWith('.md'))
-
-  return files
-    .map(filename => {
-      const slug = filename.replace(/\.md$/, '')
-      const raw = fs.readFileSync(path.join(CONTENT_DIR, filename), 'utf8')
-      const { data } = matter(raw)
-      return {
-        slug,
-        title: data.title ?? '',
-        description: data.description ?? '',
-        date: data.date ?? '',
-        dateISO: data.dateISO ?? '',
-        category: data.category ?? 'Guide',
-        categoryColour: (data.categoryColour ?? 'purple') as MarkdownPost['categoryColour'],
-        author: data.author ?? 'GCSEMathsAI Team',
-        readMins: data.readMins ?? 5,
-        keywords: data.keywords ?? [],
-      }
-    })
-    .sort((a, b) => (b.dateISO > a.dateISO ? 1 : -1))
+function parsePost(filename: string, includeContent: false): Omit<MarkdownPost, 'content'>
+function parsePost(filename: string, includeContent: true): MarkdownPost
+function parsePost(filename: string, includeContent: boolean): MarkdownPost | Omit<MarkdownPost, 'content'> {
+  const slug = filename.replace(/\.md$/, '')
+  const raw = fs.readFileSync(path.join(CONTENT_DIR, filename), 'utf8')
+  const { data, content } = matter(raw)
+  const base = {
+    slug,
+    title: String(data.title ?? ''),
+    description: String(data.description ?? ''),
+    date: String(data.date ?? ''),
+    dateISO: String(data.dateISO ?? ''),
+    category: String(data.category ?? 'Guide'),
+    categoryColour: (data.categoryColour ?? 'purple') as MarkdownPost['categoryColour'],
+    author: String(data.author ?? 'GCSEMathsAI Team'),
+    readMins: Number(data.readMins ?? 5),
+    keywords: Array.isArray(data.keywords) ? data.keywords : [],
+  }
+  return includeContent ? { ...base, content } : base
 }
 
-export function getMarkdownPost(slug: string): MarkdownPost | null {
-  const filePath = path.join(CONTENT_DIR, `${slug}.md`)
-  if (!fs.existsSync(filePath)) return null
-
-  const raw = fs.readFileSync(filePath, 'utf8')
-  const { data, content } = matter(raw)
-
-  return {
-    slug,
-    title: data.title ?? '',
-    description: data.description ?? '',
-    date: data.date ?? '',
-    dateISO: data.dateISO ?? '',
-    category: data.category ?? 'Guide',
-    categoryColour: (data.categoryColour ?? 'purple') as MarkdownPost['categoryColour'],
-    author: data.author ?? 'GCSEMathsAI Team',
-    readMins: data.readMins ?? 5,
-    keywords: data.keywords ?? [],
-    content,
+export function getAllMarkdownPosts(): Omit<MarkdownPost, 'content'>[] {
+  try {
+    if (!fs.existsSync(CONTENT_DIR)) return []
+    return fs
+      .readdirSync(CONTENT_DIR)
+      .filter(f => f.endsWith('.md'))
+      .map(f => parsePost(f, false))
+      .sort((a, b) => (b.dateISO > a.dateISO ? 1 : -1))
+  } catch {
+    return []
   }
 }
 
-/** Render markdown to HTML string */
-export function renderMarkdown(content: string): string {
-  return marked(content) as string
+export function getMarkdownPost(slug: string): MarkdownPost | null {
+  try {
+    const filePath = path.join(CONTENT_DIR, `${slug}.md`)
+    if (!fs.existsSync(filePath)) return null
+    return parsePost(`${slug}.md`, true)
+  } catch {
+    return null
+  }
 }
 
-/** Extract H2 headings for table of contents */
+/** Render markdown to HTML string (synchronous). */
+export function renderMarkdown(content: string): string {
+  // marked() in v17 returns string synchronously when no async extensions are used.
+  const result = marked.parse(content)
+  // marked.parse always returns string | Promise<string>; we use synchronous extensions only.
+  return typeof result === 'string' ? result : ''
+}
+
+/** Extract H2 headings for table of contents. */
 export function extractTOC(content: string): { id: string; text: string }[] {
-  const matches = [...content.matchAll(/^## (.+)$/gm)]
-  return matches.map(m => ({
-    text: m[1].trim(),
-    id: m[1].trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
-  }))
+  return [...content.matchAll(/^## (.+)$/gm)].map(m => {
+    const text = m[1].trim()
+    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    return { text, id }
+  })
 }
