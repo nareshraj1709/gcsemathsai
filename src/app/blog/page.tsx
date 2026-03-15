@@ -2,8 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Blog — GCSEMathsAI',
-  description: 'Revision tips, GCSE Maths guides, and updates from the GCSEMathsAI team.',
+  title: 'Blog',
+  description: 'Revision tips, GCSE Maths guides, exam strategies and updates from the GCSEMathsAI team.',
+  openGraph: {
+    title: 'GCSE Maths Blog | GCSEMathsAI',
+    description: 'Revision tips, GCSE Maths guides, exam strategies and updates from the GCSEMathsAI team.',
+    url: 'https://www.gcsemathsai.co.uk/blog',
+  },
+  alternates: { canonical: 'https://www.gcsemathsai.co.uk/blog' },
 }
 
 type Post = {

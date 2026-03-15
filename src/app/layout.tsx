@@ -13,9 +13,56 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://www.gcsemathsai.co.uk";
+
 export const metadata: Metadata = {
-  title: "GCSEMathsAI — AI Maths Tutor",
-  description: "Practice GCSE maths questions with instant AI marking. AQA · Edexcel · OCR aligned.",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "GCSEMathsAI — AI-Powered GCSE Maths Tutor",
+    template: "%s | GCSEMathsAI",
+  },
+  description:
+    "Practise GCSE Maths with instant AI marking. Past-style papers, study notes and topic practice for AQA, Edexcel and OCR — Foundation and Higher.",
+  keywords: [
+    "GCSE Maths", "GCSE Mathematics", "AQA Maths", "Edexcel Maths", "OCR Maths",
+    "GCSE past papers", "GCSE practice questions", "AI maths tutor",
+    "GCSE revision", "Foundation maths", "Higher maths", "Year 10 maths", "Year 11 maths",
+  ],
+  authors: [{ name: "GCSEMathsAI" }],
+  creator: "GCSEMathsAI",
+  publisher: "GCSEMathsAI",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: BASE_URL,
+    siteName: "GCSEMathsAI",
+    title: "GCSEMathsAI — AI-Powered GCSE Maths Tutor",
+    description:
+      "Practise GCSE Maths with instant AI marking. Past-style papers, study notes and topic practice for AQA, Edexcel and OCR.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "GCSEMathsAI — AI-Powered GCSE Maths Tutor",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GCSEMathsAI — AI-Powered GCSE Maths Tutor",
+    description:
+      "Instant AI marking for GCSE Maths. Study notes, timed papers and topic practice for AQA, Edexcel and OCR.",
+    images: ["/og.png"],
+  },
+  alternates: {
+    canonical: BASE_URL,
+  },
 };
 
 export default function RootLayout({
@@ -24,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NavWrapper />
         {children}

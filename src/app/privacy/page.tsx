@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — GCSEMathsAI',
-  description: 'How GCSEMathsAI collects, uses and protects your personal data.',
+  title: 'Privacy Policy',
+  description: 'How GCSEMathsAI collects, uses and protects your personal data under UK GDPR.',
+  robots: { index: false },
 }
 
 const LAST_UPDATED = '14 March 2026'
