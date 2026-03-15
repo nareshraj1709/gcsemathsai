@@ -3,6 +3,30 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllMarkdownPosts, getMarkdownPost, renderMarkdown, extractTOC } from '@/lib/markdown'
 import { BLOG_POSTS, getPost, type Block } from '@/lib/blog-posts'
+import QuickQuizGenerator from '@/components/QuickQuizGenerator'
+
+// Maps blog slug → { topic sent to API, practiceSlug for /practice/ link, label }
+const TOPIC_MAP: Record<string, { topic: string; practiceSlug: string; label: string }> = {
+  'how-to-revise-gcse-maths':                  { topic: 'gcse maths revision strategies',          practiceSlug: 'gcse-maths',           label: 'GCSE Maths Revision'      },
+  'gcse-maths-topics-complete-list':            { topic: 'gcse maths topics overview',              practiceSlug: 'gcse-maths',           label: 'GCSE Maths Topics'        },
+  'how-to-solve-quadratic-equations-gcse':      { topic: 'quadratic equations',                     practiceSlug: 'quadratic-equations',  label: 'Quadratic Equations'      },
+  'gcse-maths-grade-boundaries':                { topic: 'gcse exam technique and scoring',         practiceSlug: 'gcse-maths',           label: 'GCSE Maths'               },
+  'how-to-pass-gcse-maths-resit':               { topic: 'gcse maths resit preparation',            practiceSlug: 'gcse-maths',           label: 'GCSE Maths Resit'         },
+  'how-to-get-grade-9-gcse-maths':              { topic: 'gcse maths higher tier problem solving',  practiceSlug: 'gcse-maths',           label: 'Higher Tier GCSE Maths'   },
+  'aqa-gcse-maths-complete-topic-checklist':    { topic: 'gcse maths topics',                       practiceSlug: 'gcse-maths',           label: 'AQA GCSE Maths Topics'    },
+  'gcse-maths-grade-boundaries-explained':      { topic: 'gcse maths exam scoring',                 practiceSlug: 'gcse-maths',           label: 'GCSE Grade Boundaries'    },
+  'gcse-maths-revision-tips-that-actually-work':{ topic: 'gcse maths revision',                     practiceSlug: 'gcse-maths',           label: 'GCSE Maths Revision'      },
+  'gcse-maths-formulas-you-must-know':          { topic: 'gcse maths formulas and identities',      practiceSlug: 'gcse-maths',           label: 'GCSE Maths Formulas'      },
+  'gcse-maths-foundation-vs-higher-which-tier': { topic: 'gcse maths foundation and higher tier',   practiceSlug: 'gcse-maths',           label: 'Foundation vs Higher'     },
+  'how-ai-is-changing-gcse-maths-revision-2025':{ topic: 'gcse maths mixed practice',               practiceSlug: 'gcse-maths',           label: 'GCSE Maths'               },
+  'edexcel-gcse-maths-past-papers-guide':       { topic: 'gcse maths past paper exam questions',    practiceSlug: 'gcse-maths',           label: 'Edexcel GCSE Maths'       },
+  '7-day-gcse-maths-revision-plan':             { topic: 'gcse maths mixed revision',               practiceSlug: 'gcse-maths',           label: 'GCSE Maths Revision'      },
+  'ocr-gcse-maths-complete-guide':              { topic: 'gcse maths topics',                       practiceSlug: 'gcse-maths',           label: 'OCR GCSE Maths'           },
+}
+
+function getQuizProps(slug: string) {
+  return TOPIC_MAP[slug] ?? { topic: 'gcse maths', practiceSlug: 'gcse-maths', label: 'GCSE Maths' }
+}
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -149,6 +173,7 @@ export default async function BlogPostPage({ params }: Props) {
     const colours = COLOUR_MAP[md.categoryColour] ?? COLOUR_MAP.purple
     const otherMd = getAllMarkdownPosts().filter(p => p.slug !== md.slug).slice(0, 2)
     const otherTs = BLOG_POSTS.slice(0, 3 - otherMd.length)
+    const quiz = getQuizProps(slug)
 
     return (
       <main className="min-h-screen bg-white">
@@ -193,6 +218,13 @@ export default async function BlogPostPage({ params }: Props) {
                 Start practising free →
               </Link>
             </div>
+
+            {/* Quick Quiz */}
+            <QuickQuizGenerator
+              topic={quiz.topic}
+              topicSlug={quiz.practiceSlug}
+              topicLabel={quiz.label}
+            />
           </article>
 
           {/* Table of contents — sticky sidebar */}
@@ -247,6 +279,7 @@ export default async function BlogPostPage({ params }: Props) {
   // Fall back to TypeScript-based post
   const ts = getPost(slug)
   if (!ts) notFound()
+  const quiz = getQuizProps(slug)
 
   const colours = COLOUR_MAP[ts.categoryColour] ?? COLOUR_MAP.purple
   const otherPosts = BLOG_POSTS.filter(p => p.slug !== ts.slug).slice(0, 3)
@@ -275,6 +308,11 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Article body */}
       <article className="max-w-3xl mx-auto px-6 py-10">
         {ts.blocks.map((block, i) => <RenderBlock key={i} block={block} />)}
+        <QuickQuizGenerator
+          topic={quiz.topic}
+          topicSlug={quiz.practiceSlug}
+          topicLabel={quiz.label}
+        />
       </article>
 
       {/* Divider */}
