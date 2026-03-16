@@ -2,12 +2,34 @@
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
-import Link from 'next/link'
 
-type Question = { question: string; markScheme: string; marks: number }
+// ── Design tokens ─────────────────────────────────────────────
+const C = {
+  ink: '#0D0B1A',
+  purple: '#6D28D9',
+  purpleLight: '#8B5CF6',
+  purplePale: '#EDE9FE',
+  mist: '#F8F7FF',
+  mid: '#6B7280',
+  border: '#E5E1FF',
+  green: '#059669',
+  greenLight: '#D1FAE5',
+  red: '#DC2626',
+  redLight: '#FEE2E2',
+  amber: '#D97706',
+  amberLight: '#FEF3C7',
+}
+const font = {
+  display: "'Georgia', 'Times New Roman', serif",
+  body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
+}
+
+// ── Types ─────────────────────────────────────────────────────
+type Question = { question: string; hint?: string; markScheme: string; marks: number }
 type MarkResult = { score: number; outOf: number; feedback: string }
-type Phase = 'loading' | 'practice'
+type Phase = 'loading' | 'practice' | 'complete'
 
+// Exported for review page compatibility
 export type SessionAttempt = {
   question: string
   topic: string
@@ -18,11 +40,48 @@ export type SessionAttempt = {
   feedback: string
 }
 
+type Attempt = {
+  question: string
+  topic: string
+  subtopic: string
+  studentAnswer: string
+  score: number
+  outOf: number
+  feedback: string
+  hint?: string
+}
+
+// ── Score ring SVG ────────────────────────────────────────────
+function ScoreRing({ pct, size = 120 }: { pct: number; size?: number }) {
+  const r = size * 0.42
+  const circ = 2 * Math.PI * r
+  const offset = circ - (pct / 100) * circ
+  const color = pct >= 80 ? C.green : pct >= 50 ? C.amber : C.red
+
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={{ display: 'block' }}>
+      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={C.border} strokeWidth={size * 0.083} />
+      <circle
+        cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth={size * 0.083}
+        strokeDasharray={circ} strokeDashoffset={offset}
+        strokeLinecap="round"
+        transform={`rotate(-90 ${size / 2} ${size / 2})`}
+        style={{ transition: 'stroke-dashoffset 0.8s ease' }}
+      />
+      <text x="50%" y="50%" textAnchor="middle" dy="0.35em"
+        style={{ fontSize: size * 0.22, fontWeight: 800, fill: color, fontFamily: font.display }}>
+        {Math.round(pct)}%
+      </text>
+    </svg>
+  )
+}
+
+// ── Page wrapper ──────────────────────────────────────────────
 export default function PracticePage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
-        <p className="text-purple-700 font-semibold">Loading...</p>
+      <div style={{ minHeight: '100vh', background: C.mist, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <p style={{ color: C.purple, fontWeight: 700, fontFamily: font.body }}>Loading…</p>
       </div>
     }>
       <Practice />
@@ -30,288 +89,486 @@ export default function PracticePage() {
   )
 }
 
+// ── Main practice component ───────────────────────────────────
 function Practice() {
   const searchParams = useSearchParams()
   const router = useRouter()
 
-  const topic = searchParams.get('topic') || ''
-  const subtopic = searchParams.get('subtopic') || ''
-  const board = searchParams.get('board') || 'AQA'
-  const tier = searchParams.get('tier') || 'Foundation'
+  const topic     = searchParams.get('topic')      || ''
+  const subtopic  = searchParams.get('subtopic')   || ''
+  const board     = searchParams.get('board')      || 'AQA'
+  const tier      = searchParams.get('tier')       || 'Foundation'
+  const difficulty = searchParams.get('difficulty') || 'Medium'
+  const year      = searchParams.get('year')       || ''
 
-  const [phase, setPhase] = useState<Phase>('loading')
+  const [phase, setPhase]       = useState<Phase>('loading')
   const [questions, setQuestions] = useState<Question[]>([])
   const [genError, setGenError] = useState('')
-  const [qIndex, setQIndex] = useState(0)
-  const [answer, setAnswer] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [result, setResult] = useState<MarkResult | null>(null)
-  const [error, setError] = useState('')
-  const [sessionAttempts, setSessionAttempts] = useState<SessionAttempt[]>([])
+  const [qIndex, setQIndex]     = useState(0)
+  const [answer, setAnswer]     = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [result, setResult]     = useState<MarkResult | null>(null)
+  const [error, setError]       = useState('')
+  const [showHint, setShowHint] = useState(false)
+  const [attempts, setAttempts] = useState<Attempt[]>([])
+  const [generationRound, setGenerationRound] = useState(0)
 
-  // Generate questions on mount
-  useEffect(() => {
-    const generate = async () => {
-      try {
-        const res = await fetch('/api/generate', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            examBoard: board,
-            tier,
-            topic: topic || 'Mixed',
-            subtopic: subtopic || 'Mixed',
-            count: 5,
-            paperStyle: false,
-          }),
-        })
-        const data = await res.json()
-        if (data.error || !data.questions) {
-          setGenError('Failed to load questions. Please try again.')
-          return
-        }
-        setQuestions(data.questions)
-        setPhase('practice')
-      } catch {
-        setGenError('Network error. Please refresh.')
-      }
+  const generateQuestions = async () => {
+    setPhase('loading')
+    setGenError('')
+    setQIndex(0)
+    setAnswer('')
+    setResult(null)
+    setError('')
+    setShowHint(false)
+    setAttempts([])
+    try {
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ examBoard: board, tier, topic: topic || 'Mixed', subtopic: subtopic || 'Mixed', count: 5, paperStyle: false, difficulty }),
+      })
+      const data = await res.json()
+      if (data.error || !data.questions) { setGenError('Failed to load questions. Please try again.'); return }
+      setQuestions(data.questions)
+      setPhase('practice')
+    } catch {
+      setGenError('Network error. Please refresh.')
     }
-    generate()
-  }, [board, tier, topic, subtopic])
+  }
+
+  // Generate on mount and whenever generationRound changes
+  useEffect(() => { generateQuestions() }, [generationRound]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const q = questions[qIndex]
   const isLastQuestion = qIndex === questions.length - 1
-  const sessionHasAttempts = sessionAttempts.length > 0
 
-  const saveAttempt = async (
-    question: string, studentAnswer: string,
-    score: number, outOf: number, feedback: string
-  ) => {
+  const saveAttempt = async (question: string, studentAnswer: string, score: number, outOf: number, feedback: string) => {
     const { data: { user } } = await supabase.auth.getUser()
     if (!user) return
     await supabase.from('attempts').insert({
-      user_id: user.id,
-      topic,
-      subtopic,
-      year_group: searchParams.get('year') || '',
-      exam_board: board,
-      tier,
-      question,
-      student_answer: studentAnswer,
-      score,
-      out_of: outOf,
-      feedback,
+      user_id: user.id, topic, subtopic, year_group: year,
+      exam_board: board, tier, question, student_answer: studentAnswer,
+      score, out_of: outOf, feedback,
     })
   }
 
   const submitAnswer = async () => {
     if (!answer.trim() || !q) return
-    setLoading(true)
+    setSubmitting(true)
     setResult(null)
     setError('')
-
     try {
       const res = await fetch('/api/mark', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          question: q.question,
-          markScheme: q.markScheme,
-          studentAnswer: answer,
-          marks: q.marks,
-          examBoard: board,
-        }),
+        body: JSON.stringify({ question: q.question, markScheme: q.markScheme, studentAnswer: answer, marks: q.marks, examBoard: board }),
       })
       const data = await res.json()
       if (data.error) { setError(data.error); return }
-
       setResult(data)
       await saveAttempt(q.question, answer, data.score, data.outOf, data.feedback)
-
-      setSessionAttempts(prev => [...prev, {
-        question: q.question,
-        topic,
-        subtopic,
-        studentAnswer: answer,
-        score: data.score,
-        outOf: data.outOf,
-        feedback: data.feedback,
+      setAttempts(prev => [...prev, {
+        question: q.question, topic, subtopic,
+        studentAnswer: answer, score: data.score, outOf: data.outOf, feedback: data.feedback,
+        hint: q.hint,
       }])
     } catch {
       setError('Something went wrong. Please try again.')
     } finally {
-      setLoading(false)
+      setSubmitting(false)
     }
   }
 
-  const goToReview = () => {
-    localStorage.setItem('gcse_session_review', JSON.stringify(sessionAttempts))
-    localStorage.setItem('gcse_session_meta', JSON.stringify({ board, tier }))
-    router.push('/review')
-  }
-
   const nextQuestion = () => {
-    setAnswer('')
-    setResult(null)
-    setError('')
-    setQIndex(i => i + 1)
+    if (isLastQuestion) {
+      setPhase('complete')
+    } else {
+      setAnswer('')
+      setResult(null)
+      setError('')
+      setShowHint(false)
+      setQIndex(i => i + 1)
+    }
   }
 
-  const scoreColor = result
-    ? result.score === result.outOf
-      ? 'text-green-600 bg-green-50 border-green-200'
-      : result.score === 0
-      ? 'text-red-600 bg-red-50 border-red-200'
-      : 'text-yellow-600 bg-yellow-50 border-yellow-200'
-    : ''
+  const totalScore = attempts.reduce((s, a) => s + a.score, 0)
+  const totalOut   = attempts.reduce((s, a) => s + a.outOf, 0)
+  const pct        = totalOut > 0 ? Math.round((totalScore / totalOut) * 100) : 0
 
-  const totalScore = sessionAttempts.reduce((s, a) => s + a.score, 0)
-  const totalOut   = sessionAttempts.reduce((s, a) => s + a.outOf, 0)
+  const difficultyColor = difficulty === 'Easy' ? C.green : difficulty === 'Exam Level' ? C.red : C.amber
 
   // ── LOADING ──────────────────────────────────────────────────
   if (phase === 'loading') {
     return (
-      <main className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-4xl mb-4">📐</div>
-          <p className="text-purple-700 font-semibold text-lg">
-            {genError || `Generating ${subtopic || topic || 'mixed'} questions…`}
-          </p>
-          {genError && (
-            <button
-              onClick={() => router.push('/learn')}
-              className="mt-4 text-sm text-gray-500 hover:text-gray-700 transition"
-            >
-              ← Back to topics
-            </button>
+      <div style={{ minHeight: '100vh', background: C.mist, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: font.body }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ fontSize: 48, marginBottom: 16 }}>📐</div>
+          {genError ? (
+            <>
+              <p style={{ color: C.red, fontWeight: 700, fontSize: 15, marginBottom: 16 }}>{genError}</p>
+              <button onClick={() => setGenerationRound(r => r + 1)} style={{
+                background: C.purple, color: '#fff', border: 'none', borderRadius: 10,
+                padding: '10px 20px', fontSize: 14, fontWeight: 700, cursor: 'pointer', marginRight: 10,
+              }}>Try again</button>
+              <button onClick={() => router.push('/learn')} style={{
+                background: 'none', color: C.mid, border: `1.5px solid ${C.border}`, borderRadius: 10,
+                padding: '10px 20px', fontSize: 14, fontWeight: 600, cursor: 'pointer',
+              }}>← Back to topics</button>
+            </>
+          ) : (
+            <>
+              <p style={{ color: C.purple, fontWeight: 700, fontSize: 16, margin: '0 0 8px' }}>
+                Generating {difficulty.toLowerCase()} questions…
+              </p>
+              <p style={{ color: C.mid, fontSize: 13 }}>{subtopic || topic || 'Mixed'} · {board} {tier}</p>
+            </>
           )}
         </div>
-      </main>
+      </div>
+    )
+  }
+
+  // ── COMPLETE ─────────────────────────────────────────────────
+  if (phase === 'complete') {
+    const summaryColor = pct >= 80 ? C.green : pct >= 50 ? C.amber : C.red
+    const summaryBg    = pct >= 80 ? '#F0FDF4' : pct >= 50 ? '#FFFBEB' : '#FFF5F5'
+    const summaryLabel = pct >= 80 ? 'Great work!' : pct >= 50 ? 'Good effort!' : 'Keep practising!'
+
+    return (
+      <div style={{ minHeight: '100vh', background: C.mist, fontFamily: font.body, padding: '40px 24px 80px' }}>
+        <div style={{ maxWidth: 680, margin: '0 auto' }}>
+
+          {/* Summary card */}
+          <div style={{ background: '#fff', borderRadius: 24, border: `1px solid ${C.border}`, overflow: 'hidden', marginBottom: 24, boxShadow: '0 4px 32px rgba(109,40,217,0.08)' }}>
+            <div style={{ background: summaryBg, padding: '32px 28px', display: 'flex', alignItems: 'center', gap: 28, flexWrap: 'wrap' }}>
+              <ScoreRing pct={pct} size={110} />
+              <div>
+                <div style={{ fontSize: 22, fontWeight: 800, fontFamily: font.display, color: summaryColor, marginBottom: 4 }}>
+                  {summaryLabel}
+                </div>
+                <div style={{ fontSize: 15, color: C.ink, fontWeight: 600, marginBottom: 6 }}>
+                  {totalScore} / {totalOut} marks scored
+                </div>
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                  {[subtopic || topic || 'Mixed', board, tier, difficulty].map(tag => (
+                    <span key={tag} style={{ fontSize: 11, fontWeight: 700, color: C.purple, background: C.purplePale, padding: '2px 8px', borderRadius: 999 }}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Per-question grid */}
+            <div style={{ padding: '20px 28px' }}>
+              <p style={{ fontSize: 11, fontWeight: 700, color: C.mid, textTransform: 'uppercase', letterSpacing: 0.8, margin: '0 0 12px' }}>Question breakdown</p>
+              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 20 }}>
+                {attempts.map((a, i) => {
+                  const qPct = a.outOf > 0 ? a.score / a.outOf : 0
+                  const bg = qPct === 1 ? C.green : qPct === 0 ? C.red : C.amber
+                  return (
+                    <div key={i} title={`Q${i + 1}: ${a.score}/${a.outOf}`} style={{
+                      width: 36, height: 36, borderRadius: 8, background: bg,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      color: '#fff', fontSize: 12, fontWeight: 700,
+                    }}>{a.score}/{a.outOf}</div>
+                  )
+                })}
+              </div>
+
+              {/* Detailed question list */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                {attempts.map((a, i) => {
+                  const qPct = a.outOf > 0 ? a.score / a.outOf : 0
+                  const borderColor = qPct === 1 ? C.green : qPct === 0 ? C.red : C.amber
+                  const bgColor = qPct === 1 ? '#F0FDF4' : qPct === 0 ? '#FFF5F5' : '#FFFBEB'
+                  return (
+                    <div key={i} style={{ borderRadius: 12, border: `1.5px solid ${borderColor}33`, overflow: 'hidden' }}>
+                      <div style={{ background: bgColor, padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
+                        <div style={{ fontSize: 13, fontWeight: 600, color: C.ink, flex: 1 }}>
+                          <span style={{ fontSize: 10, fontWeight: 700, color: borderColor, marginRight: 6 }}>Q{i + 1}</span>
+                          {a.question}
+                        </div>
+                        <span style={{ fontSize: 13, fontWeight: 800, color: borderColor, whiteSpace: 'nowrap' }}>{a.score}/{a.outOf}</span>
+                      </div>
+                      <div style={{ padding: '10px 14px', background: '#fff' }}>
+                        <p style={{ fontSize: 11, fontWeight: 700, color: C.mid, textTransform: 'uppercase', letterSpacing: 0.8, margin: '0 0 4px' }}>Your answer</p>
+                        <p style={{ fontSize: 13, color: C.ink, margin: '0 0 8px' }}>{a.studentAnswer}</p>
+                        <p style={{ fontSize: 12, color: C.mid, lineHeight: 1.5, margin: 0 }}>{a.feedback}</p>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Action buttons */}
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <button onClick={() => setGenerationRound(r => r + 1)} style={{
+              flex: 1, minWidth: 180,
+              background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+              color: '#fff', border: 'none', borderRadius: 12,
+              padding: '14px 20px', fontSize: 14, fontWeight: 700,
+              cursor: 'pointer', fontFamily: font.body,
+              boxShadow: `0 4px 16px ${C.purple}30`,
+            }}>
+              Practice more questions →
+            </button>
+            <button onClick={() => router.push('/learn')} style={{
+              flex: 1, minWidth: 160,
+              background: '#fff', color: C.purple,
+              border: `1.5px solid ${C.border}`, borderRadius: 12,
+              padding: '14px 20px', fontSize: 14, fontWeight: 600,
+              cursor: 'pointer', fontFamily: font.body,
+            }}>
+              Change topic
+            </button>
+            {pct < 70 && (
+              <button onClick={() => router.push(`/study`)} style={{
+                flex: 1, minWidth: 160,
+                background: '#fff', color: C.amber,
+                border: `1.5px solid ${C.amberLight}`, borderRadius: 12,
+                padding: '14px 20px', fontSize: 14, fontWeight: 600,
+                cursor: 'pointer', fontFamily: font.body,
+              }}>
+                Study notes →
+              </button>
+            )}
+            <button onClick={() => router.push('/dashboard')} style={{
+              background: 'none', color: C.mid, border: 'none',
+              padding: '14px 16px', fontSize: 13, cursor: 'pointer', fontFamily: font.body,
+            }}>
+              Dashboard
+            </button>
+          </div>
+        </div>
+      </div>
     )
   }
 
   // ── PRACTICE ─────────────────────────────────────────────────
+  const sessionScore = attempts.reduce((s, a) => s + a.score, 0)
+  const sessionOut   = attempts.reduce((s, a) => s + a.outOf, 0)
+
+  const resultBg    = result ? (result.score === result.outOf ? '#F0FDF4' : result.score === 0 ? '#FFF5F5' : '#FFFBEB') : ''
+  const resultBorder = result ? (result.score === result.outOf ? C.green : result.score === 0 ? C.red : C.amber) : ''
+  const resultColor  = result ? (result.score === result.outOf ? C.green : result.score === 0 ? C.red : C.amber) : ''
+  const resultLabel  = result ? (result.score === result.outOf ? 'Full marks!' : result.score === 0 ? 'Needs work' : 'Partially correct') : ''
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100">
-      <nav className="bg-white border-b border-gray-100 px-8 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold text-purple-700">GCSEMathsAI</Link>
-        <div className="flex items-center gap-4">
-          {sessionHasAttempts && (
-            <button
-              onClick={goToReview}
-              className="text-sm border border-purple-300 text-purple-700 font-semibold px-4 py-1.5 rounded-lg hover:bg-purple-50 transition"
-            >
-              Review session →
-            </button>
-          )}
-          <Link href="/dashboard" className="text-sm text-purple-700 font-semibold">Dashboard</Link>
+    <div style={{ minHeight: '100vh', background: C.mist, fontFamily: font.body }}>
+
+      {/* Top bar */}
+      <div style={{
+        position: 'sticky', top: 0, zIndex: 40,
+        background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)',
+        borderBottom: `1px solid ${C.border}`,
+        padding: '10px 24px',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12,
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <button onClick={() => router.push('/learn')} style={{
+            background: 'none', border: `1.5px solid ${C.border}`, borderRadius: 8,
+            padding: '5px 12px', fontSize: 12, cursor: 'pointer', color: C.mid, fontFamily: font.body,
+          }}>← Topics</button>
+          <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap' }}>
+            {[subtopic || topic || 'Mixed', board, tier].map(tag => (
+              <span key={tag} style={{ fontSize: 11, fontWeight: 700, color: C.purple, background: C.purplePale, padding: '2px 8px', borderRadius: 999 }}>{tag}</span>
+            ))}
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#fff', background: difficultyColor, padding: '2px 8px', borderRadius: 999 }}>{difficulty}</span>
+          </div>
         </div>
-      </nav>
 
-      <div className="max-w-2xl mx-auto px-4 py-12">
-
-        {/* Session score bar */}
-        {sessionHasAttempts && (
-          <div className="bg-white border border-purple-100 rounded-xl px-5 py-3 mb-6 flex items-center justify-between">
-            <span className="text-sm font-semibold text-gray-700">Session score</span>
-            <div className="flex items-center gap-3">
-              <span className="text-sm font-bold text-purple-700">{totalScore}/{totalOut}</span>
-              <div className="w-32 h-2 bg-gray-100 rounded-full overflow-hidden">
-                <div
-                  className="h-2 rounded-full bg-purple-600 transition-all"
-                  style={{ width: `${totalOut > 0 ? (totalScore / totalOut) * 100 : 0}%` }}
-                />
-              </div>
-              <span className="text-xs text-gray-400">{sessionAttempts.length} done</span>
+        {/* Running score */}
+        {attempts.length > 0 && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: 12, fontWeight: 700, color: C.purple }}>{sessionScore}/{sessionOut}</span>
+            <div style={{ width: 80, height: 6, background: C.border, borderRadius: 999, overflow: 'hidden' }}>
+              <div style={{
+                height: 6, background: C.purple, borderRadius: 999,
+                width: `${sessionOut > 0 ? (sessionScore / sessionOut) * 100 : 0}%`,
+                transition: 'width 0.4s ease',
+              }} />
             </div>
+            <span style={{ fontSize: 11, color: C.mid }}>{attempts.length}/{questions.length}</span>
           </div>
         )}
+      </div>
 
-        {/* Progress */}
-        <div className="flex items-center justify-between mb-6">
-          <span className="text-sm text-purple-600 font-semibold bg-purple-100 px-3 py-1 rounded-full">
-            {topic}{subtopic ? ` · ${subtopic}` : ''}
-          </span>
-          <span className="text-sm text-gray-400">Question {qIndex + 1} of {questions.length}</span>
+      <div style={{ maxWidth: 640, margin: '0 auto', padding: '32px 24px 60px' }}>
+
+        {/* Progress indicator */}
+        <div style={{ display: 'flex', gap: 4, marginBottom: 24 }}>
+          {questions.map((_, i) => {
+            const done = i < attempts.length
+            const current = i === qIndex
+            return (
+              <div key={i} style={{
+                flex: 1, height: 4, borderRadius: 999,
+                background: done ? C.purple : current ? C.purpleLight : C.border,
+                transition: 'background 0.3s',
+              }} />
+            )
+          })}
         </div>
 
         {/* Question card */}
         {q && (
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-6">
-            <div className="flex items-start justify-between mb-4">
-              <h2 className="text-lg font-bold text-gray-800 flex-1">{q.question}</h2>
-              <span className="ml-4 text-sm text-gray-400 shrink-0">{q.marks} marks</span>
+          <div style={{
+            background: '#fff', borderRadius: 20, border: `1px solid ${C.border}`,
+            boxShadow: '0 4px 24px rgba(109,40,217,0.07)', padding: '28px 28px 24px', marginBottom: 16,
+          }}>
+            {/* Question header */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18, gap: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{
+                  width: 26, height: 26, borderRadius: '50%', background: C.purple,
+                  color: '#fff', fontSize: 12, fontWeight: 800,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                }}>{qIndex + 1}</span>
+                <span style={{ fontSize: 12, color: C.mid }}>of {questions.length}</span>
+              </div>
+              <span style={{
+                fontSize: 12, fontWeight: 700, color: difficultyColor,
+                background: difficulty === 'Easy' ? C.greenLight : difficulty === 'Exam Level' ? C.redLight : C.amberLight,
+                padding: '3px 10px', borderRadius: 999,
+              }}>{difficulty} · {q.marks} mark{q.marks !== 1 ? 's' : ''}</span>
             </div>
 
+            {/* Question text */}
+            <p style={{ fontSize: 16, fontWeight: 700, color: C.ink, lineHeight: 1.55, margin: '0 0 20px', fontFamily: font.display }}>
+              {q.question}
+            </p>
+
+            {/* Hint button */}
+            {!result && q.hint && (
+              <div style={{ marginBottom: 16 }}>
+                {!showHint ? (
+                  <button onClick={() => setShowHint(true)} style={{
+                    background: 'none', border: `1.5px dashed ${C.border}`, borderRadius: 8,
+                    padding: '7px 14px', fontSize: 12, fontWeight: 600, color: C.mid,
+                    cursor: 'pointer', fontFamily: font.body, transition: 'all 0.15s',
+                  }}>
+                    💡 Show a hint
+                  </button>
+                ) : (
+                  <div style={{
+                    background: '#FFFBEB', border: `1.5px solid #FDE68A`, borderRadius: 10,
+                    padding: '10px 14px', fontSize: 13, color: '#92400E', lineHeight: 1.5,
+                  }}>
+                    <span style={{ fontWeight: 700 }}>Hint: </span>{q.hint}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Answer textarea */}
             <textarea
               value={answer}
               onChange={e => setAnswer(e.target.value)}
-              placeholder="Write your answer and working here..."
+              placeholder="Write your answer and working here…"
               rows={4}
               disabled={!!result}
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-purple-500 resize-none disabled:bg-gray-50 disabled:text-gray-500"
+              style={{
+                width: '100%', boxSizing: 'border-box',
+                border: `1.5px solid ${result ? C.border : '#D1D5DB'}`,
+                borderRadius: 12, padding: '12px 16px',
+                fontSize: 14, fontFamily: font.body, color: C.ink,
+                background: result ? '#F9FAFB' : '#fff',
+                resize: 'none', outline: 'none', lineHeight: 1.6,
+                transition: 'border-color 0.15s',
+              } as React.CSSProperties}
+              onFocus={e => { if (!result) e.currentTarget.style.borderColor = C.purple }}
+              onBlur={e => { if (!result) e.currentTarget.style.borderColor = '#D1D5DB' }}
             />
 
             {!result && (
               <button
                 onClick={submitAnswer}
-                disabled={loading || !answer.trim()}
-                className="mt-4 w-full bg-purple-700 text-white rounded-xl py-3 font-bold text-sm hover:bg-purple-800 transition disabled:opacity-50"
+                disabled={submitting || !answer.trim()}
+                style={{
+                  marginTop: 12, width: '100%',
+                  background: submitting || !answer.trim()
+                    ? C.border
+                    : `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+                  color: submitting || !answer.trim() ? '#9CA3AF' : '#fff',
+                  border: 'none', borderRadius: 12, padding: '13px',
+                  fontSize: 14, fontWeight: 700, cursor: submitting || !answer.trim() ? 'not-allowed' : 'pointer',
+                  fontFamily: font.body, transition: 'all 0.2s',
+                  boxShadow: submitting || !answer.trim() ? 'none' : `0 4px 16px ${C.purple}30`,
+                }}
               >
-                {loading ? 'Marking...' : 'Submit answer'}
+                {submitting ? 'Marking…' : 'Submit answer'}
               </button>
             )}
           </div>
         )}
 
-        {/* Result */}
+        {/* Mark result */}
         {result && (
-          <div className={`rounded-2xl border p-6 mb-6 ${scoreColor}`}>
-            <div className="flex items-center justify-between mb-3">
-              <span className="font-bold text-lg">{result.score}/{result.outOf} marks</span>
-              <span className="text-sm font-semibold">
-                {result.score === result.outOf ? 'Full marks!' : result.score === 0 ? 'Needs work' : 'Partially correct'}
+          <div style={{
+            background: resultBg, border: `1.5px solid ${resultBorder}33`,
+            borderRadius: 16, padding: '20px 24px', marginBottom: 16,
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+              <span style={{ fontSize: 18, fontWeight: 800, color: resultColor, fontFamily: font.display }}>
+                {result.score}/{result.outOf} marks
               </span>
+              <span style={{
+                fontSize: 12, fontWeight: 700, color: '#fff', background: resultColor,
+                padding: '3px 10px', borderRadius: 999,
+              }}>{resultLabel}</span>
             </div>
-            <p className="text-sm leading-relaxed">{result.feedback}</p>
+            <p style={{ fontSize: 13, color: C.ink, lineHeight: 1.6, margin: 0 }}>{result.feedback}</p>
           </div>
         )}
 
+        {/* Error */}
         {error && (
-          <div className="bg-red-50 border border-red-200 text-red-600 rounded-xl p-4 text-sm mb-6">
-            {error}
-          </div>
+          <div style={{
+            background: C.redLight, border: `1px solid ${C.red}33`,
+            borderRadius: 12, padding: '12px 16px', fontSize: 13, color: C.red, marginBottom: 16,
+          }}>{error}</div>
         )}
 
-        {/* Navigation after marking */}
+        {/* Navigation after result */}
         {result && (
-          <div className="flex gap-3">
+          <div style={{ display: 'flex', gap: 10 }}>
             {!isLastQuestion ? (
               <>
-                <button
-                  onClick={nextQuestion}
-                  className="flex-1 bg-purple-700 text-white rounded-xl py-3 font-bold text-sm hover:bg-purple-800 transition"
-                >
+                <button onClick={nextQuestion} style={{
+                  flex: 1,
+                  background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+                  color: '#fff', border: 'none', borderRadius: 12,
+                  padding: '13px', fontSize: 14, fontWeight: 700,
+                  cursor: 'pointer', fontFamily: font.body,
+                  boxShadow: `0 4px 16px ${C.purple}30`,
+                }}>
                   Next question →
                 </button>
-                <button
-                  onClick={goToReview}
-                  className="flex-none border border-purple-300 text-purple-700 rounded-xl py-3 px-5 font-semibold text-sm hover:bg-purple-50 transition"
-                >
-                  Finish &amp; Review
+                <button onClick={() => { setAttempts(prev => { const a = [...prev]; return a }); setPhase('complete') }} style={{
+                  border: `1.5px solid ${C.border}`, background: '#fff',
+                  color: C.mid, borderRadius: 12, padding: '13px 18px',
+                  fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: font.body,
+                }}>
+                  End session
                 </button>
               </>
             ) : (
-              <button
-                onClick={goToReview}
-                className="flex-1 bg-purple-700 text-white rounded-xl py-3 font-bold text-sm hover:bg-purple-800 transition"
-              >
-                See full review →
+              <button onClick={nextQuestion} style={{
+                flex: 1,
+                background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+                color: '#fff', border: 'none', borderRadius: 12,
+                padding: '13px', fontSize: 14, fontWeight: 700,
+                cursor: 'pointer', fontFamily: font.body,
+                boxShadow: `0 4px 16px ${C.purple}30`,
+              }}>
+                See results →
               </button>
             )}
           </div>
         )}
       </div>
-    </main>
+    </div>
   )
 }

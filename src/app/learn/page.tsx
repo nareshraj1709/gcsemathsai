@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 // ── Colours & fonts ──────────────────────────────────────────
@@ -259,6 +259,22 @@ export default function Learn() {
   const [tier, setTier] = useState<'Foundation' | 'Higher'>('Foundation')
   const [aLevelTab, setALevelTab] = useState<'Pure Maths' | 'Statistics' | 'Mechanics'>('Pure Maths')
   const [phase, setPhase] = useState<1 | 2>(1)
+  const [difficulty, setDifficulty] = useState<'Easy' | 'Medium' | 'Exam Level'>('Medium')
+
+  // Auto-fill from saved profile and skip to phase 2
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('gcse_profile')
+      if (!raw) return
+      const profile = JSON.parse(raw)
+      if (profile.year && profile.board) {
+        setYear(profile.year)
+        setBoard(profile.board)
+        if (profile.tier === 'Higher') setTier('Higher')
+        setPhase(2)
+      }
+    } catch { /* ignore */ }
+  }, [])
 
   const aLevel = isALevel(year)
   const boards = aLevel ? ALEVEL_BOARDS : GCSE_BOARDS
@@ -273,7 +289,7 @@ export default function Learn() {
   const handleProceed = () => { if (canProceed) setPhase(2) }
 
   const handleSubtopic = (topic: string, subtopic: string) => {
-    const params = new URLSearchParams({ year, board, tier: aLevel ? 'A-Level' : tier, topic, subtopic })
+    const params = new URLSearchParams({ year, board, tier: aLevel ? 'A-Level' : tier, topic, subtopic, difficulty })
     router.push(`/practice?${params.toString()}`)
   }
 
@@ -438,18 +454,33 @@ export default function Learn() {
             </div>
           </div>
 
-          {/* A-Level section tabs */}
-          <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: 10, padding: 3, gap: 3 }}>
-            {(aLevelTopics as Array<'Pure Maths' | 'Statistics' | 'Mechanics'>).map(t => (
-              <button key={t} onClick={() => setALevelTab(t)} style={{
-                padding: '6px 14px', borderRadius: 8, border: 'none', cursor: 'pointer',
-                background: aLevelTab === t ? C.purple : 'transparent',
-                color: aLevelTab === t ? '#fff' : C.mid,
-                fontWeight: aLevelTab === t ? 700 : 500,
-                fontSize: 12, fontFamily: font.body, transition: 'all 0.15s',
-                whiteSpace: 'nowrap',
-              }}>{t}</button>
-            ))}
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            {/* A-Level section tabs */}
+            <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: 10, padding: 3, gap: 3 }}>
+              {(aLevelTopics as Array<'Pure Maths' | 'Statistics' | 'Mechanics'>).map(t => (
+                <button key={t} onClick={() => setALevelTab(t)} style={{
+                  padding: '6px 14px', borderRadius: 8, border: 'none', cursor: 'pointer',
+                  background: aLevelTab === t ? C.purple : 'transparent',
+                  color: aLevelTab === t ? '#fff' : C.mid,
+                  fontWeight: aLevelTab === t ? 700 : 500,
+                  fontSize: 12, fontFamily: font.body, transition: 'all 0.15s',
+                  whiteSpace: 'nowrap',
+                }}>{t}</button>
+              ))}
+            </div>
+            {/* Difficulty toggle */}
+            <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: 10, padding: 3, gap: 3 }}>
+              {(['Easy', 'Medium', 'Exam Level'] as const).map(d => (
+                <button key={d} onClick={() => setDifficulty(d)} style={{
+                  padding: '6px 12px', borderRadius: 8, border: 'none', cursor: 'pointer',
+                  background: difficulty === d ? (d === 'Easy' ? '#059669' : d === 'Medium' ? '#D97706' : '#DC2626') : 'transparent',
+                  color: difficulty === d ? '#fff' : C.mid,
+                  fontWeight: difficulty === d ? 700 : 500,
+                  fontSize: 12, fontFamily: font.body, transition: 'all 0.15s',
+                  whiteSpace: 'nowrap',
+                }}>{d}</button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -542,17 +573,32 @@ export default function Learn() {
           </div>
         </div>
 
-        {/* Tier toggle */}
-        <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: 10, padding: 3, gap: 3 }}>
-          {(['Foundation', 'Higher'] as const).map(t => (
-            <button key={t} onClick={() => setTier(t)} style={{
-              padding: '6px 16px', borderRadius: 8, border: 'none', cursor: 'pointer',
-              background: tier === t ? C.purple : 'transparent',
-              color: tier === t ? '#fff' : C.mid,
-              fontWeight: tier === t ? 700 : 500,
-              fontSize: 13, fontFamily: font.body, transition: 'all 0.15s',
-            }}>{t}</button>
-          ))}
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+          {/* Tier toggle */}
+          <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: 10, padding: 3, gap: 3 }}>
+            {(['Foundation', 'Higher'] as const).map(t => (
+              <button key={t} onClick={() => setTier(t)} style={{
+                padding: '6px 16px', borderRadius: 8, border: 'none', cursor: 'pointer',
+                background: tier === t ? C.purple : 'transparent',
+                color: tier === t ? '#fff' : C.mid,
+                fontWeight: tier === t ? 700 : 500,
+                fontSize: 13, fontFamily: font.body, transition: 'all 0.15s',
+              }}>{t}</button>
+            ))}
+          </div>
+          {/* Difficulty toggle */}
+          <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: 10, padding: 3, gap: 3 }}>
+            {(['Easy', 'Medium', 'Exam Level'] as const).map(d => (
+              <button key={d} onClick={() => setDifficulty(d)} style={{
+                padding: '6px 12px', borderRadius: 8, border: 'none', cursor: 'pointer',
+                background: difficulty === d ? (d === 'Easy' ? '#059669' : d === 'Medium' ? '#D97706' : '#DC2626') : 'transparent',
+                color: difficulty === d ? '#fff' : C.mid,
+                fontWeight: difficulty === d ? 700 : 500,
+                fontSize: 12, fontFamily: font.body, transition: 'all 0.15s',
+                whiteSpace: 'nowrap',
+              }}>{d}</button>
+            ))}
+          </div>
         </div>
       </div>
 

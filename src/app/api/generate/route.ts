@@ -15,6 +15,7 @@ export async function POST(req: Request) {
     topics,
     style,
     calculator,
+    difficulty = 'Medium',
   } = await req.json()
 
   if (!examBoard || !tier) {
@@ -59,24 +60,33 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 ]`
   } else {
     // Section practice questions
+    const difficultyGuide: Record<string, string> = {
+      'Easy': '- All questions should be straightforward (1-2 marks each), testing basic recall and direct application of a single method. Suitable for students who are just starting this topic.',
+      'Medium': '- Vary difficulty: roughly 3 easier (1-2 marks), 4 medium (2-3 marks), 3 harder (3-5 marks). Mix of direct application and some multi-step reasoning.',
+      'Exam Level': '- Questions should be exam-standard difficulty (3-6 marks each). Include multi-step reasoning, worded problems, and questions that require selecting the right method. Challenge students as an actual exam would.',
+    }
+
     prompt = `You are a GCSE Maths examiner. Generate ${count} practice questions for the following:
 
 Exam board: ${examBoard} ${boardStyle[examBoard] ? '— ' + boardStyle[examBoard] : ''}
 Tier: ${tier}
 Topic: ${topic || 'Mixed'}
 Subtopic: ${subtopic || 'Mixed'}
+Difficulty: ${difficulty}
 
 Requirements:
 - All questions on the topic of "${subtopic || topic}"
 - Suitable for ${tier} tier students
-- Vary difficulty: 3 easier (1-2 marks), 4 medium (2-3 marks), 3 harder (3-5 marks)
+${difficultyGuide[difficulty] || difficultyGuide['Medium']}
 - Use UK English and UK curriculum terminology
 - Each question must be clearly worded with a definitive answer
+- For each question, include a short hint that points toward the right method WITHOUT giving away the answer
 
 Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 [
   {
     "question": "full question text",
+    "hint": "A brief method hint, e.g. 'Think about which trigonometric ratio connects the opposite and hypotenuse'",
     "markScheme": "detailed mark scheme with M and A marks labelled",
     "marks": 2
   }
