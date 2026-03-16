@@ -112,6 +112,7 @@ export default function Nav() {
                 { label: "Dashboard", path: "/dashboard" },
                 { label: "Study", path: "/study" },
                 { label: "Practice", path: "/learn" },
+                { label: "Notes Review", path: "/notes-review" },
                 { label: "Papers", path: "/papers" },
                 { label: "Blog", path: "/blog" },
               ].map(l => (
