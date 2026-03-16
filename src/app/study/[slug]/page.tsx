@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CONTENT, TOPIC_META, toSlug, type SubtopicContent } from '@/lib/study-content'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const entry = CONTENT.find(c => toSlug(c.topic, c.subtopic) === params.slug)
+  const { slug } = await params
+  const entry = CONTENT.find(c => toSlug(c.topic, c.subtopic) === slug)
   if (!entry) return { title: 'Study — GCSEMathsAI' }
   return {
     title: `${entry.subtopic} — GCSEMathsAI`,
@@ -25,14 +26,15 @@ const sectionBg: Record<string, string> = {
   '#DC2626': '#FFF5F5',
 }
 
-export default function StudyTopicPage({ params }: Props) {
+export default async function StudyTopicPage({ params }: Props) {
+  const { slug } = await params
   const entry: SubtopicContent | undefined = CONTENT.find(
-    c => toSlug(c.topic, c.subtopic) === params.slug
+    c => toSlug(c.topic, c.subtopic) === slug
   )
   const meta = entry ? TOPIC_META[entry.topic] : null
 
   if (!entry || !meta) {
-    const readableQuery = (params.slug ?? '').replace(/-/g, ' ')
+    const readableQuery = (slug ?? '').replace(/-/g, ' ')
     return (
       <main className="min-h-screen bg-gray-50 px-6 py-12">
         <div className="max-w-lg mx-auto text-center">
