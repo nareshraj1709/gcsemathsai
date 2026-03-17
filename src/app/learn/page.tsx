@@ -265,16 +265,18 @@ export default function Learn() {
   useEffect(() => {
     try {
       const raw = localStorage.getItem('gcse_profile')
-      if (!raw) return
+      if (!raw) { router.push('/onboarding'); return }
       const profile = JSON.parse(raw)
       if (profile.year && profile.board) {
         setYear(profile.year)
         setBoard(profile.board)
         if (profile.tier === 'Higher') setTier('Higher')
         setPhase(2)
+      } else {
+        router.push('/onboarding')
       }
-    } catch { /* ignore */ }
-  }, [])
+    } catch { router.push('/onboarding') }
+  }, [router])
 
   const aLevel = isALevel(year)
   const boards = aLevel ? ALEVEL_BOARDS : GCSE_BOARDS
@@ -286,7 +288,15 @@ export default function Learn() {
     setYear(y)
   }
 
-  const handleProceed = () => { if (canProceed) setPhase(2) }
+  const handleProceed = () => {
+    if (!canProceed) return
+    try {
+      const raw = localStorage.getItem('gcse_profile')
+      const existing = raw ? JSON.parse(raw) : {}
+      localStorage.setItem('gcse_profile', JSON.stringify({ ...existing, year, board, tier }))
+    } catch { /* ignore */ }
+    setPhase(2)
+  }
 
   const handleSubtopic = (topic: string, subtopic: string) => {
     const params = new URLSearchParams({ year, board, tier: aLevel ? 'A-Level' : tier, topic, subtopic, difficulty })

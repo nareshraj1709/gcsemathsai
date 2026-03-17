@@ -8,7 +8,8 @@ export default function AuthCallback() {
     // Just wait for the session to be established then redirect
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
       if (event === 'SIGNED_IN') {
-        window.location.href = '/dashboard'
+        const profile = localStorage.getItem('gcse_profile')
+        window.location.href = profile ? '/dashboard' : '/onboarding'
       }
     })
     return () => subscription.unsubscribe()
