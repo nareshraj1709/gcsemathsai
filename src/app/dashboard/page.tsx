@@ -93,8 +93,9 @@ export default function Dashboard() {
     if (saved) setProfile(JSON.parse(saved))
 
     const load = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) { router.push('/auth'); return }
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session) { router.push('/auth'); return }
+      const user = session.user
 
       const { data } = await supabase
         .from('attempts')

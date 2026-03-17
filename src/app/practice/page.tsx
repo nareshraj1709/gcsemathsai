@@ -144,8 +144,9 @@ function Practice() {
   const isLastQuestion = qIndex === questions.length - 1
 
   const saveAttempt = async (question: string, studentAnswer: string, score: number, outOf: number, feedback: string) => {
-    const { data: { user } } = await supabase.auth.getUser()
-    if (!user) return
+    const { data: { session } } = await supabase.auth.getSession()
+    if (!session) return
+    const user = session.user
     await supabase.from('attempts').insert({
       user_id: user.id, topic, subtopic, year_group: year,
       exam_board: board, tier, question, student_answer: studentAnswer,
