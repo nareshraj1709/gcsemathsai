@@ -22,6 +22,10 @@ const TOPIC_MAP: Record<string, { topic: string; practiceSlug: string; label: st
   'edexcel-gcse-maths-past-papers-guide':       { topic: 'gcse maths past paper exam questions',    practiceSlug: 'gcse-maths',           label: 'Edexcel GCSE Maths'       },
   '7-day-gcse-maths-revision-plan':             { topic: 'gcse maths mixed revision',               practiceSlug: 'gcse-maths',           label: 'GCSE Maths Revision'      },
   'ocr-gcse-maths-complete-guide':              { topic: 'gcse maths topics',                       practiceSlug: 'gcse-maths',           label: 'OCR GCSE Maths'           },
+  'pythagoras-theorem-gcse':                    { topic: "pythagoras theorem",                      practiceSlug: 'gcse-maths',           label: "Pythagoras' Theorem"       },
+  'simultaneous-equations-gcse':                { topic: 'simultaneous equations',                  practiceSlug: 'gcse-maths',           label: 'Simultaneous Equations'    },
+  'circle-theorems-gcse':                       { topic: 'circle theorems',                         practiceSlug: 'gcse-maths',           label: 'Circle Theorems'           },
+  'trigonometry-gcse-maths':                    { topic: 'trigonometry soh cah toa sine cosine rule', practiceSlug: 'gcse-maths',         label: 'Trigonometry'              },
 }
 
 function getQuizProps(slug: string) {
