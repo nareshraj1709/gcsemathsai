@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Logo from '@/components/Logo'
 
@@ -43,6 +43,18 @@ export default function Onboarding() {
   const router = useRouter()
   const [step, setStep] = useState(0)
   const [data, setData] = useState<Data>({ name: "", year: "", board: "", goal: "" })
+  const [isEditing, setIsEditing] = useState(false)
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('gcse_profile')
+      if (saved) {
+        const profile = JSON.parse(saved)
+        setData(profile)
+        setIsEditing(true)
+      }
+    } catch { /* ignore */ }
+  }, [])
 
   const aLevel = isALevel(data.year)
   const boardOptions = aLevel ? ALEVEL_BOARDS : GCSE_BOARDS
@@ -194,7 +206,7 @@ export default function Onboarding() {
             boxShadow: value ? `0 4px 16px ${C.purple}30` : "none",
             transition: "all 0.2s",
           }}>
-            {isLast ? "Go to my dashboard →" : "Continue →"}
+            {isLast ? (isEditing ? "Save changes →" : "Go to my dashboard →") : "Continue →"}
           </button>
 
           {step > 0 && (

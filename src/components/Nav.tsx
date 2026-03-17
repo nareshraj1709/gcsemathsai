@@ -18,6 +18,8 @@ const font = {
   body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
 }
 
+type Profile = { name?: string; year?: string; board?: string }
+
 export default function Nav() {
   const router = useRouter()
   const pathname = usePathname()
@@ -25,6 +27,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [profile, setProfile] = useState<Profile | null>(null)
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user))
@@ -33,6 +36,13 @@ export default function Nav() {
     })
     return () => subscription.unsubscribe()
   }, [])
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('gcse_profile')
+      if (saved) setProfile(JSON.parse(saved))
+    } catch { /* ignore */ }
+  }, [pathname])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -149,6 +159,23 @@ export default function Nav() {
                       fontFamily: font.body, transition: "all 0.15s",
                     }}>{l.label}</button>
                   ))}
+                  {profile?.year && profile?.board && (
+                    <button
+                      onClick={() => navigate('/onboarding')}
+                      title="Change year / exam board"
+                      style={{
+                        display: "flex", alignItems: "center", gap: 5,
+                        background: C.purplePale, border: `1px solid ${C.border}`,
+                        borderRadius: 999, padding: "5px 12px",
+                        fontSize: 12, fontWeight: 600, color: C.purple,
+                        cursor: "pointer", fontFamily: font.body,
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {profile.year} · {profile.board}
+                      <span style={{ fontSize: 11, opacity: 0.7 }}>✏️</span>
+                    </button>
+                  )}
                   <div
                     onClick={signOut}
                     title="Sign out"
@@ -247,6 +274,21 @@ export default function Nav() {
               </div>
             ) : (
               <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                {profile?.year && profile?.board && (
+                  <button
+                    onClick={() => navigate('/onboarding')}
+                    style={{
+                      display: "flex", alignItems: "center", gap: 6,
+                      background: C.purplePale, border: `1px solid ${C.border}`,
+                      borderRadius: 10, padding: "10px 14px", marginBottom: 8,
+                      fontSize: 14, fontWeight: 600, color: C.purple,
+                      cursor: "pointer", fontFamily: font.body, width: "100%",
+                    }}
+                  >
+                    <span style={{ flex: 1, textAlign: "left" }}>{profile.year} · {profile.board}</span>
+                    <span style={{ fontSize: 12, opacity: 0.7 }}>✏️ Change</span>
+                  </button>
+                )}
                 {loggedInLinks.map(l => (
                   <button key={l.label} onClick={() => navigate(l.path)} style={{
                     background: pathname.startsWith(l.path) ? C.purplePale : "none",

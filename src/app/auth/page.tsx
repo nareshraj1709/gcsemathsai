@@ -32,7 +32,10 @@ export default function Auth() {
     if (isLogin) {
       const { error } = await supabase.auth.signInWithPassword({ email, password })
       if (error) setMessage(error.message)
-      else router.push('/dashboard')
+      else {
+        const profile = localStorage.getItem('gcse_profile')
+        router.push(profile ? '/dashboard' : '/onboarding')
+      }
     } else {
       const { error } = await supabase.auth.signUp({
         email,

@@ -306,14 +306,14 @@ export default function Learn() {
               background: C.purplePale, borderRadius: 999, padding: '4px 14px',
               fontSize: 12, fontWeight: 700, color: C.purple, marginBottom: 12,
             }}>
-              📚 Choose your setup
+              ⚙️ Update your setup
             </div>
             <h1 style={{
               fontFamily: font.display, fontSize: 26, fontWeight: 800,
               color: C.ink, margin: '0 0 8px',
-            }}>Let&apos;s get you started</h1>
+            }}>Your learning setup</h1>
             <p style={{ fontSize: 14, color: C.mid, margin: 0 }}>
-              Select your year group and exam board — we&apos;ll show you the right questions.
+              Confirm your year group and exam board — you can change this any time.
             </p>
           </div>
 
@@ -443,7 +443,7 @@ export default function Learn() {
               border: `1.5px solid ${C.border}`, background: '#fff', borderRadius: 8,
               padding: '5px 12px', fontSize: 13, cursor: 'pointer', color: C.mid,
               fontFamily: font.body,
-            }}>← Back</button>
+            }}>⚙️ Change setup</button>
             <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
               {[year, board, 'A Level'].map(tag => (
                 <span key={tag} style={{
