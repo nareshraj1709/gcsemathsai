@@ -4188,6 +4188,384 @@ export const CONTENT: SubtopicContent[] = [
     ],
     videoSearchTerms: ['rates of change GCSE Higher maths', 'gradient rate of change GCSE', 'tangent gradient curved graph GCSE Higher', 'average instantaneous rate of change GCSE'],
   },
+
+  // ══════════════════════════════════════════════════
+  // HIGHER-ONLY ENTRIES (previously missing)
+  // ══════════════════════════════════════════════════
+
+  {
+    topic: 'Algebra',
+    subtopic: 'Expanding & factorising',
+    tier: 'Higher',
+    videoSearchTerms: ['expanding and factorising GCSE Higher', 'expanding double brackets GCSE', 'factorising quadratics GCSE Higher', 'factorising expressions GCSE maths'],
+    overview: 'Expanding removes brackets by multiplying every term inside by the term outside. Factorising is the reverse — writing an expression as a product of factors. At Higher tier you need to expand double brackets and factorise quadratics.',
+    keyFacts: [
+      'Expanding double brackets: (a + b)(c + d) = ac + ad + bc + bd (FOIL method).',
+      '(a + b)² = a² + 2ab + b² — a perfect square.',
+      '(a + b)(a − b) = a² − b² — difference of two squares.',
+      'To factorise x² + bx + c, find two numbers that multiply to c and add to b.',
+      'Always check your factorisation by expanding back out.',
+      'Take out common factors first before attempting to factorise quadratics.',
+    ],
+    formulas: [
+      { name: 'FOIL expansion', formula: '(a + b)(c + d) = ac + ad + bc + bd' },
+      { name: 'Perfect square', formula: '(a + b)² = a² + 2ab + b²' },
+      { name: 'Difference of two squares', formula: '(a + b)(a − b) = a² − b²' },
+    ],
+    workedExamples: [
+      {
+        question: 'Expand and simplify (2x + 3)(x − 4).',
+        steps: [
+          'Multiply First terms: 2x × x = 2x²',
+          'Multiply Outer terms: 2x × (−4) = −8x',
+          'Multiply Inner terms: 3 × x = 3x',
+          'Multiply Last terms: 3 × (−4) = −12',
+          'Collect like terms: 2x² − 8x + 3x − 12 = 2x² − 5x − 12',
+        ],
+        answer: '2x² − 5x − 12',
+      },
+      {
+        question: 'Factorise x² + 7x + 12.',
+        steps: [
+          'Find two numbers that multiply to 12 and add to 7.',
+          '3 × 4 = 12, and 3 + 4 = 7 ✓',
+          'Write as (x + 3)(x + 4).',
+          'Check by expanding: x² + 4x + 3x + 12 = x² + 7x + 12 ✓',
+        ],
+        answer: '(x + 3)(x + 4)',
+      },
+    ],
+    commonMistakes: [
+      'Forgetting the middle terms when expanding (only writing a² + b² instead of a² + 2ab + b²).',
+      'Getting signs wrong when one bracket contains a negative.',
+      'Not checking the factorisation by re-expanding.',
+      'Forgetting to take out a common factor first.',
+    ],
+    examTips: [
+      'Always show the four products from FOIL before collecting like terms.',
+      'For "factorise fully", check for a common factor first, then factorise the quadratic.',
+      'If asked to "expand and simplify", collect like terms in your final answer.',
+      'Practise the difference of two squares pattern — it comes up a lot.',
+    ],
+  },
+
+  {
+    topic: 'Algebra',
+    subtopic: 'Straight-line graphs',
+    tier: 'Higher',
+    videoSearchTerms: ['straight line graphs GCSE Higher y=mx+c', 'equation of a line GCSE maths', 'gradient intercept form GCSE Higher', 'parallel perpendicular lines GCSE Higher'],
+    overview: 'A straight-line graph has equation y = mx + c, where m is the gradient and c is the y-intercept. At Higher tier you must find equations of lines, work with parallel and perpendicular lines, and use the form ax + by = c.',
+    keyFacts: [
+      'Gradient m = (y₂ − y₁) / (x₂ − x₁) — rise over run between any two points.',
+      'y-intercept c is where the line crosses the y-axis (x = 0).',
+      'Parallel lines have the same gradient.',
+      'Perpendicular lines have gradients that multiply to −1 (negative reciprocal).',
+      'To find the equation of a line through (x₁, y₁) with gradient m: y − y₁ = m(x − x₁).',
+      'The x-intercept is where y = 0; the y-intercept is where x = 0.',
+    ],
+    formulas: [
+      { name: 'Equation of a line', formula: 'y = mx + c' },
+      { name: 'Gradient formula', formula: 'm = (y₂ − y₁) / (x₂ − x₁)' },
+      { name: 'Line through a point', formula: 'y − y₁ = m(x − x₁)' },
+      { name: 'Perpendicular gradient', formula: 'm_perp = −1/m' },
+    ],
+    workedExamples: [
+      {
+        question: 'Find the equation of the line through (2, 5) and (4, 11).',
+        steps: [
+          'Calculate gradient: m = (11 − 5) / (4 − 2) = 6/2 = 3',
+          'Use y − y₁ = m(x − x₁) with point (2, 5): y − 5 = 3(x − 2)',
+          'Expand: y − 5 = 3x − 6',
+          'Rearrange: y = 3x − 1',
+        ],
+        answer: 'y = 3x − 1',
+      },
+      {
+        question: 'Find the equation of a line perpendicular to y = 2x + 3 that passes through (4, 1).',
+        steps: [
+          'Gradient of given line is 2.',
+          'Perpendicular gradient = −1/2.',
+          'Use y − 1 = −½(x − 4).',
+          'Expand: y − 1 = −½x + 2.',
+          'Rearrange: y = −½x + 3.',
+        ],
+        answer: 'y = −½x + 3',
+      },
+    ],
+    commonMistakes: [
+      'Swapping x and y when calculating gradient (doing run/rise instead of rise/run).',
+      'Thinking parallel lines are perpendicular — parallel lines have equal gradients.',
+      'Forgetting to use the negative reciprocal for perpendicular gradient.',
+      'Not rearranging to y = mx + c to read off the gradient and intercept.',
+    ],
+    examTips: [
+      'Always label your gradient calculation clearly: m = (y₂−y₁)/(x₂−x₁).',
+      'If the equation is given as ax + by = c, rearrange to y = mx + c first.',
+      'Perpendicular: flip the fraction and change the sign.',
+      'Check your answer by substituting a known point into your equation.',
+    ],
+  },
+
+  {
+    topic: 'Algebra',
+    subtopic: 'Quadratic & cubic graphs',
+    tier: 'Higher',
+    videoSearchTerms: ['quadratic graphs GCSE Higher', 'cubic graphs GCSE maths', 'sketching quadratic cubic GCSE Higher', 'roots turning point quadratic GCSE'],
+    overview: 'Quadratic graphs (y = ax² + bx + c) are U-shaped (or ∩-shaped) parabolas. Cubic graphs (y = ax³ + bx² + cx + d) have a characteristic S-shape. You need to sketch, interpret and read values from these graphs.',
+    keyFacts: [
+      'Quadratic y = ax² + bx + c: positive a → U-shape, negative a → ∩-shape.',
+      'The roots (x-intercepts) are found by solving the equation = 0.',
+      'The turning point (vertex) lies on the line of symmetry x = −b/(2a).',
+      'The y-intercept of a quadratic is always c (set x = 0).',
+      'Cubic y = ax³: positive a → bottom-left to top-right, negative a → top-left to bottom-right.',
+      'Cubic graphs can cross the x-axis up to 3 times.',
+    ],
+    formulas: [
+      { name: 'Line of symmetry (quadratic)', formula: 'x = −b / (2a)' },
+      { name: 'y-intercept', formula: 'Set x = 0: y = c' },
+    ],
+    workedExamples: [
+      {
+        question: 'Sketch the graph of y = x² − 4x + 3, marking the roots and turning point.',
+        steps: [
+          'Find roots: x² − 4x + 3 = 0 → (x − 1)(x − 3) = 0 → x = 1 or x = 3.',
+          'Find line of symmetry: x = −(−4)/(2×1) = 2.',
+          'Find turning point: y = (2)² − 4(2) + 3 = 4 − 8 + 3 = −1. Vertex: (2, −1).',
+          'y-intercept: x = 0 → y = 3. Point (0, 3).',
+          'Sketch U-shape crossing x-axis at x = 1 and x = 3, vertex at (2, −1).',
+        ],
+        answer: 'U-shaped parabola with roots at (1, 0) and (3, 0), vertex at (2, −1), y-intercept at (0, 3).',
+      },
+      {
+        question: 'Sketch y = x³ − 3x, stating the coordinates where it crosses the axes.',
+        steps: [
+          'Find x-intercepts: x³ − 3x = 0 → x(x² − 3) = 0 → x = 0, x = √3, x = −√3.',
+          'y-intercept: x = 0 → y = 0. Passes through origin.',
+          'Positive cubic: bottom-left to top-right with S-shape.',
+          'Mark (0,0), (√3, 0) ≈ (1.73, 0), (−√3, 0) ≈ (−1.73, 0).',
+        ],
+        answer: 'S-shaped cubic crossing at x = −√3, x = 0, x = √3.',
+      },
+    ],
+    commonMistakes: [
+      'Drawing a quadratic as a V-shape instead of a smooth curve.',
+      'Forgetting that a negative leading coefficient flips the shape.',
+      'Confusing the line of symmetry formula — it is −b/2a not b/2a.',
+      'Drawing a cubic that doesn\'t extend in both directions indefinitely.',
+    ],
+    examTips: [
+      'Always find and label the roots, y-intercept and turning point when sketching.',
+      'Check whether a is positive or negative to determine the shape.',
+      'Use a table of values if you\'re unsure of the shape.',
+      'For cubics, plug in a few x-values to check your sketch is correct.',
+    ],
+  },
+
+  {
+    topic: 'Geometry & Measures',
+    subtopic: 'Volume of prisms & cylinders',
+    tier: 'Higher',
+    videoSearchTerms: ['volume of prisms GCSE Higher', 'volume of cylinder GCSE maths', 'volume prism cylinder Higher maths', 'cross-sectional area prism GCSE'],
+    overview: 'Volume measures the 3D space inside a shape. For any prism (including cylinders), Volume = Area of cross-section × length (or height). You must be able to find volumes of various prisms and cylinders, and work backwards to find missing dimensions.',
+    keyFacts: [
+      'Volume of any prism = cross-sectional area × length.',
+      'Volume of a cylinder = πr²h, where r is radius and h is height.',
+      'The cross-section is the shape you see when you slice the prism perpendicular to its length.',
+      'For compound prisms, split into simpler shapes, find each area, then multiply by length.',
+      'Units: if dimensions are in cm, volume is in cm³; if in m, volume is in m³.',
+      '1 litre = 1000 cm³; 1 m³ = 1,000,000 cm³.',
+    ],
+    formulas: [
+      { name: 'Volume of any prism', formula: 'V = A × l', notes: 'A = area of cross-section, l = length' },
+      { name: 'Volume of a cylinder', formula: 'V = πr²h' },
+      { name: 'Volume of a triangular prism', formula: 'V = ½ × b × h × l' },
+    ],
+    workedExamples: [
+      {
+        question: 'A cylinder has radius 4 cm and height 10 cm. Find its volume. Give your answer in terms of π.',
+        steps: [
+          'Identify the formula: V = πr²h',
+          'Substitute values: V = π × 4² × 10',
+          'Calculate: V = π × 16 × 10 = 160π',
+        ],
+        answer: '160π cm³',
+      },
+      {
+        question: 'A prism has a cross-sectional area of 15 cm² and a length of 8 cm. Find its volume.',
+        steps: [
+          'Use V = A × l',
+          'V = 15 × 8 = 120 cm³',
+        ],
+        answer: '120 cm³',
+      },
+    ],
+    commonMistakes: [
+      'Using diameter instead of radius in the cylinder formula.',
+      'Forgetting to square the radius (writing πrh instead of πr²h).',
+      'Mixing up the cross-section area with the total surface area.',
+      'Not converting units consistently (mixing cm and m).',
+    ],
+    examTips: [
+      'Always identify the cross-section first — it\'s the shape repeated along the length.',
+      'If given a diameter, halve it to get the radius before using V = πr²h.',
+      'Show all working — write the formula, substitute values, then calculate.',
+      '"Give your answer in terms of π" means leave π in your answer, don\'t multiply by 3.14.',
+    ],
+  },
+
+  {
+    topic: 'Geometry & Measures',
+    subtopic: 'Transformations',
+    tier: 'Higher',
+    videoSearchTerms: ['transformations GCSE Higher maths', 'rotation reflection translation enlargement GCSE', 'describing transformations GCSE Higher', 'negative scale factor enlargement GCSE'],
+    overview: 'The four transformations are: reflection, rotation, translation and enlargement. At Higher tier you must describe them fully, apply them, and work with negative scale factors for enlargements. Combined transformations may also be examined.',
+    keyFacts: [
+      'Reflection: needs the mirror line equation (e.g. y = x, x = 2).',
+      'Rotation: needs the centre of rotation, angle, and direction (clockwise or anticlockwise).',
+      'Translation: described by a column vector (x/y) — positive x moves right, positive y moves up.',
+      'Enlargement: needs the centre of enlargement and scale factor. Scale factor = image length ÷ original length.',
+      'Negative scale factor: the image is on the opposite side of the centre and inverted.',
+      'Transformations that preserve shape and size (isometries): reflection, rotation, translation.',
+    ],
+    workedExamples: [
+      {
+        question: 'Describe fully the single transformation that maps triangle A onto triangle B, where A has vertices (1,1),(3,1),(3,4) and B has vertices (−1,1),(−3,1),(−3,4).',
+        steps: [
+          'Compare the x-coordinates: each x has been negated (1→−1, 3→−3). y-values unchanged.',
+          'This is a reflection in the y-axis (the line x = 0).',
+          'Check: reflecting (1,1) in x = 0 gives (−1,1) ✓',
+        ],
+        answer: 'Reflection in the y-axis (x = 0).',
+      },
+      {
+        question: 'Enlarge triangle T with vertices (2,1),(4,1),(4,3) by scale factor −2 about centre (1,1).',
+        steps: [
+          'Find vector from centre to each vertex, multiply by −2.',
+          '(2,1)→(1,0) vector, ×(−2) = (−2,0), image point: (1−2, 1+0) = (−1,1)',
+          '(4,1)→(3,0) vector, ×(−2) = (−6,0), image point: (1−6, 1+0) = (−5,1)',
+          '(4,3)→(3,2) vector, ×(−2) = (−6,−4), image point: (1−6, 1−4) = (−5,−3)',
+          'Image is on opposite side of centre, inverted.',
+        ],
+        answer: 'Image vertices: (−1,1), (−5,1), (−5,−3).',
+      },
+    ],
+    commonMistakes: [
+      'Giving an incomplete description — always state all required information.',
+      'Confusing clockwise and anticlockwise for rotations.',
+      'For enlargements, measuring from the wrong centre.',
+      'Not inverting the image when using a negative scale factor.',
+    ],
+    examTips: [
+      'For "describe fully": reflection needs line, rotation needs centre + angle + direction, enlargement needs centre + scale factor.',
+      'Use tracing paper in exams for rotations and reflections.',
+      'For negative scale factors, draw lines through the centre of enlargement and go to the other side.',
+      'A scale factor between −1 and 0 gives a smaller inverted image.',
+    ],
+  },
+
+  {
+    topic: 'Statistics & Probability',
+    subtopic: 'Combined events',
+    tier: 'Higher',
+    videoSearchTerms: ['combined events probability GCSE Higher', 'independent events probability GCSE', 'AND OR probability rules GCSE', 'sample space diagram GCSE Higher'],
+    overview: 'Combined events involve finding the probability of two or more events occurring. At Higher tier you use the AND rule (multiply) and OR rule (add) and must be able to work with independent and mutually exclusive events.',
+    keyFacts: [
+      'AND rule (independent events): P(A and B) = P(A) × P(B).',
+      'OR rule (mutually exclusive events): P(A or B) = P(A) + P(B).',
+      'General OR rule: P(A or B) = P(A) + P(B) − P(A and B).',
+      'Two events are independent if one does not affect the other.',
+      'Two events are mutually exclusive if they cannot both happen at the same time.',
+      'All probabilities in a sample space must sum to 1.',
+    ],
+    formulas: [
+      { name: 'AND rule (independent)', formula: 'P(A ∩ B) = P(A) × P(B)' },
+      { name: 'OR rule (mutually exclusive)', formula: 'P(A ∪ B) = P(A) + P(B)' },
+      { name: 'General OR rule', formula: 'P(A ∪ B) = P(A) + P(B) − P(A ∩ B)' },
+    ],
+    workedExamples: [
+      {
+        question: 'A bag contains 3 red and 7 blue balls. A ball is chosen, replaced, then another is chosen. Find P(both red).',
+        steps: [
+          'P(red) = 3/10',
+          'Since replaced, the events are independent.',
+          'P(both red) = P(red) × P(red) = 3/10 × 3/10',
+          '= 9/100',
+        ],
+        answer: '9/100 or 0.09',
+      },
+      {
+        question: 'P(A) = 0.4, P(B) = 0.3. A and B are mutually exclusive. Find P(A or B).',
+        steps: [
+          'Mutually exclusive means P(A and B) = 0.',
+          'P(A or B) = P(A) + P(B) = 0.4 + 0.3 = 0.7',
+        ],
+        answer: '0.7',
+      },
+    ],
+    commonMistakes: [
+      'Adding probabilities when you should multiply (AND means multiply).',
+      'Using the simple OR rule when events are NOT mutually exclusive.',
+      'Not replacing when the question says "without replacement" — events become dependent.',
+      'Leaving answers greater than 1 — always check your final probability is between 0 and 1.',
+    ],
+    examTips: [
+      '"And" → multiply. "Or" (mutually exclusive) → add.',
+      'Always check if events are independent (with replacement) or dependent (without replacement).',
+      'Draw a sample space diagram or tree diagram to organise your working.',
+      'Check probabilities sum to 1 as a sense-check.',
+    ],
+  },
+
+  {
+    topic: 'Ratio & Proportion',
+    subtopic: 'Simplifying & using ratios',
+    tier: 'Higher',
+    videoSearchTerms: ['simplifying ratios GCSE Higher', 'ratio problems GCSE Higher maths', 'using ratios GCSE Higher', 'ratio and proportion Higher tier GCSE'],
+    overview: 'At Higher tier, ratio problems involve more complex contexts: algebraic ratios, ratios involving fractions and decimals, combining ratios, and solving problems where the difference between shares is given.',
+    keyFacts: [
+      'To simplify a ratio, divide all parts by their highest common factor (HCF).',
+      'To simplify ratios with fractions: multiply every part by the LCM of all denominators.',
+      'To combine ratios: make the shared quantity the same in both ratios.',
+      'If a:b = m and b:c = n, express a:b:c by making b the same in both.',
+      'The unitary method: find the value of one part, then multiply for other parts.',
+      'Algebraic ratio: if a:b = 3:5 and a + b = 40, form an equation.',
+    ],
+    workedExamples: [
+      {
+        question: 'A:B = 3:5 and A:C = 2:7. Find A:B:C.',
+        steps: [
+          'A:B = 3:5 and A:C = 2:7.',
+          'Make A the same in both: LCM of 3 and 2 is 6.',
+          'A:B = 6:10 (multiply by 2) and A:C = 6:21 (multiply by 3).',
+          'So A:B:C = 6:10:21.',
+        ],
+        answer: 'A:B:C = 6:10:21',
+      },
+      {
+        question: 'Jamie and Kira share money in the ratio 4:7. Kira gets £18 more than Jamie. How much does each person receive?',
+        steps: [
+          'Difference in ratio parts: 7 − 4 = 3 parts.',
+          '3 parts = £18, so 1 part = £6.',
+          'Jamie: 4 × £6 = £24.',
+          'Kira: 7 × £6 = £42.',
+          'Check: £42 − £24 = £18 ✓',
+        ],
+        answer: 'Jamie receives £24, Kira receives £42.',
+      },
+    ],
+    commonMistakes: [
+      'Only simplifying some parts of the ratio, not all.',
+      'When combining ratios, not making the shared quantity equal first.',
+      'Dividing the total by the wrong number of parts.',
+      'Forgetting to check the answer satisfies the original conditions.',
+    ],
+    examTips: [
+      'Always check your final ratio cannot be simplified further.',
+      'If the question gives a difference between shares, find the value of one part first.',
+      'For combining three-part ratios, make the shared value equal by finding the LCM.',
+      'Write out each step clearly — ratio questions are easy to lose marks through arithmetic slips.',
+    ],
+  },
 ]
 
 // Topic area metadata (same as learn page, centralised here)

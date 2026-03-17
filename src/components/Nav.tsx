@@ -74,12 +74,11 @@ export default function Nav() {
   const initial = (user?.email?.[0] ?? 'U').toUpperCase()
 
   const loggedInLinks = [
-    { label: "Dashboard",    path: "/dashboard"    },
-    { label: "Study",        path: "/study"        },
-    { label: "Practice",     path: "/learn"        },
-    { label: "Notes Review", path: "/notes-review" },
-    { label: "Papers",       path: "/papers"       },
-    { label: "Blog",         path: "/blog"         },
+    { label: "Dashboard", path: "/dashboard" },
+    { label: "Study",     path: "/study"     },
+    { label: "Practice",  path: "/learn"     },
+    { label: "Sections",  path: "/sections"  },
+    { label: "Papers",    path: "/papers"    },
   ]
 
   const loggedOutLinks = [
