@@ -160,7 +160,11 @@ export default function PapersPage() {
                 {board} · {board === 'AQA' ? '8300' : board === 'Edexcel' ? '1MA1' : 'J560'}
               </span>
               <span style={{ fontSize: 13, color: '#9CA3AF' }}>{filteredHistorical.length} papers</span>
-              <span style={{ fontSize: 12, color: '#9CA3AF', marginLeft: 4 }}>— AI-generated in the style of actual {board} past papers</span>
+              {board === 'AQA' && (
+                <span style={{ fontSize: 12, fontWeight: 700, color: '#059669', background: '#D1FAE5', padding: '2px 10px', borderRadius: 999, marginLeft: 4 }}>
+                  📄 Real PDFs available for some papers
+                </span>
+              )}
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 12 }}>
@@ -182,9 +186,16 @@ export default function PapersPage() {
                     <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 7px', borderRadius: 999, background: paper.calculator ? '#EFF6FF' : '#FEF3C7', color: paper.calculator ? '#1D4ED8' : '#92400E' }}>
                       {paper.calculator ? '🖩 Calc' : '✏️ Non-Calc'}
                     </span>
+                    {paper.pdfUrl && (
+                      <span style={{ fontSize: 10, fontWeight: 700, padding: '2px 7px', borderRadius: 999, background: '#D1FAE5', color: '#065F46' }}>
+                        📄 PDF
+                      </span>
+                    )}
                   </div>
 
-                  <div style={{ fontSize: 18, fontWeight: 900, color: '#0D0B1A', fontFamily: "'Georgia', serif", marginBottom: 2 }}>{paper.year}</div>
+                  <div style={{ fontSize: 18, fontWeight: 900, color: '#0D0B1A', fontFamily: "'Georgia', serif", marginBottom: 2 }}>
+                    {paper.session === 'November' ? 'Nov ' : paper.session === 'Specimen' ? 'Specimen' : ''}{paper.year}
+                  </div>
                   <p style={{ fontSize: 13, fontWeight: 700, color: '#374151', margin: '0 0 4px' }}>Paper {paper.paperNumber}</p>
                   <p style={{ fontSize: 11, color: '#9CA3AF', margin: '0 0 12px' }}>{paper.calculator ? 'Calculator' : 'Non-Calculator'}</p>
 

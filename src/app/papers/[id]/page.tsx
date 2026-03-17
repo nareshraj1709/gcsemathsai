@@ -29,6 +29,7 @@ export default function PaperExamPage() {
   const [results, setResults] = useState<MarkResult[]>([])
   const [markingIdx, setMarkingIdx] = useState(0)
   const [loadError, setLoadError] = useState('')
+  const [pdfOpen, setPdfOpen] = useState(false)
 
   // Timer
   useEffect(() => {
@@ -198,16 +199,39 @@ export default function PaperExamPage() {
               </div>
             )}
 
+            {paper.pdfUrl && (
+              <div style={{ background: '#F0FDF4', border: '1px solid #A7F3D0', borderRadius: 12, padding: '14px 16px', marginTop: 20 }}>
+                <p style={{ fontSize: 13, fontWeight: 700, color: '#065F46', margin: '0 0 10px' }}>📄 Real paper available</p>
+                <p style={{ fontSize: 12, color: '#047857', margin: '0 0 12px', lineHeight: 1.5 }}>
+                  This is the actual AQA past paper. View it alongside the AI practice to work through the real questions.
+                </p>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <a
+                    href={paper.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      flex: 1, padding: '9px', borderRadius: 8, textAlign: 'center',
+                      background: '#059669', color: '#fff', fontWeight: 700, fontSize: 13,
+                      textDecoration: 'none', display: 'block',
+                    }}
+                  >
+                    Open PDF in new tab ↗
+                  </a>
+                </div>
+              </div>
+            )}
+
             <button
               onClick={startExam}
               style={{
-                marginTop: 24, width: '100%', padding: '14px',
+                marginTop: 20, width: '100%', padding: '14px',
                 background: 'linear-gradient(135deg, #4C1D95, #6D28D9)',
                 color: '#fff', border: 'none', borderRadius: 12,
                 fontSize: 15, fontWeight: 700, cursor: 'pointer',
               }}
             >
-              Start timed exam →
+              {paper.pdfUrl ? 'Start AI practice alongside paper →' : 'Start timed exam →'}
             </button>
             <button onClick={() => router.push('/papers')} style={{ marginTop: 12, background: 'none', border: 'none', fontSize: 13, color: '#9CA3AF', cursor: 'pointer' }}>
               ← Back to papers
@@ -250,7 +274,19 @@ export default function PaperExamPage() {
             <span style={{ fontSize: 13, fontWeight: 700, color: '#6D28D9' }}>{paper.board} {paper.tier} — {paper.name}</span>
             <span style={{ fontSize: 12, color: '#9CA3AF', marginLeft: 12 }}>Q {current + 1}/{questions.length}</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {paper.pdfUrl && (
+              <button
+                onClick={() => setPdfOpen(o => !o)}
+                style={{
+                  padding: '7px 14px', borderRadius: 8,
+                  border: '1.5px solid #A7F3D0', background: pdfOpen ? '#059669' : '#F0FDF4',
+                  color: pdfOpen ? '#fff' : '#065F46', fontSize: 12, fontWeight: 700, cursor: 'pointer',
+                }}
+              >
+                📄 {pdfOpen ? 'Hide paper' : 'View paper'}
+              </button>
+            )}
             <div style={{ fontSize: 14, fontWeight: 700, color: urgent ? '#DC2626' : '#374151', fontVariantNumeric: 'tabular-nums' }}>
               ⏱ {fmt(timeLeft)}
             </div>
@@ -262,6 +298,20 @@ export default function PaperExamPage() {
             </button>
           </div>
         </div>
+
+        {/* PDF viewer panel */}
+        {paper.pdfUrl && pdfOpen && (
+          <div style={{ background: '#F0FDF4', borderBottom: '2px solid #A7F3D0', padding: '12px 24px' }}>
+            <iframe
+              src={paper.pdfUrl}
+              title="Past paper PDF"
+              style={{ width: '100%', height: 600, border: 'none', borderRadius: 8, background: '#fff' }}
+            />
+            <p style={{ fontSize: 11, color: '#047857', margin: '8px 0 0', textAlign: 'center' }}>
+              📄 {paper.board} {paper.tier} {paper.name} — use this alongside your AI practice
+            </p>
+          </div>
+        )}
 
         {/* Progress bar */}
         <div style={{ height: 3, background: '#E5E1FF' }}>

@@ -9,6 +9,7 @@ export type Paper = {
   boardCode: string
   tier: Tier
   year?: number
+  session?: string
   paperNumber: number
   name: string
   calculator: boolean
@@ -17,6 +18,26 @@ export type Paper = {
   timeMinutes: number
   topics: string
   style: string
+  pdfUrl?: string
+}
+
+// ── Real PDF mappings (AQA papers hosted in /public/papers/aqa/) ──
+const AQA_PDF_MAP: Record<string, string> = {
+  'aqa-foundation-2022-p1': '/papers/aqa/foundation-p1-2022-june.pdf',
+  'aqa-foundation-2023-p1': '/papers/aqa/foundation-p1-2023-june.pdf',
+  'aqa-foundation-2024-p1': '/papers/aqa/foundation-p1-2024-june.pdf',
+  'aqa-foundation-2023-p2': '/papers/aqa/foundation-p2-2023-june.pdf',
+  'aqa-foundation-2024-p2': '/papers/aqa/foundation-p2-2024-june.pdf',
+  'aqa-foundation-2022-p3': '/papers/aqa/foundation-p3-2022-june.pdf',
+  'aqa-foundation-2023-p3': '/papers/aqa/foundation-p3-2023-june.pdf',
+  'aqa-foundation-2024-p3': '/papers/aqa/foundation-p3-2024-june.pdf',
+  'aqa-higher-2022-p1':     '/papers/aqa/higher-p1-2022-june.pdf',
+  'aqa-higher-2023-p1':     '/papers/aqa/higher-p1-2023-june.pdf',
+  'aqa-higher-2024-p1':     '/papers/aqa/higher-p1-2024-june.pdf',
+  'aqa-higher-2023-p2':     '/papers/aqa/higher-p2-2023-june.pdf',
+  'aqa-higher-2024-p2':     '/papers/aqa/higher-p2-2024-june.pdf',
+  'aqa-higher-2023-p3':     '/papers/aqa/higher-p3-2023-june.pdf',
+  'aqa-higher-2024-p3':     '/papers/aqa/higher-p3-2024-june.pdf',
 }
 
 const AQA_STYLE = 'AQA (8300): structured multi-part (a)(b)(c) format. Method marks (M) for correct working even if final answer wrong. Accuracy marks (A) for correct answer.'
@@ -78,16 +99,19 @@ function buildHistorical(): Paper[] {
       for (let y = 2015; y <= 2024 && count < 30; y++) {
         for (let p = 1; p <= 3 && count < 30; p++) {
           const calc = p !== 1
+          const pid = `${board.toLowerCase()}-${tier.toLowerCase()}-${y}-p${p}`
           papers.push({
-            id: `${board.toLowerCase()}-${tier.toLowerCase()}-${y}-p${p}`,
+            id: pid,
             type: 'historical',
             board, boardCode: code, tier, year: y,
+            session: 'June',
             paperNumber: p,
             name: `${y} Paper ${p} — ${calc ? 'Calculator' : 'Non-Calculator'}`,
             calculator: calc,
             questionCount: 20, totalMarks: 80, timeMinutes: 90,
             topics: dist[(p - 1) % 3],
             style: `${style} Generate questions in the style and difficulty level of the actual ${board} ${y} ${tier} Paper ${p}.`,
+            pdfUrl: AQA_PDF_MAP[pid],
           })
           count++
         }
@@ -116,6 +140,47 @@ function buildHistorical(): Paper[] {
       }
     }
   }
+
+  // ── November 2024 + Specimen AQA papers (real PDFs available) ──
+  const nov24: Array<{ tier: Tier; p: number; calc: boolean }> = [
+    { tier: 'Foundation', p: 1, calc: false },
+    { tier: 'Foundation', p: 2, calc: true  },
+    { tier: 'Foundation', p: 3, calc: true  },
+    { tier: 'Higher',     p: 1, calc: false },
+    { tier: 'Higher',     p: 2, calc: true  },
+    { tier: 'Higher',     p: 3, calc: true  },
+  ]
+  for (const { tier, p, calc } of nov24) {
+    const dist = TOPIC_DIST.AQA[tier]
+    papers.push({
+      id: `aqa-${tier.toLowerCase()}-nov2024-p${p}`,
+      type: 'historical',
+      board: 'AQA', boardCode: '8300', tier, year: 2024,
+      session: 'November',
+      paperNumber: p,
+      name: `Nov 2024 Paper ${p} — ${calc ? 'Calculator' : 'Non-Calculator'}`,
+      calculator: calc,
+      questionCount: 20, totalMarks: 80, timeMinutes: 90,
+      topics: dist[(p - 1) % 3],
+      style: `${AQA_STYLE} Generate questions in the style and difficulty level of the actual AQA November 2024 ${tier} Paper ${p}.`,
+      pdfUrl: `/papers/aqa/${tier.toLowerCase()}-p${p}-2024-november.pdf`,
+    })
+  }
+
+  // AQA Specimen paper (Foundation Paper 1)
+  papers.push({
+    id: 'aqa-foundation-specimen-p1',
+    type: 'historical',
+    board: 'AQA', boardCode: '8300', tier: 'Foundation',
+    session: 'Specimen',
+    paperNumber: 1,
+    name: 'Specimen Paper 1 — Non-Calculator',
+    calculator: false,
+    questionCount: 20, totalMarks: 80, timeMinutes: 90,
+    topics: TOPIC_DIST.AQA.Foundation[0],
+    style: `${AQA_STYLE} Generate questions in the style of the AQA GCSE Maths specimen paper.`,
+    pdfUrl: '/papers/aqa/foundation-p1-specimen.pdf',
+  })
 
   return papers
 }
