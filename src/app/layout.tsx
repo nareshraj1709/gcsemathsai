@@ -77,6 +77,17 @@ export default function RootLayout({
     <html lang="en-GB">
       <head>
         <meta name="google-site-verification" content="7yfaIa1Y-jOROaNuyuWVAE3_FY2ct8AIlu7g_cb5VD8" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SCDRCH8B1"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4SCDRCH8B1');
+            `,
+          }}
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NavWrapper />
