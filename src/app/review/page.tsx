@@ -84,6 +84,7 @@ function Review() {
   const [loaded, setLoaded] = useState(false)
   const [evaluation, setEvaluation] = useState<Evaluation | null>(null)
   const [evalLoading, setEvalLoading] = useState(false)
+  const [shareMsg, setShareMsg] = useState('')
 
   useEffect(() => {
     const raw = localStorage.getItem('gcse_session_review')
@@ -145,6 +146,21 @@ function Review() {
   const pct        = totalOut > 0 ? Math.round((totalScore / totalOut) * 100) : 0
   const topicSummaries = buildTopicSummaries(attempts)
   const weakTopics = topicSummaries.filter(t => t.outOf > 0 && (t.score / t.outOf) < 0.6)
+
+  const topicLabel = attempts[0]?.subtopic || attempts[0]?.topic || 'Maths'
+
+  const handleShare = async () => {
+    const text = `I scored ${pct}% on GCSE ${topicLabel} with GCSEMathsAI! 🔥\n${totalScore}/${totalOut} marks · gcsemathsai.co.uk`
+    if (navigator.share) {
+      try { await navigator.share({ title: 'My GCSEMathsAI score', text }) } catch { /* cancelled */ }
+    } else {
+      try {
+        await navigator.clipboard.writeText(text)
+        setShareMsg('Copied to clipboard! 📋')
+        setTimeout(() => setShareMsg(''), 3000)
+      } catch { setShareMsg('Share: ' + text) }
+    }
+  }
 
   const overallColor = pct >= 80 ? '#059669' : pct >= 50 ? '#D97706' : '#DC2626'
   const overallBg    = pct >= 80 ? '#F0FDF4'  : pct >= 50 ? '#FFFBEB'  : '#FFF5F5'
@@ -230,6 +246,23 @@ function Review() {
                 : 'All topics looking solid this session.'}
             </p>
           </div>
+        </div>
+
+        {/* Share button */}
+        <div style={{ marginBottom: 20, display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
+          <button onClick={handleShare} style={{
+            padding: '11px 22px', borderRadius: 12, border: 'none',
+            background: 'linear-gradient(135deg, #4C1D95, #6D28D9)',
+            color: '#fff', fontWeight: 700, fontSize: 14, cursor: 'pointer',
+            fontFamily: "'Trebuchet MS', sans-serif",
+            boxShadow: '0 4px 16px #6D28D930',
+            display: 'flex', alignItems: 'center', gap: 8,
+          }}>
+            <span>🎉</span> Share your score
+          </button>
+          {shareMsg && (
+            <span style={{ fontSize: 13, color: '#059669', fontWeight: 600 }}>{shareMsg}</span>
+          )}
         </div>
 
         {/* AI Evaluation */}

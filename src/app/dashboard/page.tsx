@@ -64,6 +64,30 @@ export default function Dashboard() {
   const hour = new Date().getHours()
   const greeting = hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : "Good evening"
 
+  // ── XP + Level ────────────────────────────────────────────────
+  function calcLevel(xp: number): { label: string; color: string; next: number; icon: string } {
+    if (xp >= 3000) return { label: "Platinum", color: "#6366F1", next: 3000, icon: "💎" }
+    if (xp >= 1500) return { label: "Gold", color: "#F59E0B", next: 3000, icon: "🥇" }
+    if (xp >= 500)  return { label: "Silver", color: "#9CA3AF", next: 1500, icon: "🥈" }
+    return { label: "Bronze", color: "#B45309", next: 500, icon: "🥉" }
+  }
+
+  // ── Badges ────────────────────────────────────────────────────
+  function calcBadges(
+    totalAttempts: number, streak: number, topicsMastered: number,
+    attempts: Attempt[]
+  ) {
+    const hasPerfect = attempts.some(a => a.score > 0 && a.score === a.out_of)
+    return [
+      { id: "first",   icon: "🚀", label: "First Steps",    earned: totalAttempts >= 1 },
+      { id: "roll",    icon: "🔥", label: "On a Roll",      earned: streak >= 3 },
+      { id: "warrior", icon: "⚔️", label: "Week Warrior",   earned: streak >= 7 },
+      { id: "perfect", icon: "💯", label: "Perfect Score",  earned: hasPerfect },
+      { id: "master",  icon: "🏆", label: "Topic Master",   earned: topicsMastered >= 1 },
+      { id: "century", icon: "💪", label: "Century Club",   earned: totalAttempts >= 100 },
+    ]
+  }
+
   useEffect(() => {
     const saved = localStorage.getItem('gcse_profile')
     if (saved) setProfile(JSON.parse(saved))
@@ -123,6 +147,24 @@ export default function Dashboard() {
   const board = profile?.board || "AQA"
   const year = profile?.year || "Year 11"
 
+  // XP + level
+  const xp = totalScore * 10
+  const level = calcLevel(xp)
+  const xpMin = level.label === "Bronze" ? 0 : level.label === "Silver" ? 500 : level.label === "Gold" ? 1500 : 3000
+  const xpPct = level.label === "Platinum" ? 100 : Math.min(100, Math.round(((xp - xpMin) / (level.next - xpMin)) * 100))
+
+  // Badges
+  const badges = calcBadges(totalAttempts, streak, topicsMastered, attempts)
+
+  // Cheeky greeting
+  const cheekyCtas = streak >= 7
+    ? `${name}, you're unstoppable 🔥`
+    : streak >= 3
+    ? `Back again? Respect the grind, ${name}.`
+    : totalAttempts === 0
+    ? `Ready to smash it, ${name}? 💪`
+    : `Let's get that grade up, ${name} 🚀`
+
   if (loading) {
     return (
       <div style={{
@@ -145,12 +187,20 @@ export default function Dashboard() {
           display: "flex", justifyContent: "space-between", alignItems: "center",
           boxShadow: `0 8px 32px ${C.purple}30`, flexWrap: "wrap", gap: 16,
         }}>
-          <div>
+          <div style={{ flex: 1 }}>
             <p style={{ fontSize: 13, opacity: 0.8, marginBottom: 4 }}>{greeting} 👋</p>
-            <h1 style={{ fontFamily: font.display, fontSize: 26, fontWeight: 800, margin: "0 0 4px" }}>
-              {name}
+            <h1 style={{ fontFamily: font.display, fontSize: 24, fontWeight: 800, margin: "0 0 2px" }}>
+              {cheekyCtas}
             </h1>
-            <p style={{ opacity: 0.8, fontSize: 14, margin: 0 }}>{year} · {board} Higher</p>
+            <p style={{ opacity: 0.7, fontSize: 13, margin: "0 0 12px" }}>{year} · {board}</p>
+            {/* XP bar */}
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ fontSize: 13, fontWeight: 700, opacity: 0.9 }}>{level.icon} {level.label}</span>
+              <div style={{ flex: 1, maxWidth: 160, background: "rgba(255,255,255,0.25)", borderRadius: 999, height: 7 }}>
+                <div style={{ width: `${xpPct}%`, height: 7, borderRadius: 999, background: "#fff", transition: "width 0.8s ease" }} />
+              </div>
+              <span style={{ fontSize: 11, opacity: 0.75 }}>{xp} XP</span>
+            </div>
           </div>
           <div style={{ display: "flex", gap: 20 }}>
             {[
@@ -184,6 +234,28 @@ export default function Dashboard() {
               <div style={{ fontSize: 12, color: C.mid }}>{s.label}</div>
             </div>
           ))}
+        </div>
+
+        {/* Badges */}
+        <div style={{ marginBottom: 24 }}>
+          <p style={{ fontSize: 12, fontWeight: 700, color: C.mid, textTransform: "uppercase", letterSpacing: 0.8, margin: "0 0 10px" }}>Achievements</p>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+            {badges.map(b => (
+              <div key={b.id} style={{
+                display: "flex", alignItems: "center", gap: 7,
+                background: b.earned ? "#fff" : "#F9FAFB",
+                border: `1.5px solid ${b.earned ? C.border : "#E5E7EB"}`,
+                borderRadius: 30, padding: "7px 14px",
+                opacity: b.earned ? 1 : 0.45,
+                boxShadow: b.earned ? `0 2px 8px ${C.purple}15` : "none",
+                transition: "all 0.2s",
+              }}>
+                <span style={{ fontSize: 16 }}>{b.icon}</span>
+                <span style={{ fontSize: 12, fontWeight: 700, color: b.earned ? C.ink : C.mid }}>{b.label}</span>
+                {b.earned && <span style={{ fontSize: 10, color: C.green, fontWeight: 800 }}>✓</span>}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: topicList.length > 0 ? "1fr 340px" : "1fr", gap: 20, alignItems: "start" }}>
@@ -278,33 +350,42 @@ export default function Dashboard() {
         </div>
 
         {/* CTAs */}
-        <div style={{ marginTop: 20, display: "flex", gap: 12, flexWrap: "wrap" }}>
+        {/* Quick 5 featured card */}
+        <div style={{ marginTop: 20, marginBottom: 12 }}>
+          <button onClick={() => router.push('/learn')} style={{
+            width: "100%", padding: "18px 24px",
+            background: `linear-gradient(135deg, ${C.purpleDim}, ${C.purple} 60%, ${C.purpleLight})`,
+            color: "#fff", border: "none", borderRadius: 16,
+            fontSize: 16, fontWeight: 800, cursor: "pointer",
+            fontFamily: font.body,
+            boxShadow: `0 6px 24px ${C.purple}35`,
+            display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
+          }}>
+            <span style={{ fontSize: 22 }}>⚡</span>
+            <div style={{ textAlign: "left" }}>
+              <div>Quick 5-min Practice →</div>
+              <div style={{ fontSize: 12, opacity: 0.8, fontWeight: 500, marginTop: 2 }}>5 questions · AI marked · instant results</div>
+            </div>
+          </button>
+        </div>
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
           <button onClick={() => router.push('/study')} style={{
-            flex: 1, minWidth: 140, padding: "14px",
+            flex: 1, minWidth: 140, padding: "13px",
             background: "#fff", color: C.purple,
-            border: `2px solid ${C.purple}`, borderRadius: 14,
+            border: `1.5px solid ${C.border}`, borderRadius: 14,
             fontSize: 14, fontWeight: 700, cursor: "pointer",
             fontFamily: font.body,
           }}>
             📖 Study Notes
           </button>
           <button onClick={() => router.push('/papers')} style={{
-            flex: 1, minWidth: 140, padding: "14px",
+            flex: 1, minWidth: 140, padding: "13px",
             background: "#fff", color: "#2563EB",
-            border: "2px solid #BFDBFE", borderRadius: 14,
+            border: "1.5px solid #BFDBFE", borderRadius: 14,
             fontSize: 14, fontWeight: 700, cursor: "pointer",
             fontFamily: font.body,
           }}>
             📋 Exam Papers
-          </button>
-          <button onClick={() => router.push('/learn')} style={{
-            flex: 2, minWidth: 200, padding: "14px",
-            background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
-            color: "#fff", border: "none", borderRadius: 14,
-            fontSize: 14, fontWeight: 700, cursor: "pointer",
-            boxShadow: `0 4px 16px ${C.purple}30`, fontFamily: font.body,
-          }}>
-            🚀 Start Practice →
           </button>
         </div>
       </div>

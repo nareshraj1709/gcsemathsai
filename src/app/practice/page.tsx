@@ -222,6 +222,7 @@ function Practice() {
                 Generating {difficulty.toLowerCase()} questions…
               </p>
               <p style={{ color: C.mid, fontSize: 13 }}>{subtopic || topic || 'Mixed'} · {board} {tier}</p>
+              <p style={{ color: C.mid, fontSize: 12, marginTop: 6 }}>5 questions · ~3 min session ⚡</p>
             </>
           )}
         </div>
@@ -353,7 +354,7 @@ function Practice() {
   const resultBg    = result ? (result.score === result.outOf ? '#F0FDF4' : result.score === 0 ? '#FFF5F5' : '#FFFBEB') : ''
   const resultBorder = result ? (result.score === result.outOf ? C.green : result.score === 0 ? C.red : C.amber) : ''
   const resultColor  = result ? (result.score === result.outOf ? C.green : result.score === 0 ? C.red : C.amber) : ''
-  const resultLabel  = result ? (result.score === result.outOf ? 'Full marks!' : result.score === 0 ? 'Needs work' : 'Partially correct') : ''
+  const resultLabel  = result ? (result.score === result.outOf ? 'Nailed it! 🔥' : result.score === 0 ? 'No worries, this is how we learn 📚' : 'Almost there 💪') : ''
 
   return (
     <div style={{ minHeight: '100vh', background: C.mist, fontFamily: font.body }}>
@@ -472,11 +473,12 @@ function Practice() {
               style={{
                 width: '100%', boxSizing: 'border-box',
                 border: `1.5px solid ${result ? C.border : '#D1D5DB'}`,
-                borderRadius: 12, padding: '12px 16px',
-                fontSize: 14, fontFamily: font.body, color: C.ink,
+                borderRadius: 12, padding: '14px 16px',
+                fontSize: 15, fontFamily: font.body, color: C.ink,
                 background: result ? '#F9FAFB' : '#fff',
                 resize: 'none', outline: 'none', lineHeight: 1.6,
                 transition: 'border-color 0.15s',
+                minHeight: 100,
               } as React.CSSProperties}
               onFocus={e => { if (!result) e.currentTarget.style.borderColor = C.purple }}
               onBlur={e => { if (!result) e.currentTarget.style.borderColor = '#D1D5DB' }}
@@ -492,13 +494,13 @@ function Practice() {
                     ? C.border
                     : `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
                   color: submitting || !answer.trim() ? '#9CA3AF' : '#fff',
-                  border: 'none', borderRadius: 12, padding: '13px',
-                  fontSize: 14, fontWeight: 700, cursor: submitting || !answer.trim() ? 'not-allowed' : 'pointer',
+                  border: 'none', borderRadius: 12, padding: '15px',
+                  fontSize: 15, fontWeight: 700, cursor: submitting || !answer.trim() ? 'not-allowed' : 'pointer',
                   fontFamily: font.body, transition: 'all 0.2s',
                   boxShadow: submitting || !answer.trim() ? 'none' : `0 4px 16px ${C.purple}30`,
                 }}
               >
-                {submitting ? 'Marking…' : 'Submit answer'}
+                {submitting ? 'Marking…' : answer.trim() ? 'Lock it in ✓' : 'Write your answer above'}
               </button>
             )}
           </div>
