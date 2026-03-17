@@ -217,7 +217,7 @@ export default function Dashboard() {
               <div style={{ fontSize: 48, marginBottom: 16 }}>📊</div>
               <h2 style={{ fontFamily: font.display, fontSize: 20, color: C.ink, marginBottom: 8 }}>No data yet</h2>
               <p style={{ color: C.mid, fontSize: 14, marginBottom: 24 }}>Complete your first practice session to see your topic progress here.</p>
-              <button onClick={() => router.push('/practice')} style={{
+              <button onClick={() => router.push('/learn')} style={{
                 padding: "12px 24px", borderRadius: 10, border: "none",
                 background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
                 color: "#fff", fontWeight: 700, fontSize: 15, cursor: "pointer",
@@ -240,7 +240,7 @@ export default function Dashboard() {
                   <p style={{ fontSize: 13, color: "#92400E", margin: "0 0 16px" }}>
                     {weakestTopic.score}% score · {weakestTopic.count} attempt{weakestTopic.count !== 1 ? "s" : ""}
                   </p>
-                  <button onClick={() => router.push('/practice')} style={{
+                  <button onClick={() => router.push('/learn')} style={{
                     width: "100%", padding: "10px", borderRadius: 10,
                     background: "#92400E", color: "#fff", border: "none",
                     fontWeight: 700, fontSize: 14, cursor: "pointer", fontFamily: font.body,
