@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { TOPIC_DATA, TOPIC_META, CONTENT, toSlug } from '@/lib/study-content'
 
@@ -30,6 +30,22 @@ export default function StudyPage() {
   const [board, setBoard] = useState('')
   const [tier, setTier] = useState<'Foundation' | 'Higher'>('Foundation')
   const [phase, setPhase] = useState<1 | 2>(1)
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('gcse_profile')
+      if (!raw) { router.push('/onboarding'); return }
+      const profile = JSON.parse(raw)
+      if (profile.year && profile.board) {
+        setYear(profile.year)
+        setBoard(profile.board)
+        if (profile.tier === 'Higher') setTier('Higher')
+        setPhase(2)
+      } else {
+        router.push('/onboarding')
+      }
+    } catch { router.push('/onboarding') }
+  }, [router])
 
   const canProceed = !!year && !!board
 
@@ -116,7 +132,15 @@ export default function StudyPage() {
               </div>
             </div>
 
-            <button onClick={() => setPhase(2)} disabled={!canProceed} style={{
+            <button onClick={() => {
+              if (!canProceed) return
+              try {
+                const raw = localStorage.getItem('gcse_profile')
+                const existing = raw ? JSON.parse(raw) : {}
+                localStorage.setItem('gcse_profile', JSON.stringify({ ...existing, year, board, tier }))
+              } catch { /* ignore */ }
+              setPhase(2)
+            }} disabled={!canProceed} style={{
               width: '100%', padding: '14px', borderRadius: 12, border: 'none',
               background: canProceed ? `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})` : C.border,
               color: canProceed ? '#fff' : '#9CA3AF',
@@ -153,7 +177,7 @@ export default function StudyPage() {
           <button onClick={() => setPhase(1)} style={{
             border: `1.5px solid ${C.border}`, background: '#fff', borderRadius: 8,
             padding: '5px 12px', fontSize: 13, cursor: 'pointer', color: C.mid, fontFamily: font.body,
-          }}>← Back</button>
+          }}>⚙️ Change setup</button>
           <div style={{ display: 'flex', gap: 6 }}>
             {[year, board].map(tag => (
               <span key={tag} style={{
