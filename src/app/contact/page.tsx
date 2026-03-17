@@ -35,7 +35,7 @@ const FAQS = [
   },
   {
     q: 'Can my teacher set up accounts for a whole class?',
-    a: 'Not yet — but this is on our roadmap. Email us at hello@gcsemathsai.co.uk and we\'ll keep you posted.',
+    a: 'Not yet — but this is on our roadmap. Email us at enquiries@gcsemathsai.co.uk and we\'ll keep you posted.',
   },
   {
     q: 'I\'ve forgotten my password. What do I do?',
@@ -43,7 +43,7 @@ const FAQS = [
   },
   {
     q: 'How do I delete my account?',
-    a: 'Email privacy@gcsemathsai.co.uk with the subject "Delete my account". We\'ll delete everything within 5 working days.',
+    a: 'Email enquiries@gcsemathsai.co.uk with the subject "Delete my account". We\'ll delete everything within 5 working days.',
   },
 ]
 
@@ -168,7 +168,7 @@ export default function ContactPage() {
                   <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm">
                     Something went wrong. Please try emailing us directly at{' '}
                     <a href="mailto:enquiries@gcsemathsai.co.uk" className="font-semibold underline">
-                      hello@gcsemathsai.co.uk
+                      enquiries@gcsemathsai.co.uk
                     </a>
                   </div>
                 )}
@@ -184,7 +184,7 @@ export default function ContactPage() {
                 <p className="text-xs text-gray-400 text-center">
                   Or email us directly:{' '}
                   <a href="mailto:enquiries@gcsemathsai.co.uk" className="text-purple-700 font-medium">
-                    hello@gcsemathsai.co.uk
+                    enquiries@gcsemathsai.co.uk
                   </a>
                 </p>
               </form>

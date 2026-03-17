@@ -15,7 +15,7 @@ const sections = [
     title: '1. Who we are',
     content: `GCSEMathsAI ("we", "us", "our") is an educational technology service operated from England, United Kingdom. Our website is gcsemathsai.co.uk.
 
-We are the data controller for personal information collected through this service. If you have any questions about this policy or how we handle your data, please contact us at privacy@gcsemathsai.co.uk.`,
+We are the data controller for personal information collected through this service. If you have any questions about this policy or how we handle your data, please contact us at enquiries@gcsemathsai.co.uk.`,
   },
   {
     id: 'data-we-collect',
@@ -97,7 +97,7 @@ When you delete your account, all personal data associated with it is permanentl
 
 If you are under 13, please ask a parent or guardian to create an account and supervise your use.
 
-If you are a parent or guardian and believe your child under 13 has created an account without your consent, please contact us immediately at privacy@gcsemathsai.co.uk and we will delete the account and all associated data within 5 working days.
+If you are a parent or guardian and believe your child under 13 has created an account without your consent, please contact us immediately at enquiries@gcsemathsai.co.uk and we will delete the account and all associated data within 5 working days.
 
 We take children's privacy seriously and follow the ICO's Age Appropriate Design Code (Children's Code).`,
   },
@@ -127,7 +127,7 @@ You can control cookies through your browser settings. Disabling strictly necess
 — **Right to object** — Object to processing based on legitimate interests
 — **Right not to be subject to automated decision-making** — We do not make legally significant decisions about you solely by automated means
 
-To exercise any of these rights, email privacy@gcsemathsai.co.uk. We will respond within 30 days. There is no charge for exercising your rights.
+To exercise any of these rights, email enquiries@gcsemathsai.co.uk. We will respond within 30 days. There is no charge for exercising your rights.
 
 If you are unhappy with how we handle your data, you have the right to lodge a complaint with the **Information Commissioner's Office (ICO)** at ico.org.uk or by calling 0303 123 1113.`,
   },
@@ -155,7 +155,7 @@ Continued use of the service after changes take effect constitutes your acceptan
     title: '12. Contact',
     content: `For privacy-related questions, data subject requests, or to report a concern:
 
-**Email**: privacy@gcsemathsai.co.uk
+**Email**: enquiries@gcsemathsai.co.uk
 **Post**: GCSEMathsAI, c/o Data Controller, England, United Kingdom
 
 We aim to respond to all enquiries within 5 working days.`,

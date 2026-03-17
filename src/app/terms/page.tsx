@@ -50,9 +50,9 @@ GCSEMathsAI is intended primarily for students in England, Wales, Scotland and N
     title: '4. Your account',
     content: `**Creating an account**: You must provide a valid email address and create a password. You are responsible for keeping your login credentials confidential.
 
-**Account security**: You are responsible for all activity that occurs under your account. Notify us immediately at hello@gcsemathsai.co.uk if you suspect unauthorised access.
+**Account security**: You are responsible for all activity that occurs under your account. Notify us immediately at enquiries@gcsemathsai.co.uk if you suspect unauthorised access.
 
-**One account per person**: You may not create multiple accounts or share your account with others. If you are a teacher or parent setting up accounts for students, please contact us at hello@gcsemathsai.co.uk.
+**One account per person**: You may not create multiple accounts or share your account with others. If you are a teacher or parent setting up accounts for students, please contact us at enquiries@gcsemathsai.co.uk.
 
 **Accuracy**: You agree to provide accurate and up-to-date information. We may suspend or delete accounts where we reasonably believe information is false or misleading.`,
   },
@@ -131,7 +131,7 @@ These terms do not affect your statutory rights as a consumer under the Consumer
   {
     id: 'termination',
     title: '11. Termination',
-    content: `**By you**: You may close your account at any time by emailing hello@gcsemathsai.co.uk. On closure, your data will be deleted within 30 days in accordance with our Privacy Policy.
+    content: `**By you**: You may close your account at any time by emailing enquiries@gcsemathsai.co.uk. On closure, your data will be deleted within 30 days in accordance with our Privacy Policy.
 
 **By us**: We may suspend or terminate your account immediately if you breach these terms, engage in fraudulent activity, or if we are required to do so by law. We may also terminate the service entirely with 30 days' notice.
 
@@ -158,7 +158,7 @@ If you continue to use GCSEMathsAI after updated terms take effect, you are deem
     title: '14. Contact',
     content: `For questions about these terms:
 
-**Email**: hello@gcsemathsai.co.uk
+**Email**: enquiries@gcsemathsai.co.uk
 **Post**: GCSEMathsAI, England, United Kingdom
 
 We aim to respond within 5 working days.`,
