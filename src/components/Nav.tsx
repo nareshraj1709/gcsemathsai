@@ -79,6 +79,7 @@ export default function Nav() {
     { label: "Practice",  path: "/learn"     },
     { label: "Sections",  path: "/sections"  },
     { label: "Papers",    path: "/papers"    },
+    { label: "Downloads", path: "/downloads" },
   ]
 
   const loggedOutLinks = [

@@ -87,6 +87,28 @@ export default function PapersPage() {
 
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '28px 24px' }}>
 
+        {/* Download link banner */}
+        <div style={{
+          background: '#fff', borderRadius: 12, border: '1.5px solid #D1FAE5',
+          padding: '12px 20px', marginBottom: 20,
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          flexWrap: 'wrap', gap: 10,
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: 16 }}>📥</span>
+            <span style={{ fontSize: 13, color: '#065F46', fontWeight: 600 }}>
+              Want to download and print past papers? Visit our dedicated downloads page.
+            </span>
+          </div>
+          <button onClick={() => router.push('/downloads')} style={{
+            padding: '7px 18px', borderRadius: 8, border: 'none',
+            background: '#059669', color: '#fff', fontSize: 13,
+            fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap',
+          }}>
+            Download PDFs →
+          </button>
+        </div>
+
         {/* Board + Tier filter — shared */}
         <div style={{
           background: '#fff', borderRadius: 14, border: '1px solid #E5E1FF',
