@@ -51,6 +51,150 @@ type Attempt = {
   hint?: string
 }
 
+// ── Loading screen with progress ─────────────────────────────
+const LOADING_TIPS = [
+  'Read each question twice before you start writing.',
+  'Always show your working — you can earn method marks even if your final answer is wrong.',
+  'Check your units! Forgetting cm, kg, or seconds costs easy marks.',
+  'If you get stuck, try re-reading the question for clues.',
+  'Sketch a diagram if the question involves shapes or graphs.',
+  'Estimate your answer first — it helps you spot silly mistakes.',
+  'For fractions, always simplify your final answer.',
+  'In algebra, collect like terms before solving.',
+  'Don\'t rush — accuracy beats speed in maths exams.',
+  'If a question says "show that", you must show every step clearly.',
+]
+
+const LOADING_STEPS = [
+  'Selecting questions for your level...',
+  'Tailoring to your exam board...',
+  'Writing mark schemes...',
+  'Adding hints...',
+  'Nearly there...',
+]
+
+function LoadingScreen({ genError, difficulty, subtopic, topic, board, tier, onRetry, onBack }: {
+  genError: string
+  difficulty: string
+  subtopic: string
+  topic: string
+  board: string
+  tier: string
+  onRetry: () => void
+  onBack: () => void
+}) {
+  const [tipIndex, setTipIndex] = useState(0)
+  const [stepIndex, setStepIndex] = useState(0)
+  const [elapsed, setElapsed] = useState(0)
+
+  useEffect(() => {
+    if (genError) return
+    const tipTimer = setInterval(() => setTipIndex(i => (i + 1) % LOADING_TIPS.length), 3500)
+    const stepTimer = setInterval(() => setStepIndex(i => Math.min(i + 1, LOADING_STEPS.length - 1)), 2200)
+    const tickTimer = setInterval(() => setElapsed(e => e + 1), 1000)
+    return () => { clearInterval(tipTimer); clearInterval(stepTimer); clearInterval(tickTimer) }
+  }, [genError])
+
+  // Simulated progress: fast at start, slows down, caps at 95%
+  const progress = Math.min(95, 20 + (elapsed / (elapsed + 4)) * 75)
+
+  if (genError) {
+    return (
+      <div style={{ minHeight: '100vh', background: C.mist, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: font.body }}>
+        <div style={{ textAlign: 'center', maxWidth: 400 }}>
+          <div style={{ fontSize: 48, marginBottom: 16 }}>📐</div>
+          <p style={{ color: C.red, fontWeight: 700, fontSize: 15, marginBottom: 16 }}>{genError}</p>
+          <button onClick={onRetry} style={{
+            background: C.purple, color: '#fff', border: 'none', borderRadius: 10,
+            padding: '10px 20px', fontSize: 14, fontWeight: 700, cursor: 'pointer', marginRight: 10,
+          }}>Try again</button>
+          <button onClick={onBack} style={{
+            background: 'none', color: C.mid, border: `1.5px solid ${C.border}`, borderRadius: 10,
+            padding: '10px 20px', fontSize: 14, fontWeight: 600, cursor: 'pointer',
+          }}>← Back to topics</button>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{ minHeight: '100vh', background: C.mist, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: font.body }}>
+      <div style={{ textAlign: 'center', maxWidth: 420, padding: '0 24px' }}>
+
+        {/* Animated pencil icon */}
+        <div style={{
+          fontSize: 48, marginBottom: 20,
+          animation: 'bounce 1.2s ease-in-out infinite',
+        }}>
+          ✏️
+        </div>
+        <style>{`
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+          }
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+        `}</style>
+
+        <p style={{ color: C.purple, fontWeight: 800, fontSize: 18, margin: '0 0 4px', fontFamily: font.display }}>
+          Building your practice session
+        </p>
+        <p style={{ color: C.mid, fontSize: 13, margin: '0 0 20px' }}>
+          {subtopic || topic || 'Mixed'} · {board} {tier} · {difficulty}
+        </p>
+
+        {/* Progress bar */}
+        <div style={{
+          background: C.border, borderRadius: 999, height: 8,
+          overflow: 'hidden', marginBottom: 12, maxWidth: 300, margin: '0 auto 12px',
+        }}>
+          <div style={{
+            height: '100%', borderRadius: 999,
+            background: `linear-gradient(90deg, ${C.purple}, ${C.purpleLight})`,
+            width: `${progress}%`,
+            transition: 'width 1s ease-out',
+          }} />
+        </div>
+
+        {/* Step label */}
+        <p style={{
+          color: C.purple, fontSize: 13, fontWeight: 600,
+          margin: '0 0 24px', minHeight: 20,
+          animation: 'fadeIn 0.4s ease',
+        }} key={stepIndex}>
+          {LOADING_STEPS[stepIndex]}
+        </p>
+
+        {/* Tip card */}
+        <div style={{
+          background: '#fff', borderRadius: 14, border: `1px solid ${C.border}`,
+          padding: '16px 20px', boxShadow: '0 2px 16px rgba(109,40,217,0.06)',
+          animation: 'fadeIn 0.5s ease',
+          minHeight: 70, display: 'flex', flexDirection: 'column', justifyContent: 'center',
+        }} key={tipIndex}>
+          <p style={{
+            fontSize: 11, fontWeight: 700, color: C.purple, textTransform: 'uppercase',
+            letterSpacing: 0.8, margin: '0 0 6px',
+          }}>
+            Exam tip
+          </p>
+          <p style={{ fontSize: 13, color: C.ink, lineHeight: 1.5, margin: 0 }}>
+            {LOADING_TIPS[tipIndex]}
+          </p>
+        </div>
+
+        {/* Time elapsed */}
+        <p style={{ color: '#D1D5DB', fontSize: 11, marginTop: 16 }}>
+          {elapsed < 5 ? 'This usually takes 5–10 seconds' : `${elapsed}s — almost ready...`}
+        </p>
+      </div>
+    </div>
+  )
+}
+
 // ── Score ring SVG ────────────────────────────────────────────
 function ScoreRing({ pct, size = 120 }: { pct: number; size?: number }) {
   const r = size * 0.42
@@ -201,34 +345,16 @@ function Practice() {
 
   // ── LOADING ──────────────────────────────────────────────────
   if (phase === 'loading') {
-    return (
-      <div style={{ minHeight: '100vh', background: C.mist, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: font.body }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ fontSize: 48, marginBottom: 16 }}>📐</div>
-          {genError ? (
-            <>
-              <p style={{ color: C.red, fontWeight: 700, fontSize: 15, marginBottom: 16 }}>{genError}</p>
-              <button onClick={() => setGenerationRound(r => r + 1)} style={{
-                background: C.purple, color: '#fff', border: 'none', borderRadius: 10,
-                padding: '10px 20px', fontSize: 14, fontWeight: 700, cursor: 'pointer', marginRight: 10,
-              }}>Try again</button>
-              <button onClick={() => router.push('/learn')} style={{
-                background: 'none', color: C.mid, border: `1.5px solid ${C.border}`, borderRadius: 10,
-                padding: '10px 20px', fontSize: 14, fontWeight: 600, cursor: 'pointer',
-              }}>← Back to topics</button>
-            </>
-          ) : (
-            <>
-              <p style={{ color: C.purple, fontWeight: 700, fontSize: 16, margin: '0 0 8px' }}>
-                Generating {difficulty.toLowerCase()} questions…
-              </p>
-              <p style={{ color: C.mid, fontSize: 13 }}>{subtopic || topic || 'Mixed'} · {board} {tier}</p>
-              <p style={{ color: C.mid, fontSize: 12, marginTop: 6 }}>5 questions · ~3 min session ⚡</p>
-            </>
-          )}
-        </div>
-      </div>
-    )
+    return <LoadingScreen
+      genError={genError}
+      difficulty={difficulty}
+      subtopic={subtopic}
+      topic={topic}
+      board={board}
+      tier={tier}
+      onRetry={() => setGenerationRound(r => r + 1)}
+      onBack={() => router.push('/learn')}
+    />
   }
 
   // ── COMPLETE ─────────────────────────────────────────────────
