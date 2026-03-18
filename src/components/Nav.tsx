@@ -79,6 +79,7 @@ export default function Nav() {
     { label: "Practice",  path: "/learn"     },
     { label: "Topic Tests", path: "/sections" },
     { label: "Papers",    path: "/papers"    },
+    { label: "Notes Review", path: "/notes-review" },
     { label: "Downloads", path: "/downloads" },
   ]
 
