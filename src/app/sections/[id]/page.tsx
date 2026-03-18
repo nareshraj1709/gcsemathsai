@@ -173,7 +173,7 @@ function SectionPractice() {
           <p style={{ fontSize: 16, fontWeight: 700, color: section.color }}>{error || 'Generating questions…'}</p>
           {error && (
             <button onClick={() => router.push('/sections')} style={{ marginTop: 12, fontSize: 14, color: '#6B7280', background: 'none', border: 'none', cursor: 'pointer' }}>
-              ← Back to sections
+              ← Back to topic tests
             </button>
           )}
         </div>
@@ -299,7 +299,7 @@ function SectionPractice() {
           {/* Actions */}
           <div style={{ display: 'flex', gap: 12, marginTop: 24 }}>
             <button onClick={() => router.push('/sections')} style={{ flex: 1, padding: '13px', borderRadius: 12, border: '1.5px solid #E5E1FF', background: '#fff', color: '#6D28D9', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}>
-              ← All sections
+              ← All topic tests
             </button>
             <button onClick={() => router.push(`/study`)} style={{ flex: 1, padding: '13px', borderRadius: 12, border: 'none', background: `linear-gradient(135deg, ${section.color}, ${section.color}bb)`, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}>
               📖 Study notes

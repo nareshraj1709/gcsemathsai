@@ -77,7 +77,7 @@ export default function Nav() {
     { label: "Dashboard", path: "/dashboard" },
     { label: "Study",     path: "/study"     },
     { label: "Practice",  path: "/learn"     },
-    { label: "Sections",  path: "/sections"  },
+    { label: "Topic Tests", path: "/sections" },
     { label: "Papers",    path: "/papers"    },
     { label: "Downloads", path: "/downloads" },
   ]

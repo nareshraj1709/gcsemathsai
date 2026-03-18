@@ -52,12 +52,12 @@ export default function SectionsPage() {
         background: 'linear-gradient(135deg, #1E3A5F, #2563EB)',
         padding: '40px 24px', color: '#fff', textAlign: 'center',
       }}>
-        <p style={{ fontSize: 13, opacity: 0.8, marginBottom: 8 }}>Structured Practice</p>
+        <p style={{ fontSize: 13, opacity: 0.8, marginBottom: 8 }}>Track Your Progress</p>
         <h1 style={{ fontFamily: "'Georgia', serif", fontSize: 30, fontWeight: 800, margin: '0 0 10px' }}>
-          Practice Sections
+          Topic Tests
         </h1>
         <p style={{ fontSize: 15, opacity: 0.85, maxWidth: 480, margin: '0 auto' }}>
-          10 AI-generated questions per section, marked instantly. Track your progress across every topic.
+          10 exam-style questions per topic, AI-marked with a full evaluation at the end. Work through every topic and track your progress.
         </p>
       </div>
 
@@ -125,7 +125,7 @@ export default function SectionsPage() {
         {/* Higher-only notice */}
         {tier === 'Foundation' && (
           <p style={{ fontSize: 13, color: '#9CA3AF', marginBottom: 16 }}>
-            Higher-only sections (Surds, Quadratics, Simultaneous Eqs, Circle Theorems, Vectors, Venn Diagrams) are hidden on Foundation.
+            Higher-only tests (Surds, Quadratics, Simultaneous Eqs, Circle Theorems, Vectors, Venn Diagrams) are hidden on Foundation.
           </p>
         )}
 
