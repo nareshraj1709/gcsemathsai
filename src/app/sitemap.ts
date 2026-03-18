@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { CONTENT, toSlug } from '@/lib/study-content'
 import { BLOG_POSTS } from '@/lib/blog-posts'
 import { getAllMarkdownPosts } from '@/lib/markdown'
+import { getAllTopics } from '@/lib/topics-markdown'
 
 const BASE = 'https://www.gcsemathsai.co.uk'
 
@@ -45,5 +46,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...studyPages, ...mdBlogPages, ...tsBlogPages]
+  // Topic explainer pages (73 SEO pages)
+  const topicPages: MetadataRoute.Sitemap = getAllTopics().map(t => ({
+    url: `${BASE}/topics/${t.slug}`,
+    lastModified: t.dateISO ? new Date(t.dateISO) : now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }))
+
+  return [...staticPages, ...studyPages, ...topicPages, ...mdBlogPages, ...tsBlogPages]
 }

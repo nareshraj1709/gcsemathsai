@@ -84,6 +84,7 @@ export default function Nav() {
   ]
 
   const loggedOutLinks = [
+    { label: "Topics",   path: "/topics"   },
     { label: "Features", path: "/features" },
     { label: "Pricing",  path: "/pricing"  },
     { label: "Blog",     path: "/blog"     },
