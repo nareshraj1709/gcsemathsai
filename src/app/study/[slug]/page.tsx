@@ -2,15 +2,35 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CONTENT, TOPIC_META, toSlug, type SubtopicContent } from '@/lib/study-content'
 
+const BASE = 'https://www.gcsemathsai.co.uk'
+
 type Props = { params: Promise<{ slug: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const entry = CONTENT.find(c => toSlug(c.topic, c.subtopic) === slug)
   if (!entry) return { title: 'Study — GCSEMathsAI' }
+  const url = `${BASE}/study/${slug}`
   return {
-    title: `${entry.subtopic} — GCSEMathsAI`,
+    title: `${entry.subtopic} — GCSE Maths Study Notes | GCSEMathsAI`,
     description: entry.overview,
+    keywords: [
+      entry.subtopic, entry.topic, 'GCSE Maths', `${entry.subtopic} GCSE`,
+      `${entry.subtopic} revision`, 'study notes', 'worked examples', 'exam tips',
+    ],
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${entry.subtopic} — GCSE Maths Study Notes`,
+      description: entry.overview,
+      url,
+      type: 'article',
+      siteName: 'GCSEMathsAI',
+    },
+    twitter: {
+      card: 'summary',
+      title: `${entry.subtopic} — GCSE Maths Study Notes`,
+      description: entry.overview,
+    },
   }
 }
 
@@ -66,8 +86,60 @@ export default async function StudyTopicPage({ params }: Props) {
     ? entry.videoSearchTerms
     : [`GCSE maths ${entry.subtopic}`, `${entry.topic} ${entry.subtopic} GCSE`, `GCSE maths ${entry.subtopic} explained`]
 
+  const pageUrl = `${BASE}/study/${slug}`
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${entry.subtopic} — GCSE Maths Study Notes`,
+    description: entry.overview,
+    url: pageUrl,
+    author: { '@type': 'Organization', name: 'GCSEMathsAI', url: BASE },
+    publisher: { '@type': 'Organization', name: 'GCSEMathsAI', url: BASE, logo: { '@type': 'ImageObject', url: `${BASE}/og.png` } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+    about: { '@type': 'Thing', name: `${entry.subtopic} (GCSE Mathematics)` },
+    educationalLevel: entry.tier === 'Both' ? 'GCSE Foundation & Higher' : `GCSE ${entry.tier}`,
+    inLanguage: 'en-GB',
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 2, name: 'Study Notes', item: `${BASE}/study` },
+      { '@type': 'ListItem', position: 3, name: entry.topic, item: `${BASE}/study` },
+      { '@type': 'ListItem', position: 4, name: entry.subtopic, item: pageUrl },
+    ],
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      ...entry.keyFacts.slice(0, 3).map(fact => ({
+        '@type': 'Question',
+        name: `What is important to know about ${entry.subtopic}?`,
+        acceptedAnswer: { '@type': 'Answer', text: fact },
+      })),
+      ...entry.commonMistakes.slice(0, 2).map(mistake => ({
+        '@type': 'Question',
+        name: `What are common mistakes with ${entry.subtopic}?`,
+        acceptedAnswer: { '@type': 'Answer', text: mistake },
+      })),
+      ...entry.examTips.slice(0, 2).map(tip => ({
+        '@type': 'Question',
+        name: `What exam tips are there for ${entry.subtopic}?`,
+        acceptedAnswer: { '@type': 'Answer', text: tip },
+      })),
+    ],
+  }
+
   return (
     <main style={{ minHeight: '100vh', background: '#F8F7FF', fontFamily: "'Trebuchet MS', sans-serif" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Top nav breadcrumb */}
       <nav style={{

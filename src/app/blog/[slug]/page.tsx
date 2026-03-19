@@ -166,6 +166,42 @@ function RenderBlock({ block }: { block: Block }) {
 }
 
 // ── Page ─────────────────────────────────────────────────────
+const BASE = 'https://www.gcsemathsai.co.uk'
+
+function BlogJsonLd({ title, description, slug, date, author }: {
+  title: string; description: string; slug: string; date: string; author: string
+}) {
+  const url = `${BASE}/blog/${slug}`
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    url,
+    datePublished: date,
+    dateModified: date,
+    author: { '@type': 'Person', name: author },
+    publisher: { '@type': 'Organization', name: 'GCSEMathsAI', url: BASE, logo: { '@type': 'ImageObject', url: `${BASE}/og.png` } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    inLanguage: 'en-GB',
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE}/blog` },
+      { '@type': 'ListItem', position: 3, name: title, item: url },
+    ],
+  }
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+    </>
+  )
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
   // Try markdown first
@@ -181,6 +217,7 @@ export default async function BlogPostPage({ params }: Props) {
 
     return (
       <main className="min-h-screen bg-white">
+        <BlogJsonLd title={md.title} description={md.description} slug={slug} date={md.dateISO} author={md.author} />
 
         {/* Hero */}
         <div className="bg-purple-50 border-b border-purple-100 px-6 py-12">
@@ -290,6 +327,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-white">
+      <BlogJsonLd title={ts.title} description={ts.metaDescription} slug={slug} date={ts.date} author={ts.author} />
       {/* Hero */}
       <div className="bg-purple-50 border-b border-purple-100 px-6 py-12">
         <div className="max-w-3xl mx-auto">

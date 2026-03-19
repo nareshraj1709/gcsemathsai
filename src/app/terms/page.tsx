@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service',
-  description: 'Terms and conditions for using GCSEMathsAI.',
-  robots: { index: false },
+  title: 'Terms of Service — GCSEMathsAI',
+  description: 'Terms and conditions for using GCSEMathsAI — free AI-powered GCSE Maths revision platform.',
+  alternates: { canonical: 'https://www.gcsemathsai.co.uk/terms' },
 }
 
 const LAST_UPDATED = '14 March 2026'

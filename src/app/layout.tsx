@@ -77,6 +77,25 @@ export default function RootLayout({
     <html lang="en-GB">
       <head>
         <meta name="google-site-verification" content="7yfaIa1Y-jOROaNuyuWVAE3_FY2ct8AIlu7g_cb5VD8" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'GCSEMathsAI',
+          url: 'https://www.gcsemathsai.co.uk',
+          logo: 'https://www.gcsemathsai.co.uk/og.png',
+          description: 'Free AI-powered GCSE Maths tutor with instant marking. Study notes, practice questions and past papers for AQA, Edexcel and OCR.',
+          sameAs: [],
+          contactPoint: { '@type': 'ContactPoint', email: 'enquiries@gcsemathsai.co.uk', contactType: 'customer service' },
+        }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'GCSEMathsAI',
+          url: 'https://www.gcsemathsai.co.uk',
+          description: 'AI-powered GCSE Maths revision platform with instant marking.',
+          publisher: { '@type': 'Organization', name: 'GCSEMathsAI' },
+          inLanguage: 'en-GB',
+        }) }} />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SCDRCH8B1"></script>
         <script
           dangerouslySetInnerHTML={{
