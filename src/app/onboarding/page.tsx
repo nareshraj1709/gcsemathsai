@@ -64,7 +64,7 @@ export default function Onboarding() {
     {
       title: "What's your name?",
       sub: "We'll personalise your dashboard and revision plan.",
-      field: "name" as const, type: "text" as const, placeholder: "e.g. Aarav",
+      field: "name" as const, type: "text" as const, placeholder: "e.g. Alex",
     },
     {
       title: "Which year are you in?",

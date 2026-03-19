@@ -245,33 +245,30 @@ export default function Home() {
             {[
               {
                 quote: 'I finally understand where I go wrong. It explains each step so clearly — I went up two grades in my mock.',
-                name: 'Aarav Singh',
-                role: 'Year 11 · Leeds',
-                initials: 'AS',
+                role: 'Year 11 student',
+                initials: 'A',
                 bg: 'bg-purple-100 text-purple-800',
               },
               {
                 quote: 'The daily questions are short enough that I actually do them. 15 minutes every evening and my algebra has improved massively.',
-                name: 'Priya Sharma',
-                role: 'Year 11 · Birmingham',
-                initials: 'PS',
+                role: 'Year 11 student',
+                initials: 'P',
                 bg: 'bg-blue-100 text-blue-800',
               },
               {
                 quote: 'I was resitting and really struggling with geometry. This app explained circle theorems better than any YouTube video I found.',
-                name: 'Rahul Desai',
-                role: 'Resit student · Leicester',
-                initials: 'RD',
+                role: 'Resit student',
+                initials: 'R',
                 bg: 'bg-green-100 text-green-800',
               },
-            ].map(t => (
-              <div key={t.name} className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+            ].map((t, i) => (
+              <div key={i} className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
                 <div className="text-amber-400 text-sm mb-3">★★★★★</div>
                 <p className="text-sm text-gray-700 leading-relaxed mb-4">"{t.quote}"</p>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold ${t.bg}`}>{t.initials}</div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-900">{t.name}</div>
+                    <div className="text-sm font-semibold text-gray-900">Verified student</div>
                     <div className="text-xs text-gray-400">{t.role}</div>
                   </div>
                 </div>
