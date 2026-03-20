@@ -63,6 +63,8 @@ export default function Nav() {
   const signOut = async () => {
     setMenuOpen(false)
     await supabase.auth.signOut()
+    try { localStorage.removeItem('gcse_profile') } catch { /* ignore */ }
+    setProfile(null)
     router.push('/')
   }
 
@@ -139,7 +141,7 @@ export default function Nav() {
                     onMouseEnter={e => { e.currentTarget.style.borderColor = C.purple; e.currentTarget.style.color = C.purple }}
                     onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.ink }}
                   >Log in</button>
-                  <button onClick={() => navigate('/onboarding')} style={{
+                  <button onClick={() => navigate('/auth')} style={{
                     background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
                     border: "none", padding: "8px 20px", borderRadius: 8,
                     fontSize: 14, fontWeight: 700, color: "#fff",
@@ -267,7 +269,7 @@ export default function Nav() {
                     fontSize: 15, fontWeight: 600, color: C.ink,
                     cursor: "pointer", fontFamily: font.body,
                   }}>Log in</button>
-                  <button onClick={() => navigate('/onboarding')} style={{
+                  <button onClick={() => navigate('/auth')} style={{
                     flex: 1, padding: "12px", borderRadius: 10, border: "none",
                     background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
                     fontSize: 15, fontWeight: 700, color: "#fff",
