@@ -26,6 +26,7 @@ const TOPIC_MAP: Record<string, { topic: string; practiceSlug: string; label: st
   'simultaneous-equations-gcse':                { topic: 'simultaneous equations',                  practiceSlug: 'gcse-maths',           label: 'Simultaneous Equations'    },
   'circle-theorems-gcse':                       { topic: 'circle theorems',                         practiceSlug: 'gcse-maths',           label: 'Circle Theorems'           },
   'trigonometry-gcse-maths':                    { topic: 'trigonometry soh cah toa sine cosine rule', practiceSlug: 'gcse-maths',         label: 'Trigonometry'              },
+  'gcse-maths-exam-technique':                   { topic: 'gcse maths exam technique and strategy',   practiceSlug: 'gcse-maths',         label: 'GCSE Maths Exam Technique' },
 }
 
 function getQuizProps(slug: string) {
