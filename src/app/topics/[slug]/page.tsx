@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllTopics, getTopicPost, renderTopicMarkdown, extractTopicTOC } from '@/lib/topics-markdown'
+import { autoLinkTopics } from '@/lib/auto-linker'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -49,7 +50,8 @@ export default async function TopicPage({ params }: Props) {
   const topic = getTopicPost(slug)
   if (!topic) notFound()
 
-  const html = renderTopicMarkdown(topic.content)
+  const rawHtml = renderTopicMarkdown(topic.content)
+  const html = autoLinkTopics(rawHtml, topic.slug)
   const toc = extractTopicTOC(topic.content)
   const colours = COLOUR_MAP[topic.categoryColour] ?? COLOUR_MAP.purple
   const tierBadge = TIER_BADGE[topic.tier] ?? TIER_BADGE['Foundation & Higher']

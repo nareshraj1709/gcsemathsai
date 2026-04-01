@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { getAllMarkdownPosts, getMarkdownPost, renderMarkdown, extractTOC } from '@/lib/markdown'
 import { BLOG_POSTS, getPost, type Block } from '@/lib/blog-posts'
 import QuickQuizGenerator from '@/components/QuickQuizGenerator'
+import { autoLinkTopics } from '@/lib/auto-linker'
 
 // Maps blog slug → { topic sent to API, practiceSlug for /practice/ link, label }
 const TOPIC_MAP: Record<string, { topic: string; practiceSlug: string; label: string }> = {
@@ -209,7 +210,8 @@ export default async function BlogPostPage({ params }: Props) {
   const md = getMarkdownPost(slug)
 
   if (md) {
-    const htmlContent = renderMarkdown(md.content)
+    const rawHtmlContent = renderMarkdown(md.content)
+    const htmlContent = autoLinkTopics(rawHtmlContent, slug)
     const toc = extractTOC(md.content)
     const colours = COLOUR_MAP[md.categoryColour] ?? COLOUR_MAP.purple
     const otherMd = getAllMarkdownPosts().filter(p => p.slug !== md.slug).slice(0, 2)

@@ -40,6 +40,18 @@ body {
   text-align: center;
 }
 
+/* Auto-linked topic cross-references */
+a.auto-link {
+  color: #6D28D9;
+  text-decoration: underline;
+  text-decoration-color: #DDD6FE;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s;
+}
+a.auto-link:hover {
+  text-decoration-color: #6D28D9;
+}
+
 /* Topic page answer blocks */
 .answer-block {
   background: #F0FDF4;
