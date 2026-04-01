@@ -10,6 +10,8 @@ const C = {
   mid: "#6B7280",
   border: "#E5E1FF",
   mist: "#F8F7FF",
+  green: "#059669",
+  red: "#DC2626",
 }
 
 const font = {
@@ -17,38 +19,122 @@ const font = {
   body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
 }
 
+type Mode = 'login' | 'signup' | 'forgot'
+
 export default function Auth() {
   const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [isLogin, setIsLogin] = useState(true)
+  const [mode, setMode] = useState<Mode>('login')
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
+  const [messageType, setMessageType] = useState<'info' | 'error' | 'success'>('info')
 
-  const handleAuth = async () => {
+  const showMessage = (text: string, type: 'info' | 'error' | 'success' = 'info') => {
+    setMessage(text)
+    setMessageType(type)
+  }
+
+  const friendlyError = (msg: string): string => {
+    if (msg.includes('Invalid login credentials')) return 'Incorrect email or password. Please try again.'
+    if (msg.includes('Email not confirmed')) return 'Please check your email and confirm your account first.'
+    if (msg.includes('User already registered')) return 'An account with this email already exists. Try logging in instead.'
+    if (msg.includes('Password should be at least')) return 'Password must be at least 6 characters long.'
+    if (msg.includes('rate limit') || msg.includes('too many')) return 'Too many attempts. Please wait a moment and try again.'
+    if (msg.includes('network') || msg.includes('fetch')) return 'Connection error. Please check your internet and try again.'
+    return msg
+  }
+
+  const handleLogin = async () => {
+    if (!email.trim() || !password.trim()) {
+      showMessage('Please enter your email and password.', 'error')
+      return
+    }
     setLoading(true)
-    setMessage('')
-
-    if (isLogin) {
-      const { error } = await supabase.auth.signInWithPassword({ email, password })
-      if (error) setMessage(error.message)
-      else {
-        const profile = localStorage.getItem('gcse_profile')
-        router.push(profile ? '/dashboard' : '/onboarding')
-      }
+    showMessage('')
+    const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password })
+    if (error) {
+      showMessage(friendlyError(error.message), 'error')
     } else {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          emailRedirectTo: `${window.location.origin}/auth/callback`,
-        },
-      })
-      if (error) setMessage(error.message)
-      else setMessage('Check your email to confirm your account!')
+      const profile = localStorage.getItem('gcse_profile')
+      router.push(profile ? '/dashboard' : '/onboarding')
     }
     setLoading(false)
   }
+
+  const handleSignup = async () => {
+    if (!email.trim()) {
+      showMessage('Please enter your email address.', 'error')
+      return
+    }
+    if (password.length < 6) {
+      showMessage('Password must be at least 6 characters long.', 'error')
+      return
+    }
+    setLoading(true)
+    showMessage('')
+    const { error } = await supabase.auth.signUp({
+      email: email.trim(),
+      password,
+      options: {
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
+      },
+    })
+    if (error) {
+      showMessage(friendlyError(error.message), 'error')
+    } else {
+      showMessage('Check your email to confirm your account! You may need to check your spam folder.', 'success')
+    }
+    setLoading(false)
+  }
+
+  const handleForgotPassword = async () => {
+    if (!email.trim() || !email.includes('@')) {
+      showMessage('Please enter a valid email address.', 'error')
+      return
+    }
+    setLoading(true)
+    showMessage('')
+    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
+      redirectTo: `${window.location.origin}/auth/callback`,
+    })
+    if (error) {
+      showMessage(friendlyError(error.message), 'error')
+    } else {
+      showMessage('Password reset link sent! Check your email (and spam folder).', 'success')
+    }
+    setLoading(false)
+  }
+
+  const handleSubmit = () => {
+    if (mode === 'login') handleLogin()
+    else if (mode === 'signup') handleSignup()
+    else handleForgotPassword()
+  }
+
+  const switchMode = (newMode: Mode) => {
+    setMode(newMode)
+    setMessage('')
+    setPassword('')
+  }
+
+  const heading = mode === 'login' ? 'Welcome back' : mode === 'signup' ? 'Create your account' : 'Reset your password'
+  const subtext = mode === 'login'
+    ? 'Log in to your GCSEMathsAI account'
+    : mode === 'signup'
+    ? 'Free for every student — no card required'
+    : 'Enter your email and we\'ll send a reset link'
+
+  const buttonLabel = loading
+    ? 'Please wait…'
+    : mode === 'login'
+    ? 'Log in'
+    : mode === 'signup'
+    ? 'Create account'
+    : 'Send reset link'
+
+  const msgBg = messageType === 'error' ? '#FFF5F5' : messageType === 'success' ? '#F0FDF4' : '#F5F3FF'
+  const msgColor = messageType === 'error' ? C.red : messageType === 'success' ? C.green : C.purple
 
   return (
     <div style={{
@@ -69,27 +155,49 @@ export default function Auth() {
             fontSize: 22, boxShadow: `0 4px 16px ${C.purple}30`,
           }}>✦</div>
           <h1 style={{ fontFamily: font.display, fontSize: 24, color: C.ink, margin: "0 0 4px" }}>
-            {isLogin ? "Welcome back" : "Create your account"}
+            {heading}
           </h1>
           <p style={{ color: C.mid, fontSize: 14, margin: 0 }}>
-            {isLogin ? "Log in to your GCSEMathsAI account" : "Start your free 7-day trial"}
+            {subtext}
           </p>
         </div>
 
-        {[
-          { label: "Email", value: email, set: setEmail, type: "email", placeholder: "your@email.com" },
-          { label: "Password", value: password, set: setPassword, type: "password", placeholder: "••••••••" },
-        ].map(f => (
-          <div key={f.label} style={{ marginBottom: 16 }}>
+        {/* Email field — always shown */}
+        <div style={{ marginBottom: 16 }}>
+          <label style={{ fontSize: 13, fontWeight: 600, color: C.ink, display: "block", marginBottom: 6 }}>
+            Email
+          </label>
+          <input
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="your@email.com"
+            onKeyDown={e => e.key === 'Enter' && (mode === 'forgot' ? handleSubmit() : undefined)}
+            autoComplete="email"
+            style={{
+              width: "100%", padding: "12px 14px", borderRadius: 10,
+              border: `1.5px solid ${C.border}`, fontSize: 15,
+              fontFamily: font.body, outline: "none", boxSizing: "border-box",
+              transition: "border-color 0.2s",
+            }}
+            onFocus={e => e.currentTarget.style.borderColor = C.purple}
+            onBlur={e => e.currentTarget.style.borderColor = C.border}
+          />
+        </div>
+
+        {/* Password field — hidden on forgot password */}
+        {mode !== 'forgot' && (
+          <div style={{ marginBottom: 8 }}>
             <label style={{ fontSize: 13, fontWeight: 600, color: C.ink, display: "block", marginBottom: 6 }}>
-              {f.label}
+              Password
             </label>
             <input
-              type={f.type}
-              value={f.value}
-              onChange={e => f.set(e.target.value)}
-              placeholder={f.placeholder}
-              onKeyDown={e => e.key === 'Enter' && handleAuth()}
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              placeholder="••••••••"
+              onKeyDown={e => e.key === 'Enter' && handleSubmit()}
+              autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
               style={{
                 width: "100%", padding: "12px 14px", borderRadius: 10,
                 border: `1.5px solid ${C.border}`, fontSize: 15,
@@ -99,19 +207,38 @@ export default function Auth() {
               onFocus={e => e.currentTarget.style.borderColor = C.purple}
               onBlur={e => e.currentTarget.style.borderColor = C.border}
             />
+            {mode === 'signup' && (
+              <p style={{ fontSize: 11, color: C.mid, marginTop: 4, marginBottom: 0 }}>
+                Must be at least 6 characters
+              </p>
+            )}
           </div>
-        ))}
+        )}
 
+        {/* Forgot password link — only on login */}
+        {mode === 'login' && (
+          <div style={{ textAlign: "right", marginBottom: 8 }}>
+            <span
+              onClick={() => switchMode('forgot')}
+              style={{ fontSize: 13, color: C.purple, fontWeight: 600, cursor: "pointer" }}
+            >
+              Forgot password?
+            </span>
+          </div>
+        )}
+
+        {/* Message */}
         {message && (
           <p style={{
-            fontSize: 13, textAlign: "center", color: C.purple,
-            background: "#F5F3FF", borderRadius: 8, padding: "10px 14px",
-            marginBottom: 16,
+            fontSize: 13, textAlign: "center", color: msgColor,
+            background: msgBg, borderRadius: 8, padding: "10px 14px",
+            marginBottom: 16, marginTop: 8,
           }}>{message}</p>
         )}
 
+        {/* Submit button */}
         <button
-          onClick={handleAuth}
+          onClick={handleSubmit}
           disabled={loading}
           style={{
             width: "100%", padding: "13px", borderRadius: 10, border: "none",
@@ -122,18 +249,36 @@ export default function Auth() {
             opacity: loading ? 0.7 : 1,
           }}
         >
-          {loading ? "Please wait…" : isLogin ? "Log in" : "Create account"}
+          {buttonLabel}
         </button>
 
-        <p style={{ textAlign: "center", fontSize: 13, color: C.mid, marginTop: 16 }}>
-          {isLogin ? "No account? " : "Already have an account? "}
-          <span
-            onClick={() => { setIsLogin(!isLogin); setMessage('') }}
-            style={{ color: C.purple, fontWeight: 600, cursor: "pointer" }}
-          >
-            {isLogin ? "Sign up free" : "Log in"}
-          </span>
-        </p>
+        {/* Mode switching */}
+        <div style={{ textAlign: "center", marginTop: 16 }}>
+          {mode === 'login' && (
+            <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
+              No account?{' '}
+              <span onClick={() => switchMode('signup')} style={{ color: C.purple, fontWeight: 600, cursor: "pointer" }}>
+                Sign up free
+              </span>
+            </p>
+          )}
+          {mode === 'signup' && (
+            <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
+              Already have an account?{' '}
+              <span onClick={() => switchMode('login')} style={{ color: C.purple, fontWeight: 600, cursor: "pointer" }}>
+                Log in
+              </span>
+            </p>
+          )}
+          {mode === 'forgot' && (
+            <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
+              Remember your password?{' '}
+              <span onClick={() => switchMode('login')} style={{ color: C.purple, fontWeight: 600, cursor: "pointer" }}>
+                Back to login
+              </span>
+            </p>
+          )}
+        </div>
       </div>
     </div>
   )

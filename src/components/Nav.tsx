@@ -78,6 +78,7 @@ export default function Nav() {
   const loggedInLinks = [
     { label: "Dashboard", path: "/dashboard" },
     { label: "Study",     path: "/study"     },
+    { label: "Topics",    path: "/topics"    },
     { label: "Practice",  path: "/learn"     },
     { label: "Topic Tests", path: "/sections" },
     { label: "Papers",    path: "/papers"    },
