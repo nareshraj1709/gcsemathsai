@@ -139,8 +139,20 @@ export default function BlogPage() {
           </>
         )}
 
+        {/* Related resources */}
+        <div className="mt-12 grid md:grid-cols-2 gap-4">
+          <Link href="/topics" className="block bg-purple-50 border border-purple-100 rounded-2xl px-6 py-6 hover:shadow-md transition">
+            <p className="text-sm font-semibold text-purple-700 mb-1">All 73 GCSE Maths Topics</p>
+            <p className="text-xs text-gray-500">Step-by-step guides with worked examples for every topic on the spec.</p>
+          </Link>
+          <Link href="/formula-sheet" className="block bg-blue-50 border border-blue-100 rounded-2xl px-6 py-6 hover:shadow-md transition">
+            <p className="text-sm font-semibold text-blue-700 mb-1">GCSE Maths Formula Sheet</p>
+            <p className="text-xs text-gray-500">Download every formula as a free printable PDF.</p>
+          </Link>
+        </div>
+
         {/* Coming soon */}
-        <div className="mt-12 bg-purple-50 border border-purple-100 rounded-2xl px-6 py-8 text-center">
+        <div className="mt-6 bg-gray-50 border border-gray-100 rounded-2xl px-6 py-8 text-center">
           <p className="text-sm font-semibold text-purple-700 mb-1">More coming soon</p>
           <p className="text-sm text-gray-500">
             New guides published every week. Have a topic you&apos;d like us to cover?{' '}
@@ -152,6 +164,9 @@ export default function BlogPage() {
 
         {/* Footer nav */}
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-wrap gap-6 text-sm text-gray-500">
+          <Link href="/topics" className="hover:text-purple-700 transition">Topics</Link>
+          <Link href="/study" className="hover:text-purple-700 transition">Study Notes</Link>
+          <Link href="/features" className="hover:text-purple-700 transition">Features</Link>
           <Link href="/privacy" className="hover:text-purple-700 transition">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-purple-700 transition">Terms of Service</Link>
           <Link href="/contact" className="hover:text-purple-700 transition">Contact us</Link>

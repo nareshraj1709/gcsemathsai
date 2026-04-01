@@ -264,11 +264,27 @@ export default function FormulaSheetPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            name: 'GCSE Maths Formula Sheet',
-            description: 'Complete GCSE Maths formula sheet covering all topics for AQA, Edexcel and OCR exams.',
+            '@type': 'LearningResource',
+            name: 'GCSE Maths Formula Sheet — Free PDF Download',
+            description: 'Complete GCSE Maths formula sheet covering all topics for AQA, Edexcel and OCR exams. Download as a free printable PDF.',
             url: 'https://www.gcsemathsai.co.uk/formula-sheet',
-            publisher: { '@type': 'Organization', name: 'GCSEMathsAI' },
+            publisher: { '@type': 'Organization', name: 'GCSEMathsAI', url: 'https://www.gcsemathsai.co.uk' },
+            learningResourceType: 'Reference Sheet',
+            educationalLevel: 'GCSE',
+            inLanguage: 'en-GB',
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gcsemathsai.co.uk' },
+              { '@type': 'ListItem', position: 2, name: 'Formula Sheet', item: 'https://www.gcsemathsai.co.uk/formula-sheet' },
+            ],
           }),
         }}
       />

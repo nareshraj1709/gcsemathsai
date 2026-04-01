@@ -153,6 +153,30 @@ export default async function TopicPage({ params }: Props) {
               </Link>
             </div>
 
+            {/* Related topics in same strand */}
+            {(() => {
+              const sameCategoryTopics = allTopics
+                .filter(t => t.category === topic.category && t.slug !== topic.slug)
+                .slice(0, 5)
+              if (sameCategoryTopics.length === 0) return null
+              return (
+                <div className="mt-6">
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Related topics</p>
+                  <nav className="flex flex-col gap-1.5">
+                    {sameCategoryTopics.map(rt => (
+                      <Link
+                        key={rt.slug}
+                        href={`/topics/${rt.slug}`}
+                        className="text-sm text-gray-500 hover:text-purple-700 transition leading-snug"
+                      >
+                        {rt.title.replace(/ — .*$/, '').replace(/ GCSE.*$/, '')}
+                      </Link>
+                    ))}
+                  </nav>
+                </div>
+              )
+            })()}
+
             {/* All topics link */}
             <Link href="/topics" className="block mt-4 text-sm text-purple-700 font-semibold hover:underline">
               ← All 73 topics
@@ -167,14 +191,32 @@ export default async function TopicPage({ params }: Props) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Article',
+            '@type': 'LearningResource',
             headline: topic.title,
+            name: topic.title,
             description: topic.description,
             author: { '@type': 'Organization', name: 'GCSEMathsAI' },
             publisher: { '@type': 'Organization', name: 'GCSEMathsAI', url: 'https://www.gcsemathsai.co.uk' },
             datePublished: topic.dateISO,
             keywords: topic.keywords.join(', '),
             mainEntityOfPage: `https://www.gcsemathsai.co.uk/topics/${topic.slug}`,
+            educationalLevel: topic.tier === 'Higher only' ? 'GCSE Higher' : 'GCSE Foundation & Higher',
+            learningResourceType: 'Study Guide',
+            inLanguage: 'en-GB',
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.gcsemathsai.co.uk' },
+              { '@type': 'ListItem', position: 2, name: 'All Topics', item: 'https://www.gcsemathsai.co.uk/topics' },
+              { '@type': 'ListItem', position: 3, name: topic.title.replace(/ — .*$/, '').replace(/ GCSE.*$/, ''), item: `https://www.gcsemathsai.co.uk/topics/${topic.slug}` },
+            ],
           }),
         }}
       />

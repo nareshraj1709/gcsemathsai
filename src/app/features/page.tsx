@@ -2,9 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Features',
+  title: 'Features — AI Marking, Past Papers, Study Notes & More',
   description: 'Everything GCSEMathsAI offers — AI marking, full spec coverage, past papers, study notes and more. Free for every student in Year 9 to 13.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/features' },
+  openGraph: {
+    title: 'Features — AI Marking, Past Papers & Study Notes | GCSEMathsAI',
+    description: 'AI marking, full GCSE & A Level spec coverage, past papers, study notes — all free for every student.',
+    url: 'https://www.gcsemathsai.co.uk/features',
+  },
 }
 
 const FEATURES = [
@@ -88,9 +93,21 @@ const FEATURES = [
   },
 ]
 
+const BASE = 'https://www.gcsemathsai.co.uk'
+
 export default function FeaturesPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 2, name: 'Features', item: `${BASE}/features` },
+    ],
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <div className="bg-purple-50 border-b border-purple-100 px-6 py-14 text-center">

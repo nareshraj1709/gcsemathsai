@@ -6,11 +6,13 @@ import NavWrapper from "@/components/NavWrapper";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const BASE_URL = "https://www.gcsemathsai.co.uk";
@@ -77,6 +79,8 @@ export default function RootLayout({
     <html lang="en-GB">
       <head>
         <meta name="google-site-verification" content="7yfaIa1Y-jOROaNuyuWVAE3_FY2ct8AIlu7g_cb5VD8" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Organization',

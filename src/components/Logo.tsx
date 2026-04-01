@@ -22,6 +22,8 @@ export default function Logo({
         height={size}
         viewBox="0 0 72 72"
         fill="none"
+        role="img"
+        aria-label="GCSEMathsAI logo"
         style={{ flexShrink: 0 }}
       >
         {/* Hexagon background */}

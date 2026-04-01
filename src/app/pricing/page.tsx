@@ -2,9 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Pricing — Free for Every Student',
   description: 'GCSEMathsAI is completely free for every student. No subscription, no card required — full access to AI marking, practice papers and study notes.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/pricing' },
+  openGraph: {
+    title: 'Pricing — Free for Every Student | GCSEMathsAI',
+    description: 'Completely free GCSE Maths revision. No subscription, no card. AI marking, practice papers and study notes included.',
+    url: 'https://www.gcsemathsai.co.uk/pricing',
+  },
 }
 
 const FREE_FEATURES = [
@@ -49,9 +54,38 @@ const FAQS = [
   },
 ]
 
+const BASE = 'https://www.gcsemathsai.co.uk'
+
+function PricingJsonLd() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 2, name: 'Pricing', item: `${BASE}/pricing` },
+    ],
+  }
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+    </>
+  )
+}
+
 export default function PricingPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PricingJsonLd />
 
       {/* Hero */}
       <div className="bg-purple-50 border-b border-purple-100 px-6 py-14 text-center">

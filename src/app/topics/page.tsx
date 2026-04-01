@@ -21,6 +21,8 @@ const STRAND_META: Record<string, { icon: string; colour: string; bg: string; bo
   'Statistics & Probability':            { icon: '📊', colour: 'text-rose-700',   bg: 'bg-rose-50',   border: 'border-rose-200'   },
 }
 
+const BASE = 'https://www.gcsemathsai.co.uk'
+
 export default function TopicsIndexPage() {
   const topics = getAllTopics()
 
@@ -40,8 +42,35 @@ export default function TopicsIndexPage() {
     'Statistics & Probability',
   ]
 
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'GCSE Maths — Complete Topic Guide',
+    description: 'Step-by-step guides, worked examples and practice questions for all 73 GCSE Maths topics across AQA, Edexcel and OCR specifications.',
+    provider: { '@type': 'Organization', name: 'GCSEMathsAI', url: BASE },
+    url: `${BASE}/topics`,
+    educationalLevel: 'GCSE',
+    inLanguage: 'en-GB',
+    numberOfCredits: 73,
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      courseWorkload: 'PT73H',
+    },
+  }
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 2, name: 'All Topics', item: `${BASE}/topics` },
+    ],
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
       <div className="bg-purple-50 border-b border-purple-100 px-6 py-12 text-center">
@@ -116,11 +145,29 @@ export default function TopicsIndexPage() {
           </Link>
         </div>
 
+        {/* Related resources */}
+        <div className="mt-8 grid md:grid-cols-3 gap-4">
+          <Link href="/formula-sheet" className="block bg-indigo-50 border border-indigo-100 rounded-xl px-5 py-4 hover:shadow-md transition">
+            <p className="text-sm font-semibold text-indigo-700">Formula Sheet</p>
+            <p className="text-xs text-gray-500 mt-1">Every GCSE Maths formula in one free PDF</p>
+          </Link>
+          <Link href="/blog" className="block bg-purple-50 border border-purple-100 rounded-xl px-5 py-4 hover:shadow-md transition">
+            <p className="text-sm font-semibold text-purple-700">Blog</p>
+            <p className="text-xs text-gray-500 mt-1">Revision guides, exam tips and strategy articles</p>
+          </Link>
+          <Link href="/study" className="block bg-green-50 border border-green-100 rounded-xl px-5 py-4 hover:shadow-md transition">
+            <p className="text-sm font-semibold text-green-700">Study Notes</p>
+            <p className="text-xs text-gray-500 mt-1">Key facts, formulas and worked examples by topic</p>
+          </Link>
+        </div>
+
         {/* Footer */}
         <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-6 text-sm text-gray-500">
           <Link href="/blog" className="hover:text-purple-700 transition">Blog</Link>
           <Link href="/study" className="hover:text-purple-700 transition">Study Notes</Link>
           <Link href="/papers" className="hover:text-purple-700 transition">Past Papers</Link>
+          <Link href="/features" className="hover:text-purple-700 transition">Features</Link>
+          <Link href="/pricing" className="hover:text-purple-700 transition">Pricing</Link>
           <Link href="/" className="hover:text-purple-700 transition">← Home</Link>
         </div>
       </div>

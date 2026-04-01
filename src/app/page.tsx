@@ -292,19 +292,48 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-6 border-t border-gray-100 flex justify-between items-center flex-wrap gap-4">
-        <span className="font-semibold text-gray-900">GCSEMathsAI</span>
-        <div className="flex gap-5">
-          {[
-            { label: 'Privacy', href: '/privacy' },
-            { label: 'Terms', href: '/terms' },
-            { label: 'Contact', href: '/contact' },
-            { label: 'Blog', href: '/blog' },
-          ].map(l => (
-            <a key={l.label} href={l.href} className="text-xs text-gray-400 hover:text-gray-600 transition">{l.label}</a>
-          ))}
+      <footer className="px-6 py-10 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Study</p>
+              <div className="flex flex-col gap-2">
+                <a href="/topics" className="text-xs text-gray-500 hover:text-purple-700 transition">All 73 GCSE Topics</a>
+                <a href="/study" className="text-xs text-gray-500 hover:text-purple-700 transition">Study Notes</a>
+                <a href="/formula-sheet" className="text-xs text-gray-500 hover:text-purple-700 transition">Formula Sheet</a>
+                <a href="/downloads" className="text-xs text-gray-500 hover:text-purple-700 transition">Past Paper PDFs</a>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Practice</p>
+              <div className="flex flex-col gap-2">
+                <a href="/learn" className="text-xs text-gray-500 hover:text-purple-700 transition">Topic Practice</a>
+                <a href="/papers" className="text-xs text-gray-500 hover:text-purple-700 transition">Exam Papers</a>
+                <a href="/sections" className="text-xs text-gray-500 hover:text-purple-700 transition">Topic Sections</a>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Resources</p>
+              <div className="flex flex-col gap-2">
+                <a href="/blog" className="text-xs text-gray-500 hover:text-purple-700 transition">Blog</a>
+                <a href="/features" className="text-xs text-gray-500 hover:text-purple-700 transition">Features</a>
+                <a href="/pricing" className="text-xs text-gray-500 hover:text-purple-700 transition">Pricing</a>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Company</p>
+              <div className="flex flex-col gap-2">
+                <a href="/contact" className="text-xs text-gray-500 hover:text-purple-700 transition">Contact Us</a>
+                <a href="/privacy" className="text-xs text-gray-500 hover:text-purple-700 transition">Privacy Policy</a>
+                <a href="/terms" className="text-xs text-gray-500 hover:text-purple-700 transition">Terms of Service</a>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-between items-center pt-6 border-t border-gray-100">
+            <span className="font-semibold text-gray-900">GCSEMathsAI</span>
+            <span className="text-xs text-gray-400">© 2026 gcsemathsai.co.uk</span>
+          </div>
         </div>
-        <span className="text-xs text-gray-400">© 2026 gcsemathsai.co.uk</span>
       </footer>
 
     </main>
