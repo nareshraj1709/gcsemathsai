@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import { getProfileFromCache } from '@/lib/profile'
 
 const C = {
   ink: "#0D0B1A",
@@ -89,8 +90,8 @@ export default function Dashboard() {
   }
 
   useEffect(() => {
-    const saved = localStorage.getItem('gcse_profile')
-    if (saved) setProfile(JSON.parse(saved))
+    const cached = getProfileFromCache()
+    if (cached) setProfile(cached as Profile)
 
     const load = async () => {
       const { data: { session } } = await supabase.auth.getSession()

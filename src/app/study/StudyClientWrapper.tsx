@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { TOPIC_DATA, TOPIC_META, CONTENT, toSlug } from '@/lib/study-content'
+import { getProfileFromCache, saveProfile } from '@/lib/profile'
 
 const C = {
   ink: '#0D0B1A',
@@ -33,19 +34,16 @@ export default function StudyClientWrapper() {
   const [phase, setPhase] = useState<0 | 1 | 2>(0) // 0 = loading
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem('gcse_profile')
-      if (!raw) { setPhase(1); return }
-      const profile = JSON.parse(raw)
-      if (profile.year && profile.board) {
-        setYear(profile.year)
-        setBoard(profile.board)
-        if (profile.tier === 'Higher') setTier('Higher')
-        setPhase(2)
-      } else {
-        setPhase(1)
-      }
-    } catch { setPhase(1) }
+    const cached = getProfileFromCache()
+    if (!cached) { setPhase(1); return }
+    if (cached.year && cached.board) {
+      setYear(cached.year)
+      setBoard(cached.board)
+      if (cached.tier === 'Higher') setTier('Higher')
+      setPhase(2)
+    } else {
+      setPhase(1)
+    }
   }, [])
 
   const canProceed = !!year && !!board
@@ -137,11 +135,8 @@ export default function StudyClientWrapper() {
 
             <button onClick={() => {
               if (!canProceed) return
-              try {
-                const raw = localStorage.getItem('gcse_profile')
-                const existing = raw ? JSON.parse(raw) : {}
-                localStorage.setItem('gcse_profile', JSON.stringify({ ...existing, year, board, tier }))
-              } catch { /* ignore */ }
+              const existing = getProfileFromCache() ?? {}
+              saveProfile({ ...existing, year, board, tier })
               setPhase(2)
             }} disabled={!canProceed} style={{
               width: '100%', padding: '14px', borderRadius: 12, border: 'none',

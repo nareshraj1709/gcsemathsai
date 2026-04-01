@@ -1,15 +1,16 @@
 'use client'
 import { useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
+import { loadProfile } from '@/lib/profile'
 
 export default function AuthCallback() {
   useEffect(() => {
     // Supabase automatically handles the token from the URL hash
     // Just wait for the session to be established then redirect
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event) => {
       if (event === 'SIGNED_IN') {
-        const profile = localStorage.getItem('gcse_profile')
-        window.location.href = profile ? '/dashboard' : '/onboarding'
+        const profile = await loadProfile()
+        window.location.href = profile?.year && profile?.board ? '/dashboard' : '/onboarding'
       }
     })
     return () => subscription.unsubscribe()

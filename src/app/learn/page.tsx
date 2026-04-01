@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { getProfileFromCache, saveProfile as saveProfileToDb } from '@/lib/profile'
 
 // ── Colours & fonts ──────────────────────────────────────────
 const C = {
@@ -263,19 +264,16 @@ export default function Learn() {
 
   // Auto-fill from saved profile and skip to phase 2
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem('gcse_profile')
-      if (!raw) { router.push('/onboarding'); return }
-      const profile = JSON.parse(raw)
-      if (profile.year && profile.board) {
-        setYear(profile.year)
-        setBoard(profile.board)
-        if (profile.tier === 'Higher') setTier('Higher')
-        setPhase(2)
-      } else {
-        router.push('/onboarding')
-      }
-    } catch { router.push('/onboarding') }
+    const cached = getProfileFromCache()
+    if (!cached) { router.push('/onboarding'); return }
+    if (cached.year && cached.board) {
+      setYear(cached.year)
+      setBoard(cached.board)
+      if (cached.tier === 'Higher') setTier('Higher')
+      setPhase(2)
+    } else {
+      router.push('/onboarding')
+    }
   }, [router])
 
   const aLevel = isALevel(year)
@@ -290,11 +288,8 @@ export default function Learn() {
 
   const handleProceed = () => {
     if (!canProceed) return
-    try {
-      const raw = localStorage.getItem('gcse_profile')
-      const existing = raw ? JSON.parse(raw) : {}
-      localStorage.setItem('gcse_profile', JSON.stringify({ ...existing, year, board, tier }))
-    } catch { /* ignore */ }
+    const existing = getProfileFromCache() ?? {}
+    saveProfileToDb({ ...existing, year, board, tier })
     setPhase(2)
   }
 

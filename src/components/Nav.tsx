@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import Logo from '@/components/Logo'
+import { getProfileFromCache, clearProfileCache } from '@/lib/profile'
 
 const C = {
   ink: "#0D0B1A",
@@ -38,10 +39,8 @@ export default function Nav() {
   }, [])
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem('gcse_profile')
-      if (saved) setProfile(JSON.parse(saved))
-    } catch { /* ignore */ }
+    const cached = getProfileFromCache()
+    if (cached) setProfile(cached as Profile)
   }, [pathname])
 
   useEffect(() => {
@@ -63,7 +62,7 @@ export default function Nav() {
   const signOut = async () => {
     setMenuOpen(false)
     await supabase.auth.signOut()
-    try { localStorage.removeItem('gcse_profile') } catch { /* ignore */ }
+    clearProfileCache()
     setProfile(null)
     router.push('/')
   }

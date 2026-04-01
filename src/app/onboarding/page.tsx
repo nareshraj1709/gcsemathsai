@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Logo from '@/components/Logo'
+import { getProfileFromCache, saveProfile } from '@/lib/profile'
 
 const C = {
   ink: "#0D0B1A",
@@ -46,14 +47,16 @@ export default function Onboarding() {
   const [isEditing, setIsEditing] = useState(false)
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem('gcse_profile')
-      if (saved) {
-        const profile = JSON.parse(saved)
-        setData(profile)
-        setIsEditing(true)
-      }
-    } catch { /* ignore */ }
+    const cached = getProfileFromCache()
+    if (cached) {
+      setData({
+        name: cached.name ?? '',
+        year: cached.year ?? '',
+        board: cached.board ?? '',
+        goal: cached.goal ?? '',
+      })
+      setIsEditing(true)
+    }
   }, [])
 
   const aLevel = isALevel(data.year)
@@ -102,7 +105,7 @@ export default function Onboarding() {
 
   const handleNext = () => {
     if (isLast) {
-      localStorage.setItem('gcse_profile', JSON.stringify(data))
+      saveProfile(data)
       router.push('/dashboard')
     } else {
       setStep(s => s + 1)

@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import { loadProfile } from '@/lib/profile'
 
 const C = {
   ink: "#0D0B1A",
@@ -56,8 +57,8 @@ export default function Auth() {
     if (error) {
       showMessage(friendlyError(error.message), 'error')
     } else {
-      const profile = localStorage.getItem('gcse_profile')
-      router.push(profile ? '/dashboard' : '/onboarding')
+      const profile = await loadProfile()
+      router.push(profile?.year && profile?.board ? '/dashboard' : '/onboarding')
     }
     setLoading(false)
   }

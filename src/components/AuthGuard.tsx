@@ -8,6 +8,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
+    // Check initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) {
         router.replace('/auth')
@@ -15,6 +16,19 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
         setReady(true)
       }
     })
+
+    // Listen for real-time auth changes (e.g. sign-out from another tab,
+    // session expiry, token refresh failure)
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+      if (event === 'SIGNED_OUT' || event === 'TOKEN_REFRESHED') {
+        if (event === 'SIGNED_OUT') {
+          setReady(false)
+          router.replace('/auth')
+        }
+      }
+    })
+
+    return () => subscription.unsubscribe()
   }, [router])
 
   if (!ready) {
