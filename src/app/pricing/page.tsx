@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const FREE_FEATURES = [
   'Unlimited AI-marked practice questions',
-  'Full GCSE and A Level syllabus — Year 9 to 13',
+  'Full GCSE syllabus (Year 9–11) and A Level syllabus (Year 12–13)',
   'AQA, Edexcel, OCR and OCR A / OCR B (MEI) support',
   'Foundation and Higher tier questions',
   'Past papers from 2015–2024 (timed exam conditions)',

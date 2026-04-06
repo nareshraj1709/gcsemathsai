@@ -1,10 +1,18 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Logo from '@/components/Logo'
+import { supabase } from '@/lib/supabase'
 
 export default function Home() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, mins: 0 })
   const [parentOpen, setParentOpen] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) setLoggedIn(true)
+    })
+  }, [])
 
   useEffect(() => {
     const update = () => {
@@ -26,23 +34,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white font-sans">
-
-      {/* Nav */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 px-6 flex items-center justify-between h-14">
-        <a href="/">
-          <Logo size={30} nameSize={17} />
-        </a>
-        <div className="hidden md:flex items-center gap-1">
-          <a href="#features" className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">Features</a>
-          <a href="/pricing" className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">Pricing</a>
-          <a href="/blog" className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">Blog</a>
-          <button onClick={() => setParentOpen(true)} className="text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:text-purple-700 hover:bg-purple-50 transition">For parents</button>
-        </div>
-        <div className="flex items-center gap-2">
-          <a href="/auth" className="text-sm border border-gray-200 px-4 py-1.5 rounded-lg text-gray-700 hover:border-purple-500 hover:text-purple-700 transition">Log in</a>
-          <a href="/auth" className="text-sm bg-purple-700 text-white px-4 py-1.5 rounded-lg font-semibold hover:bg-purple-800 transition">Start free</a>
-        </div>
-      </nav>
 
       {/* Parent modal */}
       {parentOpen && (
@@ -82,24 +73,37 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-purple-50 px-6 pt-16 pb-12 text-center">
         <span className="inline-block text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full mb-6">
-          Year 9–13 · GCSE &amp; A Level · AQA · Edexcel · OCR · Free
+          GCSE (Year 9–11) &amp; A Level (Year 12–13) · AQA · Edexcel · OCR · Free
         </span>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4 max-w-2xl mx-auto">
           Stop guessing.<br />
           <span className="text-purple-700">Start knowing your grade.</span>
         </h1>
         <p className="text-lg text-gray-600 max-w-lg mx-auto mb-8 leading-relaxed">
-          Real GCSE Maths questions, instant AI feedback, and a streak to keep you going. 5 minutes a day is all it takes.
+          GCSE and A Level Maths questions, instant AI feedback, and a streak to keep you going. 5 minutes a day is all it takes.
         </p>
         <div className="flex gap-3 justify-center flex-wrap mb-4">
-          <a href="/auth" className="bg-purple-700 text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-purple-800 transition shadow-md shadow-purple-200">
-            ⚡ Try a free 5-min session →
-          </a>
-          <a href="#how" className="bg-white text-gray-700 border border-gray-200 px-6 py-3.5 rounded-xl font-semibold text-base hover:border-purple-400 hover:text-purple-700 transition">
-            See how it works
-          </a>
+          {loggedIn ? (
+            <>
+              <a href="/learn" className="bg-purple-700 text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-purple-800 transition shadow-md shadow-purple-200">
+                Continue practising →
+              </a>
+              <a href="/dashboard" className="bg-white text-gray-700 border border-gray-200 px-6 py-3.5 rounded-xl font-semibold text-base hover:border-purple-400 hover:text-purple-700 transition">
+                Go to dashboard
+              </a>
+            </>
+          ) : (
+            <>
+              <a href="/auth" className="bg-purple-700 text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-purple-800 transition shadow-md shadow-purple-200">
+                Start practising free →
+              </a>
+              <a href="#how" className="bg-white text-gray-700 border border-gray-200 px-6 py-3.5 rounded-xl font-semibold text-base hover:border-purple-400 hover:text-purple-700 transition">
+                See how it works
+              </a>
+            </>
+          )}
         </div>
-        <p className="text-xs text-gray-400">No card required · No catch · Free for every student</p>
+        {!loggedIn && <p className="text-xs text-gray-400">No card required · No catch · Free for every student</p>}
 
         {/* Exam countdown */}
         <div className="mt-10 inline-block">
@@ -124,7 +128,7 @@ export default function Home() {
       {/* Stats bar */}
       <div className="grid grid-cols-4 border-b border-gray-100">
         {[
-          { val: 'Year 9–13', label: 'GCSE & A Level covered' },
+          { val: 'GCSE & A Level', label: 'Year 9–11 & Year 12–13' },
           { val: '100%', label: 'Free right now' },
           { val: 'Instant', label: 'AI marking & feedback' },
           { val: 'AQA · OCR · Edexcel', label: 'All major exam boards' },
@@ -284,10 +288,10 @@ export default function Home() {
           Your exam is in {countdown.days} days
         </h2>
         <p className="text-purple-200 mb-8 text-base max-w-md mx-auto">
-          Every day of practice counts. Start today — completely free, no card needed, no catch.
+          Every day of practice counts. {loggedIn ? 'Keep your streak going.' : 'Start today — completely free, no card needed, no catch.'}
         </p>
-        <a href="/auth" className="inline-block bg-white text-purple-700 font-semibold px-8 py-3 rounded-xl text-base hover:bg-purple-50 transition">
-          Start practising free →
+        <a href={loggedIn ? '/learn' : '/auth'} className="inline-block bg-white text-purple-700 font-semibold px-8 py-3 rounded-xl text-base hover:bg-purple-50 transition">
+          {loggedIn ? 'Continue practising →' : 'Start practising free →'}
         </a>
       </section>
 

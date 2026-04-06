@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Features — AI Marking, Past Papers, Study Notes & More',
-  description: 'Everything GCSEMathsAI offers — AI marking, full spec coverage, past papers, study notes and more. Free for every student in Year 9 to 13.',
+  description: 'Everything GCSEMathsAI offers — AI marking, full spec coverage, past papers, study notes and more. Free for every GCSE (Year 9–11) and A Level (Year 12–13) student.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/features' },
   openGraph: {
     title: 'Features — AI Marking, Past Papers & Study Notes | GCSEMathsAI',
@@ -28,7 +28,7 @@ const FEATURES = [
   },
   {
     icon: '📚',
-    title: 'Full syllabus coverage — Year 9 to 13',
+    title: 'Full syllabus coverage — GCSE & A Level',
     colour: 'blue',
     badge: 'bg-blue-100 text-blue-700',
     bar: 'bg-blue-500',
@@ -131,7 +131,7 @@ export default function FeaturesPage() {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 border-b border-gray-100">
         {[
-          { val: 'Year 9–13', label: 'GCSE & A Level' },
+          { val: 'GCSE & A Level', label: 'Year 9–11 & Year 12–13' },
           { val: '3 boards', label: 'AQA · Edexcel · OCR' },
           { val: '100+', label: 'Topics covered' },
           { val: 'Free', label: 'No card required' },
