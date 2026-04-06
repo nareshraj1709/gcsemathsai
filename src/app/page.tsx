@@ -192,14 +192,17 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {[
-                { label: 'Number', color: 'bg-purple-100 text-purple-800', topics: ['Fractions', 'Decimals', 'Percentages', 'Powers', 'Standard form', 'Surds', 'Bounds', 'Indices'] },
-                { label: 'Algebra', color: 'bg-blue-100 text-blue-800', topics: ['Equations', 'Inequalities', 'Quadratics', 'Functions', 'Sequences', 'Graphs', 'Simultaneous'] },
-                { label: 'Geometry', color: 'bg-green-100 text-green-800', topics: ['Pythagoras', 'Trigonometry', 'Circles', 'Vectors', 'Transformations', 'Area & volume'] },
-                { label: 'Statistics', color: 'bg-amber-100 text-amber-800', topics: ['Averages', 'Probability', 'Histograms', 'Box plots', 'Scatter graphs', 'Tree diagrams'] },
-                { label: 'Ratio', color: 'bg-rose-100 text-rose-800', topics: ['Ratio', 'Proportion', 'Speed & distance', 'Direct & inverse', 'Compound measures'] },
+                { label: 'Number', count: 13, color: 'bg-purple-100 text-purple-800', topics: ['Fractions', 'Decimals', 'Percentages', 'Percentage change', 'Reverse percentages', 'Factors & primes', 'Powers & roots', 'Indices', 'Standard form', 'Surds', 'Bounds', 'Recurring decimals'] },
+                { label: 'Algebra', count: 19, color: 'bg-blue-100 text-blue-800', topics: ['Simplifying', 'Expanding brackets', 'Factorising', 'Linear equations', 'Simultaneous equations', 'Quadratics', 'Completing the square', 'Inequalities', 'Sequences', 'Straight-line graphs', 'Functions', 'Graph transformations', 'Iteration', 'Algebraic proof'] },
+                { label: 'Geometry', count: 20, color: 'bg-green-100 text-green-800', topics: ['Angle rules', 'Parallel lines', 'Polygons', 'Area & perimeter', 'Circles', 'Arcs & sectors', 'Volume', 'Surface area', 'Pythagoras', 'Trigonometry', 'Sine & cosine rules', 'Circle theorems', 'Vectors', 'Transformations', 'Bearings'] },
+                { label: 'Statistics', count: 13, color: 'bg-amber-100 text-amber-800', topics: ['Mean, median, mode', 'Frequency tables', 'Cumulative frequency', 'Box plots', 'Histograms', 'Scatter graphs', 'Probability', 'Tree diagrams', 'Venn diagrams', 'Conditional probability', 'Sampling'] },
+                { label: 'Ratio', count: 11, color: 'bg-rose-100 text-rose-800', topics: ['Simplifying ratios', 'Sharing in a ratio', 'Direct proportion', 'Inverse proportion', 'Speed, distance & time', 'Density', 'Compound interest', 'Growth & decay', 'Rates of change'] },
               ].map(t => (
                 <div key={t.label} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
-                  <span className={`text-xs font-semibold px-2 py-1 rounded-full ${t.color} mb-3 inline-block`}>{t.label}</span>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className={`text-xs font-semibold px-2 py-1 rounded-full ${t.color}`}>{t.label}</span>
+                    <span className="text-[10px] text-gray-400">{t.count}</span>
+                  </div>
                   <div className="text-xs text-gray-500 leading-7">
                     {t.topics.map(tp => <div key={tp}>{tp}</div>)}
                   </div>
@@ -216,12 +219,15 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { label: 'Pure Maths', color: 'bg-purple-100 text-purple-800', topics: ['Proof', 'Algebra & Functions', 'Coordinate Geometry', 'Sequences & Series', 'Trigonometry', 'Exponentials & Logs', 'Differentiation', 'Integration', 'Numerical Methods', 'Vectors'] },
-                { label: 'Statistics', color: 'bg-amber-100 text-amber-800', topics: ['Statistical Sampling', 'Data Presentation', 'Probability', 'Distributions', 'Hypothesis Testing', 'Correlation & Regression'] },
-                { label: 'Mechanics', color: 'bg-blue-100 text-blue-800', topics: ['Kinematics', 'Forces & Newton\'s Laws', 'Moments', 'Projectiles', 'Friction', 'Variable Acceleration'] },
+                { label: 'Pure Maths', count: 12, color: 'bg-purple-100 text-purple-800', topics: ['Proof', 'Algebra & Functions', 'Coordinate Geometry', 'Sequences & Series', 'Trigonometry', 'Exponentials & Logs', 'Differentiation', 'Integration', 'Numerical Methods', 'Vectors', 'Binomial Expansion', 'Parametric Equations'] },
+                { label: 'Statistics', count: 6, color: 'bg-amber-100 text-amber-800', topics: ['Statistical Sampling', 'Data Presentation', 'Probability', 'Statistical Distributions', 'Hypothesis Testing', 'Correlation & Regression'] },
+                { label: 'Mechanics', count: 7, color: 'bg-blue-100 text-blue-800', topics: ['Quantities & Units', 'Kinematics (constant)', 'Kinematics (variable)', 'Forces & Newton\'s Laws', 'Moments', 'Projectiles', 'Friction'] },
               ].map(t => (
                 <div key={t.label} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
-                  <span className={`text-xs font-semibold px-2 py-1 rounded-full ${t.color} mb-3 inline-block`}>{t.label}</span>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className={`text-xs font-semibold px-2 py-1 rounded-full ${t.color}`}>{t.label}</span>
+                    <span className="text-[10px] text-gray-400">{t.count}</span>
+                  </div>
                   <div className="text-xs text-gray-500 leading-7">
                     {t.topics.map(tp => <div key={tp}>{tp}</div>)}
                   </div>
