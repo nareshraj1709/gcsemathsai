@@ -47,7 +47,7 @@ export default function Home() {
               <button onClick={() => setParentOpen(false)} className="text-gray-400 hover:text-gray-600 text-xl ml-4">✕</button>
             </div>
             <p className="text-gray-500 leading-relaxed mb-6">
-              GCSEMathsAI is completely free right now. Create an account for your child and they can start practising real GCSE Maths questions with instant AI feedback today.
+              GCSEMathsAI is completely free right now. Create an account for your child and they can start practising real GCSE and A Level Maths questions with instant AI feedback today.
             </p>
             <div className="flex flex-col gap-3 mb-6">
               {[
@@ -150,7 +150,7 @@ export default function Home() {
               {
                 step: '01',
                 title: 'Pick a topic',
-                desc: 'Choose from the full AQA, Edexcel or OCR spec. Questions are generated fresh every session — never the same question twice.',
+                desc: 'Choose any GCSE or A Level topic from the full AQA, Edexcel or OCR spec. Questions are generated fresh every session.',
                 icon: '🎯'
               },
               {
@@ -177,27 +177,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AQA Topics */}
+      {/* GCSE Topics */}
       <section className="bg-gray-50 px-6 py-16">
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Full spec coverage</p>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Every topic. Every tier.</h2>
-          <p className="text-gray-500 mb-8 text-base leading-relaxed">Foundation and Higher. All five areas of the GCSE Maths specification, fully covered.</p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {[
-              { label: 'Number', color: 'bg-purple-100 text-purple-800', topics: ['Fractions', 'Decimals', 'Percentages', 'Powers', 'Standard form', 'Surds', 'Bounds', 'Indices'] },
-              { label: 'Algebra', color: 'bg-blue-100 text-blue-800', topics: ['Equations', 'Inequalities', 'Quadratics', 'Functions', 'Sequences', 'Graphs', 'Simultaneous'] },
-              { label: 'Geometry', color: 'bg-green-100 text-green-800', topics: ['Pythagoras', 'Trigonometry', 'Circles', 'Vectors', 'Transformations', 'Area & volume'] },
-              { label: 'Statistics', color: 'bg-amber-100 text-amber-800', topics: ['Averages', 'Probability', 'Histograms', 'Box plots', 'Scatter graphs', 'Tree diagrams'] },
-              { label: 'Ratio', color: 'bg-rose-100 text-rose-800', topics: ['Ratio', 'Proportion', 'Speed & distance', 'Direct & inverse', 'Compound measures'] },
-            ].map(t => (
-              <div key={t.label} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
-                <span className={`text-xs font-semibold px-2 py-1 rounded-full ${t.color} mb-3 inline-block`}>{t.label}</span>
-                <div className="text-xs text-gray-500 leading-7">
-                  {t.topics.map(tp => <div key={tp}>{tp}</div>)}
+          <p className="text-gray-500 mb-8 text-base leading-relaxed">GCSE and A Level Maths — Foundation, Higher and beyond. All major exam boards fully covered.</p>
+
+          {/* GCSE */}
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="text-xs font-bold text-purple-700 bg-purple-100 px-3 py-1 rounded-full">GCSE Maths</span>
+              <span className="text-xs text-gray-400">Year 9–11 · Foundation & Higher</span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {[
+                { label: 'Number', color: 'bg-purple-100 text-purple-800', topics: ['Fractions', 'Decimals', 'Percentages', 'Powers', 'Standard form', 'Surds', 'Bounds', 'Indices'] },
+                { label: 'Algebra', color: 'bg-blue-100 text-blue-800', topics: ['Equations', 'Inequalities', 'Quadratics', 'Functions', 'Sequences', 'Graphs', 'Simultaneous'] },
+                { label: 'Geometry', color: 'bg-green-100 text-green-800', topics: ['Pythagoras', 'Trigonometry', 'Circles', 'Vectors', 'Transformations', 'Area & volume'] },
+                { label: 'Statistics', color: 'bg-amber-100 text-amber-800', topics: ['Averages', 'Probability', 'Histograms', 'Box plots', 'Scatter graphs', 'Tree diagrams'] },
+                { label: 'Ratio', color: 'bg-rose-100 text-rose-800', topics: ['Ratio', 'Proportion', 'Speed & distance', 'Direct & inverse', 'Compound measures'] },
+              ].map(t => (
+                <div key={t.label} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+                  <span className={`text-xs font-semibold px-2 py-1 rounded-full ${t.color} mb-3 inline-block`}>{t.label}</span>
+                  <div className="text-xs text-gray-500 leading-7">
+                    {t.topics.map(tp => <div key={tp}>{tp}</div>)}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* A Level */}
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <span className="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full">A Level Maths</span>
+              <span className="text-xs text-gray-400">Year 12–13 · AQA · Edexcel · OCR A · OCR B (MEI)</span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { label: 'Pure Maths', color: 'bg-purple-100 text-purple-800', topics: ['Proof', 'Algebra & Functions', 'Coordinate Geometry', 'Sequences & Series', 'Trigonometry', 'Exponentials & Logs', 'Differentiation', 'Integration', 'Numerical Methods', 'Vectors'] },
+                { label: 'Statistics', color: 'bg-amber-100 text-amber-800', topics: ['Statistical Sampling', 'Data Presentation', 'Probability', 'Distributions', 'Hypothesis Testing', 'Correlation & Regression'] },
+                { label: 'Mechanics', color: 'bg-blue-100 text-blue-800', topics: ['Kinematics', 'Forces & Newton\'s Laws', 'Moments', 'Projectiles', 'Friction', 'Variable Acceleration'] },
+              ].map(t => (
+                <div key={t.label} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+                  <span className={`text-xs font-semibold px-2 py-1 rounded-full ${t.color} mb-3 inline-block`}>{t.label}</span>
+                  <div className="text-xs text-gray-500 leading-7">
+                    {t.topics.map(tp => <div key={tp}>{tp}</div>)}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -211,12 +241,12 @@ export default function Home() {
             {
               icon: '🎯',
               title: 'Spec-aligned questions',
-              desc: 'Every question is mapped exactly to the AQA, Edexcel or OCR specification. No off-spec content, no wasted revision time.',
+              desc: 'Every GCSE and A Level question is mapped to the AQA, Edexcel or OCR specification. No off-spec content, no wasted revision time.',
             },
             {
               icon: '⚡',
               title: 'AI that marks like an examiner',
-              desc: 'Not just right or wrong. The AI awards method marks, spots common mistakes, and explains each step the same way a GCSE examiner would.',
+              desc: 'Not just right or wrong. The AI awards method marks, spots common mistakes, and explains each step — for both GCSE and A Level questions.',
             },
             {
               icon: '📈',
@@ -245,25 +275,31 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 text-center">What students are saying</p>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Real students. Real improvement.</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
                 quote: 'I finally understand where I go wrong. It explains each step so clearly — I went up two grades in my mock.',
-                role: 'Year 11 student',
+                role: 'Year 11 · GCSE',
                 initials: 'A',
                 bg: 'bg-purple-100 text-purple-800',
               },
               {
                 quote: 'The daily questions are short enough that I actually do them. 15 minutes every evening and my algebra has improved massively.',
-                role: 'Year 11 student',
+                role: 'Year 11 · GCSE',
                 initials: 'P',
                 bg: 'bg-blue-100 text-blue-800',
               },
               {
                 quote: 'I was resitting and really struggling with geometry. This app explained circle theorems better than any YouTube video I found.',
-                role: 'Resit student',
+                role: 'Resit · GCSE',
                 initials: 'R',
                 bg: 'bg-green-100 text-green-800',
+              },
+              {
+                quote: 'Using this for A Level Pure Maths. The integration and differentiation questions are properly exam-style and the feedback actually helps.',
+                role: 'Year 13 · A Level',
+                initials: 'J',
+                bg: 'bg-amber-100 text-amber-800',
               },
             ].map((t, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
