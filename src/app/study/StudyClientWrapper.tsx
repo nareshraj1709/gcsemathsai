@@ -34,16 +34,29 @@ export default function StudyClientWrapper() {
   const [phase, setPhase] = useState<0 | 1 | 2>(0) // 0 = loading
 
   useEffect(() => {
+    // Try cache first for instant load
     const cached = getProfileFromCache()
-    if (!cached) { setPhase(1); return }
-    if (cached.year && cached.board) {
+    if (cached?.year && cached?.board) {
       setYear(cached.year)
       setBoard(cached.board)
       if (cached.tier === 'Higher') setTier('Higher')
       setPhase(2)
-    } else {
-      setPhase(1)
+      return
     }
+
+    // Fall back to Supabase for returning users on new devices
+    import('@/lib/profile').then(({ loadProfile }) => {
+      loadProfile().then(profile => {
+        if (profile?.year && profile?.board) {
+          setYear(profile.year)
+          setBoard(profile.board)
+          if (profile.tier === 'Higher') setTier('Higher')
+          setPhase(2)
+        } else {
+          setPhase(1)
+        }
+      })
+    })
   }, [])
 
   const canProceed = !!year && !!board

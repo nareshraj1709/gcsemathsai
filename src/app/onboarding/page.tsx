@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Logo from '@/components/Logo'
-import { getProfileFromCache, saveProfile } from '@/lib/profile'
+import { getProfileFromCache, saveProfile, loadProfile } from '@/lib/profile'
 
 const C = {
   ink: "#0D0B1A",
@@ -47,8 +47,9 @@ export default function Onboarding() {
   const [isEditing, setIsEditing] = useState(false)
 
   useEffect(() => {
+    // Try cache first (instant), then Supabase for returning users on new devices
     const cached = getProfileFromCache()
-    if (cached) {
+    if (cached && cached.name) {
       setData({
         name: cached.name ?? '',
         year: cached.year ?? '',
@@ -57,6 +58,19 @@ export default function Onboarding() {
       })
       setIsEditing(true)
     }
+
+    // Also check Supabase in case localStorage was cleared
+    loadProfile().then(profile => {
+      if (profile && profile.year && profile.board) {
+        setData({
+          name: profile.name ?? '',
+          year: profile.year ?? '',
+          board: profile.board ?? '',
+          goal: profile.goal ?? '',
+        })
+        setIsEditing(true)
+      }
+    })
   }, [])
 
   const aLevel = isALevel(data.year)

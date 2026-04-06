@@ -57,68 +57,90 @@ export function clearProfileCache(): void {
 }
 
 /**
- * Load profile: tries localStorage first, then falls back to Supabase.
- * Returns the profile or null if not found / not logged in.
+ * Load profile from Supabase (ignores localStorage).
+ * Use this after login to get the authoritative server-side profile.
  */
-export async function loadProfile(): Promise<Profile | null> {
-  // 1. Check localStorage cache
-  const cached = getProfileFromCache()
-  if (cached && cached.year && cached.board) return cached
-
-  // 2. Fall back to Supabase
+async function loadProfileFromSupabase(): Promise<Profile | null> {
   try {
     const { data: { session } } = await supabase.auth.getSession()
-    if (!session) return cached // not logged in, return whatever cache has
+    if (!session) return null
 
     const { data, error } = await supabase
       .from('profiles')
       .select('name, year, board, goal, tier')
       .eq('id', session.user.id)
-      .single()
+      .maybeSingle()
 
-    if (error || !data) return cached // table doesn't exist yet or no row
+    if (error || !data) return null
 
-    const profile: Profile = {
+    return {
       name: data.name ?? undefined,
       year: data.year ?? undefined,
       board: data.board ?? undefined,
       goal: data.goal ?? undefined,
       tier: data.tier ?? undefined,
     }
-
-    // Backfill localStorage cache
-    setProfileCache(profile)
-    return profile
   } catch {
-    return cached
+    return null
   }
 }
 
 /**
+ * Load profile: tries localStorage first for speed, then falls back to
+ * Supabase if localStorage is empty or incomplete.
+ * Returns the profile or null if not found / not logged in.
+ */
+export async function loadProfile(): Promise<Profile | null> {
+  // 1. Check localStorage cache — if complete, return immediately
+  const cached = getProfileFromCache()
+  if (cached && cached.year && cached.board) return cached
+
+  // 2. Fall back to Supabase
+  const remote = await loadProfileFromSupabase()
+  if (remote && remote.year && remote.board) {
+    // Backfill localStorage so next load is instant
+    setProfileCache(remote)
+    return remote
+  }
+
+  // 3. Return whatever we have (possibly incomplete or null)
+  return remote ?? cached
+}
+
+/**
  * Save profile to both localStorage and Supabase.
- * Always writes to localStorage; Supabase write is best-effort.
+ * Always writes to localStorage; Supabase write is best-effort with retry.
  */
 export async function saveProfile(profile: Profile): Promise<void> {
   // 1. Always write to localStorage (instant)
   setProfileCache(profile)
 
-  // 2. Best-effort write to Supabase
-  try {
-    const { data: { session } } = await supabase.auth.getSession()
-    if (!session) return
+  // 2. Write to Supabase with one retry
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session) return
 
-    await supabase.from('profiles').upsert({
-      id: session.user.id,
-      name: profile.name ?? null,
-      year: profile.year ?? null,
-      board: profile.board ?? null,
-      goal: profile.goal ?? null,
-      tier: profile.tier ?? null,
-      updated_at: new Date().toISOString(),
-    })
-  } catch {
-    // Supabase write failed — localStorage still has the data
-    // This handles the case where the profiles table doesn't exist yet
+      const { error } = await supabase.from('profiles').upsert({
+        id: session.user.id,
+        name: profile.name ?? null,
+        year: profile.year ?? null,
+        board: profile.board ?? null,
+        goal: profile.goal ?? null,
+        tier: profile.tier ?? null,
+        updated_at: new Date().toISOString(),
+      })
+
+      if (!error) return // success
+      if (attempt === 0) {
+        // Wait briefly before retry
+        await new Promise(r => setTimeout(r, 500))
+      }
+    } catch {
+      if (attempt === 0) {
+        await new Promise(r => setTimeout(r, 500))
+      }
+    }
   }
 }
 

@@ -264,16 +264,29 @@ export default function Learn() {
 
   // Auto-fill from saved profile and skip to phase 2
   useEffect(() => {
+    // Try cache first for instant load
     const cached = getProfileFromCache()
-    if (!cached) { router.push('/onboarding'); return }
-    if (cached.year && cached.board) {
+    if (cached?.year && cached?.board) {
       setYear(cached.year)
       setBoard(cached.board)
       if (cached.tier === 'Higher') setTier('Higher')
       setPhase(2)
-    } else {
-      router.push('/onboarding')
+      return
     }
+
+    // Fall back to Supabase for returning users on new devices
+    import('@/lib/profile').then(({ loadProfile }) => {
+      loadProfile().then(profile => {
+        if (profile?.year && profile?.board) {
+          setYear(profile.year)
+          setBoard(profile.board)
+          if (profile.tier === 'Higher') setTier('Higher')
+          setPhase(2)
+        } else {
+          router.push('/onboarding')
+        }
+      })
+    })
   }, [router])
 
   const aLevel = isALevel(year)
