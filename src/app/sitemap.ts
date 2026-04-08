@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/formula-sheet`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/topics`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE}/community`, lastModified: now, changeFrequency: 'daily', priority: 0.8 },
     { url: `${BASE}/practice`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE}/review`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/learn`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },

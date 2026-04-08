@@ -361,6 +361,7 @@ export default function Home() {
             <div>
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Resources</p>
               <div className="flex flex-col gap-2">
+                <a href="/community" className="text-xs text-gray-500 hover:text-purple-700 transition">Community Forum</a>
                 <a href="/blog" className="text-xs text-gray-500 hover:text-purple-700 transition">Blog</a>
                 <a href="/features" className="text-xs text-gray-500 hover:text-purple-700 transition">Features</a>
                 <a href="/pricing" className="text-xs text-gray-500 hover:text-purple-700 transition">Pricing</a>

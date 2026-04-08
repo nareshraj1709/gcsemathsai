@@ -79,6 +79,7 @@ export default function Nav() {
     { label: "Study",     path: "/study"     },
     { label: "Topics",    path: "/topics"    },
     { label: "Practice",  path: "/learn"     },
+    { label: "Community", path: "/community" },
     { label: "Topic Tests", path: "/sections" },
     { label: "Papers",    path: "/papers"    },
     { label: "Notes Review", path: "/notes-review" },
@@ -87,6 +88,7 @@ export default function Nav() {
 
   const loggedOutLinks = [
     { label: "Topics",        path: "/topics"        },
+    { label: "Community",     path: "/community"     },
     { label: "Formula Sheet", path: "/formula-sheet"  },
     { label: "Features",      path: "/features"      },
     { label: "Pricing",       path: "/pricing"       },
