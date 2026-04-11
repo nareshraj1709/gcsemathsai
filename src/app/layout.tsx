@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavWrapper from "@/components/NavWrapper";
@@ -68,6 +68,13 @@ export const metadata: Metadata = {
   verification: {
     google: "7yfaIa1Y-jOROaNuyuWVAE3_FY2ct8AIlu7g_cb5VD8",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#6D28D9",
 };
 
 export default function RootLayout({

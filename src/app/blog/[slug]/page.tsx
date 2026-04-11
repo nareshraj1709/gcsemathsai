@@ -244,7 +244,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Body + TOC */}
-        <div className="max-w-3xl mx-auto px-6 py-10 flex gap-10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 flex flex-col lg:flex-row gap-6 lg:gap-10">
 
           {/* Article */}
           <article className="flex-1 min-w-0">

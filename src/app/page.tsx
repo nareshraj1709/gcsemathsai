@@ -126,15 +126,15 @@ export default function Home() {
       </section>
 
       {/* Stats bar */}
-      <div className="grid grid-cols-4 border-b border-gray-100">
+      <div className="grid grid-cols-2 md:grid-cols-4 border-b border-gray-100">
         {[
           { val: 'GCSE & A Level', label: 'Year 9–11 & Year 12–13' },
           { val: '100%', label: 'Free right now' },
           { val: 'Instant', label: 'AI marking & feedback' },
           { val: 'AQA · OCR · Edexcel', label: 'All major exam boards' },
         ].map((s, i) => (
-          <div key={i} className={`py-5 text-center ${i < 3 ? 'border-r border-gray-100' : ''}`}>
-            <div className="text-xl font-bold text-gray-900">{s.val}</div>
+          <div key={i} className={`py-5 px-3 text-center border-gray-100 ${i === 0 || i === 2 ? 'border-r' : ''} ${i < 2 ? 'md:border-r border-b md:border-b-0' : ''} ${i === 2 ? 'md:border-r' : ''}`}>
+            <div className="text-lg md:text-xl font-bold text-gray-900">{s.val}</div>
             <div className="text-xs text-gray-500 mt-0.5">{s.label}</div>
           </div>
         ))}

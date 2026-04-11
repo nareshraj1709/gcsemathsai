@@ -90,7 +90,7 @@ export default async function TopicPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-10 flex gap-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col lg:flex-row gap-6 lg:gap-10">
 
         {/* Article content */}
         <article className="flex-1 min-w-0 max-w-3xl">
