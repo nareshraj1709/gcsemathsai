@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Features — AI Marking, Past Papers, Study Notes & More',
-  description: 'Everything GCSEMathsAI offers — AI marking, full spec coverage, past papers, study notes and more. Free for every GCSE (Year 9–11) and A Level (Year 12–13) student.',
+  description: 'Everything GCSEMathsAI offers — AI marking, full GCSE spec coverage, past papers, study notes and more. Free for every Year 9–11 student.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/features' },
   openGraph: {
     title: 'Features — AI Marking, Past Papers & Study Notes | GCSEMathsAI',
-    description: 'AI marking, full GCSE & A Level spec coverage, past papers, study notes — all free for every student.',
+    description: 'AI marking, full GCSE spec coverage, past papers, study notes — all free for every student.',
     url: 'https://www.gcsemathsai.co.uk/features',
   },
 }
@@ -28,15 +28,15 @@ const FEATURES = [
   },
   {
     icon: '📚',
-    title: 'Full syllabus coverage — GCSE & A Level',
+    title: 'Full GCSE syllabus coverage — Year 9 to 11',
     colour: 'blue',
     badge: 'bg-blue-100 text-blue-700',
     bar: 'bg-blue-500',
     points: [
       'GCSE Maths: Foundation and Higher tier, all five topic areas — Number, Algebra, Geometry, Statistics and Ratio',
-      'A Level Maths: Pure Maths, Statistics and Mechanics — aligned to Year 12 and Year 13',
       'Year 9 preparation content to build confidence before GCSE',
-      'Resit support with exam-focused practice for adult learners',
+      'Year 10 consolidation across every subtopic with exam-style practice',
+      'Year 11 and resit support with exam-focused revision and past papers',
     ],
   },
   {
@@ -49,7 +49,7 @@ const FEATURES = [
       'AQA (8300) — full specification including Higher and Foundation question styles',
       'Edexcel (1MA1) — Pearson-style questions with follow-through marking guidance',
       'OCR (J560) — alternative methods credited, structured problem-solving approach',
-      'A Level: AQA, Edexcel, OCR A and OCR B (MEI) boards supported',
+      'Switch board any time — the same questions, marked to the conventions of your chosen spec',
     ],
   },
   {
@@ -72,7 +72,7 @@ const FEATURES = [
     badge: 'bg-rose-100 text-rose-700',
     bar: 'bg-rose-500',
     points: [
-      'Concise revision notes for every GCSE and A Level topic',
+      'Concise revision notes for every GCSE Maths topic and subtopic',
       'Key vocabulary, formulae and worked examples for each subtopic',
       'Curated Khan Academy video links directly relevant to each topic',
       'Keyword-based YouTube search shortcuts so you can go deeper on anything',
@@ -116,7 +116,7 @@ export default function FeaturesPage() {
           Everything you need to improve your Maths grade
         </h1>
         <p className="text-gray-500 text-base max-w-xl mx-auto mb-8 leading-relaxed">
-          From Year 9 GCSE preparation to A Level revision — GCSEMathsAI gives every student the tools to practise effectively and get better marks.
+          From Year 9 GCSE preparation to Year 11 exam revision — GCSEMathsAI gives every student the tools to practise effectively and get better marks.
         </p>
         <div className="flex gap-3 justify-center flex-wrap">
           <Link href="/auth" className="bg-purple-700 text-white px-7 py-3 rounded-xl font-semibold text-sm hover:bg-purple-800 transition shadow-md shadow-purple-200">
@@ -131,7 +131,7 @@ export default function FeaturesPage() {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 border-b border-gray-100">
         {[
-          { val: 'GCSE & A Level', label: 'Year 9–11 & Year 12–13' },
+          { val: 'Year 9–11', label: 'Full GCSE coverage' },
           { val: '3 boards', label: 'AQA · Edexcel · OCR' },
           { val: '100+', label: 'Topics covered' },
           { val: 'Free', label: 'No card required' },

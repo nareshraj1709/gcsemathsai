@@ -39,12 +39,12 @@ export default function Home() {
               <button onClick={() => setParentOpen(false)} className="text-gray-400 hover:text-gray-600 text-xl ml-4">✕</button>
             </div>
             <p className="text-gray-500 leading-relaxed mb-6">
-              GCSEMathsAI is completely free right now. Create an account for your child and they can start practising real GCSE and A Level Maths questions with instant AI feedback today.
+              GCSEMathsAI is completely free right now. Create an account for your child and they can start practising real GCSE Maths questions with instant AI feedback today.
             </p>
             <div className="flex flex-col gap-3 mb-6">
               {[
                 'Completely free — no card needed',
-                'Covers Year 9–11 GCSE and Year 12–13 A Level',
+                'Full GCSE coverage — Year 9 to 11, Foundation & Higher',
                 'AQA, Edexcel and OCR exam board support',
                 'AI marks every answer with full worked solution',
                 'Your child builds confidence at their own pace',
@@ -65,14 +65,14 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-purple-50 px-6 pt-16 pb-12 text-center">
         <span className="inline-block text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full mb-6">
-          GCSE (Year 9–11) &amp; A Level (Year 12–13) · AQA · Edexcel · OCR · Free
+          GCSE Maths · Year 9–11 · AQA · Edexcel · OCR · Free
         </span>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4 max-w-2xl mx-auto">
           Stop guessing.<br />
           <span className="text-purple-700">Start knowing your grade.</span>
         </h1>
         <p className="text-lg text-gray-600 max-w-lg mx-auto mb-8 leading-relaxed">
-          GCSE and A Level Maths questions, instant AI feedback, and a streak to keep you going. 5 minutes a day is all it takes.
+          Real GCSE Maths questions, instant AI feedback, and a streak to keep you going. 5 minutes a day is all it takes.
         </p>
         <div className="flex gap-3 justify-center flex-wrap mb-4">
           <a href="/auth" className="bg-purple-700 text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-purple-800 transition shadow-md shadow-purple-200">
@@ -107,7 +107,7 @@ export default function Home() {
       {/* Stats bar */}
       <div className="grid grid-cols-2 md:grid-cols-4 border-b border-gray-100">
         {[
-          { val: 'GCSE & A Level', label: 'Year 9–11 & Year 12–13' },
+          { val: 'Year 9–11', label: 'Full GCSE coverage' },
           { val: '100%', label: 'Free right now' },
           { val: 'Instant', label: 'AI marking & feedback' },
           { val: 'AQA · OCR · Edexcel', label: 'All major exam boards' },
@@ -129,7 +129,7 @@ export default function Home() {
               {
                 step: '01',
                 title: 'Pick a topic',
-                desc: 'Choose any GCSE or A Level topic from the full AQA, Edexcel or OCR spec. Questions are generated fresh every session.',
+                desc: 'Choose any GCSE topic from the full AQA, Edexcel or OCR spec. Questions are generated fresh every session.',
                 icon: '🎯'
               },
               {
@@ -161,7 +161,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2">Full spec coverage</p>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Every topic. Every tier.</h2>
-          <p className="text-gray-500 mb-8 text-base leading-relaxed">GCSE and A Level Maths — Foundation, Higher and beyond. All major exam boards fully covered.</p>
+          <p className="text-gray-500 mb-8 text-base leading-relaxed">GCSE Maths — Foundation and Higher tier. All major exam boards fully covered.</p>
 
           {/* GCSE */}
           <div className="mb-10">
@@ -190,30 +190,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* A Level */}
-          <div>
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full">A Level Maths</span>
-              <span className="text-xs text-gray-400">Year 12–13 · AQA · Edexcel · OCR A · OCR B (MEI)</span>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {[
-                { label: 'Pure Maths', count: 12, color: 'bg-purple-100 text-purple-800', topics: ['Proof', 'Algebra & Functions', 'Coordinate Geometry', 'Sequences & Series', 'Trigonometry', 'Exponentials & Logs', 'Differentiation', 'Integration', 'Numerical Methods', 'Vectors', 'Binomial Expansion', 'Parametric Equations'] },
-                { label: 'Statistics', count: 6, color: 'bg-amber-100 text-amber-800', topics: ['Statistical Sampling', 'Data Presentation', 'Probability', 'Statistical Distributions', 'Hypothesis Testing', 'Correlation & Regression'] },
-                { label: 'Mechanics', count: 7, color: 'bg-blue-100 text-blue-800', topics: ['Quantities & Units', 'Kinematics (constant)', 'Kinematics (variable)', 'Forces & Newton\'s Laws', 'Moments', 'Projectiles', 'Friction'] },
-              ].map(t => (
-                <div key={t.label} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`text-xs font-semibold px-2 py-1 rounded-full ${t.color}`}>{t.label}</span>
-                    <span className="text-[10px] text-gray-400">{t.count}</span>
-                  </div>
-                  <div className="text-xs text-gray-500 leading-7">
-                    {t.topics.map(tp => <div key={tp}>{tp}</div>)}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -226,12 +202,12 @@ export default function Home() {
             {
               icon: '🎯',
               title: 'Spec-aligned questions',
-              desc: 'Every GCSE and A Level question is mapped to the AQA, Edexcel or OCR specification. No off-spec content, no wasted revision time.',
+              desc: 'Every GCSE question is mapped to the AQA, Edexcel or OCR specification. No off-spec content, no wasted revision time.',
             },
             {
               icon: '⚡',
               title: 'AI that marks like an examiner',
-              desc: 'Not just right or wrong. The AI awards method marks, spots common mistakes, and explains each step — for both GCSE and A Level questions.',
+              desc: 'Not just right or wrong. The AI awards method marks, spots common mistakes, and explains each step on every GCSE question.',
             },
             {
               icon: '📈',
@@ -281,8 +257,8 @@ export default function Home() {
                 bg: 'bg-green-100 text-green-800',
               },
               {
-                quote: 'Using this for A Level Pure Maths. The integration and differentiation questions are properly exam-style and the feedback actually helps.',
-                role: 'Year 13 · A Level',
+                quote: 'Higher tier trigonometry finally clicks. The AI caught a method mark I would have missed and walked me through the fix.',
+                role: 'Year 10 · GCSE Higher',
                 initials: 'J',
                 bg: 'bg-amber-100 text-amber-800',
               },

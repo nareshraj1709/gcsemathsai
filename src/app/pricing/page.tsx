@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 const FREE_FEATURES = [
   'Unlimited AI-marked practice questions',
-  'Full GCSE syllabus (Year 9–11) and A Level syllabus (Year 12–13)',
-  'AQA, Edexcel, OCR and OCR A / OCR B (MEI) support',
+  'Full GCSE Maths syllabus — Year 9 to 11',
+  'AQA, Edexcel and OCR exam boards supported',
   'Foundation and Higher tier questions',
   'Past papers from 2015–2024 (timed exam conditions)',
   'AI-generated practice papers with grade boundary estimates',
@@ -45,8 +45,8 @@ const FAQS = [
     a: 'Yes. Year 9 students can use the GCSE Foundation tier questions to build early confidence before they begin their GCSE courses in Year 10.',
   },
   {
-    q: 'Does it cover A Level Maths?',
-    a: 'Yes. Year 12 and Year 13 students can practise Pure Maths, Statistics and Mechanics questions across AQA, Edexcel, OCR A and OCR B (MEI) specifications.',
+    q: 'Is it suitable for Year 11 and resit students?',
+    a: 'Yes. Year 11 students preparing for their summer exams and adult learners retaking GCSE Maths get full access to past papers, AI-marked practice and topic-by-topic revision notes — all calibrated to Foundation and Higher tier mark schemes.',
   },
   {
     q: 'Can my school use this?',

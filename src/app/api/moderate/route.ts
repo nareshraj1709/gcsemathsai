@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 
 const client = new Anthropic()
 
-const MODERATION_PROMPT = `You are a content moderator for a UK student community forum on a GCSE/A Level Maths revision website. Users are typically aged 14-18.
+const MODERATION_PROMPT = `You are a content moderator for a UK student community forum on a GCSE Maths revision website. Users are typically aged 14-16.
 
 Your job is to decide whether a piece of content is safe to publish.
 

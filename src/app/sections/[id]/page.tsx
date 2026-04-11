@@ -6,8 +6,11 @@ import { supabase } from '@/lib/supabase'
 
 type Question = { question: string; markScheme: string; marks: number }
 type MarkResult = { score: number; outOf: number; feedback: string }
-type Phase = 'loading' | 'practice' | 'summary'
+type Phase = 'setup' | 'loading' | 'practice' | 'summary'
 type Evaluation = { summary: string; strengths: string[]; improvements: string[]; studyFocus: string }
+type Difficulty = 'Easy' | 'Medium' | 'Exam Level'
+type CalcMode = 'auto' | 'calc' | 'non-calc'
+const EXAM_YEARS = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017] as const
 
 export default function SectionPage() {
   return (
@@ -30,7 +33,10 @@ function SectionPractice() {
   const board = searchParams.get('board') || 'AQA'
   const tier = searchParams.get('tier') || 'Foundation'
 
-  const [phase, setPhase] = useState<Phase>('loading')
+  const [phase, setPhase] = useState<Phase>('setup')
+  const [difficulty, setDifficulty] = useState<Difficulty>('Medium')
+  const [yearChoice, setYearChoice] = useState<'random' | number>('random')
+  const [calcMode, setCalcMode] = useState<CalcMode>('auto')
   const [questions, setQuestions] = useState<Question[]>([])
   const [current, setCurrent] = useState(0)
   const [answer, setAnswer] = useState('')
@@ -41,33 +47,37 @@ function SectionPractice() {
   const [evaluation, setEvaluation] = useState<Evaluation | null>(null)
   const [evalLoading, setEvalLoading] = useState(false)
 
-  // Generate questions on mount
-  useEffect(() => {
+  const beginPractice = async () => {
     if (!section) return
-    const generate = async () => {
-      try {
-        const res = await fetch('/api/generate', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            examBoard: board,
-            tier,
-            topic: section.topic,
-            subtopic: section.subtopic,
-            count: 10,
-            paperStyle: false,
-          }),
-        })
-        const data = await res.json()
-        if (data.error || !data.questions) { setError('Failed to load questions.'); return }
-        setQuestions(data.questions)
-        setPhase('practice')
-      } catch {
-        setError('Network error. Please refresh.')
+    setPhase('loading')
+    setError('')
+    try {
+      const body: Record<string, unknown> = {
+        examBoard: board,
+        tier,
+        topic: section.topic,
+        subtopic: section.subtopic,
+        count: 10,
+        paperStyle: false,
+        difficulty,
       }
+      if (yearChoice !== 'random') body.year = yearChoice
+      if (calcMode === 'calc') body.calculator = true
+      if (calcMode === 'non-calc') body.calculator = false
+
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      })
+      const data = await res.json()
+      if (data.error || !data.questions) { setError('Failed to load questions.'); return }
+      setQuestions(data.questions)
+      setPhase('practice')
+    } catch {
+      setError('Network error. Please refresh.')
     }
-    generate()
-  }, [section, board, tier])
+  }
 
   if (!section) {
     return (
@@ -163,6 +173,100 @@ function SectionPractice() {
   const totalScore = allResults.reduce((s, r) => s + r.result.score, 0)
   const totalOut = allResults.reduce((s, r) => s + r.result.outOf, 0)
   const pct = totalOut > 0 ? Math.round((totalScore / totalOut) * 100) : 0
+
+  // ── SETUP ────────────────────────────────────────────────────
+  if (phase === 'setup') {
+    const chip = (active: boolean, bg: string) => ({
+      padding: '10px 14px', borderRadius: 12, cursor: 'pointer',
+      border: `2px solid ${active ? section.color : '#E5E1FF'}`,
+      background: active ? bg : '#fff',
+      color: active ? section.color : '#374151',
+      fontWeight: (active ? 700 : 500) as 700 | 500,
+      fontSize: 13, fontFamily: "'Trebuchet MS', sans-serif",
+      transition: 'all 0.15s',
+    })
+    return (
+      <main style={{ minHeight: '100vh', background: '#F8F7FF', fontFamily: "'Trebuchet MS', sans-serif", padding: '40px 24px' }}>
+        <div style={{ maxWidth: 560, margin: '0 auto' }}>
+          <button onClick={() => router.push('/sections')} style={{
+            background: 'none', border: 'none', color: '#6B7280', fontSize: 13,
+            cursor: 'pointer', marginBottom: 20, fontFamily: "'Trebuchet MS', sans-serif",
+          }}>← All topic tests</button>
+
+          <div style={{
+            background: '#fff', border: '1px solid #E5E1FF', borderRadius: 24,
+            padding: '32px 28px', boxShadow: '0 4px 32px rgba(109,40,217,0.08)',
+          }}>
+            <div style={{ textAlign: 'center', marginBottom: 24 }}>
+              <div style={{ fontSize: 40, marginBottom: 8 }}>{section.icon}</div>
+              <h1 style={{ fontFamily: "'Georgia', serif", fontSize: 22, color: '#0D0B1A', margin: '0 0 4px' }}>
+                {section.name}
+              </h1>
+              <p style={{ fontSize: 13, color: '#6B7280', margin: 0 }}>
+                {board} · {tier} · 10 questions
+              </p>
+            </div>
+
+            <div style={{ marginBottom: 20 }}>
+              <label style={{ fontSize: 12, fontWeight: 700, color: '#6B7280', textTransform: 'uppercase', letterSpacing: 0.8, display: 'block', marginBottom: 8 }}>
+                Difficulty
+              </label>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+                {(['Easy', 'Medium', 'Exam Level'] as const).map(d => (
+                  <button key={d} onClick={() => setDifficulty(d)} style={chip(difficulty === d, section.bgColor)}>
+                    {difficulty === d ? '✓ ' : ''}{d}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ marginBottom: 20 }}>
+              <label style={{ fontSize: 12, fontWeight: 700, color: '#6B7280', textTransform: 'uppercase', letterSpacing: 0.8, display: 'block', marginBottom: 8 }}>
+                Exam year to model
+              </label>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                <button onClick={() => setYearChoice('random')} style={chip(yearChoice === 'random', section.bgColor)}>
+                  {yearChoice === 'random' ? '✓ ' : ''}Random
+                </button>
+                {EXAM_YEARS.map(y => (
+                  <button key={y} onClick={() => setYearChoice(y)} style={chip(yearChoice === y, section.bgColor)}>
+                    {yearChoice === y ? '✓ ' : ''}{y}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ marginBottom: 28 }}>
+              <label style={{ fontSize: 12, fontWeight: 700, color: '#6B7280', textTransform: 'uppercase', letterSpacing: 0.8, display: 'block', marginBottom: 8 }}>
+                Calculator paper
+              </label>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+                {([
+                  { key: 'auto', label: 'Auto' },
+                  { key: 'non-calc', label: 'Non-Calc' },
+                  { key: 'calc', label: 'Calculator' },
+                ] as const).map(c => (
+                  <button key={c.key} onClick={() => setCalcMode(c.key)} style={chip(calcMode === c.key, section.bgColor)}>
+                    {calcMode === c.key ? '✓ ' : ''}{c.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <button onClick={beginPractice} style={{
+              width: '100%', padding: '14px', borderRadius: 12, border: 'none',
+              background: `linear-gradient(135deg, ${section.color}, ${section.color}bb)`,
+              color: '#fff', fontWeight: 700, fontSize: 15, cursor: 'pointer',
+              fontFamily: "'Trebuchet MS', sans-serif",
+              boxShadow: `0 4px 16px ${section.color}30`,
+            }}>
+              Start 10 questions →
+            </button>
+          </div>
+        </div>
+      </main>
+    )
+  }
 
   // ── LOADING ──────────────────────────────────────────────────
   if (phase === 'loading') {

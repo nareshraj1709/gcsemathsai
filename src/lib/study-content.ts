@@ -4308,7 +4308,7 @@ export const CONTENT: SubtopicContent[] = [
 
   {
     topic: 'Algebra',
-    subtopic: 'Quadratic & cubic graphs',
+    subtopic: 'Quadratic & cubic graphs (extended)',
     tier: 'Higher',
     videoSearchTerms: ['quadratic graphs GCSE Higher', 'cubic graphs GCSE maths', 'sketching quadratic cubic GCSE Higher', 'roots turning point quadratic GCSE'],
     overview: 'Quadratic graphs (y = ax² + bx + c) are U-shaped (or ∩-shaped) parabolas. Cubic graphs (y = ax³ + bx² + cx + d) have a characteristic S-shape. You need to sketch, interpret and read values from these graphs.',
@@ -4566,6 +4566,512 @@ export const CONTENT: SubtopicContent[] = [
       'Write out each step clearly — ratio questions are easy to lose marks through arithmetic slips.',
     ],
   },
+
+  // ══════════════════════════════════════════════════
+  // SPEC-COMPLETION ENTRIES (full AQA/Edexcel/OCR coverage)
+  // ══════════════════════════════════════════════════
+
+  {
+    topic: 'Number',
+    subtopic: 'Rounding & significant figures',
+    tier: 'Both',
+    videoSearchTerms: ['rounding GCSE maths', 'significant figures GCSE', 'decimal places GCSE maths', 'rounding to 1 sf GCSE'],
+    overview: 'Rounding makes numbers easier to work with. You need to round to a given number of decimal places (dp) or significant figures (sf). Look at the digit after the one you keep: 5 or more rounds up, 4 or less stays the same.',
+    keyFacts: [
+      'Decimal places count digits after the decimal point.',
+      'Significant figures count digits starting from the first non-zero digit.',
+      'If the next digit is 5, 6, 7, 8 or 9 → round up.',
+      'If the next digit is 0, 1, 2, 3 or 4 → round down (leave the digit alone).',
+      'Trailing zeros in a decimal (e.g. 2.30) are significant.',
+      'Leading zeros (e.g. 0.0073) are NOT significant.',
+    ],
+    workedExamples: [
+      {
+        question: 'Round 7.4683 to 2 decimal places.',
+        steps: ['Identify the 2nd decimal place: 7.46|83', 'Look at the next digit: 8 → round up', '6 becomes 7'],
+        answer: '7.47',
+      },
+      {
+        question: 'Round 0.004927 to 2 significant figures.',
+        steps: ['First sig fig is 4 (leading zeros do not count).', '2nd sig fig is 9. Next digit is 2 → round down.', '0.0049'],
+        answer: '0.0049',
+      },
+    ],
+    commonMistakes: [
+      'Counting leading zeros as significant figures.',
+      'Rounding prematurely in multi-step calculations — round at the final step only.',
+      'Forgetting to keep trailing zeros (e.g. writing 2.3 instead of 2.30 when rounding to 2 dp).',
+    ],
+    examTips: [
+      'Read carefully: "to 2 dp" and "to 2 sf" give different answers.',
+      'When asked for a "sensible degree of accuracy", use 3 sf for calculator answers.',
+      'Keep full accuracy in your calculator, then round at the very end.',
+    ],
+  },
+
+  {
+    topic: 'Number',
+    subtopic: 'Estimation',
+    tier: 'Both',
+    videoSearchTerms: ['estimation GCSE maths', 'estimating calculations GCSE', 'rounding to 1 sf estimate', 'approximation GCSE maths'],
+    overview: 'Estimation means rounding every number to 1 significant figure, then doing a quick mental calculation to check that a more complex answer is sensible.',
+    keyFacts: [
+      'To estimate, round every number in the calculation to 1 significant figure.',
+      'Use the symbol ≈ (approximately equal to), not =.',
+      'Estimates give you a sanity check for calculator answers.',
+      'For division, estimate numerator and denominator separately first.',
+    ],
+    workedExamples: [
+      {
+        question: 'Estimate the value of (48.3 × 2.95) / 0.197.',
+        steps: ['Round each to 1 sf: 48.3 ≈ 50, 2.95 ≈ 3, 0.197 ≈ 0.2', '(50 × 3) / 0.2 = 150 / 0.2', '150 / 0.2 = 750'],
+        answer: '≈ 750',
+      },
+    ],
+    commonMistakes: [
+      'Using more than 1 sf and making arithmetic harder.',
+      'Rounding 0.197 down to 0 instead of 0.2 — cannot divide by 0.',
+      'Forgetting to use ≈ instead of =.',
+    ],
+    examTips: [
+      'Always round every number to 1 sf first.',
+      'After estimating, compare with a given answer to decide if it is reasonable.',
+      'Show your rounded values before the final calculation.',
+    ],
+  },
+
+  {
+    topic: 'Number',
+    subtopic: 'Order of operations (BIDMAS)',
+    tier: 'Both',
+    videoSearchTerms: ['BIDMAS GCSE maths', 'order of operations GCSE', 'BODMAS GCSE maths', 'order of operations examples GCSE'],
+    overview: 'BIDMAS tells you the order in which to do operations: Brackets, Indices, Division and Multiplication (left to right), then Addition and Subtraction (left to right).',
+    keyFacts: [
+      'B – Brackets first.',
+      'I – Indices (powers and roots).',
+      'DM – Division and Multiplication, left to right.',
+      'AS – Addition and Subtraction, left to right.',
+      'Division and multiplication have equal priority (same for + and −).',
+      'A fraction bar acts like brackets over both the numerator and denominator.',
+    ],
+    workedExamples: [
+      {
+        question: 'Work out 3 + 4 × (5 − 2)².',
+        steps: ['Brackets: 5 − 2 = 3', 'Indices: 3² = 9', 'Multiplication: 4 × 9 = 36', 'Addition: 3 + 36 = 39'],
+        answer: '39',
+      },
+    ],
+    commonMistakes: [
+      'Doing addition before multiplication.',
+      'Applying powers to the wrong part of an expression, e.g. treating −3² as 9 instead of −9.',
+      'Forgetting brackets imposed by a fraction bar.',
+    ],
+    examTips: [
+      'Rewrite the calculation step by step, showing each BIDMAS stage.',
+      'Use brackets generously in your working to avoid ambiguity.',
+      'On a calculator, always use brackets for complex expressions.',
+    ],
+  },
+
+  {
+    topic: 'Number',
+    subtopic: 'Negative numbers',
+    tier: 'Both',
+    videoSearchTerms: ['negative numbers GCSE maths', 'adding subtracting negatives GCSE', 'multiplying negatives GCSE', 'number line negatives GCSE'],
+    overview: 'Negative numbers lie to the left of zero on the number line. You must be able to add, subtract, multiply and divide with positive and negative numbers confidently.',
+    keyFacts: [
+      'Two signs next to each other: same signs give a plus (−− = +), different signs give a minus (+− = −).',
+      'Multiplying or dividing: same signs → positive; different signs → negative.',
+      'Adding a negative is the same as subtracting: 5 + (−3) = 5 − 3 = 2.',
+      'Subtracting a negative is the same as adding: 5 − (−3) = 5 + 3 = 8.',
+    ],
+    workedExamples: [
+      {
+        question: 'Work out (−4) × (−3) + (−2).',
+        steps: ['(−4) × (−3) = +12 (negative × negative = positive)', '12 + (−2) = 12 − 2 = 10'],
+        answer: '10',
+      },
+      {
+        question: 'Work out −15 ÷ 3 − (−4).',
+        steps: ['−15 ÷ 3 = −5', '− (−4) = + 4', '−5 + 4 = −1'],
+        answer: '−1',
+      },
+    ],
+    commonMistakes: [
+      'Forgetting that two negatives multiplied make a positive.',
+      'Confusing "subtract negative" with "subtract positive".',
+      'Losing track of signs in a multi-step calculation.',
+    ],
+    examTips: [
+      'Write every step — sign errors are the most common GCSE mistake.',
+      'Use a number line for add/subtract if you are unsure.',
+      'Remember: same signs → plus; different signs → minus.',
+    ],
+  },
+
+  {
+    topic: 'Algebra',
+    subtopic: 'Substitution',
+    tier: 'Both',
+    videoSearchTerms: ['substitution GCSE maths', 'substituting into formulae GCSE', 'evaluating expressions GCSE', 'plugging in values algebra GCSE'],
+    overview: 'Substitution means replacing letters in an expression or formula with given numerical values, then calculating the result. Always follow BIDMAS.',
+    keyFacts: [
+      'Replace each letter with its numerical value, in brackets if negative.',
+      'Apply BIDMAS — indices before multiplication, multiplication before addition.',
+      'Show every substitution step for method marks.',
+      '2x means 2 × x, so 2x when x = 5 is 10.',
+      'x² when x = −3 means (−3)² = 9, not −9.',
+    ],
+    workedExamples: [
+      {
+        question: 'If a = 4, b = −3, find 2a² − 5b.',
+        steps: ['Substitute: 2 × (4)² − 5 × (−3)', 'Indices: 4² = 16 → 2 × 16 − 5 × (−3)', 'Multiplications: 32 − (−15)', 'Subtract a negative: 32 + 15 = 47'],
+        answer: '47',
+      },
+    ],
+    commonMistakes: [
+      'Forgetting to square the negative sign.',
+      'Doing operations in the wrong order.',
+      'Writing 2x as 2 + x instead of 2 × x.',
+    ],
+    examTips: [
+      'Always use brackets around negative numbers before you substitute.',
+      'Write the expression, then the substitution, then the answer — show every step.',
+      'Use your calculator carefully; place brackets around negatives.',
+    ],
+  },
+
+  {
+    topic: 'Algebra',
+    subtopic: 'Rearranging formulae (changing the subject)',
+    tier: 'Both',
+    videoSearchTerms: ['rearranging formulae GCSE', 'changing the subject GCSE maths', 'make x the subject GCSE', 'transposing formulae GCSE'],
+    overview: 'Changing the subject of a formula means rearranging it so a different variable appears on its own on one side. Use inverse operations — whatever is done on one side must be done on the other.',
+    keyFacts: [
+      'Do the opposite operation: + and − are opposites; × and ÷ are opposites; square and square root are opposites.',
+      'Always do the same operation to both sides.',
+      'When the new subject appears twice, factorise to collect it on one side.',
+      'Square both sides to remove a square root; take the square root to remove a square (remember ±).',
+    ],
+    formulas: [
+      { name: 'Rearrangement template', formula: 'y = mx + c  →  x = (y − c) / m' },
+    ],
+    workedExamples: [
+      {
+        question: 'Make r the subject of A = πr².',
+        steps: ['Divide both sides by π: A/π = r²', 'Square root both sides: r = √(A/π)'],
+        answer: 'r = √(A/π)',
+      },
+      {
+        question: 'Make x the subject of y = (2x + 3) / (x − 1).',
+        steps: ['Multiply by (x − 1): y(x − 1) = 2x + 3', 'Expand: yx − y = 2x + 3', 'Collect x: yx − 2x = y + 3', 'Factorise: x(y − 2) = y + 3', 'Divide: x = (y + 3) / (y − 2)'],
+        answer: 'x = (y + 3) / (y − 2)',
+      },
+    ],
+    commonMistakes: [
+      'Only doing the operation on one side of the equation.',
+      'Forgetting to factorise when the new subject appears twice.',
+      'Taking a square root and forgetting the ± sign.',
+    ],
+    examTips: [
+      'Work in small steps and show each rearrangement.',
+      'If the variable appears twice, collect the terms on one side, then factorise.',
+      'Check by substituting numbers into the original and rearranged versions.',
+    ],
+  },
+
+  {
+    topic: 'Geometry & Measures',
+    subtopic: 'Plans & elevations',
+    tier: 'Both',
+    videoSearchTerms: ['plans and elevations GCSE', 'front side plan view GCSE maths', '3D drawings GCSE', 'orthographic projection GCSE'],
+    overview: 'A plan is the view from directly above. A front elevation is the view from the front, and a side elevation is the view from the side. You must be able to draw and interpret plans and elevations of 3D solids on squared paper.',
+    keyFacts: [
+      'Plan view: looking straight down from above.',
+      'Front elevation: looking horizontally from the front.',
+      'Side elevation: looking horizontally from the side.',
+      'Hidden edges can be shown with dashed lines.',
+      'Each view is a 2D drawing — lengths are preserved.',
+    ],
+    workedExamples: [
+      {
+        question: 'A solid is made from 4 identical cubes arranged in an L-shape: three cubes in a row, with one extra cube on top of the leftmost cube. Describe the plan view.',
+        steps: [
+          'From above, you see the three cubes in a row — a 3×1 rectangle.',
+          'The top cube sits on top of the leftmost cube, so it does not change the plan view.',
+          'Plan view = 3 × 1 rectangle.',
+        ],
+        answer: 'A 3 × 1 row of three squares.',
+      },
+    ],
+    commonMistakes: [
+      'Confusing the plan with the front elevation.',
+      'Missing edges when two shapes share a face.',
+      'Not lining the three views up beside each other.',
+    ],
+    examTips: [
+      'Always label each view: Plan, Front elevation, Side elevation.',
+      'Use a ruler and draw on squared paper.',
+      'Keep the same scale for all three views.',
+    ],
+  },
+
+  {
+    topic: 'Geometry & Measures',
+    subtopic: 'Exact trigonometric values',
+    tier: 'Higher',
+    videoSearchTerms: ['exact trig values GCSE Higher', 'sin cos tan 30 45 60 GCSE', 'exact trigonometric values GCSE maths', 'non calculator trig GCSE'],
+    overview: 'You must memorise the exact values of sin, cos and tan of 0°, 30°, 45°, 60° and 90° for non-calculator questions.',
+    keyFacts: [
+      'sin 0° = 0,   sin 30° = 1/2,   sin 45° = √2/2,   sin 60° = √3/2,   sin 90° = 1',
+      'cos 0° = 1,   cos 30° = √3/2,  cos 45° = √2/2,   cos 60° = 1/2,    cos 90° = 0',
+      'tan 0° = 0,   tan 30° = √3/3,   tan 45° = 1,   tan 60° = √3,   tan 90° = undefined',
+      'Remember the 30-60-90 triangle (1 : √3 : 2) and 45-45-90 triangle (1 : 1 : √2).',
+    ],
+    formulas: [
+      { name: 'SOH CAH TOA', formula: 'sin = O/H,  cos = A/H,  tan = O/A' },
+    ],
+    workedExamples: [
+      {
+        question: 'Without a calculator, find the exact value of sin 60° × cos 30°.',
+        steps: ['sin 60° = √3/2', 'cos 30° = √3/2', 'Product: (√3/2) × (√3/2) = 3/4'],
+        answer: '3/4',
+      },
+    ],
+    commonMistakes: [
+      'Confusing sin 30° with sin 60°.',
+      'Using a calculator and giving a decimal instead of the exact surd.',
+    ],
+    examTips: [
+      'Memorise the exact-value table — it comes up on non-calculator papers every year.',
+      'Leave your answer as a simplified surd or fraction.',
+      'Draw the 30-60-90 or 45-45-90 triangle if you forget the values.',
+    ],
+  },
+
+  {
+    topic: 'Statistics & Probability',
+    subtopic: 'Frequency polygons',
+    tier: 'Both',
+    videoSearchTerms: ['frequency polygons GCSE', 'drawing frequency polygons GCSE maths', 'frequency polygon interpretation GCSE'],
+    overview: 'A frequency polygon is a line graph showing frequencies of grouped data. Plot the frequency against the midpoint of each class interval and join the points with straight lines.',
+    keyFacts: [
+      'Plot the midpoint of each class on the x-axis.',
+      'Plot the frequency on the y-axis.',
+      'Join the points with straight line segments.',
+      'Do NOT join to the x-axis at either end.',
+      'Used for comparing two distributions on the same axes.',
+    ],
+    workedExamples: [
+      {
+        question: 'Draw a frequency polygon for: 0–10 → 4; 10–20 → 9; 20–30 → 15; 30–40 → 7.',
+        steps: ['Midpoints: 5, 15, 25, 35.', 'Plot (5, 4), (15, 9), (25, 15), (35, 7).', 'Join with straight line segments.'],
+        answer: 'A polygon peaking at midpoint 25 with frequency 15.',
+      },
+    ],
+    commonMistakes: [
+      'Plotting at the class boundary instead of the midpoint.',
+      'Joining the first or last point down to the x-axis.',
+      'Confusing a frequency polygon with a histogram.',
+    ],
+    examTips: [
+      'Always use the midpoint of the interval, not the upper/lower bound.',
+      'Label both axes clearly.',
+      'When comparing two sets, draw both polygons on the same axes with a key.',
+    ],
+  },
+
+  {
+    topic: 'Statistics & Probability',
+    subtopic: 'Two-way tables',
+    tier: 'Both',
+    videoSearchTerms: ['two way tables GCSE', 'two-way tables GCSE maths', 'filling in two way tables GCSE'],
+    overview: 'Two-way tables summarise data classified by two variables. Use row and column totals to find missing values, then answer probability or frequency questions.',
+    keyFacts: [
+      'The totals row and totals column must all match the grand total.',
+      'Each cell shows a frequency for a specific combination of the two variables.',
+      'To find a probability from a two-way table, divide the target frequency by the relevant total.',
+    ],
+    workedExamples: [
+      {
+        question: 'In a class of 30, 18 are girls. 12 students wear glasses, and 5 of these are boys. How many girls do NOT wear glasses?',
+        steps: [
+          'Total = 30. Girls = 18 → Boys = 12.',
+          'Boys wearing glasses = 5 → Boys without = 12 − 5 = 7.',
+          'Total wearing glasses = 12 → Girls with glasses = 12 − 5 = 7.',
+          'Girls without glasses = 18 − 7 = 11.',
+        ],
+        answer: '11 girls do not wear glasses.',
+      },
+    ],
+    commonMistakes: [
+      'Confusing row totals with column totals.',
+      'Forgetting that all rows and columns must sum to the same grand total.',
+    ],
+    examTips: [
+      'Draw a neat grid and fill in the totals row and column first.',
+      'Work out any cell where only one value is missing before tackling harder cells.',
+    ],
+  },
+
+  {
+    topic: 'Statistics & Probability',
+    subtopic: 'Stem & leaf diagrams',
+    tier: 'Foundation',
+    videoSearchTerms: ['stem and leaf GCSE', 'stem leaf diagrams GCSE maths', 'drawing stem leaf GCSE'],
+    overview: 'A stem-and-leaf diagram organises a data set by splitting each value into a "stem" (the leading digits) and a "leaf" (the final digit). It keeps all the original data while making the distribution clear.',
+    keyFacts: [
+      'Stems go on the left, leaves on the right.',
+      'Leaves should be listed in order smallest to largest.',
+      'Always include a key, e.g. "2 | 4 means 24".',
+      'The median is easy to find by counting in from the ends.',
+      'Back-to-back stem-and-leaf diagrams compare two data sets on the same stems.',
+    ],
+    workedExamples: [
+      {
+        question: 'Draw a stem-and-leaf diagram for: 22, 31, 18, 25, 27, 19, 34, 23, 28.',
+        steps: ['Stems: 1, 2, 3.', 'Stem 1 → leaves 8, 9', 'Stem 2 → leaves 2, 3, 5, 7, 8', 'Stem 3 → leaves 1, 4', 'Add key: 2 | 5 means 25.'],
+        answer: 'Rows: 1 | 8 9 ; 2 | 2 3 5 7 8 ; 3 | 1 4. Key: 2 | 5 = 25.',
+      },
+    ],
+    commonMistakes: [
+      'Forgetting the key — you lose a mark.',
+      'Leaves out of order.',
+      'Using two-digit leaves.',
+    ],
+    examTips: [
+      'Always add a key.',
+      'Order the leaves smallest to largest.',
+      'To find the median, count in from both ends simultaneously.',
+    ],
+  },
+
+  {
+    topic: 'Statistics & Probability',
+    subtopic: 'Time series',
+    tier: 'Both',
+    videoSearchTerms: ['time series GCSE maths', 'trend line graph GCSE', 'time series interpretation GCSE', 'seasonal patterns GCSE'],
+    overview: 'A time series is data measured at regular intervals over time, shown on a line graph with time on the x-axis. Look for trends and seasonal patterns.',
+    keyFacts: [
+      'Plot each data point and join with straight lines.',
+      'Time on the x-axis.',
+      'A trend is the overall direction — upward, downward, or stable.',
+      'Seasonal variation = regular repeating pattern.',
+      'A moving average smooths out seasonal variation to reveal the underlying trend.',
+    ],
+    workedExamples: [
+      {
+        question: 'A shop\'s quarterly ice-cream sales (thousands) are Q1:2, Q2:9, Q3:14, Q4:3, Q1:3, Q2:10, Q3:15, Q4:4. Describe the pattern.',
+        steps: ['Seasonal peaks in Q2/Q3, troughs in Q1/Q4.', 'Same quarter year-on-year: each slightly higher in year 2.', 'So: seasonal variation plus a rising overall trend.'],
+        answer: 'Seasonal pattern peaking in summer (Q2/Q3), with a gentle upward trend year on year.',
+      },
+    ],
+    commonMistakes: [
+      'Confusing a trend with a seasonal peak.',
+      'Reading only one data point instead of the overall pattern.',
+    ],
+    examTips: [
+      'Describe both trend AND seasonal variation when asked.',
+      'Reference specific quarters/years from the graph when explaining.',
+    ],
+  },
+
+  {
+    topic: 'Algebra',
+    subtopic: 'Equation of a circle',
+    tier: 'Higher',
+    videoSearchTerms: ['equation of a circle GCSE Higher', 'circle x2 + y2 = r2 GCSE', 'tangent to circle GCSE Higher'],
+    overview: 'A circle centred at the origin with radius r has equation x² + y² = r². At Higher GCSE you must also find the equation of a tangent to a circle at a given point.',
+    keyFacts: [
+      'x² + y² = r² describes a circle centred at (0, 0) with radius r.',
+      'The radius at a point is perpendicular to the tangent at that point.',
+      'Gradient of the radius from (0,0) to (a,b) is b/a.',
+      'Gradient of the tangent is the negative reciprocal: −a/b.',
+    ],
+    formulas: [
+      { name: 'Circle centred at origin', formula: 'x² + y² = r²' },
+      { name: 'Tangent gradient at (a,b)', formula: 'm_tan = −a/b' },
+    ],
+    workedExamples: [
+      {
+        question: 'Find the equation of the tangent to x² + y² = 25 at the point (3, 4).',
+        steps: ['Radius gradient: 4/3.', 'Tangent gradient: −3/4.', 'Use y − 4 = −3/4 (x − 3).', 'Expand: y − 4 = −3/4 x + 9/4.', 'y = −3/4 x + 25/4.'],
+        answer: 'y = −3/4 x + 25/4',
+      },
+    ],
+    commonMistakes: [
+      'Using the radius gradient for the tangent instead of the negative reciprocal.',
+      'Forgetting to square r in x² + y² = r².',
+    ],
+    examTips: [
+      'Work out the radius gradient first, then flip and change sign for the tangent.',
+      'Check: the tangent should pass through the given point.',
+    ],
+  },
+
+  {
+    topic: 'Algebra',
+    subtopic: 'Exponential & trigonometric graphs',
+    tier: 'Higher',
+    videoSearchTerms: ['exponential graphs GCSE Higher', 'trigonometric graphs GCSE Higher', 'sin cos tan graphs GCSE'],
+    overview: 'Exponential graphs have equation y = a·bˣ and grow (or decay) rapidly. Trigonometric graphs y = sin x, y = cos x and y = tan x have characteristic repeating shapes you must be able to sketch and read.',
+    keyFacts: [
+      'y = bˣ with b > 1: always positive, passes through (0, 1), grows rapidly to the right.',
+      'y = bˣ with 0 < b < 1: exponential decay.',
+      'Exponential graphs have a horizontal asymptote at y = 0.',
+      'y = sin x: wave between −1 and 1, period 360°, through origin.',
+      'y = cos x: wave between −1 and 1, period 360°, starts at (0, 1).',
+      'y = tan x: period 180°, asymptotes at 90°, 270°, …',
+    ],
+    workedExamples: [
+      {
+        question: 'Sketch y = 2ˣ for −2 ≤ x ≤ 3 and state the y-intercept.',
+        steps: ['x = −2 → 0.25; x = 0 → 1; x = 1 → 2; x = 2 → 4; x = 3 → 8.', 'y-intercept at (0, 1).', 'Smooth curve rising, horizontal asymptote y = 0 on the left.'],
+        answer: 'Exponential curve through (0,1), rising to (3, 8); y-intercept = 1.',
+      },
+    ],
+    commonMistakes: [
+      'Drawing the exponential curve crossing the x-axis — it never does.',
+      'Confusing sin and cos graphs.',
+      'Drawing tan as a continuous curve instead of separate branches.',
+    ],
+    examTips: [
+      'For y = a·bˣ always mark the y-intercept (0, a).',
+      'For trig graphs, mark the max, min and intercepts explicitly.',
+      'Know the first period (0° to 360°) for sin and cos by heart.',
+    ],
+  },
+
+  {
+    topic: 'Statistics & Probability',
+    subtopic: 'Mutually exclusive & independent events',
+    tier: 'Both',
+    videoSearchTerms: ['mutually exclusive events GCSE', 'independent events GCSE maths', 'probability rules GCSE', 'exhaustive events GCSE'],
+    overview: 'Two events are mutually exclusive if they cannot happen at the same time. They are independent if one occurring does not affect the probability of the other.',
+    keyFacts: [
+      'Mutually exclusive: P(A and B) = 0.',
+      'For mutually exclusive events: P(A or B) = P(A) + P(B).',
+      'Exhaustive events: their probabilities sum to 1.',
+      'Independent events: P(A and B) = P(A) × P(B).',
+      'Rolling a die and tossing a coin are independent.',
+      'Drawing cards without replacement makes events dependent.',
+    ],
+    workedExamples: [
+      {
+        question: 'A spinner is red with P(R) = 0.3, blue P(B) = 0.45, green P(G) = ?. Find P(G) and P(R or B).',
+        steps: ['Probabilities sum to 1: P(G) = 1 − 0.3 − 0.45 = 0.25.', 'P(R or B) = 0.3 + 0.45 = 0.75.'],
+        answer: 'P(G) = 0.25,  P(R or B) = 0.75',
+      },
+    ],
+    commonMistakes: [
+      'Assuming events are independent when they are not.',
+      'Adding probabilities for events that are not mutually exclusive.',
+    ],
+    examTips: [
+      '"Or" and mutually exclusive → add. "And" and independent → multiply.',
+      'Always check whether events can overlap before using the OR rule.',
+    ],
+  },
 ]
 
 // Topic area metadata (same as learn page, centralised here)
@@ -4580,20 +5086,20 @@ export const TOPIC_META: Record<string, { icon: string; color: string; light: st
 // All subtopic names per topic per tier (matches learn page)
 export const TOPIC_DATA: Record<string, { Foundation: string[]; Higher: string[] }> = {
   Number: {
-    Foundation: ['Ordering & comparing numbers','Fractions','Decimals','Percentages','Percentage change','Reverse percentages','Factors, multiples & primes','Powers & roots','Standard form','Bounds & accuracy'],
-    Higher:     ['Ordering & comparing numbers','Fractions','Decimals','Percentages','Percentage change','Reverse percentages','Factors, multiples & primes','Powers & roots','Indices (fractional & negative)','Standard form','Surds','Bounds & accuracy','Recurring decimals to fractions'],
+    Foundation: ['Ordering & comparing numbers','Negative numbers','Order of operations (BIDMAS)','Fractions','Decimals','Rounding & significant figures','Estimation','Percentages','Percentage change','Reverse percentages','Factors, multiples & primes','Powers & roots','Standard form','Bounds & accuracy'],
+    Higher:     ['Ordering & comparing numbers','Negative numbers','Order of operations (BIDMAS)','Fractions','Decimals','Rounding & significant figures','Estimation','Percentages','Percentage change','Reverse percentages','Factors, multiples & primes','Powers & roots','Indices (fractional & negative)','Standard form','Surds','Bounds & accuracy','Recurring decimals to fractions'],
   },
   Algebra: {
-    Foundation: ['Simplifying expressions','Expanding single brackets','Expanding double brackets','Factorising','Solving linear equations','Forming equations from context','Simultaneous equations','Inequalities','Sequences & nth term','Straight-line graphs (y = mx + c)','Quadratic graphs','Real-life graphs'],
-    Higher:     ['Simplifying expressions','Expanding & factorising','Difference of two squares','Solving linear equations','Forming equations from context','Simultaneous equations','Quadratic equations (factorising)','Quadratic equations (formula)','Completing the square','Inequalities','Sequences & nth term','Geometric sequences','Straight-line graphs','Quadratic & cubic graphs','Functions & function notation','Composite & inverse functions','Transformation of graphs','Iteration','Algebraic proof'],
+    Foundation: ['Simplifying expressions','Substitution','Expanding single brackets','Expanding double brackets','Factorising','Solving linear equations','Rearranging formulae (changing the subject)','Forming equations from context','Simultaneous equations','Inequalities','Sequences & nth term','Straight-line graphs (y = mx + c)','Quadratic graphs','Real-life graphs'],
+    Higher:     ['Simplifying expressions','Substitution','Expanding & factorising','Difference of two squares','Solving linear equations','Rearranging formulae (changing the subject)','Forming equations from context','Simultaneous equations','Quadratic equations (factorising)','Quadratic equations (formula)','Completing the square','Inequalities','Sequences & nth term','Geometric sequences','Straight-line graphs','Quadratic & cubic graphs','Equation of a circle','Exponential & trigonometric graphs','Functions & function notation','Composite & inverse functions','Transformation of graphs','Iteration','Algebraic proof'],
   },
   'Geometry & Measures': {
-    Foundation: ['Angle rules','Angles in parallel lines','Properties of polygons','Perimeter & area','Area of triangles & quadrilaterals','Circle area & circumference','Volume of prisms','Surface area',"Pythagoras' theorem",'Trigonometry (SOH-CAH-TOA)','Transformations (RREST)','Constructions & loci','Similarity','Bearings','3D shapes & nets'],
-    Higher:     ['Angle rules','Angles in parallel lines','Properties of polygons','Perimeter & area','Circle area & circumference','Arc length & sector area','Volume of prisms & cylinders','Volume of pyramids, cones & spheres','Surface area',"Pythagoras' theorem",'Trigonometry (SOH-CAH-TOA)','Sine rule','Cosine rule','3D trigonometry & Pythagoras','Circle theorems','Transformations','Constructions & loci','Similarity & congruence','Vectors','Bearings'],
+    Foundation: ['Angle rules','Angles in parallel lines','Properties of polygons','Perimeter & area','Area of triangles & quadrilaterals','Circle area & circumference','Volume of prisms','Surface area',"Pythagoras' theorem",'Trigonometry (SOH-CAH-TOA)','Transformations (RREST)','Constructions & loci','Plans & elevations','Similarity','Bearings','3D shapes & nets'],
+    Higher:     ['Angle rules','Angles in parallel lines','Properties of polygons','Perimeter & area','Circle area & circumference','Arc length & sector area','Volume of prisms & cylinders','Volume of pyramids, cones & spheres','Surface area',"Pythagoras' theorem",'Trigonometry (SOH-CAH-TOA)','Exact trigonometric values','Sine rule','Cosine rule','3D trigonometry & Pythagoras','Circle theorems','Transformations','Constructions & loci','Plans & elevations','Similarity & congruence','Vectors','Bearings'],
   },
   'Statistics & Probability': {
-    Foundation: ['Mean, median, mode & range','Frequency tables','Bar charts & pictograms','Pie charts','Scatter graphs & correlation','Line of best fit','Basic probability','Combined events & sample space','Relative frequency','Tree diagrams','Sampling & bias'],
-    Higher:     ['Mean, median, mode & range','Mean from grouped frequency tables','Cumulative frequency diagrams','Box plots','Histograms','Scatter graphs & correlation','Basic probability','Combined events','Tree diagrams','Conditional probability','Venn diagrams','Set notation','Sampling & bias'],
+    Foundation: ['Mean, median, mode & range','Frequency tables','Two-way tables','Stem & leaf diagrams','Bar charts & pictograms','Pie charts','Frequency polygons','Time series','Scatter graphs & correlation','Line of best fit','Basic probability','Mutually exclusive & independent events','Combined events & sample space','Relative frequency','Tree diagrams','Sampling & bias'],
+    Higher:     ['Mean, median, mode & range','Mean from grouped frequency tables','Two-way tables','Cumulative frequency diagrams','Box plots','Histograms','Frequency polygons','Time series','Scatter graphs & correlation','Basic probability','Mutually exclusive & independent events','Combined events','Tree diagrams','Conditional probability','Venn diagrams','Set notation','Sampling & bias'],
   },
   'Ratio & Proportion': {
     Foundation: ['Simplifying ratios','Sharing in a ratio','Direct proportion','Speed, distance & time','Density, mass & volume','Best buys & exchange rates','Percentage increase & decrease','Simple interest'],

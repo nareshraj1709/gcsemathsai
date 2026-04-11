@@ -38,7 +38,7 @@ export default function CommunityHome() {
       {/* Header */}
       <div className="bg-purple-50 border-b border-purple-100 px-6 py-12 text-center">
         <span className="text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full">Community</span>
-        <h1 className="text-3xl font-bold text-gray-900 mt-4 mb-2">GCSE & A Level Maths Forum</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mt-4 mb-2">GCSE Maths Forum</h1>
         <p className="text-gray-500 text-sm max-w-md mx-auto">
           Ask a question, share your working, and help others. Moderated and safe for students.
         </p>

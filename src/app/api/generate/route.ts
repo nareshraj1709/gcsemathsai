@@ -51,6 +51,7 @@ export async function POST(req: Request) {
     style,
     calculator,
     difficulty = 'Medium',
+    year,
   } = await req.json()
 
   if (!examBoard || !tier) {
@@ -109,11 +110,14 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 - Include at least one question requiring explanation or proof`,
     }
 
-    // Pick a random recent year to model the style after
-    const examYears = [2019, 2022, 2023, 2024]
-    const modelYear = examYears[Math.floor(Math.random() * examYears.length)]
-    const paperNum = Math.floor(Math.random() * 3) + 1
-    const isCalc = paperNum !== 1
+    // Year pool covers every GCSE 9-1 session. Caller can pin a specific year.
+    const examYears = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+    const pickedYear = (typeof year === 'number' && examYears.includes(year))
+      ? year
+      : examYears[Math.floor(Math.random() * examYears.length)]
+    const modelYear = pickedYear
+    const paperNum = calculator === false ? 1 : Math.floor(Math.random() * 3) + 1
+    const isCalc = calculator === false ? false : paperNum !== 1
 
     prompt = `You are a senior GCSE Maths examiner. Generate ${count} practice questions modelled on real ${examBoard} ${tier} ${modelYear} Paper ${paperNum} (${isCalc ? 'Calculator' : 'Non-Calculator'}).
 

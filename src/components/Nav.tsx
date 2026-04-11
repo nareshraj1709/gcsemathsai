@@ -28,6 +28,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [userMenuOpen, setUserMenuOpen] = useState(false)
   const [profile, setProfile] = useState<Profile | null>(null)
 
   useEffect(() => {
@@ -56,11 +57,23 @@ export default function Nav() {
     return () => window.removeEventListener('resize', check)
   }, [])
 
-  // Close menu on route change
-  useEffect(() => { setMenuOpen(false) }, [pathname])
+  // Close menus on route change
+  useEffect(() => { setMenuOpen(false); setUserMenuOpen(false) }, [pathname])
+
+  // Close user dropdown on outside click
+  useEffect(() => {
+    if (!userMenuOpen) return
+    const onDocClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      if (!target.closest('[data-user-menu]')) setUserMenuOpen(false)
+    }
+    document.addEventListener('mousedown', onDocClick)
+    return () => document.removeEventListener('mousedown', onDocClick)
+  }, [userMenuOpen])
 
   const signOut = async () => {
     setMenuOpen(false)
+    setUserMenuOpen(false)
     await supabase.auth.signOut()
     clearProfileCache()
     setProfile(null)
@@ -183,17 +196,51 @@ export default function Nav() {
                       <span style={{ fontSize: 11, opacity: 0.7 }}>✏️</span>
                     </button>
                   )}
-                  <div
-                    onClick={signOut}
-                    title="Sign out"
-                    style={{
-                      width: 32, height: 32, borderRadius: "50%",
-                      background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer",
-                      marginLeft: 8,
-                    }}
-                  >{initial}</div>
+                  <div data-user-menu style={{ position: "relative", marginLeft: 8 }}>
+                    <div
+                      onClick={() => setUserMenuOpen(o => !o)}
+                      title="Account menu"
+                      style={{
+                        width: 32, height: 32, borderRadius: "50%",
+                        background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+                        display: "flex", alignItems: "center", justifyContent: "center",
+                        color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer",
+                      }}
+                    >{initial}</div>
+                    {userMenuOpen && (
+                      <div style={{
+                        position: "absolute", top: "calc(100% + 8px)", right: 0,
+                        background: "#fff", border: `1px solid ${C.border}`,
+                        borderRadius: 12, minWidth: 220, padding: 8,
+                        boxShadow: "0 8px 32px rgba(13,11,26,0.12)",
+                        fontFamily: font.body, zIndex: 300,
+                      }}>
+                        {user?.email && (
+                          <div style={{
+                            padding: "10px 12px", fontSize: 12, color: C.mid,
+                            borderBottom: `1px solid ${C.border}`, marginBottom: 4,
+                            overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                          }}>{user.email}</div>
+                        )}
+                        <button onClick={() => { setUserMenuOpen(false); navigate('/dashboard') }} style={{
+                          width: "100%", textAlign: "left", background: "none", border: "none",
+                          padding: "10px 12px", borderRadius: 8, cursor: "pointer",
+                          fontSize: 14, fontWeight: 500, color: C.ink, fontFamily: font.body,
+                        }}>Dashboard</button>
+                        <button onClick={() => { setUserMenuOpen(false); navigate('/onboarding') }} style={{
+                          width: "100%", textAlign: "left", background: "none", border: "none",
+                          padding: "10px 12px", borderRadius: 8, cursor: "pointer",
+                          fontSize: 14, fontWeight: 500, color: C.ink, fontFamily: font.body,
+                        }}>Year / Exam board</button>
+                        <div style={{ height: 1, background: C.border, margin: "4px 0" }} />
+                        <button onClick={signOut} style={{
+                          width: "100%", textAlign: "left", background: "none", border: "none",
+                          padding: "10px 12px", borderRadius: 8, cursor: "pointer",
+                          fontSize: 14, fontWeight: 600, color: "#B91C1C", fontFamily: font.body,
+                        }}>Sign out</button>
+                      </div>
+                    )}
+                  </div>
                 </>
               )}
             </div>

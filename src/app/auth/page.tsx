@@ -74,7 +74,7 @@ export default function Auth() {
     }
     setLoading(true)
     showMessage('')
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email: email.trim(),
       password,
       options: {
@@ -83,6 +83,10 @@ export default function Auth() {
     })
     if (error) {
       showMessage(friendlyError(error.message), 'error')
+    } else if (data.user && data.user.identities && data.user.identities.length === 0) {
+      // Supabase returns a user with empty identities when the email is already registered
+      showMessage('An account with this email already exists. Please log in instead.', 'error')
+      setMode('login')
     } else {
       showMessage('Check your email to confirm your account! You may need to check your spam folder.', 'success')
     }

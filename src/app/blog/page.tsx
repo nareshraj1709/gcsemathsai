@@ -5,10 +5,10 @@ import { BLOG_POSTS } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Revision guides, GCSE Maths tips, exam technique advice and A Level resources from the GCSEMathsAI team.',
+  description: 'Revision guides, GCSE Maths tips and exam technique advice from the GCSEMathsAI team.',
   openGraph: {
     title: 'GCSE Maths Blog | GCSEMathsAI',
-    description: 'Revision guides, GCSE Maths tips, exam technique advice and A Level resources from the GCSEMathsAI team.',
+    description: 'Revision guides, GCSE Maths tips and exam technique advice from the GCSEMathsAI team.',
     url: 'https://www.gcsemathsai.co.uk/blog',
   },
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/blog' },

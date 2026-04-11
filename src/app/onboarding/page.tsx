@@ -23,22 +23,14 @@ const YEAR_OPTIONS = [
   "Year 9",
   "Year 10",
   "Year 11",
-  "Year 12 (Sixth Form)",
-  "Year 13 (Sixth Form)",
   "Resit (Adult)",
 ]
 
 const GCSE_BOARDS = ["AQA", "Edexcel", "OCR"]
-const ALEVEL_BOARDS = ["AQA", "Edexcel", "OCR A", "OCR B (MEI)"]
-const GCSE_GOALS = ["Grade 4 (Pass)", "Grade 5", "Grade 6", "Grade 7+"]
-const ALEVEL_GOALS = ["A* (Outstanding)", "A (Excellent)", "B (Good)", "C (Satisfactory)"]
+const GCSE_GOALS = ["Grade 4 (Pass)", "Grade 5", "Grade 6", "Grade 7+", "Grade 8/9 (Top)"]
 
 const STEP_COUNT = 4
 type Data = { name: string; year: string; board: string; goal: string }
-
-function isALevel(year: string) {
-  return year.includes('Sixth Form')
-}
 
 export default function Onboarding() {
   const router = useRouter()
@@ -73,10 +65,6 @@ export default function Onboarding() {
     })
   }, [])
 
-  const aLevel = isALevel(data.year)
-  const boardOptions = aLevel ? ALEVEL_BOARDS : GCSE_BOARDS
-  const goalOptions = aLevel ? ALEVEL_GOALS : GCSE_GOALS
-
   const steps = [
     {
       title: "What's your name?",
@@ -90,15 +78,13 @@ export default function Onboarding() {
     },
     {
       title: "Which exam board?",
-      sub: "We'll align every question to your exact specification.",
-      field: "board" as const, options: boardOptions,
+      sub: "We'll align every question to your exact GCSE specification.",
+      field: "board" as const, options: GCSE_BOARDS,
     },
     {
-      title: aLevel ? "What grade are you aiming for?" : "What grade are you aiming for?",
-      sub: aLevel
-        ? "We'll focus your revision on the topics that carry the most marks."
-        : "We'll focus your practice on the topics that matter most.",
-      field: "goal" as const, options: goalOptions,
+      title: "What grade are you aiming for?",
+      sub: "We'll focus your practice on the topics that matter most.",
+      field: "goal" as const, options: GCSE_GOALS,
     },
   ]
 
@@ -106,16 +92,7 @@ export default function Onboarding() {
   const isLast = step === STEP_COUNT - 1
   const value = data[current.field]
 
-  // Reset board/goal if year changes and they become incompatible
-  const handleYearSelect = (opt: string) => {
-    const wasALevel = isALevel(data.year)
-    const nowALevel = isALevel(opt)
-    if (wasALevel !== nowALevel) {
-      setData({ ...data, year: opt, board: "", goal: "" })
-    } else {
-      setData({ ...data, year: opt })
-    }
-  }
+  const handleYearSelect = (opt: string) => setData({ ...data, year: opt })
 
   const handleNext = () => {
     if (isLast) {
@@ -154,18 +131,6 @@ export default function Onboarding() {
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
             <Logo size={44} nameSize={18} />
           </div>
-
-          {/* A-Level badge */}
-          {aLevel && step >= 2 && (
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: 6,
-              background: "#FEF3C7", borderRadius: 999, padding: "4px 12px",
-              fontSize: 11, fontWeight: 700, color: "#92400E",
-              marginBottom: 16,
-            }}>
-              📘 A-Level / Sixth Form mode
-            </div>
-          )}
 
           <h2 style={{ fontFamily: font.display, fontSize: 24, color: C.ink, marginBottom: 8, textAlign: "center" }}>
             {current.title}
