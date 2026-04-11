@@ -1,18 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Logo from '@/components/Logo'
-import { supabase } from '@/lib/supabase'
 
 export default function Home() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, mins: 0 })
   const [parentOpen, setParentOpen] = useState(false)
-  const [loggedIn, setLoggedIn] = useState(false)
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) setLoggedIn(true)
-    })
-  }, [])
 
   useEffect(() => {
     const update = () => {
@@ -83,27 +75,14 @@ export default function Home() {
           GCSE and A Level Maths questions, instant AI feedback, and a streak to keep you going. 5 minutes a day is all it takes.
         </p>
         <div className="flex gap-3 justify-center flex-wrap mb-4">
-          {loggedIn ? (
-            <>
-              <a href="/learn" className="bg-purple-700 text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-purple-800 transition shadow-md shadow-purple-200">
-                Continue practising →
-              </a>
-              <a href="/dashboard" className="bg-white text-gray-700 border border-gray-200 px-6 py-3.5 rounded-xl font-semibold text-base hover:border-purple-400 hover:text-purple-700 transition">
-                Go to dashboard
-              </a>
-            </>
-          ) : (
-            <>
-              <a href="/auth" className="bg-purple-700 text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-purple-800 transition shadow-md shadow-purple-200">
-                Start practising free →
-              </a>
-              <a href="#how" className="bg-white text-gray-700 border border-gray-200 px-6 py-3.5 rounded-xl font-semibold text-base hover:border-purple-400 hover:text-purple-700 transition">
-                See how it works
-              </a>
-            </>
-          )}
+          <a href="/auth" className="bg-purple-700 text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-purple-800 transition shadow-md shadow-purple-200">
+            Start practising free →
+          </a>
+          <a href="#how" className="bg-white text-gray-700 border border-gray-200 px-6 py-3.5 rounded-xl font-semibold text-base hover:border-purple-400 hover:text-purple-700 transition">
+            See how it works
+          </a>
         </div>
-        {!loggedIn && <p className="text-xs text-gray-400">No card required · No catch · Free for every student</p>}
+        <p className="text-xs text-gray-400">No card required · No catch · Free for every student</p>
 
         {/* Exam countdown */}
         <div className="mt-10 inline-block">
@@ -330,10 +309,10 @@ export default function Home() {
           Your exam is in {countdown.days} days
         </h2>
         <p className="text-purple-200 mb-8 text-base max-w-md mx-auto">
-          Every day of practice counts. {loggedIn ? 'Keep your streak going.' : 'Start today — completely free, no card needed, no catch.'}
+          Every day of practice counts. Start today — completely free, no card needed, no catch.
         </p>
-        <a href={loggedIn ? '/learn' : '/auth'} className="inline-block bg-white text-purple-700 font-semibold px-8 py-3 rounded-xl text-base hover:bg-purple-50 transition">
-          {loggedIn ? 'Continue practising →' : 'Start practising free →'}
+        <a href="/auth" className="inline-block bg-white text-purple-700 font-semibold px-8 py-3 rounded-xl text-base hover:bg-purple-50 transition">
+          Start practising free →
         </a>
       </section>
 
