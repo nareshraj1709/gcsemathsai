@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllTopics, getTopicPost, renderTopicMarkdown, extractTopicTOC } from '@/lib/topics-markdown'
 import { autoLinkTopics } from '@/lib/auto-linker'
+import { getAcademicReferences } from '@/lib/academic-references'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -53,6 +54,7 @@ export default async function TopicPage({ params }: Props) {
   const rawHtml = renderTopicMarkdown(topic.content)
   const html = autoLinkTopics(rawHtml, topic.slug)
   const toc = extractTopicTOC(topic.content)
+  const academicRefs = getAcademicReferences(topic.slug, topic.title)
   const colours = COLOUR_MAP[topic.categoryColour] ?? COLOUR_MAP.purple
   const tierColour = TIER_COLOURS[topic.tier] ?? TIER_COLOURS['Foundation & Higher']
 
@@ -148,6 +150,69 @@ export default async function TopicPage({ params }: Props) {
             } as React.CSSProperties}
             dangerouslySetInnerHTML={{ __html: html }}
           />
+
+          {/* Academic References */}
+          <div style={{
+            marginTop: 48, paddingTop: 32, borderTop: '1px solid var(--rule)',
+          }}>
+            <div style={{
+              fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700, color: 'var(--green)',
+              letterSpacing: '0.12em', textTransform: 'uppercase' as const, marginBottom: 16,
+              display: 'flex', alignItems: 'center', gap: 10,
+            }}>
+              <span style={{ fontFamily: 'var(--serif)', fontSize: 16, fontStyle: 'italic', color: 'var(--gold)' }}>{'\u00A7'}</span>
+              Academic References
+            </div>
+            <p style={{ fontSize: 14, color: 'var(--ink-3)', marginBottom: 20, lineHeight: 1.5, fontWeight: 500 }}>
+              Further reading from leading academic institutions — free and open-access.
+            </p>
+            <div style={{ display: 'grid', gap: 12 }}>
+              {academicRefs.map((ref, i) => (
+                <a
+                  key={i}
+                  href={ref.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'flex', gap: 16, alignItems: 'flex-start',
+                    background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12,
+                    padding: '16px 20px', textDecoration: 'none', transition: 'all 0.15s',
+                  }}
+                >
+                  <div style={{
+                    width: 40, height: 40, borderRadius: 8, flexShrink: 0,
+                    background: ref.source === 'NRICH' ? 'var(--navy)' : ref.source === 'MIT OpenCourseWare' ? 'var(--burgundy)' : 'var(--green)',
+                    color: 'var(--cream)', display: 'grid', placeItems: 'center',
+                    fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 14, fontStyle: 'italic',
+                  }}>
+                    {ref.source === 'NRICH' ? 'N' : ref.source === 'MIT OpenCourseWare' ? 'M' : 'C'}
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4, flexWrap: 'wrap' as const }}>
+                      <span style={{ fontFamily: 'var(--serif)', fontSize: 15, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.01em' }}>
+                        {ref.title}
+                      </span>
+                      <span style={{
+                        fontFamily: 'var(--mono)', fontSize: 9.5, fontWeight: 700, letterSpacing: '0.06em',
+                        padding: '2px 7px', borderRadius: 4, textTransform: 'uppercase' as const,
+                        background: ref.source === 'NRICH' ? 'var(--navy-soft)' : ref.source === 'MIT OpenCourseWare' ? 'var(--burgundy-soft)' : 'var(--green-soft)',
+                        color: ref.source === 'NRICH' ? 'var(--navy)' : ref.source === 'MIT OpenCourseWare' ? 'var(--burgundy)' : 'var(--green)',
+                      }}>
+                        {ref.source}
+                      </span>
+                    </div>
+                    <p style={{ fontSize: 13, color: 'var(--ink-3)', lineHeight: 1.45, fontWeight: 500, margin: 0 }}>
+                      {ref.description}
+                    </p>
+                    <span style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--ink-4)', marginTop: 4, display: 'block' }}>
+                      {ref.org} &middot; Free &middot; Open Access
+                    </span>
+                  </div>
+                  <span style={{ color: 'var(--ink-4)', fontSize: 14, flexShrink: 0, marginTop: 2 }}>{'\u2197'}</span>
+                </a>
+              ))}
+            </div>
+          </div>
 
           {/* Prev / Next navigation */}
           <div style={{
