@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import AuthGuard from '@/components/AuthGuard'
 
 export const metadata: Metadata = {
   title: 'Practice Questions — AI-Marked GCSE Maths',
@@ -14,5 +13,5 @@ export const metadata: Metadata = {
 }
 
 export default function PracticeLayout({ children }: { children: React.ReactNode }) {
-  return <AuthGuard>{children}</AuthGuard>
+  return <>{children}</>
 }

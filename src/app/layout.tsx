@@ -1,16 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import NavWrapper from "@/components/NavWrapper";
+import InstallBanner from "@/components/InstallBanner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
 });
@@ -20,11 +27,11 @@ const BASE_URL = "https://www.gcsemathsai.co.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "GCSEMathsAI — AI-Powered GCSE Maths Tutor",
+    default: "GCSEMathsAI — Preparation worthy of the grade you want",
     template: "%s | GCSEMathsAI",
   },
   description:
-    "Practise GCSE Maths with instant AI marking. Past-style papers, study notes and topic practice for AQA, Edexcel and OCR — Foundation and Higher.",
+    "Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner, and organised into structured revision that actually moves your grade.",
   keywords: [
     "GCSE Maths", "GCSE Mathematics", "AQA Maths", "Edexcel Maths", "OCR Maths",
     "GCSE past papers", "GCSE practice questions", "AI maths tutor",
@@ -43,23 +50,23 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: BASE_URL,
     siteName: "GCSEMathsAI",
-    title: "GCSEMathsAI — AI-Powered GCSE Maths Tutor",
+    title: "GCSEMathsAI — Preparation worthy of the grade you want",
     description:
-      "Practise GCSE Maths with instant AI marking. Past-style papers, study notes and topic practice for AQA, Edexcel and OCR.",
+      "Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner.",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "GCSEMathsAI — AI-Powered GCSE Maths Tutor",
+        alt: "GCSEMathsAI — AI-Powered GCSE Maths Preparation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GCSEMathsAI — AI-Powered GCSE Maths Tutor",
+    title: "GCSEMathsAI — Preparation worthy of the grade you want",
     description:
-      "Instant AI marking for GCSE Maths. Study notes, timed papers and topic practice for AQA, Edexcel and OCR.",
+      "AI examiner marking for GCSE Maths. Study notes, timed papers and topic practice for AQA, Edexcel and OCR.",
     images: ["/og.png"],
   },
   alternates: {
@@ -74,7 +81,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#6D28D9",
+  themeColor: "#0F4F3A",
 };
 
 export default function RootLayout({
@@ -86,6 +93,10 @@ export default function RootLayout({
     <html lang="en-GB">
       <head>
         <meta name="google-site-verification" content="7yfaIa1Y-jOROaNuyuWVAE3_FY2ct8AIlu7g_cb5VD8" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="GCSEMathsAI" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -94,7 +105,7 @@ export default function RootLayout({
           name: 'GCSEMathsAI',
           url: 'https://www.gcsemathsai.co.uk',
           logo: 'https://www.gcsemathsai.co.uk/og.png',
-          description: 'Free AI-powered GCSE Maths tutor with instant marking. Study notes, practice questions and past papers for AQA, Edexcel and OCR.',
+          description: 'AI-powered GCSE Maths preparation with real examiner-style marking. Study notes, practice questions and past papers for AQA, Edexcel and OCR.',
           sameAs: [],
           contactPoint: { '@type': 'ContactPoint', email: 'enquiries@gcsemathsai.co.uk', contactType: 'customer service' },
         }) }} />
@@ -119,9 +130,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} antialiased`}>
         <NavWrapper />
         {children}
+        <InstallBanner />
       </body>
     </html>
   );

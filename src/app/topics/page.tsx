@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 }
 
 const STRAND_META: Record<string, { icon: string; colour: string; bg: string; border: string }> = {
-  'Number':                              { icon: '🔢', colour: 'text-purple-700', bg: 'bg-purple-50', border: 'border-purple-200' },
-  'Algebra':                             { icon: '📐', colour: 'text-blue-700',   bg: 'bg-blue-50',   border: 'border-blue-200'   },
-  'Ratio, Proportion & Rates of Change': { icon: '⚖️', colour: 'text-amber-700',  bg: 'bg-amber-50',  border: 'border-amber-200'  },
-  'Geometry & Measures':                 { icon: '📏', colour: 'text-green-700',  bg: 'bg-green-50',  border: 'border-green-200'  },
-  'Statistics & Probability':            { icon: '📊', colour: 'text-rose-700',   bg: 'bg-rose-50',   border: 'border-rose-200'   },
+  'Number':                              { icon: '🔢', colour: 'var(--green)',     bg: 'var(--green-soft)',   border: 'var(--rule)' },
+  'Algebra':                             { icon: '📐', colour: 'var(--navy)',      bg: 'var(--navy-soft)',    border: 'var(--rule)' },
+  'Ratio, Proportion & Rates of Change': { icon: '⚖️', colour: 'var(--gold)',      bg: 'var(--gold-soft)',    border: 'var(--rule)' },
+  'Geometry & Measures':                 { icon: '📏', colour: 'var(--burgundy)',  bg: 'var(--burgundy-soft)',border: 'var(--rule)' },
+  'Statistics & Probability':            { icon: '📊', colour: 'var(--green-mid)', bg: 'var(--green-soft)',   border: 'var(--rule)' },
 }
 
 const BASE = 'https://www.gcsemathsai.co.uk'
@@ -68,24 +68,53 @@ export default function TopicsIndexPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <div className="bg-purple-50 border-b border-purple-100 px-6 py-12 text-center">
-        <span className="text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full">
+      <div style={{
+        background: 'var(--paper)',
+        borderBottom: '1px solid var(--rule)',
+        padding: '48px 24px',
+        textAlign: 'center',
+      }}>
+        <span style={{
+          display: 'inline-block',
+          fontSize: 11,
+          fontWeight: 700,
+          fontFamily: 'var(--mono)',
+          color: 'var(--green)',
+          background: 'var(--green-soft)',
+          padding: '4px 14px',
+          borderRadius: 999,
+          letterSpacing: '0.05em',
+          textTransform: 'uppercase',
+          marginBottom: 16,
+        }}>
           73 Topics
         </span>
-        <h1 className="text-3xl font-bold text-gray-900 mt-4 mb-2">
+        <h1 style={{
+          fontFamily: 'var(--serif)',
+          fontSize: 'clamp(24px, 5vw, 36px)',
+          fontWeight: 800,
+          color: 'var(--ink)',
+          margin: '0 0 8px',
+        }}>
           Every GCSE Maths Topic — Explained
         </h1>
-        <p className="text-gray-500 text-sm max-w-lg mx-auto">
+        <p style={{
+          fontSize: 14,
+          color: 'var(--ink-3)',
+          maxWidth: 520,
+          margin: '0 auto',
+          lineHeight: 1.6,
+        }}>
           Step-by-step guides, worked examples and practice questions for every topic on the AQA, Edexcel and OCR GCSE Maths specification.
         </p>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 py-12">
+      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '48px 24px' }}>
 
         {strandOrder.map(strand => {
           const strandTopics = strands[strand]
@@ -93,33 +122,83 @@ export default function TopicsIndexPage() {
           const meta = STRAND_META[strand] ?? STRAND_META['Number']
 
           return (
-            <div key={strand} className="mb-12">
-              <div className="flex items-center gap-3 mb-5">
-                <span className="text-2xl">{meta.icon}</span>
-                <h2 className={`text-xl font-bold ${meta.colour}`}>{strand}</h2>
-                <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">
+            <div key={strand} style={{ marginBottom: 48 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+                <span style={{ fontSize: 24 }}>{meta.icon}</span>
+                <h2 style={{
+                  fontFamily: 'var(--serif)',
+                  fontSize: 20,
+                  fontWeight: 700,
+                  color: meta.colour,
+                  margin: 0,
+                }}>{strand}</h2>
+                <span style={{
+                  fontSize: 11,
+                  fontFamily: 'var(--mono)',
+                  color: 'var(--ink-3)',
+                  background: 'var(--cream-2)',
+                  padding: '2px 10px',
+                  borderRadius: 999,
+                }}>
                   {strandTopics.length} topics
                 </span>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                gap: 12,
+              }}>
                 {strandTopics.map(topic => (
                   <Link
                     key={topic.slug}
                     href={`/topics/${topic.slug}`}
-                    className={`group block ${meta.bg} border ${meta.border} rounded-xl px-4 py-3 hover:shadow-md transition`}
+                    style={{
+                      display: 'block',
+                      background: 'var(--paper)',
+                      border: '1px solid var(--rule)',
+                      borderRadius: 12,
+                      padding: '14px 16px',
+                      transition: 'all 0.2s',
+                      textDecoration: 'none',
+                    }}
                   >
-                    <div className="flex items-start justify-between gap-2">
-                      <div className="flex-1 min-w-0">
-                        <p className={`text-sm font-bold ${meta.colour} group-hover:underline leading-snug`}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <p style={{
+                          fontFamily: 'var(--serif)',
+                          fontSize: 14,
+                          fontWeight: 700,
+                          color: 'var(--ink)',
+                          lineHeight: 1.4,
+                          margin: 0,
+                        }}>
                           {topic.topicNumber}. {topic.title.replace(/ — .*$/, '').replace(/ GCSE.*$/, '')}
                         </p>
-                        <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+                        <p style={{
+                          fontSize: 12,
+                          color: 'var(--ink-3)',
+                          marginTop: 4,
+                          lineHeight: 1.4,
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden',
+                        }}>
                           {topic.description}
                         </p>
                       </div>
                       {topic.tier === 'Higher only' && (
-                        <span className="shrink-0 text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">
+                        <span style={{
+                          flexShrink: 0,
+                          fontSize: 10,
+                          fontWeight: 700,
+                          fontFamily: 'var(--mono)',
+                          color: 'var(--gold)',
+                          background: 'var(--gold-soft)',
+                          padding: '2px 6px',
+                          borderRadius: 4,
+                        }}>
                           H
                         </span>
                       )}
@@ -132,43 +211,91 @@ export default function TopicsIndexPage() {
         })}
 
         {/* CTA */}
-        <div className="bg-purple-700 rounded-2xl px-8 py-10 text-center mt-8">
-          <h2 className="text-2xl font-bold text-white mb-2">Ready to practise?</h2>
-          <p className="text-purple-200 text-sm mb-6 max-w-md mx-auto">
+        <div style={{
+          background: 'var(--green)',
+          borderRadius: 16,
+          padding: '40px 32px',
+          textAlign: 'center',
+          marginTop: 32,
+        }}>
+          <h2 style={{
+            fontFamily: 'var(--serif)',
+            fontSize: 'clamp(20px, 4vw, 28px)',
+            fontWeight: 800,
+            color: '#fff',
+            margin: '0 0 8px',
+          }}>Ready to practise?</h2>
+          <p style={{
+            fontSize: 14,
+            color: 'rgba(255,255,255,0.75)',
+            maxWidth: 440,
+            margin: '0 auto 24px',
+            lineHeight: 1.5,
+          }}>
             Get AI-marked practice questions on any topic — with instant feedback and step-by-step solutions.
           </p>
           <Link
             href="/auth"
-            className="inline-block bg-white text-purple-700 font-semibold px-8 py-3 rounded-xl text-sm hover:bg-purple-50 transition"
+            style={{
+              display: 'inline-block',
+              background: '#fff',
+              color: 'var(--green)',
+              fontWeight: 700,
+              fontFamily: 'var(--sans)',
+              padding: '12px 32px',
+              borderRadius: 10,
+              fontSize: 14,
+              transition: 'all 0.2s',
+              textDecoration: 'none',
+            }}
           >
-            Start free →
+            Start free &rarr;
           </Link>
         </div>
 
         {/* Related resources */}
-        <div className="mt-8 grid md:grid-cols-3 gap-4">
-          <Link href="/formula-sheet" className="block bg-indigo-50 border border-indigo-100 rounded-xl px-5 py-4 hover:shadow-md transition">
-            <p className="text-sm font-semibold text-indigo-700">Formula Sheet</p>
-            <p className="text-xs text-gray-500 mt-1">Every GCSE Maths formula in one free PDF</p>
+        <div style={{
+          marginTop: 32,
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gap: 16,
+        }}>
+          <Link href="/formula-sheet" style={{
+            display: 'block',
+            background: 'var(--paper)',
+            border: '1px solid var(--rule)',
+            borderRadius: 12,
+            padding: '20px',
+            transition: 'all 0.2s',
+            textDecoration: 'none',
+          }}>
+            <p style={{ fontSize: 14, fontWeight: 700, fontFamily: 'var(--serif)', color: 'var(--green)', margin: 0 }}>Formula Sheet</p>
+            <p style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 4 }}>Every GCSE Maths formula in one free PDF</p>
           </Link>
-          <Link href="/blog" className="block bg-purple-50 border border-purple-100 rounded-xl px-5 py-4 hover:shadow-md transition">
-            <p className="text-sm font-semibold text-purple-700">Blog</p>
-            <p className="text-xs text-gray-500 mt-1">Revision guides, exam tips and strategy articles</p>
+          <Link href="/blog" style={{
+            display: 'block',
+            background: 'var(--paper)',
+            border: '1px solid var(--rule)',
+            borderRadius: 12,
+            padding: '20px',
+            transition: 'all 0.2s',
+            textDecoration: 'none',
+          }}>
+            <p style={{ fontSize: 14, fontWeight: 700, fontFamily: 'var(--serif)', color: 'var(--navy)', margin: 0 }}>Blog</p>
+            <p style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 4 }}>Revision guides, exam tips and strategy articles</p>
           </Link>
-          <Link href="/study" className="block bg-green-50 border border-green-100 rounded-xl px-5 py-4 hover:shadow-md transition">
-            <p className="text-sm font-semibold text-green-700">Study Notes</p>
-            <p className="text-xs text-gray-500 mt-1">Key facts, formulas and worked examples by topic</p>
+          <Link href="/study" style={{
+            display: 'block',
+            background: 'var(--paper)',
+            border: '1px solid var(--rule)',
+            borderRadius: 12,
+            padding: '20px',
+            transition: 'all 0.2s',
+            textDecoration: 'none',
+          }}>
+            <p style={{ fontSize: 14, fontWeight: 700, fontFamily: 'var(--serif)', color: 'var(--gold)', margin: 0 }}>Study Notes</p>
+            <p style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 4 }}>Key facts, formulas and worked examples by topic</p>
           </Link>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-6 text-sm text-gray-500">
-          <Link href="/blog" className="hover:text-purple-700 transition">Blog</Link>
-          <Link href="/study" className="hover:text-purple-700 transition">Study Notes</Link>
-          <Link href="/papers" className="hover:text-purple-700 transition">Past Papers</Link>
-          <Link href="/features" className="hover:text-purple-700 transition">Features</Link>
-          <Link href="/pricing" className="hover:text-purple-700 transition">Pricing</Link>
-          <Link href="/" className="hover:text-purple-700 transition">← Home</Link>
         </div>
       </div>
     </main>

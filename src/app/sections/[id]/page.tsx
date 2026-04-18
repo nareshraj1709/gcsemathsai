@@ -3,6 +3,7 @@ import { useState, useEffect, Suspense } from 'react'
 import { useParams, useSearchParams, useRouter } from 'next/navigation'
 import { getSection } from '@/lib/sections-data'
 import { supabase } from '@/lib/supabase'
+import Footer from '@/components/Footer'
 
 type Question = { question: string; markScheme: string; marks: number }
 type MarkResult = { score: number; outOf: number; feedback: string }
@@ -15,8 +16,8 @@ const EXAM_YEARS = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017] as const
 export default function SectionPage() {
   return (
     <Suspense fallback={
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#F8F7FF' }}>
-        <p style={{ color: '#6D28D9', fontWeight: 600 }}>Loading…</p>
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--cream)' }}>
+        <p style={{ color: 'var(--green)', fontWeight: 600 }}>Loading…</p>
       </div>
     }>
       <SectionPractice />
@@ -81,10 +82,10 @@ function SectionPractice() {
 
   if (!section) {
     return (
-      <main style={{ minHeight: '100vh', background: '#F8F7FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <main style={{ minHeight: '100vh', background: 'var(--cream)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ textAlign: 'center' }}>
           <p style={{ fontSize: 20, fontWeight: 700, color: '#374151' }}>Section not found</p>
-          <button onClick={() => router.push('/sections')} style={{ marginTop: 16, color: '#6D28D9', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer', fontSize: 14 }}>← Back to sections</button>
+          <button onClick={() => router.push('/sections')} style={{ marginTop: 16, color: 'var(--green)', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer', fontSize: 14 }}>← Back to sections</button>
         </div>
       </main>
     )
@@ -178,28 +179,28 @@ function SectionPractice() {
   if (phase === 'setup') {
     const chip = (active: boolean, bg: string) => ({
       padding: '10px 14px', borderRadius: 12, cursor: 'pointer',
-      border: `2px solid ${active ? section.color : '#E5E1FF'}`,
+      border: `2px solid ${active ? section.color : 'var(--rule)'}`,
       background: active ? bg : '#fff',
       color: active ? section.color : '#374151',
       fontWeight: (active ? 700 : 500) as 700 | 500,
-      fontSize: 13, fontFamily: "'Trebuchet MS', sans-serif",
+      fontSize: 13, fontFamily: "var(--sans)",
       transition: 'all 0.15s',
     })
     return (
-      <main style={{ minHeight: '100vh', background: '#F8F7FF', fontFamily: "'Trebuchet MS', sans-serif", padding: '40px 24px' }}>
+      <main style={{ minHeight: '100vh', background: 'var(--cream)', fontFamily: "var(--sans)", padding: '40px 24px' }}>
         <div style={{ maxWidth: 560, margin: '0 auto' }}>
           <button onClick={() => router.push('/sections')} style={{
             background: 'none', border: 'none', color: '#6B7280', fontSize: 13,
-            cursor: 'pointer', marginBottom: 20, fontFamily: "'Trebuchet MS', sans-serif",
+            cursor: 'pointer', marginBottom: 20, fontFamily: "var(--sans)",
           }}>← All topic tests</button>
 
           <div style={{
-            background: '#fff', border: '1px solid #E5E1FF', borderRadius: 24,
-            padding: '32px 28px', boxShadow: '0 4px 32px rgba(109,40,217,0.08)',
+            background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 24,
+            padding: '32px 28px', boxShadow: '0 4px 32px rgba(15,79,58,0.08)',
           }}>
             <div style={{ textAlign: 'center', marginBottom: 24 }}>
               <div style={{ fontSize: 40, marginBottom: 8 }}>{section.icon}</div>
-              <h1 style={{ fontFamily: "'Georgia', serif", fontSize: 22, color: '#0D0B1A', margin: '0 0 4px' }}>
+              <h1 style={{ fontFamily: "var(--serif)", fontSize: 22, color: 'var(--ink)', margin: '0 0 4px' }}>
                 {section.name}
               </h1>
               <p style={{ fontSize: 13, color: '#6B7280', margin: 0 }}>
@@ -257,7 +258,7 @@ function SectionPractice() {
               width: '100%', padding: '14px', borderRadius: 12, border: 'none',
               background: `linear-gradient(135deg, ${section.color}, ${section.color}bb)`,
               color: '#fff', fontWeight: 700, fontSize: 15, cursor: 'pointer',
-              fontFamily: "'Trebuchet MS', sans-serif",
+              fontFamily: "var(--sans)",
               boxShadow: `0 4px 16px ${section.color}30`,
             }}>
               Start 10 questions →
@@ -271,7 +272,7 @@ function SectionPractice() {
   // ── LOADING ──────────────────────────────────────────────────
   if (phase === 'loading') {
     return (
-      <main style={{ minHeight: '100vh', background: '#F8F7FF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "'Trebuchet MS', sans-serif" }}>
+      <main style={{ minHeight: '100vh', background: 'var(--cream)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: "var(--sans)" }}>
         <div style={{ textAlign: 'center' }}>
           <div style={{ fontSize: 40, marginBottom: 16 }}>{section.icon}</div>
           <p style={{ fontSize: 16, fontWeight: 700, color: section.color }}>{error || 'Generating questions…'}</p>
@@ -292,7 +293,7 @@ function SectionPractice() {
     const message = pct >= 80 ? 'Excellent work!' : pct >= 60 ? 'Good effort — keep practising!' : 'Keep going — review the topics you missed.'
 
     return (
-      <main style={{ minHeight: '100vh', background: '#F8F7FF', fontFamily: "'Trebuchet MS', sans-serif" }}>
+      <main style={{ minHeight: '100vh', background: 'var(--cream)', fontFamily: "var(--sans)" }}>
         <div style={{ maxWidth: 680, margin: '0 auto', padding: '40px 24px' }}>
 
           {/* Score */}
@@ -301,7 +302,7 @@ function SectionPractice() {
             borderRadius: 20, padding: '36px', textAlign: 'center', color: '#fff', marginBottom: 24,
           }}>
             <p style={{ fontSize: 13, opacity: 0.85, margin: '0 0 8px' }}>{section.name} · {board} {tier}</p>
-            <div style={{ fontSize: 52, fontWeight: 900, lineHeight: 1, fontFamily: "'Georgia', serif" }}>{pct}%</div>
+            <div style={{ fontSize: 52, fontWeight: 900, lineHeight: 1, fontFamily: "var(--serif)" }}>{pct}%</div>
             <div style={{ fontSize: 15, opacity: 0.9, margin: '8px 0 4px' }}>{totalScore}/{totalOut} marks</div>
             <div style={{ fontSize: 14, opacity: 0.85, marginTop: 6 }}>{message}</div>
             <div style={{ display: 'flex', gap: 20, justifyContent: 'center', marginTop: 16 }}>
@@ -320,17 +321,17 @@ function SectionPractice() {
           {/* AI Evaluation */}
           {evalLoading && (
             <div style={{
-              background: '#fff', border: '1.5px solid #E5E1FF', borderRadius: 16,
+              background: 'var(--paper)', border: '1.5px solid var(--rule)', borderRadius: 16,
               padding: '20px 24px', marginBottom: 24, textAlign: 'center',
             }}>
-              <p style={{ fontSize: 13, color: '#6D28D9', fontWeight: 600, margin: 0 }}>
+              <p style={{ fontSize: 13, color: 'var(--green)', fontWeight: 600, margin: 0 }}>
                 Generating your AI evaluation…
               </p>
             </div>
           )}
           {evaluation && (
             <div style={{
-              background: '#fff', border: '1.5px solid #E5E1FF', borderRadius: 16,
+              background: 'var(--paper)', border: '1.5px solid var(--rule)', borderRadius: 16,
               padding: '20px 24px', marginBottom: 24,
             }}>
               <p style={{ fontSize: 12, fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: 0.8, margin: '0 0 10px' }}>
@@ -362,7 +363,7 @@ function SectionPractice() {
           )}
 
           {/* Per question */}
-          <h2 style={{ fontFamily: "'Georgia', serif", fontSize: 18, fontWeight: 800, color: '#0D0B1A', marginBottom: 16 }}>
+          <h2 style={{ fontFamily: "var(--serif)", fontSize: 18, fontWeight: 800, color: 'var(--ink)', marginBottom: 16 }}>
             Question by question
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -371,7 +372,7 @@ function SectionPractice() {
               const zero = item.result.score === 0
               return (
                 <div key={i} style={{
-                  background: '#fff', border: `1.5px solid ${full ? '#A7F3D0' : zero ? '#FECACA' : '#FDE68A'}`,
+                  background: 'var(--paper)', border: `1.5px solid ${full ? '#A7F3D0' : zero ? '#FECACA' : '#FDE68A'}`,
                   borderRadius: 14, overflow: 'hidden',
                 }}>
                   <div style={{
@@ -402,7 +403,7 @@ function SectionPractice() {
 
           {/* Actions */}
           <div style={{ display: 'flex', gap: 12, marginTop: 24 }}>
-            <button onClick={() => router.push('/sections')} style={{ flex: 1, padding: '13px', borderRadius: 12, border: '1.5px solid #E5E1FF', background: '#fff', color: '#6D28D9', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}>
+            <button onClick={() => router.push('/sections')} style={{ flex: 1, padding: '13px', borderRadius: 12, border: '1.5px solid var(--rule)', background: 'var(--paper)', color: 'var(--green)', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}>
               ← All topic tests
             </button>
             <button onClick={() => router.push(`/study`)} style={{ flex: 1, padding: '13px', borderRadius: 12, border: 'none', background: `linear-gradient(135deg, ${section.color}, ${section.color}bb)`, color: '#fff', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}>
@@ -421,16 +422,16 @@ function SectionPractice() {
     : section.color
 
   return (
-    <main style={{ minHeight: '100vh', background: '#F8F7FF', fontFamily: "'Trebuchet MS', sans-serif" }}>
+    <main style={{ minHeight: '100vh', background: 'var(--cream)', fontFamily: "var(--sans)" }}>
       {/* Nav */}
       <nav style={{
-        background: '#fff', borderBottom: '1px solid #E5E1FF',
+        background: 'var(--paper)', borderBottom: '1px solid var(--rule)',
         padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <span style={{ fontSize: 20, fontWeight: 800, color: section.color }}>{section.icon}</span>
           <div>
-            <p style={{ fontSize: 13, fontWeight: 700, color: '#0D0B1A', margin: 0 }}>{section.name}</p>
+            <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink)', margin: 0 }}>{section.name}</p>
             <p style={{ fontSize: 11, color: '#9CA3AF', margin: 0 }}>{board} · {tier}</p>
           </div>
         </div>
@@ -438,14 +439,14 @@ function SectionPractice() {
       </nav>
 
       {/* Progress */}
-      <div style={{ height: 4, background: '#E5E1FF' }}>
+      <div style={{ height: 4, background: 'var(--rule)' }}>
         <div style={{ height: 4, background: section.color, width: `${(allResults.length / 10) * 100}%`, transition: 'width 0.3s' }} />
       </div>
 
       {/* Session score */}
       {allResults.length > 0 && (
         <div style={{
-          background: '#fff', borderBottom: '1px solid #F3F4F6',
+          background: 'var(--paper)', borderBottom: '1px solid #F3F4F6',
           padding: '8px 24px', display: 'flex', alignItems: 'center', gap: 12,
         }}>
           <span style={{ fontSize: 12, color: '#6B7280', fontWeight: 600 }}>Score so far:</span>
@@ -461,14 +462,14 @@ function SectionPractice() {
       <div style={{ maxWidth: 640, margin: '0 auto', padding: '28px 24px' }}>
 
         {/* Question card */}
-        <div style={{ background: '#fff', borderRadius: 20, border: `1.5px solid ${section.borderColor}`, padding: '24px', marginBottom: 16 }}>
+        <div style={{ background: 'var(--paper)', borderRadius: 20, border: `1.5px solid ${section.borderColor}`, padding: '24px', marginBottom: 16 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
             <span style={{ fontSize: 11, fontWeight: 700, color: section.color, background: section.bgColor, padding: '3px 10px', borderRadius: 999 }}>
               {section.topic}
             </span>
             <span style={{ fontSize: 12, color: '#9CA3AF' }}>[{q.marks} mark{q.marks !== 1 ? 's' : ''}]</span>
           </div>
-          <p style={{ fontSize: 16, fontWeight: 600, color: '#0D0B1A', lineHeight: 1.6, whiteSpace: 'pre-wrap', margin: '0 0 18px' }}>
+          <p style={{ fontSize: 16, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.6, whiteSpace: 'pre-wrap', margin: '0 0 18px' }}>
             {q.question}
           </p>
           <textarea
@@ -478,10 +479,10 @@ function SectionPractice() {
             placeholder="Write your working and answer here…"
             rows={4}
             style={{
-              width: '100%', border: `1.5px solid ${result ? '#E5E1FF' : section.borderColor}`,
+              width: '100%', border: `1.5px solid ${result ? 'var(--rule)' : section.borderColor}`,
               borderRadius: 10, padding: '11px 14px', fontSize: 14, resize: 'vertical',
-              fontFamily: "'Trebuchet MS', sans-serif", outline: 'none',
-              background: result ? '#F9FAFB' : '#fff', boxSizing: 'border-box',
+              fontFamily: "var(--sans)", outline: 'none',
+              background: result ? 'var(--cream)' : 'var(--paper)', boxSizing: 'border-box',
             }}
           />
           {!result && (

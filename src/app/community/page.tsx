@@ -34,12 +34,12 @@ export default function CommunityHome() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
       {/* Header */}
-      <div className="bg-purple-50 border-b border-purple-100 px-6 py-12 text-center">
-        <span className="text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full">Community</span>
-        <h1 className="text-3xl font-bold text-gray-900 mt-4 mb-2">GCSE Maths Forum</h1>
-        <p className="text-gray-500 text-sm max-w-md mx-auto">
+      <div className="border-b px-6 py-12 text-center" style={{ background: 'var(--green-soft)', borderColor: 'var(--rule)' }}>
+        <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ color: 'var(--green)', background: 'var(--green-soft)' }}>Community</span>
+        <h1 className="text-3xl font-bold mt-4 mb-2" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>GCSE Maths Forum</h1>
+        <p className="text-sm max-w-md mx-auto" style={{ color: 'var(--ink-3)' }}>
           Ask a question, share your working, and help others. Moderated and safe for students.
         </p>
       </div>
@@ -53,18 +53,18 @@ export default function CommunityHome() {
               value={searchInput}
               onChange={e => setSearchInput(e.target.value)}
               placeholder="Search posts..."
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-purple-500 transition"
+              className="w-full px-4 py-2.5 rounded-xl text-sm focus:outline-none transition"
+              style={{ border: '1px solid var(--rule)', background: 'var(--paper)' }}
             />
           </form>
           <div className="flex gap-2">
-            <div className="flex bg-white border border-gray-200 rounded-xl p-1">
+            <div className="flex rounded-xl p-1" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
               {(['new', 'top'] as const).map(s => (
                 <button
                   key={s}
                   onClick={() => setSort(s)}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition ${
-                    sort === s ? 'bg-purple-100 text-purple-700' : 'text-gray-500'
-                  }`}
+                  className="px-3 py-1.5 rounded-lg text-sm font-semibold transition"
+                  style={sort === s ? { background: 'var(--green-soft)', color: 'var(--green)' } : { color: 'var(--ink-3)' }}
                 >
                   {s === 'new' ? 'New' : 'Top'}
                 </button>
@@ -73,14 +73,16 @@ export default function CommunityHome() {
             {loggedIn ? (
               <Link
                 href="/community/new"
-                className="bg-purple-700 text-white px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-purple-800 transition whitespace-nowrap"
+                className="text-white px-4 py-2.5 rounded-xl text-sm font-semibold transition whitespace-nowrap"
+                style={{ background: 'var(--green)' }}
               >
                 + New post
               </Link>
             ) : (
               <Link
                 href="/auth"
-                className="bg-purple-700 text-white px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-purple-800 transition whitespace-nowrap"
+                className="text-white px-4 py-2.5 rounded-xl text-sm font-semibold transition whitespace-nowrap"
+                style={{ background: 'var(--green)' }}
               >
                 Log in to post
               </Link>
@@ -91,19 +93,20 @@ export default function CommunityHome() {
         {/* Posts list */}
         {loading ? (
           <div className="text-center py-12">
-            <p className="text-purple-700 font-semibold">Loading posts...</p>
+            <p className="font-semibold" style={{ color: 'var(--green)' }}>Loading posts...</p>
           </div>
         ) : posts.length === 0 ? (
-          <div className="bg-white border border-gray-100 rounded-2xl p-12 text-center">
+          <div className="rounded-2xl p-12 text-center" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
             <div className="text-5xl mb-3">💬</div>
-            <p className="text-base font-bold text-gray-900 mb-1">No posts yet</p>
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="text-base font-bold mb-1" style={{ color: 'var(--ink)' }}>No posts yet</p>
+            <p className="text-sm mb-6" style={{ color: 'var(--ink-3)' }}>
               {search ? 'Try a different search term.' : 'Be the first to start a discussion!'}
             </p>
             {loggedIn && !search && (
               <Link
                 href="/community/new"
-                className="inline-block bg-purple-700 text-white px-6 py-2.5 rounded-xl text-sm font-semibold hover:bg-purple-800 transition"
+                className="inline-block text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition"
+                style={{ background: 'var(--green)' }}
               >
                 Create the first post →
               </Link>
@@ -118,9 +121,9 @@ export default function CommunityHome() {
         )}
 
         {/* Community guidelines */}
-        <div className="mt-12 bg-blue-50 border border-blue-100 rounded-xl p-5">
-          <p className="text-sm font-bold text-blue-800 mb-2">📚 Community guidelines</p>
-          <ul className="text-xs text-blue-700 space-y-1 leading-relaxed">
+        <div className="mt-12 rounded-xl p-5" style={{ background: 'var(--green-soft)', border: '1px solid var(--rule)' }}>
+          <p className="text-sm font-bold mb-2" style={{ color: 'var(--green-dark)' }}>📚 Community guidelines</p>
+          <ul className="text-xs space-y-1 leading-relaxed" style={{ color: 'var(--green)' }}>
             <li>• Be kind and respectful — we're all here to learn</li>
             <li>• Ask clear questions and share your working when possible</li>
             <li>• No personal contact details, no advertising, no cheating offers</li>

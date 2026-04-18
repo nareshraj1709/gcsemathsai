@@ -2,26 +2,29 @@
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import Footer from '@/components/Footer'
 
 // ── Design tokens ─────────────────────────────────────────────
 const C = {
-  ink: '#0D0B1A',
-  purple: '#6D28D9',
-  purpleLight: '#8B5CF6',
-  purplePale: '#EDE9FE',
-  mist: '#F8F7FF',
-  mid: '#6B7280',
-  border: '#E5E1FF',
-  green: '#059669',
-  greenLight: '#D1FAE5',
-  red: '#DC2626',
-  redLight: '#FEE2E2',
-  amber: '#D97706',
-  amberLight: '#FEF3C7',
+  ink: 'var(--ink)',
+  green: 'var(--green)',
+  greenDark: 'var(--green-dark)',
+  greenMid: 'var(--green-mid)',
+  greenSoft: 'var(--green-soft)',
+  cream: 'var(--cream)',
+  paper: 'var(--paper)',
+  mid: 'var(--ink-3)',
+  border: 'var(--rule)',
+  success: 'var(--green)',
+  successSoft: 'var(--green-soft)',
+  burgundy: 'var(--burgundy)',
+  burgundySoft: 'var(--burgundy-soft)',
+  gold: 'var(--gold)',
+  goldSoft: 'var(--gold-soft)',
 }
 const font = {
-  display: "'Georgia', 'Times New Roman', serif",
-  body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
+  display: "var(--serif)",
+  body: "var(--sans)",
 }
 
 // ── Types ─────────────────────────────────────────────────────
@@ -91,11 +94,11 @@ function LoadingScreen({ genError, difficulty, subtopic, topic, board, tier, onR
 
   if (genError) {
     return (
-      <div style={{ minHeight: '100vh', background: C.mist, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: font.body }}>
+      <div style={{ minHeight: '100vh', background: C.cream, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: font.body }}>
         <div style={{ textAlign: 'center', maxWidth: 400 }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>📐</div>
-          <p style={{ color: C.red, fontWeight: 700, fontSize: 15, marginBottom: 16 }}>{genError}</p>
-          <button onClick={onRetry} style={{ background: C.purple, color: '#fff', border: 'none', borderRadius: 10, padding: '10px 20px', fontSize: 14, fontWeight: 700, cursor: 'pointer', marginRight: 10 }}>Try again</button>
+          <p style={{ color: C.burgundy, fontWeight: 700, fontSize: 15, marginBottom: 16 }}>{genError}</p>
+          <button onClick={onRetry} style={{ background: C.green, color: '#fff', border: 'none', borderRadius: 10, padding: '10px 20px', fontSize: 14, fontWeight: 700, cursor: 'pointer', marginRight: 10 }}>Try again</button>
           <button onClick={onBack} style={{ background: 'none', color: C.mid, border: `1.5px solid ${C.border}`, borderRadius: 10, padding: '10px 20px', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>Back to topics</button>
         </div>
       </div>
@@ -103,14 +106,14 @@ function LoadingScreen({ genError, difficulty, subtopic, topic, board, tier, onR
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: C.mist, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: font.body }}>
+    <div style={{ minHeight: '100vh', background: C.cream, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: font.body }}>
       <div style={{ textAlign: 'center', maxWidth: 420, padding: '0 24px' }}>
         <style>{`
           @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
           @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
         `}</style>
         <div style={{ fontSize: 48, marginBottom: 20, animation: 'bounce 1.2s ease-in-out infinite' }}>✏️</div>
-        <p style={{ color: C.purple, fontWeight: 800, fontSize: 18, margin: '0 0 4px', fontFamily: font.display }}>
+        <p style={{ color: C.green, fontWeight: 800, fontSize: 18, margin: '0 0 4px', fontFamily: font.display }}>
           Building your {board} practice paper
         </p>
         <p style={{ color: C.mid, fontSize: 13, margin: '0 0 20px' }}>
@@ -118,19 +121,19 @@ function LoadingScreen({ genError, difficulty, subtopic, topic, board, tier, onR
         </p>
 
         <div style={{ background: C.border, borderRadius: 999, height: 8, overflow: 'hidden', maxWidth: 300, margin: '0 auto 12px' }}>
-          <div style={{ height: '100%', borderRadius: 999, background: `linear-gradient(90deg, ${C.purple}, ${C.purpleLight})`, width: `${progress}%`, transition: 'width 1s ease-out' }} />
+          <div style={{ height: '100%', borderRadius: 999, background: `linear-gradient(90deg, ${C.green}, ${C.greenMid})`, width: `${progress}%`, transition: 'width 1s ease-out' }} />
         </div>
 
-        <p style={{ color: C.purple, fontSize: 13, fontWeight: 600, margin: '0 0 24px', minHeight: 20, animation: 'fadeIn 0.4s ease' }} key={stepIndex}>
+        <p style={{ color: C.green, fontSize: 13, fontWeight: 600, margin: '0 0 24px', minHeight: 20, animation: 'fadeIn 0.4s ease' }} key={stepIndex}>
           {LOADING_STEPS[stepIndex]}
         </p>
 
-        <div style={{ background: '#fff', borderRadius: 14, border: `1px solid ${C.border}`, padding: '16px 20px', boxShadow: '0 2px 16px rgba(109,40,217,0.06)', animation: 'fadeIn 0.5s ease', minHeight: 60, display: 'flex', flexDirection: 'column', justifyContent: 'center' }} key={tipIndex}>
-          <p style={{ fontSize: 11, fontWeight: 700, color: C.purple, textTransform: 'uppercase', letterSpacing: 0.8, margin: '0 0 6px' }}>Exam tip</p>
+        <div style={{ background: C.paper, borderRadius: 14, border: `1px solid ${C.border}`, padding: '16px 20px', boxShadow: '0 2px 16px rgba(0,0,0,0.04)', animation: 'fadeIn 0.5s ease', minHeight: 60, display: 'flex', flexDirection: 'column', justifyContent: 'center' }} key={tipIndex}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: C.green, textTransform: 'uppercase', letterSpacing: 0.8, margin: '0 0 6px' }}>Exam tip</p>
           <p style={{ fontSize: 13, color: C.ink, lineHeight: 1.5, margin: 0 }}>{LOADING_TIPS[tipIndex]}</p>
         </div>
 
-        <p style={{ color: '#D1D5DB', fontSize: 11, marginTop: 16 }}>
+        <p style={{ color: 'var(--ink-4)', fontSize: 11, marginTop: 16 }}>
           {elapsed < 5 ? 'This usually takes 5-10 seconds' : `${elapsed}s — almost ready...`}
         </p>
       </div>
@@ -143,7 +146,7 @@ function ScoreRing({ pct, size = 110 }: { pct: number; size?: number }) {
   const r = size * 0.42
   const circ = 2 * Math.PI * r
   const offset = circ - (pct / 100) * circ
-  const color = pct >= 80 ? C.green : pct >= 50 ? C.amber : C.red
+  const color = pct >= 80 ? C.success : pct >= 50 ? C.gold : C.burgundy
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={{ display: 'block' }}>
       <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={C.border} strokeWidth={size * 0.08} />
@@ -162,8 +165,8 @@ function ScoreRing({ pct, size = 110 }: { pct: number; size?: number }) {
 export default function PracticePage() {
   return (
     <Suspense fallback={
-      <div style={{ minHeight: '100vh', background: C.mist, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ color: C.purple, fontWeight: 700, fontFamily: font.body }}>Loading...</p>
+      <div style={{ minHeight: '100vh', background: C.cream, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <p style={{ color: C.green, fontWeight: 700, fontFamily: font.body }}>Loading...</p>
       </div>
     }>
       <Practice />
@@ -182,6 +185,11 @@ function Practice() {
   const tier      = searchParams.get('tier')       || 'Foundation'
   const difficulty = searchParams.get('difficulty') || 'Medium'
   const year      = searchParams.get('year')       || ''
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => setIsLoggedIn(!!session))
+  }, [])
 
   const [phase, setPhase]         = useState<Phase>('loading')
   const [questions, setQuestions] = useState<Question[]>([])
@@ -267,16 +275,17 @@ function Practice() {
 
   // ── COMPLETE ────────────────────────────────────────────────
   if (phase === 'complete') {
-    const col = pct >= 80 ? C.green : pct >= 50 ? C.amber : C.red
-    const bg  = pct >= 80 ? '#F0FDF4' : pct >= 50 ? '#FFFBEB' : '#FFF5F5'
+    const col = pct >= 80 ? C.success : pct >= 50 ? C.gold : C.burgundy
+    const bg  = pct >= 80 ? C.successSoft : pct >= 50 ? C.goldSoft : C.burgundySoft
     const msg = pct >= 80 ? 'Great work!' : pct >= 50 ? 'Good effort!' : 'Keep practising!'
 
     return (
-      <div style={{ minHeight: '100vh', background: C.mist, fontFamily: font.body, padding: '40px 24px 80px' }}>
+      <div style={{ minHeight: '100vh', background: C.cream, fontFamily: font.body, display: 'flex', flexDirection: 'column' }}>
+        <div style={{ flex: 1, padding: '40px 24px 80px' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
 
           {/* Summary */}
-          <div style={{ background: '#fff', borderRadius: 20, border: `1px solid ${C.border}`, overflow: 'hidden', marginBottom: 20, boxShadow: '0 4px 24px rgba(109,40,217,0.06)' }}>
+          <div style={{ background: C.paper, borderRadius: 20, border: `1px solid ${C.border}`, overflow: 'hidden', marginBottom: 20, boxShadow: '0 4px 24px rgba(0,0,0,0.04)' }}>
             <div style={{ background: bg, padding: '28px 24px', display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
               <ScoreRing pct={pct} />
               <div>
@@ -284,7 +293,7 @@ function Practice() {
                 <div style={{ fontSize: 15, color: C.ink, fontWeight: 600, marginBottom: 6 }}>{totalScore} / {totalOut} marks</div>
                 <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap' }}>
                   {[`${board} (${boardCode})`, tier, subtopic || topic || 'Mixed'].map(tag => (
-                    <span key={tag} style={{ fontSize: 11, fontWeight: 700, color: C.purple, background: C.purplePale, padding: '2px 8px', borderRadius: 999 }}>{tag}</span>
+                    <span key={tag} style={{ fontSize: 11, fontWeight: 700, color: C.green, background: C.greenSoft, padding: '2px 8px', borderRadius: 999 }}>{tag}</span>
                   ))}
                 </div>
               </div>
@@ -298,7 +307,7 @@ function Practice() {
                   return (
                     <div key={i} title={`Q${i + 1}: ${a.score}/${a.outOf}`} style={{
                       width: 34, height: 34, borderRadius: 8,
-                      background: qp === 1 ? C.green : qp === 0 ? C.red : C.amber,
+                      background: qp === 1 ? C.success : qp === 0 ? C.burgundy : C.gold,
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       color: '#fff', fontSize: 11, fontWeight: 700,
                     }}>{a.score}/{a.outOf}</div>
@@ -308,17 +317,18 @@ function Practice() {
 
               {attempts.map((a, i) => {
                 const qp = a.outOf > 0 ? a.score / a.outOf : 0
-                const bc = qp === 1 ? C.green : qp === 0 ? C.red : C.amber
+                const bc = qp === 1 ? C.success : qp === 0 ? C.burgundy : C.gold
+                const rbg = qp === 1 ? C.successSoft : qp === 0 ? C.burgundySoft : C.goldSoft
                 return (
-                  <div key={i} style={{ borderRadius: 10, border: `1.5px solid ${bc}22`, overflow: 'hidden', marginBottom: 8 }}>
-                    <div style={{ background: qp === 1 ? '#F0FDF4' : qp === 0 ? '#FFF5F5' : '#FFFBEB', padding: '8px 12px', display: 'flex', justifyContent: 'space-between', gap: 8 }}>
+                  <div key={i} style={{ borderRadius: 10, border: `1.5px solid var(--rule-2)`, overflow: 'hidden', marginBottom: 8 }}>
+                    <div style={{ background: rbg, padding: '8px 12px', display: 'flex', justifyContent: 'space-between', gap: 8 }}>
                       <div style={{ fontSize: 13, fontWeight: 600, color: C.ink, flex: 1, whiteSpace: 'pre-wrap' }}>
                         <span style={{ fontSize: 10, fontWeight: 700, color: bc, marginRight: 6 }}>Q{i + 1}</span>
                         {a.question}
                       </div>
                       <span style={{ fontSize: 13, fontWeight: 800, color: bc, whiteSpace: 'nowrap' }}>{a.score}/{a.outOf}</span>
                     </div>
-                    <div style={{ padding: '8px 12px', background: '#fff' }}>
+                    <div style={{ padding: '8px 12px', background: C.paper }}>
                       <p style={{ fontSize: 12, fontWeight: 600, color: C.mid, margin: '0 0 2px' }}>Your answer:</p>
                       <p style={{ fontSize: 13, color: C.ink, margin: '0 0 6px' }}>{a.studentAnswer}</p>
                       <p style={{ fontSize: 12, color: C.mid, lineHeight: 1.5, margin: 0 }}>{a.feedback}</p>
@@ -332,23 +342,55 @@ function Practice() {
           {/* Actions */}
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             <button onClick={() => setRound(r => r + 1)} style={{
-              flex: 1, minWidth: 160, background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+              flex: 1, minWidth: 160, background: `linear-gradient(135deg, ${C.green}, ${C.greenDark})`,
               color: '#fff', border: 'none', borderRadius: 12, padding: '13px 20px',
               fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: font.body,
             }}>More questions</button>
             <button onClick={() => router.push('/learn')} style={{
-              flex: 1, minWidth: 140, background: '#fff', color: C.purple,
+              flex: 1, minWidth: 140, background: C.paper, color: C.green,
               border: `1.5px solid ${C.border}`, borderRadius: 12, padding: '13px 20px',
               fontSize: 14, fontWeight: 600, cursor: 'pointer', fontFamily: font.body,
             }}>Change topic</button>
             {pct < 70 && (
               <button onClick={() => router.push('/study')} style={{
-                background: '#fff', color: C.amber, border: `1.5px solid ${C.amberLight}`,
+                background: C.paper, color: C.gold, border: `1.5px solid ${C.goldSoft}`,
                 borderRadius: 12, padding: '13px 18px', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: font.body,
               }}>Study notes</button>
             )}
           </div>
+
+          {/* Signup prompt for guests */}
+          {!isLoggedIn && (
+            <div style={{
+              marginTop: 24, background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 16,
+              padding: '32px 28px', position: 'relative', overflow: 'hidden',
+              boxShadow: '0 12px 32px -12px rgba(14,31,23,0.12)',
+            }}>
+              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'linear-gradient(90deg, var(--green), var(--gold) 50%, var(--burgundy))' }} />
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontFamily: 'var(--serif)', fontSize: 28, fontWeight: 500, color: 'var(--ink)', letterSpacing: '-0.02em', marginBottom: 12 }}>
+                  Sign up to <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>save your progress.</em>
+                </div>
+                <p style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.55, maxWidth: 440, margin: '0 auto 24px', fontWeight: 500 }}>
+                  Create a free account to track your scores, build a study streak, see your predicted grade, and pick up exactly where you left off.
+                </p>
+                <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' as const }}>
+                  <button onClick={() => router.push('/auth')} className="btn btn-primary" style={{ padding: '13px 28px', fontSize: 15 }}>
+                    Create free account &rarr;
+                  </button>
+                  <button onClick={() => setRound(r => r + 1)} className="btn btn-outline" style={{ padding: '13px 22px', fontSize: 15 }}>
+                    Keep practising as guest
+                  </button>
+                </div>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-4)', marginTop: 16, letterSpacing: '0.02em' }}>
+                  NO CARD REQUIRED &middot; FREE FOREVER &middot; TAKES 30 SECONDS
+                </p>
+              </div>
+            </div>
+          )}
         </div>
+        </div>
+        <Footer />
       </div>
     )
   }
@@ -358,7 +400,7 @@ function Practice() {
   const sessionOut   = attempts.reduce((s, a) => s + a.outOf, 0)
 
   return (
-    <div style={{ minHeight: '100vh', background: C.mist, fontFamily: font.body }}>
+    <div style={{ minHeight: '100vh', background: C.cream, fontFamily: font.body, display: 'flex', flexDirection: 'column' }}>
 
       {/* Top bar */}
       <div style={{
@@ -372,7 +414,7 @@ function Practice() {
             background: 'none', border: `1.5px solid ${C.border}`, borderRadius: 8,
             padding: '5px 10px', fontSize: 12, cursor: 'pointer', color: C.mid, fontFamily: font.body,
           }}>← Back</button>
-          <span style={{ fontSize: 12, fontWeight: 700, color: C.purple, background: C.purplePale, padding: '2px 8px', borderRadius: 999 }}>
+          <span style={{ fontSize: 12, fontWeight: 700, color: C.green, background: C.greenSoft, padding: '2px 8px', borderRadius: 999 }}>
             {board} ({boardCode})
           </span>
           <span style={{ fontSize: 12, fontWeight: 600, color: C.mid }}>
@@ -382,23 +424,23 @@ function Practice() {
 
         {attempts.length > 0 && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, color: C.purple }}>{sessionScore}/{sessionOut}</span>
+            <span style={{ fontSize: 12, fontWeight: 700, color: C.green }}>{sessionScore}/{sessionOut}</span>
             <div style={{ width: 60, height: 5, background: C.border, borderRadius: 999, overflow: 'hidden' }}>
-              <div style={{ height: 5, background: C.purple, borderRadius: 999, width: `${sessionOut > 0 ? (sessionScore / sessionOut) * 100 : 0}%`, transition: 'width 0.4s' }} />
+              <div style={{ height: 5, background: C.green, borderRadius: 999, width: `${sessionOut > 0 ? (sessionScore / sessionOut) * 100 : 0}%`, transition: 'width 0.4s' }} />
             </div>
             <span style={{ fontSize: 11, color: C.mid }}>{attempts.length}/{questions.length}</span>
           </div>
         )}
       </div>
 
-      <div style={{ maxWidth: 640, margin: '0 auto', padding: '28px 24px 60px' }}>
+      <div style={{ flex: 1, maxWidth: 640, margin: '0 auto', padding: '28px 24px 60px', width: '100%', boxSizing: 'border-box' }}>
 
         {/* Progress dots */}
         <div style={{ display: 'flex', gap: 4, marginBottom: 24 }}>
           {questions.map((_, i) => (
             <div key={i} style={{
               flex: 1, height: 4, borderRadius: 999,
-              background: i < attempts.length ? C.purple : i === qIndex ? C.purpleLight : C.border,
+              background: i < attempts.length ? C.green : i === qIndex ? C.greenMid : C.border,
               transition: 'background 0.3s',
             }} />
           ))}
@@ -407,20 +449,20 @@ function Practice() {
         {/* Question card */}
         {q && (
           <div style={{
-            background: '#fff', borderRadius: 18, border: `1px solid ${C.border}`,
-            boxShadow: '0 2px 16px rgba(109,40,217,0.05)', padding: '24px', marginBottom: 14,
+            background: C.paper, borderRadius: 18, border: `1px solid ${C.border}`,
+            boxShadow: '0 2px 16px rgba(0,0,0,0.04)', padding: '24px', marginBottom: 14,
           }}>
             {/* Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <span style={{
-                  width: 28, height: 28, borderRadius: '50%', background: C.purple,
+                  width: 28, height: 28, borderRadius: '50%', background: C.green,
                   color: '#fff', fontSize: 12, fontWeight: 800,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>{qIndex + 1}</span>
                 <span style={{ fontSize: 12, color: C.mid }}>of {questions.length}</span>
               </div>
-              <span style={{ fontSize: 12, fontWeight: 700, color: C.purple, background: C.purplePale, padding: '3px 10px', borderRadius: 999 }}>
+              <span style={{ fontSize: 12, fontWeight: 700, color: C.green, background: C.greenSoft, padding: '3px 10px', borderRadius: 999 }}>
                 {q.marks} mark{q.marks !== 1 ? 's' : ''}
               </span>
             </div>
@@ -440,7 +482,7 @@ function Practice() {
                     cursor: 'pointer', fontFamily: font.body,
                   }}>Show a hint</button>
                 ) : (
-                  <div style={{ background: '#FFFBEB', border: '1.5px solid #FDE68A', borderRadius: 10, padding: '10px 14px', fontSize: 13, color: '#92400E', lineHeight: 1.5 }}>
+                  <div style={{ background: C.goldSoft, border: `1.5px solid ${C.gold}`, borderRadius: 10, padding: '10px 14px', fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.5 }}>
                     <span style={{ fontWeight: 700 }}>Hint: </span>{q.hint}
                   </div>
                 )}
@@ -456,21 +498,21 @@ function Practice() {
               disabled={!!result}
               style={{
                 width: '100%', boxSizing: 'border-box',
-                border: `1.5px solid ${result ? C.border : '#D1D5DB'}`,
+                border: `1.5px solid ${result ? C.border : 'var(--rule-2)'}`,
                 borderRadius: 12, padding: '12px 14px',
                 fontSize: 14, fontFamily: font.body, color: C.ink,
-                background: result ? '#F9FAFB' : '#fff',
+                background: result ? C.cream : C.paper,
                 resize: 'none', outline: 'none', lineHeight: 1.6, minHeight: 90,
               } as React.CSSProperties}
-              onFocus={e => { if (!result) e.currentTarget.style.borderColor = C.purple }}
-              onBlur={e => { if (!result) e.currentTarget.style.borderColor = '#D1D5DB' }}
+              onFocus={e => { if (!result) e.currentTarget.style.borderColor = C.green }}
+              onBlur={e => { if (!result) e.currentTarget.style.borderColor = 'var(--rule-2)' }}
             />
 
             {!result && (
               <button onClick={submit} disabled={submitting || !answer.trim()} style={{
                 marginTop: 10, width: '100%',
-                background: submitting || !answer.trim() ? C.border : `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
-                color: submitting || !answer.trim() ? '#9CA3AF' : '#fff',
+                background: submitting || !answer.trim() ? C.border : `linear-gradient(135deg, ${C.green}, ${C.greenDark})`,
+                color: submitting || !answer.trim() ? 'var(--ink-4)' : '#fff',
                 border: 'none', borderRadius: 12, padding: '14px',
                 fontSize: 15, fontWeight: 700, cursor: submitting || !answer.trim() ? 'not-allowed' : 'pointer',
                 fontFamily: font.body,
@@ -483,10 +525,10 @@ function Practice() {
 
         {/* Result */}
         {result && (() => {
-          const rc = result.score === result.outOf ? C.green : result.score === 0 ? C.red : C.amber
-          const rb = result.score === result.outOf ? '#F0FDF4' : result.score === 0 ? '#FFF5F5' : '#FFFBEB'
+          const rc = result.score === result.outOf ? C.success : result.score === 0 ? C.burgundy : C.gold
+          const rb = result.score === result.outOf ? C.successSoft : result.score === 0 ? C.burgundySoft : C.goldSoft
           return (
-            <div style={{ background: rb, border: `1.5px solid ${rc}33`, borderRadius: 14, padding: '16px 20px', marginBottom: 14 }}>
+            <div style={{ background: rb, border: `1.5px solid var(--rule-2)`, borderRadius: 14, padding: '16px 20px', marginBottom: 14 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
                 <span style={{ fontSize: 17, fontWeight: 800, color: rc, fontFamily: font.display }}>{result.score}/{result.outOf} marks</span>
                 <span style={{ fontSize: 12, fontWeight: 700, color: '#fff', background: rc, padding: '3px 10px', borderRadius: 999 }}>
@@ -499,14 +541,14 @@ function Practice() {
         })()}
 
         {error && (
-          <div style={{ background: C.redLight, border: `1px solid ${C.red}33`, borderRadius: 10, padding: '10px 14px', fontSize: 13, color: C.red, marginBottom: 14 }}>{error}</div>
+          <div style={{ background: C.burgundySoft, border: `1px solid var(--rule-2)`, borderRadius: 10, padding: '10px 14px', fontSize: 13, color: C.burgundy, marginBottom: 14 }}>{error}</div>
         )}
 
         {/* Next / End */}
         {result && (
           <div style={{ display: 'flex', gap: 8 }}>
             <button onClick={next} style={{
-              flex: 1, background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+              flex: 1, background: `linear-gradient(135deg, ${C.green}, ${C.greenDark})`,
               color: '#fff', border: 'none', borderRadius: 12, padding: '13px',
               fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: font.body,
             }}>
@@ -514,7 +556,7 @@ function Practice() {
             </button>
             {!isLast && (
               <button onClick={() => setPhase('complete')} style={{
-                border: `1.5px solid ${C.border}`, background: '#fff', color: C.mid,
+                border: `1.5px solid ${C.border}`, background: C.paper, color: C.mid,
                 borderRadius: 12, padding: '13px 16px', fontSize: 13, fontWeight: 600,
                 cursor: 'pointer', fontFamily: font.body,
               }}>End</button>
@@ -522,6 +564,7 @@ function Practice() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   )
 }

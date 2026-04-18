@@ -6,18 +6,18 @@ import { autoLinkTopics } from '@/lib/auto-linker'
 
 type Props = { params: Promise<{ slug: string }> }
 
-const COLOUR_MAP: Record<string, { badge: string; bar: string; bg: string }> = {
-  purple: { badge: 'bg-purple-100 text-purple-700', bar: 'bg-purple-500', bg: 'bg-purple-50' },
-  blue:   { badge: 'bg-blue-100 text-blue-700',     bar: 'bg-blue-500',   bg: 'bg-blue-50'   },
-  green:  { badge: 'bg-green-100 text-green-700',   bar: 'bg-green-500',  bg: 'bg-green-50'  },
-  amber:  { badge: 'bg-amber-100 text-amber-700',   bar: 'bg-amber-500',  bg: 'bg-amber-50'  },
-  rose:   { badge: 'bg-rose-100 text-rose-700',     bar: 'bg-rose-500',   bg: 'bg-rose-50'   },
+const COLOUR_MAP: Record<string, { text: string; bg: string; barBg: string }> = {
+  purple: { text: 'var(--green)',     bg: 'var(--green-soft)',    barBg: 'var(--green)' },
+  blue:   { text: 'var(--navy)',      bg: 'var(--navy-soft)',     barBg: 'var(--navy)' },
+  green:  { text: 'var(--burgundy)',  bg: 'var(--burgundy-soft)', barBg: 'var(--burgundy)' },
+  amber:  { text: 'var(--gold)',      bg: 'var(--gold-soft)',     barBg: 'var(--gold)' },
+  rose:   { text: 'var(--green-mid)', bg: 'var(--green-soft)',    barBg: 'var(--green-mid)' },
 }
 
-const TIER_BADGE: Record<string, string> = {
-  'Foundation & Higher': 'bg-indigo-100 text-indigo-700',
-  'Higher only': 'bg-amber-100 text-amber-800',
-  'Foundation': 'bg-green-100 text-green-700',
+const TIER_COLOURS: Record<string, { text: string; bg: string }> = {
+  'Foundation & Higher': { text: 'var(--navy)',  bg: 'var(--navy-soft)' },
+  'Higher only':         { text: 'var(--gold)',  bg: 'var(--gold-soft)' },
+  'Foundation':          { text: 'var(--green)', bg: 'var(--green-soft)' },
 }
 
 export async function generateStaticParams() {
@@ -54,7 +54,7 @@ export default async function TopicPage({ params }: Props) {
   const html = autoLinkTopics(rawHtml, topic.slug)
   const toc = extractTopicTOC(topic.content)
   const colours = COLOUR_MAP[topic.categoryColour] ?? COLOUR_MAP.purple
-  const tierBadge = TIER_BADGE[topic.tier] ?? TIER_BADGE['Foundation & Higher']
+  const tierColour = TIER_COLOURS[topic.tier] ?? TIER_COLOURS['Foundation & Higher']
 
   // Get adjacent topics for prev/next navigation
   const allTopics = getAllTopics()
@@ -63,63 +63,125 @@ export default async function TopicPage({ params }: Props) {
   const nextTopic = currentIdx < allTopics.length - 1 ? allTopics[currentIdx + 1] : null
 
   return (
-    <main className="min-h-screen bg-white">
+    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        .topic-prose a { color: var(--green) !important; }
+        .topic-prose a:hover { text-decoration: underline; }
+        .topic-prose h2, .topic-prose h3, .topic-prose h4 { color: var(--ink) !important; font-family: var(--serif); }
+        .topic-prose strong { color: var(--ink) !important; }
+      `}} />
 
       {/* Hero */}
-      <div className={`${colours.bg} border-b border-gray-100 px-6 py-10`}>
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-2 mb-3 flex-wrap">
-            <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${colours.badge}`}>
+      <div style={{
+        background: 'var(--paper)',
+        borderBottom: '1px solid var(--rule)',
+        padding: '40px 24px',
+      }}>
+        <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12, flexWrap: 'wrap' }}>
+            <span style={{
+              fontSize: 11,
+              fontWeight: 700,
+              fontFamily: 'var(--mono)',
+              padding: '3px 10px',
+              borderRadius: 999,
+              color: colours.text,
+              background: colours.bg,
+              letterSpacing: '0.03em',
+            }}>
               {topic.category}
             </span>
-            <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${tierBadge}`}>
+            <span style={{
+              fontSize: 11,
+              fontWeight: 700,
+              fontFamily: 'var(--mono)',
+              padding: '3px 10px',
+              borderRadius: 999,
+              color: tierColour.text,
+              background: tierColour.bg,
+              letterSpacing: '0.03em',
+            }}>
               {topic.tier}
             </span>
-            <span className="text-xs text-gray-400">Topic {topic.topicNumber} of 73</span>
+            <span style={{ fontSize: 12, color: 'var(--ink-3)' }}>Topic {topic.topicNumber} of 73</span>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 leading-tight mb-2">
+          <h1 style={{
+            fontFamily: 'var(--serif)',
+            fontSize: 'clamp(24px, 5vw, 34px)',
+            fontWeight: 800,
+            color: 'var(--ink)',
+            lineHeight: 1.2,
+            margin: '0 0 10px',
+          }}>
             {topic.title.replace(/ — .*$/, '').replace(/ GCSE.*$/, '')}
           </h1>
-          <div className="flex items-center gap-3 text-sm text-gray-500">
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 13, color: 'var(--ink-3)' }}>
             <span>{topic.author}</span>
-            <span>·</span>
+            <span style={{ opacity: 0.4 }}>&middot;</span>
             <span>{topic.readMins} min read</span>
-            <span>·</span>
+            <span style={{ opacity: 0.4 }}>&middot;</span>
             <span>{topic.date}</span>
           </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col lg:flex-row gap-6 lg:gap-10">
+      <div style={{
+        maxWidth: 1140,
+        margin: '0 auto',
+        padding: '40px 24px',
+        display: 'flex',
+        gap: 40,
+      }}>
 
         {/* Article content */}
-        <article className="flex-1 min-w-0 max-w-3xl">
+        <article style={{ flex: 1, minWidth: 0, maxWidth: 760 }}>
           <div
-            className="prose prose-gray prose-lg max-w-none
-              prose-headings:font-bold prose-headings:text-gray-900
+            className="topic-prose prose prose-gray prose-lg max-w-none
+              prose-headings:font-bold
               prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
               prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-              prose-p:text-gray-700 prose-p:leading-relaxed
-              prose-li:text-gray-700
-              prose-strong:text-gray-900
-              prose-a:text-purple-700 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline"
+              prose-p:leading-relaxed
+              prose-a:font-semibold prose-a:no-underline hover:prose-a:underline"
+            style={{
+              fontFamily: 'var(--sans)',
+              color: 'var(--ink-2)',
+            } as React.CSSProperties}
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
           {/* Prev / Next navigation */}
-          <div className="mt-12 pt-8 border-t border-gray-100 flex justify-between gap-4">
+          <div style={{
+            marginTop: 48,
+            paddingTop: 32,
+            borderTop: '1px solid var(--rule)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            gap: 16,
+          }}>
             {prevTopic ? (
-              <Link href={`/topics/${prevTopic.slug}`} className="group flex-1">
-                <span className="text-xs text-gray-400">← Previous topic</span>
-                <p className="text-sm font-semibold text-gray-700 group-hover:text-purple-700 transition mt-1">
+              <Link href={`/topics/${prevTopic.slug}`} style={{ flex: 1, textDecoration: 'none' }}>
+                <span style={{ fontSize: 12, color: 'var(--ink-3)' }}>&larr; Previous topic</span>
+                <p style={{
+                  fontSize: 14,
+                  fontWeight: 600,
+                  fontFamily: 'var(--serif)',
+                  color: 'var(--ink-2)',
+                  marginTop: 4,
+                }}>
                   {prevTopic.title.replace(/ — .*$/, '').replace(/ GCSE.*$/, '')}
                 </p>
               </Link>
             ) : <div />}
             {nextTopic ? (
-              <Link href={`/topics/${nextTopic.slug}`} className="group flex-1 text-right">
-                <span className="text-xs text-gray-400">Next topic →</span>
-                <p className="text-sm font-semibold text-gray-700 group-hover:text-purple-700 transition mt-1">
+              <Link href={`/topics/${nextTopic.slug}`} style={{ flex: 1, textAlign: 'right', textDecoration: 'none' }}>
+                <span style={{ fontSize: 12, color: 'var(--ink-3)' }}>Next topic &rarr;</span>
+                <p style={{
+                  fontSize: 14,
+                  fontWeight: 600,
+                  fontFamily: 'var(--serif)',
+                  color: 'var(--ink-2)',
+                  marginTop: 4,
+                }}>
                   {nextTopic.title.replace(/ — .*$/, '').replace(/ GCSE.*$/, '')}
                 </p>
               </Link>
@@ -127,16 +189,30 @@ export default async function TopicPage({ params }: Props) {
           </div>
         </article>
 
-        {/* Sidebar — Table of Contents */}
-        <aside className="hidden lg:block w-64 shrink-0">
-          <div className="sticky top-24">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">On this page</p>
-            <nav className="flex flex-col gap-1.5">
+        {/* Sidebar — Table of Contents (desktop only via CSS) */}
+        <aside style={{ width: 256, flexShrink: 0 }} className="hidden lg:block">
+          <div style={{ position: 'sticky', top: 96 }}>
+            <p style={{
+              fontSize: 11,
+              fontWeight: 700,
+              fontFamily: 'var(--mono)',
+              color: 'var(--ink-3)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              marginBottom: 12,
+            }}>On this page</p>
+            <nav style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {toc.map(h => (
                 <a
                   key={h.id}
                   href={`#${h.id}`}
-                  className="text-sm text-gray-500 hover:text-purple-700 transition leading-snug"
+                  style={{
+                    fontSize: 13,
+                    color: 'var(--ink-3)',
+                    textDecoration: 'none',
+                    lineHeight: 1.4,
+                    transition: 'color 0.15s',
+                  }}
                 >
                   {h.text}
                 </a>
@@ -144,14 +220,40 @@ export default async function TopicPage({ params }: Props) {
             </nav>
 
             {/* CTA */}
-            <div className="mt-8 bg-purple-50 border border-purple-100 rounded-xl p-4">
-              <p className="text-sm font-semibold text-purple-700 mb-1">Practice this topic</p>
-              <p className="text-xs text-gray-500 mb-3">Get AI-marked questions with instant feedback.</p>
+            <div style={{
+              marginTop: 32,
+              background: 'var(--green-soft)',
+              border: '1px solid var(--rule)',
+              borderRadius: 12,
+              padding: 16,
+            }}>
+              <p style={{
+                fontSize: 14,
+                fontWeight: 700,
+                fontFamily: 'var(--serif)',
+                color: 'var(--green)',
+                margin: '0 0 4px',
+              }}>Practice this topic</p>
+              <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: '0 0 12px' }}>
+                Get AI-marked questions with instant feedback.
+              </p>
               <Link
                 href="/auth"
-                className="block text-center bg-purple-700 text-white text-sm font-semibold py-2 rounded-lg hover:bg-purple-800 transition"
+                style={{
+                  display: 'block',
+                  textAlign: 'center',
+                  background: 'var(--green)',
+                  color: '#fff',
+                  fontSize: 13,
+                  fontWeight: 700,
+                  fontFamily: 'var(--sans)',
+                  padding: '10px 0',
+                  borderRadius: 8,
+                  textDecoration: 'none',
+                  transition: 'background 0.15s',
+                }}
               >
-                Start free →
+                Start free &rarr;
               </Link>
             </div>
 
@@ -162,14 +264,28 @@ export default async function TopicPage({ params }: Props) {
                 .slice(0, 5)
               if (sameCategoryTopics.length === 0) return null
               return (
-                <div className="mt-6">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Related topics</p>
-                  <nav className="flex flex-col gap-1.5">
+                <div style={{ marginTop: 24 }}>
+                  <p style={{
+                    fontSize: 11,
+                    fontWeight: 700,
+                    fontFamily: 'var(--mono)',
+                    color: 'var(--ink-3)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    marginBottom: 12,
+                  }}>Related topics</p>
+                  <nav style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                     {sameCategoryTopics.map(rt => (
                       <Link
                         key={rt.slug}
                         href={`/topics/${rt.slug}`}
-                        className="text-sm text-gray-500 hover:text-purple-700 transition leading-snug"
+                        style={{
+                          fontSize: 13,
+                          color: 'var(--ink-3)',
+                          textDecoration: 'none',
+                          lineHeight: 1.4,
+                          transition: 'color 0.15s',
+                        }}
                       >
                         {rt.title.replace(/ — .*$/, '').replace(/ GCSE.*$/, '')}
                       </Link>
@@ -180,8 +296,15 @@ export default async function TopicPage({ params }: Props) {
             })()}
 
             {/* All topics link */}
-            <Link href="/topics" className="block mt-4 text-sm text-purple-700 font-semibold hover:underline">
-              ← All 73 topics
+            <Link href="/topics" style={{
+              display: 'block',
+              marginTop: 16,
+              fontSize: 13,
+              fontWeight: 700,
+              color: 'var(--green)',
+              textDecoration: 'none',
+            }}>
+              &larr; All 73 topics
             </Link>
           </div>
         </aside>

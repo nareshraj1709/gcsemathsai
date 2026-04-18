@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import AuthGuard from '@/components/AuthGuard'
 
 export const metadata: Metadata = {
   title: 'Topic Sections — GCSE Maths Practice by Topic',
@@ -14,5 +13,5 @@ export const metadata: Metadata = {
 }
 
 export default function SectionsLayout({ children }: { children: React.ReactNode }) {
-  return <AuthGuard>{children}</AuthGuard>
+  return <>{children}</>
 }

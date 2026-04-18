@@ -8,7 +8,6 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
-    // Check initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) {
         router.replace('/auth')
@@ -17,8 +16,6 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
       }
     })
 
-    // Listen for real-time auth changes (e.g. sign-out from another tab,
-    // session expiry, token refresh failure)
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
       if (event === 'SIGNED_OUT' || event === 'TOKEN_REFRESHED') {
         if (event === 'SIGNED_OUT') {
@@ -35,17 +32,19 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
     return (
       <div style={{
         minHeight: '100vh', display: 'flex', alignItems: 'center',
-        justifyContent: 'center', background: '#F8F7FF',
-        fontFamily: "'Trebuchet MS', sans-serif",
+        justifyContent: 'center', background: 'var(--cream)',
+        fontFamily: 'var(--sans)',
       }}>
         <div style={{ textAlign: 'center' }}>
           <div style={{
-            width: 40, height: 40, borderRadius: 10, margin: '0 auto 12px',
-            background: 'linear-gradient(135deg, #6D28D9, #8B5CF6)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 18, color: '#fff',
-          }}>✦</div>
-          <p style={{ color: '#6B7280', fontSize: 14 }}>Loading...</p>
+            width: 48, height: 48, borderRadius: 10, margin: '0 auto 16px',
+            background: 'var(--green)', color: 'var(--cream)',
+            display: 'grid', placeItems: 'center',
+            fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 24, fontStyle: 'italic',
+            boxShadow: '0 2px 8px -2px rgba(15,79,58,0.3)',
+            animation: 'softpulse 1.8s ease-in-out infinite',
+          }}>&Sigma;</div>
+          <p style={{ color: 'var(--ink-3)', fontSize: 14, fontWeight: 500 }}>Preparing your session&hellip;</p>
         </div>
       </div>
     )

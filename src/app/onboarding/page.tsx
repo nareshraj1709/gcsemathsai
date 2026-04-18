@@ -5,18 +5,19 @@ import Logo from '@/components/Logo'
 import { getProfileFromCache, saveProfile, loadProfile } from '@/lib/profile'
 
 const C = {
-  ink: "#0D0B1A",
-  purple: "#6D28D9",
-  purpleLight: "#8B5CF6",
-  purplePale: "#EDE9FE",
-  mid: "#6B7280",
-  border: "#E5E1FF",
-  mist: "#F8F7FF",
+  ink: "var(--ink)",
+  green: "var(--green)",
+  greenMid: "var(--green-mid)",
+  greenSoft: "var(--green-soft)",
+  mid: "var(--ink-3)",
+  border: "var(--rule)",
+  cream: "var(--cream)",
+  paper: "var(--paper)",
 }
 
 const font = {
-  display: "'Georgia', 'Times New Roman', serif",
-  body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
+  display: "var(--serif)",
+  body: "var(--sans)",
 }
 
 const YEAR_OPTIONS = [
@@ -105,7 +106,7 @@ export default function Onboarding() {
 
   return (
     <div style={{
-      minHeight: "100vh", background: C.mist,
+      minHeight: "100vh", background: C.cream,
       display: "flex", alignItems: "center", justifyContent: "center",
       padding: 24, fontFamily: font.body,
     }}>
@@ -116,16 +117,16 @@ export default function Onboarding() {
             <div key={i} style={{
               height: 4, borderRadius: 999, transition: "all 0.3s",
               width: i === step ? 24 : 8,
-              background: i <= step ? C.purple : C.border,
+              background: i <= step ? C.green : C.border,
             }} />
           ))}
         </div>
 
         <div style={{
-          background: "#fff", borderRadius: 24,
+          background: C.paper, borderRadius: 24,
           border: `1px solid ${C.border}`,
           padding: "40px 36px",
-          boxShadow: "0 4px 32px rgba(109,40,217,0.08)",
+          boxShadow: "0 4px 32px rgba(15,79,58,0.08)",
         }}>
           {/* Logo */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
@@ -146,12 +147,12 @@ export default function Onboarding() {
               autoFocus
               style={{
                 width: "100%", padding: "14px 16px", borderRadius: 12,
-                border: `2px solid ${value ? C.purple : C.border}`,
+                border: `2px solid ${value ? C.green : C.border}`,
                 fontSize: 16, fontFamily: font.body, outline: "none",
                 boxSizing: "border-box", color: C.ink, transition: "border-color 0.2s",
               }}
-              onFocus={e => e.currentTarget.style.borderColor = C.purple}
-              onBlur={e => e.currentTarget.style.borderColor = value ? C.purple : C.border}
+              onFocus={e => e.currentTarget.style.borderColor = C.green}
+              onBlur={e => e.currentTarget.style.borderColor = value ? C.green : C.border}
             />
           ) : (
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -161,9 +162,9 @@ export default function Onboarding() {
                   onClick={() => current.field === 'year' ? handleYearSelect(opt) : setData({ ...data, [current.field]: opt })}
                   style={{
                     padding: "14px 16px", borderRadius: 12, cursor: "pointer",
-                    border: `2px solid ${value === opt ? C.purple : C.border}`,
-                    background: value === opt ? C.purplePale : "#fff",
-                    color: value === opt ? C.purple : C.ink,
+                    border: `2px solid ${value === opt ? C.green : C.border}`,
+                    background: value === opt ? C.greenSoft : C.paper,
+                    color: value === opt ? C.green : C.ink,
                     fontWeight: value === opt ? 700 : 500,
                     fontSize: 15, fontFamily: font.body, textAlign: "left",
                     transition: "all 0.15s",
@@ -179,13 +180,13 @@ export default function Onboarding() {
             marginTop: 24, width: "100%", padding: "14px",
             borderRadius: 12, border: "none",
             background: value
-              ? `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`
+              ? `linear-gradient(135deg, var(--green), var(--green-mid))`
               : C.border,
             color: value ? "#fff" : "#9CA3AF",
             fontWeight: 700, fontSize: 16,
             cursor: value ? "pointer" : "not-allowed",
             fontFamily: font.body,
-            boxShadow: value ? `0 4px 16px ${C.purple}30` : "none",
+            boxShadow: value ? "0 4px 16px rgba(15,79,58,0.3)" : "none",
             transition: "all 0.2s",
           }}>
             {isLast ? (isEditing ? "Save changes →" : "Go to my dashboard →") : "Continue →"}
@@ -202,7 +203,7 @@ export default function Onboarding() {
 
         <p style={{ textAlign: "center", fontSize: 12, color: "#9CA3AF", marginTop: 16 }}>
           Already have an account?{" "}
-          <span onClick={() => router.push('/auth')} style={{ color: C.purple, cursor: "pointer", fontWeight: 600 }}>
+          <span onClick={() => router.push('/auth')} style={{ color: C.green, cursor: "pointer", fontWeight: 600 }}>
             Log in
           </span>
         </p>

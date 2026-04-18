@@ -5,19 +5,21 @@ import { supabase } from '@/lib/supabase'
 import { loadProfile } from '@/lib/profile'
 
 const C = {
-  ink: "#0D0B1A",
-  purple: "#6D28D9",
-  purpleLight: "#8B5CF6",
-  mid: "#6B7280",
-  border: "#E5E1FF",
-  mist: "#F8F7FF",
-  green: "#059669",
+  ink: "var(--ink)",
+  green: "var(--green)",
+  greenMid: "var(--green-mid)",
+  greenSoft: "var(--green-soft)",
+  mid: "var(--ink-3)",
+  border: "var(--rule)",
+  cream: "var(--cream)",
+  paper: "var(--paper)",
+  success: "#059669",
   red: "#DC2626",
 }
 
 const font = {
-  display: "'Georgia', 'Times New Roman', serif",
-  body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
+  display: "var(--serif)",
+  body: "var(--sans)",
 }
 
 type Mode = 'login' | 'signup' | 'forgot'
@@ -138,26 +140,26 @@ export default function Auth() {
     ? 'Create account'
     : 'Send reset link'
 
-  const msgBg = messageType === 'error' ? '#FFF5F5' : messageType === 'success' ? '#F0FDF4' : '#F5F3FF'
-  const msgColor = messageType === 'error' ? C.red : messageType === 'success' ? C.green : C.purple
+  const msgBg = messageType === 'error' ? '#FFF5F5' : messageType === 'success' ? '#F0FDF4' : 'var(--green-soft)'
+  const msgColor = messageType === 'error' ? C.red : messageType === 'success' ? C.success : C.green
 
   return (
     <div style={{
-      minHeight: "100vh", background: C.mist,
+      minHeight: "100vh", background: C.cream,
       display: "flex", alignItems: "center", justifyContent: "center",
       padding: 24, fontFamily: font.body,
     }}>
       <div style={{
-        background: "#fff", borderRadius: 24, border: `1px solid ${C.border}`,
+        background: C.paper, borderRadius: 24, border: `1px solid ${C.border}`,
         padding: "40px 36px", width: "100%", maxWidth: 420,
-        boxShadow: "0 4px 32px rgba(109,40,217,0.08)",
+        boxShadow: "0 4px 32px rgba(15,79,58,0.08)",
       }}>
         <div style={{ textAlign: "center", marginBottom: 32 }}>
           <div style={{
             width: 48, height: 48, borderRadius: 14, margin: "0 auto 12px",
-            background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+            background: `linear-gradient(135deg, var(--green), var(--green-mid))`,
             display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: 22, boxShadow: `0 4px 16px ${C.purple}30`,
+            fontSize: 22, color: "#fff", boxShadow: "0 4px 16px rgba(15,79,58,0.3)",
           }}>✦</div>
           <h1 style={{ fontFamily: font.display, fontSize: 24, color: C.ink, margin: "0 0 4px" }}>
             {heading}
@@ -185,8 +187,8 @@ export default function Auth() {
               fontFamily: font.body, outline: "none", boxSizing: "border-box",
               transition: "border-color 0.2s",
             }}
-            onFocus={e => e.currentTarget.style.borderColor = C.purple}
-            onBlur={e => e.currentTarget.style.borderColor = C.border}
+            onFocus={e => e.currentTarget.style.borderColor = 'var(--green)'}
+            onBlur={e => e.currentTarget.style.borderColor = 'var(--rule)'}
           />
         </div>
 
@@ -209,7 +211,7 @@ export default function Auth() {
                 fontFamily: font.body, outline: "none", boxSizing: "border-box",
                 transition: "border-color 0.2s",
               }}
-              onFocus={e => e.currentTarget.style.borderColor = C.purple}
+              onFocus={e => e.currentTarget.style.borderColor = C.green}
               onBlur={e => e.currentTarget.style.borderColor = C.border}
             />
             {mode === 'signup' && (
@@ -225,7 +227,7 @@ export default function Auth() {
           <div style={{ textAlign: "right", marginBottom: 8 }}>
             <span
               onClick={() => switchMode('forgot')}
-              style={{ fontSize: 13, color: C.purple, fontWeight: 600, cursor: "pointer" }}
+              style={{ fontSize: 13, color: C.green, fontWeight: 600, cursor: "pointer" }}
             >
               Forgot password?
             </span>
@@ -247,10 +249,10 @@ export default function Auth() {
           disabled={loading}
           style={{
             width: "100%", padding: "13px", borderRadius: 10, border: "none",
-            background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
+            background: `linear-gradient(135deg, var(--green), var(--green-mid))`,
             color: "#fff", fontWeight: 700, fontSize: 16, cursor: loading ? "not-allowed" : "pointer",
             fontFamily: font.body, marginTop: 8,
-            boxShadow: `0 4px 16px ${C.purple}30`,
+            boxShadow: "0 4px 16px rgba(15,79,58,0.3)",
             opacity: loading ? 0.7 : 1,
           }}
         >
@@ -262,7 +264,7 @@ export default function Auth() {
           {mode === 'login' && (
             <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
               No account?{' '}
-              <span onClick={() => switchMode('signup')} style={{ color: C.purple, fontWeight: 600, cursor: "pointer" }}>
+              <span onClick={() => switchMode('signup')} style={{ color: C.green, fontWeight: 600, cursor: "pointer" }}>
                 Sign up free
               </span>
             </p>
@@ -270,7 +272,7 @@ export default function Auth() {
           {mode === 'signup' && (
             <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
               Already have an account?{' '}
-              <span onClick={() => switchMode('login')} style={{ color: C.purple, fontWeight: 600, cursor: "pointer" }}>
+              <span onClick={() => switchMode('login')} style={{ color: C.green, fontWeight: 600, cursor: "pointer" }}>
                 Log in
               </span>
             </p>
@@ -278,7 +280,7 @@ export default function Auth() {
           {mode === 'forgot' && (
             <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
               Remember your password?{' '}
-              <span onClick={() => switchMode('login')} style={{ color: C.purple, fontWeight: 600, cursor: "pointer" }}>
+              <span onClick={() => switchMode('login')} style={{ color: C.green, fontWeight: 600, cursor: "pointer" }}>
                 Back to login
               </span>
             </p>

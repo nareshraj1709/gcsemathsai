@@ -3,22 +3,6 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { getProfileFromCache, saveProfile as saveProfileToDb } from '@/lib/profile'
 
-// ── Colours & fonts ──────────────────────────────────────────
-const C = {
-  ink: '#0D0B1A',
-  purple: '#6D28D9',
-  purpleLight: '#8B5CF6',
-  purplePale: '#EDE9FE',
-  mist: '#F8F7FF',
-  mid: '#6B7280',
-  border: '#E5E1FF',
-  green: '#10B981',
-}
-const font = {
-  display: "'Georgia', 'Times New Roman', serif",
-  body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
-}
-
 // ── Topic data ───────────────────────────────────────────────
 const TOPIC_DATA: Record<string, { Foundation: string[]; Higher: string[] }> = {
   Number: {
@@ -186,11 +170,11 @@ const TOPIC_DATA: Record<string, { Foundation: string[]; Higher: string[] }> = {
 }
 
 const TOPIC_META: Record<string, { icon: string; color: string; light: string; border: string }> = {
-  Number:                   { icon: '🔢', color: '#7C3AED', light: '#F5F3FF', border: '#DDD6FE' },
-  Algebra:                  { icon: '📐', color: '#2563EB', light: '#EFF6FF', border: '#BFDBFE' },
-  'Geometry & Measures':    { icon: '📏', color: '#059669', light: '#F0FDF4', border: '#A7F3D0' },
-  'Statistics & Probability':{ icon: '📊', color: '#D97706', light: '#FFFBEB', border: '#FDE68A' },
-  'Ratio & Proportion':     { icon: '⚖️', color: '#DC2626', light: '#FFF5F5', border: '#FECACA' },
+  Number:                    { icon: '🔢', color: 'var(--green)',     light: 'var(--green-soft)',    border: 'var(--rule)' },
+  Algebra:                   { icon: '📐', color: 'var(--navy)',      light: 'var(--navy-soft)',     border: 'var(--rule)' },
+  'Geometry & Measures':     { icon: '📏', color: 'var(--burgundy)',  light: 'var(--burgundy-soft)', border: 'var(--rule)' },
+  'Statistics & Probability':{ icon: '📊', color: 'var(--gold)',      light: 'var(--gold-soft)',     border: 'var(--rule)' },
+  'Ratio & Proportion':      { icon: '⚖️', color: 'var(--green-mid)', light: 'var(--green-soft)',    border: 'var(--rule)' },
 }
 
 const GCSE_BOARDS = [
@@ -257,49 +241,59 @@ export default function Learn() {
   // ── Phase 1: selection screen ────────────────────────────
   if (phase === 1) {
     return (
-      <div style={{ minHeight: '100vh', background: C.mist, fontFamily: font.body, padding: '40px 24px' }}>
+      <div style={{
+        minHeight: '100vh',
+        background: 'var(--cream)',
+        fontFamily: 'var(--sans)',
+        padding: '40px 24px',
+      }}>
         <div style={{ maxWidth: 580, margin: '0 auto' }}>
 
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: 36 }}>
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
-              background: C.purplePale, borderRadius: 999, padding: '4px 14px',
-              fontSize: 12, fontWeight: 700, color: C.purple, marginBottom: 12,
+              background: 'var(--green-soft)', borderRadius: 999, padding: '4px 14px',
+              fontSize: 11, fontWeight: 700, fontFamily: 'var(--mono)',
+              color: 'var(--green)', marginBottom: 12,
+              letterSpacing: '0.05em', textTransform: 'uppercase',
             }}>
-              ⚙️ Update your setup
+              Setup
             </div>
             <h1 style={{
-              fontFamily: font.display, fontSize: 26, fontWeight: 800,
-              color: C.ink, margin: '0 0 8px',
+              fontFamily: 'var(--serif)', fontSize: 26, fontWeight: 800,
+              color: 'var(--ink)', margin: '0 0 8px',
             }}>Your learning setup</h1>
-            <p style={{ fontSize: 14, color: C.mid, margin: 0 }}>
+            <p style={{ fontSize: 14, color: 'var(--ink-3)', margin: 0 }}>
               Confirm your year group and exam board — you can change this any time.
             </p>
           </div>
 
           {/* Card */}
           <div style={{
-            background: '#fff', borderRadius: 24,
-            border: `1px solid ${C.border}`,
+            background: 'var(--paper)', borderRadius: 16,
+            border: '1px solid var(--rule)',
             padding: '32px 28px',
-            boxShadow: '0 4px 32px rgba(109,40,217,0.08)',
           }}>
 
-            {/* Year group — GCSE */}
+            {/* Year group */}
             <div style={{ marginBottom: 28 }}>
-              <label style={{ fontSize: 12, fontWeight: 700, color: C.mid, display: 'block', marginBottom: 8, textTransform: 'uppercase', letterSpacing: 1 }}>
-                GCSE (Years 9–11)
+              <label style={{
+                fontSize: 11, fontWeight: 700, fontFamily: 'var(--mono)',
+                color: 'var(--ink-3)', display: 'block', marginBottom: 8,
+                textTransform: 'uppercase', letterSpacing: '0.08em',
+              }}>
+                GCSE (Years 9-11)
               </label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
                 {GCSE_YEARS.map(y => (
                   <button key={y} onClick={() => handleYearSelect(y)} style={{
-                    padding: '11px 14px', borderRadius: 12, cursor: 'pointer', textAlign: 'left',
-                    border: `2px solid ${year === y ? C.purple : C.border}`,
-                    background: year === y ? C.purplePale : '#fff',
-                    color: year === y ? C.purple : C.ink,
+                    padding: '11px 14px', borderRadius: 10, cursor: 'pointer', textAlign: 'left',
+                    border: `2px solid ${year === y ? 'var(--green)' : 'var(--rule)'}`,
+                    background: year === y ? 'var(--green-soft)' : 'var(--paper)',
+                    color: year === y ? 'var(--green)' : 'var(--ink)',
                     fontWeight: year === y ? 700 : 500,
-                    fontSize: 14, fontFamily: font.body, transition: 'all 0.15s',
+                    fontSize: 14, fontFamily: 'var(--sans)', transition: 'all 0.15s',
                   }}>
                     {year === y ? '✓ ' : ''}{y}
                   </button>
@@ -308,31 +302,31 @@ export default function Learn() {
             </div>
 
             {/* Divider */}
-            <div style={{ height: 1, background: C.border, marginBottom: 28 }} />
+            <div style={{ height: 1, background: 'var(--rule)', marginBottom: 28 }} />
 
             {/* Exam board */}
             <div style={{ marginBottom: 28 }}>
               <label style={{
-                fontSize: 13, fontWeight: 700, color: C.ink,
-                display: 'block', marginBottom: 10,
+                fontSize: 13, fontWeight: 700, fontFamily: 'var(--serif)',
+                color: 'var(--ink)', display: 'block', marginBottom: 10,
               }}>
                 Which exam board?
               </label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
                 {boards.map(b => (
                   <button key={b.name} onClick={() => setBoard(b.name)} style={{
-                    padding: '14px 10px', borderRadius: 14, cursor: 'pointer', textAlign: 'center',
-                    border: `2px solid ${board === b.name ? C.purple : C.border}`,
-                    background: board === b.name ? C.purplePale : '#fff',
+                    padding: '14px 10px', borderRadius: 12, cursor: 'pointer', textAlign: 'center',
+                    border: `2px solid ${board === b.name ? 'var(--green)' : 'var(--rule)'}`,
+                    background: board === b.name ? 'var(--green-soft)' : 'var(--paper)',
                     transition: 'all 0.15s',
                   }}>
                     <div style={{
-                      fontSize: 15, fontWeight: 800, fontFamily: font.display,
-                      color: board === b.name ? C.purple : C.ink, marginBottom: 4,
+                      fontSize: 15, fontWeight: 800, fontFamily: 'var(--serif)',
+                      color: board === b.name ? 'var(--green)' : 'var(--ink)', marginBottom: 4,
                     }}>{b.name}</div>
-                    <div style={{ fontSize: 10, color: C.mid, lineHeight: 1.3 }}>{b.desc}</div>
+                    <div style={{ fontSize: 10, color: 'var(--ink-3)', lineHeight: 1.3 }}>{b.desc}</div>
                     {board === b.name && (
-                      <div style={{ fontSize: 10, color: C.purple, fontWeight: 700, marginTop: 4 }}>✓ Selected</div>
+                      <div style={{ fontSize: 10, color: 'var(--green)', fontWeight: 700, marginTop: 4 }}>✓ Selected</div>
                     )}
                   </button>
                 ))}
@@ -342,18 +336,15 @@ export default function Learn() {
             {/* CTA */}
             <button onClick={handleProceed} disabled={!canProceed} style={{
               width: '100%', padding: '14px',
-              borderRadius: 12, border: 'none',
-              background: canProceed
-                ? `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`
-                : C.border,
-              color: canProceed ? '#fff' : '#9CA3AF',
+              borderRadius: 10, border: 'none',
+              background: canProceed ? 'var(--green)' : 'var(--rule)',
+              color: canProceed ? '#fff' : 'var(--ink-3)',
               fontWeight: 700, fontSize: 15,
               cursor: canProceed ? 'pointer' : 'not-allowed',
-              fontFamily: font.body,
-              boxShadow: canProceed ? `0 4px 16px ${C.purple}30` : 'none',
+              fontFamily: 'var(--sans)',
               transition: 'all 0.2s',
             }}>
-              Show me the topics →
+              Show me the topics &rarr;
             </button>
           </div>
         </div>
@@ -365,26 +356,28 @@ export default function Learn() {
   const topicNames = Object.keys(TOPIC_DATA)
 
   return (
-    <div style={{ minHeight: '100vh', background: C.mist, fontFamily: font.body }}>
+    <div style={{ minHeight: '100vh', background: 'var(--cream)', fontFamily: 'var(--sans)' }}>
 
       {/* Sticky header */}
       <div style={{
         position: 'sticky', top: 0, zIndex: 40,
-        background: '#fff', borderBottom: `1px solid ${C.border}`,
+        background: 'var(--paper)', borderBottom: '1px solid var(--rule)',
         padding: '12px 24px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10,
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <button onClick={() => setPhase(1)} style={{
-            border: `1.5px solid ${C.border}`, background: '#fff', borderRadius: 8,
-            padding: '5px 12px', fontSize: 13, cursor: 'pointer', color: C.mid,
-            fontFamily: font.body,
-          }}>← Back</button>
+            border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 8,
+            padding: '5px 12px', fontSize: 13, cursor: 'pointer', color: 'var(--ink-3)',
+            fontFamily: 'var(--sans)',
+          }}>&larr; Back</button>
           <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
             {[year, board].map(tag => (
               <span key={tag} style={{
-                fontSize: 12, fontWeight: 700, color: C.purple,
-                background: C.purplePale, padding: '3px 10px', borderRadius: 999,
+                fontSize: 11, fontWeight: 700, fontFamily: 'var(--mono)',
+                color: 'var(--green)', background: 'var(--green-soft)',
+                padding: '3px 10px', borderRadius: 999,
+                letterSpacing: '0.03em',
               }}>{tag}</span>
             ))}
           </div>
@@ -392,26 +385,28 @@ export default function Learn() {
 
         <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
           {/* Tier toggle */}
-          <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: 10, padding: 3, gap: 3 }}>
+          <div style={{ display: 'flex', background: 'var(--cream-2)', borderRadius: 8, padding: 3, gap: 3 }}>
             {(['Foundation', 'Higher'] as const).map(t => (
               <button key={t} onClick={() => setTier(t)} style={{
-                padding: '6px 16px', borderRadius: 8, border: 'none', cursor: 'pointer',
-                background: tier === t ? C.purple : 'transparent',
-                color: tier === t ? '#fff' : C.mid,
+                padding: '6px 16px', borderRadius: 6, border: 'none', cursor: 'pointer',
+                background: tier === t ? 'var(--green)' : 'transparent',
+                color: tier === t ? '#fff' : 'var(--ink-3)',
                 fontWeight: tier === t ? 700 : 500,
-                fontSize: 13, fontFamily: font.body, transition: 'all 0.15s',
+                fontSize: 13, fontFamily: 'var(--sans)', transition: 'all 0.15s',
               }}>{t}</button>
             ))}
           </div>
           {/* Difficulty toggle */}
-          <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: 10, padding: 3, gap: 3 }}>
+          <div style={{ display: 'flex', background: 'var(--cream-2)', borderRadius: 8, padding: 3, gap: 3 }}>
             {(['Easy', 'Medium', 'Exam Level'] as const).map(d => (
               <button key={d} onClick={() => setDifficulty(d)} style={{
-                padding: '6px 12px', borderRadius: 8, border: 'none', cursor: 'pointer',
-                background: difficulty === d ? (d === 'Easy' ? '#059669' : d === 'Medium' ? '#D97706' : '#DC2626') : 'transparent',
-                color: difficulty === d ? '#fff' : C.mid,
+                padding: '6px 12px', borderRadius: 6, border: 'none', cursor: 'pointer',
+                background: difficulty === d
+                  ? (d === 'Easy' ? 'var(--green-mid)' : d === 'Medium' ? 'var(--gold)' : 'var(--burgundy)')
+                  : 'transparent',
+                color: difficulty === d ? '#fff' : 'var(--ink-3)',
                 fontWeight: difficulty === d ? 700 : 500,
-                fontSize: 12, fontFamily: font.body, transition: 'all 0.15s',
+                fontSize: 12, fontFamily: 'var(--sans)', transition: 'all 0.15s',
                 whiteSpace: 'nowrap',
               }}>{d}</button>
             ))}
@@ -422,11 +417,14 @@ export default function Learn() {
       {/* Page body */}
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px 60px' }}>
         <div style={{ marginBottom: 28 }}>
-          <h1 style={{ fontFamily: font.display, fontSize: 22, fontWeight: 800, color: C.ink, margin: '0 0 6px' }}>
+          <h1 style={{
+            fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 800,
+            color: 'var(--ink)', margin: '0 0 6px',
+          }}>
             Choose a topic to practise
           </h1>
-          <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
-            {tier} tier · {board} · {topicNames.reduce((acc, t) => acc + TOPIC_DATA[t][tier].length, 0)} subtopics available
+          <p style={{ fontSize: 13, color: 'var(--ink-3)', margin: 0 }}>
+            {tier} tier &middot; {board} &middot; {topicNames.reduce((acc, t) => acc + TOPIC_DATA[t][tier].length, 0)} subtopics available
           </p>
         </div>
 
@@ -436,23 +434,26 @@ export default function Learn() {
             const subtopics = TOPIC_DATA[topicName][tier]
             return (
               <div key={topicName} style={{
-                background: '#fff', border: `1px solid ${meta.border}`,
-                borderRadius: 20, overflow: 'hidden',
+                background: 'var(--paper)', border: `1px solid ${meta.border}`,
+                borderRadius: 16, overflow: 'hidden',
               }}>
                 <div style={{
                   background: meta.light, borderBottom: `1px solid ${meta.border}`,
                   padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 12,
                 }}>
                   <div style={{
-                    width: 40, height: 40, borderRadius: 10, background: '#fff',
+                    width: 40, height: 40, borderRadius: 10, background: 'var(--paper)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: 20, boxShadow: `0 2px 8px ${meta.color}20`,
+                    fontSize: 20, border: '1px solid var(--rule)',
                   }}>{meta.icon}</div>
                   <div>
-                    <div style={{ fontSize: 16, fontWeight: 800, fontFamily: font.display, color: meta.color }}>
+                    <div style={{
+                      fontSize: 16, fontWeight: 800, fontFamily: 'var(--serif)',
+                      color: meta.color,
+                    }}>
                       {topicName}
                     </div>
-                    <div style={{ fontSize: 12, color: C.mid, marginTop: 1 }}>{subtopics.length} subtopics</div>
+                    <div style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 1 }}>{subtopics.length} subtopics</div>
                   </div>
                 </div>
                 <div style={{ padding: '16px 20px', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -462,19 +463,21 @@ export default function Learn() {
                       onClick={() => handleSubtopic(topicName, st)}
                       style={{
                         padding: '8px 16px', borderRadius: 999, cursor: 'pointer',
-                        border: `1.5px solid ${meta.border}`, background: '#fff',
-                        color: meta.color, fontWeight: 600, fontSize: 13, fontFamily: font.body,
+                        border: '1px solid var(--rule)', background: 'var(--paper)',
+                        color: meta.color, fontWeight: 600, fontSize: 13, fontFamily: 'var(--sans)',
                         transition: 'all 0.15s', whiteSpace: 'nowrap',
                       }}
                       onMouseEnter={e => {
                         const el = e.currentTarget
-                        el.style.background = meta.light; el.style.borderColor = meta.color
-                        el.style.transform = 'translateY(-1px)'; el.style.boxShadow = `0 4px 12px ${meta.color}20`
+                        el.style.background = meta.light
+                        el.style.borderColor = meta.color
+                        el.style.transform = 'translateY(-1px)'
                       }}
                       onMouseLeave={e => {
                         const el = e.currentTarget
-                        el.style.background = '#fff'; el.style.borderColor = meta.border
-                        el.style.transform = 'none'; el.style.boxShadow = 'none'
+                        el.style.background = 'var(--paper)'
+                        el.style.borderColor = 'var(--rule)'
+                        el.style.transform = 'none'
                       }}
                     >{st}</button>
                   ))}

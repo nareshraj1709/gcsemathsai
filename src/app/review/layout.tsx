@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import AuthGuard from '@/components/AuthGuard'
 
 export const metadata: Metadata = {
   title: 'Session Review — See How You Did',
@@ -14,5 +13,5 @@ export const metadata: Metadata = {
 }
 
 export default function ReviewLayout({ children }: { children: React.ReactNode }) {
-  return <AuthGuard>{children}</AuthGuard>
+  return <>{children}</>
 }

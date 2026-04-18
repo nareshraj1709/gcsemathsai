@@ -3,25 +3,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { getProfileFromCache } from '@/lib/profile'
-
-const C = {
-  ink: "#0D0B1A",
-  purple: "#6D28D9",
-  purpleLight: "#8B5CF6",
-  purplePale: "#EDE9FE",
-  purpleDim: "#4C1D95",
-  gold: "#F59E0B",
-  green: "#10B981",
-  red: "#EF4444",
-  mist: "#F8F7FF",
-  mid: "#6B7280",
-  border: "#E5E1FF",
-}
-
-const font = {
-  display: "'Georgia', 'Times New Roman', serif",
-  body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
-}
+import Footer from '@/components/Footer'
 
 type Attempt = {
   id: string
@@ -56,6 +38,23 @@ function calcStreak(attempts: Attempt[]): number {
 
 type Profile = { name: string; year: string; board: string; goal: string }
 
+// ── Syllabus categories ──────────────────────────────────────
+const SYLLABUS_CATEGORIES = [
+  { key: 'Number', label: 'Number', keywords: ['number', 'fraction', 'decimal', 'percentage', 'ratio', 'integer', 'hcf', 'lcm', 'prime', 'factor', 'rounding', 'estimation', 'standard form', 'surds', 'indices'] },
+  { key: 'Algebra', label: 'Algebra', keywords: ['algebra', 'equation', 'expression', 'formula', 'inequality', 'sequence', 'graph', 'function', 'simultaneous', 'quadratic', 'linear', 'expand', 'factorise', 'simplif'] },
+  { key: 'Ratio', label: 'Ratio', keywords: ['ratio', 'proportion', 'compound measure', 'speed', 'density', 'pressure', 'unit', 'convert', 'scale', 'growth', 'decay'] },
+  { key: 'Geometry', label: 'Geometry', keywords: ['geometry', 'shape', 'angle', 'area', 'volume', 'perimeter', 'circle', 'triangle', 'polygon', 'transform', 'vector', 'pythagoras', 'trigonometry', 'symmetry', 'congruent', 'similar'] },
+  { key: 'Statistics', label: 'Statistics', keywords: ['statistics', 'probability', 'data', 'average', 'mean', 'median', 'mode', 'range', 'chart', 'histogram', 'frequency', 'pie chart', 'scatter', 'cumulative', 'box plot', 'tree diagram', 'venn'] },
+]
+
+function classifyTopic(topicName: string): string {
+  const lower = topicName.toLowerCase()
+  for (const cat of SYLLABUS_CATEGORIES) {
+    if (cat.keywords.some(kw => lower.includes(kw))) return cat.key
+  }
+  return 'Number' // default
+}
+
 export default function Dashboard() {
   const router = useRouter()
   const [attempts, setAttempts] = useState<Attempt[]>([])
@@ -71,6 +70,20 @@ export default function Dashboard() {
     if (xp >= 1500) return { label: "Gold", color: "#F59E0B", next: 3000, icon: "🥇" }
     if (xp >= 500)  return { label: "Silver", color: "#9CA3AF", next: 1500, icon: "🥈" }
     return { label: "Bronze", color: "#B45309", next: 500, icon: "🥉" }
+  }
+
+  // ── Grade predictor ──────────────────────────────────────────
+  function predictGrade(avgPct: number, totalAttempts: number): string {
+    if (totalAttempts < 3) return '--'
+    if (avgPct >= 90) return '9'
+    if (avgPct >= 80) return '8'
+    if (avgPct >= 70) return '7'
+    if (avgPct >= 60) return '6'
+    if (avgPct >= 50) return '5'
+    if (avgPct >= 40) return '4'
+    if (avgPct >= 30) return '3'
+    if (avgPct >= 20) return '2'
+    return '1'
   }
 
   // ── Badges ────────────────────────────────────────────────────
@@ -123,6 +136,9 @@ export default function Dashboard() {
   const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000)
   const weeklyCount = attempts.filter(a => new Date(a.created_at) > weekAgo).length
 
+  // Estimate hours: ~2 min per attempt
+  const hoursThisWeek = Math.round((weeklyCount * 2) / 60 * 10) / 10
+
   const topicStats = attempts.reduce<Record<string, { score: number; outOf: number; count: number }>>((acc, a) => {
     if (!acc[a.topic]) acc[a.topic] = { score: 0, outOf: 0, count: 0 }
     acc[a.topic].score += a.score
@@ -139,11 +155,9 @@ export default function Dashboard() {
 
   const topicsMastered = topicList.filter(t => t.score >= 80).length
 
-  const weakestTopic = topicList.length > 0
-    ? [...topicList].sort((a, b) => a.score - b.score)[0]
-    : null
+  const weakTopics = [...topicList].sort((a, b) => a.score - b.score).slice(0, 5)
 
-  const recentThree = attempts.slice(0, 3)
+  const recentFive = attempts.slice(0, 5)
 
   const name = profile?.name || "Student"
   const board = profile?.board || "AQA"
@@ -158,239 +172,446 @@ export default function Dashboard() {
   // Badges
   const badges = calcBadges(totalAttempts, streak, topicsMastered, attempts)
 
-  // Cheeky greeting
-  const cheekyCtas = streak >= 7
-    ? `${name}, you're unstoppable 🔥`
-    : streak >= 3
-    ? `Back again? Respect the grind, ${name}.`
-    : totalAttempts === 0
-    ? `Ready to smash it, ${name}? 💪`
-    : `Let's get that grade up, ${name} 🚀`
+  // Predicted grade
+  const predictedGrade = predictGrade(avgPct, totalAttempts)
+
+  // Days to exam (GCSE maths typically late May/early June)
+  const examDate = new Date(now.getFullYear(), 4, 20) // May 20
+  const daysToExam = Math.max(0, Math.ceil((examDate.getTime() - now.getTime()) / 864e5))
+  const examPassed = daysToExam === 0
+
+  // Date formatting
+  const dateStr = now.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
+
+  // 7-day calendar for revision log
+  const last7 = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(now.getTime() - (6 - i) * 864e5)
+    const dateKey = d.toISOString().slice(0, 10)
+    const dayAttempts = attempts.filter(a => a.created_at.slice(0, 10) === dateKey)
+    return {
+      day: d.toLocaleDateString('en-GB', { weekday: 'short' }).slice(0, 2),
+      date: d.getDate(),
+      count: dayAttempts.length,
+      isToday: dateKey === now.toISOString().slice(0, 10),
+    }
+  })
+
+  // Weekly stats
+  const weekAttempts = attempts.filter(a => new Date(a.created_at) > weekAgo)
+  const weekScore = weekAttempts.reduce((s, a) => s + a.score, 0)
+  const weekPossible = weekAttempts.reduce((s, a) => s + a.out_of, 0)
+  const weekAccuracy = weekPossible > 0 ? Math.round((weekScore / weekPossible) * 100) : 0
+
+  // Syllabus progress per category
+  const syllabusProgress = SYLLABUS_CATEGORIES.map(cat => {
+    const catTopics = topicList.filter(t => classifyTopic(t.name) === cat.key)
+    const totalQuestions = catTopics.reduce((s, t) => s + t.count, 0)
+    const avgScore = catTopics.length > 0
+      ? Math.round(catTopics.reduce((s, t) => s + t.score, 0) / catTopics.length)
+      : 0
+    return { ...cat, progress: avgScore, questions: totalQuestions }
+  })
+
+  // ── Ring progress SVG ──────────────────────────────────────
+  function Ring({ pct, size = 64, stroke = 5, color }: { pct: number; size?: number; stroke?: number; color: string }) {
+    const r = (size - stroke) / 2
+    const circ = 2 * Math.PI * r
+    const offset = circ - (pct / 100) * circ
+    return (
+      <svg width={size} height={size} style={{ transform: 'rotate(-90deg)' }}>
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--rule)" strokeWidth={stroke} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth={stroke}
+          strokeDasharray={circ} strokeDashoffset={offset} strokeLinecap="round"
+          style={{ transition: 'stroke-dashoffset 0.8s ease' }} />
+      </svg>
+    )
+  }
 
   if (loading) {
     return (
       <div style={{
-        minHeight: "100vh", background: C.mist,
-        display: "flex", alignItems: "center", justifyContent: "center",
+        minHeight: '100vh', background: 'var(--cream)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
       }}>
-        <p style={{ color: C.purple, fontWeight: 600, fontFamily: font.body }}>Loading your dashboard…</p>
+        <p style={{ color: 'var(--green)', fontWeight: 600, fontFamily: 'var(--sans)', fontSize: 15 }}>Loading your dashboard...</p>
       </div>
     )
   }
 
   return (
-    <div style={{ background: C.mist, minHeight: "100vh", fontFamily: font.body }}>
-      <div style={{ maxWidth: 960, margin: "0 auto", padding: "32px 24px" }}>
+    <div style={{ background: 'var(--cream)', minHeight: '100vh', fontFamily: 'var(--sans)' }}>
+      <div className="wrap" style={{ paddingTop: 40, paddingBottom: 40 }}>
 
-        {/* Welcome header */}
-        <div style={{
-          background: `linear-gradient(135deg, ${C.purpleDim} 0%, ${C.purple} 60%, ${C.purpleLight} 100%)`,
-          borderRadius: 20, padding: "28px 32px", marginBottom: 24, color: "#fff",
-          display: "flex", justifyContent: "space-between", alignItems: "center",
-          boxShadow: `0 8px 32px ${C.purple}30`, flexWrap: "wrap", gap: 16,
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 1 — GREETING HEADER
+            ═══════════════════════════════════════════════════════════ */}
+        <div style={{ marginBottom: 32 }}>
+          <p className="sec-label">Dashboard</p>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16, marginBottom: 20 }}>
+            <div>
+              <h1 style={{ fontSize: 'clamp(28px, 4vw, 42px)', marginBottom: 6, lineHeight: 1.1 }}>
+                Welcome back, <em>{name}.</em>
+              </h1>
+              <p style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--ink-3)', letterSpacing: '0.04em' }}>
+                {dateStr}
+                {!examPassed && (
+                  <span style={{ marginLeft: 16, color: 'var(--burgundy)', fontWeight: 700 }}>
+                    {daysToExam} days to exam
+                  </span>
+                )}
+              </p>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.05em' }}>
+                {level.icon} {level.label}
+              </span>
+              <div style={{ width: 120, background: 'var(--rule)', borderRadius: 999, height: 6 }}>
+                <div style={{ width: `${xpPct}%`, height: 6, borderRadius: 999, background: 'var(--green)', transition: 'width 0.8s ease' }} />
+              </div>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-4)' }}>{xp} XP</span>
+            </div>
+          </div>
+
+          {/* Today's session card */}
+          <div style={{
+            background: 'var(--green)', borderRadius: 14, padding: '22px 28px',
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+            flexWrap: 'wrap', gap: 16,
+          }}>
+            <div>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 20, fontWeight: 600, color: 'var(--cream)', marginBottom: 4 }}>
+                Today&apos;s session
+              </p>
+              <p style={{ fontSize: 13, color: 'rgba(247,243,234,0.75)', fontWeight: 500 }}>
+                {weeklyCount} questions this week &middot; {streak > 0 ? `${streak}-day streak going` : 'Start a new streak today'}
+              </p>
+            </div>
+            <button className="btn btn-gold" onClick={() => router.push('/learn')} style={{ fontSize: 14 }}>
+              Start practising
+            </button>
+          </div>
+        </div>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 2 — STATS GRID (4 cards)
+            ═══════════════════════════════════════════════════════════ */}
+        <div className="dash-stats-grid" style={{
+          display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 16, marginBottom: 32,
         }}>
-          <div style={{ flex: 1 }}>
-            <p style={{ fontSize: 13, opacity: 0.8, marginBottom: 4 }}>{greeting} 👋</p>
-            <h1 style={{ fontFamily: font.display, fontSize: 24, fontWeight: 800, margin: "0 0 2px" }}>
-              {cheekyCtas}
-            </h1>
-            <p style={{ opacity: 0.7, fontSize: 13, margin: "0 0 12px" }}>{year} · {board}</p>
-            {/* XP bar */}
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ fontSize: 13, fontWeight: 700, opacity: 0.9 }}>{level.icon} {level.label}</span>
-              <div style={{ flex: 1, maxWidth: 160, background: "rgba(255,255,255,0.25)", borderRadius: 999, height: 7 }}>
-                <div style={{ width: `${xpPct}%`, height: 7, borderRadius: 999, background: "#fff", transition: "width 0.8s ease" }} />
-              </div>
-              <span style={{ fontSize: 11, opacity: 0.75 }}>{xp} XP</span>
-            </div>
-          </div>
-          <div style={{ display: "flex", gap: 20 }}>
-            {[
-              { val: `${totalAttempts}`, sub: "questions done" },
-              { val: `${avgPct}%`, sub: "avg score" },
-              { val: `🔥 ${streak}`, sub: "day streak" },
-            ].map(s => (
-              <div key={s.sub} style={{ textAlign: "center" }}>
-                <div style={{ fontSize: 20, fontWeight: 800 }}>{s.val}</div>
-                <div style={{ fontSize: 11, opacity: 0.75 }}>{s.sub}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Stats row */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 16, marginBottom: 24 }}>
-          {[
-            { icon: "🔥", val: `${streak} day${streak !== 1 ? 's' : ''}`, label: "Current streak" },
-            { icon: "📈", val: `${avgPct}%`, label: "Avg score" },
-            { icon: "📝", val: String(weeklyCount), label: "This week" },
-            { icon: "🏆", val: String(topicsMastered), label: "Topics mastered" },
-          ].map(s => (
-            <div key={s.label} style={{
-              background: "#fff", border: `1px solid ${C.border}`, borderRadius: 14,
-              padding: "20px 16px", textAlign: "center",
-              boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+          {/* Predicted Grade — spans wider */}
+          <div style={{
+            background: 'var(--ink)', borderRadius: 14, padding: '24px 28px',
+            display: 'flex', alignItems: 'center', gap: 24, color: 'var(--cream)',
+          }}>
+            <div style={{
+              width: 64, height: 64, borderRadius: 12, background: 'var(--gold)',
+              display: 'grid', placeItems: 'center',
+              fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: 'var(--ink)',
             }}>
-              <div style={{ fontSize: 24, marginBottom: 6 }}>{s.icon}</div>
-              <div style={{ fontSize: 22, fontWeight: 800, color: C.ink, fontFamily: font.display }}>{s.val}</div>
-              <div style={{ fontSize: 12, color: C.mid }}>{s.label}</div>
+              {predictedGrade}
             </div>
-          ))}
-        </div>
+            <div>
+              <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.1em', color: 'var(--gold-soft)', textTransform: 'uppercase', marginBottom: 4, fontWeight: 700 }}>
+                Predicted Grade
+              </p>
+              <p style={{ fontSize: 14, color: 'rgba(247,243,234,0.65)', fontWeight: 500 }}>
+                Based on {totalAttempts} question{totalAttempts !== 1 ? 's' : ''} &middot; {avgPct}% avg
+              </p>
+            </div>
+          </div>
 
-        {/* Badges */}
-        <div style={{ marginBottom: 24 }}>
-          <p style={{ fontSize: 12, fontWeight: 700, color: C.mid, textTransform: "uppercase", letterSpacing: 0.8, margin: "0 0 10px" }}>Achievements</p>
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            {badges.map(b => (
-              <div key={b.id} style={{
-                display: "flex", alignItems: "center", gap: 7,
-                background: b.earned ? "#fff" : "#F9FAFB",
-                border: `1.5px solid ${b.earned ? C.border : "#E5E7EB"}`,
-                borderRadius: 30, padding: "7px 14px",
-                opacity: b.earned ? 1 : 0.45,
-                boxShadow: b.earned ? `0 2px 8px ${C.purple}15` : "none",
-                transition: "all 0.2s",
-              }}>
-                <span style={{ fontSize: 16 }}>{b.icon}</span>
-                <span style={{ fontSize: 12, fontWeight: 700, color: b.earned ? C.ink : C.mid }}>{b.label}</span>
-                {b.earned && <span style={{ fontSize: 10, color: C.green, fontWeight: 800 }}>✓</span>}
-              </div>
-            ))}
+          {/* Streak */}
+          <div className="card" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '20px 16px' }}>
+            <p style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: 'var(--ink)', lineHeight: 1 }}>
+              {streak}
+            </p>
+            <p style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.06em', marginTop: 6, textTransform: 'uppercase', fontWeight: 700 }}>
+              Day streak
+            </p>
+          </div>
+
+          {/* Hours this week */}
+          <div className="card" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '20px 16px' }}>
+            <p style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: 'var(--ink)', lineHeight: 1 }}>
+              {hoursThisWeek}
+            </p>
+            <p style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.06em', marginTop: 6, textTransform: 'uppercase', fontWeight: 700 }}>
+              Hours this week
+            </p>
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: topicList.length > 0 ? "1fr 340px" : "1fr", gap: 20, alignItems: "start" }}>
-          {/* Topic progress */}
-          {topicList.length > 0 ? (
-            <div style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 16, padding: 24 }}>
-              <h2 style={{ fontFamily: font.display, fontSize: 18, color: C.ink, marginBottom: 20 }}>Topic Progress</h2>
-              {topicList.map(t => {
-                const color = t.score >= 80 ? C.green : t.score >= 60 ? C.gold : C.red
-                return (
-                  <div key={t.name} style={{ marginBottom: 16 }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-                      <span style={{ fontSize: 14, fontWeight: 600, color: C.ink }}>{t.name}</span>
-                      <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                        <span style={{ fontSize: 12, color: C.mid }}>{t.count} attempts</span>
-                        <span style={{ fontSize: 14, fontWeight: 700, color }}>{t.score}%</span>
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 3 — MIDDLE (Weak-spot Radar + Revision Log)
+            ═══════════════════════════════════════════════════════════ */}
+        <div className="dash-middle-grid" style={{
+          display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: 20, marginBottom: 32, alignItems: 'start',
+        }}>
+          {/* Weak-spot Radar */}
+          <div className="card" style={{ padding: 28 }}>
+            <p className="sec-label" style={{ marginBottom: 16 }}>Weak-spot Radar</p>
+            {weakTopics.length > 0 ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                {weakTopics.map(t => {
+                  const barColor = t.score < 40 ? 'var(--burgundy)' : t.score < 65 ? 'var(--gold)' : 'var(--green)'
+                  const bgColor = t.score < 40 ? 'var(--burgundy-soft)' : t.score < 65 ? 'var(--gold-soft)' : 'var(--green-soft)'
+                  const status = t.score < 40 ? 'Critical' : t.score < 65 ? 'Needs work' : 'Good'
+                  return (
+                    <div key={t.name}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                        <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)' }}>{t.name}</span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                          <span style={{
+                            fontFamily: 'var(--mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.04em',
+                            padding: '3px 8px', borderRadius: 999,
+                            background: bgColor, color: barColor, textTransform: 'uppercase',
+                          }}>
+                            {status}
+                          </span>
+                          <span style={{ fontFamily: 'var(--mono)', fontSize: 13, fontWeight: 700, color: barColor }}>
+                            {t.score}%
+                          </span>
+                        </div>
+                      </div>
+                      <div style={{ background: 'var(--cream-2)', borderRadius: 999, height: 7 }}>
+                        <div style={{
+                          width: `${t.score}%`, height: 7, borderRadius: 999,
+                          background: barColor, transition: 'width 0.6s ease',
+                        }} />
                       </div>
                     </div>
-                    <div style={{ background: "#F3F4F6", borderRadius: 999, height: 8 }}>
-                      <div style={{ width: `${t.score}%`, height: 8, borderRadius: 999, background: color, transition: "width 0.5s" }} />
+                  )
+                })}
+              </div>
+            ) : (
+              <p style={{ fontSize: 14, color: 'var(--ink-3)', fontStyle: 'italic' }}>
+                Complete some practice to see your weak spots here.
+              </p>
+            )}
+          </div>
+
+          {/* Revision Log */}
+          <div className="card" style={{ padding: 28 }}>
+            <p className="sec-label" style={{ marginBottom: 16 }}>Revision Log</p>
+
+            {/* Streak number */}
+            <div style={{ textAlign: 'center', marginBottom: 20 }}>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 44, fontWeight: 700, color: 'var(--ink)', lineHeight: 1 }}>
+                {streak}
+              </p>
+              <p style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-3)', letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: 4, fontWeight: 600 }}>
+                day streak
+              </p>
+            </div>
+
+            {/* 7-day calendar grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 6, marginBottom: 20 }}>
+              {last7.map((d, i) => (
+                <div key={i} style={{
+                  textAlign: 'center', padding: '8px 0',
+                  borderRadius: 8,
+                  background: d.isToday ? 'var(--green-soft)' : 'transparent',
+                  border: d.isToday ? '1.5px solid var(--green)' : '1.5px solid var(--rule)',
+                }}>
+                  <p style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--ink-4)', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 700, marginBottom: 4 }}>
+                    {d.day}
+                  </p>
+                  <div style={{
+                    width: 8, height: 8, borderRadius: 999, margin: '0 auto',
+                    background: d.count > 0 ? 'var(--green)' : 'var(--rule)',
+                  }} />
+                  {d.count > 0 && (
+                    <p style={{ fontFamily: 'var(--mono)', fontSize: 9, color: 'var(--green)', marginTop: 3, fontWeight: 700 }}>
+                      {d.count}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Stats row */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8, borderTop: '1px solid var(--rule)', paddingTop: 16 }}>
+              <div style={{ textAlign: 'center' }}>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 20, fontWeight: 700, color: 'var(--ink)' }}>{weeklyCount}</p>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: 9.5, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600 }}>Questions</p>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 20, fontWeight: 700, color: 'var(--ink)' }}>{weekAccuracy}%</p>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: 9.5, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600 }}>Accuracy</p>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 20, fontWeight: 700, color: 'var(--ink)' }}>{hoursThisWeek}h</p>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: 9.5, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600 }}>Total time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 4 — SYLLABUS PROGRESS (5 category cards)
+            ═══════════════════════════════════════════════════════════ */}
+        <div style={{ marginBottom: 32 }}>
+          <p className="sec-label">Syllabus Progress</p>
+          <div className="dash-syllabus-grid" style={{
+            display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 14,
+          }}>
+            {syllabusProgress.map(cat => {
+              const ringColor = cat.progress >= 70 ? 'var(--green)' : cat.progress >= 40 ? 'var(--gold)' : cat.progress > 0 ? 'var(--burgundy)' : 'var(--rule-2)'
+              return (
+                <div key={cat.key} className="card" style={{
+                  textAlign: 'center', padding: '24px 16px',
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10,
+                }}>
+                  <div style={{ position: 'relative', width: 64, height: 64 }}>
+                    <Ring pct={cat.progress} color={ringColor} />
+                    <span style={{
+                      position: 'absolute', inset: 0, display: 'grid', placeItems: 'center',
+                      fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 700, color: 'var(--ink)',
+                      transform: 'rotate(0deg)', // counter the parent rotation
+                    }}>
+                      {cat.progress}%
+                    </span>
+                  </div>
+                  <p style={{ fontFamily: 'var(--serif)', fontSize: 15, fontWeight: 600, color: 'var(--ink)' }}>
+                    {cat.label}
+                  </p>
+                  <p style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--ink-4)', letterSpacing: '0.04em' }}>
+                    {cat.questions} questions
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 5 — RECENT ACTIVITY
+            ═══════════════════════════════════════════════════════════ */}
+        <div style={{ marginBottom: 32 }}>
+          <p className="sec-label">Recent Activity</p>
+          {recentFive.length > 0 ? (
+            <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+              {recentFive.map((a, i) => {
+                const pct = Math.round((a.score / a.out_of) * 100)
+                const good = pct >= 60
+                const dateLabel = new Date(a.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+                return (
+                  <div key={a.id} style={{
+                    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                    padding: '16px 24px',
+                    borderBottom: i < recentFive.length - 1 ? '1px solid var(--rule)' : 'none',
+                  }}>
+                    <div>
+                      <p style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', marginBottom: 2 }}>
+                        {a.subtopic || a.topic}
+                      </p>
+                      <p style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-4)' }}>
+                        {a.subtopic ? a.topic + ' \u00b7 ' : ''}{dateLabel}
+                      </p>
                     </div>
+                    <span className="pill" style={{
+                      background: good ? 'var(--green-soft)' : 'var(--burgundy-soft)',
+                      color: good ? 'var(--green)' : 'var(--burgundy)',
+                    }}>
+                      {a.score}/{a.out_of} &middot; {pct}%
+                    </span>
                   </div>
                 )
               })}
             </div>
           ) : (
-            <div style={{
-              background: "#fff", border: `1px solid ${C.border}`, borderRadius: 16, padding: 40,
-              textAlign: "center",
-            }}>
-              <div style={{ fontSize: 48, marginBottom: 16 }}>📊</div>
-              <h2 style={{ fontFamily: font.display, fontSize: 20, color: C.ink, marginBottom: 8 }}>No data yet</h2>
-              <p style={{ color: C.mid, fontSize: 14, marginBottom: 24 }}>Complete your first practice session to see your topic progress here.</p>
-              <button onClick={() => router.push('/learn')} style={{
-                padding: "12px 24px", borderRadius: 10, border: "none",
-                background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
-                color: "#fff", fontWeight: 700, fontSize: 15, cursor: "pointer",
-                fontFamily: font.body,
-              }}>Start practising →</button>
+            <div className="card" style={{ textAlign: 'center', padding: '48px 24px' }}>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 20, fontWeight: 600, color: 'var(--ink)', marginBottom: 8 }}>
+                No activity yet
+              </p>
+              <p style={{ fontSize: 14, color: 'var(--ink-3)', marginBottom: 24 }}>
+                Complete your first practice session to see your progress here.
+              </p>
+              <button className="btn btn-primary" onClick={() => router.push('/learn')}>
+                Start practising
+              </button>
             </div>
           )}
+        </div>
 
-          {/* Right sidebar */}
-          {topicList.length > 0 && (
-            <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              {/* Focus today */}
-              {weakestTopic && (
-                <div style={{
-                  background: "#FEF3C7", border: "1px solid #FCD34D",
-                  borderRadius: 16, padding: 20,
-                }}>
-                  <p style={{ fontSize: 13, fontWeight: 700, color: "#92400E", margin: "0 0 8px" }}>⚠️ Focus today</p>
-                  <p style={{ fontSize: 22, fontWeight: 800, color: "#78350F", margin: "0 0 8px", fontFamily: font.display }}>{weakestTopic.name}</p>
-                  <p style={{ fontSize: 13, color: "#92400E", margin: "0 0 16px" }}>
-                    {weakestTopic.score}% score · {weakestTopic.count} attempt{weakestTopic.count !== 1 ? "s" : ""}
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 6 — BADGES / MARKS OF DISTINCTION
+            ═══════════════════════════════════════════════════════════ */}
+        <div style={{ marginBottom: 32 }}>
+          <p className="sec-label">Marks of Distinction</p>
+          <div className="dash-badges-grid" style={{
+            display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 12,
+          }}>
+            {badges.map(b => (
+              <div key={b.id} className="card" style={{
+                display: 'flex', alignItems: 'center', gap: 12, padding: '16px 20px',
+                opacity: b.earned ? 1 : 0.4,
+                borderColor: b.earned ? 'var(--green)' : 'var(--rule)',
+                background: b.earned ? 'var(--green-soft)' : 'var(--paper)',
+              }}>
+                <span style={{ fontSize: 24 }}>{b.icon}</span>
+                <div>
+                  <p style={{ fontSize: 13, fontWeight: 700, color: b.earned ? 'var(--green)' : 'var(--ink-3)' }}>
+                    {b.label}
                   </p>
-                  <button onClick={() => router.push('/learn')} style={{
-                    width: "100%", padding: "10px", borderRadius: 10,
-                    background: "#92400E", color: "#fff", border: "none",
-                    fontWeight: 700, fontSize: 14, cursor: "pointer", fontFamily: font.body,
-                  }}>Practice now →</button>
+                  <p style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--ink-4)', letterSpacing: '0.04em', marginTop: 2 }}>
+                    {b.earned ? 'Earned' : 'Locked'}
+                  </p>
                 </div>
-              )}
-
-              {/* Recent activity */}
-              {recentThree.length > 0 && (
-                <div style={{ background: "#fff", border: `1px solid ${C.border}`, borderRadius: 16, padding: 20 }}>
-                  <p style={{ fontSize: 15, fontWeight: 700, color: C.ink, margin: "0 0 16px", fontFamily: font.display }}>Recent activity</p>
-                  {recentThree.map(a => {
-                    const pct = Math.round((a.score / a.out_of) * 100)
-                    const good = pct >= 60
-                    const dateStr = new Date(a.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
-                    return (
-                      <div key={a.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
-                        <div>
-                          <div style={{ fontSize: 14, fontWeight: 600, color: C.ink }}>{a.subtopic || a.topic}</div>
-                          <div style={{ fontSize: 12, color: C.mid }}>{a.subtopic ? a.topic + ' · ' : ''}{dateStr}</div>
-                        </div>
-                        <span style={{
-                          fontSize: 13, fontWeight: 700,
-                          color: good ? C.green : C.red,
-                          background: good ? "#ECFDF5" : "#FEF2F2",
-                          padding: "3px 10px", borderRadius: 999,
-                        }}>{a.score}/{a.out_of}</span>
-                      </div>
-                    )
-                  })}
-                </div>
-              )}
-            </div>
-          )}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* CTAs */}
-        {/* Quick 5 featured card */}
-        <div style={{ marginTop: 20, marginBottom: 12 }}>
-          <button onClick={() => router.push('/learn')} style={{
-            width: "100%", padding: "18px 24px",
-            background: `linear-gradient(135deg, ${C.purpleDim}, ${C.purple} 60%, ${C.purpleLight})`,
-            color: "#fff", border: "none", borderRadius: 16,
-            fontSize: 16, fontWeight: 800, cursor: "pointer",
-            fontFamily: font.body,
-            boxShadow: `0 6px 24px ${C.purple}35`,
-            display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
-          }}>
-            <span style={{ fontSize: 22 }}>⚡</span>
-            <div style={{ textAlign: "left" }}>
-              <div>Quick 5-min Practice →</div>
-              <div style={{ fontSize: 12, opacity: 0.8, fontWeight: 500, marginTop: 2 }}>5 questions · AI marked · instant results</div>
-            </div>
+        {/* ═══════════════════════════════════════════════════════════
+            QUICK ACTIONS
+            ═══════════════════════════════════════════════════════════ */}
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
+          <button className="btn btn-primary" onClick={() => router.push('/learn')} style={{ flex: 1, minWidth: 180, justifyContent: 'center' }}>
+            Practice questions
+          </button>
+          <button className="btn btn-outline" onClick={() => router.push('/study')} style={{ flex: 1, minWidth: 140, justifyContent: 'center' }}>
+            Study notes
+          </button>
+          <button className="btn btn-outline" onClick={() => router.push('/papers')} style={{ flex: 1, minWidth: 140, justifyContent: 'center' }}>
+            Exam papers
           </button>
         </div>
-        <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-          <button onClick={() => router.push('/study')} style={{
-            flex: 1, minWidth: 140, padding: "13px",
-            background: "#fff", color: C.purple,
-            border: `1.5px solid ${C.border}`, borderRadius: 14,
-            fontSize: 14, fontWeight: 700, cursor: "pointer",
-            fontFamily: font.body,
-          }}>
-            📖 Study Notes
-          </button>
-          <button onClick={() => router.push('/papers')} style={{
-            flex: 1, minWidth: 140, padding: "13px",
-            background: "#fff", color: "#2563EB",
-            border: "1.5px solid #BFDBFE", borderRadius: 14,
-            fontSize: 14, fontWeight: 700, cursor: "pointer",
-            fontFamily: font.body,
-          }}>
-            📋 Exam Papers
-          </button>
-        </div>
+
       </div>
+
+      <Footer />
+
+      {/* ═══════════════════════════════════════════════════════════
+          RESPONSIVE STYLES
+          ═══════════════════════════════════════════════════════════ */}
+      <style jsx>{`
+        @media (max-width: 900px) {
+          .dash-stats-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .dash-stats-grid > div:first-child {
+            grid-column: 1 / -1;
+          }
+          .dash-middle-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .dash-syllabus-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+        @media (max-width: 600px) {
+          .dash-stats-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .dash-syllabus-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          .dash-badges-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   )
 }

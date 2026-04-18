@@ -16,9 +16,9 @@ const FEATURES = [
   {
     icon: '🤖',
     title: 'AI marking — like a real examiner',
-    colour: 'purple',
-    badge: 'bg-purple-100 text-purple-700',
-    bar: 'bg-purple-500',
+    colour: 'green',
+    badge: 'bg-green-100 text-green-700',
+    bar: 'bg-green-500',
     points: [
       'Awards method marks (M), accuracy marks (A) and communication marks (C) — not just right or wrong',
       'Identifies where you lost marks and why, with a full worked solution',
@@ -81,9 +81,9 @@ const FEATURES = [
   {
     icon: '📊',
     title: 'Dashboard and progress tracking',
-    colour: 'purple',
-    badge: 'bg-purple-100 text-purple-700',
-    bar: 'bg-purple-500',
+    colour: 'teal',
+    badge: 'bg-teal-100 text-teal-700',
+    bar: 'bg-teal-500',
     points: [
       'See your score history and improvement trend for every topic',
       'Know exactly which areas need more revision before your mocks',
@@ -106,39 +106,39 @@ export default function FeaturesPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <div className="bg-purple-50 border-b border-purple-100 px-6 py-14 text-center">
-        <span className="text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full">Features</span>
-        <h1 className="text-4xl font-bold text-gray-900 mt-4 mb-3 max-w-2xl mx-auto leading-tight">
+      <div className="border-b px-6 py-14 text-center" style={{ background: 'var(--green-soft)', borderColor: 'var(--rule)' }}>
+        <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ color: 'var(--green)', background: 'var(--green-soft)' }}>Features</span>
+        <h1 className="text-4xl font-bold mt-4 mb-3 max-w-2xl mx-auto leading-tight" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>
           Everything you need to improve your Maths grade
         </h1>
-        <p className="text-gray-500 text-base max-w-xl mx-auto mb-8 leading-relaxed">
+        <p className="text-base max-w-xl mx-auto mb-8 leading-relaxed" style={{ color: 'var(--ink-3)' }}>
           From Year 9 GCSE preparation to Year 11 exam revision — GCSEMathsAI gives every student the tools to practise effectively and get better marks.
         </p>
         <div className="flex gap-3 justify-center flex-wrap">
-          <Link href="/auth" className="bg-purple-700 text-white px-7 py-3 rounded-xl font-semibold text-sm hover:bg-purple-800 transition shadow-md shadow-purple-200">
+          <Link href="/auth" className="text-white px-7 py-3 rounded-xl font-semibold text-sm transition shadow-md" style={{ background: 'var(--green)' }}>
             Start free — no card needed →
           </Link>
-          <Link href="/pricing" className="bg-white text-gray-700 border border-gray-200 px-6 py-3 rounded-xl font-semibold text-sm hover:border-purple-400 hover:text-purple-700 transition">
+          <Link href="/pricing" className="px-6 py-3 rounded-xl font-semibold text-sm transition" style={{ background: 'var(--paper)', color: 'var(--ink-2)', border: '1px solid var(--rule)' }}>
             See pricing
           </Link>
         </div>
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 border-b border-gray-100">
+      <div className="grid grid-cols-2 md:grid-cols-4" style={{ borderBottom: '1px solid var(--rule)' }}>
         {[
           { val: 'Year 9–11', label: 'Full GCSE coverage' },
           { val: '3 boards', label: 'AQA · Edexcel · OCR' },
           { val: '100+', label: 'Topics covered' },
           { val: 'Free', label: 'No card required' },
         ].map((s, i) => (
-          <div key={i} className={`py-5 text-center ${i < 3 ? 'border-r border-gray-100' : ''}`}>
-            <div className="text-xl font-bold text-gray-900">{s.val}</div>
-            <div className="text-xs text-gray-500 mt-0.5">{s.label}</div>
+          <div key={i} className="py-5 text-center" style={i < 3 ? { borderRight: '1px solid var(--rule)' } : {}}>
+            <div className="text-xl font-bold" style={{ color: 'var(--ink)' }}>{s.val}</div>
+            <div className="text-xs mt-0.5" style={{ color: 'var(--ink-3)' }}>{s.label}</div>
           </div>
         ))}
       </div>
@@ -146,7 +146,7 @@ export default function FeaturesPage() {
       {/* Feature cards */}
       <div className="max-w-4xl mx-auto px-6 py-14 grid gap-8">
         {FEATURES.map(f => (
-          <div key={f.title} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-purple-100 transition">
+          <div key={f.title} className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
             <div className={`h-1 w-full ${f.bar}`} />
             <div className="p-7">
               <div className="flex items-center gap-3 mb-4">
@@ -159,7 +159,7 @@ export default function FeaturesPage() {
               <ul className="space-y-2.5">
                 {f.points.map((p, i) => (
                   <li key={i} className="flex gap-3 items-start text-sm text-gray-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0" />
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ background: 'var(--green)' }} />
                     <span>{p}</span>
                   </li>
                 ))}
@@ -170,22 +170,22 @@ export default function FeaturesPage() {
       </div>
 
       {/* CTA */}
-      <div className="bg-purple-700 px-6 py-14 text-center">
-        <h2 className="text-3xl font-bold text-white mb-3">Ready to start?</h2>
-        <p className="text-purple-200 mb-8 max-w-md mx-auto">
+      <div className="px-6 py-14 text-center" style={{ background: 'var(--green)' }}>
+        <h2 className="text-3xl font-bold text-white mb-3" style={{ fontFamily: 'var(--serif)' }}>Ready to start?</h2>
+        <p className="mb-8 max-w-md mx-auto" style={{ color: 'var(--green-soft)' }}>
           All features are completely free right now. Create an account and start improving your Maths today.
         </p>
-        <Link href="/auth" className="inline-block bg-white text-purple-700 font-semibold px-8 py-3 rounded-xl text-sm hover:bg-purple-50 transition">
+        <Link href="/auth" className="inline-block font-semibold px-8 py-3 rounded-xl text-sm transition" style={{ background: 'var(--paper)', color: 'var(--green)' }}>
           Create your free account →
         </Link>
       </div>
 
       {/* Footer nav */}
-      <div className="max-w-4xl mx-auto px-6 py-8 border-t border-gray-100 flex flex-wrap gap-6 text-sm text-gray-500">
-        <Link href="/pricing" className="hover:text-purple-700 transition">Pricing</Link>
-        <Link href="/blog" className="hover:text-purple-700 transition">Blog</Link>
-        <Link href="/contact" className="hover:text-purple-700 transition">Contact</Link>
-        <Link href="/" className="hover:text-purple-700 transition">← Back to home</Link>
+      <div className="max-w-4xl mx-auto px-6 py-8 flex flex-wrap gap-6 text-sm text-gray-500" style={{ borderTop: '1px solid var(--rule)' }}>
+        <Link href="/pricing" className="hover:text-green-700 transition">Pricing</Link>
+        <Link href="/blog" className="hover:text-green-700 transition">Blog</Link>
+        <Link href="/contact" className="hover:text-green-700 transition">Contact</Link>
+        <Link href="/" className="hover:text-green-700 transition">← Back to home</Link>
       </div>
 
     </main>

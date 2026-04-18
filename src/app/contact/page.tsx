@@ -78,12 +78,12 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
       {/* Header */}
-      <div className="bg-purple-50 border-b border-purple-100 px-6 py-12 text-center">
-        <span className="text-xs font-semibold text-purple-700 bg-purple-100 px-3 py-1 rounded-full">Get in touch</span>
-        <h1 className="text-3xl font-bold text-gray-900 mt-4 mb-2">Contact us</h1>
-        <p className="text-gray-500 text-sm max-w-md mx-auto">
+      <div className="border-b px-6 py-12 text-center" style={{ background: 'var(--green-soft)', borderColor: 'var(--rule)' }}>
+        <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ color: 'var(--green)', background: 'var(--green-soft)' }}>Get in touch</span>
+        <h1 className="text-3xl font-bold mt-4 mb-2" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>Contact us</h1>
+        <p className="text-sm max-w-md mx-auto" style={{ color: 'var(--ink-3)' }}>
           We read every message and aim to reply within one working day.
         </p>
       </div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                 </p>
                 <button
                   onClick={() => { setStatus('idle'); setForm({ name: '', email: '', category: '', message: '' }) }}
-                  className="text-sm text-purple-700 font-semibold hover:underline"
+                  className="text-sm text-green-800 font-semibold hover:underline"
                 >
                   Send another message
                 </button>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                       onChange={e => set('name', e.target.value)}
                       placeholder="Your name"
                       required
-                      className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 transition"
+                      className="w-full border border-[var(--rule)] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-green-700 transition"
                     />
                   </div>
                   <div>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                       onChange={e => set('email', e.target.value)}
                       placeholder="you@example.com"
                       required
-                      className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 transition"
+                      className="w-full border border-[var(--rule)] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-green-700 transition"
                     />
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                     value={form.category}
                     onChange={e => set('category', e.target.value)}
                     required
-                    className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 transition bg-white"
+                    className="w-full border border-[var(--rule)] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-green-700 transition bg-[var(--paper)]"
                   >
                     <option value="">Select a category…</option>
                     {CATEGORIES.map(c => (
@@ -158,7 +158,7 @@ export default function ContactPage() {
                     rows={5}
                     required
                     minLength={10}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 transition resize-none"
+                    className="w-full border border-[var(--rule)] rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-green-700 transition resize-none"
                   />
                   <p className="text-xs text-gray-400 mt-1">{form.message.length} characters</p>
                 </div>
@@ -175,14 +175,15 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={!valid || status === 'sending'}
-                  className="w-full bg-purple-700 text-white py-3 rounded-xl font-semibold text-sm hover:bg-purple-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full text-white py-3 rounded-xl font-semibold text-sm transition disabled:opacity-50 disabled:cursor-not-allowed"
+                  style={{ background: 'var(--green)' }}
                 >
                   {status === 'sending' ? 'Sending…' : 'Send message →'}
                 </button>
 
                 <p className="text-xs text-gray-400 text-center">
                   Or email us directly:{' '}
-                  <a href="mailto:enquiries@gcsemathsai.co.uk" className="text-purple-700 font-medium">
+                  <a href="mailto:enquiries@gcsemathsai.co.uk" className="text-green-800 font-medium">
                     enquiries@gcsemathsai.co.uk
                   </a>
                 </p>
@@ -210,19 +211,19 @@ export default function ContactPage() {
                 lines: ['enquiries@gcsemathsai.co.uk', 'Class licences, bulk accounts, MATs'],
               },
             ].map(c => (
-              <div key={c.title} className="flex gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <div key={c.title} className="flex gap-3 p-4 rounded-xl" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
                 <span className="text-xl mt-0.5">{c.icon}</span>
                 <div>
                   <p className="font-semibold text-gray-900 text-sm">{c.title}</p>
-                  <p className="text-sm text-purple-700">{c.lines[0]}</p>
+                  <p className="text-sm text-green-800">{c.lines[0]}</p>
                   <p className="text-xs text-gray-400 mt-0.5">{c.lines[1]}</p>
                 </div>
               </div>
             ))}
 
             {/* Response time */}
-            <div className="bg-purple-50 border border-purple-100 rounded-xl p-4">
-              <p className="text-xs font-semibold text-purple-700 uppercase tracking-widest mb-1">Response time</p>
+            <div className="rounded-xl p-4" style={{ background: 'var(--green-soft)', border: '1px solid var(--rule)' }}>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: 'var(--green)' }}>Response time</p>
               <p className="text-sm text-gray-700">We typically reply within <strong>1 working day</strong> Monday–Friday. For urgent issues, include &quot;URGENT&quot; in the subject line.</p>
             </div>
           </div>
@@ -234,7 +235,7 @@ export default function ContactPage() {
           <p className="text-gray-500 text-sm mb-8">Can&apos;t find your answer here? Just send us a message above.</p>
           <div className="grid md:grid-cols-2 gap-5">
             {FAQS.map(faq => (
-              <div key={faq.q} className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+              <div key={faq.q} className="rounded-xl p-5" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
                 <p className="font-semibold text-gray-900 text-sm mb-2">{faq.q}</p>
                 <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
               </div>
@@ -243,10 +244,10 @@ export default function ContactPage() {
         </div>
 
         {/* Footer nav */}
-        <div className="mt-16 pt-8 border-t border-gray-100 flex flex-wrap gap-6 text-sm text-gray-500">
-          <Link href="/privacy" className="hover:text-purple-700 transition">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-purple-700 transition">Terms of Service</Link>
-          <Link href="/" className="hover:text-purple-700 transition">← Back to home</Link>
+        <div className="mt-16 pt-8 flex flex-wrap gap-6 text-sm text-gray-500" style={{ borderTop: '1px solid var(--rule)' }}>
+          <Link href="/privacy" className="hover:text-green-800 transition">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-green-800 transition">Terms of Service</Link>
+          <Link href="/" className="hover:text-green-800 transition">← Back to home</Link>
         </div>
       </div>
     </main>

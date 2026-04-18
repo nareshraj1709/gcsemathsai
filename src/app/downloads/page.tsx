@@ -3,17 +3,18 @@ import { useState } from 'react'
 import { HISTORICAL_PAPERS, type ExamBoard, type Tier } from '@/lib/papers-data'
 
 const C = {
-  ink: '#0D0B1A',
-  purple: '#6D28D9',
-  purpleLight: '#8B5CF6',
-  purplePale: '#EDE9FE',
-  mist: '#F8F7FF',
-  mid: '#6B7280',
-  border: '#E5E1FF',
+  ink: 'var(--ink)',
+  green: 'var(--green)',
+  greenMid: 'var(--green-mid)',
+  greenSoft: 'var(--green-soft)',
+  cream: 'var(--cream)',
+  paper: 'var(--paper)',
+  mid: 'var(--ink-3)',
+  border: 'var(--rule)',
 }
 const font = {
-  display: "'Georgia', 'Times New Roman', serif",
-  body: "'Trebuchet MS', 'Lucida Sans', sans-serif",
+  display: "var(--serif)",
+  body: "var(--sans)",
 }
 
 type TierFilter = Tier | 'all'
@@ -56,13 +57,13 @@ export default function DownloadsPage() {
   })
 
   return (
-    <main style={{ minHeight: '100vh', background: C.mist, fontFamily: font.body }}>
+    <main style={{ minHeight: '100vh', background: C.cream, fontFamily: font.body }}>
 
       {/* Hero */}
       <div style={{
         background: 'linear-gradient(135deg, #1E3A5F, #2563EB)',
         padding: '40px 24px 36px',
-        color: '#fff',
+        color: 'var(--paper)',
         textAlign: 'center',
       }}>
         <div style={{
@@ -108,20 +109,20 @@ export default function DownloadsPage() {
 
         {/* Filters */}
         <div style={{
-          background: '#fff', borderRadius: 14, border: `1px solid ${C.border}`,
+          background: 'var(--paper)', borderRadius: 14, border: `1px solid ${C.border}`,
           padding: '16px 20px', marginBottom: 24,
           display: 'flex', gap: 20, flexWrap: 'wrap', alignItems: 'center',
         }}>
           {/* Tier filter */}
           <div>
-            <p style={{ fontSize: 11, fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 8, margin: '0 0 8px' }}>Tier</p>
+            <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 8, margin: '0 0 8px' }}>Tier</p>
             <div style={{ display: 'flex', gap: 6 }}>
               {(['all', 'Foundation', 'Higher'] as TierFilter[]).map(t => (
                 <button key={t} onClick={() => setTier(t)} style={{
                   padding: '6px 14px', borderRadius: 8, border: '1.5px solid',
-                  borderColor: tier === t ? '#DDD6FE' : '#E5E1FF',
-                  background: tier === t ? '#EDE9FE' : '#fff',
-                  color: tier === t ? '#6D28D9' : '#6B7280',
+                  borderColor: tier === t ? 'var(--green-soft)' : 'var(--rule)',
+                  background: tier === t ? 'var(--green-soft)' : 'var(--paper)',
+                  color: tier === t ? 'var(--green)' : 'var(--ink-3)',
                   fontWeight: tier === t ? 700 : 500, fontSize: 13, cursor: 'pointer',
                   fontFamily: font.body,
                 }}>{t === 'all' ? 'All Tiers' : t}</button>
@@ -129,7 +130,7 @@ export default function DownloadsPage() {
             </div>
           </div>
 
-          <div style={{ width: 1, height: 36, background: '#E5E1FF' }} />
+          <div style={{ width: 1, height: 36, background: 'var(--rule)' }} />
 
           {/* Year filter */}
           <div>
@@ -137,8 +138,8 @@ export default function DownloadsPage() {
             <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
               <button onClick={() => setYearFilter('all')} style={{
                 padding: '5px 12px', borderRadius: 8, border: '1.5px solid',
-                borderColor: yearFilter === 'all' ? '#A7F3D0' : '#E5E1FF',
-                background: yearFilter === 'all' ? '#ECFDF5' : '#fff',
+                borderColor: yearFilter === 'all' ? '#A7F3D0' : 'var(--rule)',
+                background: yearFilter === 'all' ? '#ECFDF5' : 'var(--paper)',
                 color: yearFilter === 'all' ? '#065F46' : '#6B7280',
                 fontWeight: yearFilter === 'all' ? 700 : 500, fontSize: 12, cursor: 'pointer',
                 fontFamily: font.body,
@@ -146,8 +147,8 @@ export default function DownloadsPage() {
               {years.map(y => (
                 <button key={y} onClick={() => setYearFilter(y)} style={{
                   padding: '5px 12px', borderRadius: 8, border: '1.5px solid',
-                  borderColor: yearFilter === y ? '#A7F3D0' : '#E5E1FF',
-                  background: yearFilter === y ? '#ECFDF5' : '#fff',
+                  borderColor: yearFilter === y ? '#A7F3D0' : 'var(--rule)',
+                  background: yearFilter === y ? '#ECFDF5' : 'var(--paper)',
                   color: yearFilter === y ? '#065F46' : '#6B7280',
                   fontWeight: yearFilter === y ? 700 : 500, fontSize: 12, cursor: 'pointer',
                   fontFamily: font.body,
@@ -201,7 +202,7 @@ export default function DownloadsPage() {
               }}>
                 {sorted.map(paper => (
                   <div key={paper.id} style={{
-                    background: '#fff',
+                    background: 'var(--paper)',
                     border: `1.5px solid ${C.border}`,
                     borderRadius: 14,
                     padding: '16px 18px',
@@ -245,11 +246,11 @@ export default function DownloadsPage() {
                       style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
                         padding: '10px 16px', borderRadius: 10, border: 'none',
-                        background: `linear-gradient(135deg, ${C.purple}, ${C.purpleLight})`,
-                        color: '#fff', fontWeight: 700, fontSize: 13,
+                        background: `linear-gradient(135deg, ${C.green}, ${C.greenMid})`,
+                        color: 'var(--paper)', fontWeight: 700, fontSize: 13,
                         cursor: 'pointer', fontFamily: font.body,
                         textDecoration: 'none',
-                        boxShadow: `0 2px 12px ${C.purple}25`,
+                        boxShadow: '0 2px 12px rgba(15,79,58,0.15)',
                         transition: 'all 0.15s',
                         marginTop: 'auto',
                       }}
@@ -270,7 +271,7 @@ export default function DownloadsPage() {
 
         {filtered.length === 0 && (
           <div style={{
-            background: '#fff', borderRadius: 16, border: `1px solid ${C.border}`,
+            background: 'var(--paper)', borderRadius: 16, border: `1px solid ${C.border}`,
             padding: '40px 24px', textAlign: 'center',
           }}>
             <div style={{ fontSize: 32, marginBottom: 12 }}>📄</div>
@@ -296,7 +297,7 @@ export default function DownloadsPage() {
             <li>Set a timer for 90 minutes to simulate real exam conditions</li>
             <li>Paper 1 is always non-calculator — put your calculator away!</li>
             <li>Papers 2 and 3 allow a calculator</li>
-            <li>After finishing, use our <a href="/papers" style={{ color: '#6D28D9', fontWeight: 600 }}>online exam mode</a> to get AI marking and feedback</li>
+            <li>After finishing, use our <a href="/papers" style={{ color: 'var(--green)', fontWeight: 600 }}>online exam mode</a> to get AI marking and feedback</li>
           </ul>
         </div>
 
@@ -307,7 +308,7 @@ export default function DownloadsPage() {
         }}>
           <p style={{ fontSize: 13, fontWeight: 600, color: '#92400E', margin: 0 }}>
             Edexcel and OCR PDFs coming soon — in the meantime, you can practise Edexcel and OCR style questions using our{' '}
-            <a href="/papers" style={{ color: '#6D28D9', fontWeight: 700 }}>AI Practice Papers</a>{' '}
+            <a href="/papers" style={{ color: 'var(--green)', fontWeight: 700 }}>AI Practice Papers</a>{' '}
             which generate questions in the exact style of each exam board.
           </p>
         </div>
