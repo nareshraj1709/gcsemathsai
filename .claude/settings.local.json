@@ -1,7 +1,20 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(git rebase:*)",
+      "Bash(npx tsc:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(grep *)",
+      "Bash(ls /c/Users/nares/gcsemathsai/public/manifest* /c/Users/nares/gcsemathsai/public/site.webmanifest)",
+      "Bash(ls /c/Users/nares/gcsemathsai/public/*.png)",
+      "Bash(git commit *)",
+      "Bash(git remote *)"
     ]
   }
 }

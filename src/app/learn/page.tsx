@@ -193,6 +193,7 @@ export default function Learn() {
   const [tier, setTier] = useState<'Foundation' | 'Higher'>('Foundation')
   const [phase, setPhase] = useState<1 | 2>(1)
   const [difficulty, setDifficulty] = useState<'Easy' | 'Medium' | 'Exam Level'>('Medium')
+  const [format, setFormat] = useState<'mcq' | 'written'>('mcq')
 
   // Auto-fill from saved profile and skip to phase 2
   useEffect(() => {
@@ -234,7 +235,7 @@ export default function Learn() {
   }
 
   const handleSubtopic = (topic: string, subtopic: string) => {
-    const params = new URLSearchParams({ year, board, tier, topic, subtopic, difficulty })
+    const params = new URLSearchParams({ year, board, tier, topic, subtopic, difficulty, format })
     router.push(`/practice?${params.toString()}`)
   }
 
@@ -409,6 +410,19 @@ export default function Learn() {
                 fontSize: 12, fontFamily: 'var(--sans)', transition: 'all 0.15s',
                 whiteSpace: 'nowrap',
               }}>{d}</button>
+            ))}
+          </div>
+          {/* Format toggle */}
+          <div style={{ display: 'flex', background: 'var(--cream-2)', borderRadius: 8, padding: 3, gap: 3 }}>
+            {([{ key: 'mcq', label: 'Multiple Choice' }, { key: 'written', label: 'Written Answer' }] as const).map(f => (
+              <button key={f.key} onClick={() => setFormat(f.key as 'mcq' | 'written')} style={{
+                padding: '6px 12px', borderRadius: 6, border: 'none', cursor: 'pointer',
+                background: format === f.key ? 'var(--green)' : 'transparent',
+                color: format === f.key ? '#fff' : 'var(--ink-3)',
+                fontWeight: format === f.key ? 700 : 500,
+                fontSize: 12, fontFamily: 'var(--sans)', transition: 'all 0.15s',
+                whiteSpace: 'nowrap',
+              }}>{f.label}</button>
             ))}
           </div>
         </div>

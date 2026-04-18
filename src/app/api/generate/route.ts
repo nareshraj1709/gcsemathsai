@@ -52,6 +52,7 @@ export async function POST(req: Request) {
     calculator,
     difficulty = 'Medium',
     year,
+    format = 'written',
   } = await req.json()
 
   if (!examBoard || !tier) {
@@ -139,7 +140,23 @@ CRITICAL REQUIREMENTS:
 - Each question needs a hint that suggests the method WITHOUT revealing the answer
 - Mark schemes must use proper M/A/B notation
 
+${format === 'mcq' ? `IMPORTANT — MCQ FORMAT:
+Each question must have exactly 4 answer options (A, B, C, D) with only ONE correct answer.
+- Make distractors plausible (common mistakes students actually make)
+- Distractors should come from typical errors: sign errors, forgetting to square, off-by-one, wrong formula, etc.
+- The correct answer position should vary randomly across questions (not always A)
+
 Return a JSON array of exactly ${count} questions (no markdown, no explanation):
+[
+  {
+    "question": "full question text",
+    "hint": "brief method hint",
+    "options": ["option A text", "option B text", "option C text", "option D text"],
+    "correctIndex": 0,
+    "markScheme": "Correct answer: [answer]. Common mistakes: [explain why each distractor is wrong]",
+    "marks": 1
+  }
+]` : `Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 [
   {
     "question": "full question text exactly as it would appear on a ${examBoard} paper",
@@ -147,7 +164,7 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
     "markScheme": "M1: [method step]\\nA1: [correct answer]\\nB1: [independent mark if applicable]",
     "marks": 3
   }
-]`
+]`}`
   }
 
   try {

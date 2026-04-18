@@ -28,7 +28,7 @@ const font = {
 }
 
 // ── Types ─────────────────────────────────────────────────────
-type Question = { question: string; hint?: string; markScheme: string; marks: number }
+type Question = { question: string; hint?: string; markScheme: string; marks: number; options?: string[]; correctIndex?: number }
 type MarkResult = { score: number; outOf: number; feedback: string }
 type Phase = 'loading' | 'practice' | 'complete'
 
@@ -185,6 +185,7 @@ function Practice() {
   const tier      = searchParams.get('tier')       || 'Foundation'
   const difficulty = searchParams.get('difficulty') || 'Medium'
   const year      = searchParams.get('year')       || ''
+  const format    = searchParams.get('format')     || 'mcq'
 
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   useEffect(() => {
@@ -196,6 +197,7 @@ function Practice() {
   const [genError, setGenError]   = useState('')
   const [qIndex, setQIndex]       = useState(0)
   const [answer, setAnswer]       = useState('')
+  const [selectedMcq, setSelectedMcq] = useState<number | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const [result, setResult]       = useState<MarkResult | null>(null)
   const [error, setError]         = useState('')
@@ -210,7 +212,7 @@ function Practice() {
       const res = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ examBoard: board, tier, topic: topic || 'Mixed', subtopic: subtopic || 'Mixed', count: 7, paperStyle: false, difficulty }),
+        body: JSON.stringify({ examBoard: board, tier, topic: topic || 'Mixed', subtopic: subtopic || 'Mixed', count: format === 'mcq' ? 15 : 10, paperStyle: false, difficulty, format }),
       })
       const data = await res.json()
       if (data.error || !data.questions) { setGenError('Failed to load questions. Please try again.'); return }
@@ -237,6 +239,22 @@ function Practice() {
     })
   }
 
+  const submitMcq = async (optionIndex: number) => {
+    if (!q || result) return
+    setSelectedMcq(optionIndex)
+    const isCorrect = optionIndex === q.correctIndex
+    const score = isCorrect ? 1 : 0
+    const chosenAnswer = q.options?.[optionIndex] ?? ''
+    const correctAnswer = q.options?.[q.correctIndex ?? 0] ?? ''
+    const feedback = isCorrect
+      ? `Correct! ${q.markScheme}`
+      : `Incorrect. You chose "${chosenAnswer}" — the correct answer is "${correctAnswer}". ${q.markScheme}`
+    const data = { score, outOf: 1, feedback }
+    setResult(data)
+    await saveAttempt(q.question, chosenAnswer, score, 1, feedback)
+    setAttempts(prev => [...prev, { question: q.question, topic, subtopic, studentAnswer: chosenAnswer, score, outOf: 1, feedback, hint: q.hint }])
+  }
+
   const submit = async () => {
     if (!answer.trim() || !q) return
     setSubmitting(true); setResult(null); setError('')
@@ -260,7 +278,7 @@ function Practice() {
 
   const next = () => {
     if (isLast) { setPhase('complete') } else {
-      setAnswer(''); setResult(null); setError(''); setShowHint(false); setQIndex(i => i + 1)
+      setAnswer(''); setResult(null); setError(''); setShowHint(false); setSelectedMcq(null); setQIndex(i => i + 1)
     }
   }
 
@@ -422,15 +440,24 @@ function Practice() {
           </span>
         </div>
 
-        {attempts.length > 0 && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, color: C.green }}>{sessionScore}/{sessionOut}</span>
-            <div style={{ width: 60, height: 5, background: C.border, borderRadius: 999, overflow: 'hidden' }}>
-              <div style={{ height: 5, background: C.green, borderRadius: 999, width: `${sessionOut > 0 ? (sessionScore / sessionOut) * 100 : 0}%`, transition: 'width 0.4s' }} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          {attempts.length > 0 && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ fontSize: 12, fontWeight: 700, color: C.green }}>{sessionScore}/{sessionOut}</span>
+              <div style={{ width: 60, height: 5, background: C.border, borderRadius: 999, overflow: 'hidden' }}>
+                <div style={{ height: 5, background: C.green, borderRadius: 999, width: `${sessionOut > 0 ? (sessionScore / sessionOut) * 100 : 0}%`, transition: 'width 0.4s' }} />
+              </div>
+              <span style={{ fontSize: 11, color: C.mid }}>{attempts.length}/{questions.length}</span>
             </div>
-            <span style={{ fontSize: 11, color: C.mid }}>{attempts.length}/{questions.length}</span>
-          </div>
-        )}
+          )}
+          {attempts.length >= 1 && (
+            <button onClick={() => setPhase('complete')} style={{
+              background: 'none', border: `1.5px solid ${C.border}`, borderRadius: 8,
+              padding: '5px 12px', fontSize: 12, fontWeight: 600, cursor: 'pointer',
+              color: C.mid, fontFamily: font.body,
+            }}>End session</button>
+          )}
+        </div>
       </div>
 
       <div style={{ flex: 1, maxWidth: 640, margin: '0 auto', padding: '28px 24px 60px', width: '100%', boxSizing: 'border-box' }}>
@@ -489,36 +516,76 @@ function Practice() {
               </div>
             )}
 
-            {/* Answer box */}
-            <textarea
-              value={answer}
-              onChange={e => setAnswer(e.target.value)}
-              placeholder="Write your answer and working here..."
-              rows={4}
-              disabled={!!result}
-              style={{
-                width: '100%', boxSizing: 'border-box',
-                border: `1.5px solid ${result ? C.border : 'var(--rule-2)'}`,
-                borderRadius: 12, padding: '12px 14px',
-                fontSize: 14, fontFamily: font.body, color: C.ink,
-                background: result ? C.cream : C.paper,
-                resize: 'none', outline: 'none', lineHeight: 1.6, minHeight: 90,
-              } as React.CSSProperties}
-              onFocus={e => { if (!result) e.currentTarget.style.borderColor = C.green }}
-              onBlur={e => { if (!result) e.currentTarget.style.borderColor = 'var(--rule-2)' }}
-            />
+            {/* MCQ Options */}
+            {format === 'mcq' && q?.options ? (
+              <div className="mcq-grid">
+                {q.options.map((opt, oi) => {
+                  const isSelected = selectedMcq === oi
+                  const isCorrect = oi === q.correctIndex
+                  const showResult = result !== null
+                  let bg = 'var(--paper)'
+                  let border = '1.5px solid var(--rule)'
+                  let color = 'var(--ink)'
+                  if (showResult && isCorrect) { bg = 'var(--green-soft)'; border = '2px solid var(--green)'; color = 'var(--green-dark)' }
+                  else if (showResult && isSelected && !isCorrect) { bg = 'var(--burgundy-soft)'; border = '2px solid var(--burgundy)'; color = 'var(--burgundy)' }
+                  else if (!showResult && isSelected) { bg = 'var(--green-soft)'; border = '1.5px solid var(--green)' }
 
-            {!result && (
-              <button onClick={submit} disabled={submitting || !answer.trim()} style={{
-                marginTop: 10, width: '100%',
-                background: submitting || !answer.trim() ? C.border : `linear-gradient(135deg, ${C.green}, ${C.greenDark})`,
-                color: submitting || !answer.trim() ? 'var(--ink-4)' : '#fff',
-                border: 'none', borderRadius: 12, padding: '14px',
-                fontSize: 15, fontWeight: 700, cursor: submitting || !answer.trim() ? 'not-allowed' : 'pointer',
-                fontFamily: font.body,
-              }}>
-                {submitting ? 'Marking...' : answer.trim() ? 'Submit answer' : 'Write your answer above'}
-              </button>
+                  return (
+                    <button key={oi} onClick={() => !result && submitMcq(oi)} disabled={!!result} style={{
+                      padding: '16px 18px', borderRadius: 12, border, background: bg, color,
+                      textAlign: 'left', cursor: result ? 'default' : 'pointer',
+                      fontSize: 15, fontWeight: 600, fontFamily: font.body,
+                      transition: 'all 0.15s', display: 'flex', alignItems: 'center', gap: 12,
+                      minHeight: 56,
+                    }}>
+                      <span style={{
+                        width: 28, height: 28, borderRadius: 8, display: 'grid', placeItems: 'center',
+                        fontFamily: 'var(--serif)', fontSize: 13, fontWeight: 700, flexShrink: 0,
+                        background: showResult && isCorrect ? 'var(--green)' : showResult && isSelected && !isCorrect ? 'var(--burgundy)' : 'var(--cream-2)',
+                        color: (showResult && (isCorrect || (isSelected && !isCorrect))) ? 'var(--cream)' : 'var(--ink-3)',
+                        border: showResult ? 'none' : '1px solid var(--rule)',
+                      }}>{String.fromCharCode(65 + oi)}</span>
+                      <span style={{ flex: 1 }}>{opt}</span>
+                      {showResult && isCorrect && <span style={{ fontFamily: 'var(--serif)', fontSize: 16, color: 'var(--green)' }}>&#10003;</span>}
+                      {showResult && isSelected && !isCorrect && <span style={{ fontFamily: 'var(--serif)', fontSize: 16, color: 'var(--burgundy)' }}>&#10007;</span>}
+                    </button>
+                  )
+                })}
+              </div>
+            ) : (
+              <>
+                {/* Written Answer box */}
+                <textarea
+                  value={answer}
+                  onChange={e => setAnswer(e.target.value)}
+                  placeholder="Write your answer and working here..."
+                  rows={4}
+                  disabled={!!result}
+                  style={{
+                    width: '100%', boxSizing: 'border-box',
+                    border: `1.5px solid ${result ? C.border : 'var(--rule-2)'}`,
+                    borderRadius: 12, padding: '12px 14px',
+                    fontSize: 14, fontFamily: font.body, color: C.ink,
+                    background: result ? C.cream : C.paper,
+                    resize: 'none', outline: 'none', lineHeight: 1.6, minHeight: 90,
+                  } as React.CSSProperties}
+                  onFocus={e => { if (!result) e.currentTarget.style.borderColor = C.green }}
+                  onBlur={e => { if (!result) e.currentTarget.style.borderColor = 'var(--rule-2)' }}
+                />
+
+                {!result && (
+                  <button onClick={submit} disabled={submitting || !answer.trim()} style={{
+                    marginTop: 10, width: '100%',
+                    background: submitting || !answer.trim() ? C.border : `linear-gradient(135deg, ${C.green}, ${C.greenDark})`,
+                    color: submitting || !answer.trim() ? 'var(--ink-4)' : '#fff',
+                    border: 'none', borderRadius: 12, padding: '14px',
+                    fontSize: 15, fontWeight: 700, cursor: submitting || !answer.trim() ? 'not-allowed' : 'pointer',
+                    fontFamily: font.body,
+                  }}>
+                    {submitting ? 'Marking...' : answer.trim() ? 'Submit answer' : 'Write your answer above'}
+                  </button>
+                )}
+              </>
             )}
           </div>
         )}

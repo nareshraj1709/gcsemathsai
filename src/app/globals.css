@@ -238,6 +238,10 @@ a.auto-link:hover {
 .mobile-menu-panel .menu-item:hover { background: var(--green-soft); color: var(--green); }
 .mobile-menu-panel .menu-item.active { background: var(--green-soft); color: var(--green); font-weight: 700; }
 
+/* ========= MCQ GRID ========= */
+.mcq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 500px) { .mcq-grid { grid-template-columns: 1fr; } }
+
 /* ========= HAMBURGER ========= */
 .hamburger-btn {
   display: none; background: none; border: 1.5px solid var(--rule);
