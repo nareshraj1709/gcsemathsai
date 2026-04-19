@@ -146,11 +146,12 @@ export default function PaperExamPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, timeLeft])
 
-  const startExam = async () => {
+  const startExam = async (retry = 0) => {
     if (!paper) return
     setPhase('loading')
     setLoadError('')
     try {
+      const { data: { session } } = await supabase.auth.getSession()
       const res = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -158,16 +159,24 @@ export default function PaperExamPage() {
           examBoard: paper.board, tier: paper.tier, count: paper.questionCount,
           paperStyle: true, paperName: paper.name, topics: paper.topics,
           style: paper.style, calculator: paper.calculator,
+          paperId: paper.id,
+          userId: session?.user?.id ?? null,
         }),
       })
       const data = await res.json()
-      if (data.error || !data.questions) { setLoadError(data.error || 'Failed to generate questions'); return }
+      if (data.error || !data.questions) {
+        // One automatic client-side retry for transient failures
+        if (retry < 1) { startExam(retry + 1); return }
+        setLoadError(data.error || 'Failed to generate questions')
+        return
+      }
       setQuestions(data.questions)
       setAnswers(new Array(data.questions.length).fill(''))
       setTimeLeft(paper.timeMinutes * 60)
       setCurrent(0)
       setPhase('exam')
     } catch {
+      if (retry < 1) { startExam(retry + 1); return }
       setLoadError('Network error — please try again.')
     }
   }
@@ -318,7 +327,7 @@ export default function PaperExamPage() {
             </div>
           )}
 
-          <button onClick={startExam} style={{
+          <button onClick={() => startExam()} style={{
             width: '100%', padding: '16px', borderRadius: 12, border: 'none',
             background: `linear-gradient(135deg, ${theme.bg}, ${theme.accent})`,
             color: '#fff', fontSize: 16, fontWeight: 800, cursor: 'pointer', fontFamily: font.body,

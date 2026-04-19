@@ -1,7 +1,40 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextResponse } from 'next/server'
+import { createClient } from '@supabase/supabase-js'
 
 const client = new Anthropic()
+
+// Admin Supabase client for paper cache (bypasses RLS). Falls back to null
+// if env vars are missing — caching is best-effort only.
+const supabaseAdmin = (() => {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  if (!url || !key) return null
+  return createClient(url, key, { auth: { persistSession: false } })
+})()
+
+const PAPERS_TABLE = 'generated_papers'
+const SEEN_TABLE = 'seen_papers'
+
+/**
+ * Recover from a truncated JSON array response by trimming back to the last
+ * complete object and closing the bracket. Returns null if unrecoverable.
+ */
+function recoverTruncatedArray(text: string): unknown[] | null {
+  const start = text.indexOf('[')
+  if (start === -1) return null
+  const body = text.slice(start)
+  // Find the last closing brace of a complete object
+  const lastObjEnd = body.lastIndexOf('}')
+  if (lastObjEnd === -1) return null
+  const candidate = body.slice(0, lastObjEnd + 1) + ']'
+  try {
+    const parsed = JSON.parse(candidate)
+    return Array.isArray(parsed) && parsed.length > 0 ? parsed : null
+  } catch {
+    return null
+  }
+}
 
 // Board-specific exam patterns with year-by-year detail
 const BOARD_PATTERNS: Record<string, string> = {
@@ -53,6 +86,8 @@ export async function POST(req: Request) {
     difficulty = 'Medium',
     year,
     format = 'written',
+    paperId, // stable paper identifier, e.g. "aqa-higher-2024-p1"
+    userId, // optional — used to dedupe variants per student
   } = await req.json()
 
   if (!examBoard || !tier) {
@@ -167,16 +202,100 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 ]`}`
   }
 
-  try {
+  // ── Paper pool: read cached variants, pick one the user hasn't seen ──
+  if (paperStyle && paperId && supabaseAdmin) {
+    try {
+      const { data: variants } = await supabaseAdmin
+        .from(PAPERS_TABLE)
+        .select('id, questions')
+        .eq('paper_id', paperId)
+
+      if (variants && variants.length > 0) {
+        let pool = variants
+        if (userId) {
+          const { data: seen } = await supabaseAdmin
+            .from(SEEN_TABLE)
+            .select('variant_id')
+            .eq('user_id', userId)
+          const seenIds = new Set((seen ?? []).map((s: { variant_id: string }) => s.variant_id))
+          pool = variants.filter(v => !seenIds.has(v.id))
+          // If user has seen every variant, pool is empty → fall through to generate a fresh one
+        }
+
+        if (pool.length > 0) {
+          const pick = pool[Math.floor(Math.random() * pool.length)]
+          if (userId) {
+            supabaseAdmin
+              .from(SEEN_TABLE)
+              .upsert({ user_id: userId, variant_id: pick.id }, { onConflict: 'user_id,variant_id' })
+              .then(() => { /* noop */ }, () => { /* ignore */ })
+          }
+          return NextResponse.json({ questions: pick.questions, cached: true })
+        }
+      }
+    } catch {
+      // Table missing or transient error — fall through to generate
+    }
+  }
+
+  const callClaude = async (attempt: number): Promise<unknown[] | null> => {
     const message = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 4096,
+      max_tokens: 8000,
       messages: [{ role: 'user', content: prompt }],
     })
-
     const text = (message.content[0] as { type: string; text: string }).text
     const cleaned = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim()
-    const questions = JSON.parse(cleaned)
+    try {
+      const parsed = JSON.parse(cleaned)
+      return Array.isArray(parsed) ? parsed : null
+    } catch {
+      if (attempt === 0) {
+        const recovered = recoverTruncatedArray(cleaned)
+        if (recovered && recovered.length >= Math.ceil(count * 0.7)) {
+          return recovered
+        }
+      }
+      return null
+    }
+  }
+
+  try {
+    let questions = await callClaude(0)
+    if (!questions || questions.length === 0) {
+      questions = await callClaude(1) // one retry
+    }
+    if (!questions || questions.length === 0) {
+      return NextResponse.json(
+        { error: 'The model returned an incomplete response. Please try again.' },
+        { status: 502 },
+      )
+    }
+
+    // Persist as a new variant in the pool (paper-style only)
+    if (paperStyle && paperId && supabaseAdmin) {
+      try {
+        const { data: inserted } = await supabaseAdmin
+          .from(PAPERS_TABLE)
+          .insert({
+            paper_id: paperId,
+            board: examBoard,
+            tier,
+            paper_name: paperName ?? null,
+            questions,
+          })
+          .select('id')
+          .single()
+        if (inserted?.id && userId) {
+          supabaseAdmin
+            .from(SEEN_TABLE)
+            .upsert({ user_id: userId, variant_id: inserted.id }, { onConflict: 'user_id,variant_id' })
+            .then(() => { /* noop */ }, () => { /* ignore */ })
+        }
+      } catch {
+        // Ignore — caching is best-effort
+      }
+    }
 
     return NextResponse.json({ questions })
   } catch (err) {
