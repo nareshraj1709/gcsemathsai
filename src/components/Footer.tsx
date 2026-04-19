@@ -23,6 +23,7 @@ export default function Footer() {
             <li><a onClick={() => go('/topics')}>Higher</a></li>
             <li><a onClick={() => go('/papers')}>Past papers</a></li>
             <li><a onClick={() => go('/formula-sheet')}>Formula sheet</a></li>
+            <li><a onClick={() => go('/formulas')}>Topic formula sheets</a></li>
           </ul>
         </div>
         <div className="ft-col">

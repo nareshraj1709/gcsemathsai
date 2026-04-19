@@ -3,19 +3,24 @@
   "short_name": "GCSEMathsAI",
   "description": "AI-powered GCSE Maths preparation — marked like a real examiner",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#F7F3EA",
   "theme_color": "#0F4F3A",
+  "categories": ["education", "productivity"],
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/icon1",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/icon2",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

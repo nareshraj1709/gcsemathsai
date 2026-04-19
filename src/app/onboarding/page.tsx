@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Logo from '@/components/Logo'
 import { getProfileFromCache, saveProfile, loadProfile } from '@/lib/profile'
+import { supabase } from '@/lib/supabase'
 
 const C = {
   ink: "var(--ink)",
@@ -95,10 +96,11 @@ export default function Onboarding() {
 
   const handleYearSelect = (opt: string) => setData({ ...data, year: opt })
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (isLast) {
       saveProfile(data)
-      router.push('/dashboard')
+      const { data: { session } } = await supabase.auth.getSession()
+      router.push(session ? '/dashboard' : '/learn')
     } else {
       setStep(s => s + 1)
     }

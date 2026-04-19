@@ -117,20 +117,21 @@ export default function FormulaSheetPage() {
             Every formula you need for AQA, Edexcel and OCR — in one printable PDF. Download it, pin it to your wall, and never forget a formula again.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' as const }}>
-            <a href="/GCSE_Maths_Formula_Sheet.pdf" download style={{
+            <a href="/formulas/" style={{
               display: 'inline-flex', alignItems: 'center', gap: 8, background: 'var(--gold)', color: 'var(--cream)',
               padding: '14px 28px', borderRadius: 10, fontSize: 15, fontWeight: 700, fontFamily: 'var(--sans)',
               textDecoration: 'none', boxShadow: '0 2px 6px -1px rgba(184,137,61,0.35)',
             }}>
-              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M8 11l-3-3M8 11l3-3M2 13h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              Download PDF
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 3h12v10H2zM2 7h12M6 3v10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>
+              Browse topic sheets
             </a>
-            <a href="/GCSE_Maths_Formula_Sheet.pdf" target="_blank" rel="noopener noreferrer" style={{
+            <a href="/GCSE_Maths_Formula_Sheet.pdf" download style={{
               display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: 'var(--cream)',
               padding: '14px 24px', borderRadius: 10, fontSize: 15, fontWeight: 600, fontFamily: 'var(--sans)',
               textDecoration: 'none', border: '1.5px solid rgba(247,243,234,0.3)',
             }}>
-              View in browser
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M8 11l-3-3M8 11l3-3M2 13h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              Summary PDF
             </a>
           </div>
         </div>
@@ -273,10 +274,10 @@ export default function FormulaSheetPage() {
           <div className="sec-label">Related resources</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14 }} className="related-grid">
             {[
+              { href: '/formulas', title: 'Per-topic Formula Sheets', desc: '73 print-ready sheets — one for every GCSE topic. Definitions, worked examples, common mistakes.' },
               { href: '/topics', title: 'All 73 GCSE Maths Topics', desc: 'Step-by-step explanations and worked examples for every topic' },
               { href: '/downloads', title: 'Download Past Papers', desc: 'Free AQA past paper PDFs to print and practise' },
               { href: '/learn', title: 'Practice Questions', desc: 'AI-marked exam-style questions with instant feedback' },
-              { href: '/blog', title: 'Blog & Revision Guides', desc: 'Exam tips, revision strategies and topic deep-dives' },
             ].map(r => (
               <Link key={r.href} href={r.href} style={{
                 background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12,

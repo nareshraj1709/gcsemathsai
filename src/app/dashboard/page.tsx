@@ -108,7 +108,7 @@ export default function Dashboard() {
 
     const load = async () => {
       const { data: { session } } = await supabase.auth.getSession()
-      if (!session) { router.push('/auth'); return }
+      if (!session) { router.replace('/learn'); return }
       const user = session.user
 
       const { data } = await supabase

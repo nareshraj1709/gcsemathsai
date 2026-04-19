@@ -20,7 +20,7 @@ export default function Home() {
                 Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner, and organised into the kind of structured revision that actually moves your grade.
               </p>
               <div className="an d4" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' as const, marginBottom: 40 }}>
-                <a className="btn btn-primary" href="/dashboard" style={{ padding: '13px 22px', fontSize: 15 }}>Begin your first topic &rarr;</a>
+                <a className="btn btn-primary" href="/learn" style={{ padding: '13px 22px', fontSize: 15 }}>Begin your first topic &rarr;</a>
                 <a className="btn btn-outline" href="/topics" style={{ padding: '13px 22px', fontSize: 15 }}>View the syllabus</a>
               </div>
               <div className="an d5" style={{ display: 'flex', gap: 32, flexWrap: 'wrap' as const, padding: '20px 0', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
@@ -299,7 +299,7 @@ export default function Home() {
                 Free to begin, no card required. Every student who finishes the first topic earns a free copy of our GCSE Maths Formula Sheet.
               </p>
               <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' as const }}>
-                <a className="btn btn-primary" href="/dashboard" style={{ padding: '14px 26px', fontSize: 15 }}>Begin your first topic &rarr;</a>
+                <a className="btn btn-primary" href="/learn" style={{ padding: '14px 26px', fontSize: 15 }}>Begin your first topic &rarr;</a>
                 <a className="btn btn-outline" href="/formula-sheet" style={{ padding: '14px 26px', fontSize: 15 }}>Download the formula sheet</a>
               </div>
               <div style={{ marginTop: 40, paddingTop: 32, borderTop: '1px solid var(--rule)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 15, color: 'var(--ink-3)', fontWeight: 500 }}>

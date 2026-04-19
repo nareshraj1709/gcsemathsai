@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decimals. — GCSEMathsAI Formula Sheet №05</title>
+<meta name="description" content="Free GCSE Maths formula sheet for Decimals.. A <b>decimal</b> extends place value to the right of the decimal point. <b>Tenths, hundredths, thousandths</b>. Any decimal can be written as a fraction — and a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F3EA;
+    --cream-2:#F0EADD;
+    --paper:#FDFBF5;
+    --ink:#0E1F17;
+    --ink-2:#2A3F35;
+    --ink-3:#5E7268;
+    --ink-4:#8A9A90;
+    --rule:#D8CFBC;
+    --rule-2:#C4B89F;
+    --green:#0F4F3A;
+    --green-dark:#073424;
+    --green-soft:#E2EDE6;
+    --gold:#B8893D;
+    --gold-soft:#F2E4C4;
+    --burgundy:#7A2E2E;
+    --burgundy-soft:#F2DBDB;
+    --navy:#1E2F55;
+    --serif:'Fraunces', Georgia, serif;
+    --sans:'Inter', system-ui, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:var(--sans);background:#2A2F2B;color:var(--ink);-webkit-font-smoothing:antialiased;min-height:100vh}
+
+  /* CONTROLS */
+  .controls{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:5px;display:flex;gap:4px;box-shadow:0 8px 24px -6px rgba(0,0,0,0.4)}
+  .ctrl{padding:10px 20px;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-3);cursor:pointer;border-radius:999px;border:none;background:transparent;transition:all .15s}
+  .ctrl:hover{color:var(--ink)}
+  .ctrl.active{background:var(--ink);color:var(--cream)}
+
+  .stage{padding:80px 20px 60px;display:flex;flex-direction:column;align-items:center;gap:40px}
+  .stage-heading{font-family:var(--mono);font-size:11px;font-weight:700;color:rgba(247,243,234,0.6);letter-spacing:0.12em;text-transform:uppercase;text-align:center;max-width:800px;line-height:1.6}
+  .stage-heading b{color:var(--gold)}
+
+  /* SHEET BASE */
+  .sheet{
+    background:var(--cream);
+    position:relative;overflow:hidden;
+    box-shadow:0 40px 80px -20px rgba(0,0,0,0.5), 0 20px 40px -10px rgba(0,0,0,0.3);
+    color:var(--ink);
+    display:flex;flex-direction:column;
+  }
+  .sheet::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+    background-image:radial-gradient(circle at 1px 1px, rgba(14,31,23,0.05) 1px, transparent 0);
+    background-size:4px 4px;opacity:0.6;
+  }
+  .sheet > *{position:relative;z-index:1}
+
+  .sheet-band{height:8px;display:flex;flex-shrink:0}
+  .sheet-band > div{flex:1}
+  .sheet-band .g{background:var(--green);flex:5}
+  .sheet-band .gd{background:var(--gold);flex:2}
+  .sheet-band .b{background:var(--burgundy);flex:3}
+
+  .sheet.a4{width:794px}
+  .sheet.a4 .body{padding:36px 44px 30px;display:flex;flex-direction:column;flex:1}
+  .sheet.sq{width:900px}
+  .sheet.sq .body{padding:36px 40px 30px;display:flex;flex-direction:column;flex:1}
+
+  /* HEADER */
+  .sheet-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding-bottom:16px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+  .hdr-left{display:flex;align-items:center;gap:12px}
+  .logo-mark{width:40px;height:40px;border-radius:8px;background:var(--green);color:var(--cream);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:20px;font-style:italic;flex-shrink:0}
+  .brand{display:flex;flex-direction:column;gap:2px}
+  .brand-name{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;line-height:1}
+  .brand-name em{font-style:italic;color:var(--green);font-weight:600}
+  .brand-tag{font-family:var(--mono);font-size:9px;color:var(--ink-3);font-weight:700;letter-spacing:0.12em;text-transform:uppercase}
+  .brand-tag b{color:var(--gold)}
+  .hdr-right{text-align:right;display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+  .sheet-num{font-family:var(--serif);font-style:italic;font-size:22px;font-weight:500;color:var(--green);line-height:1;letter-spacing:-0.02em}
+  .sheet-num b{font-style:normal;color:var(--ink);font-weight:700}
+  .sheet-spec{font-family:var(--mono);font-size:9px;color:var(--ink-3);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;line-height:1.3}
+
+  /* TITLE */
+  .title-block{margin-bottom:20px}
+  .topic-pills{display:flex;gap:5px;margin-bottom:10px;flex-wrap:wrap}
+  .pill{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+  .pill-green{background:var(--green-soft);color:var(--green)}
+  .pill-gold{background:var(--gold-soft);color:var(--gold)}
+  .pill-burgundy{background:var(--burgundy-soft);color:var(--burgundy)}
+  .pill-gray{background:var(--cream-2);color:var(--ink-3)}
+
+  h1.topic-title{font-family:var(--serif);font-weight:500;line-height:0.98;letter-spacing:-0.025em;color:var(--ink);margin-bottom:10px}
+  .sheet.a4 h1.topic-title{font-size:42px}
+  .sheet.sq h1.topic-title{font-size:38px}
+  h1.topic-title em{font-style:italic;color:var(--green)}
+
+  .topic-lede{font-family:var(--serif);font-size:14.5px;line-height:1.5;color:var(--ink-2);font-weight:500;max-width:620px}
+  .topic-lede b{color:var(--green);font-weight:700;font-style:italic}
+
+  /* SECTION LABEL */
+  .sec-label{display:flex;align-items:center;gap:10px;margin-bottom:10px;margin-top:18px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--green)}
+  .sec-label::before{content:"§";font-family:var(--serif);font-size:14px;font-style:italic;color:var(--gold);font-weight:500}
+  .sec-label::after{content:"";flex:1;height:1px;background:var(--rule)}
+  .sec-label:first-of-type{margin-top:0}
+
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+
+  /* DEFINITIONS */
+  .def-card{background:var(--paper);border:1px solid var(--rule);border-radius:9px;padding:12px 14px;position:relative;overflow:hidden}
+  .def-card::before{content:"";position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--green)}
+  .def-card.gold::before{background:var(--gold)}
+  .def-card.burgundy::before{background:var(--burgundy)}
+  .def-term{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;margin-bottom:3px;line-height:1.15}
+  .def-term em{font-style:italic;color:var(--green)}
+  .def-body{font-family:var(--serif);font-size:11.5px;line-height:1.45;color:var(--ink-2);font-weight:500}
+  .def-body b{color:var(--ink);font-weight:700}
+  .def-eg{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);font-weight:600;margin-top:5px;padding-top:5px;border-top:1px dashed var(--rule);line-height:1.4}
+  .def-eg b{color:var(--green);font-weight:700}
+
+  /* FORMULA/RULE CARDS */
+  .rule-card{background:var(--paper);border:1px solid var(--rule);border-radius:9px;padding:11px 14px;position:relative}
+  .rule-card.green{border-left:3px solid var(--green)}
+  .rule-card.gold{border-left:3px solid var(--gold)}
+  .rule-card.burgundy{border-left:3px solid var(--burgundy)}
+  .rule-lbl{font-family:var(--mono);font-size:9px;font-weight:700;color:var(--ink-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:5px}
+  .rule-eq{font-family:var(--mono);font-size:13.5px;font-weight:700;color:var(--ink);letter-spacing:-0.005em;line-height:1.5}
+  .rule-eq .hl{background:var(--green-soft);color:var(--green);padding:1px 5px;border-radius:3px}
+  .rule-eq .hlg{background:var(--gold-soft);color:var(--gold);padding:1px 5px;border-radius:3px}
+  .rule-eq .hlb{background:var(--burgundy-soft);color:var(--burgundy);padding:1px 5px;border-radius:3px}
+  .rule-eg{font-family:var(--serif);font-style:italic;font-size:11.5px;color:var(--ink-3);font-weight:500;margin-top:5px;line-height:1.4}
+  .rule-eg b{font-style:normal;color:var(--ink);font-weight:700}
+
+  /* VISUAL BLOCK (generic container for diagrams) */
+  .viz-block{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:14px 16px}
+  .viz-caption{font-family:var(--serif);font-size:12px;line-height:1.45;color:var(--ink-2);font-weight:500;margin-top:8px;padding-top:8px;border-top:1px solid var(--rule)}
+  .viz-caption b{color:var(--ink);font-weight:700}
+  .viz-caption em{font-style:italic;color:var(--green)}
+
+  /* WORKED EXAMPLE */
+  .worked{background:var(--paper);border:1.5px solid var(--gold);border-radius:12px;padding:16px 18px;position:relative}
+  .worked::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);border-radius:12px 12px 0 0}
+  .worked-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+  .worked-title{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:-0.01em;color:var(--ink);display:flex;align-items:center;gap:7px}
+  .worked-title::before{content:"◆";color:var(--gold);font-size:11px}
+  .worked-title em{font-style:italic;color:var(--green)}
+  .worked-marks{font-family:var(--mono);font-size:9px;color:var(--gold);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 7px;background:var(--gold-soft);border-radius:4px}
+  .worked-q{font-family:var(--serif);font-size:12.5px;line-height:1.45;color:var(--ink);font-weight:500;padding:9px 11px;background:var(--cream);border-radius:6px;margin-bottom:10px;border-left:2px solid var(--gold)}
+  .worked-q b{color:var(--green);font-weight:700;font-style:italic}
+  .worked-steps{display:flex;flex-direction:column;gap:5px}
+  .worked-step{display:flex;gap:9px;align-items:flex-start;font-family:var(--mono);font-size:11.5px;line-height:1.5;color:var(--ink-2);font-weight:600}
+  .step-n{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--green);font-weight:500;flex-shrink:0;min-width:18px;line-height:1.5}
+  .step-text{flex:1}
+  .step-text b{color:var(--green);font-weight:700}
+  .worked-ans{margin-top:10px;padding:9px 12px;border-radius:7px;background:var(--green-soft);border-left:3px solid var(--green);font-family:var(--serif);font-size:13px;color:var(--ink);font-weight:600;display:flex;align-items:center;gap:8px}
+  .worked-ans::before{content:"∴";font-family:var(--serif);font-style:italic;font-size:17px;color:var(--green);font-weight:700}
+  .worked-ans b{color:var(--green);font-weight:700}
+
+  /* MISTAKES + TIPS */
+  .mist-tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .mistakes-card{background:var(--burgundy-soft);border-left:3px solid var(--burgundy);border-radius:0 10px 10px 0;padding:14px 16px}
+  .mistakes-head{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--burgundy);letter-spacing:-0.01em;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .mistakes-head::before{content:"⚠";font-size:14px}
+  .mistakes-list{display:flex;flex-direction:column;gap:5px}
+  .mistake-row{padding-left:18px;position:relative;font-family:var(--serif);font-size:11.5px;line-height:1.45;color:var(--ink);font-weight:500}
+  .mistake-row::before{content:"✗";position:absolute;left:0;top:0;color:var(--burgundy);font-weight:700;font-family:var(--serif);font-size:12px}
+  .mistake-row b{color:var(--burgundy);font-weight:700}
+
+  .tips-card{background:var(--green-soft);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:14px 16px}
+  .tips-head{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--green);letter-spacing:-0.01em;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .tips-head::before{content:"✦";color:var(--gold);font-size:14px}
+  .tips-list{display:flex;flex-direction:column;gap:5px}
+  .tip-row{padding-left:18px;position:relative;font-family:var(--serif);font-size:11.5px;line-height:1.45;color:var(--ink);font-weight:500}
+  .tip-row::before{content:"→";position:absolute;left:0;top:0;color:var(--green);font-weight:700;font-family:var(--mono);font-size:12px}
+  .tip-row b{color:var(--green);font-weight:700}
+
+  /* FOOTER */
+  .sheet-footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .ft-left{font-family:var(--mono);font-size:9px;font-weight:700;color:var(--ink-3);letter-spacing:0.08em;text-transform:uppercase}
+  .ft-left b{color:var(--gold)}
+  .ft-right{font-family:var(--mono);font-size:9px;font-weight:700;color:var(--ink-3);letter-spacing:0.06em}
+  .ft-url{color:var(--green);font-weight:700}
+
+  .orn{text-align:center;font-family:var(--serif);font-size:11px;color:var(--gold);margin:10px 0;letter-spacing:0.4em;font-weight:500;opacity:0.7}
+
+  /* ==== SPECIALISED VISUALS ==== */
+
+  /* Place value chart */
+  .pv-chart .pv-row-labels{display:grid;grid-template-columns:repeat(7,1fr) 12px repeat(3,1fr);gap:4px;margin-bottom:6px}
+  .pv-chart .pv-label{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-3);text-align:center;line-height:1.2;padding:3px 2px}
+  .pv-chart .pv-label.h{color:var(--green)}
+  .pv-chart .pv-label.d{color:var(--gold)}
+  .pv-chart .pv-digits{display:grid;grid-template-columns:repeat(7,1fr) 12px repeat(3,1fr);gap:4px;text-align:center}
+  .pv-chart .pv-digit{aspect-ratio:1;display:grid;place-items:center;background:var(--cream);border:1px solid var(--rule);border-radius:5px;font-family:var(--mono);font-weight:700;font-size:18px;color:var(--ink)}
+  .pv-chart .pv-digit.hl{background:var(--green-soft);color:var(--green);border-color:var(--green)}
+  .pv-chart .pv-digit.gold{background:var(--gold-soft);color:var(--gold);border-color:var(--gold)}
+  .pv-chart .pv-dot{display:grid;place-items:center;font-family:var(--serif);font-size:22px;font-weight:700;color:var(--burgundy);line-height:0.8}
+
+  /* Number line */
+  .nl-line{position:relative;height:70px}
+  .nl-axis{position:absolute;top:36px;left:16px;right:16px;height:2px;background:var(--ink)}
+  .nl-axis::before,.nl-axis::after{content:"";position:absolute;top:50%;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}
+  .nl-axis::before{left:-10px;transform:translateY(-50%);border-right:8px solid var(--ink)}
+  .nl-axis::after{right:-10px;transform:translateY(-50%);border-left:8px solid var(--ink)}
+  .nl-tick{position:absolute;top:29px;width:2px;height:16px;background:var(--ink);transform:translateX(-50%)}
+  .nl-tick.zero{background:var(--burgundy);height:22px;top:26px}
+  .nl-tick.zero::before{content:"0";position:absolute;top:28px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-style:italic;font-size:15px;font-weight:700;color:var(--burgundy)}
+  .nl-tick-num{position:absolute;top:20px;left:50%;transform:translate(-50%,-100%);font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+  .nl-tick-num.neg{color:var(--burgundy)}
+  .nl-tick-num.pos{color:var(--green)}
+  .nl-side-label{position:absolute;top:52px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+  .nl-side-label.l{left:0;color:var(--burgundy)}
+  .nl-side-label.r{right:0;color:var(--green)}
+
+  /* Sign rules */
+  .signs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .sign-cell{padding:10px;border:1px solid var(--rule);border-radius:8px;background:var(--cream);display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+  .sign-op{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink-2);letter-spacing:0.04em}
+  .sign-op .pos{color:var(--green)}
+  .sign-op .neg{color:var(--burgundy)}
+  .sign-result{font-family:var(--serif);font-style:italic;font-size:20px;font-weight:600;line-height:1}
+  .sign-result.pos{color:var(--green)}
+  .sign-result.neg{color:var(--burgundy)}
+  .sign-eg{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);font-weight:600;line-height:1.4}
+  .signs-caption{font-family:var(--serif);font-size:12px;font-style:italic;line-height:1.45;color:var(--ink-2);font-weight:500;margin-top:10px;padding-top:8px;border-top:1px solid var(--rule);text-align:center}
+  .signs-caption b{font-style:normal;color:var(--green);font-weight:700}
+
+  /* Rounding */
+  .round-rule-block{margin-bottom:10px}
+  .round-rule-block:last-child{margin-bottom:0}
+  .round-title{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;margin-bottom:4px}
+  .round-title em{font-style:italic;color:var(--green)}
+  .round-examples{display:flex;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink-2)}
+  .round-ex{padding:3px 8px;background:var(--cream);border:1px solid var(--rule);border-radius:5px;display:flex;align-items:center;gap:6px}
+  .round-ex b{color:var(--green);font-weight:700}
+  .round-ex .arr{color:var(--gold)}
+
+  /* BIDMAS */
+  .bidmas-letters{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:10px}
+  .bidmas-letter{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px;background:var(--cream);border:1px solid var(--rule);border-radius:8px;text-align:center}
+  .bidmas-big{font-family:var(--serif);font-style:italic;font-size:28px;font-weight:500;color:var(--green);line-height:1}
+  .bidmas-word{font-family:var(--mono);font-size:8.5px;color:var(--ink-2);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;line-height:1.3}
+
+  /* Absolute value */
+  .abs-visual{display:flex;gap:12px;align-items:center;justify-content:center;margin:8px 0;flex-wrap:wrap}
+  .abs-example{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .abs-expr{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--ink);padding:6px 12px;background:var(--cream);border:1px solid var(--rule);border-radius:6px}
+  .abs-expr b{color:var(--burgundy)}
+  .abs-arrow{font-family:var(--serif);font-size:18px;color:var(--gold);font-style:italic}
+  .abs-result{font-family:var(--serif);font-style:italic;font-size:22px;font-weight:600;color:var(--green)}
+
+  /* Prime factor tree */
+  .tree{display:flex;flex-direction:column;align-items:center;padding:10px 0;font-family:var(--mono);font-weight:700}
+  .tree-row{display:flex;gap:30px;align-items:center;justify-content:center;position:relative}
+  .tree-row + .tree-row{margin-top:20px;position:relative}
+  .tree-row + .tree-row::before{content:"";position:absolute;top:-20px;left:50%;width:60%;height:20px;border-left:2px dashed var(--rule-2);border-right:2px dashed var(--rule-2);transform:translateX(-50%)}
+  .tree-node{padding:6px 10px;border-radius:6px;background:var(--cream);border:1px solid var(--rule);font-size:13px;color:var(--ink)}
+  .tree-node.prime{background:var(--green);color:var(--cream);border-color:var(--green)}
+  .tree-node.composite{background:var(--gold-soft);color:var(--gold);border-color:var(--gold)}
+
+  /* Fraction wall */
+  .fraction-wall{display:flex;flex-direction:column;gap:3px;padding:10px 0}
+  .fw-row{display:flex;gap:0;height:26px;border-radius:4px;overflow:hidden}
+  .fw-cell{flex:1;background:var(--paper);border:1px solid var(--rule);display:grid;place-items:center;font-family:var(--mono);font-size:10px;color:var(--ink-2);font-weight:700}
+  .fw-cell.hl{background:var(--green-soft);color:var(--green)}
+  .fw-cell.hlg{background:var(--gold-soft);color:var(--gold)}
+
+  /* Index laws */
+  .law-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .law-card{padding:10px 14px;background:var(--paper);border:1px solid var(--rule);border-radius:8px;display:flex;flex-direction:column;gap:4px}
+  .law-card.green{border-left:3px solid var(--green)}
+  .law-card.gold{border-left:3px solid var(--gold)}
+  .law-eq{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink)}
+  .law-eq sup{font-size:11px;vertical-align:super}
+  .law-eq .hl{color:var(--green);background:var(--green-soft);padding:0 4px;border-radius:3px}
+  .law-desc{font-family:var(--serif);font-size:11px;color:var(--ink-3);font-style:italic;font-weight:500;line-height:1.3}
+
+  /* Standard form line */
+  .sf-line{position:relative;height:60px;background:var(--cream);border-radius:6px;margin:10px 0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink-2)}
+  .sf-line .stop{display:flex;flex-direction:column;align-items:center;gap:2px}
+  .sf-line .stop-num{font-family:var(--serif);font-size:14px;color:var(--green);font-style:italic}
+  .sf-line .stop-desc{font-size:9px;color:var(--ink-3)}
+
+  /* Percentage multiplier table */
+  .mult-table{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;font-family:var(--mono);font-size:11px;font-weight:700}
+  .mult-cell{padding:6px 8px;border-radius:5px;background:var(--cream);border:1px solid var(--rule);text-align:center;color:var(--ink)}
+  .mult-cell.up{border-left:2px solid var(--green);color:var(--green)}
+  .mult-cell.down{border-left:2px solid var(--burgundy);color:var(--burgundy)}
+  .mult-cell small{display:block;font-size:9px;color:var(--ink-3);font-weight:600;margin-top:1px}
+
+  /* Ratio bar */
+  .ratio-bar{display:flex;height:32px;border-radius:6px;overflow:hidden;margin:8px 0}
+  .ratio-seg{display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--cream)}
+  .ratio-seg.a{background:var(--green)}
+  .ratio-seg.b{background:var(--gold)}
+  .ratio-seg.c{background:var(--burgundy)}
+  .ratio-seg.d{background:var(--navy)}
+
+  /* Venn diagram */
+  .venn-wrap{display:grid;place-items:center;padding:10px 0}
+  .venn{position:relative;width:260px;height:130px}
+  .venn-circle{position:absolute;width:140px;height:140px;border:2px solid;border-radius:50%;top:-5px;display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:20px;font-weight:600}
+  .venn-circle.a{left:0;border-color:var(--green);background:rgba(15,79,58,0.12);color:var(--green)}
+  .venn-circle.b{right:0;border-color:var(--gold);background:rgba(184,137,61,0.12);color:var(--gold)}
+
+  /* Direct vs inverse proportion mini graphs */
+  .prop-graphs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .prop-graph{padding:10px;background:var(--cream);border:1px solid var(--rule);border-radius:8px;text-align:center}
+  .prop-graph-label{font-family:var(--mono);font-size:10px;color:var(--ink-3);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px}
+  .prop-graph-eq{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--green);margin-bottom:4px}
+  .prop-graph-eq.gold{color:var(--gold)}
+
+  /* VIEW TOGGLES */
+  .stage.show-a4 .sq-wrap{display:none}
+  .stage.show-sq .a4-wrap{display:none}
+  .stage.show-both .a4-wrap,.stage.show-both .sq-wrap{display:block}
+  .variant-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .variant-label{font-family:var(--mono);font-size:10.5px;font-weight:700;color:rgba(247,243,234,0.5);letter-spacing:0.12em;text-transform:uppercase}
+  .variant-label b{color:var(--gold-soft)}
+
+  /* Square-specific density */
+  .sheet.sq .sec-label{font-size:9.5px;margin-top:14px;margin-bottom:8px}
+  .sheet.sq .def-term{font-size:14px}
+  .sheet.sq .def-body{font-size:11px}
+  .sheet.sq .rule-eq{font-size:13px}
+  .sheet.sq .pv-chart .pv-digit{font-size:16px}
+  .sheet.sq .bidmas-big{font-size:24px}
+
+  @media print{
+    .controls,.stage-heading,.variant-label{display:none}
+    body{background:white}
+    .stage{padding:0;gap:0}
+    .sheet{box-shadow:none;margin:0;page-break-after:always}
+    .sheet::before{display:none}
+  }
+
+</style>
+</head>
+<body>
+<div class="controls">
+  <button class="ctrl active" onclick="setView('both')">Both</button>
+  <button class="ctrl" onclick="setView('a4')">A4 · Print</button>
+  <button class="ctrl" onclick="setView('sq')">Square · Social</button>
+</div>
+
+<div class="stage show-both" id="stage">
+  <div class="stage-heading">
+    <b>№05</b> · NUMBER · FOUNDATION + HIGHER <br>
+    PRINT the A4 for your wall · SCREENSHOT the square for Instagram/Pinterest
+  </div>
+
+  <div class="variant-wrap a4-wrap">
+    <div class="variant-label">A4 · <b>794 × auto</b> · Print-ready</div>
+    <div class="sheet a4">
+  <div class="sheet-band"><div class="g"></div><div class="gd"></div><div class="b"></div></div>
+  <div class="body">
+    <div class="sheet-header">
+      <div class="hdr-left">
+        <div class="logo-mark">Σ</div>
+        <div class="brand">
+          <div class="brand-name">gcse<em>maths</em>ai</div>
+          <div class="brand-tag">EST. MMXXIV · <b>LONDON</b> · MMXXVI SPEC.</div>
+        </div>
+      </div>
+      <div class="hdr-right">
+        <div class="sheet-num"><b>№ 05</b> · V</div>
+        <div class="sheet-spec">NUMBER · FOUNDATION + HIGHER<br>A4 · 210×297mm</div>
+      </div>
+    </div>
+
+    <div class="title-block">
+      <div class="topic-pills"><span class="pill pill-green">Number</span><span class="pill pill-gold">Foundation + Higher</span><span class="pill pill-burgundy">Core topic</span></div>
+      <h1 class="topic-title">Decimals.<br><em>Calculations & conversions.</em></h1>
+      <div class="topic-lede">A <b>decimal</b> extends place value to the right of the decimal point. <b>Tenths, hundredths, thousandths</b>. Any decimal can be written as a fraction — and any fraction as a decimal. Even the recurring ones.</div>
+    </div>
+
+    <div class="sec-label">I · Key definitions</div><div class="grid-3"><div class="def-card ">
+  <div class="def-term"><em>Decimal point</em></div>
+  <div class="def-body">Separates the whole from the fractional part.</div>
+  <div class="def-eg"><b>3.45</b> — 3 is whole, .45 is fractional</div>
+</div><div class="def-card gold">
+  <div class="def-term"><em>Terminating</em></div>
+  <div class="def-body">A decimal that <b>ends</b>.</div>
+  <div class="def-eg"><b>0.5, 0.375, 2.8</b></div>
+</div><div class="def-card ">
+  <div class="def-term"><em>Recurring</em></div>
+  <div class="def-body">Digits that <b>repeat forever</b>. Shown with a dot or bar.</div>
+  <div class="def-eg"><b>0.3̇ = 0.333…</b></div>
+</div><div class="def-card gold">
+  <div class="def-term"><em>Tenths</em></div>
+  <div class="def-body">1st digit after decimal point.</div>
+  <div class="def-eg">in <b>4.27</b>, the 2 = <b>0.2</b></div>
+</div><div class="def-card ">
+  <div class="def-term"><em>Hundredths</em></div>
+  <div class="def-body">2nd digit after decimal point.</div>
+  <div class="def-eg">in <b>4.27</b>, the 7 = <b>0.07</b></div>
+</div><div class="def-card burgundy">
+  <div class="def-term"><em>Thousandths</em></div>
+  <div class="def-body">3rd digit after decimal point.</div>
+  <div class="def-eg">in <b>4.275</b>, the 5 = <b>0.005</b></div>
+</div></div>
+<div class="sec-label">II · Decimal place value</div>
+<div class="pv-chart">
+  <div class="pv-row-labels">
+    <div class="pv-label">Hundreds</div><div class="pv-label">Tens</div><div class="pv-label">Ones</div><div></div><div class="pv-label d">Tenths</div><div class="pv-label d">Hund'ths</div><div class="pv-label d">Thous'ths</div>
+  </div>
+  <div class="pv-digits" style="grid-template-columns:repeat(3,1fr) 12px repeat(3,1fr)">
+    <div class="pv-digit">2</div><div class="pv-digit">4</div><div class="pv-digit hl">7</div><div class="pv-dot">·</div><div class="pv-digit gold">3</div><div class="pv-digit">8</div><div class="pv-digit">5</div>
+  </div>
+  <div class="viz-caption"><b>Reads:</b> Two hundred and forty-<em>seven</em> point three eight five. The green <b>7</b> = 7 ones. The gold <b>3</b> = 3 tenths = <b>0.3</b>. Every place is <b>10 times</b> the one to its right.</div>
+</div>
+
+<div class="sec-label">III · Conversions · decimal ↔ fraction</div><div class="grid-2"><div class="rule-card green">
+  <div class="rule-lbl">Terminating decimal → fraction</div>
+  <div class="rule-eq">Write as <span class="hl">digits / power of 10</span>, simplify</div>
+  <div class="rule-eg">0.375 = 375/1000 = <b>3/8</b></div>
+</div><div class="rule-card gold">
+  <div class="rule-lbl">Fraction → decimal</div>
+  <div class="rule-eq"><span class="hlg">Divide</span> top by bottom</div>
+  <div class="rule-eg">3/8 = 3 ÷ 8 = <b>0.375</b></div>
+</div><div class="rule-card burgundy">
+  <div class="rule-lbl">Recurring → fraction (algebra trick)</div>
+  <div class="rule-eq">Let x = 0.3̇<br>10x = 3.3̇<br><b>Subtract:</b> 9x = 3 → x = <span class="hlb">3/9 = 1/3</span></div>
+  <div class="rule-eg">Use 100x if two digits recur, etc.</div>
+</div><div class="rule-card green">
+  <div class="rule-lbl">Which fractions terminate?</div>
+  <div class="rule-eq">Only if denominator = <span class="hl">2ᵃ × 5ᵇ</span><br>otherwise it <b>recurs</b></div>
+  <div class="rule-eg">1/8 (=0.125) terminates · 1/3 (=0.333…) recurs</div>
+</div></div>
+<div class="sec-label">IV · Multiplying & dividing decimals</div><div class="grid-2"><div class="rule-card green">
+  <div class="rule-lbl">Multiplying decimals</div>
+  <div class="rule-eq">1. <span class="hl">Ignore decimal points</span>, multiply as whole numbers<br>2. <span class="hl">Count total decimal places</span> in both numbers<br>3. Put that many d.p. back in the answer</div>
+  <div class="rule-eg">0.3 × 0.04 → 3 × 4 = 12 → 3 d.p. → <b>0.012</b></div>
+</div><div class="rule-card gold">
+  <div class="rule-lbl">Dividing by a decimal</div>
+  <div class="rule-eq"><span class="hlg">Multiply both by 10, 100 …</span> until divisor is whole<br>Then divide normally</div>
+  <div class="rule-eg">4.8 ÷ 0.3 = 48 ÷ 3 = <b>16</b></div>
+</div></div>
+<div class="sec-label">V · Worked examples</div><div style="display:flex;flex-direction:column;gap:10px"><div class="worked">
+  <div class="worked-head">
+    <div class="worked-title">Convert <em>decimal to fraction</em></div>
+    <div class="worked-marks">2 marks</div>
+  </div>
+  <div class="worked-q">Convert <b>0.68</b> to a fraction in its simplest form.</div>
+  <div class="worked-steps"><div class="worked-step"><span class="step-n">i.</span><span class="step-text">Write as: 68/100</span></div><div class="worked-step"><span class="step-n">ii.</span><span class="step-text">Find HCF(68, 100) = 4</span></div><div class="worked-step"><span class="step-n">iii.</span><span class="step-text">Divide top and bottom by 4: 17/25</span></div></div>
+  <div class="worked-ans"><b>0.68 = 17/25</b></div>
+</div><div class="worked">
+  <div class="worked-head">
+    <div class="worked-title">Convert <em>recurring to fraction</em></div>
+    <div class="worked-marks">3 marks</div>
+  </div>
+  <div class="worked-q">Show that <b>0.2̇7̇</b> = 3/11 (where 27 recurs).</div>
+  <div class="worked-steps"><div class="worked-step"><span class="step-n">i.</span><span class="step-text">Let x = 0.27272727…</span></div><div class="worked-step"><span class="step-n">ii.</span><span class="step-text">Two digits recur, so multiply by 100: 100x = 27.272727…</span></div><div class="worked-step"><span class="step-n">iii.</span><span class="step-text">Subtract: 100x − x = 27.272… − 0.272… → 99x = 27</span></div><div class="worked-step"><span class="step-n">iv.</span><span class="step-text">x = 27/99 = <b>3/11</b> (dividing by 9)</span></div></div>
+  <div class="worked-ans"><b>0.2̇7̇ = 3/11</b> as required</div>
+</div><div class="worked">
+  <div class="worked-head">
+    <div class="worked-title">Multiply decimals (non-calc)</div>
+    <div class="worked-marks">2 marks</div>
+  </div>
+  <div class="worked-q">Work out <b>0.04 × 0.7</b> without a calculator.</div>
+  <div class="worked-steps"><div class="worked-step"><span class="step-n">i.</span><span class="step-text">Ignore decimal points: 4 × 7 = 28</span></div><div class="worked-step"><span class="step-n">ii.</span><span class="step-text">Count d.p. in question: 0.04 has 2, 0.7 has 1 → total 3</span></div><div class="worked-step"><span class="step-n">iii.</span><span class="step-text">Put 3 d.p. back: 0.028</span></div></div>
+  <div class="worked-ans"><b>0.04 × 0.7 = 0.028</b></div>
+</div></div>
+<div class="sec-label">VI · Common mistakes & examiner tips</div><div class="mist-tips-grid">
+  <div class="mistakes-card">
+    <div class="mistakes-head">Common mistakes</div>
+    <div class="mistakes-list"><div class="mistake-row"><b>0.5 < 0.45?</b> No — 0.5 = 0.50 is bigger.</div><div class="mistake-row"><b>Forgetting zeros</b> when counting d.p. 0.040 × 0.2 = 0.008, not 0.08.</div><div class="mistake-row"><b>Line up decimal points</b> when adding/subtracting. Place value matters.</div><div class="mistake-row"><b>Cancelling the wrong digits.</b> 68/100 ÷ 4 = 17/25, not 17/24.</div><div class="mistake-row"><b>Losing the recurring dot</b> in the answer. Use 0.3̇ (or 0.3̄) — it matters.</div></div>
+  </div>
+  <div class="tips-card">
+    <div class="tips-head">Examiner tips</div>
+    <div class="tips-list"><div class="tip-row"><b>Always simplify</b> fractions at the end — examiners deduct marks.</div><div class="tip-row"><b>Use powers of 10</b> trick for recurring decimals: 10, 100, 1000 depending on repeat length.</div><div class="tip-row"><b>Check terminating vs recurring</b> by looking at denominator — only 2s and 5s terminate.</div><div class="tip-row"><b>Pad with zeros</b> when comparing decimals: 0.5 vs 0.45 → 0.50 vs 0.45.</div></div>
+  </div>
+</div>
+
+    <div class="sheet-footer">
+      <div class="ft-left">© <b>GCSEMATHSAI</b> · MMXXVI SPEC · PRINT & STICK</div>
+      <div class="ft-right"><span class="ft-url">gcsemathsai.co.uk</span> · /sheets/05</div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="variant-wrap sq-wrap">
+    <div class="variant-label">SQUARE · <b>900 × auto</b> · Social-ready</div>
+    <div class="sheet sq">
+  <div class="sheet-band"><div class="g"></div><div class="gd"></div><div class="b"></div></div>
+  <div class="body">
+    <div class="sheet-header">
+      <div class="hdr-left">
+        <div class="logo-mark">Σ</div>
+        <div class="brand">
+          <div class="brand-name">gcse<em>maths</em>ai</div>
+          <div class="brand-tag">EST. MMXXIV · <b>LONDON</b> · MMXXVI SPEC.</div>
+        </div>
+      </div>
+      <div class="hdr-right">
+        <div class="sheet-num"><b>№ 05</b> · V</div>
+        <div class="sheet-spec">NUMBER · FOUNDATION + HIGHER<br>Square · 1:1</div>
+      </div>
+    </div>
+
+    <div class="title-block">
+      <div class="topic-pills"><span class="pill pill-green">Number</span><span class="pill pill-gold">Foundation + Higher</span><span class="pill pill-burgundy">Core topic</span></div>
+      <h1 class="topic-title">Decimals.<br><em>Calculations & conversions.</em></h1>
+      <div class="topic-lede">A <b>decimal</b> extends place value to the right of the decimal point. <b>Tenths, hundredths, thousandths</b>. Any decimal can be written as a fraction — and any fraction as a decimal. Even the recurring ones.</div>
+    </div>
+
+    <div class="sec-label">I · Key definitions</div><div class="grid-2"><div class="def-card ">
+  <div class="def-term"><em>Decimal point</em></div>
+  <div class="def-body">Separates the whole from the fractional part.</div>
+  <div class="def-eg"><b>3.45</b> — 3 is whole, .45 is fractional</div>
+</div><div class="def-card gold">
+  <div class="def-term"><em>Terminating</em></div>
+  <div class="def-body">A decimal that <b>ends</b>.</div>
+  <div class="def-eg"><b>0.5, 0.375, 2.8</b></div>
+</div><div class="def-card ">
+  <div class="def-term"><em>Recurring</em></div>
+  <div class="def-body">Digits that <b>repeat forever</b>. Shown with a dot or bar.</div>
+  <div class="def-eg"><b>0.3̇ = 0.333…</b></div>
+</div><div class="def-card gold">
+  <div class="def-term"><em>Tenths</em></div>
+  <div class="def-body">1st digit after decimal point.</div>
+  <div class="def-eg">in <b>4.27</b>, the 2 = <b>0.2</b></div>
+</div><div class="def-card ">
+  <div class="def-term"><em>Hundredths</em></div>
+  <div class="def-body">2nd digit after decimal point.</div>
+  <div class="def-eg">in <b>4.27</b>, the 7 = <b>0.07</b></div>
+</div><div class="def-card burgundy">
+  <div class="def-term"><em>Thousandths</em></div>
+  <div class="def-body">3rd digit after decimal point.</div>
+  <div class="def-eg">in <b>4.275</b>, the 5 = <b>0.005</b></div>
+</div></div>
+<div class="sec-label">II · Decimal place value</div>
+<div class="pv-chart">
+  <div class="pv-row-labels">
+    <div class="pv-label">Hundreds</div><div class="pv-label">Tens</div><div class="pv-label">Ones</div><div></div><div class="pv-label d">Tenths</div><div class="pv-label d">Hund'ths</div><div class="pv-label d">Thous'ths</div>
+  </div>
+  <div class="pv-digits" style="grid-template-columns:repeat(3,1fr) 12px repeat(3,1fr)">
+    <div class="pv-digit">2</div><div class="pv-digit">4</div><div class="pv-digit hl">7</div><div class="pv-dot">·</div><div class="pv-digit gold">3</div><div class="pv-digit">8</div><div class="pv-digit">5</div>
+  </div>
+  <div class="viz-caption"><b>Reads:</b> Two hundred and forty-<em>seven</em> point three eight five. The green <b>7</b> = 7 ones. The gold <b>3</b> = 3 tenths = <b>0.3</b>. Every place is <b>10 times</b> the one to its right.</div>
+</div>
+
+<div class="sec-label">III · Conversions · decimal ↔ fraction</div><div class="grid-2"><div class="rule-card green">
+  <div class="rule-lbl">Terminating decimal → fraction</div>
+  <div class="rule-eq">Write as <span class="hl">digits / power of 10</span>, simplify</div>
+  <div class="rule-eg">0.375 = 375/1000 = <b>3/8</b></div>
+</div><div class="rule-card gold">
+  <div class="rule-lbl">Fraction → decimal</div>
+  <div class="rule-eq"><span class="hlg">Divide</span> top by bottom</div>
+  <div class="rule-eg">3/8 = 3 ÷ 8 = <b>0.375</b></div>
+</div><div class="rule-card burgundy">
+  <div class="rule-lbl">Recurring → fraction (algebra trick)</div>
+  <div class="rule-eq">Let x = 0.3̇<br>10x = 3.3̇<br><b>Subtract:</b> 9x = 3 → x = <span class="hlb">3/9 = 1/3</span></div>
+  <div class="rule-eg">Use 100x if two digits recur, etc.</div>
+</div><div class="rule-card green">
+  <div class="rule-lbl">Which fractions terminate?</div>
+  <div class="rule-eq">Only if denominator = <span class="hl">2ᵃ × 5ᵇ</span><br>otherwise it <b>recurs</b></div>
+  <div class="rule-eg">1/8 (=0.125) terminates · 1/3 (=0.333…) recurs</div>
+</div></div>
+<div class="sec-label">IV · Multiplying & dividing decimals</div><div class="grid-2"><div class="rule-card green">
+  <div class="rule-lbl">Multiplying decimals</div>
+  <div class="rule-eq">1. <span class="hl">Ignore decimal points</span>, multiply as whole numbers<br>2. <span class="hl">Count total decimal places</span> in both numbers<br>3. Put that many d.p. back in the answer</div>
+  <div class="rule-eg">0.3 × 0.04 → 3 × 4 = 12 → 3 d.p. → <b>0.012</b></div>
+</div><div class="rule-card gold">
+  <div class="rule-lbl">Dividing by a decimal</div>
+  <div class="rule-eq"><span class="hlg">Multiply both by 10, 100 …</span> until divisor is whole<br>Then divide normally</div>
+  <div class="rule-eg">4.8 ÷ 0.3 = 48 ÷ 3 = <b>16</b></div>
+</div></div>
+<div class="sec-label">V · Worked examples</div><div style="display:flex;flex-direction:column;gap:10px"><div class="worked">
+  <div class="worked-head">
+    <div class="worked-title">Convert <em>decimal to fraction</em></div>
+    <div class="worked-marks">2 marks</div>
+  </div>
+  <div class="worked-q">Convert <b>0.68</b> to a fraction in its simplest form.</div>
+  <div class="worked-steps"><div class="worked-step"><span class="step-n">i.</span><span class="step-text">Write as: 68/100</span></div><div class="worked-step"><span class="step-n">ii.</span><span class="step-text">Find HCF(68, 100) = 4</span></div><div class="worked-step"><span class="step-n">iii.</span><span class="step-text">Divide top and bottom by 4: 17/25</span></div></div>
+  <div class="worked-ans"><b>0.68 = 17/25</b></div>
+</div><div class="worked">
+  <div class="worked-head">
+    <div class="worked-title">Convert <em>recurring to fraction</em></div>
+    <div class="worked-marks">3 marks</div>
+  </div>
+  <div class="worked-q">Show that <b>0.2̇7̇</b> = 3/11 (where 27 recurs).</div>
+  <div class="worked-steps"><div class="worked-step"><span class="step-n">i.</span><span class="step-text">Let x = 0.27272727…</span></div><div class="worked-step"><span class="step-n">ii.</span><span class="step-text">Two digits recur, so multiply by 100: 100x = 27.272727…</span></div><div class="worked-step"><span class="step-n">iii.</span><span class="step-text">Subtract: 100x − x = 27.272… − 0.272… → 99x = 27</span></div><div class="worked-step"><span class="step-n">iv.</span><span class="step-text">x = 27/99 = <b>3/11</b> (dividing by 9)</span></div></div>
+  <div class="worked-ans"><b>0.2̇7̇ = 3/11</b> as required</div>
+</div><div class="worked">
+  <div class="worked-head">
+    <div class="worked-title">Multiply decimals (non-calc)</div>
+    <div class="worked-marks">2 marks</div>
+  </div>
+  <div class="worked-q">Work out <b>0.04 × 0.7</b> without a calculator.</div>
+  <div class="worked-steps"><div class="worked-step"><span class="step-n">i.</span><span class="step-text">Ignore decimal points: 4 × 7 = 28</span></div><div class="worked-step"><span class="step-n">ii.</span><span class="step-text">Count d.p. in question: 0.04 has 2, 0.7 has 1 → total 3</span></div><div class="worked-step"><span class="step-n">iii.</span><span class="step-text">Put 3 d.p. back: 0.028</span></div></div>
+  <div class="worked-ans"><b>0.04 × 0.7 = 0.028</b></div>
+</div></div>
+<div class="sec-label">VI · Common mistakes & examiner tips</div><div class="mist-tips-grid">
+  <div class="mistakes-card">
+    <div class="mistakes-head">Common mistakes</div>
+    <div class="mistakes-list"><div class="mistake-row"><b>0.5 < 0.45?</b> No — 0.5 = 0.50 is bigger.</div><div class="mistake-row"><b>Forgetting zeros</b> when counting d.p. 0.040 × 0.2 = 0.008, not 0.08.</div><div class="mistake-row"><b>Line up decimal points</b> when adding/subtracting. Place value matters.</div><div class="mistake-row"><b>Cancelling the wrong digits.</b> 68/100 ÷ 4 = 17/25, not 17/24.</div><div class="mistake-row"><b>Losing the recurring dot</b> in the answer. Use 0.3̇ (or 0.3̄) — it matters.</div></div>
+  </div>
+  <div class="tips-card">
+    <div class="tips-head">Examiner tips</div>
+    <div class="tips-list"><div class="tip-row"><b>Always simplify</b> fractions at the end — examiners deduct marks.</div><div class="tip-row"><b>Use powers of 10</b> trick for recurring decimals: 10, 100, 1000 depending on repeat length.</div><div class="tip-row"><b>Check terminating vs recurring</b> by looking at denominator — only 2s and 5s terminate.</div><div class="tip-row"><b>Pad with zeros</b> when comparing decimals: 0.5 vs 0.45 → 0.50 vs 0.45.</div></div>
+  </div>
+</div>
+
+    <div class="sheet-footer">
+      <div class="ft-left">© <b>GCSEMATHSAI</b> · MMXXVI SPEC · PRINT & STICK</div>
+      <div class="ft-right"><span class="ft-url">gcsemathsai.co.uk</span> · /sheets/05</div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<script>
+function setView(mode) {
+  const stage = document.getElementById('stage');
+  stage.classList.remove('show-both','show-a4','show-sq');
+  stage.classList.add('show-' + mode);
+  document.querySelectorAll('.ctrl').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>

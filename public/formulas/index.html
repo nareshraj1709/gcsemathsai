@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GCSE Maths Formula Sheets · GCSEMathsAI · Number Strand</title>
+<meta name="description" content="Free, print-ready GCSE Maths formula sheets for all 73 topics across Number, Algebra, Ratio, Geometry, and Statistics. MMXXVI specification, all exam boards.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F3EA;
+    --cream-2:#F0EADD;
+    --paper:#FDFBF5;
+    --ink:#0E1F17;
+    --ink-2:#2A3F35;
+    --ink-3:#5E7268;
+    --ink-4:#8A9A90;
+    --rule:#D8CFBC;
+    --rule-2:#C4B89F;
+    --green:#0F4F3A;
+    --green-dark:#073424;
+    --green-soft:#E2EDE6;
+    --gold:#B8893D;
+    --gold-soft:#F2E4C4;
+    --burgundy:#7A2E2E;
+    --burgundy-soft:#F2DBDB;
+    --navy:#1E2F55;
+    --serif:'Fraunces', Georgia, serif;
+    --sans:'Inter', system-ui, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:var(--sans);background:#2A2F2B;color:var(--ink);-webkit-font-smoothing:antialiased;min-height:100vh}
+
+  /* CONTROLS */
+  .controls{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:5px;display:flex;gap:4px;box-shadow:0 8px 24px -6px rgba(0,0,0,0.4)}
+  .ctrl{padding:10px 20px;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-3);cursor:pointer;border-radius:999px;border:none;background:transparent;transition:all .15s}
+  .ctrl:hover{color:var(--ink)}
+  .ctrl.active{background:var(--ink);color:var(--cream)}
+
+  .stage{padding:80px 20px 60px;display:flex;flex-direction:column;align-items:center;gap:40px}
+  .stage-heading{font-family:var(--mono);font-size:11px;font-weight:700;color:rgba(247,243,234,0.6);letter-spacing:0.12em;text-transform:uppercase;text-align:center;max-width:800px;line-height:1.6}
+  .stage-heading b{color:var(--gold)}
+
+  /* SHEET BASE */
+  .sheet{
+    background:var(--cream);
+    position:relative;overflow:hidden;
+    box-shadow:0 40px 80px -20px rgba(0,0,0,0.5), 0 20px 40px -10px rgba(0,0,0,0.3);
+    color:var(--ink);
+    display:flex;flex-direction:column;
+  }
+  .sheet::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+    background-image:radial-gradient(circle at 1px 1px, rgba(14,31,23,0.05) 1px, transparent 0);
+    background-size:4px 4px;opacity:0.6;
+  }
+  .sheet > *{position:relative;z-index:1}
+
+  .sheet-band{height:8px;display:flex;flex-shrink:0}
+  .sheet-band > div{flex:1}
+  .sheet-band .g{background:var(--green);flex:5}
+  .sheet-band .gd{background:var(--gold);flex:2}
+  .sheet-band .b{background:var(--burgundy);flex:3}
+
+  .sheet.a4{width:794px}
+  .sheet.a4 .body{padding:36px 44px 30px;display:flex;flex-direction:column;flex:1}
+  .sheet.sq{width:900px}
+  .sheet.sq .body{padding:36px 40px 30px;display:flex;flex-direction:column;flex:1}
+
+  /* HEADER */
+  .sheet-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding-bottom:16px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+  .hdr-left{display:flex;align-items:center;gap:12px}
+  .logo-mark{width:40px;height:40px;border-radius:8px;background:var(--green);color:var(--cream);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:20px;font-style:italic;flex-shrink:0}
+  .brand{display:flex;flex-direction:column;gap:2px}
+  .brand-name{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;line-height:1}
+  .brand-name em{font-style:italic;color:var(--green);font-weight:600}
+  .brand-tag{font-family:var(--mono);font-size:9px;color:var(--ink-3);font-weight:700;letter-spacing:0.12em;text-transform:uppercase}
+  .brand-tag b{color:var(--gold)}
+  .hdr-right{text-align:right;display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+  .sheet-num{font-family:var(--serif);font-style:italic;font-size:22px;font-weight:500;color:var(--green);line-height:1;letter-spacing:-0.02em}
+  .sheet-num b{font-style:normal;color:var(--ink);font-weight:700}
+  .sheet-spec{font-family:var(--mono);font-size:9px;color:var(--ink-3);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;line-height:1.3}
+
+  /* TITLE */
+  .title-block{margin-bottom:20px}
+  .topic-pills{display:flex;gap:5px;margin-bottom:10px;flex-wrap:wrap}
+  .pill{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+  .pill-green{background:var(--green-soft);color:var(--green)}
+  .pill-gold{background:var(--gold-soft);color:var(--gold)}
+  .pill-burgundy{background:var(--burgundy-soft);color:var(--burgundy)}
+  .pill-gray{background:var(--cream-2);color:var(--ink-3)}
+
+  h1.topic-title{font-family:var(--serif);font-weight:500;line-height:0.98;letter-spacing:-0.025em;color:var(--ink);margin-bottom:10px}
+  .sheet.a4 h1.topic-title{font-size:42px}
+  .sheet.sq h1.topic-title{font-size:38px}
+  h1.topic-title em{font-style:italic;color:var(--green)}
+
+  .topic-lede{font-family:var(--serif);font-size:14.5px;line-height:1.5;color:var(--ink-2);font-weight:500;max-width:620px}
+  .topic-lede b{color:var(--green);font-weight:700;font-style:italic}
+
+  /* SECTION LABEL */
+  .sec-label{display:flex;align-items:center;gap:10px;margin-bottom:10px;margin-top:18px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--green)}
+  .sec-label::before{content:"§";font-family:var(--serif);font-size:14px;font-style:italic;color:var(--gold);font-weight:500}
+  .sec-label::after{content:"";flex:1;height:1px;background:var(--rule)}
+  .sec-label:first-of-type{margin-top:0}
+
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+
+  /* DEFINITIONS */
+  .def-card{background:var(--paper);border:1px solid var(--rule);border-radius:9px;padding:12px 14px;position:relative;overflow:hidden}
+  .def-card::before{content:"";position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--green)}
+  .def-card.gold::before{background:var(--gold)}
+  .def-card.burgundy::before{background:var(--burgundy)}
+  .def-term{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;margin-bottom:3px;line-height:1.15}
+  .def-term em{font-style:italic;color:var(--green)}
+  .def-body{font-family:var(--serif);font-size:11.5px;line-height:1.45;color:var(--ink-2);font-weight:500}
+  .def-body b{color:var(--ink);font-weight:700}
+  .def-eg{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);font-weight:600;margin-top:5px;padding-top:5px;border-top:1px dashed var(--rule);line-height:1.4}
+  .def-eg b{color:var(--green);font-weight:700}
+
+  /* FORMULA/RULE CARDS */
+  .rule-card{background:var(--paper);border:1px solid var(--rule);border-radius:9px;padding:11px 14px;position:relative}
+  .rule-card.green{border-left:3px solid var(--green)}
+  .rule-card.gold{border-left:3px solid var(--gold)}
+  .rule-card.burgundy{border-left:3px solid var(--burgundy)}
+  .rule-lbl{font-family:var(--mono);font-size:9px;font-weight:700;color:var(--ink-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:5px}
+  .rule-eq{font-family:var(--mono);font-size:13.5px;font-weight:700;color:var(--ink);letter-spacing:-0.005em;line-height:1.5}
+  .rule-eq .hl{background:var(--green-soft);color:var(--green);padding:1px 5px;border-radius:3px}
+  .rule-eq .hlg{background:var(--gold-soft);color:var(--gold);padding:1px 5px;border-radius:3px}
+  .rule-eq .hlb{background:var(--burgundy-soft);color:var(--burgundy);padding:1px 5px;border-radius:3px}
+  .rule-eg{font-family:var(--serif);font-style:italic;font-size:11.5px;color:var(--ink-3);font-weight:500;margin-top:5px;line-height:1.4}
+  .rule-eg b{font-style:normal;color:var(--ink);font-weight:700}
+
+  /* VISUAL BLOCK (generic container for diagrams) */
+  .viz-block{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:14px 16px}
+  .viz-caption{font-family:var(--serif);font-size:12px;line-height:1.45;color:var(--ink-2);font-weight:500;margin-top:8px;padding-top:8px;border-top:1px solid var(--rule)}
+  .viz-caption b{color:var(--ink);font-weight:700}
+  .viz-caption em{font-style:italic;color:var(--green)}
+
+  /* WORKED EXAMPLE */
+  .worked{background:var(--paper);border:1.5px solid var(--gold);border-radius:12px;padding:16px 18px;position:relative}
+  .worked::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);border-radius:12px 12px 0 0}
+  .worked-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+  .worked-title{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:-0.01em;color:var(--ink);display:flex;align-items:center;gap:7px}
+  .worked-title::before{content:"◆";color:var(--gold);font-size:11px}
+  .worked-title em{font-style:italic;color:var(--green)}
+  .worked-marks{font-family:var(--mono);font-size:9px;color:var(--gold);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 7px;background:var(--gold-soft);border-radius:4px}
+  .worked-q{font-family:var(--serif);font-size:12.5px;line-height:1.45;color:var(--ink);font-weight:500;padding:9px 11px;background:var(--cream);border-radius:6px;margin-bottom:10px;border-left:2px solid var(--gold)}
+  .worked-q b{color:var(--green);font-weight:700;font-style:italic}
+  .worked-steps{display:flex;flex-direction:column;gap:5px}
+  .worked-step{display:flex;gap:9px;align-items:flex-start;font-family:var(--mono);font-size:11.5px;line-height:1.5;color:var(--ink-2);font-weight:600}
+  .step-n{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--green);font-weight:500;flex-shrink:0;min-width:18px;line-height:1.5}
+  .step-text{flex:1}
+  .step-text b{color:var(--green);font-weight:700}
+  .worked-ans{margin-top:10px;padding:9px 12px;border-radius:7px;background:var(--green-soft);border-left:3px solid var(--green);font-family:var(--serif);font-size:13px;color:var(--ink);font-weight:600;display:flex;align-items:center;gap:8px}
+  .worked-ans::before{content:"∴";font-family:var(--serif);font-style:italic;font-size:17px;color:var(--green);font-weight:700}
+  .worked-ans b{color:var(--green);font-weight:700}
+
+  /* MISTAKES + TIPS */
+  .mist-tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .mistakes-card{background:var(--burgundy-soft);border-left:3px solid var(--burgundy);border-radius:0 10px 10px 0;padding:14px 16px}
+  .mistakes-head{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--burgundy);letter-spacing:-0.01em;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .mistakes-head::before{content:"⚠";font-size:14px}
+  .mistakes-list{display:flex;flex-direction:column;gap:5px}
+  .mistake-row{padding-left:18px;position:relative;font-family:var(--serif);font-size:11.5px;line-height:1.45;color:var(--ink);font-weight:500}
+  .mistake-row::before{content:"✗";position:absolute;left:0;top:0;color:var(--burgundy);font-weight:700;font-family:var(--serif);font-size:12px}
+  .mistake-row b{color:var(--burgundy);font-weight:700}
+
+  .tips-card{background:var(--green-soft);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:14px 16px}
+  .tips-head{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--green);letter-spacing:-0.01em;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .tips-head::before{content:"✦";color:var(--gold);font-size:14px}
+  .tips-list{display:flex;flex-direction:column;gap:5px}
+  .tip-row{padding-left:18px;position:relative;font-family:var(--serif);font-size:11.5px;line-height:1.45;color:var(--ink);font-weight:500}
+  .tip-row::before{content:"→";position:absolute;left:0;top:0;color:var(--green);font-weight:700;font-family:var(--mono);font-size:12px}
+  .tip-row b{color:var(--green);font-weight:700}
+
+  /* FOOTER */
+  .sheet-footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .ft-left{font-family:var(--mono);font-size:9px;font-weight:700;color:var(--ink-3);letter-spacing:0.08em;text-transform:uppercase}
+  .ft-left b{color:var(--gold)}
+  .ft-right{font-family:var(--mono);font-size:9px;font-weight:700;color:var(--ink-3);letter-spacing:0.06em}
+  .ft-url{color:var(--green);font-weight:700}
+
+  .orn{text-align:center;font-family:var(--serif);font-size:11px;color:var(--gold);margin:10px 0;letter-spacing:0.4em;font-weight:500;opacity:0.7}
+
+  /* ==== SPECIALISED VISUALS ==== */
+
+  /* Place value chart */
+  .pv-chart .pv-row-labels{display:grid;grid-template-columns:repeat(7,1fr) 12px repeat(3,1fr);gap:4px;margin-bottom:6px}
+  .pv-chart .pv-label{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-3);text-align:center;line-height:1.2;padding:3px 2px}
+  .pv-chart .pv-label.h{color:var(--green)}
+  .pv-chart .pv-label.d{color:var(--gold)}
+  .pv-chart .pv-digits{display:grid;grid-template-columns:repeat(7,1fr) 12px repeat(3,1fr);gap:4px;text-align:center}
+  .pv-chart .pv-digit{aspect-ratio:1;display:grid;place-items:center;background:var(--cream);border:1px solid var(--rule);border-radius:5px;font-family:var(--mono);font-weight:700;font-size:18px;color:var(--ink)}
+  .pv-chart .pv-digit.hl{background:var(--green-soft);color:var(--green);border-color:var(--green)}
+  .pv-chart .pv-digit.gold{background:var(--gold-soft);color:var(--gold);border-color:var(--gold)}
+  .pv-chart .pv-dot{display:grid;place-items:center;font-family:var(--serif);font-size:22px;font-weight:700;color:var(--burgundy);line-height:0.8}
+
+  /* Number line */
+  .nl-line{position:relative;height:70px}
+  .nl-axis{position:absolute;top:36px;left:16px;right:16px;height:2px;background:var(--ink)}
+  .nl-axis::before,.nl-axis::after{content:"";position:absolute;top:50%;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent}
+  .nl-axis::before{left:-10px;transform:translateY(-50%);border-right:8px solid var(--ink)}
+  .nl-axis::after{right:-10px;transform:translateY(-50%);border-left:8px solid var(--ink)}
+  .nl-tick{position:absolute;top:29px;width:2px;height:16px;background:var(--ink);transform:translateX(-50%)}
+  .nl-tick.zero{background:var(--burgundy);height:22px;top:26px}
+  .nl-tick.zero::before{content:"0";position:absolute;top:28px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-style:italic;font-size:15px;font-weight:700;color:var(--burgundy)}
+  .nl-tick-num{position:absolute;top:20px;left:50%;transform:translate(-50%,-100%);font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+  .nl-tick-num.neg{color:var(--burgundy)}
+  .nl-tick-num.pos{color:var(--green)}
+  .nl-side-label{position:absolute;top:52px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+  .nl-side-label.l{left:0;color:var(--burgundy)}
+  .nl-side-label.r{right:0;color:var(--green)}
+
+  /* Sign rules */
+  .signs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .sign-cell{padding:10px;border:1px solid var(--rule);border-radius:8px;background:var(--cream);display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+  .sign-op{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink-2);letter-spacing:0.04em}
+  .sign-op .pos{color:var(--green)}
+  .sign-op .neg{color:var(--burgundy)}
+  .sign-result{font-family:var(--serif);font-style:italic;font-size:20px;font-weight:600;line-height:1}
+  .sign-result.pos{color:var(--green)}
+  .sign-result.neg{color:var(--burgundy)}
+  .sign-eg{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);font-weight:600;line-height:1.4}
+  .signs-caption{font-family:var(--serif);font-size:12px;font-style:italic;line-height:1.45;color:var(--ink-2);font-weight:500;margin-top:10px;padding-top:8px;border-top:1px solid var(--rule);text-align:center}
+  .signs-caption b{font-style:normal;color:var(--green);font-weight:700}
+
+  /* Rounding */
+  .round-rule-block{margin-bottom:10px}
+  .round-rule-block:last-child{margin-bottom:0}
+  .round-title{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--ink);letter-spacing:-0.01em;margin-bottom:4px}
+  .round-title em{font-style:italic;color:var(--green)}
+  .round-examples{display:flex;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink-2)}
+  .round-ex{padding:3px 8px;background:var(--cream);border:1px solid var(--rule);border-radius:5px;display:flex;align-items:center;gap:6px}
+  .round-ex b{color:var(--green);font-weight:700}
+  .round-ex .arr{color:var(--gold)}
+
+  /* BIDMAS */
+  .bidmas-letters{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:10px}
+  .bidmas-letter{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px;background:var(--cream);border:1px solid var(--rule);border-radius:8px;text-align:center}
+  .bidmas-big{font-family:var(--serif);font-style:italic;font-size:28px;font-weight:500;color:var(--green);line-height:1}
+  .bidmas-word{font-family:var(--mono);font-size:8.5px;color:var(--ink-2);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;line-height:1.3}
+
+  /* Absolute value */
+  .abs-visual{display:flex;gap:12px;align-items:center;justify-content:center;margin:8px 0;flex-wrap:wrap}
+  .abs-example{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .abs-expr{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--ink);padding:6px 12px;background:var(--cream);border:1px solid var(--rule);border-radius:6px}
+  .abs-expr b{color:var(--burgundy)}
+  .abs-arrow{font-family:var(--serif);font-size:18px;color:var(--gold);font-style:italic}
+  .abs-result{font-family:var(--serif);font-style:italic;font-size:22px;font-weight:600;color:var(--green)}
+
+  /* Prime factor tree */
+  .tree{display:flex;flex-direction:column;align-items:center;padding:10px 0;font-family:var(--mono);font-weight:700}
+  .tree-row{display:flex;gap:30px;align-items:center;justify-content:center;position:relative}
+  .tree-row + .tree-row{margin-top:20px;position:relative}
+  .tree-row + .tree-row::before{content:"";position:absolute;top:-20px;left:50%;width:60%;height:20px;border-left:2px dashed var(--rule-2);border-right:2px dashed var(--rule-2);transform:translateX(-50%)}
+  .tree-node{padding:6px 10px;border-radius:6px;background:var(--cream);border:1px solid var(--rule);font-size:13px;color:var(--ink)}
+  .tree-node.prime{background:var(--green);color:var(--cream);border-color:var(--green)}
+  .tree-node.composite{background:var(--gold-soft);color:var(--gold);border-color:var(--gold)}
+
+  /* Fraction wall */
+  .fraction-wall{display:flex;flex-direction:column;gap:3px;padding:10px 0}
+  .fw-row{display:flex;gap:0;height:26px;border-radius:4px;overflow:hidden}
+  .fw-cell{flex:1;background:var(--paper);border:1px solid var(--rule);display:grid;place-items:center;font-family:var(--mono);font-size:10px;color:var(--ink-2);font-weight:700}
+  .fw-cell.hl{background:var(--green-soft);color:var(--green)}
+  .fw-cell.hlg{background:var(--gold-soft);color:var(--gold)}
+
+  /* Index laws */
+  .law-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .law-card{padding:10px 14px;background:var(--paper);border:1px solid var(--rule);border-radius:8px;display:flex;flex-direction:column;gap:4px}
+  .law-card.green{border-left:3px solid var(--green)}
+  .law-card.gold{border-left:3px solid var(--gold)}
+  .law-eq{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink)}
+  .law-eq sup{font-size:11px;vertical-align:super}
+  .law-eq .hl{color:var(--green);background:var(--green-soft);padding:0 4px;border-radius:3px}
+  .law-desc{font-family:var(--serif);font-size:11px;color:var(--ink-3);font-style:italic;font-weight:500;line-height:1.3}
+
+  /* Standard form line */
+  .sf-line{position:relative;height:60px;background:var(--cream);border-radius:6px;margin:10px 0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink-2)}
+  .sf-line .stop{display:flex;flex-direction:column;align-items:center;gap:2px}
+  .sf-line .stop-num{font-family:var(--serif);font-size:14px;color:var(--green);font-style:italic}
+  .sf-line .stop-desc{font-size:9px;color:var(--ink-3)}
+
+  /* Percentage multiplier table */
+  .mult-table{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;font-family:var(--mono);font-size:11px;font-weight:700}
+  .mult-cell{padding:6px 8px;border-radius:5px;background:var(--cream);border:1px solid var(--rule);text-align:center;color:var(--ink)}
+  .mult-cell.up{border-left:2px solid var(--green);color:var(--green)}
+  .mult-cell.down{border-left:2px solid var(--burgundy);color:var(--burgundy)}
+  .mult-cell small{display:block;font-size:9px;color:var(--ink-3);font-weight:600;margin-top:1px}
+
+  /* Ratio bar */
+  .ratio-bar{display:flex;height:32px;border-radius:6px;overflow:hidden;margin:8px 0}
+  .ratio-seg{display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--cream)}
+  .ratio-seg.a{background:var(--green)}
+  .ratio-seg.b{background:var(--gold)}
+  .ratio-seg.c{background:var(--burgundy)}
+  .ratio-seg.d{background:var(--navy)}
+
+  /* Venn diagram */
+  .venn-wrap{display:grid;place-items:center;padding:10px 0}
+  .venn{position:relative;width:260px;height:130px}
+  .venn-circle{position:absolute;width:140px;height:140px;border:2px solid;border-radius:50%;top:-5px;display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:20px;font-weight:600}
+  .venn-circle.a{left:0;border-color:var(--green);background:rgba(15,79,58,0.12);color:var(--green)}
+  .venn-circle.b{right:0;border-color:var(--gold);background:rgba(184,137,61,0.12);color:var(--gold)}
+
+  /* Direct vs inverse proportion mini graphs */
+  .prop-graphs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .prop-graph{padding:10px;background:var(--cream);border:1px solid var(--rule);border-radius:8px;text-align:center}
+  .prop-graph-label{font-family:var(--mono);font-size:10px;color:var(--ink-3);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px}
+  .prop-graph-eq{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--green);margin-bottom:4px}
+  .prop-graph-eq.gold{color:var(--gold)}
+
+  /* VIEW TOGGLES */
+  .stage.show-a4 .sq-wrap{display:none}
+  .stage.show-sq .a4-wrap{display:none}
+  .stage.show-both .a4-wrap,.stage.show-both .sq-wrap{display:block}
+  .variant-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .variant-label{font-family:var(--mono);font-size:10.5px;font-weight:700;color:rgba(247,243,234,0.5);letter-spacing:0.12em;text-transform:uppercase}
+  .variant-label b{color:var(--gold-soft)}
+
+  /* Square-specific density */
+  .sheet.sq .sec-label{font-size:9.5px;margin-top:14px;margin-bottom:8px}
+  .sheet.sq .def-term{font-size:14px}
+  .sheet.sq .def-body{font-size:11px}
+  .sheet.sq .rule-eq{font-size:13px}
+  .sheet.sq .pv-chart .pv-digit{font-size:16px}
+  .sheet.sq .bidmas-big{font-size:24px}
+
+  @media print{
+    .controls,.stage-heading,.variant-label{display:none}
+    body{background:white}
+    .stage{padding:0;gap:0}
+    .sheet{box-shadow:none;margin:0;page-break-after:always}
+    .sheet::before{display:none}
+  }
+
+
+  html,body{background:var(--cream);color:var(--ink);min-height:100vh}
+  .index-wrap{max-width:1240px;margin:0 auto;padding:40px 32px 80px}
+
+  /* HEADER */
+  .idx-header{border-bottom:1.5px solid var(--ink);padding-bottom:28px;margin-bottom:32px}
+  .idx-topbar{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);font-weight:700;padding-bottom:20px;border-bottom:1px solid var(--rule);margin-bottom:24px}
+  .idx-topbar b{color:var(--gold)}
+  .idx-nav{display:flex;gap:20px}
+  .idx-nav a{color:var(--ink-2);text-decoration:none;transition:color .15s}
+  .idx-nav a:hover{color:var(--green)}
+  .idx-brand{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+  .idx-logo{width:54px;height:54px;border-radius:10px;background:var(--green);color:var(--cream);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:28px;font-style:italic}
+  .idx-brand-name{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--ink);letter-spacing:-0.015em;line-height:1}
+  .idx-brand-name em{font-style:italic;color:var(--green);font-weight:600}
+  .idx-brand-tag{font-family:var(--mono);font-size:10px;color:var(--ink-3);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-top:4px}
+  .idx-brand-tag b{color:var(--gold)}
+
+  .idx-title{font-family:var(--serif);font-size:56px;font-weight:500;letter-spacing:-0.03em;line-height:0.98;color:var(--ink);margin-bottom:14px}
+  .idx-title em{font-style:italic;color:var(--green)}
+  .idx-lede{font-family:var(--serif);font-size:17px;line-height:1.55;color:var(--ink-2);font-weight:500;max-width:720px}
+  .idx-lede b{color:var(--green);font-weight:700;font-style:italic}
+
+  .idx-meta{display:flex;gap:28px;margin-top:20px;font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--ink-3);letter-spacing:0.08em;text-transform:uppercase;flex-wrap:wrap}
+  .idx-meta div b{color:var(--green);font-family:var(--serif);font-style:italic;font-size:22px;letter-spacing:-0.01em;display:block;margin-bottom:2px}
+  .idx-meta div.gold b{color:var(--gold)}
+  .idx-meta div.bur b{color:var(--burgundy)}
+
+  /* STRAND HEADER */
+  .strand-header{display:flex;align-items:baseline;gap:16px;margin-top:36px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--rule)}
+  .strand-roman{font-family:var(--serif);font-style:italic;font-size:44px;color:var(--green);font-weight:500;line-height:1;letter-spacing:-0.02em}
+  .strand-info{flex:1}
+  .strand-name{font-family:var(--serif);font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-0.015em;line-height:1.1}
+  .strand-desc{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--ink-3);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px}
+  .strand-desc b{color:var(--gold)}
+  .strand-count{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-3);font-weight:500}
+
+  /* GRID */
+  .sheets-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+
+  /* CARD */
+  .sheet-card{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:22px 22px 18px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;transition:transform .2s, box-shadow .2s, border-color .2s}
+  .sheet-card:hover{transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(14,31,23,0.18);border-color:var(--ink)}
+  .sheet-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--green);transition:height .15s}
+  .sheet-card:hover::before{height:6px}
+  .sheet-card.gold::before{background:var(--gold)}
+  .sheet-card.bur::before{background:var(--burgundy)}
+
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-top:6px}
+  .card-num{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--green);font-weight:500;line-height:0.85;letter-spacing:-0.02em}
+  .card-num b{font-style:normal;color:var(--ink);font-weight:700}
+  .card-tier{font-family:var(--mono);font-size:8.5px;font-weight:700;color:var(--ink-3);letter-spacing:0.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px;background:var(--cream-2);white-space:nowrap}
+  .card-tier.higher{background:var(--burgundy-soft);color:var(--burgundy)}
+  .card-tier.star{background:var(--gold-soft);color:var(--gold)}
+
+  .card-title{font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:-0.015em;color:var(--ink);line-height:1.12;margin-top:2px}
+  .card-title em{font-style:italic;color:var(--green)}
+
+  .card-desc{font-family:var(--serif);font-size:12.5px;line-height:1.45;color:var(--ink-3);font-weight:500;flex:1}
+
+  .card-footer{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px dashed var(--rule);margin-top:4px;font-family:var(--mono);font-size:9.5px;font-weight:700;color:var(--ink-3);letter-spacing:0.08em;text-transform:uppercase}
+  .card-arrow{font-family:var(--serif);font-size:15px;color:var(--green);font-weight:700;transition:transform .15s}
+  .sheet-card:hover .card-arrow{transform:translateX(4px)}
+
+  /* FOOTER BLOCK */
+  .idx-footer{margin-top:60px;padding-top:28px;border-top:1.5px solid var(--ink);display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  .ft-block{font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--ink-3);letter-spacing:0.08em;text-transform:uppercase;line-height:1.6}
+  .ft-block b{color:var(--gold)}
+  .ft-block a{color:var(--green);text-decoration:none}
+  .ft-serif{font-family:var(--serif);font-style:italic;font-size:14px;letter-spacing:-0.01em;color:var(--ink-2);text-transform:none;font-weight:500}
+
+  .coming-soon{opacity:0.5;pointer-events:none}
+  .coming-soon .card-tier{background:var(--cream-2);color:var(--ink-3)}
+
+  .orn-big{text-align:center;font-family:var(--serif);font-size:14px;color:var(--gold);letter-spacing:0.5em;font-weight:500;margin:48px 0 20px;opacity:0.6}
+
+  @media (max-width:640px){
+    .idx-wrap{padding:28px 20px 60px}
+    .idx-title{font-size:36px}
+    .sheets-grid{grid-template-columns:1fr}
+  }
+
+</style>
+</head>
+<body>
+<div class="index-wrap">
+
+  <header class="idx-header">
+    <div class="idx-topbar">
+      <div>EST. MMXXIV · <b>LONDON</b> · MMXXVI SPECIFICATION</div>
+      <div class="idx-nav">
+        <a href="/">Home</a>
+        <a href="/topics">Topics</a>
+        <a href="/papers">Past Papers</a>
+        <a href="/pricing">Pricing</a>
+      </div>
+    </div>
+    <div class="idx-brand">
+      <div class="idx-logo">Σ</div>
+      <div>
+        <div class="idx-brand-name">gcse<em>maths</em>ai</div>
+        <div class="idx-brand-tag">FORMULA SHEETS · <b>PRINT & STICK</b> · FREE FOREVER</div>
+      </div>
+    </div>
+    <h1 class="idx-title">The <em>formula sheets</em><br>every student needs.</h1>
+    <p class="idx-lede">
+      <b>73 sheets.</b> One for every GCSE Maths topic. Designed to be
+      <b>screenshotted, printed, and stuck on your wall.</b> Every definition,
+      formula, worked example, common mistake and examiner tip — laid out with
+      the density of a revision textbook and the polish of a museum poster.
+    </p>
+    <div class="idx-meta">
+      <div><b>13</b>Sheets live</div>
+      <div class="gold"><b>73</b>Topics in total</div>
+      <div class="bur"><b>3</b>Exam boards</div>
+      <div><b>2</b>Formats each</div>
+    </div>
+  </header>
+
+  <section class="strand-header">
+    <div class="strand-roman">I</div>
+    <div class="strand-info">
+      <div class="strand-name">Number</div>
+      <div class="strand-desc">From integers to standard form · <b>13 sheets</b> · Foundation + Higher</div>
+    </div>
+    <div class="strand-count">Sheets 01 — 13</div>
+  </section>
+
+  <div class="sheets-grid">
+    <a class="sheet-card gold" href="Number/01_integers-place-value-ordering.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 01</b></div>
+    <div class="card-tier star">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Integers, Place Value<br>& Ordering Numbers.</div>
+  <div class="card-desc">An integer is a whole number — positive, negative or zero.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 01</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card gold" href="Number/02_factors-multiples-primes.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 02</b></div>
+    <div class="card-tier star">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Factors, Multiples<br>& Prime Numbers.</div>
+  <div class="card-desc">A factor divides into a number exactly.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 02</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card gold" href="Number/03_powers-roots-indices.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 03</b></div>
+    <div class="card-tier star">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Powers, Roots<br>& Indices.</div>
+  <div class="card-desc">A power (or index) tells you how many times to multiply a number by itself.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 03</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card gold" href="Number/04_fractions.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 04</b></div>
+    <div class="card-tier star">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Fractions.<br>Adding, subtracting, ×, ÷.</div>
+  <div class="card-desc">A fraction shows part of a whole.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 04</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card " href="Number/05_decimals.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 05</b></div>
+    <div class="card-tier ">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Decimals.<br>Calculations & conversions.</div>
+  <div class="card-desc">A decimal extends place value to the right of the decimal point.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 05</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card gold" href="Number/06_percentages.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 06</b></div>
+    <div class="card-tier star">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Percentages.<br>Change, increase, decrease, reverse.</div>
+  <div class="card-desc">A percentage is a fraction of 100.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 06</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card gold" href="Number/07_ratio.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 07</b></div>
+    <div class="card-tier star">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Ratio.<br>Sharing, simplifying, scaling.</div>
+  <div class="card-desc">A ratio compares two (or more) quantities.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 07</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card " href="Number/08_proportion.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 08</b></div>
+    <div class="card-tier ">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Proportion.<br>Direct & inverse.</div>
+  <div class="card-desc">Direct proportion: as one goes up, the other goes up at the same rate.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 08</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card " href="Number/09_standard-form.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 09</b></div>
+    <div class="card-tier ">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Standard Form.<br>a × 10n.</div>
+  <div class="card-desc">Standard form writes very big and very small numbers compactly.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 09</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card bur" href="Number/10_surds.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 10</b></div>
+    <div class="card-tier higher">Higher only</div>
+  </div>
+  <div class="card-title">Surds.<br>Simplifying, operating, rationalising.</div>
+  <div class="card-desc">A surd is a root that can't be simplified to a rational — like √2, √3, √5.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 10</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card bur" href="Number/11_bounds-error-intervals.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 11</b></div>
+    <div class="card-tier higher">Higher focus</div>
+  </div>
+  <div class="card-title">Bounds &<br>Error Intervals.</div>
+  <div class="card-desc">Every rounded measurement has a range it could have been.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 11</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card " href="Number/12_estimation.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 12</b></div>
+    <div class="card-tier ">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Estimation.<br>Rounding for sanity checks.</div>
+  <div class="card-desc">An estimate is a quick, sensible approximation — rounded to 1 significant figure.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 12</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a><a class="sheet-card " href="Number/13_product-rule-counting.html">
+  <div class="card-top">
+    <div class="card-num"><b>№ 13</b></div>
+    <div class="card-tier ">Foundation + Higher</div>
+  </div>
+  <div class="card-title">Product Rule<br>for Counting.</div>
+  <div class="card-desc">If one task has m ways and another has n, together there are m × n ways.</div>
+  <div class="card-footer">
+    <span>Number · Sheet 13</span>
+    <span class="card-arrow">→</span>
+  </div>
+</a>
+  </div>
+
+  <div class="orn-big">· · · ·</div>
+
+  <section class="strand-header" style="opacity:0.5">
+    <div class="strand-roman">II — V</div>
+    <div class="strand-info">
+      <div class="strand-name">Algebra · Ratio · Geometry · Statistics</div>
+      <div class="strand-desc"><b>60 sheets</b> · Coming next · Same polish, same depth</div>
+    </div>
+    <div class="strand-count">Sheets 14 — 73</div>
+  </section>
+
+  <footer class="idx-footer">
+    <div class="ft-block">
+      <span class="ft-serif">All 73 sheets · MMXXVI spec · AQA · Edexcel · OCR</span><br>
+      Print the A4s · Screenshot the squares · <b>Free forever</b>
+    </div>
+    <div class="ft-block" style="text-align:right">
+      © <b>GCSEMATHSAI</b> · MMXXVI<br>
+      <a href="https://gcsemathsai.co.uk">gcsemathsai.co.uk</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

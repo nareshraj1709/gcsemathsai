@@ -16,23 +16,24 @@ export default function NewPostPage() {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
   const [authorName, setAuthorName] = useState('Student')
-  const [authChecked, setAuthChecked] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!session) {
-        router.replace('/auth')
-        return
-      }
+      setIsLoggedIn(!!session)
       const profile = getProfileFromCache()
       if (profile?.name) setAuthorName(profile.name)
-      setAuthChecked(true)
     })
-  }, [router])
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
+
+    if (!isLoggedIn) {
+      router.push(`/auth?next=${encodeURIComponent('/community/new')}`)
+      return
+    }
 
     if (title.trim().length < 5) {
       setError('Title must be at least 5 characters.')
@@ -77,14 +78,6 @@ export default function NewPostPage() {
     }
 
     router.push(`/community/post/${result.id}`)
-  }
-
-  if (!authChecked) {
-    return (
-      <main className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <p className="text-purple-700 font-semibold">Loading...</p>
-      </main>
-    )
   }
 
   return (

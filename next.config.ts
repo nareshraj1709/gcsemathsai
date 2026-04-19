@@ -3,6 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
+  rewrites: async () => [
+    { source: '/formulas', destination: '/formulas/index.html' },
+    { source: '/formulas/', destination: '/formulas/index.html' },
+    { source: '/formulas/:strand', destination: '/formulas/:strand/index.html' },
+  ],
   headers: async () => [
     {
       source: '/(.*)',
