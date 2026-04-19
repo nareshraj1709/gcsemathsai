@@ -69,6 +69,7 @@ export default function Nav() {
     { label: "Practice", path: "/learn" },
     { label: "My Study", path: "/dashboard" },
     { label: "Past Papers", path: "/papers" },
+    { label: "Formulas", path: "/formulas" },
     { label: "Community", path: "/community" },
   ]
 
@@ -77,6 +78,7 @@ export default function Nav() {
     { label: "Syllabus", path: "/topics" },
     { label: "Practice", path: "/learn" },
     { label: "Past Papers", path: "/papers" },
+    { label: "Formulas", path: "/formulas" },
     { label: "Pricing", path: "/pricing" },
   ]
 
