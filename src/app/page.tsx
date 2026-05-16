@@ -209,9 +209,9 @@ export default function Home() {
             {/* Small cards */}
             {[
               { num: '06', title: 'Formula Sheet', desc: 'Every formula you need. PDF or printed. Same format as the real exam.', cta: 'Download PDF', href: '/GCSE_Maths_Formula_Sheet.pdf', external: true, meta: ['FREE \u00B7 NO CARD', 'All boards'] },
-              { num: '07', title: 'Revision Planner', desc: 'Set your exam date. We schedule 15-minute sessions around your weak spots.', cta: 'See an example', href: '/features#revision-planner', external: false, meta: ['UPDATED \u00B7 DAILY', 'Personalised'] },
-              { num: '08', title: 'Writing Pad', desc: 'Tablet or phone. Write with a stylus or finger. AI recognises and marks it.', cta: 'Try it now', href: '/features#writing-pad', external: false, meta: ['IPAD \u00B7 PHONE', 'OCR-powered'] },
-              { num: '09', title: 'Parent Report', desc: 'Monday morning email to parents. Current predicted grade, hours studied, topics mastered.', cta: 'See a sample', href: '/features#parent-report', external: false, meta: ['OPT-IN \u00B7 WEEKLY', 'Optional'] },
+              { num: '07', title: 'Revision Planner', desc: 'Set your exam date. We schedule 15-minute sessions around your weak spots.', cta: 'See an example', href: '/features/revision-planner', external: false, meta: ['UPDATED \u00B7 DAILY', 'Personalised'] },
+              { num: '08', title: 'Writing Pad', desc: 'Tablet or phone. Write with a stylus or finger. AI recognises and marks it.', cta: 'Try it now', href: '/features/writing-pad', external: false, meta: ['IPAD \u00B7 PHONE', 'OCR-powered'] },
+              { num: '09', title: 'Parent Report', desc: 'Monday morning email to parents. Current predicted grade, hours studied, topics mastered.', cta: 'See a sample', href: '/features/parent-report', external: false, meta: ['OPT-IN \u00B7 WEEKLY', 'Optional'] },
             ].map(c => (
               <div key={c.num} style={{ gridColumn: 'span 3', background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
                 <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--gold)', fontWeight: 700, letterSpacing: '0.08em' }}>{c.num}</div>
