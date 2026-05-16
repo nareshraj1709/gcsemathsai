@@ -219,70 +219,46 @@ export default async function BlogPostPage({ params }: Props) {
     const quiz = getQuizProps(slug)
 
     return (
-      <main className="min-h-screen bg-white">
+      <main className="blog-article-page" style={{ minHeight: '100vh', background: 'var(--cream)' }}>
         <BlogJsonLd title={md.title} description={md.description} slug={slug} date={md.dateISO} author={md.author} />
 
         {/* Hero */}
-        <div className="bg-purple-50 border-b border-purple-100 px-6 py-12">
-          <div className="max-w-3xl mx-auto">
-            <Link href="/blog" className="text-xs text-purple-600 font-semibold hover:underline">← Back to blog</Link>
-            <div className="flex items-center gap-2 mt-4 mb-4">
-              <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${colours.badge}`}>{md.category}</span>
-              <span className="text-xs text-gray-400">{md.readMins} min read</span>
-            </div>
-            <h1 className="text-3xl font-bold text-gray-900 leading-tight mb-4" style={{ fontFamily: "'Georgia', serif" }}>
-              {md.title}
-            </h1>
-            <p className="text-gray-500 text-base leading-relaxed mb-6">{md.description}</p>
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-              <div className="w-7 h-7 rounded-full bg-purple-200 flex items-center justify-center text-purple-700 font-bold text-xs">G</div>
-              <span className="font-medium text-gray-600">{md.author}</span>
-              <span>·</span>
-              <span>{md.date}</span>
+        <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)' }}>
+          <div style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(28px, 4vw, 56px) clamp(20px, 4vw, 40px)' }}>
+            <Link href="/blog" style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-3)', textDecoration: 'none' }}>← Back to blog</Link>
+            <div style={{ maxWidth: 760, marginTop: 18 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16, flexWrap: 'wrap' }}>
+                <span className={colours.badge} style={{ fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 999, fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  {md.category}
+                </span>
+                <span style={{ fontSize: 11, color: 'var(--ink-3)', fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 700 }}>{md.readMins} min read</span>
+              </div>
+              <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 46px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.08, color: 'var(--ink)', margin: '0 0 16px' }}>
+                {md.title}
+              </h1>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(15px, 1.7vw, 18px)', color: 'var(--ink-2)', lineHeight: 1.55, marginBottom: 20, fontWeight: 500 }}>{md.description}</p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'var(--ink-3)' }}>
+                <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'var(--green)', color: 'var(--cream)', display: 'grid', placeItems: 'center', fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 13, fontStyle: 'italic' }}>G</div>
+                <span style={{ fontWeight: 600, color: 'var(--ink-2)' }}>{md.author}</span>
+                <span>·</span>
+                <span>{md.date}</span>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Body + TOC */}
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 flex flex-col lg:flex-row gap-6 lg:gap-10">
+        <div className="blog-article-body" style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(32px, 4vw, 56px) clamp(20px, 4vw, 40px)', display: 'grid', gridTemplateColumns: '1fr', gap: 40 }}>
+          <article className="blog-prose" style={{ minWidth: 0 }} dangerouslySetInnerHTML={{ __html: htmlContent }} />
 
-          {/* Article */}
-          <article className="flex-1 min-w-0">
-            <div
-              className="prose prose-gray prose-headings:font-bold prose-h2:text-xl prose-h3:text-base prose-a:text-purple-700 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-li:text-gray-700 max-w-none"
-              dangerouslySetInnerHTML={{ __html: htmlContent }}
-            />
-
-            {/* CTA */}
-            <div className="mt-10 bg-gradient-to-r from-purple-700 to-purple-500 rounded-2xl p-7 text-center">
-              <p className="text-white font-semibold mb-4 leading-relaxed">
-                Put this into practice — try AI-marked questions on this topic, completely free.
-              </p>
-              <Link href="/learn" className="inline-block bg-white text-purple-700 font-bold px-6 py-3 rounded-xl text-sm hover:bg-purple-50 transition">
-                Start practising free →
-              </Link>
-            </div>
-
-            {/* Quick Quiz */}
-            <QuickQuizGenerator
-              topic={quiz.topic}
-              topicSlug={quiz.practiceSlug}
-              topicLabel={quiz.label}
-            />
-          </article>
-
-          {/* Table of contents — sticky sidebar */}
+          {/* Sticky TOC at lg+ */}
           {toc.length > 0 && (
-            <aside className="hidden lg:block w-52 shrink-0">
-              <div className="sticky top-24">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">On this page</p>
-                <nav className="flex flex-col gap-2">
+            <aside className="blog-toc">
+              <div style={{ position: 'sticky', top: 96 }}>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 14 }}>On this page</p>
+                <nav style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {toc.map(item => (
-                    <a
-                      key={item.id}
-                      href={`#${item.id}`}
-                      className="text-sm text-gray-500 hover:text-purple-700 transition leading-snug"
-                    >
+                    <a key={item.id} href={`#${item.id}`} style={{ fontSize: 13, color: 'var(--ink-3)', textDecoration: 'none', lineHeight: 1.5 }}>
                       {item.text}
                     </a>
                   ))}
@@ -292,26 +268,43 @@ export default async function BlogPostPage({ params }: Props) {
           )}
         </div>
 
-        {/* Divider */}
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="border-t border-gray-100 my-4" />
+        {/* Layout responsive CSS */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          @media (min-width: 1024px) {
+            .blog-article-body { grid-template-columns: minmax(0, 1fr) 220px !important; gap: 48px !important; }
+          }
+          .blog-toc { order: 1; }
+          @media (min-width: 1024px) { .blog-toc { order: 0; } }
+        ` }} />
+
+        {/* CTA + Quick Quiz inside same column */}
+        <div style={{ maxWidth: 1120, margin: '0 auto', padding: '0 clamp(20px, 4vw, 40px)' }}>
+          <div className="blog-cta-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 0 }}>
+            <div style={{ maxWidth: 760, background: 'var(--green)', borderRadius: 16, padding: 'clamp(20px, 3vw, 32px)', textAlign: 'center', margin: '0 0 24px' }}>
+              <p style={{ color: 'var(--cream)', fontFamily: 'var(--serif)', fontSize: 'clamp(17px, 2.2vw, 22px)', fontWeight: 600, marginBottom: 14, letterSpacing: '-0.01em', lineHeight: 1.3 }}>
+                Put this into practice — try AI-marked questions on this topic, <em style={{ fontStyle: 'italic', color: 'var(--gold-soft)' }}>completely free</em>.
+              </p>
+              <Link href="/learn" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>Start practising free →</Link>
+            </div>
+            <div style={{ maxWidth: 760 }}>
+              <QuickQuizGenerator topic={quiz.topic} topicSlug={quiz.practiceSlug} topicLabel={quiz.label} />
+            </div>
+          </div>
         </div>
 
         {/* More articles */}
-        <section className="max-w-3xl mx-auto px-6 pb-16">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">More articles</p>
-          <div className="grid md:grid-cols-3 gap-4">
+        <section style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) clamp(20px, 4vw, 40px)' }}>
+          <p style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>More articles</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 14 }}>
             {[
               ...otherMd.map(p => ({ slug: p.slug, title: p.title, category: p.category, colour: COLOUR_MAP[p.categoryColour] ?? COLOUR_MAP.purple, readMins: p.readMins })),
               ...otherTs.map(p => ({ slug: p.slug, title: p.title, category: p.category, colour: COLOUR_MAP[p.categoryColour] ?? COLOUR_MAP.purple, readMins: p.readMins })),
             ].map(p => (
-              <Link key={p.slug} href={`/blog/${p.slug}`} className="group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md hover:border-purple-200 transition">
-                <div className={`h-0.5 w-full ${p.colour.bar}`} />
-                <div className="p-4">
-                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${p.colour.badge}`}>{p.category}</span>
-                  <p className="mt-2 text-sm font-bold text-gray-800 group-hover:text-purple-700 transition leading-snug line-clamp-2">{p.title}</p>
-                  <p className="mt-1 text-xs text-gray-400">{p.readMins} min read</p>
-                </div>
+              <Link key={p.slug} href={`/blog/${p.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: 8, background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: '18px 20px', textDecoration: 'none', overflow: 'hidden', position: 'relative' }}>
+                <div className={p.colour.bar} style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3 }} />
+                <span className={p.colour.badge} style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 700, padding: '3px 9px', borderRadius: 999, fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: 4 }}>{p.category}</span>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.25, letterSpacing: '-0.01em', margin: '4px 0 0' }}>{p.title}</p>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--ink-3)', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: 'auto', paddingTop: 12 }}>{p.readMins} min read · Read →</p>
               </Link>
             ))}
           </div>
@@ -329,56 +322,49 @@ export default async function BlogPostPage({ params }: Props) {
   const otherPosts = BLOG_POSTS.filter(p => p.slug !== ts.slug).slice(0, 3)
 
   return (
-    <main className="min-h-screen bg-white">
+    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <BlogJsonLd title={ts.title} description={ts.metaDescription} slug={slug} date={ts.date} author={ts.author} />
-      {/* Hero */}
-      <div className="bg-purple-50 border-b border-purple-100 px-6 py-12">
-        <div className="max-w-3xl mx-auto">
-          <Link href="/blog" className="text-xs text-purple-600 font-semibold hover:underline">← Back to blog</Link>
-          <div className="flex items-center gap-2 mt-4 mb-4">
-            <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${colours.badge}`}>{ts.category}</span>
-            <span className="text-xs text-gray-400">{ts.readMins} min read</span>
-          </div>
-          <h1 className="text-3xl font-bold text-gray-900 leading-tight mb-4" style={{ fontFamily: "'Georgia', serif" }}>{ts.title}</h1>
-          <p className="text-gray-500 text-base leading-relaxed mb-6">{ts.excerpt}</p>
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <div className="w-7 h-7 rounded-full bg-purple-200 flex items-center justify-center text-purple-700 font-bold text-xs">G</div>
-            <span className="font-medium text-gray-600">{ts.author}</span>
-            <span>·</span>
-            <span>{ts.date}</span>
+
+      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)' }}>
+        <div style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(28px, 4vw, 56px) clamp(20px, 4vw, 40px)' }}>
+          <Link href="/blog" style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-3)', textDecoration: 'none' }}>← Back to blog</Link>
+          <div style={{ maxWidth: 760, marginTop: 18 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16, flexWrap: 'wrap' }}>
+              <span className={colours.badge} style={{ fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 999, fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                {ts.category}
+              </span>
+              <span style={{ fontSize: 11, color: 'var(--ink-3)', fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 700 }}>{ts.readMins} min read</span>
+            </div>
+            <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 46px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.08, color: 'var(--ink)', margin: '0 0 16px' }}>{ts.title}</h1>
+            <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(15px, 1.7vw, 18px)', color: 'var(--ink-2)', lineHeight: 1.55, marginBottom: 20, fontWeight: 500 }}>{ts.excerpt}</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'var(--ink-3)' }}>
+              <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'var(--green)', color: 'var(--cream)', display: 'grid', placeItems: 'center', fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 13, fontStyle: 'italic' }}>G</div>
+              <span style={{ fontWeight: 600, color: 'var(--ink-2)' }}>{ts.author}</span>
+              <span>·</span>
+              <span>{ts.date}</span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Article body */}
-      <article className="max-w-3xl mx-auto px-6 py-10">
+      <article style={{ maxWidth: 760, margin: '0 auto', padding: 'clamp(32px, 4vw, 56px) clamp(20px, 4vw, 40px)' }}>
         {ts.blocks.map((block, i) => <RenderBlock key={i} block={block} />)}
-        <QuickQuizGenerator
-          topic={quiz.topic}
-          topicSlug={quiz.practiceSlug}
-          topicLabel={quiz.label}
-        />
+        <div style={{ marginTop: 32 }}>
+          <QuickQuizGenerator topic={quiz.topic} topicSlug={quiz.practiceSlug} topicLabel={quiz.label} />
+        </div>
       </article>
 
-      {/* Divider */}
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="border-t border-gray-100 my-8" />
-      </div>
-
-      {/* More articles */}
-      <section className="max-w-3xl mx-auto px-6 pb-16">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-5">More articles</p>
-        <div className="grid md:grid-cols-3 gap-4">
+      <section style={{ maxWidth: 1120, margin: '0 auto', padding: '0 clamp(20px, 4vw, 40px) clamp(40px, 6vw, 64px)' }}>
+        <p style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>More articles</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 14 }}>
           {otherPosts.map(p => {
             const c = COLOUR_MAP[p.categoryColour] ?? COLOUR_MAP.purple
             return (
-              <Link key={p.slug} href={`/blog/${p.slug}`} className="group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md hover:border-purple-200 transition">
-                <div className={`h-0.5 w-full ${c.bar}`} />
-                <div className="p-4">
-                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${c.badge}`}>{p.category}</span>
-                  <p className="mt-2 text-sm font-bold text-gray-800 group-hover:text-purple-700 transition leading-snug line-clamp-2">{p.title}</p>
-                  <p className="mt-1 text-xs text-gray-400">{p.readMins} min read</p>
-                </div>
+              <Link key={p.slug} href={`/blog/${p.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: 8, background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: '18px 20px', textDecoration: 'none', overflow: 'hidden', position: 'relative' }}>
+                <div className={c.bar} style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3 }} />
+                <span className={c.badge} style={{ alignSelf: 'flex-start', fontSize: 10, fontWeight: 700, padding: '3px 9px', borderRadius: 999, fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: 4 }}>{p.category}</span>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 600, color: 'var(--ink)', lineHeight: 1.25, letterSpacing: '-0.01em', margin: '4px 0 0' }}>{p.title}</p>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--ink-3)', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: 'auto', paddingTop: 12 }}>{p.readMins} min read · Read →</p>
               </Link>
             )
           })}
