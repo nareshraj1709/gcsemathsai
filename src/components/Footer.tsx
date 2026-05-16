@@ -27,21 +27,30 @@ export default function Footer() {
           </ul>
         </div>
         <div className="ft-col">
-          <h4>Product</h4>
+          <h4>Resources</h4>
           <ul>
-            <li><a onClick={() => go('/learn')}>Practice</a></li>
-            <li><a onClick={() => go('/dashboard')}>Dashboard</a></li>
-            <li><a onClick={() => go('/pricing')}>Pricing</a></li>
-            <li><a onClick={() => go('/community')}>Community</a></li>
             <li><a onClick={() => go('/blog')}>Blog</a></li>
+            <li><a onClick={() => go('/glossary')}>Glossary</a></li>
+            <li><a onClick={() => go('/question-types')}>Question Types</a></li>
+            <li><a onClick={() => go('/site-map')}>Site map</a></li>
+            <li><a onClick={() => go('/community')}>Community</a></li>
           </ul>
         </div>
         <div className="ft-col">
           <h4>Exam boards</h4>
           <ul>
-            <li><a onClick={() => go('/topics')}>AQA</a></li>
-            <li><a onClick={() => go('/topics')}>Edexcel</a></li>
-            <li><a onClick={() => go('/topics')}>OCR</a></li>
+            <li><a onClick={() => go('/aqa')}>AQA hub</a></li>
+            <li><a onClick={() => go('/edexcel')}>Edexcel hub</a></li>
+            <li><a onClick={() => go('/ocr')}>OCR hub</a></li>
+          </ul>
+        </div>
+        <div className="ft-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a onClick={() => go('/learn')}>Practice</a></li>
+            <li><a onClick={() => go('/dashboard')}>Dashboard</a></li>
+            <li><a onClick={() => go('/pricing')}>Pricing</a></li>
+            <li><a onClick={() => go('/features')}>Features</a></li>
           </ul>
         </div>
       </div>

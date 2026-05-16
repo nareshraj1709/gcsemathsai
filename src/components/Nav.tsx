@@ -63,23 +63,36 @@ export default function Nav() {
 
   const initial = (user?.email?.[0] ?? 'U').toUpperCase()
 
-  const loggedInLinks = [
+  const loggedInLinks: Array<{ label: string; path: string; isDropdown?: boolean }> = [
     { label: "Home", path: "/" },
     { label: "Syllabus", path: "/topics" },
     { label: "Practice", path: "/learn" },
     { label: "My Study", path: "/dashboard" },
     { label: "Past Papers", path: "/papers" },
     { label: "Formulas", path: "/formulas" },
+    { label: "Resources", path: "/blog", isDropdown: true },
     { label: "Community", path: "/community" },
   ]
 
-  const loggedOutLinks = [
+  const loggedOutLinks: Array<{ label: string; path: string; isDropdown?: boolean }> = [
     { label: "Home", path: "/" },
     { label: "Syllabus", path: "/topics" },
     { label: "Practice", path: "/learn" },
     { label: "Past Papers", path: "/papers" },
     { label: "Formulas", path: "/formulas" },
+    { label: "Resources", path: "/blog", isDropdown: true },
     { label: "Pricing", path: "/pricing" },
+  ]
+
+  const resourceLinks = [
+    { label: 'Blog', path: '/blog', desc: 'Revision guides and exam tips' },
+    { label: 'Glossary', path: '/glossary', desc: '60+ GCSE Maths terms defined' },
+    { label: 'Question Types', path: '/question-types', desc: 'How to answer every command word' },
+    { label: 'AQA Hub', path: '/aqa', desc: 'AQA 8300 — paper structure & boundaries' },
+    { label: 'Edexcel Hub', path: '/edexcel', desc: 'Edexcel 1MA1 — paper structure & boundaries' },
+    { label: 'OCR Hub', path: '/ocr', desc: 'OCR J560 — paper structure & boundaries' },
+    { label: 'Formula Sheet', path: '/formula-sheet', desc: 'Every formula as a free PDF' },
+    { label: 'Site Map', path: '/site-map', desc: 'Every page on the site' },
   ]
 
   const isActive = (path: string) => {
@@ -88,6 +101,7 @@ export default function Nav() {
   }
 
   const links = user ? loggedInLinks : loggedOutLinks
+  const [resourcesOpen, setResourcesOpen] = useState(false)
 
   return (
     <>
@@ -122,15 +136,57 @@ export default function Nav() {
           {/* Desktop menu */}
           {!isMobile && (
             <div className="menu">
-              {links.map(l => (
-                <button
-                  key={l.label}
-                  className={`menu-link${isActive(l.path) ? ' active' : ''}`}
-                  onClick={() => navigate(l.path)}
-                >
-                  {l.label}
-                </button>
-              ))}
+              {links.map(l => {
+                if (l.isDropdown) {
+                  const active = resourceLinks.some(r => pathname.startsWith(r.path))
+                  return (
+                    <div key={l.label} data-resources-menu style={{ position: 'relative' }}
+                      onMouseEnter={() => setResourcesOpen(true)}
+                      onMouseLeave={() => setResourcesOpen(false)}
+                    >
+                      <button
+                        className={`menu-link${active ? ' active' : ''}`}
+                        onClick={() => setResourcesOpen(v => !v)}
+                      >
+                        {l.label} <span style={{ fontSize: 10, marginLeft: 4 }}>▾</span>
+                      </button>
+                      {resourcesOpen && (
+                        <div style={{
+                          position: 'absolute', top: '100%', left: 0,
+                          background: 'var(--paper)', border: '1px solid var(--rule)',
+                          borderRadius: 12, minWidth: 280, padding: 8, marginTop: 4,
+                          boxShadow: '0 8px 32px rgba(14,31,23,0.12)', zIndex: 300,
+                        }}>
+                          {resourceLinks.map(r => (
+                            <button
+                              key={r.path}
+                              onClick={() => { setResourcesOpen(false); navigate(r.path) }}
+                              style={{
+                                width: '100%', textAlign: 'left', background: 'none', border: 'none',
+                                padding: '10px 12px', borderRadius: 8, cursor: 'pointer',
+                              }}
+                              onMouseEnter={e => (e.currentTarget.style.background = 'var(--green-soft)')}
+                              onMouseLeave={e => (e.currentTarget.style.background = 'none')}
+                            >
+                              <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)' }}>{r.label}</div>
+                              <div style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 2 }}>{r.desc}</div>
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )
+                }
+                return (
+                  <button
+                    key={l.label}
+                    className={`menu-link${isActive(l.path) ? ' active' : ''}`}
+                    onClick={() => navigate(l.path)}
+                  >
+                    {l.label}
+                  </button>
+                )
+              })}
             </div>
           )}
 
@@ -235,7 +291,7 @@ export default function Nav() {
       {isMobile && menuOpen && (
         <div className="mobile-menu-overlay" onClick={() => setMenuOpen(false)}>
           <div className="mobile-menu-panel" onClick={e => e.stopPropagation()}>
-            {links.map(l => (
+            {links.filter(l => !l.isDropdown).map(l => (
               <button
                 key={l.label}
                 className={`menu-item${isActive(l.path) ? ' active' : ''}`}
@@ -244,6 +300,18 @@ export default function Nav() {
                 {l.label}
               </button>
             ))}
+            <div style={{ height: 1, background: 'var(--rule)', margin: '8px 0' }} />
+            <div style={{ padding: '8px 14px 4px', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--ink-3)', textTransform: 'uppercase', fontFamily: 'var(--mono)' }}>Resources</div>
+            {resourceLinks.map(r => (
+              <button
+                key={r.path}
+                className={`menu-item${pathname.startsWith(r.path) ? ' active' : ''}`}
+                onClick={() => navigate(r.path)}
+              >
+                {r.label}
+              </button>
+            ))}
+            <div style={{ height: 1, background: 'var(--rule)', margin: '8px 0' }} />
 
             {user && (
               <>
