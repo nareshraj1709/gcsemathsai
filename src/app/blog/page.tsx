@@ -38,24 +38,49 @@ function PostCard({ post }: { post: CardPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex flex-col rounded-2xl overflow-hidden hover:shadow-md transition h-full"
+      className="group flex flex-col rounded-2xl overflow-hidden transition h-full hover:-translate-y-0.5 hover:shadow-lg"
       style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}
     >
       <div className={`h-1 w-full ${colours.bar}`} />
-      <div className="p-5 sm:p-6 flex flex-col flex-1">
-        <div className="flex items-center gap-2 mb-3 flex-wrap">
-          <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${colours.badge}`}>
+      <div className="p-6 flex flex-col flex-1">
+        <div className="flex items-center gap-2 mb-4 flex-wrap">
+          <span className={`text-[11px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider ${colours.badge}`} style={{ fontFamily: 'var(--mono)' }}>
             {post.category}
           </span>
-          <span className="text-xs" style={{ color: 'var(--ink-3)' }}>{post.readMins} min read</span>
+          <span className="text-[11px]" style={{ color: 'var(--ink-3)', fontFamily: 'var(--mono)' }}>{post.readMins} min read</span>
         </div>
-        <h2 className="font-bold leading-snug mb-2 text-base sm:text-lg" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>
+        <h2
+          className="font-semibold leading-snug mb-3"
+          style={{
+            color: 'var(--ink)',
+            fontFamily: 'var(--serif)',
+            fontSize: 'clamp(18px, 2.2vw, 22px)',
+            lineHeight: 1.2,
+            letterSpacing: '-0.01em',
+            display: '-webkit-box',
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}
+        >
           {post.title}
         </h2>
-        <p className="text-sm leading-relaxed line-clamp-3 mb-4" style={{ color: 'var(--ink-3)' }}>{post.excerpt}</p>
-        <div className="mt-auto flex items-center gap-2 text-xs flex-wrap" style={{ color: 'var(--ink-3)' }}>
+        <p
+          className="leading-relaxed mb-4"
+          style={{
+            color: 'var(--ink-3)',
+            fontSize: 14,
+            display: '-webkit-box',
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}
+        >
+          {post.excerpt}
+        </p>
+        <div className="mt-auto pt-4 flex items-center gap-2 text-[11px] flex-wrap" style={{ color: 'var(--ink-3)', fontFamily: 'var(--mono)', borderTop: '1px dashed var(--rule)' }}>
           <span>{post.author}</span>
-          <span>·</span>
+          <span style={{ opacity: 0.5 }}>·</span>
           <span>{post.date}</span>
         </div>
       </div>
@@ -76,51 +101,114 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
-      <section className="border-b text-center px-4 sm:px-6 py-10 sm:py-14" style={{ background: 'var(--green-soft)', borderColor: 'var(--rule)' }}>
-        <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ color: 'var(--green)', background: 'var(--paper)' }}>Blog</span>
-        <h1 className="mt-4 mb-3 text-3xl sm:text-4xl font-bold leading-tight max-w-2xl mx-auto" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>
-          Revision guides &amp; <em>updates</em>
+      {/* Hero — matches /topics, /glossary, /question-types style */}
+      <section
+        className="text-center"
+        style={{
+          background: 'var(--paper)',
+          borderBottom: '1px solid var(--rule)',
+          padding: 'clamp(40px, 6vw, 64px) 20px',
+        }}
+      >
+        <span
+          className="inline-block uppercase font-semibold"
+          style={{
+            fontFamily: 'var(--mono)',
+            fontSize: 11,
+            fontWeight: 700,
+            color: 'var(--green)',
+            background: 'var(--green-soft)',
+            padding: '4px 14px',
+            borderRadius: 999,
+            letterSpacing: '0.06em',
+            marginBottom: 16,
+          }}
+        >
+          Blog · {allPosts.length} articles
+        </span>
+        <h1
+          className="leading-tight max-w-3xl mx-auto"
+          style={{
+            color: 'var(--ink)',
+            fontFamily: 'var(--serif)',
+            fontSize: 'clamp(28px, 5vw, 44px)',
+            fontWeight: 600,
+            letterSpacing: '-0.02em',
+            margin: '0 0 12px',
+          }}
+        >
+          Revision guides &amp; <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>updates</em>
         </h1>
-        <p className="text-sm sm:text-base max-w-xl mx-auto leading-relaxed" style={{ color: 'var(--ink-3)' }}>
+        <p
+          className="max-w-xl mx-auto leading-relaxed"
+          style={{
+            color: 'var(--ink-3)',
+            fontSize: 'clamp(14px, 1.6vw, 16px)',
+            fontWeight: 500,
+          }}
+        >
           Practical tips, exam strategy and honest advice to help you get the grade you deserve.
         </p>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
-        <p className="text-xs font-semibold uppercase tracking-widest mb-5" style={{ color: 'var(--ink-3)' }}>
-          {allPosts.length} articles
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+      {/* Post grid */}
+      <section className="mx-auto" style={{ maxWidth: 1200, padding: 'clamp(32px, 5vw, 56px) 20px' }}>
+        <div
+          className="grid"
+          style={{
+            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+            gap: 'clamp(16px, 2vw, 24px)',
+          }}
+        >
           {allPosts.map(post => (
             <PostCard key={post.slug} post={post} />
           ))}
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-14">
-        <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--ink-3)' }}>Keep going</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      {/* Keep going */}
+      <section className="mx-auto" style={{ maxWidth: 1200, padding: '0 20px 56px' }}>
+        <p
+          className="uppercase font-semibold mb-4"
+          style={{ color: 'var(--ink-3)', fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.1em' }}
+        >
+          Keep going
+        </p>
+        <div
+          className="grid"
+          style={{
+            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+            gap: 16,
+          }}
+        >
           {[
-            { href: '/topics', title: 'All 73 GCSE Maths topics', body: 'Step-by-step guides with worked examples for every topic on the spec.', bg: 'var(--green-soft)', accent: 'var(--green)' },
-            { href: '/glossary', title: 'GCSE Maths glossary', body: '60+ key terms in plain English — command words, algebra, geometry, statistics.', bg: 'var(--gold-soft)', accent: 'var(--gold)' },
-            { href: '/question-types', title: 'Command-word guides', body: '"Show that", "Hence", "Estimate" — how to answer every type of question.', bg: 'var(--navy-soft)', accent: 'var(--navy)' },
-            { href: '/formula-sheet', title: 'GCSE Maths formula sheet', body: 'Every formula as a free printable PDF.', bg: 'var(--burgundy-soft)', accent: 'var(--burgundy)' },
+            { href: '/topics',         title: 'All 73 GCSE Maths topics', body: 'Step-by-step guides with worked examples for every topic on the spec.',  bg: 'var(--green-soft)',   accent: 'var(--green)' },
+            { href: '/glossary',       title: 'GCSE Maths glossary',      body: '60+ key terms in plain English — command words to vocab.',              bg: 'var(--gold-soft)',    accent: 'var(--gold)' },
+            { href: '/question-types', title: 'Command-word guides',      body: '"Show that", "Hence", "Estimate" — how to answer every type.',         bg: 'var(--navy-soft)',    accent: 'var(--navy)' },
+            { href: '/formula-sheet',  title: 'Formula sheet (PDF)',      body: 'Every formula you need as a free printable download.',                  bg: 'var(--burgundy-soft)',accent: 'var(--burgundy)' },
           ].map(c => (
-            <Link key={c.href} href={c.href}
-              className="block rounded-2xl px-5 py-5 hover:shadow-md transition"
-              style={{ background: c.bg, border: '1px solid var(--rule)' }}>
-              <p className="text-sm font-semibold mb-1" style={{ color: c.accent }}>{c.title}</p>
-              <p className="text-xs leading-relaxed" style={{ color: 'var(--ink-3)' }}>{c.body}</p>
+            <Link
+              key={c.href}
+              href={c.href}
+              className="block rounded-2xl transition hover:-translate-y-0.5 hover:shadow-md"
+              style={{ background: c.bg, border: '1px solid var(--rule)', padding: '20px 22px' }}
+            >
+              <p style={{ fontSize: 15, fontWeight: 700, color: c.accent, marginBottom: 6, fontFamily: 'var(--serif)' }}>{c.title}</p>
+              <p style={{ fontSize: 13, color: 'var(--ink-3)', lineHeight: 1.55 }}>{c.body}</p>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 pb-14">
-        <div className="rounded-2xl px-6 py-8 text-center" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
-          <p className="text-sm font-semibold mb-1" style={{ color: 'var(--green)' }}>More coming soon</p>
-          <p className="text-sm" style={{ color: 'var(--ink-3)' }}>
-            New guides published every week. Have a topic you&apos;d like us to cover?{' '}
+      {/* Coming soon */}
+      <section className="mx-auto" style={{ maxWidth: 720, padding: '0 20px 64px' }}>
+        <div
+          className="rounded-2xl text-center"
+          style={{ background: 'var(--paper)', border: '1px solid var(--rule)', padding: '28px 24px' }}
+        >
+          <p style={{ fontSize: 14, fontWeight: 700, color: 'var(--green)', marginBottom: 4, fontFamily: 'var(--mono)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>More coming soon</p>
+          <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6 }}>
+            New guides published every week. Got a topic you&apos;d like us to cover?{' '}
             <Link href="/contact" className="font-semibold hover:underline" style={{ color: 'var(--green)' }}>
               Let us know →
             </Link>
