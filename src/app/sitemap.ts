@@ -5,6 +5,7 @@ import { getAllMarkdownPosts } from '@/lib/markdown'
 import { getAllTopics } from '@/lib/topics-markdown'
 import { GLOSSARY } from '@/lib/glossary-data'
 import { QUESTION_TYPES } from '@/lib/question-types-data'
+import { getAllFormulaSheets } from '@/lib/formula-sheet-extractor'
 
 const BASE = 'https://www.gcsemathsai.co.uk'
 
@@ -74,6 +75,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }))
 
+  // Per-topic formula sheets (73 pages)
+  const formulaSheetPages: MetadataRoute.Sitemap = getAllFormulaSheets().map(s => ({
+    url: `${BASE}/formulas/${s.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
   // Dynamic study topic pages
   const studyPages: MetadataRoute.Sitemap = CONTENT.map(c => ({
     url: `${BASE}/study/${toSlug(c.topic, c.subtopic)}`,
@@ -106,5 +115,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }))
 
-  return [...staticPages, ...studyPages, ...topicPages, ...glossaryPages, ...questionTypePages, ...mdBlogPages, ...tsBlogPages]
+  return [...staticPages, ...studyPages, ...topicPages, ...formulaSheetPages, ...glossaryPages, ...questionTypePages, ...mdBlogPages, ...tsBlogPages]
 }
