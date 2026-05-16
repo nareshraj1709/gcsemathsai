@@ -51,26 +51,83 @@ function extractFormulas(md: string): Array<{ label?: string; expression: string
   const out: Array<{ label?: string; expression: string }> = []
   const seen = new Set<string>()
 
+  function push(expr: string, label?: string) {
+    const e = stripMd(expr)
+    if (e.length < 4 || e.length > 240) return
+    const key = e.toLowerCase()
+    if (seen.has(key)) return
+    seen.add(key)
+    out.push({ label, expression: e })
+  }
+
   // [FORMULA: ...] tagged blocks
   const formulaRe = /\[FORMULA:\s*([^\]]+?)\]/g
   let m: RegExpExecArray | null
-  while ((m = formulaRe.exec(md))) {
-    const expr = stripMd(m[1])
-    if (!seen.has(expr)) {
-      seen.add(expr)
-      out.push({ expression: expr })
-    }
-  }
+  while ((m = formulaRe.exec(md))) push(m[1])
 
   // $$ ... $$ blocks (display math)
   const dollarRe = /\$\$\s*([^$]+?)\s*\$\$/g
-  while ((m = dollarRe.exec(md))) {
-    const expr = stripMd(m[1])
-    if (!seen.has(expr) && expr.length < 220) {
-      seen.add(expr)
-      out.push({ expression: expr })
+  while ((m = dollarRe.exec(md))) push(m[1])
+
+  // Fallback for theorem/rule-heavy topics. Walk every section whose heading
+  // mentions a formula/rule/conversion/property concept and pull entries.
+  if (out.length < 6) {
+    const sectionRe = /^##\s+(?:[^\n]*?(?:Theorem|Theorems|Rule|Rules|Formula|Formulas|Law|Laws|Identity|Identities|Conversion|Conversions|Vocabulary|Key Facts|Key Definitions|Definitions|Properties|Property|Key Concepts|Notation|What (?:Is|Are)|How To|How (?:Do|to)|Steps|Method|Step\u2011by\u2011Step|Step by step|Important|Crucial|Essential)[^\n]*)\n/gim
+    let sm: RegExpExecArray | null
+    while ((sm = sectionRe.exec(md))) {
+      const start = sm.index + sm[0].length
+      const rest = md.slice(start)
+      const cutoff = rest.search(/\n##\s/)
+      const block = cutoff === -1 ? rest : rest.slice(0, cutoff)
+
+      // (a) "- **Title.** body."  /  "1. **Title.** body."
+      const itemRe = /^[\s]*(?:[-*]|\d+\.)\s+\*\*([^*\n]+?)\*\*\s*[—–:.\-]?\s*(.+)$/gm
+      let im: RegExpExecArray | null
+      while ((im = itemRe.exec(block))) {
+        const label = stripMd(im[1])
+        const body = stripMd(im[2])
+        if (label && body && label.length <= 60) push(`${label} — ${body}`)
+        if (out.length >= 10) break
+      }
+
+      // (b) plain bullet items that contain an equals sign, arrow or "=" idea (e.g. "1 km = 1000 m")
+      const equationLineRe = /^[\s]*(?:[-*]|\d+\.)\s+([^\n*][^\n]{2,120})$/gm
+      let em: RegExpExecArray | null
+      while ((em = equationLineRe.exec(block))) {
+        const text = stripMd(em[1])
+        if (/[=→↦]|approximately|equal/i.test(text) && text.length > 4 && text.length < 130) {
+          push(text)
+        }
+        if (out.length >= 12) break
+      }
+
+      // (c) lines like "**Length:** ..." or "**Formula:** ..."
+      const inlineRe = /^\s*\*\*([^*\n]+?)\*\*[:.\s]+([^\n]+)$/gm
+      let inm: RegExpExecArray | null
+      while ((inm = inlineRe.exec(block))) {
+        const label = stripMd(inm[1])
+        const body = stripMd(inm[2])
+        if (label && body && label.length < 40 && body.length > 4 && body.length < 200) {
+          push(`${label}: ${body}`)
+          if (out.length >= 12) break
+        }
+      }
+      if (out.length >= 10) break
     }
   }
+
+  // Inline display-style equations on their own line, e.g. "y = mx + c" or
+  // "Mean = sum ÷ n"
+  if (out.length < 4) {
+    const lineRe = /^([A-Za-z][A-Za-z0-9_ ()²³^\-+×·\/]{1,40}\s*=\s*[^\n]{2,100})$/gm
+    let lm: RegExpExecArray | null
+    while ((lm = lineRe.exec(md))) {
+      const expr = stripMd(lm[1])
+      if (expr.includes('=') && expr.length < 130) push(expr)
+      if (out.length >= 10) break
+    }
+  }
+
   return out.slice(0, 12)
 }
 
