@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   },
 }
 
+const monoLabel = { fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const }
+
 const MARKS = [
   { line: '2(x + 3) = 14', verdict: 'M1', note: 'Method correct — about to expand' },
   { line: '2x + 6 = 14', verdict: 'A1', note: 'Accurate expansion' },
@@ -19,148 +21,112 @@ const MARKS = [
   { line: 'x = 4', verdict: 'A1', note: 'Final answer correct' },
 ]
 
+const WHY = [
+  { num: 'I.', title: "You sit the real exam with a pen", desc: 'Practising with a keyboard trains the wrong muscle memory. The Writing Pad rehearses the real motion.' },
+  { num: 'II.', title: 'Diagrams and equations together', desc: 'Geometry, vectors, probability trees — write the equation and sketch the diagram in the same place.' },
+  { num: 'III.', title: 'Method marks are visible', desc: 'Examiners need to see your working to award method marks. Typed answers hide the reasoning. The pad shows it line by line.' },
+]
+
 export default function WritingPadPage() {
   return (
-    <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
-      {/* Hero */}
-      <section className="border-b" style={{ borderColor: 'var(--rule)' }}>
-        <div className="max-w-4xl mx-auto px-6 py-16 text-center">
-          <Link href="/features" className="text-xs font-mono uppercase tracking-wider" style={{ color: 'var(--ink-3)' }}>
-            ← Back to features
-          </Link>
-          <div className="text-5xl mt-6 mb-4">✍️</div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ color: 'var(--green)', background: 'var(--green-soft)' }}>
-            Feature · Writing Pad
-          </span>
-          <h1 className="text-4xl font-bold mt-5 mb-4 max-w-2xl mx-auto leading-tight" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>
-            Write the way you&rsquo;ll <em>write the exam</em>.
-          </h1>
-          <p className="text-base max-w-xl mx-auto leading-relaxed" style={{ color: 'var(--ink-3)' }}>
-            Most online maths tools force you to type. GCSEMathsAI lets you write your working with a stylus or finger — and the AI marks it line by line, like a real examiner.
-          </p>
-          <div className="flex gap-3 justify-center flex-wrap mt-8">
-            <Link href="/practice" className="text-white px-7 py-3 rounded-xl font-semibold text-sm shadow-md" style={{ background: 'var(--green)' }}>
-              Open a question and write →
-            </Link>
-            <Link href="/features" className="px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'var(--paper)', color: 'var(--ink-2)', border: '1px solid var(--rule)' }}>
-              All features
-            </Link>
-          </div>
+    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
+        <Link href="/features" style={{ ...monoLabel, color: 'var(--ink-3)', textDecoration: 'none' }}>← Back to features</Link>
+        <span style={{ ...monoLabel, color: 'var(--navy)', background: 'var(--navy-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginTop: 20, marginBottom: 16 }}>
+          Feature · Writing Pad
+        </span>
+        <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 760 }}>
+          Write the way you&rsquo;ll <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>write the exam</em>.
+        </h1>
+        <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 620, margin: '0 auto 22px' }}>
+          Most online maths tools force you to type. GCSEMathsAI lets you write your working with a stylus or finger — and the AI marks it line by line, like a real examiner.
+        </p>
+        <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/practice" className="btn btn-primary">Open a question and write →</Link>
+          <Link href="/features" className="btn btn-outline">All features</Link>
         </div>
       </section>
 
-      {/* Mock pad + marks */}
-      <section className="max-w-4xl mx-auto px-6 py-14">
-        <div className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color: 'var(--gold)' }}>
-          Example · A solved equation
-        </div>
-        <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: 'var(--serif)', color: 'var(--ink)' }}>
-          Your working on the left, <em>the examiner&rsquo;s marks on the right</em>.
+      <section style={{ maxWidth: 1000, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px' }}>
+        <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 8 }}>Example · A solved equation</p>
+        <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 24px', letterSpacing: '-0.01em' }}>
+          Your working on the left, <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>the examiner&rsquo;s marks on the right</em>.
         </h2>
-
-        <div className="grid md:grid-cols-2 gap-5">
-          {/* Mock writing pad */}
-          <div
-            className="rounded-xl p-6 relative"
-            style={{
-              background: 'var(--paper)',
-              border: '1px solid var(--rule)',
-              backgroundImage: 'repeating-linear-gradient(transparent, transparent 39px, var(--rule) 40px)',
-              minHeight: 320,
-            }}
-          >
-            <div className="text-xs font-mono uppercase tracking-wider absolute top-3 right-4" style={{ color: 'var(--ink-3)' }}>
-              Q · solve 2(x+3) = 14
-            </div>
-            <div className="font-serif italic text-lg leading-[40px] pt-10" style={{ color: 'var(--ink)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+          <div style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24, position: 'relative', backgroundImage: 'repeating-linear-gradient(transparent, transparent 36px, var(--rule) 37px)', minHeight: 280 }}>
+            <p style={{ ...monoLabel, color: 'var(--ink-3)', position: 'absolute', top: 14, right: 16, fontSize: 10 }}>Q · solve 2(x+3) = 14</p>
+            <div style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 18, lineHeight: '37px', paddingTop: 38, color: 'var(--ink)' }}>
               <div>2(x + 3) = 14</div>
               <div>2x + 6 = 14</div>
               <div>2x = 8</div>
               <div>x = 4</div>
             </div>
           </div>
-
-          {/* Examiner marks */}
-          <div className="rounded-xl p-6" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
-            <div className="text-xs font-mono uppercase tracking-wider mb-4" style={{ color: 'var(--green)' }}>
-              AI examiner · live marking
-            </div>
-            <ul className="space-y-3">
+          <div style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24 }}>
+            <p style={{ ...monoLabel, color: 'var(--green)', marginBottom: 16 }}>AI examiner · live marking</p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
               {MARKS.map((m, i) => (
-                <li key={i} className="flex items-start gap-3 pb-3" style={{ borderBottom: i === MARKS.length - 1 ? 'none' : '1px solid var(--rule)' }}>
-                  <span
-                    className="shrink-0 text-xs font-mono font-bold px-2 py-1 rounded"
-                    style={{ background: 'var(--green-soft)', color: 'var(--green)' }}
-                  >
+                <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', paddingBottom: i === MARKS.length - 1 ? 0 : 12, borderBottom: i === MARKS.length - 1 ? 'none' : '1px solid var(--rule)' }}>
+                  <span style={{ ...monoLabel, color: 'var(--green)', background: 'var(--green-soft)', padding: '4px 8px', borderRadius: 6, fontSize: 11, flexShrink: 0 }}>
                     {m.verdict}
                   </span>
                   <div>
-                    <div className="font-serif text-sm" style={{ color: 'var(--ink)' }}>{m.line}</div>
-                    <div className="text-xs mt-0.5" style={{ color: 'var(--ink-3)' }}>{m.note}</div>
+                    <p style={{ fontFamily: 'var(--serif)', fontSize: 14, color: 'var(--ink)', margin: 0, letterSpacing: '-0.01em' }}>{m.line}</p>
+                    <p style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 2 }}>{m.note}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <div className="mt-4 pt-4 flex items-center justify-between text-xs font-mono uppercase tracking-wider" style={{ borderTop: '1px solid var(--rule)', color: 'var(--ink-3)' }}>
-              <span>Total · 4 / 4 marks</span>
-              <span style={{ color: 'var(--green)' }}>Full marks ✓</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 16, paddingTop: 14, borderTop: '1px solid var(--rule)' }}>
+              <span style={{ ...monoLabel, color: 'var(--ink-3)' }}>Total · 4 / 4 marks</span>
+              <span style={{ ...monoLabel, color: 'var(--green)' }}>Full marks ✓</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why */}
       <section style={{ background: 'var(--paper)', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
-        <div className="max-w-4xl mx-auto px-6 py-14">
-          <h2 className="text-2xl font-bold mb-8" style={{ fontFamily: 'var(--serif)', color: 'var(--ink)' }}>
-            Why hand-writing matters
+        <div style={{ maxWidth: 1000, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px' }}>
+          <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 8 }}>Why hand-writing matters</p>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 24px', letterSpacing: '-0.01em' }}>
+            Three reasons this <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>changes the practice</em>
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { num: 'I.', title: 'You sit the real exam with a pen', desc: 'Practising with a keyboard trains the wrong muscle memory. The Writing Pad rehearses the real motion.' },
-              { num: 'II.', title: 'Diagrams and equations together', desc: 'Geometry, vectors, probability trees — write the equation and sketch the diagram in the same place.' },
-              { num: 'III.', title: 'Method marks are visible', desc: 'Examiners need to see your working to award method marks. Typed answers hide the reasoning. The pad shows it line by line.' },
-            ].map(s => (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+            {WHY.map(s => (
               <div key={s.num}>
-                <div className="text-3xl font-serif italic mb-2" style={{ color: 'var(--green)' }}>{s.num}</div>
-                <h3 className="text-base font-bold mb-2" style={{ color: 'var(--ink)' }}>{s.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-3)' }}>{s.desc}</p>
+                <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 32, fontWeight: 500, color: 'var(--green)', margin: '0 0 8px', lineHeight: 1 }}>{s.num}</p>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 17, fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px', letterSpacing: '-0.01em' }}>{s.title}</p>
+                <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6 }}>{s.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Devices */}
-      <section className="max-w-4xl mx-auto px-6 py-14">
-        <div className="rounded-2xl p-8 text-center" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
-          <div className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color: 'var(--gold)' }}>
-            Works on
+      <section style={{ maxWidth: 1000, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px' }}>
+        <div style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: 28, textAlign: 'center' }}>
+          <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 12 }}>Works on</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 28, fontSize: 14, fontWeight: 600, flexWrap: 'wrap', color: 'var(--ink-2)' }}>
+            <span>iPhone</span>
+            <span>Android phone</span>
+            <span>iPad + Apple Pencil</span>
+            <span>Android tablet + stylus</span>
+            <span>Chromebook</span>
           </div>
-          <div className="flex justify-center gap-8 text-sm font-semibold flex-wrap" style={{ color: 'var(--ink-2)' }}>
-            <span>📱 iPhone</span>
-            <span>📱 Android phone</span>
-            <span>📱 iPad + Apple Pencil</span>
-            <span>📱 Android tablet + stylus</span>
-            <span>💻 Chromebook</span>
-          </div>
-          <p className="text-xs mt-4" style={{ color: 'var(--ink-3)' }}>
+          <p style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 16 }}>
             On-device handwriting recognition — works offline on iPad and modern iPhones.
           </p>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="max-w-3xl mx-auto px-6 py-14 text-center">
-        <h2 className="text-3xl font-bold mb-3" style={{ fontFamily: 'var(--serif)', color: 'var(--ink)' }}>
-          Pick up your stylus.
+      <section style={{ maxWidth: 720, margin: '0 auto', padding: 'clamp(20px, 4vw, 40px) 20px clamp(40px, 6vw, 64px)', textAlign: 'center' }}>
+        <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 12px', letterSpacing: '-0.01em' }}>
+          Pick up your <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>stylus</em>.
         </h2>
-        <p className="mb-7 max-w-lg mx-auto text-sm" style={{ color: 'var(--ink-3)' }}>
+        <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6, maxWidth: 520, margin: '0 auto 22px' }}>
           The Writing Pad is included on every account, free. Open any topic and choose &ldquo;Write&rdquo; mode.
         </p>
-        <Link href="/practice" className="inline-block text-white font-semibold px-8 py-3 rounded-xl text-sm shadow-md" style={{ background: 'var(--green)' }}>
-          Try the Writing Pad →
-        </Link>
+        <Link href="/practice" className="btn btn-primary">Try the Writing Pad →</Link>
       </section>
     </main>
   )

@@ -14,6 +14,37 @@ export const metadata: Metadata = {
 }
 
 const BASE = 'https://www.gcsemathsai.co.uk'
+const monoLabel = { fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const }
+
+const PAPERS = [
+  { paper: 'Paper 1', calc: 'Non-calculator', marks: 80, time: '1 hr 30 min' },
+  { paper: 'Paper 2', calc: 'Calculator', marks: 80, time: '1 hr 30 min' },
+  { paper: 'Paper 3', calc: 'Calculator', marks: 80, time: '1 hr 30 min' },
+]
+
+const HIGHER_GB = [
+  ['9', '195–210'], ['8', '170–185'], ['7', '142–162'],
+  ['6', '115–138'], ['5', '90–115'], ['4', '60–90'],
+]
+const FOUNDATION_GB = [
+  ['5', '145–168'], ['4', '105–130'], ['3', '75–95'], ['2', '50–70'],
+]
+
+const STYLE_NOTES = [
+  { title: 'Heavy real-world context', body: 'AQA frames many questions around everyday situations — pricing, measurements, surveys. The maths is the same as on other boards, but the phrasing is less abstract. Practising context-heavy questions pays off.' },
+  { title: 'Progressive build per paper', body: 'Each AQA paper opens with 1–2 mark accessible questions and builds to 5–6 mark multi-step problems. The hardest questions are clustered at the back of each paper.' },
+  { title: 'Generous method marks', body: 'AQA mark schemes credit correct method even when arithmetic slips. Always show your working — a correct method with a wrong final answer usually earns most of the available marks.' },
+  { title: 'Non-calculator test of number sense', body: 'Paper 1 has no calculator. Mental arithmetic, fractions and standard form are foundational. Many students underperform on Paper 1 because they only revise with a calculator.' },
+]
+
+const USEFUL_LINKS = [
+  { label: 'AQA GCSE Maths Complete Topic Checklist', href: '/blog/aqa-gcse-maths-complete-topic-checklist' },
+  { label: 'GCSE Maths 2026 Grade Boundaries Forecast', href: '/blog/gcse-maths-2026-grade-boundaries-forecast' },
+  { label: '7-Day GCSE Maths Revision Plan', href: '/blog/7-day-gcse-maths-revision-plan' },
+  { label: 'Foundation vs Higher — Which Tier?', href: '/blog/gcse-maths-foundation-vs-higher-which-tier' },
+  { label: 'GCSE Maths Formulas You Must Know', href: '/blog/gcse-maths-formulas-you-must-know' },
+  { label: 'All 73 GCSE Maths Topics', href: '/topics' },
+]
 
 export default function AQAHubPage() {
   const breadcrumb = {
@@ -26,122 +57,101 @@ export default function AQAHubPage() {
   }
 
   return (
-    <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
+    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       {/* Hero */}
-      <section className="border-b" style={{ borderColor: 'var(--rule)' }}>
-        <div className="max-w-4xl mx-auto px-6 py-14 text-center">
-          <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ color: 'var(--green)', background: 'var(--green-soft)' }}>
-            Exam Board · AQA
-          </span>
-          <h1 className="text-4xl font-bold mt-5 mb-3 max-w-2xl mx-auto leading-tight" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>
-            AQA GCSE Maths <em>(8300)</em>
-          </h1>
-          <p className="text-base max-w-xl mx-auto leading-relaxed" style={{ color: 'var(--ink-3)' }}>
-            The largest GCSE Maths exam board, with over 1.5 million candidates each year. Everything you need to revise to the AQA specification — paper structure, grade boundaries, style of questions and the topics that come up every year.
-          </p>
-        </div>
+      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
+        <span style={{ ...monoLabel, color: 'var(--green)', background: 'var(--green-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 16 }}>
+          Exam Board · AQA
+        </span>
+        <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 760 }}>
+          AQA GCSE Maths <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>(8300)</em>
+        </h1>
+        <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 620, margin: '0 auto' }}>
+          The largest GCSE Maths exam board, with over 1.5 million candidates each year. Everything you need to revise to the AQA specification — paper structure, grade boundaries, style of questions and the topics that come up every year.
+        </p>
       </section>
 
       {/* Paper structure */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <div className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color: 'var(--gold)' }}>Paper structure</div>
-        <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>Three papers, 240 marks total</h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          {[
-            { paper: 'Paper 1', calc: 'Non-calculator', marks: 80, time: '1 hr 30 min' },
-            { paper: 'Paper 2', calc: 'Calculator', marks: 80, time: '1 hr 30 min' },
-            { paper: 'Paper 3', calc: 'Calculator', marks: 80, time: '1 hr 30 min' },
-          ].map(p => (
-            <div key={p.paper} className="rounded-xl p-5" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
-              <div className="text-base font-bold mb-2" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>{p.paper}</div>
-              <div className="text-xs font-mono uppercase tracking-wider" style={{ color: 'var(--green)' }}>{p.calc}</div>
-              <div className="mt-3 text-sm" style={{ color: 'var(--ink-2)' }}>{p.marks} marks · {p.time}</div>
+      <section style={{ maxWidth: 1100, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px 0' }}>
+        <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 8 }}>Paper structure</p>
+        <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 24px', letterSpacing: '-0.01em' }}>
+          Three papers, 240 marks total
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 14 }}>
+          {PAPERS.map(p => (
+            <div key={p.paper} style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: 22 }}>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: '0 0 6px' }}>{p.paper}</p>
+              <p style={{ ...monoLabel, color: 'var(--green)', margin: 0 }}>{p.calc}</p>
+              <p style={{ fontSize: 14, color: 'var(--ink-2)', marginTop: 12 }}>{p.marks} marks · {p.time}</p>
             </div>
           ))}
         </div>
-        <p className="text-sm mt-5" style={{ color: 'var(--ink-3)' }}>
+        <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.65, marginTop: 16 }}>
           All three papers are taken in May/June or in the November resit window. Foundation tier (grades 1–5) and Higher tier (grades 4–9) sit different question sets.
         </p>
       </section>
 
       {/* Grade boundaries */}
-      <section style={{ background: 'var(--paper)', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
-        <div className="max-w-4xl mx-auto px-6 py-12">
-          <div className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color: 'var(--gold)' }}>Recent grade boundaries</div>
-          <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>What each grade has typically taken</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="rounded-xl p-5" style={{ background: 'var(--cream)', border: '1px solid var(--rule)' }}>
-              <div className="text-sm font-bold mb-3" style={{ color: 'var(--ink)' }}>Higher tier — typical mark out of 240</div>
-              <table className="w-full text-sm">
-                <thead><tr style={{ color: 'var(--ink-3)' }}><th className="text-left">Grade</th><th className="text-right">Marks</th></tr></thead>
+      <section style={{ background: 'var(--paper)', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)', marginTop: 56 }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px' }}>
+          <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 8 }}>Recent grade boundaries</p>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 24px', letterSpacing: '-0.01em' }}>
+            What each grade has <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>typically taken</em>
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+            <div style={{ background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 22 }}>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: '0 0 14px' }}>Higher tier · out of 240</p>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+                <thead><tr style={{ color: 'var(--ink-3)' }}><th style={{ textAlign: 'left', paddingBottom: 8 }}>Grade</th><th style={{ textAlign: 'right', paddingBottom: 8 }}>Marks</th></tr></thead>
                 <tbody style={{ color: 'var(--ink-2)' }}>
-                  <tr><td>9</td><td className="text-right">195–210</td></tr>
-                  <tr><td>8</td><td className="text-right">170–185</td></tr>
-                  <tr><td>7</td><td className="text-right">142–162</td></tr>
-                  <tr><td>6</td><td className="text-right">115–138</td></tr>
-                  <tr><td>5</td><td className="text-right">90–115</td></tr>
-                  <tr><td>4</td><td className="text-right">60–90</td></tr>
+                  {HIGHER_GB.map(([g, m]) => <tr key={g}><td style={{ padding: '4px 0' }}>{g}</td><td style={{ textAlign: 'right' }}>{m}</td></tr>)}
                 </tbody>
               </table>
             </div>
-            <div className="rounded-xl p-5" style={{ background: 'var(--cream)', border: '1px solid var(--rule)' }}>
-              <div className="text-sm font-bold mb-3" style={{ color: 'var(--ink)' }}>Foundation tier — typical mark out of 240</div>
-              <table className="w-full text-sm">
-                <thead><tr style={{ color: 'var(--ink-3)' }}><th className="text-left">Grade</th><th className="text-right">Marks</th></tr></thead>
+            <div style={{ background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 22 }}>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: '0 0 14px' }}>Foundation tier · out of 240</p>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+                <thead><tr style={{ color: 'var(--ink-3)' }}><th style={{ textAlign: 'left', paddingBottom: 8 }}>Grade</th><th style={{ textAlign: 'right', paddingBottom: 8 }}>Marks</th></tr></thead>
                 <tbody style={{ color: 'var(--ink-2)' }}>
-                  <tr><td>5</td><td className="text-right">145–168</td></tr>
-                  <tr><td>4</td><td className="text-right">105–130</td></tr>
-                  <tr><td>3</td><td className="text-right">75–95</td></tr>
-                  <tr><td>2</td><td className="text-right">50–70</td></tr>
+                  {FOUNDATION_GB.map(([g, m]) => <tr key={g}><td style={{ padding: '4px 0' }}>{g}</td><td style={{ textAlign: 'right' }}>{m}</td></tr>)}
                 </tbody>
               </table>
             </div>
           </div>
-          <p className="text-xs mt-4" style={{ color: 'var(--ink-3)' }}>
-            Ranges from recent published boundaries. Actual 2026 boundaries are released on results day (21 August 2026). See our <Link href="/blog/gcse-maths-2026-grade-boundaries-forecast" className="underline" style={{ color: 'var(--green)' }}>2026 boundaries forecast</Link>.
+          <p style={{ fontSize: 12.5, color: 'var(--ink-3)', lineHeight: 1.6, marginTop: 16 }}>
+            Ranges from recent published boundaries. Actual 2026 boundaries are released on results day (21 August 2026). See our{' '}
+            <Link href="/blog/gcse-maths-2026-grade-boundaries-forecast" style={{ color: 'var(--green)', textDecoration: 'underline' }}>2026 boundaries forecast</Link>.
           </p>
         </div>
       </section>
 
-      {/* AQA-specific question style */}
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <div className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color: 'var(--gold)' }}>AQA style</div>
-        <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>What makes AQA papers <em>distinctive</em></h2>
-        <div className="grid gap-4">
-          {[
-            { title: 'Heavy real-world context', body: 'AQA frames many questions around everyday situations — pricing, measurements, surveys. The maths is the same as on other boards, but the phrasing is less abstract. Practising context-heavy questions pays off.' },
-            { title: 'Progressive build per paper', body: 'Each AQA paper opens with 1–2 mark accessible questions and builds to 5–6 mark multi-step problems. The hardest questions are clustered at the back of each paper.' },
-            { title: 'Generous method marks', body: 'AQA mark schemes credit correct method even when arithmetic slips. Always show your working — a correct method with a wrong final answer usually earns most of the available marks.' },
-            { title: 'Non-calculator test of number sense', body: 'Paper 1 has no calculator. Mental arithmetic, fractions and standard form are foundational. Many students underperform on Paper 1 because they only revise with a calculator.' },
-          ].map(s => (
-            <div key={s.title} className="rounded-xl p-5" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
-              <div className="text-base font-bold mb-1" style={{ color: 'var(--ink)' }}>{s.title}</div>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--ink-3)' }}>{s.body}</p>
+      {/* Style notes */}
+      <section style={{ maxWidth: 1000, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px 0' }}>
+        <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 8 }}>AQA style</p>
+        <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 24px', letterSpacing: '-0.01em' }}>
+          What makes AQA papers <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>distinctive</em>
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 14 }}>
+          {STYLE_NOTES.map(s => (
+            <div key={s.title} style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: 22 }}>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 17, fontWeight: 700, color: 'var(--ink)', margin: '0 0 8px', letterSpacing: '-0.01em' }}>{s.title}</p>
+              <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6 }}>{s.body}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Useful links */}
-      <section style={{ background: 'var(--paper)', borderTop: '1px solid var(--rule)' }}>
-        <div className="max-w-4xl mx-auto px-6 py-12">
-          <div className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color: 'var(--gold)' }}>Useful guides for AQA students</div>
-          <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>Start here</h2>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              { label: 'AQA GCSE Maths Complete Topic Checklist', href: '/blog/aqa-gcse-maths-complete-topic-checklist' },
-              { label: 'GCSE Maths 2026 Grade Boundaries Forecast', href: '/blog/gcse-maths-2026-grade-boundaries-forecast' },
-              { label: '7-Day GCSE Maths Revision Plan', href: '/blog/7-day-gcse-maths-revision-plan' },
-              { label: 'Foundation vs Higher — Which Tier?', href: '/blog/gcse-maths-foundation-vs-higher-which-tier' },
-              { label: 'GCSE Maths Formulas You Must Know', href: '/blog/gcse-maths-formulas-you-must-know' },
-              { label: 'All 73 GCSE Maths Topics', href: '/topics' },
-            ].map(l => (
+      <section style={{ background: 'var(--paper)', borderTop: '1px solid var(--rule)', marginTop: 56 }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px' }}>
+          <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 8 }}>Useful guides for AQA students</p>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 24px', letterSpacing: '-0.01em' }}>Start here</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
+            {USEFUL_LINKS.map(l => (
               <Link key={l.href} href={l.href}
-                className="rounded-xl p-4 text-sm font-semibold"
-                style={{ background: 'var(--cream)', color: 'var(--ink-2)', border: '1px solid var(--rule)' }}>
+                style={{ background: 'var(--cream)', color: 'var(--ink-2)', border: '1px solid var(--rule)', borderRadius: 12, padding: '16px 18px', textDecoration: 'none', fontSize: 14, fontWeight: 600, fontFamily: 'var(--serif)', letterSpacing: '-0.01em' }}>
                 {l.label} →
               </Link>
             ))}
@@ -149,14 +159,14 @@ export default function AQAHubPage() {
         </div>
       </section>
 
-      <section className="px-6 py-12 text-center" style={{ background: 'var(--green)' }}>
-        <h2 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: 'var(--serif)' }}>Practise calibrated to AQA mark schemes.</h2>
-        <p className="mb-6 max-w-md mx-auto text-sm" style={{ color: 'var(--green-soft)' }}>
+      <section style={{ background: 'var(--green)', padding: 'clamp(40px, 6vw, 56px) 20px', textAlign: 'center' }}>
+        <h2 style={{ color: 'var(--cream)', fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 600, margin: '0 0 12px', letterSpacing: '-0.01em' }}>
+          Practise calibrated to <em style={{ color: 'var(--gold-soft)', fontStyle: 'italic' }}>AQA mark schemes</em>.
+        </h2>
+        <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
           AI marking that awards method, accuracy and follow-through — the way AQA examiners do.
         </p>
-        <Link href="/auth" className="inline-block font-semibold px-7 py-3 rounded-xl text-sm" style={{ background: 'var(--paper)', color: 'var(--green)' }}>
-          Start free →
-        </Link>
+        <Link href="/auth" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>Start free →</Link>
       </section>
     </main>
   )

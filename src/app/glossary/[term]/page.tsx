@@ -26,65 +26,58 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+const monoLabel = { fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--ink-3)' }
+
 export default async function GlossaryTermPage({ params }: Props) {
   const { term } = await params
   const entry = getGlossaryEntry(term)
   if (!entry) notFound()
 
-  const related = (entry.related ?? [])
-    .map(slug => getGlossaryEntry(slug))
-    .filter((e): e is NonNullable<typeof e> => Boolean(e))
+  const related = (entry.related ?? []).map(slug => getGlossaryEntry(slug)).filter((e): e is NonNullable<typeof e> => Boolean(e))
 
   return (
-    <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
-      <article className="max-w-3xl mx-auto px-6 py-12">
-        <Link href="/glossary" className="text-xs font-mono uppercase tracking-wider" style={{ color: 'var(--ink-3)' }}>
-          ← Glossary
-        </Link>
+    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+      <article style={{ maxWidth: 760, margin: '0 auto', padding: 'clamp(28px, 4vw, 48px) 20px' }}>
+        <Link href="/glossary" style={{ ...monoLabel, textDecoration: 'none' }}>← Glossary</Link>
 
-        <header className="mt-6 mb-8">
-          <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ color: 'var(--green)', background: 'var(--green-soft)' }}>
+        <header style={{ marginTop: 24, marginBottom: 28 }}>
+          <span style={{ display: 'inline-block', fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.06em', color: 'var(--green)', background: 'var(--green-soft)', padding: '4px 14px', borderRadius: 999 }}>
             {entry.category}
           </span>
-          <h1 className="text-4xl font-bold mt-4 leading-tight" style={{ color: 'var(--ink)', fontFamily: 'var(--serif)' }}>
+          <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(30px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '14px 0 12px' }}>
             {entry.term}
           </h1>
-          <p className="mt-4 text-lg leading-relaxed" style={{ color: 'var(--ink-2)' }}>
+          <p style={{ color: 'var(--ink-2)', fontSize: 'clamp(15px, 1.8vw, 17px)', lineHeight: 1.55, fontWeight: 500 }}>
             {entry.short}
           </p>
         </header>
 
-        {/* Long definition */}
-        <section className="mb-8">
-          <div className="text-xs font-mono uppercase tracking-wider mb-2" style={{ color: 'var(--gold)' }}>Definition</div>
-          <p className="text-base leading-relaxed" style={{ color: 'var(--ink-2)' }}>{entry.long}</p>
+        <section style={{ marginBottom: 24 }}>
+          <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 8 }}>Definition</p>
+          <p style={{ color: 'var(--ink-2)', fontSize: 15, lineHeight: 1.65 }}>{entry.long}</p>
         </section>
 
-        {/* Example */}
         {entry.example && (
-          <section className="rounded-xl p-5 mb-6" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
-            <div className="text-xs font-mono uppercase tracking-wider mb-2" style={{ color: 'var(--green)' }}>Example</div>
-            <p className="text-base leading-relaxed" style={{ color: 'var(--ink-2)' }}>{entry.example}</p>
+          <section style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: 20, marginBottom: 20 }}>
+            <p style={{ ...monoLabel, color: 'var(--green)', marginBottom: 6 }}>Example</p>
+            <p style={{ color: 'var(--ink-2)', fontSize: 15, lineHeight: 1.65 }}>{entry.example}</p>
           </section>
         )}
 
-        {/* Common confusion */}
         {entry.confusion && (
-          <section className="rounded-xl p-5 mb-6" style={{ background: 'var(--gold-soft)', border: '1px solid var(--rule)' }}>
-            <div className="text-xs font-mono uppercase tracking-wider mb-2" style={{ color: 'var(--gold)' }}>Common confusion</div>
-            <p className="text-base leading-relaxed" style={{ color: 'var(--ink-2)' }}>{entry.confusion}</p>
+          <section style={{ background: 'var(--gold-soft)', border: '1px solid var(--rule)', borderRadius: 12, padding: 20, marginBottom: 20 }}>
+            <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 6 }}>Common confusion</p>
+            <p style={{ color: 'var(--ink-2)', fontSize: 15, lineHeight: 1.65 }}>{entry.confusion}</p>
           </section>
         )}
 
-        {/* Topic links */}
         {entry.relatedTopics && entry.relatedTopics.length > 0 && (
-          <section className="mb-8">
-            <div className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color: 'var(--gold)' }}>Used in these topics</div>
-            <div className="flex flex-wrap gap-2">
+          <section style={{ marginBottom: 28 }}>
+            <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 12 }}>Used in these topics</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {entry.relatedTopics.map(t => (
                 <Link key={t.href} href={t.href}
-                  className="text-sm font-semibold px-4 py-2 rounded-xl"
-                  style={{ background: 'var(--paper)', color: 'var(--ink-2)', border: '1px solid var(--rule)' }}>
+                  style={{ background: 'var(--paper)', color: 'var(--ink-2)', border: '1px solid var(--rule)', borderRadius: 999, padding: '8px 16px', textDecoration: 'none', fontSize: 13.5, fontWeight: 600 }}>
                   {t.label} →
                 </Link>
               ))}
@@ -92,31 +85,26 @@ export default async function GlossaryTermPage({ params }: Props) {
           </section>
         )}
 
-        {/* Related terms */}
         {related.length > 0 && (
-          <section className="mb-8">
-            <div className="text-xs font-mono uppercase tracking-wider mb-3" style={{ color: 'var(--gold)' }}>Related terms</div>
-            <div className="grid sm:grid-cols-2 gap-3">
+          <section style={{ marginBottom: 28 }}>
+            <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 12 }}>Related terms</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 10 }}>
               {related.map(r => (
                 <Link key={r.slug} href={`/glossary/${r.slug}`}
-                  className="rounded-xl p-4"
-                  style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
-                  <div className="font-bold text-sm mb-1" style={{ color: 'var(--ink)' }}>{r.term}</div>
-                  <div className="text-xs leading-relaxed" style={{ color: 'var(--ink-3)' }}>{r.short}</div>
+                  style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: '14px 16px', textDecoration: 'none' }}>
+                  <p style={{ fontFamily: 'var(--serif)', fontSize: 15, fontWeight: 700, color: 'var(--ink)', margin: 0, letterSpacing: '-0.01em' }}>{r.term}</p>
+                  <p style={{ fontSize: 12.5, color: 'var(--ink-3)', lineHeight: 1.55, marginTop: 4 }}>{r.short}</p>
                 </Link>
               ))}
             </div>
           </section>
         )}
 
-        {/* CTA */}
-        <div className="rounded-xl p-6 text-center" style={{ background: 'var(--green-soft)', border: '1px solid var(--rule)' }}>
-          <p className="text-sm mb-4" style={{ color: 'var(--ink-2)' }}>
+        <div style={{ background: 'var(--green-soft)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24, textAlign: 'center' }}>
+          <p style={{ fontSize: 14, color: 'var(--ink-2)', marginBottom: 14, lineHeight: 1.6 }}>
             Practise GCSE Maths topics with AI marking — every term in context.
           </p>
-          <Link href="/auth" className="inline-block text-white font-semibold px-6 py-2.5 rounded-xl text-sm shadow-md" style={{ background: 'var(--green)' }}>
-            Start free →
-          </Link>
+          <Link href="/auth" className="btn btn-primary">Start free →</Link>
         </div>
       </article>
     </main>
