@@ -91,6 +91,48 @@ const FEATURES = [
       'Progress saved automatically — pick up where you left off on any device',
     ],
   },
+  {
+    id: 'revision-planner',
+    icon: '🗓️',
+    title: 'Revision Planner — 15 minutes a day, every day',
+    colour: 'green',
+    badge: 'bg-green-100 text-green-700',
+    bar: 'bg-green-500',
+    points: [
+      'Set your exam date and we schedule daily sessions all the way through',
+      'Each session is 15 minutes — short enough to actually do, long enough to learn',
+      'Topic order is calibrated to your weak-spot radar — your worst areas get more time',
+      'Sessions adapt every day based on what you got right and what you missed',
+    ],
+  },
+  {
+    id: 'writing-pad',
+    icon: '✍️',
+    title: 'Writing Pad — write your working, get it marked',
+    colour: 'blue',
+    badge: 'bg-blue-100 text-blue-700',
+    bar: 'bg-blue-500',
+    points: [
+      'Open any question on iPad or phone — use a stylus or your finger to write the working',
+      'On-device OCR reads your handwriting, including diagrams and equations',
+      'The AI examiner marks the working line by line — method marks, accuracy marks and follow-through',
+      'Works for algebra working, geometry diagrams, statistical workings and probability tree diagrams',
+    ],
+  },
+  {
+    id: 'parent-report',
+    icon: '📬',
+    title: 'Parent Report — a Monday morning email parents will actually read',
+    colour: 'amber',
+    badge: 'bg-amber-100 text-amber-700',
+    bar: 'bg-amber-500',
+    points: [
+      'Sent every Monday at 8am — current predicted grade and how it changed last week',
+      'Topics studied, hours practised, longest streak — without nagging the student',
+      'Two specific areas to encourage practice on, written in plain English (no jargon)',
+      'Completely opt-in — students decide whether the email goes out, and what it includes',
+    ],
+  },
 ]
 
 const BASE = 'https://www.gcsemathsai.co.uk'
@@ -146,7 +188,12 @@ export default function FeaturesPage() {
       {/* Feature cards */}
       <div className="max-w-4xl mx-auto px-6 py-14 grid gap-8">
         {FEATURES.map(f => (
-          <div key={f.title} className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>
+          <div
+            key={f.title}
+            id={'id' in f ? (f as { id?: string }).id : undefined}
+            className="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition scroll-mt-24"
+            style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}
+          >
             <div className={`h-1 w-full ${f.bar}`} />
             <div className="p-7">
               <div className="flex items-center gap-3 mb-4">
