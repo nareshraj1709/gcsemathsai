@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import HashRedirector from './HashRedirector'
 
 export const metadata: Metadata = {
   title: 'Features — AI Marking, Past Papers, Study Notes & More',
@@ -107,6 +108,7 @@ export default function FeaturesPage() {
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
+      <HashRedirector />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}

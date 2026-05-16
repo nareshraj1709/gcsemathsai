@@ -3,6 +3,8 @@ import { CONTENT, toSlug } from '@/lib/study-content'
 import { BLOG_POSTS } from '@/lib/blog-posts'
 import { getAllMarkdownPosts } from '@/lib/markdown'
 import { getAllTopics } from '@/lib/topics-markdown'
+import { GLOSSARY } from '@/lib/glossary-data'
+import { QUESTION_TYPES } from '@/lib/question-types-data'
 
 const BASE = 'https://www.gcsemathsai.co.uk'
 
@@ -43,7 +45,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    // Hubs and structural pages
+    { url: `${BASE}/glossary`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${BASE}/question-types`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/aqa`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/edexcel`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/ocr`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${BASE}/site-map`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    // Feature deep-dives
+    { url: `${BASE}/features/revision-planner`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/features/writing-pad`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/features/parent-report`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
   ]
+
+  // Glossary entries
+  const glossaryPages: MetadataRoute.Sitemap = GLOSSARY.map(g => ({
+    url: `${BASE}/glossary/${g.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Question type guides
+  const questionTypePages: MetadataRoute.Sitemap = QUESTION_TYPES.map(q => ({
+    url: `${BASE}/question-types/${q.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }))
 
   // Dynamic study topic pages
   const studyPages: MetadataRoute.Sitemap = CONTENT.map(c => ({
@@ -77,5 +106,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }))
 
-  return [...staticPages, ...studyPages, ...topicPages, ...mdBlogPages, ...tsBlogPages]
+  return [...staticPages, ...studyPages, ...topicPages, ...glossaryPages, ...questionTypePages, ...mdBlogPages, ...tsBlogPages]
 }
