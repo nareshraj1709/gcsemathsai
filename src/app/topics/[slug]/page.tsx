@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { getAllTopics, getTopicPost, renderTopicMarkdown, extractTopicTOC } from '@/lib/topics-markdown'
 import { autoLinkTopics } from '@/lib/auto-linker'
 import { getAcademicReferences } from '@/lib/academic-references'
+import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -410,6 +411,7 @@ export default async function TopicPage({ params }: Props) {
           }),
         }}
       />
+      <PredictedPapersPromo variant="footer" source={`topic-${slug}`} />
     </main>
   )
 }

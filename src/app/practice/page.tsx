@@ -3,6 +3,7 @@ import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import Footer from '@/components/Footer'
+import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 // ── Design tokens ─────────────────────────────────────────────
 const C = {
@@ -408,7 +409,8 @@ function Practice() {
           )}
         </div>
         </div>
-        <Footer />
+        <PredictedPapersPromo variant="footer" source="practice" />
+      <Footer />
       </div>
     )
   }
@@ -631,6 +633,7 @@ function Practice() {
           </div>
         )}
       </div>
+      <PredictedPapersPromo variant="footer" source="practice" />
       <Footer />
     </div>
   )

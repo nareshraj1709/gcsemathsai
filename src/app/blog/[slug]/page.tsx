@@ -5,6 +5,7 @@ import { getAllMarkdownPosts, getMarkdownPost, renderMarkdown, extractTOC } from
 import { BLOG_POSTS, getPost, type Block } from '@/lib/blog-posts'
 import QuickQuizGenerator from '@/components/QuickQuizGenerator'
 import { autoLinkTopics } from '@/lib/auto-linker'
+import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 // Maps blog slug → { topic sent to API, practiceSlug for /practice/ link, label }
 const TOPIC_MAP: Record<string, { topic: string; practiceSlug: string; label: string }> = {
@@ -309,6 +310,7 @@ export default async function BlogPostPage({ params }: Props) {
             ))}
           </div>
         </section>
+        <PredictedPapersPromo variant="footer" source={`blog-${slug}`} />
       </main>
     )
   }
@@ -370,6 +372,7 @@ export default async function BlogPostPage({ params }: Props) {
           })}
         </div>
       </section>
+      <PredictedPapersPromo variant="footer" source={`blog-${slug}`} />
     </main>
   )
 }

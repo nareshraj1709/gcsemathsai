@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 export const metadata: Metadata = {
   title: 'GCSE Maths Formula Sheet — Free PDF Download',
@@ -314,6 +315,7 @@ export default function FormulaSheetPage() {
           { '@type': 'ListItem', position: 2, name: 'Formula Sheet', item: 'https://www.gcsemathsai.co.uk/formula-sheet' },
         ],
       }) }} />
+      <PredictedPapersPromo source="formula-sheet" />
     </main>
   )
 }

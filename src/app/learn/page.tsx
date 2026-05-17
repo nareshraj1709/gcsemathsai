@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { getProfileFromCache, saveProfile as saveProfileToDb } from '@/lib/profile'
+import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 // ── Topic data ───────────────────────────────────────────────
 const TOPIC_DATA: Record<string, { Foundation: string[]; Higher: string[] }> = {
@@ -501,6 +502,7 @@ export default function Learn() {
           })}
         </div>
       </div>
+      <PredictedPapersPromo variant="footer" source="learn" />
     </div>
   )
 }

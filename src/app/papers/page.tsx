@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { HISTORICAL_PAPERS, AI_PAPERS, type ExamBoard, type Tier } from '@/lib/papers-data'
 import Footer from '@/components/Footer'
+import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 const BOARDS: ExamBoard[] = ['AQA', 'Edexcel', 'OCR']
 const TIERS: Tier[] = ['Foundation', 'Higher']
@@ -215,6 +216,8 @@ export default function PapersPage() {
           </>
         )}
       </div>
+
+      <PredictedPapersPromo source="papers-hub" />
 
       <Footer />
 

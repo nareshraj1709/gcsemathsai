@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllTopics } from '@/lib/topics-markdown'
+import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 export const metadata: Metadata = {
   title: 'All GCSE Maths Topics — Complete Revision Guide',
@@ -298,6 +299,7 @@ export default function TopicsIndexPage() {
           </Link>
         </div>
       </div>
+      <PredictedPapersPromo source="topics-index" />
     </main>
   )
 }
