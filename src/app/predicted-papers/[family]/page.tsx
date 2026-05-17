@@ -157,7 +157,6 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
         <div style={{ marginTop: 36, display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap', fontFamily: 'var(--mono)', fontSize: 12, fontWeight: 700, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
           <span>Instant PDF download</span>
           <span>Secure Stripe checkout</span>
-          <span>30-day refund if not satisfied</span>
         </div>
       </section>
 
@@ -196,7 +195,6 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
             { q: 'Are these the real exam papers?', a: `No. Every question is original, written in the ${f.board} ${f.tier} style and calibrated to the topics most likely to appear in ${f.year}. Selling the real papers would breach Pearson copyright.` },
             { q: 'How quickly do I get the PDFs?', a: 'Instantly. After Stripe confirms the payment you will receive an email with a download link for the PDFs — usually within 60 seconds.' },
             { q: 'Which paper should I buy first?', a: 'If you can only buy one, get Paper 2. It is typically the first calculator paper in the exam series and the bigger predictor of how Paper 3 will run.' },
-            { q: 'Refund policy?', a: 'If the pack does not match the description, email enquiries@gcsemathsai.co.uk within 30 days and we will refund in full.' },
             { q: 'Can I share these with my class?', a: 'A single purchase is for one student. For class / school licences, get in touch via /contact — we offer per-student rates from £4.' },
           ].map(item => (
             <div key={item.q}>
