@@ -1,5 +1,7 @@
 // Predicted papers product catalogue. When Stripe links are ready, replace
-// `stripeUrl` for each product below. No other file needs changing.
+// `stripeUrl` for each product below. Also set `stripeProductId` to the
+// Stripe Price ID (or Product ID) so the webhook can match purchases to
+// SKUs and `files` to the PDF filenames under content/predicted-papers/<sku>/.
 
 export interface PredictedPaperSku {
   id: 'paper2' | 'paper3' | 'bundle'
@@ -11,7 +13,12 @@ export interface PredictedPaperSku {
   paperCount: number
   description: string
   includes: string[]
+  /** Stripe Payment Link URL (https://buy.stripe.com/...) */
   stripeUrl: string
+  /** Stripe Price ID (price_xxx) — used to identify the SKU in webhooks. */
+  stripePriceId?: string
+  /** PDF files, relative paths under content/predicted-papers/. */
+  files: Array<{ folder: 'paper2' | 'paper3'; filename: string; label: string }>
   highlight?: boolean
 }
 
@@ -27,9 +34,29 @@ export interface PredictedPaperFamily {
   keywords: string[]
   heroBlurb: string
   skus: PredictedPaperSku[]
-  /** Alternative legacy slugs that 301 to this family's URL. */
   legacyRedirects?: string[]
 }
+
+const PAPER2_FILES = [
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetA.pdf', label: 'Set A' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetB.pdf', label: 'Set B' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetC.pdf', label: 'Set C' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetD.pdf', label: 'Set D' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetE.pdf', label: 'Set E' },
+]
+const PAPER3_FILES = [
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetA.pdf', label: 'Set A' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetB.pdf', label: 'Set B' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetC.pdf', label: 'Set C' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetD.pdf', label: 'Set D' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetE.pdf', label: 'Set E' },
+]
+
+// Same Stripe Payment Link supplied for all three SKUs initially — replace
+// the individual / bundle URLs once separate links are issued.
+const STRIPE_LINK_PAPER2 = 'https://buy.stripe.com/14A5kE6G43gkeMf4ntgIo01'
+const STRIPE_LINK_PAPER3 = 'https://buy.stripe.com/14A5kE6G43gkeMf4ntgIo01'
+const STRIPE_LINK_BUNDLE = 'https://buy.stripe.com/14A5kE6G43gkeMf4ntgIo01'
 
 const EDEXCEL_HIGHER_2026_SKUS: PredictedPaperSku[] = [
   {
@@ -37,7 +64,7 @@ const EDEXCEL_HIGHER_2026_SKUS: PredictedPaperSku[] = [
     badge: 'Paper 2 · Calculator',
     title: 'Paper 2 Predicted Pack',
     subtitle: 'Edexcel 1MA1 Higher · five full predicted papers',
-    price: '£9.99',
+    price: '£5.99',
     priceNote: 'one-off · instant download',
     paperCount: 5,
     description: 'Five complete predicted Paper 2 (calculator) papers for Edexcel Higher, calibrated to recent paper styles and the topics most likely to appear in 2026.',
@@ -48,14 +75,15 @@ const EDEXCEL_HIGHER_2026_SKUS: PredictedPaperSku[] = [
       'Topic coverage map for each paper',
       'Grade-boundary estimate cheatsheet',
     ],
-    stripeUrl: '#stripe-paper2',
+    stripeUrl: STRIPE_LINK_PAPER2,
+    files: PAPER2_FILES,
   },
   {
     id: 'paper3',
     badge: 'Paper 3 · Calculator',
     title: 'Paper 3 Predicted Pack',
     subtitle: 'Edexcel 1MA1 Higher · five full predicted papers',
-    price: '£9.99',
+    price: '£5.99',
     priceNote: 'one-off · instant download',
     paperCount: 5,
     description: 'Five complete predicted Paper 3 (calculator) papers for Edexcel Higher, weighted toward the topics least covered on the 2026 Paper 1 and Paper 2.',
@@ -66,15 +94,16 @@ const EDEXCEL_HIGHER_2026_SKUS: PredictedPaperSku[] = [
       'Topic coverage map for each paper',
       'Grade-boundary estimate cheatsheet',
     ],
-    stripeUrl: '#stripe-paper3',
+    stripeUrl: STRIPE_LINK_PAPER3,
+    files: PAPER3_FILES,
   },
   {
     id: 'bundle',
-    badge: 'Bundle · Save 20%',
+    badge: 'Bundle · Save 17%',
     title: 'Paper 2 + Paper 3 Bundle',
     subtitle: 'Edexcel 1MA1 Higher · ten predicted papers in one pack',
-    price: '£15.99',
-    priceNote: 'one-off · instant download · save £4',
+    price: '£9.99',
+    priceNote: 'one-off · instant download · save £1.99',
     paperCount: 10,
     description: 'Both calculator-paper packs together at a discount. Ten full predicted papers, mark schemes and worked solutions — the complete predicted-paper bundle for Edexcel Higher 2026.',
     includes: [
@@ -83,9 +112,10 @@ const EDEXCEL_HIGHER_2026_SKUS: PredictedPaperSku[] = [
       'Worked solutions with examiner-style reasoning',
       'Topic coverage map across both calculator papers',
       'Grade-boundary estimate cheatsheet',
-      'Save 20% versus buying each pack separately',
+      'Save £1.99 versus buying each pack separately',
     ],
-    stripeUrl: '#stripe-bundle',
+    stripeUrl: STRIPE_LINK_BUNDLE,
+    files: [...PAPER2_FILES, ...PAPER3_FILES],
     highlight: true,
   },
 ]
@@ -118,7 +148,23 @@ export function getPredictedPaperFamily(slug: string): PredictedPaperFamily | un
   return PREDICTED_PAPER_FAMILIES.find(f => f.slug === slug)
 }
 
-// Backwards-compatible export: the SKUs of the headline family, used by the
-// homepage section.
+/** Look up an SKU by its id ('paper2' | 'paper3' | 'bundle') across all families. */
+export function getSkuById(skuId: string): PredictedPaperSku | undefined {
+  for (const f of PREDICTED_PAPER_FAMILIES) {
+    const s = f.skus.find(s => s.id === skuId)
+    if (s) return s
+  }
+  return undefined
+}
+
+/** Look up an SKU by its Stripe Price ID. Used by the webhook handler. */
+export function getSkuByStripePriceId(priceId: string): PredictedPaperSku | undefined {
+  for (const f of PREDICTED_PAPER_FAMILIES) {
+    const s = f.skus.find(s => s.stripePriceId === priceId)
+    if (s) return s
+  }
+  return undefined
+}
+
 export const PREDICTED_PAPERS = EDEXCEL_HIGHER_2026_SKUS
 export const FEATURED_FAMILY = PREDICTED_PAPER_FAMILIES[0]
