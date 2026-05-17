@@ -52,11 +52,12 @@ const PAPER3_FILES = [
   { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetE.pdf', label: 'Set E' },
 ]
 
-// Same Stripe Payment Link supplied for all three SKUs initially — replace
-// the individual / bundle URLs once separate links are issued.
+// Stripe Payment Links. Paper 2 and Paper 3 share the same £5.99 link — the
+// webhook tells them apart via the ?client_reference_id=<sku> query string
+// that getCheckoutUrl() appends to each button.
 const STRIPE_LINK_PAPER2 = 'https://buy.stripe.com/14A5kE6G43gkeMf4ntgIo01'
 const STRIPE_LINK_PAPER3 = 'https://buy.stripe.com/14A5kE6G43gkeMf4ntgIo01'
-const STRIPE_LINK_BUNDLE = 'https://buy.stripe.com/14A5kE6G43gkeMf4ntgIo01'
+const STRIPE_LINK_BUNDLE = 'https://buy.stripe.com/5kQ7sM1lKaIM0Vp3jpgIo02'
 
 const EDEXCEL_HIGHER_2026_SKUS: PredictedPaperSku[] = [
   {
@@ -146,6 +147,17 @@ export const PREDICTED_PAPER_FAMILIES: PredictedPaperFamily[] = [
 
 export function getPredictedPaperFamily(slug: string): PredictedPaperFamily | undefined {
   return PREDICTED_PAPER_FAMILIES.find(f => f.slug === slug)
+}
+
+/**
+ * Append the SKU id as client_reference_id to the Stripe Payment Link so the
+ * webhook can tell which SKU was bought even when two SKUs share a link.
+ */
+export function getCheckoutUrl(sku: PredictedPaperSku): string {
+  const url = sku.stripeUrl
+  if (!url || url.startsWith('#')) return url
+  const sep = url.includes('?') ? '&' : '?'
+  return `${url}${sep}client_reference_id=${encodeURIComponent(sku.id)}`
 }
 
 /** Look up an SKU by its id ('paper2' | 'paper3' | 'bundle') across all families. */
