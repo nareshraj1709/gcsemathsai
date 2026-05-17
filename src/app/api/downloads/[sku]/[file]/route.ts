@@ -3,12 +3,16 @@
 //     route — used by /my-papers), OR
 //   - a Stripe checkout session_id in the ?session_id=cs_xxx query string
 //     (immediate-post-purchase route — used by /thanks)
+//
+// Before streaming, every page of the PDF is stamped with the buyer's email
+// and download date so the file is traceable if redistributed.
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import fs from 'fs/promises'
 import path from 'path'
 import { getSkuById, getSkuByStripePriceId, PREDICTED_PAPER_FAMILIES } from '@/lib/predicted-papers'
+import { applyWatermark } from '@/lib/watermark-pdf'
 
 export const runtime = 'nodejs'
 
@@ -30,19 +34,26 @@ function fileBelongsToBundle(filename: string): boolean {
   return !!bundle?.files.some(f => f.filename === filename)
 }
 
-async function verifyByStripeSession(sessionId: string, skuId: string): Promise<boolean> {
+interface StripeVerification {
+  ok: boolean
+  email?: string
+}
+
+async function verifyByStripeSession(sessionId: string, skuId: string): Promise<StripeVerification> {
   const stripeKey = process.env.STRIPE_SECRET_KEY
-  if (!stripeKey || !sessionId.startsWith('cs_')) return false
+  if (!stripeKey || !sessionId.startsWith('cs_')) return { ok: false }
   const auth = { Authorization: `Bearer ${stripeKey}` }
   const [sessionRes, itemsRes] = await Promise.all([
     fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}`, { headers: auth, cache: 'no-store' }),
     fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}/line_items?limit=10`, { headers: auth, cache: 'no-store' }),
   ])
-  if (!sessionRes.ok) return false
-  const session = await sessionRes.json() as { payment_status?: string; client_reference_id?: string | null }
-  if (session.payment_status !== 'paid') return false
+  if (!sessionRes.ok) return { ok: false }
+  const session = await sessionRes.json() as {
+    payment_status?: string; client_reference_id?: string | null
+    customer_details?: { email?: string }; customer_email?: string
+  }
+  if (session.payment_status !== 'paid') return { ok: false }
 
-  // Resolve the SKU bought in this session.
   let boughtSkuId: string | null = null
   const ref = session.client_reference_id
   if (ref === 'paper2' || ref === 'paper3' || ref === 'bundle') boughtSkuId = ref
@@ -56,8 +67,10 @@ async function verifyByStripeSession(sessionId: string, skuId: string): Promise<
       }
     }
   }
-  if (!boughtSkuId) return false
-  return entitlingSkus(skuId).includes(boughtSkuId)
+  if (!boughtSkuId || !entitlingSkus(skuId).includes(boughtSkuId)) return { ok: false }
+
+  const email = session.customer_details?.email || session.customer_email || ''
+  return { ok: true, email: email.toLowerCase().trim() }
 }
 
 type Props = { params: Promise<{ sku: string; file: string }> }
@@ -73,7 +86,6 @@ export async function GET(req: NextRequest, { params }: Props) {
     return NextResponse.json({ error: 'unknown file for this sku' }, { status: 404 })
   }
 
-  // Resolve which folder the file lives in
   let folder: 'paper2' | 'paper3' | null = null
   for (const f of PREDICTED_PAPER_FAMILIES) {
     for (const s of f.skus) {
@@ -84,13 +96,17 @@ export async function GET(req: NextRequest, { params }: Props) {
   }
   if (!folder) return NextResponse.json({ error: 'file not found' }, { status: 404 })
 
-  // ── Auth path A: Stripe session_id (immediate post-purchase) ───────────────
+  // ── Auth + identify buyer ──────────────────────────────────────────────────
+  let buyerEmail: string | null = null
+  let reference: string | null = null
   const sessionId = req.nextUrl.searchParams.get('session_id')
+
   if (sessionId) {
-    const ok = await verifyByStripeSession(sessionId, sku)
-    if (!ok) return NextResponse.json({ error: 'session does not entitle this file' }, { status: 403 })
+    const v = await verifyByStripeSession(sessionId, sku)
+    if (!v.ok) return NextResponse.json({ error: 'session does not entitle this file' }, { status: 403 })
+    buyerEmail = v.email ?? 'paid customer'
+    reference = sessionId
   } else {
-    // ── Auth path B: Supabase JWT (logged-in /my-papers route) ───────────────
     const authHeader = req.headers.get('authorization')
     const accessToken = authHeader?.startsWith('Bearer ') ? authHeader.slice(7) : null
     if (!accessToken) return NextResponse.json({ error: 'sign in required' }, { status: 401 })
@@ -106,30 +122,42 @@ export async function GET(req: NextRequest, { params }: Props) {
     if (userErr || !userData.user?.email) {
       return NextResponse.json({ error: 'sign in required' }, { status: 401 })
     }
-    const email = userData.user.email.toLowerCase().trim()
+    buyerEmail = userData.user.email.toLowerCase().trim()
     const { data: rows, error } = await supabase
       .from('purchases')
-      .select('sku_id')
-      .eq('customer_email', email)
+      .select('sku_id, stripe_session_id')
+      .eq('customer_email', buyerEmail)
       .in('sku_id', entitlingSkus(sku))
     if (error) return NextResponse.json({ error: 'lookup failed' }, { status: 500 })
     if (!rows || rows.length === 0) {
       return NextResponse.json({ error: 'no purchase found for this email' }, { status: 403 })
     }
+    reference = rows[0].stripe_session_id ?? null
   }
 
-  // Stream the PDF
+  // ── Load, watermark, stream ────────────────────────────────────────────────
   const filePath = path.join(process.cwd(), 'content', 'predicted-papers', folder, decodedFile)
+  let raw: Buffer
+  try { raw = await fs.readFile(filePath) }
+  catch { return NextResponse.json({ error: 'file missing on server' }, { status: 404 }) }
+
+  let stamped: Uint8Array
   try {
-    const buf = await fs.readFile(filePath)
-    return new NextResponse(buf, {
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': `attachment; filename="${decodedFile}"`,
-        'Cache-Control': 'private, no-store',
-      },
+    stamped = await applyWatermark(raw, {
+      email: buyerEmail ?? 'paid customer',
+      reference: reference ?? undefined,
     })
-  } catch {
-    return NextResponse.json({ error: 'file missing on server' }, { status: 404 })
+  } catch (err) {
+    console.error('Watermark failed', err)
+    // Fall back to the unstamped file so the customer still gets their PDF.
+    stamped = raw
   }
+
+  return new NextResponse(new Uint8Array(stamped), {
+    headers: {
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': `attachment; filename="${decodedFile}"`,
+      'Cache-Control': 'private, no-store',
+    },
+  })
 }
