@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/edexcel`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/ocr`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/site-map`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE}/predicted-papers`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     // Feature deep-dives
     { url: `${BASE}/features/revision-planner`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/features/writing-pad`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },

@@ -29,6 +29,7 @@ export default function Footer() {
         <div className="ft-col">
           <h4>Resources</h4>
           <ul>
+            <li><a onClick={() => go('/predicted-papers')}>Predicted Papers</a></li>
             <li><a onClick={() => go('/blog')}>Blog</a></li>
             <li><a onClick={() => go('/glossary')}>Glossary</a></li>
             <li><a onClick={() => go('/question-types')}>Question Types</a></li>

@@ -1,5 +1,7 @@
 'use client'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
+import { PREDICTED_PAPERS } from '@/lib/predicted-papers'
 
 export default function Home() {
   return (
@@ -232,6 +234,55 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PREDICTED PAPERS */}
+      <section style={{ background: 'var(--paper)', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
+        <div className="wrap">
+          <div className="sec-head" style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 32px' }}>
+            <div className="sec-label" style={{ justifyContent: 'center' }}>Predicted Papers · Edexcel Higher 2026</div>
+            <h2>Ten predicted papers, <em>calibrated for 2026</em>.</h2>
+            <p className="sec-sub" style={{ margin: '0 auto' }}>
+              Original Paper 2 and Paper 3 predicted papers for Edexcel 1MA1 Higher — with full mark schemes and worked solutions.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16, maxWidth: 1100, margin: '0 auto' }}>
+            {PREDICTED_PAPERS.map(p => (
+              <article key={p.id} style={{ background: 'var(--cream)', border: p.highlight ? '2px solid var(--green)' : '1px solid var(--rule)', borderRadius: 14, padding: 24, display: 'flex', flexDirection: 'column', gap: 10, position: 'relative' }}>
+                {p.highlight && (
+                  <span style={{ position: 'absolute', top: 10, right: 10, fontFamily: 'var(--mono)', fontSize: 9.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--cream)', background: 'var(--green)', padding: '3px 9px', borderRadius: 999 }}>
+                    Most popular
+                  </span>
+                )}
+                <span style={{ fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: p.highlight ? 'var(--green)' : 'var(--gold)', alignSelf: 'flex-start' }}>
+                  {p.badge}
+                </span>
+                <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 600, color: 'var(--ink)', margin: 0, letterSpacing: '-0.015em', lineHeight: 1.18 }}>
+                  {p.title}
+                </h3>
+                <p style={{ fontSize: 13, color: 'var(--ink-3)', lineHeight: 1.5, margin: 0 }}>{p.subtitle}</p>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, margin: '6px 0' }}>
+                  <span style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.02em', lineHeight: 1 }}>{p.price}</span>
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-3)' }}>{p.priceNote.split(' · ')[0]}</span>
+                </div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 6, flex: 1 }}>
+                  {p.includes.slice(0, 3).map((line, i) => (
+                    <li key={i} style={{ display: 'flex', gap: 8, alignItems: 'flex-start', fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.5 }}>
+                      <span style={{ color: 'var(--green)', fontWeight: 700, fontFamily: 'var(--mono)', flexShrink: 0 }}>✓</span>
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href={p.stripeUrl} target="_blank" rel="noopener" className="btn" style={{ marginTop: 8, background: p.highlight ? 'var(--green)' : 'var(--ink)', color: 'var(--cream)', justifyContent: 'center', padding: '11px 18px', fontSize: 14 }}>
+                  Buy — {p.price} →
+                </a>
+              </article>
+            ))}
+          </div>
+          <p style={{ textAlign: 'center', marginTop: 24, fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-3)' }}>
+            <Link href="/predicted-papers" style={{ color: 'var(--green)' }}>See full details and FAQ →</Link>
+          </p>
         </div>
       </section>
 
