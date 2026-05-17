@@ -55,7 +55,7 @@ export default function MyPapersPage() {
       })
       if (!res.ok) {
         const j = await res.json().catch(() => ({}))
-        alert(j.error || 'Download failed. Please contact support@gcsemathsai.co.uk')
+        alert(j.error || 'Download failed. Please contact enquiries@gcsemathsai.co.uk')
         return
       }
       const blob = await res.blob()
@@ -65,7 +65,7 @@ export default function MyPapersPage() {
       document.body.appendChild(a); a.click(); a.remove()
       URL.revokeObjectURL(url)
     } catch {
-      alert('Download failed. Please contact support@gcsemathsai.co.uk')
+      alert('Download failed. Please contact enquiries@gcsemathsai.co.uk')
     } finally {
       setDownloading(null)
     }
