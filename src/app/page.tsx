@@ -1,7 +1,7 @@
 'use client'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-import { PREDICTED_PAPERS } from '@/lib/predicted-papers'
+import { PREDICTED_PAPERS, getCheckoutUrl } from '@/lib/predicted-papers'
 
 export default function Home() {
   return (
@@ -165,7 +165,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <a href={p.stripeUrl} target="_blank" rel="noopener" className="btn" style={{ marginTop: 8, background: p.highlight ? 'var(--green)' : 'var(--ink)', color: 'var(--cream)', justifyContent: 'center', padding: '11px 18px', fontSize: 14 }}>
+                <a href={getCheckoutUrl(p)} target="_blank" rel="noopener" className="btn" style={{ marginTop: 8, background: p.highlight ? 'var(--green)' : 'var(--ink)', color: 'var(--cream)', justifyContent: 'center', padding: '11px 18px', fontSize: 14 }}>
                   Buy — {p.price} →
                 </a>
               </article>

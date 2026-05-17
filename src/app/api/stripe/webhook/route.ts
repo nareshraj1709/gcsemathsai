@@ -74,28 +74,37 @@ export async function POST(req: NextRequest) {
   const amountTotal = session.amount_total as number | undefined
   const currency = session.currency as string | undefined
 
-  // Stripe Payment Link sessions include a single line item. We retrieve the
-  // line items via the Stripe API to find the Price ID and match an SKU.
+  // Identify which SKU was bought. Preferred: the `client_reference_id` we
+  // append to the Payment Link URL on each buy button — this tells SKUs apart
+  // even when two share the same Stripe Price. Fallback: line-item lookup by
+  // Price ID via the Stripe API.
   let skuId: string | null = null
-  try {
-    const stripeKey = process.env.STRIPE_SECRET_KEY
-    if (stripeKey && sessionId) {
-      const r = await fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}/line_items?limit=10`, {
-        headers: { Authorization: `Bearer ${stripeKey}` },
-      })
-      if (r.ok) {
-        const json = await r.json() as { data?: Array<{ price?: { id?: string } }> }
-        for (const item of json.data ?? []) {
-          const priceId = item.price?.id
-          if (priceId) {
-            const sku = getSkuByStripePriceId(priceId)
-            if (sku) { skuId = sku.id; break }
+  const ref = session.client_reference_id as string | undefined
+  if (ref === 'paper2' || ref === 'paper3' || ref === 'bundle') {
+    skuId = ref
+  }
+
+  if (!skuId) {
+    try {
+      const stripeKey = process.env.STRIPE_SECRET_KEY
+      if (stripeKey && sessionId) {
+        const r = await fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}/line_items?limit=10`, {
+          headers: { Authorization: `Bearer ${stripeKey}` },
+        })
+        if (r.ok) {
+          const json = await r.json() as { data?: Array<{ price?: { id?: string } }> }
+          for (const item of json.data ?? []) {
+            const priceId = item.price?.id
+            if (priceId) {
+              const sku = getSkuByStripePriceId(priceId)
+              if (sku) { skuId = sku.id; break }
+            }
           }
         }
       }
+    } catch {
+      // Best-effort; fall through to insert with null SKU and reconcile manually
     }
-  } catch {
-    // Best-effort; fall through to insert with null SKU and reconcile manually
   }
 
   const supabase = createClient(supabaseUrl, serviceRoleKey)
