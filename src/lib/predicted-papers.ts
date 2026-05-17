@@ -1,7 +1,7 @@
 // Predicted papers product catalogue. When Stripe links are ready, replace
 // `stripeUrl` for each product below. No other file needs changing.
 
-export interface PredictedPaperProduct {
+export interface PredictedPaperSku {
   id: 'paper2' | 'paper3' | 'bundle'
   badge: string
   title: string
@@ -15,7 +15,23 @@ export interface PredictedPaperProduct {
   highlight?: boolean
 }
 
-export const PREDICTED_PAPERS: PredictedPaperProduct[] = [
+export interface PredictedPaperFamily {
+  slug: string
+  board: 'Edexcel' | 'AQA' | 'OCR'
+  tier: 'Higher' | 'Foundation'
+  year: number
+  title: string
+  shortTitle: string
+  metaTitle: string
+  metaDescription: string
+  keywords: string[]
+  heroBlurb: string
+  skus: PredictedPaperSku[]
+  /** Alternative legacy slugs that 301 to this family's URL. */
+  legacyRedirects?: string[]
+}
+
+const EDEXCEL_HIGHER_2026_SKUS: PredictedPaperSku[] = [
   {
     id: 'paper2',
     badge: 'Paper 2 · Calculator',
@@ -32,7 +48,7 @@ export const PREDICTED_PAPERS: PredictedPaperProduct[] = [
       'Topic coverage map for each paper',
       'Grade-boundary estimate cheatsheet',
     ],
-    stripeUrl: '#stripe-paper2', // Replace with Stripe Payment Link
+    stripeUrl: '#stripe-paper2',
   },
   {
     id: 'paper3',
@@ -50,7 +66,7 @@ export const PREDICTED_PAPERS: PredictedPaperProduct[] = [
       'Topic coverage map for each paper',
       'Grade-boundary estimate cheatsheet',
     ],
-    stripeUrl: '#stripe-paper3', // Replace with Stripe Payment Link
+    stripeUrl: '#stripe-paper3',
   },
   {
     id: 'bundle',
@@ -69,7 +85,40 @@ export const PREDICTED_PAPERS: PredictedPaperProduct[] = [
       'Grade-boundary estimate cheatsheet',
       'Save 20% versus buying each pack separately',
     ],
-    stripeUrl: '#stripe-bundle', // Replace with Stripe Payment Link
+    stripeUrl: '#stripe-bundle',
     highlight: true,
   },
 ]
+
+export const PREDICTED_PAPER_FAMILIES: PredictedPaperFamily[] = [
+  {
+    slug: 'edexcel-gcse-maths-higher-2026',
+    board: 'Edexcel',
+    tier: 'Higher',
+    year: 2026,
+    title: 'Edexcel GCSE Maths Higher — Predicted Papers 2026',
+    shortTitle: 'Edexcel Higher · 2026',
+    metaTitle: 'Edexcel GCSE Maths 2026 Predicted Papers — Higher Paper 2 & Paper 3',
+    metaDescription: 'Five predicted Paper 2 and five predicted Paper 3 papers for Edexcel GCSE Maths Higher (1MA1) 2026. Full mark schemes, worked solutions, instant PDF download.',
+    keywords: [
+      'edexcel gcse maths 2026 predicted papers',
+      'gcse maths 2026 predicted papers',
+      'edexcel higher predicted papers',
+      'gcse maths paper 2 predicted',
+      'gcse maths paper 3 predicted',
+      'edexcel 1ma1 predicted',
+    ],
+    heroBlurb: 'Ten predicted papers for Edexcel 1MA1 Higher in 2026 — five for Paper 2, five for Paper 3. Calibrated to the topics most likely to appear, with full mark schemes and worked solutions.',
+    skus: EDEXCEL_HIGHER_2026_SKUS,
+    legacyRedirects: ['gcse-maths-2026-predicted-papers'],
+  },
+]
+
+export function getPredictedPaperFamily(slug: string): PredictedPaperFamily | undefined {
+  return PREDICTED_PAPER_FAMILIES.find(f => f.slug === slug)
+}
+
+// Backwards-compatible export: the SKUs of the headline family, used by the
+// homepage section.
+export const PREDICTED_PAPERS = EDEXCEL_HIGHER_2026_SKUS
+export const FEATURED_FAMILY = PREDICTED_PAPER_FAMILIES[0]

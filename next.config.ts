@@ -3,10 +3,29 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
+  redirects: async () => [
+    // SEO redirects for keyword-rich predicted-papers slugs.
+    {
+      source: '/gcse-maths-2026-predicted-papers',
+      destination: '/predicted-papers/edexcel-gcse-maths-higher-2026',
+      permanent: true,
+    },
+    {
+      source: '/edexcel-gcse-maths-2026-predicted-papers',
+      destination: '/predicted-papers/edexcel-gcse-maths-higher-2026',
+      permanent: true,
+    },
+    {
+      source: '/edexcel-predicted-papers',
+      destination: '/predicted-papers/edexcel-gcse-maths-higher-2026',
+      permanent: true,
+    },
+  ],
   rewrites: async () => [
-    { source: '/formulas', destination: '/formulas/index.html' },
-    { source: '/formulas/', destination: '/formulas/index.html' },
-    { source: '/formulas/:strand', destination: '/formulas/:strand/index.html' },
+    // Legacy static formula sheets (Number strand HTML pack) kept at
+    // /formulas-print/* so the Next.js /formulas pages can take precedence.
+    { source: '/formulas-print', destination: '/formulas/index.html' },
+    { source: '/formulas-print/:path*', destination: '/formulas/:path*' },
   ],
   headers: async () => [
     {

@@ -6,6 +6,7 @@ import { getAllTopics } from '@/lib/topics-markdown'
 import { GLOSSARY } from '@/lib/glossary-data'
 import { QUESTION_TYPES } from '@/lib/question-types-data'
 import { getAllFormulaSheets } from '@/lib/formula-sheet-extractor'
+import { PREDICTED_PAPER_FAMILIES } from '@/lib/predicted-papers'
 
 const BASE = 'https://www.gcsemathsai.co.uk'
 
@@ -54,6 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ocr`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/site-map`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/predicted-papers`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    ...PREDICTED_PAPER_FAMILIES.map(f => ({
+      url: `${BASE}/predicted-papers/${f.slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    })),
     // Feature deep-dives
     { url: `${BASE}/features/revision-planner`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/features/writing-pad`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
