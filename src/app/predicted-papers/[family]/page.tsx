@@ -54,7 +54,7 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
-      { '@type': 'ListItem', position: 2, name: 'Predicted Papers', item: `${BASE}/predicted-papers` },
+      { '@type': 'ListItem', position: 2, name: 'Practice Papers', item: `${BASE}/predicted-papers` },
       { '@type': 'ListItem', position: 3, name: `${f.board} ${f.tier} ${f.year}`, item: `${BASE}/predicted-papers/${f.slug}` },
     ],
   }
@@ -68,13 +68,13 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
 
       {/* Hero */}
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
-        <Link href="/predicted-papers" style={{ ...monoLabel, color: 'var(--ink-3)', textDecoration: 'none' }}>← All predicted packs</Link>
+        <Link href="/predicted-papers" style={{ ...monoLabel, color: 'var(--ink-3)', textDecoration: 'none' }}>← All practice packs</Link>
         <div style={{ marginTop: 18 }}>
           <span style={{ ...monoLabel, color: 'var(--gold)', background: 'var(--gold-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 16 }}>
             {f.board} · {f.tier} · {f.year}
           </span>
           <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 800 }}>
-            {f.title.split(' — ')[0]} — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>Predicted Papers {f.year}</em>
+            {f.title.split(' — ')[0]} — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>Practice Papers {f.year}</em>
           </h1>
           <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 640, margin: '0 auto' }}>
             {f.heroBlurb}
@@ -192,7 +192,7 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
           {[
-            { q: 'Are these the real exam papers?', a: `No. Every question is original, written in the ${f.board} ${f.tier} style and calibrated to the topics most likely to appear in ${f.year}. Selling the real papers would breach Pearson copyright.` },
+            { q: 'Are these the real exam papers?', a: `No. Every question is written from scratch by our team, in the style of ${f.board} ${f.tier} and calibrated to the published 1MA1 specification. These are independent practice papers — we are not affiliated with, endorsed by, or associated with Pearson Edexcel.` },
             { q: 'How quickly do I get the PDFs?', a: 'Instantly. After Stripe confirms the payment you will receive an email with a download link for the PDFs — usually within 60 seconds.' },
             { q: 'Which paper should I buy first?', a: 'If you can only buy one, get Paper 2. It is typically the first calculator paper in the exam series and the bigger predictor of how Paper 3 will run.' },
             { q: 'Can I share these with my class?', a: 'A single purchase is for one student. For class / school licences, get in touch via /contact — we offer per-student rates from £4.' },
@@ -216,6 +216,14 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
           Get the Paper 2 + 3 Bundle — {f.skus[2].price} →
         </a>
         <p style={{ ...monoLabel, color: 'var(--green-soft)', fontSize: 10, marginTop: 14 }}>Apple Pay · Google Pay · Card · Stripe-secured</p>
+      </section>
+
+      {/* Trademark / independence notice */}
+      <section style={{ background: 'var(--cream-2)', borderTop: '1px solid var(--rule)', padding: '20px' }}>
+        <p style={{ maxWidth: 760, margin: '0 auto', fontSize: 11.5, color: 'var(--ink-3)', lineHeight: 1.6, textAlign: 'center' }}>
+          <strong style={{ color: 'var(--ink-2)' }}>Trademark &amp; independence notice.</strong>{' '}
+          GCSEMathsAI is an independent revision resource. The names &ldquo;{f.board}&rdquo; and &ldquo;Pearson&rdquo;, and the 1MA1 specification reference, are trademarks of their respective owners, used here only to identify the examination these practice papers are written for. We are not affiliated with, endorsed by, or associated with Pearson Education or {f.board}. All practice papers, mark schemes and worked solutions were carefully written from scratch by the GCSEMathsAI team based on the publicly available specification.
+        </p>
       </section>
     </main>
   )

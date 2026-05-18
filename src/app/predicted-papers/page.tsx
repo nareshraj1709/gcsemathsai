@@ -46,10 +46,10 @@ export default function PredictedPapersPage() {
           Predicted Papers · Edexcel Higher 2026
         </span>
         <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 760 }}>
-          Predicted Paper 2 &amp; Paper 3 — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>everything we think will come up</em>.
+          Paper 2 &amp; Paper 3 practice — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>written for the topics likeliest to appear</em>.
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 620, margin: '0 auto' }}>
-          Ten predicted papers for Edexcel 1MA1 Higher (five for Paper 2, five for Paper 3). Calibrated to 2026 question styles and weighted to the topics most likely to appear. Each comes with a full mark scheme and worked solutions.
+          Ten practice papers for Edexcel 1MA1 Higher — five Paper-2 style, five Paper-3 style. Carefully written by our team from the published 1MA1 specification, with full mark schemes and worked solutions. Each paper is shaped to the topics most commonly examined in recent series.
         </p>
       </section>
 
@@ -164,7 +164,7 @@ export default function PredictedPapersPage() {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
           {[
-            { q: 'Are these the real exam papers?', a: 'No. Every question is original, written in the Edexcel 1MA1 Higher style and calibrated to the topics most likely to appear in 2026. Selling the real papers would breach Pearson copyright.' },
+            { q: 'Are these the real exam papers?', a: 'No. Every question is written from scratch by our team, in the style of Edexcel 1MA1 Higher and calibrated to the published 1MA1 specification. These are independent practice papers — we are not affiliated with, endorsed by, or associated with Pearson Edexcel.' },
             { q: 'How quickly do I get the PDFs?', a: 'Instantly. After Stripe confirms the payment you will receive an email with a download link for the PDFs — usually within 60 seconds.' },
             { q: 'Which paper should I buy first?', a: 'If you can only buy one, get Paper 2. It is typically the first calculator paper in the exam series and the bigger predictor of how Paper 3 will run.' },
             { q: 'Can I share these with my class?', a: 'A single purchase is for one student. For class / school licences, get in touch via /contact — we offer per-student rates from £4.' },
@@ -204,6 +204,14 @@ export default function PredictedPapersPage() {
             See Foundation practice papers →
           </Link>
         </div>
+      </section>
+
+      {/* Trademark / independence notice */}
+      <section style={{ background: 'var(--cream-2)', borderTop: '1px solid var(--rule)', padding: '20px' }}>
+        <p style={{ maxWidth: 760, margin: '0 auto', fontSize: 11.5, color: 'var(--ink-3)', lineHeight: 1.6, textAlign: 'center' }}>
+          <strong style={{ color: 'var(--ink-2)' }}>Trademark &amp; independence notice.</strong>{' '}
+          GCSEMathsAI is an independent revision resource. The names &ldquo;Edexcel&rdquo; and &ldquo;Pearson&rdquo;, and the 1MA1 specification reference, are trademarks of Pearson Education Ltd, used here only to identify the examination these practice papers are written for. We are not affiliated with, endorsed by, or associated with Pearson Education or Edexcel. All practice papers, mark schemes and worked solutions on this page were carefully written from scratch by the GCSEMathsAI team based on the publicly available specification.
+        </p>
       </section>
     </main>
   )

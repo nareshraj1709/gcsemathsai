@@ -46,10 +46,10 @@ export default function PredictedPapersPromo({
           ◆ New · Edexcel Higher 2026
         </span>
         <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(20px, 2.6vw, 26px)', fontWeight: 600, color: 'var(--cream)', margin: 0, letterSpacing: '-0.01em', lineHeight: 1.18 }}>
-          Practising for the real thing? <em style={{ color: 'var(--gold-soft)' }}>Predicted Papers</em> are here.
+          Practising for the real thing? <em style={{ color: 'var(--gold-soft)' }}>Practice Papers</em> are here.
         </h3>
         <p style={{ fontSize: 14, color: 'var(--cream)', opacity: 0.92, lineHeight: 1.55, margin: 0 }}>
-          Ten predicted papers for Edexcel 1MA1 Higher 2026 — five Paper 2, five Paper 3. Full mark schemes and worked solutions. Instant PDF download.
+          Ten practice papers for Edexcel 1MA1 Higher 2026 — five Paper-2 style, five Paper-3 style, written by our team from the published specification. Full mark schemes and worked solutions. Instant PDF download.
         </p>
         <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', marginTop: 6 }}>
           <a href={link(bundle)} target="_blank" rel="noopener"
@@ -81,7 +81,7 @@ export default function PredictedPapersPromo({
           New · Edexcel Higher 2026
         </p>
         <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(20px, 2.6vw, 26px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 10px', letterSpacing: '-0.01em' }}>
-          Ten predicted papers between you and your exam.
+          Ten practice papers between you and your exam.
         </h3>
         <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6, marginBottom: 18, maxWidth: 520, margin: '0 auto 18px' }}>
           Five Paper 2, five Paper 3 — full mark schemes and worked solutions. Instant PDF download after checkout.
@@ -104,10 +104,10 @@ export default function PredictedPapersPromo({
             New · Edexcel Higher 2026
           </span>
           <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 8px', letterSpacing: '-0.01em' }}>
-            Predicted Papers — calibrated for the 2026 exam.
+            Practice Papers — calibrated for the 2026 exam.
           </h3>
           <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6, maxWidth: 540, margin: '0 auto' }}>
-            Ten predicted Paper 2 and Paper 3 papers, with full mark schemes and worked solutions. Instant PDF download.
+            Ten Paper-2 and Paper-3 style practice papers, written by our team from the published Edexcel 1MA1 specification. Full mark schemes and worked solutions. Instant PDF download.
           </p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14 }}>

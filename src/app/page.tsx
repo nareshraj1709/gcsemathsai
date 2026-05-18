@@ -131,11 +131,11 @@ export default function Home() {
           <div className="sec-head" style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 32px' }}>
             <div className="sec-label" style={{ justifyContent: 'center' }}>
               <span style={{ background: 'var(--gold-soft)', color: 'var(--gold)', padding: '3px 10px', borderRadius: 999, fontSize: 10 }}>NEW · 2026</span>
-              <span style={{ marginLeft: 8 }}>Predicted Papers · Edexcel Higher</span>
+              <span style={{ marginLeft: 8 }}>Higher Practice Papers · Edexcel style</span>
             </div>
-            <h2>Ten predicted papers, <em>calibrated for 2026</em>.</h2>
+            <h2>Ten practice papers, <em>calibrated for 2026</em>.</h2>
             <p className="sec-sub" style={{ margin: '0 auto' }}>
-              Original Paper 2 and Paper 3 predicted papers for Edexcel 1MA1 Higher — with full mark schemes and worked solutions. Instant PDF download after Stripe checkout.
+              Paper-2 style and Paper-3 style practice papers, carefully written by our team from the published Edexcel 1MA1 Higher specification. Full mark schemes and worked solutions. Instant PDF download after Stripe checkout. <em style={{ color: 'var(--ink-3)' }}>Not affiliated with Pearson Edexcel.</em>
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16, maxWidth: 1100, margin: '0 auto' }}>
@@ -189,7 +189,7 @@ export default function Home() {
             </div>
             <h2>Foundation tier? <em>Ten full practice papers</em>, every grade-boundary topic.</h2>
             <p className="sec-sub" style={{ margin: '0 auto' }}>
-              Five Paper-2 style and five Paper-3 style practice papers for Edexcel 1MA1 Foundation. Calibrated to the grade 1–5 difficulty curve, with mark schemes and worked solutions for every question.
+              Five Paper-2 style and five Paper-3 style practice papers, carefully written from the published Edexcel 1MA1 Foundation specification. Calibrated to the grade 1–5 difficulty curve, with mark schemes and worked solutions for every question. <em style={{ color: 'var(--ink-3)' }}>Not affiliated with Pearson Edexcel.</em>
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16, maxWidth: 1100, margin: '0 auto' }}>
