@@ -7,7 +7,7 @@ import path from 'path'
 import { PDFDocument, StandardFonts, degrees, rgb } from 'pdf-lib'
 
 const ROOT = process.cwd()
-const SAMPLE_EMAIL = 'enquiries@gcsemathsai.co.uk'
+const SAMPLE_EMAIL = 'suppoprtgcsemaths@gmail.com'
 const SAMPLE_REF = 'cs_test_a1b2c3d4e5f6g7h8i9j0'
 const OUT_DIR = path.join(ROOT, 'preview-watermarked')
 

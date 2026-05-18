@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
   const { error } = await resend.emails.send({
     from: 'GCSEMathsAI <noreply@gcsemathsai.co.uk>',
-    to: 'enquiries@gcsemathsai.co.uk',
+    to: 'suppoprtgcsemaths@gmail.com',
     replyTo: email,
     subject: `[${category}] Contact form: ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nCategory: ${category}\n\nMessage:\n${message}`,

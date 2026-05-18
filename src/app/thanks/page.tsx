@@ -80,7 +80,7 @@ function ThanksInner() {
       const r = await fetch(`/api/downloads/${purchase.sku_id}/${encodeURIComponent(filename)}?session_id=${encodeURIComponent(sessionId)}`)
       if (!r.ok) {
         const j = await r.json().catch(() => ({}))
-        alert(j.error || 'Download failed. Please email enquiries@gcsemathsai.co.uk')
+        alert(j.error || 'Download failed. Please email suppoprtgcsemaths@gmail.com')
         return
       }
       const blob = await r.blob()
@@ -143,7 +143,7 @@ function ThanksInner() {
             </p>
             <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.65 }}>
               Your payment may have gone through, but we need the session id to unlock the downloads. Email{' '}
-              <a href="mailto:enquiries@gcsemathsai.co.uk" style={{ color: 'var(--green)', textDecoration: 'underline' }}>enquiries@gcsemathsai.co.uk</a>{' '}
+              <a href="mailto:suppoprtgcsemaths@gmail.com" style={{ color: 'var(--green)', textDecoration: 'underline' }}>suppoprtgcsemaths@gmail.com</a>{' '}
               with the email you used at checkout and we&rsquo;ll send your PDFs within a few hours.
             </p>
           </div>
@@ -156,7 +156,7 @@ function ThanksInner() {
               The server returned: <code style={{ background: 'var(--cream)', padding: '1px 6px', borderRadius: 4, fontFamily: 'var(--mono)' }}>{error}</code>
             </p>
             <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.65 }}>
-              Email <a href="mailto:enquiries@gcsemathsai.co.uk" style={{ color: 'var(--green)', textDecoration: 'underline' }}>enquiries@gcsemathsai.co.uk</a> with the email you used at Stripe and we&rsquo;ll send your PDFs manually.
+              Email <a href="mailto:suppoprtgcsemaths@gmail.com" style={{ color: 'var(--green)', textDecoration: 'underline' }}>suppoprtgcsemaths@gmail.com</a> with the email you used at Stripe and we&rsquo;ll send your PDFs manually.
             </p>
           </div>
         )}
@@ -231,7 +231,7 @@ function ThanksInner() {
         {/* Support */}
         <div style={{ marginTop: 32, padding: 18, background: 'var(--cream-2)', borderRadius: 10, fontSize: 13, color: 'var(--ink-3)', lineHeight: 1.6, textAlign: 'center' }}>
           Trouble downloading? Email{' '}
-          <a href="mailto:enquiries@gcsemathsai.co.uk" style={{ color: 'var(--green)', textDecoration: 'underline' }}>enquiries@gcsemathsai.co.uk</a>{' '}
+          <a href="mailto:suppoprtgcsemaths@gmail.com" style={{ color: 'var(--green)', textDecoration: 'underline' }}>suppoprtgcsemaths@gmail.com</a>{' '}
           with the email you used at Stripe and we&rsquo;ll fix it within a few hours.
         </div>
       </section>
