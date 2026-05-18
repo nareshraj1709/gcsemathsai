@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PREDICTED_PAPERS } from '@/lib/predicted-papers'
+import { PREDICTED_PAPERS, getCheckoutUrl } from '@/lib/predicted-papers'
 
 export const metadata: Metadata = {
   title: 'Edexcel GCSE Maths Predicted Papers 2026 — Paper 2 & Paper 3',
@@ -103,7 +103,7 @@ export default function PredictedPapersPage() {
                 ))}
               </ul>
               <a
-                href={p.stripeUrl}
+                href={getCheckoutUrl(p)}
                 target="_blank"
                 rel="noopener"
                 className="btn btn-primary"
@@ -184,8 +184,8 @@ export default function PredictedPapersPage() {
         <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
           The bundle saves £4 and covers both calculator papers. Most students buy this one.
         </p>
-        <a href={PREDICTED_PAPERS[2].stripeUrl} target="_blank" rel="noopener" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>
-          Get the Paper 2 + 3 Bundle — £15.99 →
+        <a href={getCheckoutUrl(PREDICTED_PAPERS[2])} target="_blank" rel="noopener" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>
+          Get the Paper 2 + 3 Bundle — {PREDICTED_PAPERS[2].price} →
         </a>
         <p style={{ ...monoLabel, color: 'var(--green-soft)', fontSize: 10, marginTop: 14 }}>Apple Pay · Google Pay · Card · Stripe-secured</p>
       </section>

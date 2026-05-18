@@ -103,8 +103,15 @@ export async function POST(req: NextRequest) {
         }
       }
     } catch {
-      // Best-effort; fall through to insert with null SKU and reconcile manually
+      // Best-effort; fall through to amount-based inference / null SKU
     }
+  }
+
+  // If we still can't identify the SKU, fall back to the full bundle so the
+  // buyer can download all ten papers. Over-delivering beats blocking on an
+  // error — Stripe has already verified the payment.
+  if (!skuId) {
+    skuId = 'bundle'
   }
 
   const supabase = createClient(supabaseUrl, serviceRoleKey)

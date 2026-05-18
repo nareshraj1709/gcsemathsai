@@ -120,7 +120,7 @@ export default function MyPapersPage() {
                   const sku = p.sku_id ? getSkuById(p.sku_id) : null
                   return (
                     <li key={i} style={{ display: 'flex', justifyContent: 'space-between', gap: 12, fontSize: 14, color: 'var(--ink-2)' }}>
-                      <span style={{ fontWeight: 600 }}>{sku?.title ?? p.sku_id ?? 'Purchase'}</span>
+                      <span style={{ fontWeight: 600 }}>{sku?.title ?? p.sku_id ?? 'Purchase (pack to confirm)'}</span>
                       <span style={{ color: 'var(--ink-3)' }}>
                         {p.amount_total != null && p.currency ? new Intl.NumberFormat('en-GB', { style: 'currency', currency: p.currency.toUpperCase() }).format(p.amount_total / 100) : ''}
                         {' · '}
@@ -130,6 +130,13 @@ export default function MyPapersPage() {
                   )
                 })}
               </ul>
+              {purchases.some(p => !p.sku_id) && (
+                <p style={{ marginTop: 14, padding: 12, background: 'var(--gold-soft)', border: '1px solid var(--gold)', borderRadius: 8, fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.6 }}>
+                  <strong style={{ color: 'var(--gold)' }}>One of your purchases isn&rsquo;t tagged with a pack.</strong> Email{' '}
+                  <a href="mailto:enquiries@gcsemathsai.co.uk" style={{ color: 'var(--green)', textDecoration: 'underline' }}>enquiries@gcsemathsai.co.uk</a>{' '}
+                  from <strong>{email}</strong> with the pack name (Paper 2, Paper 3, or Bundle) and we&rsquo;ll unlock it within a few hours.
+                </p>
+              )}
             </div>
 
             {/* Downloads grouped by SKU */}

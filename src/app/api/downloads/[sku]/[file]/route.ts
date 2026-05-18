@@ -51,6 +51,7 @@ async function verifyByStripeSession(sessionId: string, skuId: string): Promise<
   const session = await sessionRes.json() as {
     payment_status?: string; client_reference_id?: string | null
     customer_details?: { email?: string }; customer_email?: string
+    amount_total?: number
   }
   if (session.payment_status !== 'paid') return { ok: false }
 
@@ -67,7 +68,11 @@ async function verifyByStripeSession(sessionId: string, skuId: string): Promise<
       }
     }
   }
-  if (!boughtSkuId || !entitlingSkus(skuId).includes(boughtSkuId)) return { ok: false }
+  // If we still can't identify the SKU but the session is paid, treat the
+  // buyer as having bought the full bundle. Over-delivering beats failing.
+  if (!boughtSkuId) boughtSkuId = 'bundle'
+
+  if (!entitlingSkus(skuId).includes(boughtSkuId)) return { ok: false }
 
   const email = session.customer_details?.email || session.customer_email || ''
   return { ok: true, email: email.toLowerCase().trim() }

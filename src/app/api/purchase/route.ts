@@ -33,7 +33,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'not paid' }, { status: 402 })
   }
 
-  // Identify SKU: prefer client_reference_id, fall back to Price ID lookup.
+  // Identify SKU: prefer client_reference_id, then Price ID, then amount.
   let skuId: string | null = null
   const ref = session.client_reference_id
   if (ref === 'paper2' || ref === 'paper3' || ref === 'bundle') skuId = ref
@@ -47,7 +47,16 @@ export async function GET(req: NextRequest) {
       }
     }
   }
-  if (!skuId) return NextResponse.json({ error: 'cannot resolve sku' }, { status: 422 })
+  // Bundle is the only £9.99 SKU — safe to infer from amount when the buy
+  // URL was missing client_reference_id.
+  if (!skuId && session.amount_total === 999) skuId = 'bundle'
+  // Paper 2 / Paper 3 share £5.99 and the same Stripe Payment Link, so we
+  // can't tell which one this buyer wanted. They paid — over-deliver and
+  // give them the full bundle rather than blocking on the error.
+  if (!skuId && session.amount_total === 599) skuId = 'bundle'
+  // Any other paid session we can't identify: still over-deliver the full
+  // bundle. Stripe has already verified the payment is real.
+  if (!skuId) skuId = 'bundle'
 
   const sku = getSkuById(skuId)
   if (!sku) return NextResponse.json({ error: 'sku not found' }, { status: 404 })
