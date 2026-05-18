@@ -13,7 +13,15 @@ const OUT_DIR = path.join(ROOT, 'preview-watermarked')
 
 const FILES = [
   ['paper2', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetA.pdf'],
+  ['paper2', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetB.pdf'],
+  ['paper2', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetC.pdf'],
+  ['paper2', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetD.pdf'],
+  ['paper2', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetE.pdf'],
   ['paper3', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetA.pdf'],
+  ['paper3', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetB.pdf'],
+  ['paper3', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetC.pdf'],
+  ['paper3', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetD.pdf'],
+  ['paper3', 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetE.pdf'],
 ]
 
 const FOOTER_LINE = '© 2026 GCSEMathsAI · gcsemathsai.co.uk · licensed for personal revision use · redistribution prohibited'

@@ -86,6 +86,7 @@ export default function Nav() {
 
   const resourceLinks = [
     { label: 'Predicted Papers · NEW', path: '/predicted-papers', desc: 'Edexcel Higher Paper 2 & 3 — predicted 2026' },
+    { label: 'Foundation Practice Papers · NEW', path: '/foundation-papers', desc: 'Edexcel Foundation Paper 2 & 3 — 10 practice papers' },
     { label: 'Blog', path: '/blog', desc: 'Revision guides and exam tips' },
     { label: 'Glossary', path: '/glossary', desc: '60+ GCSE Maths terms defined' },
     { label: 'Question Types', path: '/question-types', desc: 'How to answer every command word' },

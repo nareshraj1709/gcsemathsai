@@ -3,7 +3,7 @@
 // download immediately, without waiting for the asynchronous webhook to land.
 
 import { NextRequest, NextResponse } from 'next/server'
-import { getSkuById, getSkuByStripePriceId } from '@/lib/predicted-papers'
+import { getSkuById, getSkuByStripePriceId, isKnownSkuId } from '@/lib/predicted-papers'
 
 export const runtime = 'nodejs'
 
@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
   // Identify SKU: prefer client_reference_id, then Price ID, then amount.
   let skuId: string | null = null
   const ref = session.client_reference_id
-  if (ref === 'paper2' || ref === 'paper3' || ref === 'bundle') skuId = ref
+  if (isKnownSkuId(ref)) skuId = ref
   if (!skuId && itemsRes.ok) {
     const items = await itemsRes.json() as { data?: Array<{ price?: { id?: string } }> }
     for (const it of items.data ?? []) {

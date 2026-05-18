@@ -1,16 +1,23 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PREDICTED_PAPERS, getCheckoutUrl } from '@/lib/predicted-papers'
+import { FOUNDATION_PAPERS, getCheckoutUrl } from '@/lib/predicted-papers'
 
 export const metadata: Metadata = {
-  title: 'Edexcel GCSE Maths Predicted Papers 2026 — Paper 2 & Paper 3',
-  description: 'Five predicted Paper 2 and five predicted Paper 3 papers for Edexcel GCSE Maths Higher (1MA1), with full mark schemes and worked solutions. Calibrated to 2026 exams.',
-  keywords: ['edexcel gcse maths predicted papers', 'gcse maths paper 2 prediction', 'gcse maths paper 3 prediction', 'edexcel 1ma1 higher predicted', 'gcse maths 2026 predicted papers', 'edexcel higher predicted'],
-  alternates: { canonical: 'https://www.gcsemathsai.co.uk/predicted-papers' },
+  title: 'Edexcel GCSE Maths Foundation Practice Papers — Paper 2 & Paper 3',
+  description: 'Ten Foundation-tier calculator practice papers for Edexcel GCSE Maths (1MA1) — five Paper-2 style, five Paper-3 style. Full mark schemes and worked solutions. Instant PDF download.',
+  keywords: [
+    'edexcel gcse maths foundation practice papers',
+    'gcse maths foundation paper 2 practice',
+    'gcse maths foundation paper 3 practice',
+    'edexcel 1ma1 foundation practice',
+    'gcse maths grade 1 to 5 practice papers',
+    'foundation tier maths papers 2026',
+  ],
+  alternates: { canonical: 'https://www.gcsemathsai.co.uk/foundation-papers' },
   openGraph: {
-    title: 'Edexcel GCSE Maths Predicted Papers 2026 | GCSEMathsAI',
-    description: 'Five predicted Paper 2 and five predicted Paper 3 papers for Edexcel Higher, with mark schemes and worked solutions.',
-    url: 'https://www.gcsemathsai.co.uk/predicted-papers',
+    title: 'Edexcel GCSE Maths Foundation Practice Papers | GCSEMathsAI',
+    description: 'Ten Foundation-tier calculator practice papers with full mark schemes and worked solutions.',
+    url: 'https://www.gcsemathsai.co.uk/foundation-papers',
     type: 'website',
   },
 }
@@ -18,8 +25,8 @@ export const metadata: Metadata = {
 const monoLabel = { fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const }
 const BASE = 'https://www.gcsemathsai.co.uk'
 
-export default function PredictedPapersPage() {
-  const productSchemas = PREDICTED_PAPERS.map(p => ({
+export default function FoundationPapersPage() {
+  const productSchemas = FOUNDATION_PAPERS.map(p => ({
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: p.title,
@@ -30,7 +37,7 @@ export default function PredictedPapersPage() {
       price: p.price.replace('£', ''),
       priceCurrency: 'GBP',
       availability: 'https://schema.org/InStock',
-      url: `${BASE}/predicted-papers`,
+      url: `${BASE}/foundation-papers`,
     },
   }))
 
@@ -43,20 +50,20 @@ export default function PredictedPapersPage() {
       {/* Hero */}
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
         <span style={{ ...monoLabel, color: 'var(--gold)', background: 'var(--gold-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 16 }}>
-          Predicted Papers · Edexcel Higher 2026
+          Foundation Practice Papers · Edexcel 2026
         </span>
         <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 760 }}>
-          Predicted Paper 2 &amp; Paper 3 — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>everything we think will come up</em>.
+          Foundation Paper 2 &amp; Paper 3 — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>full-length practice, every grade-boundary topic</em>.
         </h1>
-        <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 620, margin: '0 auto' }}>
-          Ten predicted papers for Edexcel 1MA1 Higher (five for Paper 2, five for Paper 3). Calibrated to 2026 question styles and weighted to the topics most likely to appear. Each comes with a full mark scheme and worked solutions.
+        <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 640, margin: '0 auto' }}>
+          Ten Foundation-tier calculator practice papers for Edexcel 1MA1 — five Paper-2 style, five Paper-3 style. Calibrated to the grade 1–5 difficulty curve, with full mark schemes, M1/A1/B1 codes and worked solutions for every question. Sitting Higher? <Link href="/predicted-papers" style={{ color: 'var(--green)', textDecoration: 'underline' }}>Our Higher predicted papers are here</Link>.
         </p>
       </section>
 
       {/* Product cards */}
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 18 }}>
-          {PREDICTED_PAPERS.map(p => (
+          {FOUNDATION_PAPERS.map(p => (
             <article
               key={p.id}
               style={{
@@ -125,7 +132,6 @@ export default function PredictedPapersPage() {
           ))}
         </div>
 
-        {/* Trust strip */}
         <div style={{ marginTop: 36, display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap', fontFamily: 'var(--mono)', fontSize: 12, fontWeight: 700, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
           <span>Instant PDF download</span>
           <span>Secure Stripe checkout</span>
@@ -137,14 +143,14 @@ export default function PredictedPapersPage() {
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px' }}>
           <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 8 }}>What you get</p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 24px', letterSpacing: '-0.01em' }}>
-            Every pack is built the <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>way an exam team builds a real paper</em>.
+            Every pack is built for <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>grade 1 to 5 students who want to nail the Foundation paper</em>.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
             {[
-              { num: 'I.', title: 'Calibrated to 2026', body: 'Each paper is built around the topics most likely to appear in the 2026 series, using the last six years of Edexcel question style as the base.' },
-              { num: 'II.', title: 'Full mark schemes', body: 'Every question has a full Edexcel-style mark scheme. Method (M) marks, accuracy (A) marks and follow-through are all annotated.' },
-              { num: 'III.', title: 'Worked solutions', body: 'Not just the answer. Every solution is written the way a top student would lay it out — clear method, every step earning its mark.' },
-              { num: 'IV.', title: 'Topic coverage map', body: 'A one-page topic map per paper so you can spot your weak areas at a glance and know exactly what to revise next.' },
+              { num: 'I.', title: 'Grade 1–5 difficulty ramp', body: 'Each paper starts with Q1 a struggling grade-1 student can solve in under 30 seconds and finishes with grade-4/5 multi-step problems — exactly the curve Edexcel Foundation papers use.' },
+              { num: 'II.', title: 'Authentic Foundation topics only', body: 'Percentages, ratio, statistics, basic Pythagoras, volume of a prism, sequences, two-way tables. No quadratic formula, no SOHCAHTOA, no circle theorems — nothing outside the Foundation specification.' },
+              { num: 'III.', title: 'Full mark schemes', body: 'Every question has a complete M1 / A1 / B1 / C1 mark scheme so students see exactly where method marks are awarded — the same way examiners grade.' },
+              { num: 'IV.', title: 'Step-by-step worked solutions', body: 'Not just the answer. Every solution is written out in detail with the reasoning at each step, so students can see where they went wrong and learn from it.' },
             ].map(s => (
               <div key={s.num} style={{ background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 22 }}>
                 <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 32, fontWeight: 500, color: 'var(--green)', margin: '0 0 8px', lineHeight: 1 }}>{s.num}</p>
@@ -164,9 +170,10 @@ export default function PredictedPapersPage() {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
           {[
-            { q: 'Are these the real exam papers?', a: 'No. Every question is original, written in the Edexcel 1MA1 Higher style and calibrated to the topics most likely to appear in 2026. Selling the real papers would breach Pearson copyright.' },
-            { q: 'How quickly do I get the PDFs?', a: 'Instantly. After Stripe confirms the payment you will receive an email with a download link for the PDFs — usually within 60 seconds.' },
-            { q: 'Which paper should I buy first?', a: 'If you can only buy one, get Paper 2. It is typically the first calculator paper in the exam series and the bigger predictor of how Paper 3 will run.' },
+            { q: 'Are these the real exam papers?', a: 'No. Every question is original, written in the Edexcel 1MA1 Foundation style and pitched at grades 1–5. They are practice papers — full-length and exam-shaped — not leaked or predicted.' },
+            { q: 'Are Sets 1–5 different from Sets 6–10?', a: 'Yes. Sets 1–5 mirror the Edexcel Paper 2F style (percentages, ratio, statistics, scatter graphs, pie charts, speed-distance-time). Sets 6–10 mirror Paper 3F style (compound interest, Pythagoras, volume / surface area, sequences, probability with trees and two-way tables, bearings, and at least one explicit "show that" per paper).' },
+            { q: 'How quickly do I get the PDFs?', a: 'Instantly. After Stripe confirms the payment you are taken to a download page and can also receive the links by email. Each PDF is watermarked with your buyer reference.' },
+            { q: 'Which pack should I buy first?', a: 'If you can only buy one, get the bundle — it is the cheapest per paper and covers the full Foundation specification. If you have a specific weakness in Paper 2 or Paper 3, pick the matching pack.' },
             { q: 'Can I share these with my class?', a: 'A single purchase is for one student. For class / school licences, get in touch via /contact — we offer per-student rates from £4.' },
           ].map(item => (
             <div key={item.q}>
@@ -177,33 +184,33 @@ export default function PredictedPapersPage() {
         </div>
       </section>
 
-      <section style={{ background: 'var(--green)', padding: 'clamp(32px, 5vw, 56px) 20px', textAlign: 'center' }}>
-        <h2 style={{ color: 'var(--cream)', fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 600, margin: '0 0 12px', letterSpacing: '-0.01em' }}>
-          Ten papers between you and your exam.
-        </h2>
-        <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
-          The bundle saves £4 and covers both calculator papers. Most students buy this one.
-        </p>
-        <a href={getCheckoutUrl(PREDICTED_PAPERS[2])} target="_blank" rel="noopener" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>
-          Get the Paper 2 + 3 Bundle — {PREDICTED_PAPERS[2].price} →
-        </a>
-        <p style={{ ...monoLabel, color: 'var(--green-soft)', fontSize: 10, marginTop: 14 }}>Apple Pay · Google Pay · Card · Stripe-secured</p>
-      </section>
-
-      {/* Cross-sell to Foundation */}
+      {/* Cross-sell to Higher */}
       <section style={{ background: 'var(--paper)', borderTop: '1px solid var(--rule)', padding: 'clamp(28px, 4vw, 48px) 20px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 10 }}>Sitting Foundation tier?</p>
+          <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 10 }}>Sitting Higher tier?</p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(20px, 3vw, 26px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 14px', letterSpacing: '-0.01em' }}>
-            Our Foundation practice papers are here too.
+            Our Higher predicted papers are here too.
           </h2>
           <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6, marginBottom: 18 }}>
-            Ten Foundation-tier calculator practice papers for Edexcel 1MA1 — five Paper-2 style, five Paper-3 style.
+            Ten predicted Paper 2 and Paper 3 papers for Edexcel 1MA1 Higher — calibrated to the 2026 series.
           </p>
-          <Link href="/foundation-papers" className="btn btn-outline" style={{ padding: '10px 20px', fontSize: 14 }}>
-            See Foundation practice papers →
+          <Link href="/predicted-papers" className="btn btn-outline" style={{ padding: '10px 20px', fontSize: 14 }}>
+            See Higher predicted papers →
           </Link>
         </div>
+      </section>
+
+      <section style={{ background: 'var(--green)', padding: 'clamp(32px, 5vw, 56px) 20px', textAlign: 'center' }}>
+        <h2 style={{ color: 'var(--cream)', fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 600, margin: '0 0 12px', letterSpacing: '-0.01em' }}>
+          Ten Foundation papers between you and your exam.
+        </h2>
+        <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
+          The bundle saves £1.99 and covers both calculator papers — five Paper-2 style and five Paper-3 style. Most students buy this one.
+        </p>
+        <a href={getCheckoutUrl(FOUNDATION_PAPERS[2])} target="_blank" rel="noopener" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>
+          Get the Foundation Bundle — {FOUNDATION_PAPERS[2].price} →
+        </a>
+        <p style={{ ...monoLabel, color: 'var(--green-soft)', fontSize: 10, marginTop: 14 }}>Apple Pay · Google Pay · Card · Stripe-secured</p>
       </section>
     </main>
   )

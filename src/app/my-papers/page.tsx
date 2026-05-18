@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
-import { PREDICTED_PAPER_FAMILIES, getSkuById, type PredictedPaperSku } from '@/lib/predicted-papers'
+import { PREDICTED_PAPER_FAMILIES, getSkuById, entitlingSkus, type PredictedPaperSku } from '@/lib/predicted-papers'
 import Footer from '@/components/Footer'
 
 const monoLabel = { fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const }
@@ -41,9 +41,16 @@ export default function MyPapersPage() {
   /** Returns the SKUs (as ids) whose files this user can download. */
   const entitled = new Set<string>()
   for (const p of purchases) {
-    if (p.sku_id === 'paper2') entitled.add('paper2')
-    if (p.sku_id === 'paper3') entitled.add('paper3')
-    if (p.sku_id === 'bundle') { entitled.add('paper2'); entitled.add('paper3'); entitled.add('bundle') }
+    if (!p.sku_id) continue
+    // A bundle purchase entitles both single-paper SKUs in the same tier.
+    if (p.sku_id === 'bundle') {
+      entitled.add('paper2'); entitled.add('paper3'); entitled.add('bundle')
+    } else if (p.sku_id === 'foundation_bundle') {
+      entitled.add('foundation_paper2'); entitled.add('foundation_paper3'); entitled.add('foundation_bundle')
+    } else {
+      // entitlingSkus handles the reverse direction (bundle entitles paper2/3).
+      for (const s of entitlingSkus(p.sku_id)) entitled.add(s)
+    }
   }
 
   async function download(skuId: string, filename: string) {
@@ -74,8 +81,8 @@ export default function MyPapersPage() {
   const SKUS_TO_SHOW: PredictedPaperSku[] = []
   for (const f of PREDICTED_PAPER_FAMILIES) {
     for (const s of f.skus) {
-      // Hide the bundle as a separate panel — its files are the union of paper2 + paper3.
-      if (s.id === 'bundle') continue
+      // Hide bundles as separate panels — their files are the union of paper2 + paper3.
+      if (s.id === 'bundle' || s.id === 'foundation_bundle') continue
       SKUS_TO_SHOW.push(s)
     }
   }
@@ -176,7 +183,11 @@ export default function MyPapersPage() {
                   </div>
                   {!hasAccess && (
                     <div style={{ marginTop: 14 }}>
-                      <Link href="/predicted-papers/edexcel-gcse-maths-higher-2026" className="btn btn-outline" style={{ padding: '9px 18px', fontSize: 13 }}>
+                      <Link
+                        href={sku.id.startsWith('foundation_') ? '/foundation-papers' : '/predicted-papers/edexcel-gcse-maths-higher-2026'}
+                        className="btn btn-outline"
+                        style={{ padding: '9px 18px', fontSize: 13 }}
+                      >
                         Buy this pack — {sku.price} →
                       </Link>
                     </div>

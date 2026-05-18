@@ -11,17 +11,13 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import fs from 'fs/promises'
 import path from 'path'
-import { getSkuById, getSkuByStripePriceId, PREDICTED_PAPER_FAMILIES } from '@/lib/predicted-papers'
+import {
+  getSkuById, getSkuByStripePriceId, PREDICTED_PAPER_FAMILIES,
+  entitlingSkus, isKnownSkuId,
+} from '@/lib/predicted-papers'
 import { applyWatermark } from '@/lib/watermark-pdf'
 
 export const runtime = 'nodejs'
-
-function entitlingSkus(skuId: string): string[] {
-  if (skuId === 'paper2') return ['paper2', 'bundle']
-  if (skuId === 'paper3') return ['paper3', 'bundle']
-  if (skuId === 'bundle') return ['bundle']
-  return []
-}
 
 function fileBelongsToSku(skuId: string, filename: string): boolean {
   const sku = getSkuById(skuId)
@@ -29,8 +25,13 @@ function fileBelongsToSku(skuId: string, filename: string): boolean {
   return sku.files.some(f => f.filename === filename)
 }
 
-function fileBelongsToBundle(filename: string): boolean {
-  const bundle = getSkuById('bundle')
+/** Returns the bundle SKU id matching the same tier as `skuId`. */
+function siblingBundleSkuId(skuId: string): string {
+  return skuId.startsWith('foundation_') ? 'foundation_bundle' : 'bundle'
+}
+
+function fileBelongsToBundle(skuId: string, filename: string): boolean {
+  const bundle = getSkuById(siblingBundleSkuId(skuId))
   return !!bundle?.files.some(f => f.filename === filename)
 }
 
@@ -57,7 +58,7 @@ async function verifyByStripeSession(sessionId: string, skuId: string): Promise<
 
   let boughtSkuId: string | null = null
   const ref = session.client_reference_id
-  if (ref === 'paper2' || ref === 'paper3' || ref === 'bundle') boughtSkuId = ref
+  if (isKnownSkuId(ref)) boughtSkuId = ref
   if (!boughtSkuId && itemsRes.ok) {
     const items = await itemsRes.json() as { data?: Array<{ price?: { id?: string } }> }
     for (const it of items.data ?? []) {
@@ -68,9 +69,10 @@ async function verifyByStripeSession(sessionId: string, skuId: string): Promise<
       }
     }
   }
-  // If we still can't identify the SKU but the session is paid, treat the
-  // buyer as having bought the full bundle. Over-delivering beats failing.
-  if (!boughtSkuId) boughtSkuId = 'bundle'
+  // If we still can't identify the SKU but the session is paid, fall back
+  // to the sibling bundle of the requested file's tier. Over-deliver in
+  // that tier rather than blocking the download or mixing tiers.
+  if (!boughtSkuId) boughtSkuId = siblingBundleSkuId(skuId)
 
   if (!entitlingSkus(skuId).includes(boughtSkuId)) return { ok: false }
 
@@ -87,15 +89,20 @@ export async function GET(req: NextRequest, { params }: Props) {
   if (decodedFile.includes('/') || decodedFile.includes('\\') || decodedFile.includes('..')) {
     return NextResponse.json({ error: 'invalid filename' }, { status: 400 })
   }
-  if (!fileBelongsToSku(sku, decodedFile) && !fileBelongsToBundle(decodedFile)) {
+  if (!fileBelongsToSku(sku, decodedFile) && !fileBelongsToBundle(sku, decodedFile)) {
     return NextResponse.json({ error: 'unknown file for this sku' }, { status: 404 })
   }
 
   let folder: 'paper2' | 'paper3' | null = null
+  let contentRoot: 'predicted-papers' | 'foundation-papers' = 'predicted-papers'
   for (const f of PREDICTED_PAPER_FAMILIES) {
     for (const s of f.skus) {
       const hit = s.files.find(x => x.filename === decodedFile)
-      if (hit) { folder = hit.folder; break }
+      if (hit) {
+        folder = hit.folder
+        contentRoot = s.contentRoot ?? 'predicted-papers'
+        break
+      }
     }
     if (folder) break
   }
@@ -141,7 +148,7 @@ export async function GET(req: NextRequest, { params }: Props) {
   }
 
   // ── Load, watermark, stream ────────────────────────────────────────────────
-  const filePath = path.join(process.cwd(), 'content', 'predicted-papers', folder, decodedFile)
+  const filePath = path.join(process.cwd(), 'content', contentRoot, folder, decodedFile)
   let raw: Buffer
   try { raw = await fs.readFile(filePath) }
   catch { return NextResponse.json({ error: 'file missing on server' }, { status: 404 }) }

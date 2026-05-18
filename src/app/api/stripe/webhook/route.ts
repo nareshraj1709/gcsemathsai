@@ -9,7 +9,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import crypto from 'crypto'
-import { getSkuByStripePriceId } from '@/lib/predicted-papers'
+import { getSkuByStripePriceId, isKnownSkuId } from '@/lib/predicted-papers'
 
 export const runtime = 'nodejs'
 
@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
   // Price ID via the Stripe API.
   let skuId: string | null = null
   const ref = session.client_reference_id as string | undefined
-  if (ref === 'paper2' || ref === 'paper3' || ref === 'bundle') {
+  if (isKnownSkuId(ref)) {
     skuId = ref
   }
 
