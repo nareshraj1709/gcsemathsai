@@ -149,7 +149,6 @@ export async function GET(req: NextRequest, { params }: Props) {
   let stamped: Uint8Array
   try {
     stamped = await applyWatermark(raw, {
-      email: buyerEmail ?? 'paid customer',
       reference: reference ?? undefined,
     })
   } catch (err) {

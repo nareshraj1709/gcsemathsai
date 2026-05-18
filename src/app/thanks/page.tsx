@@ -1,9 +1,7 @@
 'use client'
 
 import { Suspense, useEffect, useState } from 'react'
-import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import { supabase } from '@/lib/supabase'
 import Footer from '@/components/Footer'
 
 const monoLabel = { fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const }
@@ -25,11 +23,10 @@ function ThanksInner() {
   const [purchase, setPurchase] = useState<Purchase | null>(null)
   const [error, setError] = useState('')
   const [downloading, setDownloading] = useState<string | null>(null)
-  const [optionalEmail, setOptionalEmail] = useState('')
-  const [optionalPassword, setOptionalPassword] = useState('')
-  const [accountBusy, setAccountBusy] = useState(false)
-  const [accountDone, setAccountDone] = useState(false)
-  const [accountError, setAccountError] = useState('')
+  const [backupEmail, setBackupEmail] = useState('')
+  const [emailBusy, setEmailBusy] = useState(false)
+  const [emailSent, setEmailSent] = useState(false)
+  const [emailError, setEmailError] = useState('')
 
   // On first render, ask the server to verify the Stripe session and tell us
   // which SKU was bought. Retries briefly if Stripe is still propagating.
@@ -49,7 +46,7 @@ function ThanksInner() {
             const data = await r.json() as Purchase
             if (!cancelled) {
               setPurchase(data)
-              setOptionalEmail(data.email || '')
+              setBackupEmail(data.email || '')
               setState('ready')
             }
             return
@@ -94,22 +91,25 @@ function ThanksInner() {
     }
   }
 
-  async function createOptionalAccount(e: React.FormEvent) {
+  async function sendBackupEmail(e: React.FormEvent) {
     e.preventDefault()
-    setAccountBusy(true)
-    setAccountError('')
+    setEmailBusy(true)
+    setEmailError('')
     try {
-      const { error } = await supabase.auth.signUp({
-        email: optionalEmail,
-        password: optionalPassword,
-        options: { emailRedirectTo: `${window.location.origin}/my-papers` },
+      const r = await fetch('/api/send-download-links', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session_id: sessionId, email: backupEmail }),
       })
-      if (error) throw error
-      setAccountDone(true)
+      if (!r.ok) {
+        const j = await r.json().catch(() => ({}))
+        throw new Error(j.error || `Status ${r.status}`)
+      }
+      setEmailSent(true)
     } catch (err) {
-      setAccountError(err instanceof Error ? err.message : 'Could not create account')
+      setEmailError(err instanceof Error ? err.message : 'Could not send email')
     } finally {
-      setAccountBusy(false)
+      setEmailBusy(false)
     }
   }
 
@@ -193,37 +193,32 @@ function ThanksInner() {
               </p>
             </div>
 
-            {/* Optional account */}
-            <div style={{ marginTop: 24, background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 14, padding: 'clamp(20px, 3vw, 28px)' }}>
-              <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 6 }}>Optional · access these papers any time</p>
+            {/* Email backup banner — only the buyer's valid email is asked for here. */}
+            <div style={{ marginTop: 24, background: 'var(--gold-soft)', border: '1px solid var(--gold)', borderRadius: 14, padding: 'clamp(20px, 3vw, 28px)' }}>
+              <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 6 }}>Backup · email yourself a copy</p>
               <h3 style={{ fontFamily: 'var(--serif)', fontSize: 19, fontWeight: 600, color: 'var(--ink)', margin: '0 0 8px', letterSpacing: '-0.01em' }}>
-                Create a free account?
+                Provide a valid email and we&rsquo;ll send the download links there
               </h3>
               <p style={{ fontSize: 13.5, color: 'var(--ink-3)', lineHeight: 1.65, marginBottom: 14 }}>
-                Lose the link? Want them on a different device? Save your purchase to an account and the papers stay in your <code style={{ background: 'var(--cream-2)', padding: '1px 6px', borderRadius: 4, fontFamily: 'var(--mono)', fontSize: 12 }}>My Papers</code> page forever.
+                In case anything goes wrong on this page — losing the tab, browser closing, links not opening — having the links in your inbox is the safest way to come back later.
               </p>
-              {accountDone ? (
+              {emailSent ? (
                 <p style={{ background: 'var(--green-soft)', color: 'var(--green)', padding: '10px 14px', borderRadius: 8, fontSize: 13.5, lineHeight: 1.55 }}>
-                  ✓ Check your inbox for a confirmation link. After that, your papers will appear at <Link href="/my-papers" style={{ color: 'var(--green)', textDecoration: 'underline' }}>/my-papers</Link>.
+                  ✓ Sent to <strong>{backupEmail}</strong>. Check your inbox in the next minute (and your spam folder, just in case).
                 </p>
               ) : (
-                <form onSubmit={createOptionalAccount} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr auto', gap: 8, alignItems: 'end' }}>
-                  <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <span style={{ ...monoLabel, color: 'var(--ink-3)', fontSize: 9.5 }}>Email used at Stripe</span>
-                    <input type="email" required value={optionalEmail} onChange={e => setOptionalEmail(e.target.value)}
+                <form onSubmit={sendBackupEmail} style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+                  <label style={{ flex: '1 1 240px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                    <span style={{ ...monoLabel, color: 'var(--ink-3)', fontSize: 9.5 }}>Your email</span>
+                    <input type="email" required value={backupEmail} onChange={e => setBackupEmail(e.target.value)} placeholder="you@example.com"
                       style={{ padding: '10px 12px', border: '1px solid var(--rule)', borderRadius: 8, background: 'var(--cream)', fontFamily: 'var(--sans)', fontSize: 14, color: 'var(--ink)' }} />
                   </label>
-                  <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <span style={{ ...monoLabel, color: 'var(--ink-3)', fontSize: 9.5 }}>Password</span>
-                    <input type="password" required minLength={6} value={optionalPassword} onChange={e => setOptionalPassword(e.target.value)} placeholder="6+ chars"
-                      style={{ padding: '10px 12px', border: '1px solid var(--rule)', borderRadius: 8, background: 'var(--cream)', fontFamily: 'var(--sans)', fontSize: 14, color: 'var(--ink)' }} />
-                  </label>
-                  <button type="submit" disabled={accountBusy} className="btn btn-primary" style={{ padding: '10px 18px', fontSize: 13 }}>
-                    {accountBusy ? '…' : 'Save →'}
+                  <button type="submit" disabled={emailBusy} className="btn btn-primary" style={{ padding: '10px 18px', fontSize: 13 }}>
+                    {emailBusy ? 'Sending…' : 'Email me the links →'}
                   </button>
                 </form>
               )}
-              {accountError && <p style={{ marginTop: 10, color: 'var(--burgundy)', fontSize: 13 }}>{accountError}</p>}
+              {emailError && <p style={{ marginTop: 10, color: 'var(--burgundy)', fontSize: 13 }}>{emailError}</p>}
             </div>
           </>
         )}

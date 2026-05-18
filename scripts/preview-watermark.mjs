@@ -7,7 +7,7 @@ import path from 'path'
 import { PDFDocument, StandardFonts, degrees, rgb } from 'pdf-lib'
 
 const ROOT = process.cwd()
-const SAMPLE_EMAIL = 'suppoprtgcsemaths@gmail.com'
+const SUPPORT_EMAIL = 'suppoprtgcsemaths@gmail.com'
 const SAMPLE_REF = 'cs_test_a1b2c3d4e5f6g7h8i9j0'
 const OUT_DIR = path.join(ROOT, 'preview-watermarked')
 
@@ -18,14 +18,14 @@ const FILES = [
 
 const FOOTER_LINE = '© 2026 GCSEMathsAI · gcsemathsai.co.uk · licensed for personal revision use · redistribution prohibited'
 
-async function applyWatermark(buf, email, reference) {
+async function applyWatermark(buf, reference) {
   const pdfDoc = await PDFDocument.load(buf)
   const helvetica = await pdfDoc.embedFont(StandardFonts.Helvetica)
   const helveticaBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold)
   const date = new Date().toISOString().slice(0, 10)
-  const diagonalText = `Licensed to ${email} — do not share`
-  const footerLeft = `Licensed to ${email}`
-  const footerRight = `Downloaded ${date}${reference ? ` · ${reference.slice(-12)}` : ''}`
+  const diagonalText = `GCSEMathsAI · ${SUPPORT_EMAIL} · do not share`
+  const footerLeft = `Licensed via ${SUPPORT_EMAIL}`
+  const footerRight = `Downloaded ${date}${reference ? ` · ref ${reference.slice(-12)}` : ''}`
 
   for (const page of pdfDoc.getPages()) {
     const { width, height } = page.getSize()
@@ -62,7 +62,7 @@ await fs.mkdir(OUT_DIR, { recursive: true })
 for (const [folder, filename] of FILES) {
   const src = path.join(ROOT, 'content', 'predicted-papers', folder, filename)
   const buf = await fs.readFile(src)
-  const out = await applyWatermark(buf, SAMPLE_EMAIL, SAMPLE_REF)
+  const out = await applyWatermark(buf, SAMPLE_REF)
   const dst = path.join(OUT_DIR, filename.replace('.pdf', '_watermarked.pdf'))
   await fs.writeFile(dst, out)
   console.log(`✓  ${path.relative(ROOT, dst)}`)
