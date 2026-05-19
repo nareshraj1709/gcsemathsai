@@ -16,8 +16,8 @@ async function applyWatermark(input, opts = {}) {
   const helvetica = await pdfDoc.embedFont(StandardFonts.Helvetica)
   const helveticaBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold)
   const date = opts.dateISO ?? new Date().toISOString().slice(0, 10)
-  const diagonalText = `GCSEMathsAI · ${SUPPORT_EMAIL} · do not share`
-  const footerLeft = `Licensed via ${SUPPORT_EMAIL}`
+  const diagonalText = `Practice Paper · GCSEMaths · ${SUPPORT_EMAIL} · do not share`
+  const footerLeft = `Practice paper · independent revision material · ${SUPPORT_EMAIL}`
   const footerRight = `Downloaded ${date}${opts.reference ? ` · ref ${opts.reference.slice(-12)}` : ''}`
   for (const page of pdfDoc.getPages()) {
     const { width, height } = page.getSize()

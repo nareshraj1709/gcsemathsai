@@ -63,18 +63,18 @@ export function isKnownSkuId(s: unknown): s is SkuId {
 }
 
 const PAPER2_FILES = [
-  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetA.pdf', label: 'Set A' },
-  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetB.pdf', label: 'Set B' },
-  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetC.pdf', label: 'Set C' },
-  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetD.pdf', label: 'Set D' },
-  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper2_SetE.pdf', label: 'Set E' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper2_SetA.pdf', label: 'Set A' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper2_SetB.pdf', label: 'Set B' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper2_SetC.pdf', label: 'Set C' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper2_SetD.pdf', label: 'Set D' },
+  { folder: 'paper2' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper2_SetE.pdf', label: 'Set E' },
 ]
 const PAPER3_FILES = [
-  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetA.pdf', label: 'Set A' },
-  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetB.pdf', label: 'Set B' },
-  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetC.pdf', label: 'Set C' },
-  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetD.pdf', label: 'Set D' },
-  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Predicted_Paper3_SetE.pdf', label: 'Set E' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper3_SetA.pdf', label: 'Set A' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper3_SetB.pdf', label: 'Set B' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper3_SetC.pdf', label: 'Set C' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper3_SetD.pdf', label: 'Set D' },
+  { folder: 'paper3' as const, filename: 'GCSE_Maths_Edexcel_Higher_Practice_Paper3_SetE.pdf', label: 'Set E' },
 ]
 
 // Foundation Calculator Practice papers — Sets 1-5 are Paper-2 style,
