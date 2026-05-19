@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Writing Pad — Write Your Working, Get It Marked | GCSEMathsAI',
-  description: 'Write your GCSE Maths working with a stylus or finger on iPad or phone. AI recognises your handwriting and marks line by line — method marks, accuracy marks and follow-through.',
+  description: 'Write your GCSE Maths working with a stylus or finger on iPad or phone. Your handwriting is recognised and marked line by line — method marks, accuracy marks and follow-through.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/features/writing-pad' },
   openGraph: {
     title: 'Writing Pad — Write Your Working, Get It Marked | GCSEMathsAI',
-    description: 'iPad or phone. Stylus or finger. AI marks your handwritten GCSE Maths working line by line.',
+    description: 'iPad or phone. Stylus or finger. Your handwritten GCSE Maths working is marked line by line.',
     url: 'https://www.gcsemathsai.co.uk/features/writing-pad',
   },
 }
@@ -39,7 +39,7 @@ export default function WritingPadPage() {
           Write the way you&rsquo;ll <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>write the exam</em>.
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 620, margin: '0 auto 22px' }}>
-          Most online maths tools force you to type. GCSEMathsAI lets you write your working with a stylus or finger — and the AI marks it line by line, like a real examiner.
+          Most online maths tools force you to type. GCSEMathsAI lets you write your working with a stylus or finger — and the platform marks it line by line, like a real examiner.
         </p>
         <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link href="/practice" className="btn btn-primary">Open a question and write →</Link>
@@ -63,7 +63,7 @@ export default function WritingPadPage() {
             </div>
           </div>
           <div style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24 }}>
-            <p style={{ ...monoLabel, color: 'var(--green)', marginBottom: 16 }}>AI examiner · live marking</p>
+            <p style={{ ...monoLabel, color: 'var(--green)', marginBottom: 16 }}>Examiner-style · live marking</p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
               {MARKS.map((m, i) => (
                 <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', paddingBottom: i === MARKS.length - 1 ? 0 : 12, borderBottom: i === MARKS.length - 1 ? 'none' : '1px solid var(--rule)' }}>

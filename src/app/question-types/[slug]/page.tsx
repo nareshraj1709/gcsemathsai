@@ -135,7 +135,7 @@ export default async function QuestionTypePage({ params }: Props) {
 
         <div style={{ background: 'var(--green-soft)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24, textAlign: 'center' }}>
           <p style={{ fontSize: 14, color: 'var(--ink-2)', marginBottom: 14, lineHeight: 1.6 }}>
-            Practise GCSE Maths with AI that marks your working the way real examiners do.
+            Practise GCSE Maths with instant marking that grades your working the way real examiners do.
           </p>
           <Link href="/auth" className="btn btn-primary">Start free →</Link>
         </div>

@@ -191,7 +191,7 @@ export default function PapersPage() {
                 >
                   <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' as const }}>
                     <span className={`pill ${BOARD_PILL[board]}`}>{board}</span>
-                    <span className="pill pill-gold">AI Generated</span>
+                    <span className="pill pill-gold">Original</span>
                     <span className={`tier-mark ${tier === 'Higher' ? 'H' : 'F'}`}>{tier === 'Higher' ? 'H' : 'F'}</span>
                   </div>
                   <div style={{ fontFamily: 'var(--serif)', fontSize: 18, fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.01em', lineHeight: 1.15 }}>

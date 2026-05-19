@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Terms of Service — GCSEMathsAI',
-  description: 'Terms and conditions for using GCSEMathsAI — free AI-powered GCSE Maths revision platform.',
+  description: 'Terms and conditions for using GCSEMathsAI — modern GCSE Maths revision platform.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/terms' },
 }
 

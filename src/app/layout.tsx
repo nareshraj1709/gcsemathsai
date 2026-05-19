@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner, and organised into structured revision that actually moves your grade.",
   keywords: [
     "GCSE Maths", "GCSE Mathematics", "AQA Maths", "Edexcel Maths", "OCR Maths",
-    "GCSE past papers", "GCSE practice questions", "AI maths tutor",
+    "GCSE past papers", "GCSE practice questions", "GCSE maths revision online",
     "GCSE revision", "Foundation maths", "Higher maths", "Year 10 maths", "Year 11 maths",
   ],
   authors: [{ name: "GCSEMathsAI" }],
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "GCSEMathsAI — AI-Powered GCSE Maths Preparation",
+        alt: "GCSEMathsAI — Preparation worthy of the grade you want",
       },
     ],
   },
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GCSEMathsAI — Preparation worthy of the grade you want",
     description:
-      "AI examiner marking for GCSE Maths. Study notes, timed papers and topic practice for AQA, Edexcel and OCR.",
+      "Instant examiner-style marking for GCSE Maths. Study notes, timed papers and topic practice for AQA, Edexcel and OCR.",
     images: ["/og.png"],
   },
   alternates: {
@@ -105,7 +105,7 @@ export default function RootLayout({
           name: 'GCSEMathsAI',
           url: 'https://www.gcsemathsai.co.uk',
           logo: 'https://www.gcsemathsai.co.uk/og.png',
-          description: 'AI-powered GCSE Maths preparation with real examiner-style marking. Study notes, practice questions and past papers for AQA, Edexcel and OCR.',
+          description: 'Modern GCSE Maths preparation with instant examiner-style marking. Study notes, practice questions and past papers for AQA, Edexcel and OCR.',
           sameAs: [],
           contactPoint: { '@type': 'ContactPoint', email: 'suppoprtgcsemaths@gmail.com', contactType: 'customer service' },
         }) }} />
@@ -114,7 +114,7 @@ export default function RootLayout({
           '@type': 'WebSite',
           name: 'GCSEMathsAI',
           url: 'https://www.gcsemathsai.co.uk',
-          description: 'AI-powered GCSE Maths revision platform with instant marking.',
+          description: 'Modern GCSE Maths revision platform with instant examiner-style marking.',
           publisher: { '@type': 'Organization', name: 'GCSEMathsAI' },
           inLanguage: 'en-GB',
         }) }} />

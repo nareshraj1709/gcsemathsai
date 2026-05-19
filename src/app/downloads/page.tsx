@@ -297,7 +297,7 @@ export default function DownloadsPage() {
             <li>Set a timer for 90 minutes to simulate real exam conditions</li>
             <li>Paper 1 is always non-calculator — put your calculator away!</li>
             <li>Papers 2 and 3 allow a calculator</li>
-            <li>After finishing, use our <a href="/papers" style={{ color: 'var(--green)', fontWeight: 600 }}>online exam mode</a> to get AI marking and feedback</li>
+            <li>After finishing, use our <a href="/papers" style={{ color: 'var(--green)', fontWeight: 600 }}>online exam mode</a> to get instant marking and feedback</li>
           </ul>
         </div>
 

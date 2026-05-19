@@ -143,7 +143,7 @@ export default function NotesReviewPage() {
             Review My Notes
           </h1>
           <p style={{ color: C.mid, fontSize: 15, margin: 0 }}>
-            Upload a photo of your notes. Our AI will identify the topic, mark your notes
+            Upload a photo of your notes. GCSEMathsAI will identify the topic, mark your notes
             and tell you exactly what to revise.
           </p>
         </div>

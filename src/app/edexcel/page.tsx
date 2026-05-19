@@ -142,7 +142,7 @@ export default function EdexcelHubPage() {
           Practise calibrated to <em style={{ color: 'var(--gold-soft)', fontStyle: 'italic' }}>Edexcel mark schemes</em>.
         </h2>
         <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
-          AI marking that follows Pearson&apos;s M-A-C structure — method, accuracy, communication.
+          Instant marking that follows the M-A-C structure — method, accuracy, communication.
         </p>
         <Link href="/auth" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>Start free →</Link>
       </section>

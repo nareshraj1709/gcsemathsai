@@ -29,7 +29,7 @@ const FAQS = [
     a: 'AQA, Edexcel and OCR. Foundation and Higher tier. You can select your board and tier in the Learn section before each session.',
   },
   {
-    q: 'How accurate is the AI marking?',
+    q: 'How accurate is the marking?',
     a: 'Very good for most standard GCSE questions, but not perfect. Always treat it as a guide and check with your teacher if you\'re unsure about a piece of feedback.',
   },
   {

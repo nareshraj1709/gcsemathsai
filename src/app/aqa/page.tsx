@@ -164,7 +164,7 @@ export default function AQAHubPage() {
           Practise calibrated to <em style={{ color: 'var(--gold-soft)', fontStyle: 'italic' }}>AQA mark schemes</em>.
         </h2>
         <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
-          AI marking that awards method, accuracy and follow-through — the way AQA examiners do.
+          Instant marking that awards method, accuracy and follow-through — the way AQA examiners do.
         </p>
         <Link href="/auth" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>Start free →</Link>
       </section>

@@ -1,7 +1,7 @@
 {
   "name": "GCSEMathsAI",
   "short_name": "GCSEMathsAI",
-  "description": "AI-powered GCSE Maths preparation — marked like a real examiner",
+  "description": "Modern GCSE Maths preparation — instant examiner-style marking",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

@@ -102,7 +102,7 @@ export default async function GlossaryTermPage({ params }: Props) {
 
         <div style={{ background: 'var(--green-soft)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24, textAlign: 'center' }}>
           <p style={{ fontSize: 14, color: 'var(--ink-2)', marginBottom: 14, lineHeight: 1.6 }}>
-            Practise GCSE Maths topics with AI marking — every term in context.
+            Practise GCSE Maths topics with instant examiner-style marking — every term in context.
           </p>
           <Link href="/auth" className="btn btn-primary">Start free →</Link>
         </div>

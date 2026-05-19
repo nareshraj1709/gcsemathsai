@@ -325,7 +325,7 @@ function SectionPractice() {
               padding: '20px 24px', marginBottom: 24, textAlign: 'center',
             }}>
               <p style={{ fontSize: 13, color: 'var(--green)', fontWeight: 600, margin: 0 }}>
-                Generating your AI evaluation…
+                Marking your answers…
               </p>
             </div>
           )}

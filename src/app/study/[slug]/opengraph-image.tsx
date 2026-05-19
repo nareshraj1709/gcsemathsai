@@ -14,7 +14,7 @@ export default function OgImage({ params }: Props) {
   const color = meta?.color ?? '#6D28D9'
   const topic = entry?.topic ?? 'GCSE Maths'
   const subtopic = entry?.subtopic ?? 'Study Notes'
-  const overview = entry?.overview ?? 'AI-powered GCSE Maths revision'
+  const overview = entry?.overview ?? 'GCSE Maths revision notes and practice'
   const icon = meta?.icon ?? '📐'
 
   return new ImageResponse(
@@ -79,7 +79,7 @@ export default function OgImage({ params }: Props) {
         <div style={{
           marginTop: 'auto', display: 'flex', gap: 12,
         }}>
-          {['Study Notes', 'AI Marking', 'Exam Tips'].map(tag => (
+          {['Study Notes', 'Instant Marking', 'Exam Tips'].map(tag => (
             <div key={tag} style={{
               padding: '8px 18px', borderRadius: 999,
               background: 'rgba(255,255,255,0.15)',

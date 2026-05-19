@@ -258,7 +258,7 @@ export default function FormulaSheetPage() {
             Know the formulas? <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>Now apply them.</em>
           </h2>
           <p style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.55, marginBottom: 28, maxWidth: 460, margin: '0 auto 28px', fontWeight: 500 }}>
-            Practise exam-style questions with AI marking — get instant feedback on your working and method marks.
+            Practise exam-style questions with instant examiner-style marking — get feedback on your working and method marks.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' as const }}>
             <Link href="/learn" className="btn btn-primary" style={{ padding: '14px 28px', fontSize: 15 }}>

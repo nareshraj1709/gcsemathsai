@@ -313,7 +313,7 @@ export default function PaperExamPage() {
           {paper.pdfUrl && (
             <div style={{ background: '#fff', border: `1.5px solid ${theme.border}`, borderRadius: 14, padding: '16px', marginBottom: 20 }}>
               <p style={{ fontSize: 13, fontWeight: 700, color: theme.bg, margin: '0 0 8px' }}>Real past paper available</p>
-              <p style={{ fontSize: 12, color: '#6B7280', margin: '0 0 10px' }}>View the actual {paper.board} paper alongside AI-generated questions.</p>
+              <p style={{ fontSize: 12, color: '#6B7280', margin: '0 0 10px' }}>View the actual {paper.board} paper alongside our original practice questions.</p>
               <a href={paper.pdfUrl} target="_blank" rel="noopener noreferrer" style={{
                 display: 'block', padding: '9px', borderRadius: 8, textAlign: 'center',
                 background: theme.accent, color: '#fff', fontWeight: 700, fontSize: 13, textDecoration: 'none',

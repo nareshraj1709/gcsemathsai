@@ -17,7 +17,7 @@ const monoLabel = { fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, le
 const WHAT = [
   { title: 'Current predicted grade', desc: 'Updated every week based on every question they have answered. You see the trend, not just the number.' },
   { title: 'Honest progress, no spin', desc: 'Time studied, topics covered and the longest streak. If they have had a quiet week, you will see it.' },
-  { title: 'Two specific areas to encourage', desc: 'Picked by the AI — small enough to fix, big enough to move the grade. Written in plain English.' },
+  { title: 'Two specific areas to encourage', desc: 'Picked automatically from your child\'s practice history — small enough to fix, big enough to move the grade. Written in plain English.' },
   { title: 'Student-controlled', desc: 'Your child decides whether the email goes out, what it includes and how detailed it is. They can pause it any time.' },
 ]
 

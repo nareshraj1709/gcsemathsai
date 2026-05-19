@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'GCSEMathsAI — AI-Powered GCSE Maths Tutor'
+export const alt = 'GCSEMathsAI — GCSE Maths Preparation'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -55,7 +55,7 @@ export default function OgImage() {
           fontFamily: 'sans-serif', fontWeight: 400,
           display: 'flex',
         }}>
-          AI-Powered GCSE Maths Tutor
+          GCSE Maths Preparation
         </div>
 
         {/* Feature pills */}
@@ -81,7 +81,7 @@ export default function OgImage() {
           fontFamily: 'sans-serif',
           display: 'flex',
         }}>
-          Study Notes · Timed Papers · Instant AI Marking
+          Study Notes · Timed Papers · Instant Marking
         </div>
       </div>
     ),

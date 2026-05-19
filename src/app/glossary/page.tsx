@@ -92,7 +92,7 @@ export default function GlossaryIndexPage() {
           Know the words. <em style={{ color: 'var(--gold-soft)', fontStyle: 'italic' }}>Win the marks.</em>
         </h2>
         <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
-          Practise GCSE Maths topics with AI marking — built around the exact language your exam will use.
+          Practise GCSE Maths topics with instant examiner-style marking — built around the exact language your exam will use.
         </p>
         <Link href="/auth" className="btn btn-outline" style={{ background: 'var(--cream)', color: 'var(--green)', boxShadow: 'none', padding: '11px 24px' }}>
           Start free — no card →

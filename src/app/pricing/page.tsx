@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 const SCHOLAR_FEATURES = [
   'Full GCSE syllabus coverage',
   '20 practice questions per day',
-  'AI marking with feedback',
+  'Instant examiner-style marking with feedback',
   'Study notes and worked examples',
   'Foundation and Higher tier',
   'AQA, Edexcel and OCR boards',
@@ -19,13 +19,13 @@ const STUDENT_FEATURES = [
   'Everything in Scholar, plus:',
   'Unlimited practice questions',
   'Full past paper archive (2015-2024)',
-  'AI-generated practice papers',
+  'Original practice papers',
   'Timed exam conditions mode',
   'Grade boundary estimates',
   'Personalised revision schedule',
   'Predicted grade tracking',
   'Topic-by-topic mark breakdown',
-  'Priority AI marking queue',
+  'Priority marking queue',
   'No adverts',
 ]
 
@@ -48,8 +48,8 @@ const COMPARISON = {
     { feature: 'Curated video links', scholar: true, student: true, school: true },
     { feature: 'Worked examples', scholar: true, student: true, school: true },
   ],
-  'AI marking': [
-    { feature: 'AI-marked questions', scholar: '20/day', student: 'Unlimited', school: 'Unlimited' },
+  'Marking': [
+    { feature: 'Instantly-marked questions', scholar: '20/day', student: 'Unlimited', school: 'Unlimited' },
     { feature: 'Step-by-step feedback', scholar: true, student: true, school: true },
     { feature: 'Priority marking queue', scholar: false, student: true, school: true },
     { feature: 'Mark scheme alignment', scholar: true, student: true, school: true },
@@ -57,7 +57,7 @@ const COMPARISON = {
   'Past papers': [
     { feature: 'Past paper archive', scholar: false, student: true, school: true },
     { feature: 'Timed exam mode', scholar: false, student: true, school: true },
-    { feature: 'AI-generated papers', scholar: false, student: true, school: true },
+    { feature: 'Original practice papers', scholar: false, student: true, school: true },
     { feature: 'Grade boundary estimates', scholar: false, student: true, school: true },
   ],
   'Personalisation': [

@@ -3,12 +3,12 @@ import Link from 'next/link'
 import HashRedirector from './HashRedirector'
 
 export const metadata: Metadata = {
-  title: 'Features — AI Marking, Past Papers, Study Notes & More',
-  description: 'Everything GCSEMathsAI offers — AI marking, full GCSE spec coverage, past papers, study notes and more. Free for every Year 9–11 student.',
+  title: 'Features — Instant Marking, Past Papers, Study Notes & More',
+  description: 'Everything GCSEMathsAI offers — instant examiner-style marking, full GCSE spec coverage, past papers, study notes and more. Free for every Year 9–11 student.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/features' },
   openGraph: {
-    title: 'Features — AI Marking, Past Papers & Study Notes | GCSEMathsAI',
-    description: 'AI marking, full GCSE spec coverage, past papers, study notes — all free for every student.',
+    title: 'Features — Instant Marking, Past Papers & Study Notes | GCSEMathsAI',
+    description: 'Instant examiner-style marking, full GCSE spec coverage, past papers, study notes — all free for every student.',
     url: 'https://www.gcsemathsai.co.uk/features',
   },
 }
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const FEATURES = [
   {
     icon: '🤖',
-    title: 'AI marking — like a real examiner',
+    title: 'Instant marking — like a real examiner',
     colour: 'green',
     badge: 'bg-green-100 text-green-700',
     bar: 'bg-green-500',
@@ -55,13 +55,13 @@ const FEATURES = [
   },
   {
     icon: '📝',
-    title: 'Past papers and AI practice papers',
+    title: 'Past papers and original practice papers',
     colour: 'amber',
     badge: 'bg-amber-100 text-amber-700',
     bar: 'bg-amber-500',
     points: [
       'Historical exam papers from 2015–2024 with timed exam conditions',
-      '30 AI-generated practice papers per board per tier — never the same paper twice',
+      '30 original practice papers per board per tier — fresh question sets for every session',
       'Difficulty levels from Warm-Up to Exam Style, so you can build up gradually',
       'Grade boundary estimates based on your score after every paper',
     ],

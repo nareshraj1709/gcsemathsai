@@ -431,10 +431,10 @@ function Review() {
                   </p>
                 </div>
 
-                {/* AI feedback */}
+                {/* Examiner feedback */}
                 <div style={{ padding: '14px 20px', borderBottom: studySlug ? '1px solid #F3F4F6' : undefined }}>
                   <p style={{ fontSize: 11, fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: 1, margin: '0 0 6px' }}>
-                    AI feedback
+                    Examiner feedback
                   </p>
                   <p style={{ fontSize: 13, color: '#374151', margin: '0 0 10px', lineHeight: 1.6 }}>
                     {attempt.feedback}

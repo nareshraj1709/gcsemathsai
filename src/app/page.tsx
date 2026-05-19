@@ -239,7 +239,7 @@ export default function Home() {
           <div style={{ textAlign: 'center', margin: '0 auto 56px', maxWidth: 760 }}>
             <div className="sec-label" style={{ margin: '0 auto 20px', justifyContent: 'center' }}>Everything for your GCSE</div>
             <h2>One destination. <em>Nothing left to find elsewhere.</em></h2>
-            <p className="sec-sub" style={{ margin: '0 auto' }}>From the first topic in Year 10 to the final exam — lessons, practice, past papers, predicted grades, and a real AI examiner. All in one place.</p>
+            <p className="sec-sub" style={{ margin: '0 auto' }}>From the first topic in Year 10 to the final exam — lessons, practice, past papers, predicted grades, and instant examiner-style marking. All in one place.</p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12,1fr)', gap: 20 }} className="everything-grid">
@@ -261,11 +261,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* AI Examiner */}
+            {/* Method-mark feedback */}
             <div style={{ gridColumn: 'span 6', background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--gold)', fontWeight: 700, letterSpacing: '0.08em' }}>01 &middot; AI EXAMINER</div>
-              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 600, letterSpacing: '-0.01em', lineHeight: 1.15 }}>The only AI that <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>marks your working</em>, not just your answer.</h3>
-              <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, fontWeight: 500 }}>Trained on real mark schemes from AQA, Edexcel and OCR. Awards method marks exactly like a real examiner.</p>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--gold)', fontWeight: 700, letterSpacing: '0.08em' }}>01 &middot; METHOD-MARK FEEDBACK</div>
+              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 600, letterSpacing: '-0.01em', lineHeight: 1.15 }}>The only platform that marks your <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>working</em>, not just your answer.</h3>
+              <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, fontWeight: 500 }}>Built on real mark schemes from AQA, Edexcel and OCR. Awards method marks exactly like a real examiner.</p>
               <div style={{ marginTop: 'auto', padding: '12px 0', borderTop: '1px dashed var(--rule)', display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-3)', fontWeight: 600 }}>
                 <span>SEEN IN &middot; PRACTICE, TOPIC, EXAM SIMULATOR</span>
                 <span style={{ color: 'var(--gold)' }}>All tiers</span>
@@ -320,7 +320,7 @@ export default function Home() {
             {[
               { num: '06', title: 'Formula Sheet', desc: 'Every formula you need. PDF or printed. Same format as the real exam.', cta: 'Download PDF', href: '/GCSE_Maths_Formula_Sheet.pdf', external: true, meta: ['FREE \u00B7 NO CARD', 'All boards'] },
               { num: '07', title: 'Revision Planner', desc: 'Set your exam date. We schedule 15-minute sessions around your weak spots.', cta: 'See an example', href: '/features/revision-planner', external: false, meta: ['UPDATED \u00B7 DAILY', 'Personalised'] },
-              { num: '08', title: 'Writing Pad', desc: 'Tablet or phone. Write with a stylus or finger. AI recognises and marks it.', cta: 'Try it now', href: '/features/writing-pad', external: false, meta: ['IPAD \u00B7 PHONE', 'OCR-powered'] },
+              { num: '08', title: 'Writing Pad', desc: 'Tablet or phone. Write with a stylus or finger. Your handwriting is read and marked line by line.', cta: 'Try it now', href: '/features/writing-pad', external: false, meta: ['IPAD \u00B7 PHONE', 'Handwriting'] },
               { num: '09', title: 'Parent Report', desc: 'Monday morning email to parents. Current predicted grade, hours studied, topics mastered.', cta: 'See a sample', href: '/features/parent-report', external: false, meta: ['OPT-IN \u00B7 WEEKLY', 'Optional'] },
             ].map(c => (
               <div key={c.num} style={{ gridColumn: 'span 3', background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
