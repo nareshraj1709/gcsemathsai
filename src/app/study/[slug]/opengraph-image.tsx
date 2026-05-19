@@ -44,7 +44,7 @@ export default function OgImage({ params }: Props) {
             fontSize: 22,
           }}>✦</div>
           <span style={{ fontSize: 22, fontWeight: 700, color: 'rgba(255,255,255,0.9)', fontFamily: 'sans-serif' }}>
-            GCSEMathsAI
+            GCSEMaths
           </span>
         </div>
 

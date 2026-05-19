@@ -1,6 +1,6 @@
 {
-  "name": "GCSEMathsAI",
-  "short_name": "GCSEMathsAI",
+  "name": "GCSEMaths",
+  "short_name": "GCSEMaths",
   "description": "Modern GCSE Maths preparation — instant examiner-style marking",
   "start_url": "/",
   "scope": "/",

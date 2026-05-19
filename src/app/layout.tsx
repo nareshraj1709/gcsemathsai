@@ -27,8 +27,8 @@ const BASE_URL = "https://www.gcsemathsai.co.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "GCSEMathsAI — Preparation worthy of the grade you want",
-    template: "%s | GCSEMathsAI",
+    default: "GCSEMaths — Preparation worthy of the grade you want",
+    template: "%s | GCSEMaths",
   },
   description:
     "Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner, and organised into structured revision that actually moves your grade.",
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: BASE_URL,
-    siteName: "GCSEMathsAI",
-    title: "GCSEMathsAI — Preparation worthy of the grade you want",
+    siteName: "GCSEMaths",
+    title: "GCSEMaths — Preparation worthy of the grade you want",
     description:
       "Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner.",
     images: [
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "GCSEMathsAI — Preparation worthy of the grade you want",
+        alt: "GCSEMaths — Preparation worthy of the grade you want",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GCSEMathsAI — Preparation worthy of the grade you want",
+    title: "GCSEMaths — Preparation worthy of the grade you want",
     description:
       "Instant examiner-style marking for GCSE Maths. Study notes, timed papers and topic practice for AQA, Edexcel and OCR.",
     images: ["/og.png"],
@@ -96,13 +96,13 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="GCSEMathsAI" />
+        <meta name="apple-mobile-web-app-title" content="GCSEMaths" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'GCSEMathsAI',
+          name: 'GCSEMaths',
           url: 'https://www.gcsemathsai.co.uk',
           logo: 'https://www.gcsemathsai.co.uk/og.png',
           description: 'Modern GCSE Maths preparation with instant examiner-style marking. Study notes, practice questions and past papers for AQA, Edexcel and OCR.',
@@ -112,10 +112,10 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'GCSEMathsAI',
+          name: 'GCSEMaths',
           url: 'https://www.gcsemathsai.co.uk',
           description: 'Modern GCSE Maths revision platform with instant examiner-style marking.',
-          publisher: { '@type': 'Organization', name: 'GCSEMathsAI' },
+          publisher: { '@type': 'Organization', name: 'GCSEMaths' },
           inLanguage: 'en-GB',
         }) }} />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SCDRCH8B1"></script>

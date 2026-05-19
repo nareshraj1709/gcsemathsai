@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="ft-col ft-brand">
           <a className="logo" onClick={() => go('/')} style={{ cursor: 'pointer' }}>
             <span className="logo-mark">&Sigma;</span>
-            GCSEMaths<em>AI</em>
+            GCSEMaths
           </a>
           <p>A modern preparation for the GCSE Mathematics examination. Built in London for students serious about their grade.</p>
         </div>

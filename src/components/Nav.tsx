@@ -132,7 +132,7 @@ export default function Nav() {
         <div className="wrap">
           <a className="logo" onClick={() => navigate('/')}>
             <span className="logo-mark">&Sigma;</span>
-            GCSEMaths<em>AI</em>
+            GCSEMaths
           </a>
 
           {/* Desktop menu */}

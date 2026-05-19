@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'GCSEMathsAI — GCSE Maths Preparation'
+export const alt = 'GCSEMaths — GCSE Maths Preparation'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -45,7 +45,7 @@ export default function OgImage() {
           letterSpacing: -2, marginBottom: 16, textAlign: 'center',
           display: 'flex',
         }}>
-          GCSEMathsAI
+          GCSEMaths
         </div>
 
         {/* Tagline */}
