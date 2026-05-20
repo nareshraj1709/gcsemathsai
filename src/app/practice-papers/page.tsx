@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: 'Edexcel GCSE Maths Predicted Papers 2026 — Paper 2 & Paper 3',
   description: 'Five predicted Paper 2 and five predicted Paper 3 papers for Edexcel GCSE Maths Higher (1MA1), with full mark schemes and worked solutions. Calibrated to 2026 exams.',
   keywords: ['edexcel gcse maths predicted papers', 'gcse maths paper 2 prediction', 'gcse maths paper 3 prediction', 'edexcel 1ma1 higher predicted', 'gcse maths 2026 predicted papers', 'edexcel higher predicted'],
-  alternates: { canonical: 'https://www.gcsemathsai.co.uk/predicted-papers' },
+  alternates: { canonical: 'https://www.gcsemathsai.co.uk/practice-papers' },
   openGraph: {
     title: 'Edexcel GCSE Maths Predicted Papers 2026 | GCSEMathsAI',
     description: 'Five predicted Paper 2 and five predicted Paper 3 papers for Edexcel Higher, with mark schemes and worked solutions.',
-    url: 'https://www.gcsemathsai.co.uk/predicted-papers',
+    url: 'https://www.gcsemathsai.co.uk/practice-papers',
     type: 'website',
   },
 }
@@ -30,7 +30,7 @@ export default function PredictedPapersPage() {
       price: p.price.replace('£', ''),
       priceCurrency: 'GBP',
       availability: 'https://schema.org/InStock',
-      url: `${BASE}/predicted-papers`,
+      url: `${BASE}/practice-papers`,
     },
   }))
 

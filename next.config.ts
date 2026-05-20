@@ -4,20 +4,35 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   redirects: async () => [
-    // SEO redirects for keyword-rich predicted-papers slugs.
+    // ── /predicted-papers → /practice-papers (slug rename 2026-05) ─────────
+    // The route folder is now src/app/practice-papers. These 308s consolidate
+    // the previously indexed /predicted-papers URLs to the new slug without
+    // chained redirects.
+    {
+      source: '/predicted-papers',
+      destination: '/practice-papers',
+      permanent: true,
+    },
+    {
+      source: '/predicted-papers/:path*',
+      destination: '/practice-papers/:path*',
+      permanent: true,
+    },
+
+    // SEO redirects for keyword-rich practice-papers slugs.
     {
       source: '/gcse-maths-2026-predicted-papers',
-      destination: '/predicted-papers/edexcel-gcse-maths-higher-2026',
+      destination: '/practice-papers/edexcel-gcse-maths-higher-2026',
       permanent: true,
     },
     {
       source: '/edexcel-gcse-maths-2026-predicted-papers',
-      destination: '/predicted-papers/edexcel-gcse-maths-higher-2026',
+      destination: '/practice-papers/edexcel-gcse-maths-higher-2026',
       permanent: true,
     },
     {
       source: '/edexcel-predicted-papers',
-      destination: '/predicted-papers/edexcel-gcse-maths-higher-2026',
+      destination: '/practice-papers/edexcel-gcse-maths-higher-2026',
       permanent: true,
     },
 

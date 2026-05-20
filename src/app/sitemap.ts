@@ -55,9 +55,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/edexcel`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/ocr`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/site-map`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE}/predicted-papers`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE}/practice-papers`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     ...PREDICTED_PAPER_FAMILIES.map(f => ({
-      url: `${BASE}/predicted-papers/${f.slug}`,
+      url: `${BASE}/practice-papers/${f.slug}`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.95,

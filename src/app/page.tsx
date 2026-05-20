@@ -172,7 +172,7 @@ export default function Home() {
             ))}
           </div>
           <p style={{ textAlign: 'center', marginTop: 24, fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-3)' }}>
-            <Link href="/predicted-papers/edexcel-gcse-maths-higher-2026" style={{ color: 'var(--green)' }}>See full details and FAQ →</Link>
+            <Link href="/practice-papers/edexcel-gcse-maths-higher-2026" style={{ color: 'var(--green)' }}>See full details and FAQ →</Link>
             <span style={{ margin: '0 10px', opacity: 0.4 }}>·</span>
             <Link href="/my-papers" style={{ color: 'var(--green)' }}>Already bought? Sign in to download →</Link>
           </p>

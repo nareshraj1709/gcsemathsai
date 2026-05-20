@@ -85,7 +85,7 @@ export default function Nav() {
   ]
 
   const resourceLinks = [
-    { label: 'Higher Practice Papers · NEW', path: '/predicted-papers', desc: 'Edexcel Higher Paper-2 & Paper-3 style practice papers' },
+    { label: 'Higher Practice Papers · NEW', path: '/practice-papers', desc: 'Edexcel Higher Paper-2 & Paper-3 style practice papers' },
     { label: 'Foundation Practice Papers · NEW', path: '/foundation-papers', desc: 'Edexcel Foundation — 10 calculator practice papers' },
     { label: 'Blog', path: '/blog', desc: 'Revision guides and exam tips' },
     { label: 'Glossary', path: '/glossary', desc: '60+ GCSE Maths terms defined' },

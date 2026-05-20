@@ -56,7 +56,7 @@ export default function FoundationPapersPage() {
           Foundation Paper 2 &amp; Paper 3 — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>full-length practice, every grade-boundary topic</em>.
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 640, margin: '0 auto' }}>
-          Ten Foundation-tier calculator practice papers, carefully written by our team from the published Edexcel 1MA1 Foundation specification — five Paper-2 style, five Paper-3 style. Calibrated to the grade 1–5 difficulty curve, with full mark schemes, M1/A1/B1 codes and worked solutions for every question. Sitting Higher? <Link href="/predicted-papers" style={{ color: 'var(--green)', textDecoration: 'underline' }}>Our Higher practice papers are here</Link>.
+          Ten Foundation-tier calculator practice papers, carefully written by our team from the published Edexcel 1MA1 Foundation specification — five Paper-2 style, five Paper-3 style. Calibrated to the grade 1–5 difficulty curve, with full mark schemes, M1/A1/B1 codes and worked solutions for every question. Sitting Higher? <Link href="/practice-papers" style={{ color: 'var(--green)', textDecoration: 'underline' }}>Our Higher practice papers are here</Link>.
         </p>
       </section>
 
@@ -194,7 +194,7 @@ export default function FoundationPapersPage() {
           <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6, marginBottom: 18 }}>
             Ten predicted Paper 2 and Paper 3 papers for Edexcel 1MA1 Higher — calibrated to the 2026 series.
           </p>
-          <Link href="/predicted-papers" className="btn btn-outline" style={{ padding: '10px 20px', fontSize: 14 }}>
+          <Link href="/practice-papers" className="btn btn-outline" style={{ padding: '10px 20px', fontSize: 14 }}>
             See Higher predicted papers →
           </Link>
         </div>

@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: f.metaTitle,
     description: f.metaDescription,
     keywords: f.keywords,
-    alternates: { canonical: `${BASE}/predicted-papers/${f.slug}` },
+    alternates: { canonical: `${BASE}/practice-papers/${f.slug}` },
     openGraph: {
       title: `${f.metaTitle} | GCSEMathsAI`,
       description: f.metaDescription,
-      url: `${BASE}/predicted-papers/${f.slug}`,
+      url: `${BASE}/practice-papers/${f.slug}`,
       type: 'website',
     },
   }
@@ -46,7 +46,7 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
       price: p.price.replace('£', ''),
       priceCurrency: 'GBP',
       availability: 'https://schema.org/InStock',
-      url: `${BASE}/predicted-papers/${f.slug}`,
+      url: `${BASE}/practice-papers/${f.slug}`,
     },
   }))
 
@@ -54,8 +54,8 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
-      { '@type': 'ListItem', position: 2, name: 'Practice Papers', item: `${BASE}/predicted-papers` },
-      { '@type': 'ListItem', position: 3, name: `${f.board} ${f.tier} ${f.year}`, item: `${BASE}/predicted-papers/${f.slug}` },
+      { '@type': 'ListItem', position: 2, name: 'Practice Papers', item: `${BASE}/practice-papers` },
+      { '@type': 'ListItem', position: 3, name: `${f.board} ${f.tier} ${f.year}`, item: `${BASE}/practice-papers/${f.slug}` },
     ],
   }
 
@@ -68,7 +68,7 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
 
       {/* Hero */}
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
-        <Link href="/predicted-papers" style={{ ...monoLabel, color: 'var(--ink-3)', textDecoration: 'none' }}>← All practice packs</Link>
+        <Link href="/practice-papers" style={{ ...monoLabel, color: 'var(--ink-3)', textDecoration: 'none' }}>← All practice packs</Link>
         <div style={{ marginTop: 18 }}>
           <span style={{ ...monoLabel, color: 'var(--gold)', background: 'var(--gold-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 16 }}>
             {f.board} · {f.tier} · {f.year}

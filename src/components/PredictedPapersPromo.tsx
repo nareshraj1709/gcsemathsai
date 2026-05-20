@@ -65,7 +65,7 @@ export default function PredictedPapersPromo({
             style={{ fontFamily: 'var(--mono)', fontSize: 11.5, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--gold-soft)', textDecoration: 'underline' }}>
             Paper 3 — £5.99
           </a>
-          <Link href="/predicted-papers/edexcel-gcse-maths-higher-2026"
+          <Link href="/practice-papers/edexcel-gcse-maths-higher-2026"
             style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(247,243,234,0.7)', textDecoration: 'underline' }}>
             See details →
           </Link>
@@ -133,7 +133,7 @@ export default function PredictedPapersPromo({
           ))}
         </div>
         <p style={{ textAlign: 'center', marginTop: 18, fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-3)' }}>
-          <Link href="/predicted-papers/edexcel-gcse-maths-higher-2026" style={{ color: 'var(--green)' }}>See full details &amp; FAQ →</Link>
+          <Link href="/practice-papers/edexcel-gcse-maths-higher-2026" style={{ color: 'var(--green)' }}>See full details &amp; FAQ →</Link>
         </p>
       </div>
     </section>

@@ -115,7 +115,7 @@ export default function MyPapersPage() {
             <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.65, marginBottom: 16 }}>
               If you bought a pack, check the email you used at Stripe checkout — your download access is tied to that address. Sign in here with the same email and your papers will appear.
             </p>
-            <Link href="/predicted-papers/edexcel-gcse-maths-higher-2026" className="btn btn-primary">See predicted packs →</Link>
+            <Link href="/practice-papers/edexcel-gcse-maths-higher-2026" className="btn btn-primary">See predicted packs →</Link>
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -184,7 +184,7 @@ export default function MyPapersPage() {
                   {!hasAccess && (
                     <div style={{ marginTop: 14 }}>
                       <Link
-                        href={sku.id.startsWith('foundation_') ? '/foundation-papers' : '/predicted-papers/edexcel-gcse-maths-higher-2026'}
+                        href={sku.id.startsWith('foundation_') ? '/foundation-papers' : '/practice-papers/edexcel-gcse-maths-higher-2026'}
                         className="btn btn-outline"
                         style={{ padding: '9px 18px', fontSize: 13 }}
                       >
