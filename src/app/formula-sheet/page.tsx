@@ -277,8 +277,8 @@ export default function FormulaSheetPage() {
             {[
               { href: '/formulas', title: 'Per-topic Formula Sheets', desc: '73 print-ready sheets — one for every GCSE topic. Definitions, worked examples, common mistakes.' },
               { href: '/topics', title: 'All 73 GCSE Maths Topics', desc: 'Step-by-step explanations and worked examples for every topic' },
-              { href: '/downloads', title: 'Download Past Papers', desc: 'Free AQA past paper PDFs to print and practise' },
-              { href: '/learn', title: 'Practice Questions', desc: 'AI-marked exam-style questions with instant feedback' },
+              { href: '/papers', title: 'GCSE Maths Papers', desc: 'Original practice papers plus direct links to AQA, Edexcel and OCR official past papers.' },
+              { href: '/learn', title: 'Practice Questions', desc: 'Exam-style questions with instant examiner-style feedback' },
             ].map(r => (
               <Link key={r.href} href={r.href} style={{
                 background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12,

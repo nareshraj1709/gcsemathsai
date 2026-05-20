@@ -319,7 +319,6 @@ export default function Nav() {
               <>
                 <button className="menu-item" onClick={() => navigate('/sections')}>Topic Tests</button>
                 <button className="menu-item" onClick={() => navigate('/notes-review')}>Notes Review</button>
-                <button className="menu-item" onClick={() => navigate('/downloads')}>Downloads</button>
               </>
             )}
 
