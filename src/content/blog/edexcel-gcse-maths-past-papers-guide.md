@@ -178,7 +178,7 @@ Once you have fixed a topic gap with targeted practice, go back to past papers a
 
 One of the most important skills past paper practice builds is **method mark recovery** — earning partial credit even when your final answer is wrong.
 
-**Example (Edexcel Higher 2023 style):**
+**Example (an original question in the style of a Higher-tier compound-growth problem):**
 
 *The population of a town was 24,000 in 2010. It increased by 3.5% per year for 6 years. Calculate the population after 6 years.*
 
@@ -217,4 +217,6 @@ Improvement is specific, not general. You get better at fractions by practising 
 
 ---
 
-Start targeted practice on any past paper topic with instant AI feedback — completely free for all students on GCSEMathsAI. [Pick a topic and start now →](/learn)
+GCSEMaths is an independent revision resource. We do not host past papers — get them directly from AQA, Pearson Edexcel and OCR (see the [Papers page](/papers) for direct links). We are not affiliated with, endorsed by, or associated with any exam board.
+
+Start targeted practice on any topic with instant examiner-style feedback — completely free for all students on GCSEMaths. [Pick a topic and start now →](/learn)
