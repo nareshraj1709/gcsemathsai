@@ -49,6 +49,7 @@ const FAQS = [
 export default function ContactPage() {
   const [form, setForm] = useState<FormState>({ name: '', email: '', category: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [errorDetail, setErrorDetail] = useState<string>('')
 
   const set = (field: keyof FormState, value: string) =>
     setForm(f => ({ ...f, [field]: value }))
@@ -59,8 +60,8 @@ export default function ContactPage() {
     e.preventDefault()
     if (!valid) return
     setStatus('sending')
+    setErrorDetail('')
 
-    // POST to /api/contact — wire up to email provider when ready
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -70,9 +71,12 @@ export default function ContactPage() {
       if (res.ok) {
         setStatus('sent')
       } else {
+        const j = await res.json().catch(() => ({}))
+        setErrorDetail(j.detail || j.error || `Server returned ${res.status}`)
         setStatus('error')
       }
-    } catch {
+    } catch (err) {
+      setErrorDetail(err instanceof Error ? err.message : 'Network error')
       setStatus('error')
     }
   }
@@ -165,10 +169,16 @@ export default function ContactPage() {
 
                 {status === 'error' && (
                   <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm">
-                    Something went wrong. Please try emailing us directly at{' '}
-                    <a href="mailto:enquiriesgcsemath@yahoo.com" className="font-semibold underline">
-                      enquiriesgcsemath@yahoo.com
-                    </a>
+                    <p className="font-semibold mb-1">Could not send your message.</p>
+                    {errorDetail && (
+                      <p className="text-xs text-red-600 mb-2 font-mono break-all">{errorDetail}</p>
+                    )}
+                    <p>
+                      Please email us directly at{' '}
+                      <a href="mailto:enquiriesgcsemath@yahoo.com" className="font-semibold underline">
+                        enquiriesgcsemath@yahoo.com
+                      </a>
+                    </p>
                   </div>
                 )}
 
