@@ -41,7 +41,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/practice`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE}/review`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/learn`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${BASE}/downloads`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    // /downloads now redirects to /papers (we no longer host past-paper PDFs).
+    // Not listed in the sitemap.
     { url: `${BASE}/notes-review`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/sections`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },

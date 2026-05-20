@@ -286,10 +286,10 @@ export default function Home() {
             {/* Exam Simulator */}
             <div style={{ gridColumn: 'span 4', background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
               <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--gold)', fontWeight: 700, letterSpacing: '0.08em' }}>03 &middot; EXAM SIMULATOR</div>
-              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 600, letterSpacing: '-0.01em', lineHeight: 1.15 }}>Every past paper, marked <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>like the real thing.</em></h3>
-              <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, fontWeight: 500 }}>Full 2017-2025 archive. Take them timed — auto-marked with grade boundary comparison.</p>
+              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 600, letterSpacing: '-0.01em', lineHeight: 1.15 }}>Original practice papers, marked <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>like the real thing.</em></h3>
+              <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55, fontWeight: 500 }}>Original practice papers in the style of every board. Take them timed — auto-marked with grade boundary comparison. For real past papers, we link straight to the boards.</p>
               <div style={{ marginTop: 'auto', padding: '12px 0', borderTop: '1px dashed var(--rule)', display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-3)', fontWeight: 600 }}>
-                <span>800+ PAPERS</span>
+                <span>180 PRACTICE PAPERS</span>
                 <span style={{ color: 'var(--gold)' }}>All boards</span>
               </div>
             </div>

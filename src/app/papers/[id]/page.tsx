@@ -125,6 +125,15 @@ export default function PaperExamPage() {
   const id = params.id as string
   const paper = getPaper(id)
 
+  // Past papers (historical_*, aqa-foundation-2022-p1, etc.) and the older
+  // ai-* prefix were retired when we removed hosted past-paper content.
+  // Redirect any unknown id back to /papers so bookmarked links land safely.
+  useEffect(() => {
+    if (!paper && id) {
+      router.replace('/papers')
+    }
+  }, [paper, id, router])
+
   const [phase, setPhase] = useState<Phase>('info')
   const [questions, setQuestions] = useState<Question[]>([])
   const [answers, setAnswers] = useState<string[]>([])
@@ -133,7 +142,6 @@ export default function PaperExamPage() {
   const [results, setResults] = useState<MarkResult[]>([])
   const [markingIdx, setMarkingIdx] = useState(0)
   const [loadError, setLoadError] = useState('')
-  const [pdfOpen, setPdfOpen] = useState(false)
 
   const theme = BOARD_THEME[paper?.board ?? 'AQA'] || BOARD_THEME.AQA
 
@@ -309,18 +317,6 @@ export default function PaperExamPage() {
             </div>
           </div>
 
-          {/* PDF option */}
-          {paper.pdfUrl && (
-            <div style={{ background: '#fff', border: `1.5px solid ${theme.border}`, borderRadius: 14, padding: '16px', marginBottom: 20 }}>
-              <p style={{ fontSize: 13, fontWeight: 700, color: theme.bg, margin: '0 0 8px' }}>Real past paper available</p>
-              <p style={{ fontSize: 12, color: '#6B7280', margin: '0 0 10px' }}>View the actual {paper.board} paper alongside our original practice questions.</p>
-              <a href={paper.pdfUrl} target="_blank" rel="noopener noreferrer" style={{
-                display: 'block', padding: '9px', borderRadius: 8, textAlign: 'center',
-                background: theme.accent, color: '#fff', fontWeight: 700, fontSize: 13, textDecoration: 'none',
-              }}>Open PDF in new tab</a>
-            </div>
-          )}
-
           {loadError && (
             <div style={{ background: '#FEF2F2', border: '1px solid #FECACA', borderRadius: 10, padding: '12px', marginBottom: 16 }}>
               <p style={{ fontSize: 13, color: '#DC2626', margin: 0 }}>{loadError}</p>
@@ -369,15 +365,6 @@ export default function PaperExamPage() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <span style={{ fontSize: 13, fontWeight: 700 }}>{paper.board} {paper.tier}</span>
               <span style={{ fontSize: 12, opacity: 0.7 }}>{paper.name}</span>
-              {paper.pdfUrl && (
-                <button onClick={() => setPdfOpen(o => !o)} style={{
-                  padding: '4px 10px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.3)',
-                  background: pdfOpen ? 'rgba(255,255,255,0.2)' : 'transparent',
-                  color: '#fff', fontSize: 11, fontWeight: 600, cursor: 'pointer',
-                }}>
-                  {pdfOpen ? 'Hide PDF' : 'View PDF'}
-                </button>
-              )}
             </div>
 
             {/* Timer - prominent */}
@@ -442,12 +429,6 @@ export default function PaperExamPage() {
           </div>
         </div>
 
-        {/* PDF viewer */}
-        {paper.pdfUrl && pdfOpen && (
-          <div style={{ background: theme.light, borderBottom: `2px solid ${theme.border}`, padding: '12px 24px' }}>
-            <iframe src={paper.pdfUrl} title="Past paper PDF" style={{ width: '100%', height: 550, border: 'none', borderRadius: 8, background: '#fff' }} />
-          </div>
-        )}
 
         {/* Question area */}
         <div style={{ maxWidth: 700, margin: '0 auto', padding: '28px 24px 60px' }}>

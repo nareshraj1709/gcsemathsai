@@ -1,6 +1,6 @@
 export type ExamBoard = 'AQA' | 'Edexcel' | 'OCR'
 export type Tier = 'Foundation' | 'Higher'
-export type PaperType = 'historical' | 'ai'
+export type PaperType = 'practice'
 
 export type Paper = {
   id: string
@@ -8,8 +8,6 @@ export type Paper = {
   board: ExamBoard
   boardCode: string
   tier: Tier
-  year?: number
-  session?: string
   paperNumber: number
   name: string
   calculator: boolean
@@ -18,33 +16,17 @@ export type Paper = {
   timeMinutes: number
   topics: string
   style: string
-  pdfUrl?: string
 }
 
-// ── Real PDF mappings (AQA papers hosted in /public/papers/aqa/) ──
-const AQA_PDF_MAP: Record<string, string> = {
-  'aqa-foundation-2022-p1': '/papers/aqa/foundation-p1-2022-june.pdf',
-  'aqa-foundation-2023-p1': '/papers/aqa/foundation-p1-2023-june.pdf',
-  'aqa-foundation-2024-p1': '/papers/aqa/foundation-p1-2024-june.pdf',
-  'aqa-foundation-2023-p2': '/papers/aqa/foundation-p2-2023-june.pdf',
-  'aqa-foundation-2024-p2': '/papers/aqa/foundation-p2-2024-june.pdf',
-  'aqa-foundation-2022-p3': '/papers/aqa/foundation-p3-2022-june.pdf',
-  'aqa-foundation-2023-p3': '/papers/aqa/foundation-p3-2023-june.pdf',
-  'aqa-foundation-2024-p3': '/papers/aqa/foundation-p3-2024-june.pdf',
-  'aqa-higher-2022-p1':     '/papers/aqa/higher-p1-2022-june.pdf',
-  'aqa-higher-2023-p1':     '/papers/aqa/higher-p1-2023-june.pdf',
-  'aqa-higher-2024-p1':     '/papers/aqa/higher-p1-2024-june.pdf',
-  'aqa-higher-2023-p2':     '/papers/aqa/higher-p2-2023-june.pdf',
-  'aqa-higher-2024-p2':     '/papers/aqa/higher-p2-2024-june.pdf',
-  'aqa-higher-2023-p3':     '/papers/aqa/higher-p3-2023-june.pdf',
-  'aqa-higher-2024-p3':     '/papers/aqa/higher-p3-2024-june.pdf',
-}
+// Independent style descriptors used to prompt question generation.
+// Deliberately generic — we describe how the boards' published papers tend
+// to be structured, not the content of any specific paper.
+const AQA_STYLE = 'Multi-part questions in the (a)(b)(c) format common at AQA. Award method marks (M) for valid working and accuracy marks (A) for the final answer.'
+const EDX_STYLE = 'Worded problems with real-world contexts. Follow-through (ft) marks where indicated in the mark scheme.'
+const OCR_STYLE = 'Problem-solving and reasoning, with alternative valid methods credited. Questions scaffold up in difficulty.'
 
-const AQA_STYLE = 'AQA (8300): structured multi-part (a)(b)(c) format. Method marks (M) for correct working even if final answer wrong. Accuracy marks (A) for correct answer.'
-const EDX_STYLE = 'Edexcel (1MA1): real-world contexts, described diagrams. Follow-through (ft) marks where indicated in mark scheme.'
-const OCR_STYLE = 'OCR (J560): problem-solving and reasoning. Alternative valid methods credited. Scaffolded questions increasing in difficulty.'
-
-// ── Topic distributions ───────────────────────────────────────
+// Independent topic-weighting profiles for each paper position. Generic
+// distributions — not lifted from any specific past paper.
 const TOPIC_DIST: Record<ExamBoard, Record<Tier, string[]>> = {
   AQA: {
     Foundation: [
@@ -84,117 +66,18 @@ const TOPIC_DIST: Record<ExamBoard, Record<Tier, string[]>> = {
   },
 }
 
-// ── Historical papers: AQA & Edexcel 2015–2024 × 3 papers = 30 each ──
-// OCR 2018–2023 × 5 papers = 30
-function buildHistorical(): Paper[] {
-  const papers: Paper[] = []
-
-  // AQA & Edexcel: 10 years × 3 papers
-  for (const board of ['AQA', 'Edexcel'] as ExamBoard[]) {
-    const code = board === 'AQA' ? '8300' : '1MA1'
-    const style = board === 'AQA' ? AQA_STYLE : EDX_STYLE
-    for (const tier of ['Foundation', 'Higher'] as Tier[]) {
-      const dist = TOPIC_DIST[board][tier]
-      let count = 0
-      for (let y = 2015; y <= 2024 && count < 30; y++) {
-        for (let p = 1; p <= 3 && count < 30; p++) {
-          const calc = p !== 1
-          const pid = `${board.toLowerCase()}-${tier.toLowerCase()}-${y}-p${p}`
-          papers.push({
-            id: pid,
-            type: 'historical',
-            board, boardCode: code, tier, year: y,
-            session: 'June',
-            paperNumber: p,
-            name: `${y} Paper ${p} — ${calc ? 'Calculator' : 'Non-Calculator'}`,
-            calculator: calc,
-            questionCount: 20, totalMarks: 80, timeMinutes: 90,
-            topics: dist[(p - 1) % 3],
-            style: `${style} Generate questions in the style and difficulty level of the actual ${board} ${y} ${tier} Paper ${p}.`,
-            pdfUrl: AQA_PDF_MAP[pid],
-          })
-          count++
-        }
-      }
-    }
-  }
-
-  // OCR: 6 years × 5 papers = 30
-  const ocrYears = [2018, 2019, 2020, 2021, 2022, 2023]
-  const ocrCalc = [false, true, true, true, false, false]
-  for (const tier of ['Foundation', 'Higher'] as Tier[]) {
-    const dist = TOPIC_DIST.OCR[tier]
-    for (const year of ocrYears) {
-      for (let p = 1; p <= 5; p++) {
-        papers.push({
-          id: `ocr-${tier.toLowerCase()}-${year}-p${p}`,
-          type: 'historical',
-          board: 'OCR', boardCode: 'J560', tier, year,
-          paperNumber: p,
-          name: `${year} Paper ${p} — ${ocrCalc[p - 1] ? 'Calculator' : 'Non-Calculator'}`,
-          calculator: ocrCalc[p - 1] ?? true,
-          questionCount: 20, totalMarks: 100, timeMinutes: 90,
-          topics: dist[(p - 1) % 3],
-          style: `${OCR_STYLE} Generate questions in the style and difficulty level of the actual OCR ${year} ${tier} Paper ${p}.`,
-        })
-      }
-    }
-  }
-
-  // ── November 2024 + Specimen AQA papers (real PDFs available) ──
-  const nov24: Array<{ tier: Tier; p: number; calc: boolean }> = [
-    { tier: 'Foundation', p: 1, calc: false },
-    { tier: 'Foundation', p: 2, calc: true  },
-    { tier: 'Foundation', p: 3, calc: true  },
-    { tier: 'Higher',     p: 1, calc: false },
-    { tier: 'Higher',     p: 2, calc: true  },
-    { tier: 'Higher',     p: 3, calc: true  },
-  ]
-  for (const { tier, p, calc } of nov24) {
-    const dist = TOPIC_DIST.AQA[tier]
-    papers.push({
-      id: `aqa-${tier.toLowerCase()}-nov2024-p${p}`,
-      type: 'historical',
-      board: 'AQA', boardCode: '8300', tier, year: 2024,
-      session: 'November',
-      paperNumber: p,
-      name: `Nov 2024 Paper ${p} — ${calc ? 'Calculator' : 'Non-Calculator'}`,
-      calculator: calc,
-      questionCount: 20, totalMarks: 80, timeMinutes: 90,
-      topics: dist[(p - 1) % 3],
-      style: `${AQA_STYLE} Generate questions in the style and difficulty level of the actual AQA November 2024 ${tier} Paper ${p}.`,
-      pdfUrl: `/papers/aqa/${tier.toLowerCase()}-p${p}-2024-november.pdf`,
-    })
-  }
-
-  // AQA Specimen paper (Foundation Paper 1)
-  papers.push({
-    id: 'aqa-foundation-specimen-p1',
-    type: 'historical',
-    board: 'AQA', boardCode: '8300', tier: 'Foundation',
-    session: 'Specimen',
-    paperNumber: 1,
-    name: 'Specimen Paper 1 — Non-Calculator',
-    calculator: false,
-    questionCount: 20, totalMarks: 80, timeMinutes: 90,
-    topics: TOPIC_DIST.AQA.Foundation[0],
-    style: `${AQA_STYLE} Generate questions in the style of the AQA GCSE Maths specimen paper.`,
-    pdfUrl: '/papers/aqa/foundation-p1-specimen.pdf',
-  })
-
-  return papers
-}
-
-// ── AI Practice papers: 30 per board per tier ─────────────────
-function buildAIPapers(): Paper[] {
+// ── Practice papers we wrote: 30 per board per tier ──
+// All questions are written by our generator from the published specification.
+// We do not host or reproduce past-paper content from any board.
+function buildPracticePapers(): Paper[] {
   const papers: Paper[] = []
   const DIFFICULTY_LABELS = [
-    'Warm-Up', 'Warm-Up', 'Warm-Up', 'Warm-Up', 'Warm-Up',       // 1-5 easy
-    'Standard', 'Standard', 'Standard', 'Standard', 'Standard',   // 6-10
-    'Standard', 'Standard', 'Standard', 'Standard', 'Standard',   // 11-15
-    'Challenge', 'Challenge', 'Challenge', 'Challenge', 'Challenge', // 16-20
-    'Mixed', 'Mixed', 'Mixed', 'Mixed', 'Mixed',                   // 21-25
-    'Exam Style', 'Exam Style', 'Exam Style', 'Exam Style', 'Exam Style', // 26-30
+    'Warm-Up', 'Warm-Up', 'Warm-Up', 'Warm-Up', 'Warm-Up',
+    'Standard', 'Standard', 'Standard', 'Standard', 'Standard',
+    'Standard', 'Standard', 'Standard', 'Standard', 'Standard',
+    'Challenge', 'Challenge', 'Challenge', 'Challenge', 'Challenge',
+    'Mixed', 'Mixed', 'Mixed', 'Mixed', 'Mixed',
+    'Exam Style', 'Exam Style', 'Exam Style', 'Exam Style', 'Exam Style',
   ]
   const PAPER_FOCUS = [
     'Number and Algebra', 'Geometry and Measures', 'Statistics and Probability',
@@ -211,15 +94,15 @@ function buildAIPapers(): Paper[] {
         const focus = PAPER_FOCUS[(i - 1) % 5]
         const calc = i % 3 !== 1  // every 3rd paper is non-calc
         papers.push({
-          id: `ai-${board.toLowerCase()}-${tier.toLowerCase()}-${i}`,
-          type: 'ai',
+          id: `practice-${board.toLowerCase()}-${tier.toLowerCase()}-${i}`,
+          type: 'practice',
           board, boardCode: code, tier,
           paperNumber: i,
           name: `Practice ${i} — ${diffLabel}`,
           calculator: calc,
           questionCount: 20, totalMarks: 80, timeMinutes: 90,
           topics: dist[(i - 1) % 3],
-          style: `${style} Focus on: ${focus}. Difficulty: ${diffLabel}. ${!calc ? 'Non-calculator paper.' : ''}`,
+          style: `${style} Focus on: ${focus}. Difficulty: ${diffLabel}. ${!calc ? 'Non-calculator paper.' : ''} All questions must be written from scratch in the style of GCSE Maths, not copied or derived from any specific past paper.`,
         })
       }
     }
@@ -227,9 +110,12 @@ function buildAIPapers(): Paper[] {
   return papers
 }
 
-export const HISTORICAL_PAPERS = buildHistorical()
-export const AI_PAPERS = buildAIPapers()
-export const ALL_PAPERS = [...HISTORICAL_PAPERS, ...AI_PAPERS]
+// Backwards-compat alias — some pages still import AI_PAPERS by name.
+export const PRACTICE_PAPERS = buildPracticePapers()
+export const AI_PAPERS = PRACTICE_PAPERS
+
+// ALL_PAPERS used to include both historical + AI; now we only ship our own.
+export const ALL_PAPERS = PRACTICE_PAPERS
 
 export function getPaper(id: string): Paper | undefined {
   return ALL_PAPERS.find(p => p.id === id)

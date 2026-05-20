@@ -21,7 +21,7 @@ export default function Footer() {
             <li><a onClick={() => go('/topics')}>All topics</a></li>
             <li><a onClick={() => go('/topics')}>Foundation</a></li>
             <li><a onClick={() => go('/topics')}>Higher</a></li>
-            <li><a onClick={() => go('/papers')}>Past papers</a></li>
+            <li><a onClick={() => go('/papers')}>Practice papers &amp; official links</a></li>
             <li><a onClick={() => go('/formula-sheet')}>Formula sheet</a></li>
             <li><a onClick={() => go('/formulas')}>Topic formula sheets</a></li>
           </ul>

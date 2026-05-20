@@ -1,16 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Download GCSE Maths Past Papers — Free AQA PDF Downloads',
+  title: 'GCSE Maths Papers — Practice Papers and Official Past-Paper Links',
   description:
-    'Download free AQA GCSE Maths past papers as printable PDFs. Foundation and Higher tier papers from 2015–2024 with timed exam conditions.',
-  keywords: ['GCSE past papers download', 'AQA past papers PDF', 'GCSE Maths papers free', 'printable past papers'],
-  alternates: { canonical: 'https://www.gcsemathsai.co.uk/downloads' },
-  openGraph: {
-    title: 'Download GCSE Maths Past Papers — Free PDFs',
-    description: 'Free AQA GCSE Maths past paper PDFs. Foundation and Higher tier, 2015–2024.',
-    url: 'https://www.gcsemathsai.co.uk/downloads',
-  },
+    'For real past papers, visit the official AQA, Edexcel and OCR sites. For original practice papers written from the published specifications, see /papers.',
+  keywords: ['GCSE maths practice papers', 'GCSE past papers official links'],
+  alternates: { canonical: 'https://www.gcsemathsai.co.uk/papers' },
+  robots: { index: false, follow: true },
 }
 
 export default function DownloadsLayout({ children }: { children: React.ReactNode }) {

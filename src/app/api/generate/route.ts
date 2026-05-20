@@ -103,7 +103,7 @@ export async function POST(req: Request) {
   let prompt: string
   if (paperStyle && topics) {
     // Full paper question set
-    prompt = `You are a senior GCSE Maths examiner writing questions for a real ${examBoard} ${tier} exam paper.
+    prompt = `You are a senior GCSE Maths author writing original practice questions in the style of ${examBoard} ${tier} GCSE Mathematics. Do NOT copy or closely paraphrase any specific past-paper question from any board — every question must be written from scratch.
 
 ${boardPattern}
 
@@ -113,15 +113,16 @@ Topic distribution: ${topics}
 
 ${style || ''}
 
-Generate exactly ${count} questions that could appear on a real ${examBoard} paper. They must be INDISTINGUISHABLE from actual past paper questions in format, language, and difficulty.
+Generate exactly ${count} original questions written in the style typical of ${examBoard} ${tier} GCSE Mathematics. They should follow the format and difficulty curve of the board's published specification, but must be entirely your own writing.
 
 Requirements:
 - Questions MUST increase in difficulty (Q1-3: 1-2 marks each, Q4-10: 2-4 marks, Q11+: 4-6 marks)
-- Use multi-part format (a)(b)(c) where appropriate — this is how real ${examBoard} papers work
+- Use multi-part format (a)(b)(c) where appropriate — common in ${examBoard} papers
 - Total marks should sum to approximately ${count * 4}
 - Use UK English, metric units, British currency (£), UK contexts
 - Include at least one "Show that..." or "Explain why..." question
 - Each question must have a single correct answer (or clearly defined acceptable answers)
+- IMPORTANT: do NOT reproduce or closely imitate any specific past-paper question. All contexts, numbers and wording must be original.
 
 Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 [
@@ -146,16 +147,13 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 - Include at least one question requiring explanation or proof`,
     }
 
-    // Year pool covers every GCSE 9-1 session. Caller can pin a specific year.
-    const examYears = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
-    const pickedYear = (typeof year === 'number' && examYears.includes(year))
-      ? year
-      : examYears[Math.floor(Math.random() * examYears.length)]
-    const modelYear = pickedYear
+    // We deliberately do NOT pin generation to a specific past-paper year — every
+    // question is written original to the published specification, not to a
+    // particular paper.
     const paperNum = calculator === false ? 1 : Math.floor(Math.random() * 3) + 1
     const isCalc = calculator === false ? false : paperNum !== 1
 
-    prompt = `You are a senior GCSE Maths examiner. Generate ${count} practice questions modelled on real ${examBoard} ${tier} ${modelYear} Paper ${paperNum} (${isCalc ? 'Calculator' : 'Non-Calculator'}).
+    prompt = `You are a senior GCSE Maths author. Generate ${count} original practice questions in the style of ${examBoard} ${tier} GCSE Mathematics Paper ${paperNum} (${isCalc ? 'Calculator' : 'Non-Calculator'}). Do NOT copy or closely paraphrase any specific past-paper question — every question must be written from scratch.
 
 ${boardPattern}
 
@@ -167,10 +165,10 @@ Subtopic: ${subtopic || 'Mixed'}
 ${difficultyGuide[difficulty] || difficultyGuide['Medium']}
 
 CRITICAL REQUIREMENTS:
-- Questions must look and feel EXACTLY like real ${examBoard} ${modelYear} exam questions
-- Use ${examBoard}'s specific phrasing style and question structures
+- Questions must be original work, written in the style of ${examBoard} ${tier} GCSE Maths — never copied from any specific past paper
+- Follow ${examBoard}'s typical phrasing style and question structures
 - All questions must be on "${subtopic || topic}" but vary the contexts and methods tested
-- Use multi-part (a)(b)(c) format where the question naturally builds — this is essential for ${examBoard}
+- Use multi-part (a)(b)(c) format where the question naturally builds — common in ${examBoard} papers
 - Use UK English, metric units, UK contexts (British names, £ currency, UK places)
 - Each question needs a hint that suggests the method WITHOUT revealing the answer
 - Mark schemes must use proper M/A/B notation
@@ -194,7 +192,7 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 ]` : `Return a JSON array of exactly ${count} questions (no markdown, no explanation):
 [
   {
-    "question": "full question text exactly as it would appear on a ${examBoard} paper",
+    "question": "full question text, written in the style of a ${examBoard} paper",
     "hint": "brief method hint, e.g. 'Start by finding a common denominator'",
     "markScheme": "M1: [method step]\\nA1: [correct answer]\\nB1: [independent mark if applicable]",
     "marks": 3

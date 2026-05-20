@@ -60,8 +60,8 @@ const FEATURES = [
     badge: 'bg-amber-100 text-amber-700',
     bar: 'bg-amber-500',
     points: [
-      'Historical exam papers from 2015–2024 with timed exam conditions',
       '30 original practice papers per board per tier — fresh question sets for every session',
+      'Direct links to official AQA, Edexcel and OCR past papers — we do not host past-paper content',
       'Difficulty levels from Warm-Up to Exam Style, so you can build up gradually',
       'Grade boundary estimates based on your score after every paper',
     ],
