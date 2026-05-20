@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
   const { error } = await resend.emails.send({
     from: 'GCSEMathsAI <noreply@gcsemathsai.co.uk>',
     to: email,
-    replyTo: 'suppoprtgcsemaths@gmail.com',
+    replyTo: 'enquiriesgcsemath@yahoo.com',
     subject: 'Your GCSEMathsAI predicted papers — download links',
     text:
 `Thanks for your purchase from GCSEMathsAI.

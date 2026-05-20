@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const SUPPORT_EMAIL = 'suppoprtgcsemaths@gmail.com'
+const SUPPORT_EMAIL = 'enquiriesgcsemath@yahoo.com'
 
 export async function POST(req: Request) {
   const { name, email, category, message } = await req.json()

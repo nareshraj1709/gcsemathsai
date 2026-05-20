@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: 'Can my teacher set up accounts for a whole class?',
-    a: 'Not yet — but this is on our roadmap. Email us at suppoprtgcsemaths@gmail.com and we\'ll keep you posted.',
+    a: 'Not yet — but this is on our roadmap. Email us at enquiriesgcsemath@yahoo.com and we\'ll keep you posted.',
   },
   {
     q: 'I\'ve forgotten my password. What do I do?',
@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: 'How do I delete my account?',
-    a: 'Email suppoprtgcsemaths@gmail.com with the subject "Delete my account". We\'ll delete everything within 5 working days.',
+    a: 'Email enquiriesgcsemath@yahoo.com with the subject "Delete my account". We\'ll delete everything within 5 working days.',
   },
 ]
 
@@ -166,8 +166,8 @@ export default function ContactPage() {
                 {status === 'error' && (
                   <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm">
                     Something went wrong. Please try emailing us directly at{' '}
-                    <a href="mailto:suppoprtgcsemaths@gmail.com" className="font-semibold underline">
-                      suppoprtgcsemaths@gmail.com
+                    <a href="mailto:enquiriesgcsemath@yahoo.com" className="font-semibold underline">
+                      enquiriesgcsemath@yahoo.com
                     </a>
                   </div>
                 )}
@@ -183,8 +183,8 @@ export default function ContactPage() {
 
                 <p className="text-xs text-gray-400 text-center">
                   Or email us directly:{' '}
-                  <a href="mailto:suppoprtgcsemaths@gmail.com" className="text-green-800 font-medium">
-                    suppoprtgcsemaths@gmail.com
+                  <a href="mailto:enquiriesgcsemath@yahoo.com" className="text-green-800 font-medium">
+                    enquiriesgcsemath@yahoo.com
                   </a>
                 </p>
               </form>
@@ -198,17 +198,17 @@ export default function ContactPage() {
               {
                 icon: '✉️',
                 title: 'General',
-                lines: ['suppoprtgcsemaths@gmail.com', 'Questions, feedback, anything'],
+                lines: ['enquiriesgcsemath@yahoo.com', 'Questions, feedback, anything'],
               },
               {
                 icon: '🔒',
                 title: 'Privacy & data',
-                lines: ['suppoprtgcsemaths@gmail.com', 'Data requests, GDPR, account deletion'],
+                lines: ['enquiriesgcsemath@yahoo.com', 'Data requests, GDPR, account deletion'],
               },
               {
                 icon: '🏫',
                 title: 'Schools',
-                lines: ['suppoprtgcsemaths@gmail.com', 'Class licences, bulk accounts, MATs'],
+                lines: ['enquiriesgcsemath@yahoo.com', 'Class licences, bulk accounts, MATs'],
               },
             ].map(c => (
               <div key={c.title} className="flex gap-3 p-4 rounded-xl" style={{ background: 'var(--paper)', border: '1px solid var(--rule)' }}>

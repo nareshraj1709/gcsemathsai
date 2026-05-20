@@ -8,7 +8,7 @@ import { PDFDocument, StandardFonts, degrees, rgb } from 'pdf-lib'
 // Standard GCSEMathsAI watermark - same logic as src/lib/watermark-pdf.ts so
 // Foundation papers carry the identical stamping as predicted papers.
 
-const SUPPORT_EMAIL = 'suppoprtgcsemaths@gmail.com'
+const SUPPORT_EMAIL = 'enquiriesgcsemath@yahoo.com'
 const FOOTER_LINE = '© 2026 GCSEMathsAI · gcsemathsai.co.uk · licensed for personal revision use · redistribution prohibited'
 
 async function applyWatermark(input, opts = {}) {

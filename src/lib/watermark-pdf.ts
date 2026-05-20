@@ -20,7 +20,7 @@ export interface WatermarkOptions {
   dateISO?: string
 }
 
-const SUPPORT_EMAIL = 'suppoprtgcsemaths@gmail.com'
+const SUPPORT_EMAIL = 'enquiriesgcsemath@yahoo.com'
 const FOOTER_LINE = '© 2026 GCSEMathsAI · gcsemathsai.co.uk · licensed for personal revision use · redistribution prohibited'
 
 export async function applyWatermark(input: Uint8Array | ArrayBuffer | Buffer, opts: WatermarkOptions = {}): Promise<Uint8Array> {

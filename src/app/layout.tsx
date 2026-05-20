@@ -107,7 +107,7 @@ export default function RootLayout({
           logo: 'https://www.gcsemathsai.co.uk/og.png',
           description: 'Modern GCSE Maths preparation with instant examiner-style marking. Study notes, practice questions and past papers for AQA, Edexcel and OCR.',
           sameAs: [],
-          contactPoint: { '@type': 'ContactPoint', email: 'suppoprtgcsemaths@gmail.com', contactType: 'customer service' },
+          contactPoint: { '@type': 'ContactPoint', email: 'enquiriesgcsemath@yahoo.com', contactType: 'customer service' },
         }) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
