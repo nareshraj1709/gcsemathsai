@@ -1,10 +1,10 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllMarkdownPosts } from '@/lib/markdown'
 import { BLOG_POSTS } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog — Revision Guides & GCSE Maths Tips | GCSEMathsAI',
+  title: 'Blog â€” Revision Guides & GCSE Maths Tips | GCSEMathsAI',
   description: 'Revision guides, GCSE Maths tips and exam technique advice from the GCSEMathsAI team. Practical strategies that move grades, from Foundation to Higher.',
   openGraph: {
     title: 'GCSE Maths Blog | GCSEMathsAI',
@@ -80,7 +80,7 @@ function PostCard({ post }: { post: CardPost }) {
         </p>
         <div className="mt-auto pt-4 flex items-center gap-2 text-[11px] flex-wrap" style={{ color: 'var(--ink-3)', fontFamily: 'var(--mono)', borderTop: '1px dashed var(--rule)' }}>
           <span>{post.author}</span>
-          <span style={{ opacity: 0.5 }}>·</span>
+          <span style={{ opacity: 0.5 }}>Â·</span>
           <span>{post.date}</span>
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen" style={{ background: 'var(--cream)' }}>
-      {/* Hero — matches /topics, /glossary, /question-types style */}
+      {/* Hero â€” matches /topics, /glossary, /question-types style */}
       <section
         className="text-center"
         style={{
@@ -124,7 +124,7 @@ export default function BlogPage() {
             marginBottom: 16,
           }}
         >
-          Blog · {allPosts.length} articles
+          Blog Â· {allPosts.length} articles
         </span>
         <h1
           className="leading-tight max-w-3xl mx-auto"
@@ -182,9 +182,9 @@ export default function BlogPage() {
           }}
         >
           {[
-            { href: '/topics',         title: 'All 187 GCSE Maths topics', body: 'Step-by-step guides with worked examples for every topic on the spec.',  bg: 'var(--green-soft)',   accent: 'var(--green)' },
-            { href: '/glossary',       title: 'GCSE Maths glossary',      body: '60+ key terms in plain English — command words to vocab.',              bg: 'var(--gold-soft)',    accent: 'var(--gold)' },
-            { href: '/question-types', title: 'Command-word guides',      body: '"Show that", "Hence", "Estimate" — how to answer every type.',         bg: 'var(--navy-soft)',    accent: 'var(--navy)' },
+            { href: '/topics',         title: 'All 245 GCSE Maths topics', body: 'Step-by-step guides with worked examples for every topic on the spec.',  bg: 'var(--green-soft)',   accent: 'var(--green)' },
+            { href: '/glossary',       title: 'GCSE Maths glossary',      body: '60+ key terms in plain English â€” command words to vocab.',              bg: 'var(--gold-soft)',    accent: 'var(--gold)' },
+            { href: '/question-types', title: 'Command-word guides',      body: '"Show that", "Hence", "Estimate" â€” how to answer every type.',         bg: 'var(--navy-soft)',    accent: 'var(--navy)' },
             { href: '/formula-sheet',  title: 'Formula sheet (PDF)',      body: 'Every formula you need as a free printable download.',                  bg: 'var(--burgundy-soft)',accent: 'var(--burgundy)' },
           ].map(c => (
             <Link
@@ -210,7 +210,7 @@ export default function BlogPage() {
           <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6 }}>
             New guides published every week. Got a topic you&apos;d like us to cover?{' '}
             <Link href="/contact" className="font-semibold hover:underline" style={{ color: 'var(--green)' }}>
-              Let us know →
+              Let us know â†’
             </Link>
           </p>
         </div>

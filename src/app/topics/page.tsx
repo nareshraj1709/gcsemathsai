@@ -1,25 +1,25 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllTopics } from '@/lib/topics-markdown'
 import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 export const metadata: Metadata = {
-  title: 'All GCSE Maths Topics — Complete Revision Guide',
-  description: 'Browse all 187 GCSE Maths topics with step-by-step explanations, worked examples and practice questions. Covers AQA, Edexcel and OCR specifications.',
+  title: 'All GCSE Maths Topics â€” Complete Revision Guide',
+  description: 'Browse all 245 GCSE Maths topics with step-by-step explanations, worked examples and practice questions. Covers AQA, Edexcel and OCR specifications.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/topics' },
   openGraph: {
-    title: 'All GCSE Maths Topics — Complete Revision Guide',
-    description: 'Browse all 187 GCSE Maths topics with explanations, worked examples and practice questions.',
+    title: 'All GCSE Maths Topics â€” Complete Revision Guide',
+    description: 'Browse all 245 GCSE Maths topics with explanations, worked examples and practice questions.',
     url: 'https://www.gcsemathsai.co.uk/topics',
   },
 }
 
 const STRAND_META: Record<string, { icon: string; colour: string; bg: string; border: string }> = {
-  'Number':                              { icon: '🔢', colour: 'var(--green)',     bg: 'var(--green-soft)',   border: 'var(--rule)' },
-  'Algebra':                             { icon: '📐', colour: 'var(--navy)',      bg: 'var(--navy-soft)',    border: 'var(--rule)' },
-  'Ratio, Proportion & Rates of Change': { icon: '⚖️', colour: 'var(--gold)',      bg: 'var(--gold-soft)',    border: 'var(--rule)' },
-  'Geometry & Measures':                 { icon: '📏', colour: 'var(--burgundy)',  bg: 'var(--burgundy-soft)',border: 'var(--rule)' },
-  'Statistics & Probability':            { icon: '📊', colour: 'var(--green-mid)', bg: 'var(--green-soft)',   border: 'var(--rule)' },
+  'Number':                              { icon: 'ðŸ”¢', colour: 'var(--green)',     bg: 'var(--green-soft)',   border: 'var(--rule)' },
+  'Algebra':                             { icon: 'ðŸ“', colour: 'var(--navy)',      bg: 'var(--navy-soft)',    border: 'var(--rule)' },
+  'Ratio, Proportion & Rates of Change': { icon: 'âš–ï¸', colour: 'var(--gold)',      bg: 'var(--gold-soft)',    border: 'var(--rule)' },
+  'Geometry & Measures':                 { icon: 'ðŸ“', colour: 'var(--burgundy)',  bg: 'var(--burgundy-soft)',border: 'var(--rule)' },
+  'Statistics & Probability':            { icon: 'ðŸ“Š', colour: 'var(--green-mid)', bg: 'var(--green-soft)',   border: 'var(--rule)' },
 }
 
 const BASE = 'https://www.gcsemathsai.co.uk'
@@ -46,13 +46,13 @@ export default function TopicsIndexPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'GCSE Maths — Complete Topic Guide',
-    description: 'Step-by-step guides, worked examples and practice questions for all 187 GCSE Maths topics across AQA, Edexcel and OCR specifications.',
+    name: 'GCSE Maths â€” Complete Topic Guide',
+    description: 'Step-by-step guides, worked examples and practice questions for all 245 GCSE Maths topics across AQA, Edexcel and OCR specifications.',
     provider: { '@type': 'Organization', name: 'GCSEMathsAI', url: BASE },
     url: `${BASE}/topics`,
     educationalLevel: 'GCSE',
     inLanguage: 'en-GB',
-    numberOfCredits: 187,
+    numberOfCredits: 245,
     hasCourseInstance: {
       '@type': 'CourseInstance',
       courseMode: 'online',
@@ -93,7 +93,7 @@ export default function TopicsIndexPage() {
           textTransform: 'uppercase',
           marginBottom: 16,
         }}>
-          187 Topics
+          245 Topics
         </span>
         <h1 style={{
           fontFamily: 'var(--serif)',
@@ -102,7 +102,7 @@ export default function TopicsIndexPage() {
           color: 'var(--ink)',
           margin: '0 0 8px',
         }}>
-          Every GCSE Maths Topic — Explained
+          Every GCSE Maths Topic â€” Explained
         </h1>
         <p style={{
           fontSize: 14,
@@ -174,7 +174,7 @@ export default function TopicsIndexPage() {
                           lineHeight: 1.4,
                           margin: 0,
                         }}>
-                          {topic.topicNumber}. {topic.title.replace(/ — .*$/, '').replace(/ GCSE.*$/, '')}
+                          {topic.topicNumber}. {topic.title.replace(/ â€” .*$/, '').replace(/ GCSE.*$/, '')}
                         </p>
                         <p style={{
                           fontSize: 12,
@@ -233,7 +233,7 @@ export default function TopicsIndexPage() {
             margin: '0 auto 24px',
             lineHeight: 1.5,
           }}>
-            Get AI-marked practice questions on any topic — with instant feedback and step-by-step solutions.
+            Get AI-marked practice questions on any topic â€” with instant feedback and step-by-step solutions.
           </p>
           <Link
             href="/auth"

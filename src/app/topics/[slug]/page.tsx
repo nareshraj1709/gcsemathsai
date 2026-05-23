@@ -370,7 +370,7 @@ export default async function TopicPage({ params }: Props) {
               color: 'var(--green)',
               textDecoration: 'none',
             }}>
-              &larr; All 187 topics
+              &larr; All 245 topics
             </Link>
           </div>
         </aside>

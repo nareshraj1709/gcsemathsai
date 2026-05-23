@@ -1,14 +1,14 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 export const metadata: Metadata = {
-  title: 'GCSE Maths Formula Sheet — Free PDF Download',
+  title: 'GCSE Maths Formula Sheet â€” Free PDF Download',
   description: 'Download the complete GCSE Maths formula sheet as a free PDF. Every formula you need for AQA, Edexcel and OCR exams in one place.',
   keywords: ['GCSE maths formula sheet', 'GCSE maths formulas PDF', 'maths formula sheet GCSE', 'AQA maths formulas', 'Edexcel maths formulas'],
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/formula-sheet' },
   openGraph: {
-    title: 'GCSE Maths Formula Sheet — Free PDF Download',
+    title: 'GCSE Maths Formula Sheet â€” Free PDF Download',
     description: 'Every GCSE Maths formula in one free PDF. Covers AQA, Edexcel and OCR.',
     url: 'https://www.gcsemathsai.co.uk/formula-sheet',
   },
@@ -115,7 +115,7 @@ export default function FormulaSheetPage() {
             The complete GCSE Maths <em style={{ fontStyle: 'italic', color: 'var(--gold-soft)' }}>formula sheet.</em>
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.55, opacity: 0.85, maxWidth: 480, margin: '0 auto 32px', fontWeight: 500 }}>
-            Every formula you need for AQA, Edexcel and OCR — in one printable PDF. Download it, pin it to your wall, and never forget a formula again.
+            Every formula you need for AQA, Edexcel and OCR â€” in one printable PDF. Download it, pin it to your wall, and never forget a formula again.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' as const }}>
             <a href="/formulas/" style={{
@@ -258,7 +258,7 @@ export default function FormulaSheetPage() {
             Know the formulas? <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>Now apply them.</em>
           </h2>
           <p style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.55, marginBottom: 28, maxWidth: 460, margin: '0 auto 28px', fontWeight: 500 }}>
-            Practise exam-style questions with instant examiner-style marking — get feedback on your working and method marks.
+            Practise exam-style questions with instant examiner-style marking â€” get feedback on your working and method marks.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' as const }}>
             <Link href="/learn" className="btn btn-primary" style={{ padding: '14px 28px', fontSize: 15 }}>
@@ -275,8 +275,8 @@ export default function FormulaSheetPage() {
           <div className="sec-label">Related resources</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14 }} className="related-grid">
             {[
-              { href: '/formulas', title: 'Per-topic Formula Sheets', desc: '187 print-ready sheets — one for every GCSE topic. Definitions, worked examples, common mistakes.' },
-              { href: '/topics', title: 'All 187 GCSE Maths Topics', desc: 'Step-by-step explanations and worked examples for every topic' },
+              { href: '/formulas', title: 'Per-topic Formula Sheets', desc: '245 print-ready sheets â€” one for every GCSE topic. Definitions, worked examples, common mistakes.' },
+              { href: '/topics', title: 'All 245 GCSE Maths Topics', desc: 'Step-by-step explanations and worked examples for every topic' },
               { href: '/papers', title: 'GCSE Maths Papers', desc: 'Original practice papers plus direct links to AQA, Edexcel and OCR official past papers.' },
               { href: '/learn', title: 'Practice Questions', desc: 'Exam-style questions with instant examiner-style feedback' },
             ].map(r => (
@@ -302,7 +302,7 @@ export default function FormulaSheetPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'LearningResource',
-        name: 'GCSE Maths Formula Sheet — Free PDF Download',
+        name: 'GCSE Maths Formula Sheet â€” Free PDF Download',
         description: 'Complete GCSE Maths formula sheet covering all topics for AQA, Edexcel and OCR exams.',
         url: 'https://www.gcsemathsai.co.uk/formula-sheet',
         publisher: { '@type': 'Organization', name: 'GCSEMathsAI', url: 'https://www.gcsemathsai.co.uk' },

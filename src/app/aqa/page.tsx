@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'AQA GCSE Maths (8300) — Complete Hub | GCSEMathsAI',
-  description: 'AQA GCSE Maths 8300 — paper structure, grade boundaries, most-tested topics, formula sheet and exam date guidance for Foundation and Higher tier students.',
+  title: 'AQA GCSE Maths (8300) â€” Complete Hub | GCSEMathsAI',
+  description: 'AQA GCSE Maths 8300 â€” paper structure, grade boundaries, most-tested topics, formula sheet and exam date guidance for Foundation and Higher tier students.',
   keywords: ['aqa gcse maths', 'aqa 8300', 'aqa gcse maths past papers', 'aqa gcse maths topics', 'aqa gcse maths grade boundaries', 'aqa gcse maths foundation higher'],
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/aqa' },
   openGraph: {
-    title: 'AQA GCSE Maths (8300) — Complete Revision Hub | GCSEMathsAI',
+    title: 'AQA GCSE Maths (8300) â€” Complete Revision Hub | GCSEMathsAI',
     description: 'Paper structure, grade boundaries, most-tested topics and revision guidance for AQA GCSE Maths 8300.',
     url: 'https://www.gcsemathsai.co.uk/aqa',
   },
@@ -23,17 +23,17 @@ const PAPERS = [
 ]
 
 const HIGHER_GB = [
-  ['9', '195–210'], ['8', '170–185'], ['7', '142–162'],
-  ['6', '115–138'], ['5', '90–115'], ['4', '60–90'],
+  ['9', '195â€“210'], ['8', '170â€“185'], ['7', '142â€“162'],
+  ['6', '115â€“138'], ['5', '90â€“115'], ['4', '60â€“90'],
 ]
 const FOUNDATION_GB = [
-  ['5', '145–168'], ['4', '105–130'], ['3', '75–95'], ['2', '50–70'],
+  ['5', '145â€“168'], ['4', '105â€“130'], ['3', '75â€“95'], ['2', '50â€“70'],
 ]
 
 const STYLE_NOTES = [
-  { title: 'Heavy real-world context', body: 'AQA frames many questions around everyday situations — pricing, measurements, surveys. The maths is the same as on other boards, but the phrasing is less abstract. Practising context-heavy questions pays off.' },
-  { title: 'Progressive build per paper', body: 'Each AQA paper opens with 1–2 mark accessible questions and builds to 5–6 mark multi-step problems. The hardest questions are clustered at the back of each paper.' },
-  { title: 'Generous method marks', body: 'AQA mark schemes credit correct method even when arithmetic slips. Always show your working — a correct method with a wrong final answer usually earns most of the available marks.' },
+  { title: 'Heavy real-world context', body: 'AQA frames many questions around everyday situations â€” pricing, measurements, surveys. The maths is the same as on other boards, but the phrasing is less abstract. Practising context-heavy questions pays off.' },
+  { title: 'Progressive build per paper', body: 'Each AQA paper opens with 1â€“2 mark accessible questions and builds to 5â€“6 mark multi-step problems. The hardest questions are clustered at the back of each paper.' },
+  { title: 'Generous method marks', body: 'AQA mark schemes credit correct method even when arithmetic slips. Always show your working â€” a correct method with a wrong final answer usually earns most of the available marks.' },
   { title: 'Non-calculator test of number sense', body: 'Paper 1 has no calculator. Mental arithmetic, fractions and standard form are foundational. Many students underperform on Paper 1 because they only revise with a calculator.' },
 ]
 
@@ -41,9 +41,9 @@ const USEFUL_LINKS = [
   { label: 'AQA GCSE Maths Complete Topic Checklist', href: '/blog/aqa-gcse-maths-complete-topic-checklist' },
   { label: 'GCSE Maths 2026 Grade Boundaries Forecast', href: '/blog/gcse-maths-2026-grade-boundaries-forecast' },
   { label: '7-Day GCSE Maths Revision Plan', href: '/blog/7-day-gcse-maths-revision-plan' },
-  { label: 'Foundation vs Higher — Which Tier?', href: '/blog/gcse-maths-foundation-vs-higher-which-tier' },
+  { label: 'Foundation vs Higher â€” Which Tier?', href: '/blog/gcse-maths-foundation-vs-higher-which-tier' },
   { label: 'GCSE Maths Formulas You Must Know', href: '/blog/gcse-maths-formulas-you-must-know' },
-  { label: 'All 187 GCSE Maths Topics', href: '/topics' },
+  { label: 'All 245 GCSE Maths Topics', href: '/topics' },
 ]
 
 export default function AQAHubPage() {
@@ -63,13 +63,13 @@ export default function AQAHubPage() {
       {/* Hero */}
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
         <span style={{ ...monoLabel, color: 'var(--green)', background: 'var(--green-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 16 }}>
-          Exam Board · AQA
+          Exam Board Â· AQA
         </span>
         <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 760 }}>
           AQA GCSE Maths <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>(8300)</em>
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 620, margin: '0 auto' }}>
-          The largest GCSE Maths exam board, with over 1.5 million candidates each year. Everything you need to revise to the AQA specification — paper structure, grade boundaries, style of questions and the topics that come up every year.
+          The largest GCSE Maths exam board, with over 1.5 million candidates each year. Everything you need to revise to the AQA specification â€” paper structure, grade boundaries, style of questions and the topics that come up every year.
         </p>
       </section>
 
@@ -84,12 +84,12 @@ export default function AQAHubPage() {
             <div key={p.paper} style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: 22 }}>
               <p style={{ fontFamily: 'var(--serif)', fontSize: 18, fontWeight: 700, color: 'var(--ink)', margin: '0 0 6px' }}>{p.paper}</p>
               <p style={{ ...monoLabel, color: 'var(--green)', margin: 0 }}>{p.calc}</p>
-              <p style={{ fontSize: 14, color: 'var(--ink-2)', marginTop: 12 }}>{p.marks} marks · {p.time}</p>
+              <p style={{ fontSize: 14, color: 'var(--ink-2)', marginTop: 12 }}>{p.marks} marks Â· {p.time}</p>
             </div>
           ))}
         </div>
         <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.65, marginTop: 16 }}>
-          All three papers are taken in May/June or in the November resit window. Foundation tier (grades 1–5) and Higher tier (grades 4–9) sit different question sets.
+          All three papers are taken in May/June or in the November resit window. Foundation tier (grades 1â€“5) and Higher tier (grades 4â€“9) sit different question sets.
         </p>
       </section>
 
@@ -102,7 +102,7 @@ export default function AQAHubPage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
             <div style={{ background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 22 }}>
-              <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: '0 0 14px' }}>Higher tier · out of 240</p>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: '0 0 14px' }}>Higher tier Â· out of 240</p>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
                 <thead><tr style={{ color: 'var(--ink-3)' }}><th style={{ textAlign: 'left', paddingBottom: 8 }}>Grade</th><th style={{ textAlign: 'right', paddingBottom: 8 }}>Marks</th></tr></thead>
                 <tbody style={{ color: 'var(--ink-2)' }}>
@@ -111,7 +111,7 @@ export default function AQAHubPage() {
               </table>
             </div>
             <div style={{ background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: 22 }}>
-              <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: '0 0 14px' }}>Foundation tier · out of 240</p>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: '0 0 14px' }}>Foundation tier Â· out of 240</p>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
                 <thead><tr style={{ color: 'var(--ink-3)' }}><th style={{ textAlign: 'left', paddingBottom: 8 }}>Grade</th><th style={{ textAlign: 'right', paddingBottom: 8 }}>Marks</th></tr></thead>
                 <tbody style={{ color: 'var(--ink-2)' }}>
@@ -152,7 +152,7 @@ export default function AQAHubPage() {
             {USEFUL_LINKS.map(l => (
               <Link key={l.href} href={l.href}
                 style={{ background: 'var(--cream)', color: 'var(--ink-2)', border: '1px solid var(--rule)', borderRadius: 12, padding: '16px 18px', textDecoration: 'none', fontSize: 14, fontWeight: 600, fontFamily: 'var(--serif)', letterSpacing: '-0.01em' }}>
-                {l.label} →
+                {l.label} â†’
               </Link>
             ))}
           </div>
@@ -164,9 +164,9 @@ export default function AQAHubPage() {
           Practise calibrated to <em style={{ color: 'var(--gold-soft)', fontStyle: 'italic' }}>AQA mark schemes</em>.
         </h2>
         <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
-          Instant marking that awards method, accuracy and follow-through — the way AQA examiners do.
+          Instant marking that awards method, accuracy and follow-through â€” the way AQA examiners do.
         </p>
-        <Link href="/auth" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>Start free →</Link>
+        <Link href="/auth" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>Start free â†’</Link>
       </section>
     </main>
   )

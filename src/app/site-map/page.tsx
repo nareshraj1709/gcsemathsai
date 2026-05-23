@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllTopics } from '@/lib/topics-markdown'
 import { getAllMarkdownPosts } from '@/lib/markdown'
@@ -6,11 +6,11 @@ import { GLOSSARY } from '@/lib/glossary-data'
 import { QUESTION_TYPES } from '@/lib/question-types-data'
 
 export const metadata: Metadata = {
-  title: 'Site Map — Every Page on GCSEMathsAI',
-  description: 'A complete index of every GCSE Maths revision page on GCSEMathsAI — topics, blog articles, glossary, command-word guides and exam-board hubs.',
+  title: 'Site Map â€” Every Page on GCSEMathsAI',
+  description: 'A complete index of every GCSE Maths revision page on GCSEMathsAI â€” topics, blog articles, glossary, command-word guides and exam-board hubs.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/site-map' },
   openGraph: {
-    title: 'Site Map — Every Page on GCSEMathsAI',
+    title: 'Site Map â€” Every Page on GCSEMathsAI',
     description: 'Browse every revision resource on the site in one place.',
     url: 'https://www.gcsemathsai.co.uk/site-map',
   },
@@ -40,7 +40,7 @@ export default function SiteMapPage() {
     { href: '/features/revision-planner', label: 'Revision Planner' },
     { href: '/features/writing-pad', label: 'Writing Pad' },
     { href: '/features/parent-report', label: 'Parent Report' },
-    { href: '/topics', label: 'All 187 topics' },
+    { href: '/topics', label: 'All 245 topics' },
     { href: '/blog', label: 'Blog' },
     { href: '/glossary', label: 'Glossary' },
     { href: '/question-types', label: 'Question type guides' },
@@ -64,7 +64,7 @@ export default function SiteMapPage() {
           Every page on <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>GCSEMathsAI</em>.
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 580, margin: '0 auto' }}>
-          A browsable index of every revision resource on the site — topics, blog guides, glossary terms, command-word explainers and exam-board hubs.
+          A browsable index of every revision resource on the site â€” topics, blog guides, glossary terms, command-word explainers and exam-board hubs.
         </p>
       </section>
 
@@ -75,7 +75,7 @@ export default function SiteMapPage() {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '0 16px' }}>
             {hubLinks.map(l => (
               <li key={l.href}>
-                <Link href={l.href} style={linkStyle}>→ {l.label}</Link>
+                <Link href={l.href} style={linkStyle}>â†’ {l.label}</Link>
               </li>
             ))}
           </ul>
@@ -90,7 +90,7 @@ export default function SiteMapPage() {
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '0 16px' }}>
                 {topicsByStrand[strand].map(t => (
                   <li key={t.slug}>
-                    <Link href={`/topics/${t.slug}`} style={linkStyle}>→ {t.title.replace(/ – GCSE Maths Revision$/, '')}</Link>
+                    <Link href={`/topics/${t.slug}`} style={linkStyle}>â†’ {t.title.replace(/ â€“ GCSE Maths Revision$/, '')}</Link>
                   </li>
                 ))}
               </ul>
@@ -104,7 +104,7 @@ export default function SiteMapPage() {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '0 16px' }}>
             {posts.map(p => (
               <li key={p.slug}>
-                <Link href={`/blog/${p.slug}`} style={linkStyle}>→ {p.title}</Link>
+                <Link href={`/blog/${p.slug}`} style={linkStyle}>â†’ {p.title}</Link>
               </li>
             ))}
           </ul>
@@ -116,7 +116,7 @@ export default function SiteMapPage() {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0 16px' }}>
             {[...GLOSSARY].sort((a, b) => a.term.localeCompare(b.term)).map(g => (
               <li key={g.slug}>
-                <Link href={`/glossary/${g.slug}`} style={linkStyle}>→ {g.term}</Link>
+                <Link href={`/glossary/${g.slug}`} style={linkStyle}>â†’ {g.term}</Link>
               </li>
             ))}
           </ul>
@@ -128,7 +128,7 @@ export default function SiteMapPage() {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '0 16px' }}>
             {QUESTION_TYPES.map(q => (
               <li key={q.slug}>
-                <Link href={`/question-types/${q.slug}`} style={linkStyle}>→ {q.title.replace(/^How to answer /, '').replace(/ in GCSE Maths$/, '')}</Link>
+                <Link href={`/question-types/${q.slug}`} style={linkStyle}>â†’ {q.title.replace(/^How to answer /, '').replace(/ in GCSE Maths$/, '')}</Link>
               </li>
             ))}
           </ul>
