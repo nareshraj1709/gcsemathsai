@@ -182,7 +182,7 @@ export default function BlogPage() {
           }}
         >
           {[
-            { href: '/topics',         title: 'All 73 GCSE Maths topics', body: 'Step-by-step guides with worked examples for every topic on the spec.',  bg: 'var(--green-soft)',   accent: 'var(--green)' },
+            { href: '/topics',         title: 'All 187 GCSE Maths topics', body: 'Step-by-step guides with worked examples for every topic on the spec.',  bg: 'var(--green-soft)',   accent: 'var(--green)' },
             { href: '/glossary',       title: 'GCSE Maths glossary',      body: '60+ key terms in plain English — command words to vocab.',              bg: 'var(--gold-soft)',    accent: 'var(--gold)' },
             { href: '/question-types', title: 'Command-word guides',      body: '"Show that", "Hence", "Estimate" — how to answer every type.',         bg: 'var(--navy-soft)',    accent: 'var(--navy)' },
             { href: '/formula-sheet',  title: 'Formula sheet (PDF)',      body: 'Every formula you need as a free printable download.',                  bg: 'var(--burgundy-soft)',accent: 'var(--burgundy)' },

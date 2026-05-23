@@ -35,7 +35,7 @@ const USEFUL_LINKS = [
   { label: 'GCSE Maths Exam Technique', href: '/blog/gcse-maths-exam-technique' },
   { label: 'Iteration at GCSE Maths — Higher', href: '/blog/iteration-gcse-maths-higher-guide' },
   { label: 'Trigonometry at GCSE', href: '/blog/trigonometry-gcse-maths' },
-  { label: 'All 73 GCSE Maths Topics', href: '/topics' },
+  { label: 'All 187 GCSE Maths Topics', href: '/topics' },
 ]
 
 export default function OCRHubPage() {

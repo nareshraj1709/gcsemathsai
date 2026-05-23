@@ -43,7 +43,7 @@ const USEFUL_LINKS = [
   { label: '7-Day GCSE Maths Revision Plan', href: '/blog/7-day-gcse-maths-revision-plan' },
   { label: 'Foundation vs Higher — Which Tier?', href: '/blog/gcse-maths-foundation-vs-higher-which-tier' },
   { label: 'GCSE Maths Formulas You Must Know', href: '/blog/gcse-maths-formulas-you-must-know' },
-  { label: 'All 73 GCSE Maths Topics', href: '/topics' },
+  { label: 'All 187 GCSE Maths Topics', href: '/topics' },
 ]
 
 export default function AQAHubPage() {

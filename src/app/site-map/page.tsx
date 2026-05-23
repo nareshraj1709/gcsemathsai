@@ -40,7 +40,7 @@ export default function SiteMapPage() {
     { href: '/features/revision-planner', label: 'Revision Planner' },
     { href: '/features/writing-pad', label: 'Writing Pad' },
     { href: '/features/parent-report', label: 'Parent Report' },
-    { href: '/topics', label: 'All 73 topics' },
+    { href: '/topics', label: 'All 187 topics' },
     { href: '/blog', label: 'Blog' },
     { href: '/glossary', label: 'Glossary' },
     { href: '/question-types', label: 'Question type guides' },

@@ -35,7 +35,7 @@ const USEFUL_LINKS = [
   { label: 'Vectors at GCSE Maths — Higher Guide', href: '/blog/vectors-gcse-maths-higher-guide' },
   { label: 'Circle Theorems at GCSE', href: '/blog/circle-theorems-gcse' },
   { label: 'How to Solve Quadratic Equations', href: '/blog/how-to-solve-quadratic-equations-gcse' },
-  { label: 'All 73 GCSE Maths Topics', href: '/topics' },
+  { label: 'All 187 GCSE Maths Topics', href: '/topics' },
 ]
 
 export default function EdexcelHubPage() {

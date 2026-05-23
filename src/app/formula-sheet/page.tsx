@@ -275,8 +275,8 @@ export default function FormulaSheetPage() {
           <div className="sec-label">Related resources</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 14 }} className="related-grid">
             {[
-              { href: '/formulas', title: 'Per-topic Formula Sheets', desc: '73 print-ready sheets — one for every GCSE topic. Definitions, worked examples, common mistakes.' },
-              { href: '/topics', title: 'All 73 GCSE Maths Topics', desc: 'Step-by-step explanations and worked examples for every topic' },
+              { href: '/formulas', title: 'Per-topic Formula Sheets', desc: '187 print-ready sheets — one for every GCSE topic. Definitions, worked examples, common mistakes.' },
+              { href: '/topics', title: 'All 187 GCSE Maths Topics', desc: 'Step-by-step explanations and worked examples for every topic' },
               { href: '/papers', title: 'GCSE Maths Papers', desc: 'Original practice papers plus direct links to AQA, Edexcel and OCR official past papers.' },
               { href: '/learn', title: 'Practice Questions', desc: 'Exam-style questions with instant examiner-style feedback' },
             ].map(r => (

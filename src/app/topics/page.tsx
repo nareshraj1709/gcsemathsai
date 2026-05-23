@@ -5,11 +5,11 @@ import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 export const metadata: Metadata = {
   title: 'All GCSE Maths Topics — Complete Revision Guide',
-  description: 'Browse all 73 GCSE Maths topics with step-by-step explanations, worked examples and practice questions. Covers AQA, Edexcel and OCR specifications.',
+  description: 'Browse all 187 GCSE Maths topics with step-by-step explanations, worked examples and practice questions. Covers AQA, Edexcel and OCR specifications.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/topics' },
   openGraph: {
     title: 'All GCSE Maths Topics — Complete Revision Guide',
-    description: 'Browse all 73 GCSE Maths topics with explanations, worked examples and practice questions.',
+    description: 'Browse all 187 GCSE Maths topics with explanations, worked examples and practice questions.',
     url: 'https://www.gcsemathsai.co.uk/topics',
   },
 }
@@ -47,12 +47,12 @@ export default function TopicsIndexPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'GCSE Maths — Complete Topic Guide',
-    description: 'Step-by-step guides, worked examples and practice questions for all 73 GCSE Maths topics across AQA, Edexcel and OCR specifications.',
+    description: 'Step-by-step guides, worked examples and practice questions for all 187 GCSE Maths topics across AQA, Edexcel and OCR specifications.',
     provider: { '@type': 'Organization', name: 'GCSEMathsAI', url: BASE },
     url: `${BASE}/topics`,
     educationalLevel: 'GCSE',
     inLanguage: 'en-GB',
-    numberOfCredits: 73,
+    numberOfCredits: 187,
     hasCourseInstance: {
       '@type': 'CourseInstance',
       courseMode: 'online',
@@ -93,7 +93,7 @@ export default function TopicsIndexPage() {
           textTransform: 'uppercase',
           marginBottom: 16,
         }}>
-          73 Topics
+          187 Topics
         </span>
         <h1 style={{
           fontFamily: 'var(--serif)',

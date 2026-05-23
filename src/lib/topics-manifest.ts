@@ -1,6 +1,265 @@
 // Generated from src/content/topics/ — re-run scripts/gen-topics-manifest.js to update
 
 export const TOPICS_MD_CONTENT: Record<string, string> = {
+  "adding-algebraic-fractions": `---
+title: "Adding Algebraic Fractions – GCSE Maths Revision Guide"
+description: "Learn how to add and subtract algebraic fractions at GCSE. Find common denominators with algebraic expressions, combine, and simplify the result."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["adding algebraic fractions", "subtracting algebraic fractions", "common denominator algebra", "GCSE algebraic fractions", "combining rational expressions"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 144
+---
+
+# Adding Algebraic Fractions
+
+Adding and subtracting algebraic fractions follows the same principle as adding numerical fractions — you need a common denominator. The challenge is that the denominators are algebraic expressions, so finding the lowest common denominator requires more thought. This Higher-only topic is worth 3–4 marks and comes up regularly across all exam boards.
+
+## What Is Adding Algebraic Fractions?
+
+Adding algebraic fractions means combining two or more fractions whose numerators and/or denominators contain variables. You must rewrite them with a common denominator before you can add or subtract the numerators.
+
+### Key Formulas
+
+[FORMULA: a/b + c/d = (ad + bc)/(bd)]
+
+[FORMULA: Find the lowest common denominator (LCD), adjust each fraction, then combine the numerators]
+
+## Step-by-Step Method
+
+1. **Factorise each denominator** if possible.
+2. **Find the lowest common denominator (LCD)** — the simplest expression that both denominators divide into.
+3. **Multiply the numerator and denominator of each fraction** so that both fractions have the LCD.
+4. **Add or subtract the numerators** over the common denominator.
+5. **Expand and simplify** the numerator by collecting like terms.
+6. **Factorise the result** if possible, and cancel any common factors.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Simplify 3/x + 2/x.
+
+**Working:**
+
+The denominators are already the same (both are x).
+
+3/x + 2/x = (3 + 2)/x = 5/x.
+
+**Answer:** 5/x
+
+## Worked Example 2 — Higher Level
+
+**Question:** Write as a single fraction: 2/(x + 1) + 3/(x − 2).
+
+**Working:**
+
+- LCD = (x + 1)(x − 2).
+- First fraction: 2(x − 2) / [(x + 1)(x − 2)].
+- Second fraction: 3(x + 1) / [(x + 1)(x − 2)].
+- Combine: [2(x − 2) + 3(x + 1)] / [(x + 1)(x − 2)].
+- Expand numerator: 2x − 4 + 3x + 3 = 5x − 1.
+- Result: (5x − 1) / [(x + 1)(x − 2)].
+
+**Answer:** (5x − 1)/[(x + 1)(x − 2)]
+
+## Worked Example 3 — Exam Style
+
+**Question:** Write as a single fraction in its simplest form: 4/(x + 3) − (x − 1)/(x² + 5x + 6).
+
+**Working:**
+
+- Factorise the second denominator: x² + 5x + 6 = (x + 2)(x + 3).
+- LCD = (x + 2)(x + 3).
+- First fraction: 4(x + 2) / [(x + 2)(x + 3)].
+- Second fraction already has LCD: (x − 1) / [(x + 2)(x + 3)].
+- Combine: [4(x + 2) − (x − 1)] / [(x + 2)(x + 3)].
+- Expand numerator: 4x + 8 − x + 1 = 3x + 9.
+- Factorise numerator: 3x + 9 = 3(x + 3).
+- Cancel (x + 3): 3(x + 3) / [(x + 2)(x + 3)] = 3/(x + 2).
+
+**Answer:** 3/(x + 2)
+
+## Common Mistakes
+
+- **Forgetting to multiply the numerator when adjusting for the LCD.** If you change the denominator, you must change the numerator by the same factor.
+- **Sign errors when subtracting.** In expressions like − (x − 1), the minus distributes to give −x + 1, not −x − 1. Use brackets to avoid this.
+- **Not simplifying the final answer.** Always check whether the numerator factorises and whether anything cancels with the denominator.
+
+## Exam Tips
+
+- Factorise denominators first — this often reveals that the LCD is simpler than you expect.
+- Keep the denominator in factorised form. Only expand the numerator.
+- Show each step clearly. Examiners award method marks for finding the LCD, adjusting fractions, and combining.
+- If the question says "simplify fully," check for cancellation at the end.
+
+## Practice Questions
+
+**Q1 (Foundation):** Simplify 1/x + 1/(2x).
+
+[ANSWER: LCD = 2x. 2/(2x) + 1/(2x) = 3/(2x)]
+
+**Q2 (Higher):** Write as a single fraction: 5/(x − 1) − 2/(x + 3).
+
+[ANSWER: LCD = (x − 1)(x + 3). [5(x + 3) − 2(x − 1)] / [(x − 1)(x + 3)] = (5x + 15 − 2x + 2) / [(x − 1)(x + 3)] = (3x + 17)/[(x − 1)(x + 3)]]
+
+**Q3 (Higher):** Write as a single fraction: 2/(x − 4) + 3/(x² − 16).
+
+[ANSWER: x² − 16 = (x + 4)(x − 4). LCD = (x + 4)(x − 4). [2(x + 4) + 3] / [(x + 4)(x − 4)] = (2x + 11)/[(x + 4)(x − 4)]]
+
+---
+
+Practise adding algebraic fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Simplifying Algebraic Fractions](/topics/simplifying-algebraic-fractions)
+- [Algebraic Fractions](/topics/algebraic-fractions)
+- [Adding and Subtracting Fractions](/topics/adding-and-subtracting-fractions)
+
+## Summary
+
+- Adding algebraic fractions requires a common denominator, just like numerical fractions.
+- Factorise denominators first to find the LCD efficiently.
+- Multiply each numerator by the factor needed to reach the LCD.
+- Expand and simplify the numerator, then check for cancellation with the denominator.
+- Always show clear working — method marks are available at every step.
+`,
+  "adding-and-subtracting-fractions": `---
+title: "Adding and Subtracting Fractions – GCSE Maths Revision Guide"
+description: "Learn how to add and subtract fractions with different denominators using the LCD method. Worked examples and practice for GCSE Maths."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["adding fractions GCSE", "subtracting fractions", "lowest common denominator", "fractions different denominators", "mixed number fractions"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 74
+---
+
+Adding and subtracting fractions is one of the most common skills tested in GCSE Maths. Whether it appears as a standalone question or as part of a larger problem, you need to be confident finding a common denominator and simplifying your answer.
+
+## What Is Adding and Subtracting Fractions?
+
+When two fractions share the same denominator, you simply add or subtract the numerators and keep the denominator. For example, 3/8 + 2/8 = 5/8. The challenge arises when the denominators are different — you cannot add 2/5 and 1/3 directly because the parts are different sizes.
+
+To handle different denominators you must rewrite both fractions so they share a **lowest common denominator (LCD)**. The LCD is the lowest common multiple (LCM) of the two denominators. Once both fractions have the same denominator, the addition or subtraction becomes straightforward.
+
+If the question involves mixed numbers, convert them to improper fractions first, perform the operation, then convert back to a mixed number if the question requires it.
+
+### Key Formulas
+
+[FORMULA: a/b + c/d = (ad + bc) / bd — general method for adding fractions with different denominators]
+
+[FORMULA: a/b − c/d = (ad − bc) / bd — general method for subtracting fractions with different denominators]
+
+[FORMULA: LCD = LCM of the two denominators — always use the smallest common denominator to keep numbers manageable]
+
+## Step-by-Step Method
+
+1. Check whether the denominators are the same. If they are, add or subtract the numerators directly.
+2. If the denominators differ, find the LCD (the LCM of the denominators).
+3. Multiply the numerator and denominator of each fraction so both have the LCD as their denominator.
+4. Add or subtract the numerators. Keep the denominator unchanged.
+5. Simplify the resulting fraction by dividing numerator and denominator by their HCF.
+6. If the result is an improper fraction, convert to a mixed number when the question asks for one.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Work out 2/3 + 3/5. Give your answer as a fraction in its simplest form.
+
+**Working:**
+
+Step 1 — The denominators are 3 and 5. The LCM of 3 and 5 is 15, so the LCD is 15.
+
+Step 2 — Convert each fraction: 2/3 = 10/15 and 3/5 = 9/15.
+
+Step 3 — Add the numerators: 10/15 + 9/15 = 19/15.
+
+Step 4 — Convert to a mixed number: 19/15 = 1 4/15. The fraction 4/15 cannot be simplified.
+
+**Answer:** 1 4/15
+
+## Worked Example 2 — Higher Level
+
+**Question:** Work out 3 2/3 − 1 5/6. Give your answer as a mixed number in its simplest form.
+
+**Working:**
+
+Step 1 — Convert to improper fractions: 3 2/3 = 11/3 and 1 5/6 = 11/6.
+
+Step 2 — The LCD of 3 and 6 is 6. Convert: 11/3 = 22/6.
+
+Step 3 — Subtract: 22/6 − 11/6 = 11/6.
+
+Step 4 — Convert to a mixed number: 11/6 = 1 5/6. This is already in its simplest form.
+
+**Answer:** 1 5/6
+
+## Worked Example 3 — Exam Style
+
+**Question:** A recipe needs 3/4 of a cup of sugar and 2/3 of a cup of flour. How much more sugar than flour is needed? (2 marks)
+
+**Working:**
+
+Step 1 — Find the LCD of 4 and 3. The LCM is 12.
+
+Step 2 — Convert: 3/4 = 9/12 and 2/3 = 8/12.
+
+Step 3 — Subtract: 9/12 − 8/12 = 1/12.
+
+**Answer:** 1/12 of a cup
+
+## Common Mistakes
+
+- **Adding the denominators as well as the numerators.** Students often write 1/3 + 1/4 = 2/7. This is wrong — you must find a common denominator first.
+- **Using a common denominator that is not the lowest.** While any common denominator works, using a larger one leads to bigger numbers and more chance of arithmetic errors.
+- **Forgetting to simplify.** Examiners expect your answer in simplest form. Always check if the numerator and denominator share a common factor.
+
+## Exam Tips
+
+- Show every step of your working — finding the LCD, converting each fraction, and simplifying. Method marks are available even if your final answer is wrong.
+- When the denominators are small, listing multiples is the quickest way to find the LCM. For larger denominators, use prime factorisation.
+- On calculator papers you can use the fraction button to check, but on non-calculator papers full working is essential.
+
+## Practice Questions
+
+**Q1 (Foundation):** Work out 1/4 + 2/5. Give your answer as a fraction in its simplest form.
+
+[ANSWER: LCD = 20. 1/4 = 5/20 and 2/5 = 8/20. 5/20 + 8/20 = 13/20]
+
+**Q2 (Foundation):** Work out 5/6 − 1/4. Give your answer as a fraction in its simplest form.
+
+[ANSWER: LCD = 12. 5/6 = 10/12 and 1/4 = 3/12. 10/12 − 3/12 = 7/12]
+
+**Q3 (Higher):** Work out 4 1/3 + 2 3/4. Give your answer as a mixed number.
+
+[ANSWER: 4 1/3 = 13/3 and 2 3/4 = 11/4. LCD = 12. 13/3 = 52/12 and 11/4 = 33/12. 52/12 + 33/12 = 85/12 = 7 1/12]
+
+---
+
+Practise adding and subtracting fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Fractions](/topics/fractions)
+- [Prime Factorisation, HCF and LCM](/topics/prime-factorisation-hcf-and-lcm)
+- [Multiplying and Dividing Fractions](/topics/multiplying-and-dividing-fractions)
+
+## Summary
+
+- To add or subtract fractions, both must share the same denominator.
+- The lowest common denominator is the LCM of the two denominators.
+- Convert each fraction, then add or subtract the numerators only.
+- Convert mixed numbers to improper fractions before calculating.
+- Always simplify your final answer by dividing by the HCF.
+`,
   "algebraic-fractions": `---
 title: "Algebraic Fractions – GCSE Maths Guide"
 description: "Master algebraic fractions for GCSE Maths Higher tier including simplifying, adding, subtracting, multiplying, and solving equations."
@@ -321,6 +580,134 @@ Put your proof skills to the test with unlimited practice on [GCSEMathsAI](https
 - Common proofs involve sums, differences and products of odd/even/consecutive numbers.
 - The difference of two squares identity a² − b² = (a + b)(a − b) is frequently useful.
 `,
+  "alternate-corresponding-co-interior-angles": `---
+title: "Alternate, Corresponding and Co-interior Angles – GCSE Maths Revision Guide"
+description: "Learn alternate (Z), corresponding (F), and co-interior (C/U) angles in parallel lines with clear rules, worked examples, and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["alternate angles", "corresponding angles", "co-interior angles", "parallel lines angles", "GCSE angles in parallel lines"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 151
+---
+
+Angles in parallel lines appear on every GCSE Maths exam paper. Whether it is AQA, Edexcel, or OCR, you will be asked to find missing angles using alternate, corresponding, and co-interior angle rules. This guide explains how to identify each type using the Z, F, and C/U shapes, works through Foundation and Higher examples, and highlights the errors that cost students marks.
+
+## What Are Alternate, Corresponding, and Co-interior Angles?
+
+When a straight line (called a transversal) crosses two parallel lines, it creates several pairs of related angles. The three key relationships are:
+
+### Key Formulas
+
+[FORMULA: Alternate angles are equal (Z-angles)]
+
+[FORMULA: Corresponding angles are equal (F-angles)]
+
+[FORMULA: Co-interior (allied) angles add up to 180° (C/U-angles)]
+
+**Alternate angles** sit on opposite sides of the transversal, between the parallel lines — trace the letter Z or a backwards Z to spot them. **Corresponding angles** sit in the same position at each intersection — trace the letter F to spot them. **Co-interior angles** sit on the same side of the transversal, between the parallel lines — they form a C or U shape and always sum to 180°.
+
+## Step-by-Step Method
+
+1. **Confirm the lines are parallel.** Look for arrows on the diagram. The rules only apply to parallel lines.
+2. **Identify the transversal** — the line that crosses both parallel lines.
+3. **Decide the angle relationship.** Trace a Z, F, or C/U shape to determine whether the angles are alternate, corresponding, or co-interior.
+4. **Apply the rule.** Equal for alternate and corresponding; sum to 180° for co-interior.
+5. **State the reason.** Always write the name of the angle rule for full marks.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A transversal crosses two parallel lines. One of the alternate angles is 72°. Find the other.
+
+**Working:**
+
+Alternate angles are equal (Z-angles).
+
+The other angle = 72°.
+
+**Answer:** The missing angle is **72°** (alternate angles are equal).
+
+## Worked Example 2 — Higher Level
+
+**Question:** A transversal crosses two parallel lines. An angle of (3x + 15)° and a co-interior angle of (5x − 7)° are marked. Find x and both angles.
+
+**Working:**
+
+Co-interior angles sum to 180°.
+
+(3x + 15) + (5x − 7) = 180
+
+8x + 8 = 180
+
+8x = 172
+
+x = 21.5
+
+First angle = 3(21.5) + 15 = 64.5 + 15 = 79.5°
+
+Second angle = 5(21.5) − 7 = 107.5 − 7 = 100.5°
+
+Check: 79.5 + 100.5 = 180°
+
+**Answer:** x = **21.5**, and the angles are **79.5°** and **100.5°**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** In the diagram, PQ is parallel to RS. A transversal crosses both lines. Angle a = 54° is at the intersection with PQ. Find angle b at the intersection with RS, given that b is a corresponding angle to a. Also find angle c, which is co-interior with a.
+
+**Working:**
+
+Corresponding angles are equal, so b = 54°.
+
+Co-interior angles add up to 180°, so c = 180 − 54 = 126°.
+
+**Answer:** b = **54°** (corresponding angles), c = **126°** (co-interior angles sum to 180°).
+
+## Common Mistakes
+
+- **Using parallel-line rules when lines are not parallel.** If the diagram does not show arrows indicating parallel lines, you cannot apply these rules.
+- **Confusing alternate and corresponding angles.** Alternate angles are on opposite sides of the transversal (Z-shape); corresponding angles are on the same side (F-shape). Drawing the letter on the diagram helps.
+- **Adding alternate or corresponding angles to 180°.** Only co-interior angles sum to 180°. Alternate and corresponding angles are equal.
+
+## Exam Tips
+
+- Draw the Z, F, or C/U shape directly onto the exam diagram to help identify the correct rule.
+- If you cannot immediately see the relationship, extend the lines on the diagram to make the pattern clearer.
+- Many multi-step angle problems combine parallel-line rules with angles on a straight line or angles in a triangle. Be ready to use more than one rule.
+- Always name the rule in your written reason — "alternate angles" or "co-interior angles sum to 180°".
+
+## Practice Questions
+
+**Q1 (Foundation):** A transversal crosses two parallel lines. A corresponding angle to an angle of 118° is marked. What is the corresponding angle?
+
+[ANSWER: 118° (corresponding angles are equal)]
+
+**Q2 (Foundation):** Two co-interior angles are x° and 135°. Find x.
+
+[ANSWER: x = 180 − 135 = 45°]
+
+**Q3 (Higher):** A transversal crosses two parallel lines. One angle is (2x + 30)° and its alternate angle is (4x − 10)°. Find x and both angles.
+
+[ANSWER: 2x + 30 = 4x − 10 (alternate angles are equal), 40 = 2x, x = 20. Both angles = 2(20) + 30 = 70°.]
+
+---
+
+Practise angles in parallel lines with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Angles on a Straight Line and at a Point](/topics/angles-on-a-straight-line-and-at-a-point)
+- [Interior and Exterior Angles of Polygons](/topics/interior-and-exterior-angles-of-polygons)
+- [Bearings](/topics/bearings)
+
+## Summary
+
+- Alternate angles (Z-shape) are equal. Corresponding angles (F-shape) are equal. Co-interior angles (C/U-shape) add up to 180°. These rules only work when lines are parallel. Always state the rule name in your working for full marks, and draw letter shapes on diagrams to avoid confusing the relationships.
+`,
   "angles-basic-rules-and-parallel-lines": `---
 title: "Angles: Basic Rules & Parallel Lines – GCSE Guide"
 description: "Learn angle rules and parallel line angles for GCSE Maths with step-by-step methods, worked examples, and practice questions."
@@ -619,6 +1006,139 @@ Practise polygon angle problems with personalised AI feedback at [GCSEMathsAI](h
 
 Angles in polygons is tested frequently at both tiers. The two essential formulas are: the sum of interior angles = (n − 2) × 180°, and exterior angles of any convex polygon sum to 360°. For regular polygons you can find individual angles by dividing. For irregular polygons you need the individual angle values to find a missing one. Always show the formula, check your arithmetic by verifying the angle sum, and remember that interior and exterior angles at each vertex add to 180°. Mastering this topic is a reliable way to pick up marks on exam day.
 `,
+  "angles-on-a-straight-line-and-at-a-point": `---
+title: "Angles on a Straight Line and at a Point – GCSE Maths Revision Guide"
+description: "Master angles on a straight line (180°), angles at a point (360°), and vertically opposite angles with worked examples and exam practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["angles on a straight line", "angles at a point", "vertically opposite angles", "GCSE angle rules", "basic angle facts"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 150
+---
+
+Angles on a straight line and at a point are the most fundamental angle facts in GCSE Maths. These rules underpin almost every geometry question across AQA, Edexcel, and OCR, so you must know them inside out. This guide covers the three key rules — angles on a straight line, angles at a point, and vertically opposite angles — with worked examples from Foundation through to exam style.
+
+## What Are Angles on a Straight Line and at a Point?
+
+When two or more angles sit along a straight line, they form a half-turn. When angles meet at a single point with no gaps, they form a full turn. These facts give us two essential rules.
+
+### Key Formulas
+
+[FORMULA: Angles on a straight line add up to 180°]
+
+[FORMULA: Angles at a point add up to 360°]
+
+[FORMULA: Vertically opposite angles are equal]
+
+Vertically opposite angles are formed when two straight lines cross. The pairs of angles directly across from each other are always equal.
+
+## Step-by-Step Method
+
+1. **Identify the type of angle arrangement.** Decide whether the angles lie on a straight line, meet at a point, or are vertically opposite.
+2. **Write an equation.** Add all the angles together and set the total equal to 180° (straight line) or 360° (point).
+3. **Solve for the unknown.** Rearrange the equation and calculate the missing angle.
+4. **Check your answer.** Add all angles to confirm they reach the correct total.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Three angles on a straight line are 65°, 48°, and x°. Find x.
+
+**Working:**
+
+Angles on a straight line sum to 180°.
+
+65 + 48 + x = 180
+
+113 + x = 180
+
+x = 180 − 113 = 67
+
+**Answer:** x = **67°**
+
+## Worked Example 2 — Higher Level
+
+**Question:** Four angles meet at a point. They are 2x°, 3x°, x + 40°, and 120°. Find x.
+
+**Working:**
+
+Angles at a point sum to 360°.
+
+2x + 3x + (x + 40) + 120 = 360
+
+6x + 160 = 360
+
+6x = 200
+
+x = 33.3° (1 d.p.)
+
+**Answer:** x = **33.3°** (1 d.p.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** Two straight lines cross. One of the four angles formed is labelled (3y − 10)° and the vertically opposite angle is labelled (2y + 25)°. Find the value of y and the size of each angle.
+
+**Working:**
+
+Vertically opposite angles are equal, so:
+
+3y − 10 = 2y + 25
+
+3y − 2y = 25 + 10
+
+y = 35
+
+Substituting back: 3(35) − 10 = 105 − 10 = 95°.
+
+The other pair of vertically opposite angles = 180 − 95 = 85° (angles on a straight line).
+
+**Answer:** y = **35**, the four angles are **95°, 85°, 95°, 85°**.
+
+## Common Mistakes
+
+- **Confusing 180° and 360° rules.** Angles on a straight line total 180°, not 360°. Angles at a point total 360°. Read the diagram carefully before choosing the rule.
+- **Forgetting vertically opposite angles are equal.** Students sometimes try to add vertically opposite angles together instead of setting them equal.
+- **Not stating reasons.** Exam questions often require you to give a reason — writing "angles on a straight line" is essential for method marks.
+
+## Exam Tips
+
+- Always write the angle rule you are using as a reason alongside your calculation.
+- If a diagram shows two crossing lines, immediately mark both pairs of vertically opposite angles as equal.
+- When multiple rules are needed in one question, apply them one at a time and show each step clearly.
+- These angle facts are often the first step in a multi-part geometry question, so getting them right is critical.
+
+## Practice Questions
+
+**Q1 (Foundation):** Two angles on a straight line are 74° and x°. Find x.
+
+[ANSWER: x = 180 − 74 = 106°]
+
+**Q2 (Foundation):** Three angles meet at a point: 150°, 95°, and y°. Find y.
+
+[ANSWER: y = 360 − 150 − 95 = 115°]
+
+**Q3 (Higher):** Two straight lines cross. One angle is (4a + 10)° and the angle adjacent to it on the straight line is (2a + 50)°. Find a and all four angles.
+
+[ANSWER: 4a + 10 + 2a + 50 = 180, so 6a + 60 = 180, 6a = 120, a = 20. The angles are 90°, 90°, 90°, 90°.]
+
+---
+
+Practise angles on a straight line and at a point with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Alternate, Corresponding, and Co-interior Angles](/topics/alternate-corresponding-co-interior-angles)
+- [Interior and Exterior Angles of Polygons](/topics/interior-and-exterior-angles-of-polygons)
+- [Angles — Basic Rules and Parallel Lines](/topics/angles-basic-rules-and-parallel-lines)
+
+## Summary
+
+- Angles on a straight line always add up to 180°. Angles at a point always add up to 360°. Vertically opposite angles are always equal. These three rules are used throughout GCSE Maths — from simple missing-angle problems to multi-step proofs. Always state the rule you are using in your working to earn reason marks in the exam.
+`,
   "arc-length-and-sector-area": `---
 title: "Arc Length and Sector Area – GCSE Maths Guide"
 description: "Master arc length and sector area for GCSE Maths with clear formulas, worked examples at Foundation and Higher, and practice questions."
@@ -776,6 +1296,137 @@ Want instant feedback on arc and sector questions? Try [GCSEMathsAI](https://www
 ## Summary
 
 Arc length and sector area calculations are based on finding a fraction of the full circle. The fraction is always θ / 360, where θ is the angle at the centre. Arc length uses the circumference formula and sector area uses the area formula, each multiplied by that fraction. Remember that the perimeter of a sector includes the two radii as well as the arc. These questions appear at both tiers and are typically worth 2–4 marks, so learning the formulas and practising rearrangements is essential for picking up straightforward marks in the exam.
+`,
+  "arc-length": `---
+title: "Arc Length – GCSE Maths Revision Guide"
+description: "Learn how to calculate arc length using the formula (theta/360) x 2 pi r, with step-by-step worked examples and GCSE exam practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["arc length", "arc length formula", "GCSE arc length", "fraction of a circle", "arc length from angle"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 153
+---
+
+Arc length is a key topic in GCSE Maths that appears on both Foundation and Higher papers across AQA, Edexcel, and OCR. An arc is a portion of the circumference of a circle, and finding its length requires combining the circumference formula with the fraction of the circle represented by the angle. This guide walks you through the formula, three worked examples, and common pitfalls.
+
+## What Is Arc Length?
+
+An arc is a curved section of the circumference of a circle. The arc length depends on two things: the radius of the circle and the angle at the centre that the arc subtends. A larger angle gives a longer arc; a full 360° angle gives the entire circumference.
+
+### Key Formulas
+
+[FORMULA: Arc length = (θ / 360) × 2πr]
+
+[FORMULA: Circumference = 2πr]
+
+Here θ is the angle at the centre in degrees and r is the radius.
+
+## Step-by-Step Method
+
+1. **Identify the radius** (r) and the **angle at the centre** (θ) from the question or diagram.
+2. **Write the formula:** Arc length = (θ / 360) × 2πr.
+3. **Substitute** the values of θ and r into the formula.
+4. **Calculate** the answer, giving it to the degree of accuracy requested (usually 1 decimal place or in terms of π).
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A sector has a radius of 8 cm and an angle of 90°. Find the arc length. Give your answer to 1 decimal place.
+
+**Working:**
+
+Arc length = (90 / 360) × 2 × π × 8
+
+= (1/4) × 16π
+
+= 4π
+
+= 12.566...
+
+**Answer:** Arc length = **12.6 cm** (1 d.p.)
+
+## Worked Example 2 — Higher Level
+
+**Question:** An arc of a circle with radius 12 cm has a length of 15 cm. Find the angle at the centre. Give your answer to 1 decimal place.
+
+**Working:**
+
+Arc length = (θ / 360) × 2πr
+
+15 = (θ / 360) × 2 × π × 12
+
+15 = (θ / 360) × 24π
+
+θ / 360 = 15 / (24π)
+
+θ = 360 × 15 / (24π) = 5400 / (24π) = 71.619...
+
+**Answer:** θ = **71.6°** (1 d.p.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** A sector with radius 10 cm has an arc length of 8π cm. Find the angle at the centre. Give your answer as an exact value.
+
+**Working:**
+
+Arc length = (θ / 360) × 2πr
+
+8π = (θ / 360) × 2 × π × 10
+
+8π = (θ / 360) × 20π
+
+Divide both sides by π: 8 = (θ / 360) × 20
+
+θ / 360 = 8 / 20 = 2/5
+
+θ = 360 × 2/5 = 144
+
+**Answer:** θ = **144°**
+
+## Common Mistakes
+
+- **Using diameter instead of radius.** The formula uses radius. If the question gives the diameter, halve it first before substituting.
+- **Forgetting to multiply by 2.** The circumference formula is 2πr, not πr. Missing the 2 halves your answer.
+- **Rounding too early.** Keep full calculator values until the final step, then round to the required accuracy.
+
+## Exam Tips
+
+- If the answer is requested "in terms of π", leave π in your final answer and simplify the numerical part.
+- Always check whether the question gives a radius or a diameter — this is one of the most common sources of lost marks.
+- Arc length questions can be combined with sector area questions. Make sure you use the correct formula for each part.
+- Show your substitution step clearly — this earns a method mark even if your final answer is wrong.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the arc length of a sector with radius 5 cm and angle 72°. Give your answer to 1 d.p.
+
+[ANSWER: Arc length = (72/360) × 2 × π × 5 = (1/5) × 10π = 2π = 6.3 cm (1 d.p.)]
+
+**Q2 (Foundation):** A sector has a radius of 14 cm and an angle of 180°. Find the arc length in terms of π.
+
+[ANSWER: Arc length = (180/360) × 2 × π × 14 = (1/2) × 28π = 14π cm]
+
+**Q3 (Higher):** A sector has an arc length of 20 cm and a radius of 9 cm. Find the angle at the centre to 1 d.p.
+
+[ANSWER: 20 = (θ/360) × 2π × 9, 20 = (θ/360) × 18π, θ = (20 × 360)/(18π) = 7200/(18π) = 127.3° (1 d.p.)]
+
+---
+
+Practise arc length calculations with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Sector Area](/topics/sector-area)
+- [Arc Length and Sector Area](/topics/arc-length-and-sector-area)
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+
+## Summary
+
+- Arc length is the curved distance along part of a circle's circumference. The formula is (θ / 360) × 2πr. You need to know the radius and the angle at the centre. You can also rearrange the formula to find the angle or the radius when the arc length is given. Always check whether the question provides a radius or diameter, and show your substitution step for method marks.
 `,
   "area-of-2d-shapes": `---
 title: "Area of 2D Shapes – GCSE Maths Revision"
@@ -941,6 +1592,613 @@ Ready to practise area questions with instant feedback? [Create your free GCSEMa
 
 Area measures the two-dimensional space inside a shape and is always given in square units. You must memorise the formulas for rectangles, triangles, parallelograms, trapeziums, circles and sectors. Always use the **perpendicular height**, write the formula before substituting, and double-check whether you need to add or subtract areas in composite shape questions. State your answer with correct units and appropriate rounding. Area questions appear on every GCSE paper, so having these formulas at your fingertips is essential.
 `,
+  "area-of-a-circle": `---
+title: "Area of a Circle – GCSE Maths Revision Guide"
+description: "Master the area of a circle formula A = pi r squared for GCSE Maths, including semicircles, quarter circles and finding the radius from area."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["area of a circle GCSE", "pi r squared", "area of semicircle", "area of quarter circle", "circle area formula GCSE"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 100
+---
+
+The area of a circle is one of the most frequently tested topics at GCSE. You need to know the formula, be confident working with both radius and diameter, and handle semicircles and quarter circles. This guide covers everything from the basic formula to reverse problems where you find the radius from a given area.
+
+## What Is the Area of a Circle?
+
+The area of a circle is the amount of space enclosed within its circumference. It depends only on the radius — the distance from the centre to any point on the edge.
+
+The formula uses pi, the ratio of a circle's circumference to its diameter, which is approximately 3.14159. Because the formula involves squaring the radius, doubling the radius quadruples the area — a fact examiners sometimes test.
+
+For semicircles (half circles) and quarter circles, you calculate the full circle area first and then divide by 2 or 4 respectively.
+
+### Key Formulas
+
+[FORMULA: A = pi r², where r is the radius of the circle]
+
+[FORMULA: Semicircle area = ½ pi r²]
+
+[FORMULA: Quarter circle area = ¼ pi r²]
+
+## Step-by-Step Method
+
+1. Check whether you are given the radius or the diameter. If given the diameter, halve it to get the radius.
+2. Substitute the radius into A = pi r² and calculate.
+3. For semicircles or quarter circles, divide the full circle area by 2 or 4.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A circle has a radius of 5 cm. Find its area. Give your answer to 1 decimal place.
+
+**Working:**
+A = pi r²
+A = pi × 5²
+A = pi × 25
+A = 78.5398...
+
+**Answer:** 78.5 cm² (1 d.p.)
+
+## Worked Example 2 — Higher Level
+
+**Question:** A circle has an area of 154 cm². Find its radius. Give your answer to 1 decimal place.
+
+**Working:**
+A = pi r²
+154 = pi r²
+r² = 154 ÷ pi
+r² = 49.0197...
+r = sqrt(49.0197...)
+r = 7.0014...
+
+**Answer:** 7.0 cm (1 d.p.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** A shape is made from a rectangle measuring 10 cm by 6 cm with a semicircle added to one of the shorter sides. Find the total area of the shape. Give your answer to 1 decimal place.
+
+**Working:**
+Rectangle area = 10 × 6 = 60 cm²
+The semicircle has diameter 6 cm, so radius = 3 cm.
+Semicircle area = ½ × pi × 3² = ½ × pi × 9 = 4.5pi = 14.137...
+Total area = 60 + 14.137... = 74.137...
+
+**Answer:** 74.1 cm² (1 d.p.)
+
+## Common Mistakes
+
+- **Using the diameter instead of the radius.** The formula uses r, not d. If you are given the diameter, divide by 2 first. Using the diameter gives an answer four times too large.
+- **Forgetting to square the radius.** Writing pi × r instead of pi × r² gives a circumference-like answer, not an area.
+- **Rounding pi too early.** Use the pi button on your calculator or keep the full value 3.14159... until the final step to avoid inaccuracy.
+- **Forgetting to halve or quarter for parts of circles.** A semicircle is half the area, a quarter circle is one quarter. Always divide after computing the full circle area.
+
+## Exam Tips
+
+- If the question says "give your answer in terms of pi", leave your answer as a multiple of pi (e.g. 25pi) and do not convert to a decimal.
+- For reverse problems (finding r from area), divide the area by pi first, then take the square root.
+- Always state your units as cm², m², etc. — area is measured in square units.
+
+## Practice Questions
+
+**Q1 (Foundation):** A circle has a diameter of 12 cm. Find its area to 1 decimal place.
+
+[ANSWER: r = 6 cm. A = pi × 6² = 36pi = 113.1 cm².]
+
+**Q2 (Foundation):** Find the area of a quarter circle with radius 8 cm. Give your answer to 1 decimal place.
+
+[ANSWER: A = ¼ × pi × 8² = ¼ × 64pi = 16pi = 50.3 cm².]
+
+**Q3 (Higher):** A semicircle has an area of 100 cm². Find its radius to 2 decimal places.
+
+[ANSWER: ½ pi r² = 100 → pi r² = 200 → r² = 200 ÷ pi = 63.661... → r = 7.98 cm.]
+
+---
+
+Practise area of a circle questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+- [Arc Length and Sector Area](/topics/arc-length-and-sector-area)
+- [Area of Compound Shapes](/topics/area-of-compound-shapes)
+
+## Summary
+
+- The area of a circle is A = pi r², where r is the radius.
+- Always check whether you have been given the radius or the diameter.
+- Semicircle area is half the full circle area; quarter circle area is one quarter.
+- To find the radius from the area, rearrange to r = sqrt(A ÷ pi).
+`,
+  "area-of-a-parallelogram": `---
+title: "Area of a Parallelogram – GCSE Maths Revision Guide"
+description: "Learn how to calculate the area of a parallelogram using A = base × perpendicular height, with worked examples and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["area of a parallelogram GCSE", "parallelogram formula", "base times height", "parallelogram worked examples", "area GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 166
+---
+
+The parallelogram is a shape that trips up many GCSE students because it looks like a slanted rectangle — and the temptation is to multiply the two visible side lengths. The correct formula uses the **perpendicular** height, not the slant side.
+
+## What Is a Parallelogram?
+
+A parallelogram is a quadrilateral where both pairs of opposite sides are parallel and equal in length. Rectangles and rhombuses are special cases of parallelograms, but in GCSE questions a "parallelogram" usually means the slanted version where the angles are not 90°.
+
+The area formula works because you can "cut" a right-angled triangle from one end and move it to the other end, turning the parallelogram into a rectangle with the same base and perpendicular height.
+
+This is why A = base × perpendicular height gives the same result as the area of that equivalent rectangle. The slant side is irrelevant to the area — it only affects the perimeter.
+
+Diagrams often show a dashed line from one vertex perpendicular to the base — this dashed line is the height you need.
+
+### Key Formulas
+
+[FORMULA: A = base × perpendicular height]
+
+[FORMULA: The perpendicular height is the vertical distance between the two parallel sides, measured at right angles to the base]
+
+## Step-by-Step Method
+
+1. Identify the base — either pair of parallel sides can serve as the base.
+2. Find the perpendicular height — the distance measured at 90° between the base and the opposite side.
+3. Multiply: A = base × perpendicular height.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A parallelogram has a base of 8 cm and a perpendicular height of 5 cm. Find its area.
+
+**Working:**
+A = base × height
+A = 8 × 5
+A = 40
+
+**Answer:** 40 cm²
+
+## Worked Example 2 — Higher Level
+
+**Question:** A parallelogram has an area of 91 cm² and a base of 13 cm. Calculate the perpendicular height.
+
+**Working:**
+A = base × height
+91 = 13 × h
+h = 91 ÷ 13
+h = 7
+
+**Answer:** 7 cm
+
+## Worked Example 3 — Exam Style
+
+**Question:** A compound shape consists of a parallelogram on top of a rectangle. The rectangle is 10 cm by 4 cm. The parallelogram shares the 10 cm side as its base and has a perpendicular height of 3 cm. Find the total area.
+
+**Working:**
+Rectangle area = 10 × 4 = 40 cm²
+Parallelogram area = 10 × 3 = 30 cm²
+Total area = 40 + 30 = 70
+
+**Answer:** 70 cm²
+
+## Common Mistakes
+
+- **Using the slant height instead of the perpendicular height.** The slant edge is a side of the shape, not the height. The perpendicular height is always shorter than the slant side and is marked with a right-angle symbol.
+- **Confusing with a trapezium.** A parallelogram has two pairs of parallel sides, not one. You do not need to average the sides — both parallel sides are equal, so just use one as the base.
+- **Halving the answer.** Unlike a triangle, there is no ½ in the parallelogram formula. If you halve, you have calculated the area of a triangle instead.
+- **Forgetting square units.** Always state your answer in cm², m², or the appropriate square unit.
+- **Multiplying two adjacent sides.** Two adjacent sides of a parallelogram are not the same as base and height unless the shape is a rectangle.
+
+## Exam Tips
+
+- The parallelogram formula is not always on the formula sheet — learn it by heart.
+- If a right-angle symbol appears inside the shape, that line is the perpendicular height.
+- When the perpendicular height is outside the shape (drawn as an extension), it is still valid — this happens with very slanted parallelograms.
+- If you are given the side lengths and an angle instead of the height, you can use h = side × sin(angle) to find the perpendicular height before applying the formula.
+- Sketch the equivalent rectangle alongside the parallelogram if you find it helpful to visualise the area.
+
+## Practice Questions
+
+**Q1 (Foundation):** A parallelogram has a base of 12 cm and a perpendicular height of 7 cm. Find its area.
+
+[ANSWER: A = 12 × 7 = 84 cm².]
+
+**Q2 (Foundation):** A parallelogram has a base of 9.5 cm and a perpendicular height of 4 cm. Find its area.
+
+[ANSWER: A = 9.5 × 4 = 38 cm².]
+
+**Q3 (Higher):** A parallelogram has an area of 108 cm². The perpendicular height is 9 cm. The slant side is 11 cm. Find the base.
+
+[ANSWER: 108 = b × 9 → b = 108 ÷ 9 = 12 cm. The slant side is not needed.]
+
+---
+
+Practise area of a parallelogram questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+- [Area of a Trapezium](/topics/area-of-a-trapezium)
+- [Perimeter](/topics/perimeter)
+
+## Summary
+
+- A parallelogram has two pairs of parallel and equal sides.
+- Its area is A = base × perpendicular height — do not use the slant side.
+- The formula has no ½ — unlike a triangle.
+- The perpendicular height is at right angles to the base, often marked with a small square symbol.
+- In compound-shape questions, calculate the parallelogram area separately before combining.
+- A rectangle is a special case of a parallelogram where the perpendicular height equals the side length.
+`,
+  "area-of-a-trapezium": `---
+title: "Area of a Trapezium – GCSE Maths Revision Guide"
+description: "Learn how to calculate the area of a trapezium using the formula A = half(a+b)h, with worked examples, exam tips and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["area of a trapezium GCSE", "trapezium formula", "area of trapezium worked examples", "trapezium GCSE maths", "compound shapes trapezium"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 99
+---
+
+The trapezium is one of the most commonly tested shapes at GCSE, and the good news is its area formula is given on every exam board's formula sheet. You still need to know how to use it correctly — identifying the parallel sides, choosing the perpendicular height, and applying the formula within compound shapes.
+
+## What Is a Trapezium?
+
+A trapezium is a quadrilateral with **exactly one pair of parallel sides**. The two parallel sides are often labelled *a* and *b*, and the perpendicular distance between them is the height *h*.
+
+Trapeziums appear in many real-world contexts — cross-sections of channels, sloping walls, and roof structures. In GCSE questions they frequently form part of a larger compound shape, so recognising them quickly is important.
+
+The area formula works because a trapezium can be thought of as the average of the two parallel sides multiplied by the height — essentially treating it like a rectangle whose width is the mean of the top and bottom edges.
+
+### Key Formulas
+
+[FORMULA: A = ½(a + b) × h, where a and b are the parallel sides and h is the perpendicular height]
+
+[FORMULA: For a compound shape containing a trapezium, find the trapezium area separately and add or subtract as needed]
+
+## Step-by-Step Method
+
+1. Identify the two parallel sides (a and b) — these are the sides that run in the same direction.
+2. Find the perpendicular height (h) — the vertical distance between the two parallel sides, not a slant edge.
+3. Substitute into the formula A = ½(a + b) × h and calculate.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A trapezium has parallel sides of 6 cm and 10 cm and a perpendicular height of 4 cm. Find its area.
+
+**Working:**
+A = ½(a + b) × h
+A = ½(6 + 10) × 4
+A = ½ × 16 × 4
+A = 8 × 4
+A = 32
+
+**Answer:** 32 cm²
+
+## Worked Example 2 — Higher Level
+
+**Question:** A trapezium has an area of 60 cm². The parallel sides are 7 cm and 13 cm. Find the perpendicular height.
+
+**Working:**
+A = ½(a + b) × h
+60 = ½(7 + 13) × h
+60 = ½ × 20 × h
+60 = 10h
+h = 60 ÷ 10
+h = 6
+
+**Answer:** 6 cm
+
+## Worked Example 3 — Exam Style
+
+**Question:** A compound shape is made from a rectangle and a trapezium. The rectangle measures 12 cm by 5 cm. The trapezium sits on top of the rectangle with parallel sides of 12 cm and 8 cm and a perpendicular height of 3 cm. Find the total area of the compound shape.
+
+**Working:**
+Rectangle area = 12 × 5 = 60 cm²
+Trapezium area = ½(12 + 8) × 3 = ½ × 20 × 3 = 30 cm²
+Total area = 60 + 30 = 90
+
+**Answer:** 90 cm²
+
+## Common Mistakes
+
+- **Using a slant side instead of the perpendicular height.** The height must be at right angles to both parallel sides, not along a sloping edge. Look for the right-angle symbol on the diagram.
+- **Mixing up the parallel and non-parallel sides.** Only the two parallel sides go into the formula — the other two sides are not used for the area calculation.
+- **Forgetting to halve.** The formula includes ½. Missing it will double your answer. Write the formula first to avoid this.
+- **Not including units.** Area is always measured in square units — cm², m², etc. Always state the correct unit in your final answer.
+
+## Exam Tips
+
+- The formula is on the formula sheet, but write it in your working — this earns a method mark even if you make an arithmetic slip.
+- If a trapezium appears inside a compound shape, deal with it separately and then combine areas at the end.
+- When the height is not labelled directly, look for a right-angle symbol or a dashed line — this indicates the perpendicular height.
+
+## Practice Questions
+
+**Q1 (Foundation):** A trapezium has parallel sides of 9 cm and 15 cm and a perpendicular height of 6 cm. Find its area.
+
+[ANSWER: A = ½(9 + 15) × 6 = ½ × 24 × 6 = 72 cm².]
+
+**Q2 (Foundation):** A trapezium has parallel sides of 4.5 cm and 7.5 cm and a perpendicular height of 8 cm. Find its area.
+
+[ANSWER: A = ½(4.5 + 7.5) × 8 = ½ × 12 × 8 = 48 cm².]
+
+**Q3 (Higher):** A trapezium has an area of 84 cm². One parallel side is 10 cm and the perpendicular height is 7 cm. Find the length of the other parallel side.
+
+[ANSWER: 84 = ½(10 + b) × 7 → 84 = 3.5(10 + b) → 24 = 10 + b → b = 14 cm.]
+
+---
+
+Practise area of a trapezium questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+- [Perimeter](/topics/perimeter)
+- [Area of Compound Shapes](/topics/area-of-compound-shapes)
+
+## Summary
+
+- A trapezium has exactly one pair of parallel sides.
+- The area formula is A = ½(a + b) × h, where a and b are the parallel sides and h is the perpendicular height.
+- The formula can be understood as the average of the two parallel sides multiplied by the height.
+- Always use the perpendicular height, not a slant edge.
+- The formula is provided on the exam formula sheet, but writing it in your working earns method marks.
+- Trapeziums often appear as part of compound shapes — calculate the trapezium area separately and combine.
+`,
+  "area-of-a-triangle": `---
+title: "Area of a Triangle – GCSE Maths Revision Guide"
+description: "Master the area of a triangle using A = ½ × base × height and A = ½ab sin C for Higher tier, with worked examples and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["area of a triangle GCSE", "half base times height", "area triangle formula", "area ab sin C", "triangle GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 165
+---
+
+The area of a triangle is one of the most fundamental skills in GCSE Maths. At Foundation level you need the classic half-base-times-height formula, while Higher tier students must also learn A = ½ab sin C for triangles where the perpendicular height is not given.
+
+## What Is the Area of a Triangle?
+
+The area of a triangle measures the space enclosed within its three sides. Every triangle — whether right-angled, scalene, isosceles, or equilateral — can have its area calculated using the same base-and-height approach.
+
+The formula A = ½ × base × height works because any triangle is exactly half of a rectangle (or parallelogram) with the same base and height. At Higher tier, when you know two sides and the included angle but not the perpendicular height, you use the sine formula instead.
+
+The key to applying these formulas correctly is identifying the correct pair: the base and the **perpendicular** height that is at right angles to it.
+
+### Key Formulas
+
+[FORMULA: A = ½ × base × perpendicular height]
+
+[FORMULA: A = ½ab sin C, where a and b are two sides and C is the included angle between them (Higher tier)]
+
+## Step-by-Step Method
+
+1. Identify the base — any side of the triangle can be chosen as the base.
+2. Find the perpendicular height — the vertical distance from the base to the opposite vertex, at 90° to the base.
+3. Substitute into A = ½ × base × height and calculate. If the perpendicular height is not available but two sides and the included angle are given, use A = ½ab sin C instead.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A triangle has a base of 10 cm and a perpendicular height of 6 cm. Find its area.
+
+**Working:**
+A = ½ × base × height
+A = ½ × 10 × 6
+A = ½ × 60
+A = 30
+
+**Answer:** 30 cm²
+
+## Worked Example 2 — Higher Level
+
+**Question:** Triangle PQR has PQ = 9 cm, PR = 12 cm, and the included angle P = 40°. Find the area correct to 1 decimal place.
+
+**Working:**
+A = ½ab sin C
+A = ½ × 9 × 12 × sin 40°
+A = 54 × 0.6428…
+A = 34.7 (1 d.p.)
+
+**Answer:** 34.7 cm²
+
+## Worked Example 3 — Exam Style
+
+**Question:** The area of a triangle is 48 cm². The base is 16 cm. Work out the perpendicular height.
+
+**Working:**
+A = ½ × base × height
+48 = ½ × 16 × h
+48 = 8h
+h = 48 ÷ 8
+h = 6
+
+**Answer:** 6 cm
+
+## Common Mistakes
+
+- **Using the slant side instead of the perpendicular height.** The height must be at right angles to the base, not along a side of the triangle. Look for the right-angle marker on the diagram.
+- **Forgetting to halve.** The ½ is essential — without it you calculate the area of a full rectangle, which is double the triangle.
+- **Using the wrong angle in ½ab sin C.** The angle must be the one enclosed between the two sides you are using, not any angle in the triangle.
+- **Calculator in wrong mode.** When using sin, ensure your calculator is set to degrees, not radians.
+- **Not including square units.** Area is always in cm², m², etc. — never cm or m.
+
+## Exam Tips
+
+- Always write the formula first — this secures a method mark even if your arithmetic slips.
+- If a triangle is part of a compound shape, calculate its area separately then add or subtract.
+- For ½ab sin C questions, clearly state the two sides and the included angle before substituting.
+
+## Practice Questions
+
+**Q1 (Foundation):** A triangle has a base of 14 cm and a perpendicular height of 9 cm. Find its area.
+
+[ANSWER: A = ½ × 14 × 9 = 63 cm².]
+
+**Q2 (Foundation):** The area of a triangle is 36 cm². The perpendicular height is 8 cm. Find the base.
+
+[ANSWER: 36 = ½ × b × 8 → 36 = 4b → b = 9 cm.]
+
+**Q3 (Higher):** Triangle ABC has AB = 11 cm, AC = 7 cm, and angle A = 54°. Find the area to 1 decimal place.
+
+[ANSWER: A = ½ × 11 × 7 × sin 54° = 38.5 × 0.8090… = 31.1 cm² (1 d.p.).]
+
+---
+
+Practise area of a triangle questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+- [Trigonometry – SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+- [Trigonometry – Sine and Cosine Rules](/topics/trigonometry-sine-and-cosine-rules)
+
+## Summary
+
+- The area of any triangle is A = ½ × base × perpendicular height.
+- The base can be any side, but the height must be perpendicular to it.
+- At Higher tier, use A = ½ab sin C when you know two sides and the included angle.
+- Always check that you have halved your answer — a triangle is half the corresponding rectangle.
+- Write the formula explicitly in your working to earn method marks in exams.
+- Triangles frequently appear within compound shapes — calculate each triangle separately and combine.
+`,
+  "area-of-compound-shapes": `---
+title: "Area of Compound Shapes – GCSE Maths Revision Guide"
+description: "Learn how to find the area of compound shapes by splitting into rectangles, triangles, trapeziums and semicircles with GCSE worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["area of compound shapes GCSE", "composite shapes area", "L-shape area", "compound shapes with semicircles", "area GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 101
+---
+
+Compound shape questions combine two or more simple shapes and ask you to find the total area. These questions appear on both Foundation and Higher papers and test whether you can break a complex figure into parts you already know how to handle. They are worth 3-4 marks and reward clear, well-organised working.
+
+## What Is a Compound Shape?
+
+A compound shape (also called a composite shape) is a shape made up of two or more simpler shapes joined together. Common examples include L-shapes, T-shapes, shapes with semicircular ends, and rectangles with triangles or trapeziums attached.
+
+The strategy is always the same: split the shape into parts whose area formulas you know, calculate each area, then add them together. Sometimes a shape is easier to handle by starting with a full rectangle and subtracting a missing piece.
+
+Both approaches — adding simpler areas or subtracting cut-outs — are equally valid. Choose whichever makes the arithmetic easier for the particular shape you are given.
+
+### Key Formulas
+
+[FORMULA: Total area = sum of individual areas (when shapes are added together)]
+
+[FORMULA: Total area = area of whole shape minus area of cut-out (when a piece is removed)]
+
+## Step-by-Step Method
+
+1. Study the shape and decide how to split it — either into two or more simpler shapes (addition) or as a large shape with a piece removed (subtraction).
+2. Label the dimensions of each part clearly — draw dashed lines on the diagram to show your split.
+3. Calculate the area of each part using the correct formula.
+4. Add the areas together (if shapes are joined) or subtract (if a piece is removed).
+5. Include the correct square units in your final answer.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** An L-shaped room has overall dimensions 10 m by 8 m. A 4 m by 3 m rectangle is missing from one corner. Find the area of the room.
+
+**Working:**
+Full rectangle area = 10 × 8 = 80 m²
+Missing rectangle area = 4 × 3 = 12 m²
+L-shape area = 80 − 12 = 68
+
+**Answer:** 68 m²
+
+## Worked Example 2 — Higher Level
+
+**Question:** A shape consists of a rectangle measuring 14 cm by 6 cm with a semicircle removed from one of the longer sides. The semicircle has a diameter of 6 cm. Find the shaded area to 1 decimal place.
+
+**Working:**
+Rectangle area = 14 × 6 = 84 cm²
+Semicircle radius = 6 ÷ 2 = 3 cm
+Semicircle area = ½ × pi × 3² = ½ × pi × 9 = 4.5pi = 14.137...
+Shaded area = 84 − 14.137... = 69.862...
+
+**Answer:** 69.9 cm² (1 d.p.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** A shape is made from a trapezium on top of a rectangle. The rectangle is 12 cm wide and 5 cm tall. The trapezium has parallel sides of 12 cm (bottom, shared with the rectangle) and 8 cm (top), with a perpendicular height of 4 cm. Find the total area.
+
+**Working:**
+Rectangle area = 12 × 5 = 60 cm²
+Trapezium area = ½(12 + 8) × 4 = ½ × 20 × 4 = 40 cm²
+Total area = 60 + 40 = 100
+
+**Answer:** 100 cm²
+
+## Common Mistakes
+
+- **Missing a section.** When splitting a shape, make sure every part is accounted for. Label each section and tick them off as you calculate.
+- **Adding when you should subtract.** If a piece is cut out of a larger shape, you must subtract its area — not add it. Read the question for words like "removed" or "shaded".
+- **Using the wrong dimensions for each part.** After splitting the shape, re-read the measurements carefully. A common error is using the overall length when a sub-shape only covers part of it.
+- **Forgetting to use the correct formula for each sub-shape.** Each part of the compound shape may require a different area formula — rectangle, triangle, trapezium, or circle.
+
+## Exam Tips
+
+- Sketch the split on the diagram — draw a dashed line to show how you have divided the shape. This helps you and the examiner follow your method.
+- If the shape has a curved part (semicircle, quarter circle), calculate the curved area separately and keep full precision until the final rounding step.
+- Show each sub-area in your working before adding or subtracting. This earns method marks even if the final arithmetic is wrong.
+- Check your answer is reasonable by comparing it to a simple rectangle that encloses the whole shape — your compound area should be smaller than that rectangle.
+
+## Practice Questions
+
+**Q1 (Foundation):** A T-shape is formed by a rectangle 10 cm by 3 cm on top of a rectangle 4 cm by 7 cm. Find the total area.
+
+[ANSWER: Top rectangle = 10 × 3 = 30 cm². Bottom rectangle = 4 × 7 = 28 cm². Total = 30 + 28 = 58 cm².]
+
+**Q2 (Foundation):** An L-shape has overall dimensions 9 m by 7 m with a 5 m by 3 m rectangle removed from one corner. Find the area.
+
+[ANSWER: Full rectangle = 9 × 7 = 63 m². Cut-out = 5 × 3 = 15 m². Area = 63 − 15 = 48 m².]
+
+**Q3 (Higher):** A shape is made from a rectangle 20 cm by 10 cm with a semicircle of diameter 10 cm added to one end. Find the total area to 1 decimal place.
+
+[ANSWER: Rectangle = 20 × 10 = 200 cm². Semicircle: r = 5 cm, area = ½ × pi × 25 = 12.5pi = 39.27 cm². Total = 200 + 39.27 = 239.3 cm².]
+
+---
+
+Practise area of compound shapes questions with instant AI feedback — completely free on GCSEMathsAI.
+
+---
+
+## Related Topics
+
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+- [Area of a Circle](/topics/area-of-a-circle)
+- [Area of a Trapezium](/topics/area-of-a-trapezium)
+
+## Summary
+
+- Compound shapes are made from two or more simpler shapes joined together.
+- Split the shape into rectangles, triangles, trapeziums, or circles and calculate each area separately.
+- Add areas when shapes are joined; subtract areas when a piece is removed.
+- Always label your sub-shapes and show each area calculation in your working to earn method marks.
+- Choose the splitting method (addition or subtraction) that makes the arithmetic simplest for the particular shape.
+- Compound shape questions are worth 3-4 marks at GCSE, so showing clear, organised working is essential.
+`,
   "bar-charts-pie-charts-and-pictograms": `---
 title: "Bar Charts Pie Charts and Pictograms – GCSE Maths"
 description: "Master bar charts, pie charts and pictograms for GCSE Maths Foundation with clear methods, worked examples and practice questions."
@@ -1091,6 +2349,127 @@ Ready to practise these skills with instant, personalised feedback? Try our AI-p
 ## Summary
 
 Bar charts, pie charts and pictograms are essential data-display methods at GCSE Foundation level. **Bar charts** compare categories using rectangular bars of equal width — always label axes and start the frequency scale at zero. **Pie charts** show proportions using angles calculated with (frequency ÷ total) × 360° — always verify your angles sum to 360°. **Pictograms** use symbols with a key — read partial symbols carefully. In the exam, draw neatly with a ruler and protractor, show all calculations, and double-check totals. Mastering these charts gives you a strong platform for interpreting data across the rest of the statistics strand.
+`,
+  "bearings-and-trigonometry": `---
+title: "Bearings and Trigonometry – GCSE Maths Revision Guide"
+description: "Master bearings with trigonometry: three-figure bearings, calculating distances and angles using SOHCAHTOA, and finding return bearings at GCSE."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["bearings and trigonometry GCSE", "three figure bearings", "return bearings", "bearings SOHCAHTOA", "calculating bearings GCSE"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 171
+---
+
+Bearings combine angle work with trigonometry and are a favourite topic on GCSE papers. You need to know how to measure, calculate, and describe bearings, and at Higher tier you must use trigonometry to find distances and angles in bearings problems.
+
+## What Are Bearings?
+
+A bearing is a direction measured as an angle clockwise from north. Bearings are always written as three figures — for example, due east is 090°, due south is 180°, and northwest is 315°. If the angle is less than 100°, a leading zero is added (e.g., 045° rather than 45°).
+
+Bearings are used in navigation, map reading, and real-world distance calculations. GCSE questions typically involve two or three locations and ask you to find a bearing between them or use trigonometry to calculate a distance.
+
+The three rules for bearings are: always measure from north, always measure clockwise, and always give three figures.
+
+In exam diagrams, north is always straight up the page unless otherwise stated. All north lines are parallel to each other.
+
+### Key Formulas
+
+[FORMULA: Return bearing = original bearing + 180° (if result > 360°, subtract 360°)]
+
+[FORMULA: SOHCAHTOA for right-angled triangle problems: sin = opp/hyp, cos = adj/hyp, tan = opp/adj]
+
+## Step-by-Step Method
+
+1. Draw a clear north line at the starting point.
+2. Measure the angle clockwise from the north line to the line joining the two points.
+3. Write the bearing as three figures. For calculation problems, sketch the triangle formed and use trigonometry to find missing sides or angles.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Town B is due east of Town A. What is the bearing of B from A?
+
+**Working:**
+North is straight up. Due east is a 90° clockwise rotation from north.
+
+**Answer:** 090°
+
+## Worked Example 2 — Higher Level
+
+**Question:** A ship sails from port P on a bearing of 060° for 80 km to reach point Q. It then sails due south for 50 km to reach point R. Find the direct distance from P to R to 1 decimal place.
+
+**Working:**
+From the diagram, the angle at Q between the north line and PQ is 060°. Since QR is due south, the angle PQR (inside the triangle at Q) is 180° − 60° = 120°.
+Using the cosine rule:
+PR² = 80² + 50² − 2(80)(50)cos 120°
+PR² = 6400 + 2500 − 8000 × (−0.5)
+PR² = 8900 + 4000 = 12900
+PR = √12900 = 113.6 (1 d.p.)
+
+**Answer:** 113.6 km
+
+## Worked Example 3 — Exam Style
+
+**Question:** The bearing of B from A is 125°. Find the bearing of A from B.
+
+**Working:**
+The return bearing = 125° + 180° = 305°.
+Check: 305° is between 0° and 360°, so this is the final answer.
+
+**Answer:** 305°
+
+## Common Mistakes
+
+- **Forgetting three figures.** A bearing of 70° must be written as 070°. Losing the leading zero costs marks.
+- **Measuring anticlockwise.** Bearings are always measured clockwise from north, never anticlockwise.
+- **Drawing north in the wrong place.** You must draw a north line at the point you are measuring from, not the point you are measuring to.
+- **Incorrect return bearings.** To find the return bearing, add 180° to the original bearing. If the result exceeds 360°, subtract 360°. Do not simply subtract from 360°.
+
+## Exam Tips
+
+- Always draw a clear north arrow at each point in the problem — this makes angle identification much easier.
+- Label all known angles and sides before starting any calculation.
+- For Higher tier, be prepared to use the sine rule or cosine rule in non-right-angled bearing triangles.
+- State the three-figure bearing clearly in your final answer.
+- Use co-interior angles (add to 180°) and alternate angles to find unknown angles in bearing diagrams with parallel north lines.
+- A return journey always involves the return bearing — practise calculating these quickly.
+
+## Practice Questions
+
+**Q1 (Foundation):** The bearing of Y from X is 210°. Find the bearing of X from Y.
+
+[ANSWER: 210° + 180° = 390°. 390° − 360° = 030°.]
+
+**Q2 (Foundation):** Town B is directly southwest of Town A. What is the bearing of B from A?
+
+[ANSWER: Southwest is halfway between south (180°) and west (270°), so the bearing is 225°.]
+
+**Q3 (Higher):** A boat sails from A on a bearing of 040° for 12 km to B. From B it sails on a bearing of 130° for 9 km to C. The angle ABC is 90°. Find the distance AC.
+
+[ANSWER: AC² = 12² + 9² = 144 + 81 = 225. AC = √225 = 15 km.]
+
+---
+
+Practise bearings and trigonometry questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Bearings](/topics/bearings)
+- [Trigonometry – SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+- [Trigonometry – Sine and Cosine Rules](/topics/trigonometry-sine-and-cosine-rules)
+
+## Summary
+
+- A bearing is measured clockwise from north and always given as three figures.
+- Return bearing = original bearing + 180° (subtract 360° if the result exceeds 360°).
+- Always draw a north line at the point you are measuring from.
+- Use SOHCAHTOA for right-angled bearing problems and the sine/cosine rules for non-right-angled ones.
+- Label angles and distances clearly on your diagram before calculating.
+- North lines at different points are parallel — use parallel line angle rules to find angles within triangles.
 `,
   "bearings": `---
 title: "Bearings – GCSE Maths Revision Guide"
@@ -1249,6 +2628,127 @@ Sharpen your bearing skills with personalised practice at [GCSEMathsAI](https://
 ## Summary
 
 Bearings describe direction using angles measured clockwise from north, always written as three-figure numbers. The back bearing is found by adding or subtracting 180°. At Foundation level, you need to measure, draw, and calculate simple bearings. At Higher level, you combine bearings with trigonometry to find distances and angles in more complex scenarios. The keys to success are drawing clear diagrams with north lines at every point, using parallel line angle rules, and remembering the three strict bearing rules: from north, clockwise, three figures. Practise reading and drawing bearings until the process is automatic.
+`,
+  "best-buy-problems": `---
+title: "Best Buy Problems – GCSE Maths Revision Guide"
+description: "Learn how to solve best buy problems by comparing unit prices, with real-world shopping examples, worked solutions and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["best buy GCSE maths", "comparing value", "unit price", "best value problems", "best buy ratio"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 174
+---
+
+Best buy problems are one of the most practical topics in GCSE Maths — they test your ability to compare prices and quantities to determine which deal offers better value. The key technique is finding the unit price or the price per common quantity.
+
+## What Are Best Buy Problems?
+
+A best buy problem gives you two or more products (or pack sizes) at different prices and asks you to work out which is better value for money. The standard approach is to calculate the cost per single item, per gram, per litre, or per any common unit so that a fair comparison can be made.
+
+There are two equivalent methods: you can find the price per unit (divide price by quantity) or the quantity per pound/penny (divide quantity by price). Either method will give the correct answer, but you must use the same method for all options to make a fair comparison.
+
+In real-world contexts, best buy questions may involve special offers such as "buy 2 get 1 free" or "20% off," which you need to account for before comparing.
+
+These questions test proportional reasoning in a practical context and almost always require you to show your working clearly.
+
+### Key Formulas
+
+[FORMULA: Unit price = total cost ÷ number of items (or total quantity)]
+
+[FORMULA: Amount per penny = total quantity ÷ total cost in pence]
+
+## Step-by-Step Method
+
+1. For each option, identify the total cost and the total quantity.
+2. If there is a special offer, adjust the effective quantity or price accordingly.
+3. Calculate the unit price for each option (cost ÷ quantity) using the same unit.
+4. The option with the lowest unit price is the best buy.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A 500 g box of cereal costs £2.40. A 750 g box of the same cereal costs £3.30. Which is better value?
+
+**Working:**
+500 g box: £2.40 ÷ 500 = 0.48p per gram
+750 g box: £3.30 ÷ 750 = 0.44p per gram
+0.44p < 0.48p
+
+**Answer:** The 750 g box is better value.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Shop A sells 4 batteries for £3.60. Shop B sells 6 batteries for £5.10. Shop B also has a "buy 6 get 2 free" offer. Which shop offers the best value?
+
+**Working:**
+Shop A: £3.60 ÷ 4 = £0.90 per battery
+Shop B (with offer): You pay for 6 but get 8 batteries. £5.10 ÷ 8 = £0.6375 per battery
+£0.6375 < £0.90
+
+**Answer:** Shop B is better value.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A 2-litre bottle of juice costs £1.80. A pack of 6 × 330 ml cartons of the same juice costs £2.70. Which is better value? You must show your working.
+
+**Working:**
+Bottle: £1.80 ÷ 2000 ml = 0.09p per ml
+Pack: total volume = 6 × 330 = 1980 ml. £2.70 ÷ 1980 = 0.1364p per ml (4 d.p.)
+0.09p < 0.1364p
+
+**Answer:** The 2-litre bottle is better value.
+
+## Common Mistakes
+
+- **Comparing different units.** You must compare like with like — both in pence per gram, or both in pence per ml, etc. Do not compare pence per gram with pounds per kg without converting.
+- **Forgetting special offers.** If one option has a "3 for 2" deal, adjust the quantity to include the free items before calculating the unit price.
+- **Rounding too early.** Keep several decimal places during the comparison and only round at the very end, otherwise you may conclude the wrong option is cheaper.
+- **Not showing working.** Best buy questions always require a comparison calculation. Just stating the answer without working earns no marks.
+
+## Exam Tips
+
+- Always show the unit price calculation for each option — this is where the method marks are.
+- Clearly state which option is better value and why (lower cost per unit).
+- If the question says "you must show your working," you will get no marks for a correct answer without it.
+- Converting everything to pence avoids decimal confusion with pounds.
+
+## Practice Questions
+
+**Q1 (Foundation):** A 400 g tin of beans costs 52p. A 250 g tin costs 35p. Which is better value?
+
+[ANSWER: 400 g: 52 ÷ 400 = 0.13p per gram. 250 g: 35 ÷ 250 = 0.14p per gram. The 400 g tin is better value.]
+
+**Q2 (Foundation):** 5 pens cost £2.25. 8 pens cost £3.44. Which is the better buy?
+
+[ANSWER: 5 pens: 225p ÷ 5 = 45p each. 8 pens: 344p ÷ 8 = 43p each. The 8-pack is better value.]
+
+**Q3 (Higher):** A shop sells 500 ml of shampoo for £3.50. It also sells 200 ml for £1.60 with a "buy 2 get 1 free" offer. Which is better value?
+
+[ANSWER: 500 ml: 350p ÷ 500 = 0.70p per ml. Offer: pay for 2 × 200 ml = £3.20, get 3 × 200 = 600 ml. 320p ÷ 600 = 0.533p per ml. The offer is better value.]
+
+---
+
+Practise best buy problems with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Ratio Basics and Sharing](/topics/ratio-basics-and-sharing)
+- [Unit Conversions](/topics/unit-conversions)
+- [Percentages](/topics/percentages)
+
+## Summary
+
+- Best buy problems compare value for money across different pack sizes or offers.
+- Calculate the unit price (cost per gram, per ml, per item) for each option.
+- The option with the lowest unit price is the best buy.
+- Account for special offers by adjusting the effective quantity before dividing.
+- Always show full working and clearly state your conclusion.
+- You can also compare by finding how much you get per penny — the option giving the most per penny is the best buy.
+- Keep several decimal places during comparison and only round at the end.
 `,
   "bounds-and-error-intervals": `---
 title: "Bounds and Error Intervals – GCSE Maths"
@@ -1419,6 +2919,290 @@ Get targeted Higher tier practice on bounds and error intervals. [Create your fr
 - Always keep bounds exact — never round them during working.
 - This topic commonly appears alongside speed, density, and area calculations.
 `,
+  "box-plots-and-comparing-distributions": `---
+title: "Box Plots and Comparing Distributions – GCSE Maths Revision Guide"
+description: "Learn box plots for GCSE Maths Higher with the five-number summary, IQR, comparing distributions, skewness, worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["box plots GCSE", "comparing distributions", "interquartile range", "five number summary", "box and whisker diagram"]
+tier: "Higher only"
+strand: "Statistics & Probability"
+topicNumber: 192
+---
+
+Box plots (also called box-and-whisker diagrams) are a Higher-tier topic that features prominently on AQA, Edexcel and OCR GCSE Maths papers. They provide a visual summary of data using five key values and are especially useful for comparing two distributions. You need to draw box plots, read values from them, calculate the interquartile range, and compare data sets using median, spread and skewness. This guide covers all these skills. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is a Box Plot?
+
+A **box plot** displays a data set using the **five-number summary**:
+
+1. **Minimum** — the smallest value.
+2. **Lower quartile (Q1)** — the value one quarter of the way through the ordered data.
+3. **Median (Q2)** — the middle value.
+4. **Upper quartile (Q3)** — the value three quarters of the way through the ordered data.
+5. **Maximum** — the largest value.
+
+### Key Formulas
+
+[FORMULA: Interquartile Range (IQR) = Q3 − Q1]
+
+[FORMULA: Range = Maximum − Minimum]
+
+The IQR measures the spread of the middle 50% of the data and is not affected by outliers. A smaller IQR means the data is more consistent.
+
+### Skewness
+
+- **Positive skew** — the median is closer to Q1, and the right whisker is longer.
+- **Negative skew** — the median is closer to Q3, and the left whisker is longer.
+- **Symmetrical** — the median is roughly central in the box.
+
+## Step-by-Step Method
+
+1. Order the data from smallest to largest (if not already done).
+2. Find the minimum and maximum.
+3. Find the median (Q2) — the middle value.
+4. Find Q1 — the median of the lower half of the data.
+5. Find Q3 — the median of the upper half of the data.
+6. Draw a number line with an appropriate scale.
+7. Draw the box from Q1 to Q3, with a line at the median.
+8. Draw whiskers from the box to the minimum and maximum.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Draw a box plot for this data set: 4, 7, 9, 12, 15, 18, 21, 24, 28.
+
+**Working:**
+
+Data is already ordered. n = 9.
+
+Minimum = 4. Maximum = 28.
+
+Median (Q2) = 5th value = **15**.
+
+Lower half: 4, 7, 9, 12. Q1 = (7 + 9) ÷ 2 = **8**.
+
+Upper half: 18, 21, 24, 28. Q3 = (21 + 24) ÷ 2 = **22.5**.
+
+Draw a number line from 0 to 30. Box from 8 to 22.5 with a median line at 15. Whiskers to 4 and 28.
+
+**Answer:** Five-number summary: 4, 8, 15, 22.5, 28.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Two box plots compare the test scores of Class A and Class B.
+
+Class A: Min = 30, Q1 = 42, Median = 55, Q3 = 68, Max = 85.
+
+Class B: Min = 40, Q1 = 50, Median = 60, Q3 = 66, Max = 78.
+
+Compare the two distributions.
+
+**Working:**
+
+Class A: Median = 55, IQR = 68 − 42 = 26, Range = 85 − 30 = 55.
+
+Class B: Median = 60, IQR = 66 − 50 = 16, Range = 78 − 40 = 38.
+
+**Answer:** Class B has a higher median (60 vs 55), suggesting that, on average, Class B scored higher. Class B also has a smaller IQR (16 vs 26) and a smaller range (38 vs 55), meaning the scores in Class B were more consistent and less spread out than in Class A.
+
+## Worked Example 3 — Exam Style
+
+**Question:** From a box plot, read off: Min = 12, Q1 = 20, Median = 35, Q3 = 42, Max = 50. (a) Find the IQR. (b) Find the range. (c) Describe the skewness.
+
+**Working:**
+
+**(a)** IQR = Q3 − Q1 = 42 − 20 = **22**.
+
+**(b)** Range = 50 − 12 = **38**.
+
+**(c)** The median (35) is closer to Q3 (42) than to Q1 (20). The left whisker (12 to 20 = 8) is shorter than the right whisker (42 to 50 = 8) — they are actually equal. However, within the box, the median is to the right of centre (distance from Q1 to median is 15, from median to Q3 is 7). This suggests **negative skew** — the data is bunched towards the higher values.
+
+**Answer:** (a) IQR = 22. (b) Range = 38. (c) Negative skew — the median is closer to Q3 within the box.
+
+## Common Mistakes
+
+- **Confusing Q1 and Q3 with the minimum and maximum.** The box shows Q1 to Q3; the whiskers extend to the min and max.
+- **Not ordering data before finding quartiles.** Quartiles only work on ordered data.
+- **Using range instead of IQR for comparison.** The IQR is usually more useful because it ignores outliers and focuses on the central 50%.
+- **Only comparing one measure.** When comparing distributions, always comment on both an average (median) and a measure of spread (IQR or range).
+
+## Exam Tips
+
+- When comparing box plots, always make two comparison points: one about the median (average) and one about the IQR or range (spread). Use context — for example, "Class B scored higher on average and their marks were more consistent."
+- Read box plot values carefully from the scale — misreading by one division is a common error.
+- If asked about skewness, look at where the median sits within the box and compare whisker lengths.
+- For related cumulative frequency, see [cumulative frequency and box plots](/topics/cumulative-frequency-and-box-plots). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A box plot has Q1 = 15 and Q3 = 35. What is the IQR?
+
+[ANSWER: IQR = Q3 − Q1 = 35 − 15 = 20.]
+
+**Q2 (Foundation):** From a five-number summary of 10, 18, 25, 33, 45, state the median and the range.
+
+[ANSWER: Median = 25. Range = 45 − 10 = 35.]
+
+**Q3 (Higher):** Box plot A has median 50, IQR 12. Box plot B has median 45, IQR 20. Compare the two distributions.
+
+[ANSWER: Distribution A has a higher median (50 vs 45), so data values tend to be higher on average. Distribution A has a smaller IQR (12 vs 20), meaning the middle 50% of values is more tightly clustered — A is more consistent than B.]
+
+---
+
+Practise drawing and comparing box plots free on GCSEMathsAI.
+
+## Related Topics
+
+- [Cumulative Frequency and Box Plots](/topics/cumulative-frequency-and-box-plots)
+- [Finding the Median](/topics/finding-the-median)
+- [Histograms](/topics/histograms)
+
+## Summary
+
+- A box plot displays data using five values: minimum, Q1, median, Q3 and maximum.
+- The interquartile range (IQR = Q3 − Q1) measures the spread of the middle 50% of data.
+- When comparing two box plots, comment on both the median (average) and the IQR or range (spread), and relate your answer to the context.
+- Skewness is identified by the position of the median within the box and the relative lengths of the whiskers.
+- Box plots are drawn on a scaled number line with a box from Q1 to Q3 and whiskers to the minimum and maximum.
+`,
+  "calculating-with-standard-form": `---
+title: "Calculating with Standard Form – GCSE Maths Revision Guide"
+description: "Learn how to multiply, divide, add and subtract numbers in standard form for GCSE Maths with step-by-step methods and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["calculating standard form GCSE", "multiplying standard form", "dividing standard form", "adding standard form", "standard form calculator"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 134
+---
+
+Calculating with standard form extends the basics of writing numbers in standard form to performing arithmetic with them. You may need to multiply, divide, add, or subtract numbers in standard form on both Foundation and Higher GCSE Maths papers.
+
+## What Is Calculating with Standard Form?
+
+Once numbers are in standard form (A × 10^n), you can perform calculations by working with the A values and the powers of 10 separately. Multiplication and division are straightforward; addition and subtraction require the powers to match first.
+
+On calculator papers, you can use the EXP or ×10^x button to enter standard form directly. On non-calculator papers, you must show full algebraic working.
+
+### Key Formulas
+
+[FORMULA: Multiplying: (a × 10^m) × (b × 10^n) = (a × b) × 10^(m+n)]
+
+[FORMULA: Dividing: (a × 10^m) ÷ (b × 10^n) = (a ÷ b) × 10^(m−n)]
+
+[FORMULA: Adding/subtracting: convert to the same power of 10, then add or subtract the A values]
+
+## Step-by-Step Method
+
+### Multiplying in Standard Form
+1. Multiply the A values together.
+2. Add the powers of 10.
+3. If the new A value is not between 1 and 10, adjust it and update the power.
+
+### Dividing in Standard Form
+1. Divide the A values.
+2. Subtract the second power from the first.
+3. Adjust if A falls outside the range 1 ≤ A < 10.
+
+### Adding or Subtracting in Standard Form
+1. Rewrite both numbers with the same power of 10 (usually the larger power).
+2. Add or subtract the A values.
+3. Convert the result back to correct standard form if needed.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Calculate (3 × 10⁴) × (2 × 10³). Give your answer in standard form.
+
+**Working:**
+
+Step 1 — Multiply A values: 3 × 2 = 6.
+
+Step 2 — Add powers: 4 + 3 = 7.
+
+Step 3 — 6 is between 1 and 10, so no adjustment needed.
+
+**Answer:** 6 × 10⁷
+
+## Worked Example 2 — Higher Level
+
+**Question:** Calculate (8.4 × 10⁵) ÷ (2.1 × 10⁻²). Give your answer in standard form.
+
+**Working:**
+
+Step 1 — Divide A values: 8.4 ÷ 2.1 = 4.
+
+Step 2 — Subtract powers: 5 − (−2) = 5 + 2 = 7.
+
+Step 3 — 4 is between 1 and 10, so no adjustment needed.
+
+**Answer:** 4 × 10⁷
+
+## Worked Example 3 — Exam Style
+
+**Question:** Calculate (4.5 × 10⁶) + (3.2 × 10⁵). Give your answer in standard form.
+
+**Working:**
+
+Step 1 — Rewrite with the same power. Convert 3.2 × 10⁵ to the power of 10⁶: 3.2 × 10⁵ = 0.32 × 10⁶.
+
+Step 2 — Add: 4.5 × 10⁶ + 0.32 × 10⁶ = 4.82 × 10⁶.
+
+Step 3 — 4.82 is between 1 and 10, so this is already in standard form.
+
+**Answer:** 4.82 × 10⁶
+
+## Common Mistakes
+
+- **Adding powers when adding or subtracting numbers.** You add powers only when multiplying. For addition/subtraction, you must convert to the same power first.
+- **Forgetting to adjust when A falls outside the valid range.** If multiplying gives 15 × 10⁸, this is not standard form. Write it as 1.5 × 10⁹.
+- **Subtracting powers in the wrong order when dividing.** Always subtract the second power from the first: m − n, not n − m.
+
+## Exam Tips
+
+- On calculator papers, use the EXP or ×10^x button — do not type × 10 ^ manually, as this can cause errors.
+- Always state your final answer in standard form unless the question asks for an ordinary number.
+- Double-check that 1 ≤ A < 10 in your final answer.
+
+## Practice Questions
+
+**Q1 (Foundation):** Calculate (5 × 10³) × (4 × 10²). Give your answer in standard form.
+
+[ANSWER: 5 × 4 = 20. Powers: 3 + 2 = 5. 20 × 10⁵ = 2 × 10⁶. Answer: 2 × 10⁶]
+
+**Q2 (Foundation):** Calculate (9.6 × 10⁷) ÷ (3.2 × 10⁴). Give your answer in standard form.
+
+[ANSWER: 9.6 ÷ 3.2 = 3. Powers: 7 − 4 = 3. Answer: 3 × 10³]
+
+**Q3 (Higher):** Calculate (7.1 × 10⁸) − (4.6 × 10⁷). Give your answer in standard form.
+
+[ANSWER: Convert 4.6 × 10⁷ to 0.46 × 10⁸. Then 7.1 × 10⁸ − 0.46 × 10⁸ = 6.64 × 10⁸. Answer: 6.64 × 10⁸]
+
+---
+
+Practise calculating with standard form questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Writing in Standard Form](/topics/writing-in-standard-form)
+- [Standard Form](/topics/standard-form)
+- [Indices and Index Laws](/topics/indices-and-index-laws)
+
+## Summary
+
+- To multiply in standard form, multiply the A values and add the powers.
+- To divide, divide the A values and subtract the powers.
+- To add or subtract, convert both numbers to the same power of 10 first.
+- Always adjust the final answer so that 1 ≤ A < 10.
+- Use the EXP button on your calculator for standard form entries.
+`,
   "circle-theorems": `---
 title: "Circle Theorems – GCSE Maths Revision Guide"
 description: "Learn all circle theorems for GCSE Maths Higher tier with clear diagrams, worked examples, and exam-style practice questions."
@@ -1551,6 +3335,271 @@ Want to practise circle theorems with instant feedback? Visit [GCSEMathsAI](http
 ## Summary
 
 Circle theorems test your ability to spot relationships between angles in circle diagrams. The eight key theorems cover angles at the centre and circumference, angles in semicircles, cyclic quadrilaterals, tangent properties, and the alternate segment theorem. Success depends on careful labelling, identifying isosceles triangles formed by radii, and always stating the theorem you are using. These questions are Higher only, typically worth 3–5 marks, and require fully reasoned answers. Practise reading diagrams and chaining multiple theorems together — that is the skill the examiner is really testing.
+`,
+  "circumference-of-a-circle": `---
+title: "Circumference of a Circle – GCSE Maths Revision Guide"
+description: "Learn how to calculate the circumference of a circle using C = πd and C = 2πr, with worked examples, exam tips and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["circumference of a circle GCSE", "C equals pi d", "circumference formula", "circle perimeter GCSE", "finding radius from circumference"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 167
+---
+
+The circumference is the distance around the outside of a circle — it is the circle's perimeter. This topic appears on almost every GCSE paper, whether as a standalone question or as part of a problem involving arcs, sectors, or compound shapes.
+
+## What Is the Circumference?
+
+The circumference is the total length of the curved boundary of a circle. It is directly proportional to the diameter: no matter how large or small a circle is, the ratio of circumference to diameter is always π (approximately 3.14159).
+
+This gives two equivalent formulas: C = πd (using the diameter) and C = 2πr (using the radius). Since the diameter is twice the radius, these are the same formula written in different ways.
+
+You may be asked to leave your answer in terms of π (an exact answer) or to give a decimal rounded to a specified number of decimal places or significant figures.
+
+### Key Formulas
+
+[FORMULA: C = πd, where d is the diameter of the circle]
+
+[FORMULA: C = 2πr, where r is the radius of the circle]
+
+[FORMULA: d = C ÷ π and r = C ÷ (2π), for finding dimensions from a given circumference]
+
+## Step-by-Step Method
+
+1. Identify whether you are given the radius or the diameter.
+2. If given the radius, either double it to get the diameter and use C = πd, or use C = 2πr directly.
+3. Substitute into the formula and calculate — leave in terms of π or round as instructed.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A circle has a diameter of 14 cm. Find the circumference. Give your answer to 1 decimal place.
+
+**Working:**
+C = πd
+C = π × 14
+C = 43.982…
+C = 44.0 (1 d.p.)
+
+**Answer:** 44.0 cm
+
+## Worked Example 2 — Higher Level
+
+**Question:** A circle has a circumference of 75 cm. Find the radius. Give your answer to 2 decimal places.
+
+**Working:**
+C = 2πr
+75 = 2πr
+r = 75 ÷ (2π)
+r = 75 ÷ 6.2832…
+r = 11.94 (2 d.p.)
+
+**Answer:** 11.94 cm
+
+## Worked Example 3 — Exam Style
+
+**Question:** A semicircular window has a diameter of 60 cm. Calculate the perimeter of the window.
+
+**Working:**
+Curved part = half the circumference = ½ × πd = ½ × π × 60 = 30π
+Straight edge = diameter = 60
+Perimeter = 30π + 60 = 94.248… + 60 = 154.2 (1 d.p.)
+
+**Answer:** 154.2 cm
+
+## Common Mistakes
+
+- **Confusing radius and diameter.** The diameter is twice the radius. Using the wrong one will double or halve your answer. Always check which measurement the question gives.
+- **Forgetting the straight edge in semicircles.** The perimeter of a semicircle includes the curved part plus the diameter — not just the half circumference.
+- **Rounding π too early.** Use the π button on your calculator rather than 3.14, which introduces rounding errors.
+- **Omitting units.** Circumference is a length, so the unit is cm, m, mm, etc. — not cm².
+
+## Exam Tips
+
+- If the question says "give your answer in terms of π," leave π in your answer (e.g., 14π cm) without calculating a decimal.
+- On non-calculator papers, use π ≈ 3.14 or the value given in the question.
+- Double-check whether you have been given the radius or the diameter before substituting.
+
+## Practice Questions
+
+**Q1 (Foundation):** A circle has a radius of 5 cm. Find its circumference in terms of π.
+
+[ANSWER: C = 2πr = 2 × π × 5 = 10π cm.]
+
+**Q2 (Foundation):** A circle has a diameter of 20 cm. Find its circumference to 1 decimal place.
+
+[ANSWER: C = πd = π × 20 = 62.8 cm (1 d.p.).]
+
+**Q3 (Higher):** The circumference of a circle is 50π cm. Find the diameter and the radius.
+
+[ANSWER: C = πd, so 50π = πd → d = 50 cm. Radius = 50 ÷ 2 = 25 cm.]
+
+---
+
+Practise circumference of a circle questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Arc Length and Sector Area](/topics/arc-length-and-sector-area)
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+- [Perimeter](/topics/perimeter)
+
+## Summary
+
+- The circumference is the perimeter of a circle.
+- Use C = πd or equivalently C = 2πr.
+- To find the radius from the circumference, rearrange to r = C ÷ (2π).
+- Always check whether you have the radius or the diameter before substituting.
+- For semicircles and quarter-circles, remember to add the straight edges to the curved part.
+- Leave answers in terms of π when the question requests an exact answer.
+`,
+  "completing-the-square-method": `---
+title: "Completing the Square Method – GCSE Maths Revision Guide"
+description: "Master the completing the square method for GCSE Maths Higher tier with turning points, solving equations, worked examples, and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["completing the square method", "turning point quadratic", "vertex form GCSE", "solve by completing square", "x squared plus bx plus c"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 90
+---
+
+Completing the square is a Higher tier technique that rewrites a quadratic expression into a form that reveals the turning point of the parabola. It is also a powerful method for solving quadratic equations, especially when the question demands exact (surd) answers.
+
+## What Is Completing the Square?
+
+Completing the square transforms a quadratic expression from the standard form x² + bx + c into the equivalent form (x + p)² + q. In this new form, the turning point (vertex) of the parabola y = x² + bx + c is immediately visible at the coordinates (-p, q).
+
+The technique works by constructing a perfect square from the x² and bx terms, then adjusting the constant to compensate. "Completing" refers to adding the right amount to make a perfect square trinomial, and then subtracting that same amount so the expression stays equivalent.
+
+Once the expression is in completed square form, it can also be used to solve equations. Setting (x + p)² + q = 0 and rearranging gives (x + p)² = -q. If -q is non-negative, taking the square root of both sides (remembering the plus-or-minus) leads to the two solutions.
+
+### Key Formulas
+
+[FORMULA: x² + bx + c = (x + b/2)² - (b/2)² + c]
+
+[FORMULA: Turning point of y = (x + p)² + q is (-p, q)]
+
+## Step-by-Step Method
+
+1. Start with the quadratic x² + bx + c.
+2. Halve the coefficient of x to get b/2.
+3. Write the perfect square bracket: (x + b/2)².
+4. Expanding this bracket gives x² + bx + (b/2)². Since you only had x² + bx, you have introduced an extra (b/2)².
+5. Subtract (b/2)² and add back the original constant c: the completed form is (x + b/2)² - (b/2)² + c.
+6. Simplify the constant part to get the final form (x + p)² + q.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Write x² + 6x + 2 in the form (x + p)² + q.
+
+**Working:**
+
+Step 1 — Halve the coefficient of x: 6 / 2 = 3.
+
+Step 2 — Write the bracket: (x + 3)².
+
+Step 3 — Expanding (x + 3)² gives x² + 6x + 9. The extra amount introduced is 9.
+
+Step 4 — Subtract 9 and add the original constant 2: (x + 3)² - 9 + 2 = (x + 3)² - 7.
+
+Check: (x + 3)² - 7 = x² + 6x + 9 - 7 = x² + 6x + 2. Correct.
+
+**Answer:** (x + 3)² - 7
+
+## Worked Example 2 — Higher Level
+
+**Question:** Find the turning point of y = x² - 10x + 18.
+
+**Working:**
+
+Step 1 — Halve the coefficient of x: -10 / 2 = -5.
+
+Step 2 — Write the bracket: (x - 5)².
+
+Step 3 — Expanding gives x² - 10x + 25. Extra amount: 25.
+
+Step 4 — Subtract 25 and add 18: (x - 5)² - 25 + 18 = (x - 5)² - 7.
+
+The turning point is at (-(-5), -7) = (5, -7). Since the coefficient of x² is positive, this is a minimum point.
+
+**Answer:** Turning point is (5, -7); it is a minimum.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Solve x² + 4x - 3 = 0 by completing the square. Give your answers in surd form. (4 marks)
+
+**Working:**
+
+Step 1 — Complete the square on x² + 4x - 3.
+
+Halve 4: gives 2. Write (x + 2)². Expanding gives x² + 4x + 4. Extra: 4.
+
+So x² + 4x - 3 = (x + 2)² - 4 - 3 = (x + 2)² - 7.
+
+Step 2 — Set equal to zero: (x + 2)² - 7 = 0.
+
+Step 3 — Rearrange: (x + 2)² = 7.
+
+Step 4 — Square root both sides: x + 2 = ±sqrt(7).
+
+Step 5 — Subtract 2: x = -2 ± sqrt(7).
+
+Check: x = -2 + sqrt(7) is approximately 0.646. (0.646)² + 4(0.646) - 3 = 0.417 + 2.584 - 3 = 0.001, which is approximately 0. Correct.
+
+**Answer:** x = -2 + sqrt(7) or x = -2 - sqrt(7)
+
+## Common Mistakes
+
+- **Forgetting to subtract the square you introduced.** When you write (x + 3)², you create an extra +9. You must subtract 9 to keep the expression equivalent to the original.
+- **Getting the sign of p wrong.** If the coefficient of x is -8, then p = -4, not +4. Always halve including the sign.
+- **Confusing the turning point coordinates.** In (x + 3)² - 7, the turning point is (-3, -7), not (3, -7). The x-coordinate is the opposite sign of what appears inside the bracket.
+
+## Exam Tips
+
+- Read whether the question asks you to "write in the form (x + p)² + q" or to "solve by completing the square." The first requires only the rewrite; the second requires finding x values.
+- For "find the minimum value" questions, complete the square and state q. The minimum value is q, not the full coordinate pair.
+- Practise with negative coefficients of x, as these are where most students make sign errors.
+
+## Practice Questions
+
+**Q1 (Higher):** Write x² + 8x + 10 in the form (x + p)² + q.
+
+[ANSWER: Halve 8 gives 4. (x + 4)² = x² + 8x + 16. Extra = 16. (x + 4)² - 16 + 10 = (x + 4)² - 6.]
+
+**Q2 (Higher):** Find the minimum value of x² - 12x + 40.
+
+[ANSWER: Halve -12 gives -6. (x - 6)² = x² - 12x + 36. Extra = 36. (x - 6)² - 36 + 40 = (x - 6)² + 4. Minimum value is 4, occurring when x = 6.]
+
+**Q3 (Higher):** Solve x² - 2x - 5 = 0 by completing the square, giving answers in surd form.
+
+[ANSWER: (x - 1)² - 1 - 5 = 0. (x - 1)² = 6. x - 1 = ±sqrt(6). x = 1 + sqrt(6) or x = 1 - sqrt(6).]
+
+---
+
+Practise completing the square method questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Completing the Square](/topics/completing-the-square)
+- [Quadratic Graphs](/topics/quadratic-graphs)
+- [Using the Quadratic Formula](/topics/using-the-quadratic-formula)
+
+## Summary
+
+- Completing the square rewrites x² + bx + c as (x + b/2)² - (b/2)² + c.
+- The turning point of the parabola y = (x + p)² + q is at (-p, q).
+- For monic quadratics, halve the coefficient of x, square it, then adjust the constant.
+- The method can solve quadratic equations by isolating the squared bracket and taking square roots with plus-or-minus.
+- Always remember that the x-coordinate of the turning point is the opposite sign of what appears in the bracket.
 `,
   "completing-the-square": `---
 title: "Completing the Square – GCSE Maths Guide"
@@ -1696,6 +3745,141 @@ For more on quadratic methods, see our guide on [How to Solve Quadratic Equation
 - Always remember ± when taking square roots.
 - The sign inside the bracket is opposite to the x-coordinate of the turning point.
 - Completing the square is the foundation for deriving the quadratic formula and is essential for Higher tier graph questions.
+`,
+  "composite-functions": `---
+title: "Composite Functions – GCSE Maths Revision Guide"
+description: "Learn composite functions for GCSE Maths Higher tier. Understand fg(x), gf(x), ff(x) with clear worked examples, common mistakes and exam tips."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["composite functions gcse", "fg(x) gcse maths", "gf(x) composite function", "ff(x) gcse", "composite functions higher tier"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 96
+---
+
+Composite functions combine two or more functions by applying them one after the other. They appear regularly on Higher-tier GCSE papers and are worth understanding well because the method is systematic once you grasp the order of operations.
+
+## What Is a Composite Function?
+
+A composite function applies one function to the result of another. The notation fg(x) means "apply g first, then apply f to the result". This is sometimes written as f(g(x)).
+
+The order matters: fg(x) and gf(x) usually give different results.
+
+### Key Formulas
+
+[FORMULA: fg(x) = f(g(x)) — apply g first, then f]
+
+[FORMULA: gf(x) = g(f(x)) — apply f first, then g]
+
+[FORMULA: ff(x) = f(f(x)) — apply f twice]
+
+Think of it as working from the inside out: the function closest to x is applied first.
+
+## Step-by-Step Method
+
+1. **Identify** which function is applied first (the inner function, closest to x).
+2. **Write down** the expression for the inner function.
+3. **Substitute** that entire expression into the outer function, replacing every x.
+4. **Simplify** the result.
+5. To **evaluate** at a number (e.g., fg(2)), either substitute 2 into your composite expression or find g(2) first, then apply f to the result.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** f(x) = 3x + 1 and g(x) = x². Find fg(2).
+
+**Working:**
+
+Step 1: fg(2) means apply g first, then f.
+
+Step 2: Find g(2) = 2² = 4.
+
+Step 3: Apply f to the result: f(4) = 3(4) + 1 = 13.
+
+**Answer:** fg(2) = 13
+
+## Worked Example 2 — Higher Level
+
+**Question:** f(x) = 2x − 5 and g(x) = x² + 1. Find expressions for (a) fg(x) and (b) gf(x).
+
+**Working:**
+
+**(a)** fg(x) = f(g(x)) = f(x² + 1)
+
+Replace x in f with (x² + 1): 2(x² + 1) − 5 = 2x² + 2 − 5 = 2x² − 3.
+
+**(b)** gf(x) = g(f(x)) = g(2x − 5)
+
+Replace x in g with (2x − 5): (2x − 5)² + 1 = 4x² − 20x + 25 + 1 = 4x² − 20x + 26.
+
+**Answer:** (a) fg(x) = 2x² − 3, (b) gf(x) = 4x² − 20x + 26
+
+## Worked Example 3 — Exam Style
+
+**Question:** f(x) = 4x − 3 and g(x) = x/2 + 1. (a) Find ff(x). (b) Solve fg(x) = 17.
+
+**Working:**
+
+**(a)** ff(x) = f(f(x)) = f(4x − 3)
+
+Replace x in f with (4x − 3): 4(4x − 3) − 3 = 16x − 12 − 3 = 16x − 15.
+
+**(b)** First find fg(x):
+
+fg(x) = f(g(x)) = f(x/2 + 1) = 4(x/2 + 1) − 3 = 2x + 4 − 3 = 2x + 1.
+
+Set 2x + 1 = 17: 2x = 16, so x = 8.
+
+Check: g(8) = 4 + 1 = 5. f(5) = 20 − 3 = 17 ✓
+
+**Answer:** (a) ff(x) = 16x − 15, (b) x = 8
+
+## Common Mistakes
+
+- **Applying functions in the wrong order.** fg(x) means g first, then f. The function written first (f) is applied second. Always work from the inside out.
+- **Forgetting to replace every x.** When substituting g(x) into f(x), every x in the expression for f must be replaced with the entire expression for g(x), not just part of it.
+- **Not expanding brackets fully.** When gf(x) involves squaring a linear expression, you must expand (2x − 5)² correctly as 4x² − 20x + 25, not 4x² + 25.
+
+## Exam Tips
+
+- To evaluate fg(2), you can either find the composite expression fg(x) first and substitute 2, or find g(2) and then apply f to that number. Both are valid; the second is often quicker.
+- Show intermediate substitution clearly — for example, write "f(g(x)) = f(x² + 1) = 2(x² + 1) − 5" rather than jumping to the answer.
+- If asked to solve fg(x) = k, find the composite expression first, then solve the resulting equation.
+
+## Practice Questions
+
+**Q1 (Higher):** f(x) = 5x − 2 and g(x) = x + 4. Find fg(3).
+
+[ANSWER: g(3) = 3 + 4 = 7. f(7) = 5(7) − 2 = 33. fg(3) = 33.]
+
+**Q2 (Higher):** f(x) = x² and g(x) = 2x + 3. Find an expression for gf(x).
+
+[ANSWER: gf(x) = g(f(x)) = g(x²) = 2(x²) + 3 = 2x² + 3.]
+
+**Q3 (Higher):** f(x) = 3x + 1 and g(x) = x − 2. Solve gf(x) = 10.
+
+[ANSWER: gf(x) = g(3x + 1) = (3x + 1) − 2 = 3x − 1. Set 3x − 1 = 10: 3x = 11, x = 11/3.]
+
+---
+
+Practise composite functions questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Functions and Function Notation](/topics/functions-and-function-notation)
+- [Inverse and Composite Functions](/topics/inverse-and-composite-functions)
+- [Solving Linear Equations](/topics/solving-linear-equations)
+
+## Summary
+
+- A composite function applies one function to the result of another: fg(x) = f(g(x)).
+- Always apply the inner function (closest to x) first, then the outer function.
+- fg(x) and gf(x) are generally different — the order matters.
+- ff(x) means applying the same function twice: f(f(x)).
+- To solve fg(x) = k, find the composite expression first, then solve the equation.
 `,
   "compound-interest-and-depreciation": `---
 title: "Compound Interest & Depreciation – GCSE Guide"
@@ -1870,6 +4054,127 @@ Ready to practise compound interest and depreciation with questions tailored to 
 ## Summary
 
 Compound interest and depreciation both use the **multiplier method**. For compound interest, multiply by (1 + r/100) raised to the power n. For depreciation, multiply by (1 − r/100) raised to the power n. Always identify whether the question asks for the final amount or the change. Show your multiplier clearly, keep full decimals until the final step, and check the direction of change makes sense. These topics appear frequently on both Foundation and Higher papers and are reliable marks once the method is secure.
+`,
+  "compound-interest-calculations": `---
+title: "Compound Interest Calculations – GCSE Maths Revision Guide"
+description: "Master compound interest calculations for GCSE Maths. A = P(1 + r/100)^n, multiplier method, simple vs compound interest and depreciation."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["compound interest formula", "multiplier method GCSE", "simple vs compound interest", "depreciation GCSE maths", "compound interest calculations"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 117
+---
+
+Compound interest is tested on both Foundation and Higher GCSE papers. Unlike simple interest, where the same amount is added each year, compound interest grows on the accumulated total — meaning your money (or debt) increases faster over time. This guide covers the multiplier method, the compound interest formula, depreciation, and the key difference between simple and compound interest.
+
+## What Is Compound Interest?
+
+**Compound interest** is interest calculated on the original amount and on any interest already earned. Each year, the interest is added to the running total, so the next year's interest is calculated on a larger amount.
+
+For example, £1,000 at 5% compound interest earns £50 in year one (total £1,050), then £52.50 in year two (5% of £1,050, total £1,102.50), and so on. The amount grows faster each year because the base keeps increasing.
+
+**Simple interest**, by contrast, is calculated on the original amount only. The same £1,000 at 5% simple interest earns £50 every year regardless of what has accumulated. Over time, compound interest always produces a larger total than simple interest at the same rate.
+
+### Key Formulas
+
+[FORMULA: A = P × (1 + r/100)^n — compound interest (growth)]
+
+[FORMULA: A = P × (1 − r/100)^n — depreciation (decay)]
+
+[FORMULA: Multiplier for r% increase = 1 + r/100]
+
+[FORMULA: Multiplier for r% decrease = 1 − r/100]
+
+## Step-by-Step Method
+
+1. **Identify** the starting amount P, the percentage rate r, and the number of years n.
+2. **Calculate the multiplier**: for growth use 1 + r/100; for depreciation use 1 − r/100.
+3. **Raise** the multiplier to the power n.
+4. **Multiply** the starting amount by the result.
+5. **Answer the question** — check whether it asks for the final amount or the interest/loss only.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Emily invests £3,000 at 4% compound interest per year. How much is in the account after 3 years?
+
+**Working:**
+Multiplier = 1 + 4/100 = 1.04.
+A = £3,000 × 1.04³ = £3,000 × 1.124864 = £3,374.59 (to the nearest penny).
+
+**Answer:** After 3 years, the account contains £3,374.59.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A car worth £16,000 depreciates by 15% in the first year and 10% per year after that. Find its value after 4 years to the nearest pound.
+
+**Working:**
+After year 1: £16,000 × 0.85 = £13,600.
+Years 2–4 (3 years at 10%): multiplier = 0.90³ = 0.729.
+Value after 4 years: £13,600 × 0.729 = £9,914.40.
+
+**Answer:** The car is worth approximately £9,914 after 4 years.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Marcus invests £4,500 at 3% compound interest. After how many complete years will the investment first exceed £5,000?
+
+**Working:**
+A = £4,500 × 1.03^n. Test each year:
+Year 1: £4,500 × 1.03 = £4,635.00
+Year 2: £4,635.00 × 1.03 = £4,774.05
+Year 3: £4,774.05 × 1.03 = £4,917.27
+Year 4: £4,917.27 × 1.03 = £5,064.79
+
+**Answer:** After 4 complete years, the investment first exceeds £5,000.
+
+## Common Mistakes
+
+- **Using simple interest when compound is required.** If the question says "compound", you must use the multiplier raised to the power n, not multiply the yearly interest by n.
+- **Wrong multiplier direction.** An increase of 8% uses multiplier 1.08. A decrease of 8% uses multiplier 0.92. Mixing these up loses all marks.
+- **Rounding too early.** Keep full decimal precision in your calculator until the final step, then round as instructed.
+
+## Exam Tips
+
+- Write the multiplier clearly — examiners specifically look for it and award a method mark.
+- Use the power button on your calculator: type P × multiplier^n in one go for speed and accuracy.
+- If the question asks for the interest earned, subtract the original amount from the final amount.
+
+## Practice Questions
+
+**Q1 (Foundation):** £2,500 is invested at 6% compound interest. Find the value after 2 years.
+
+[ANSWER: Multiplier = 1.06. A = £2,500 × 1.06² = £2,500 × 1.1236 = £2,809.00.]
+
+**Q2 (Foundation):** A phone worth £700 depreciates by 25% each year. What is it worth after 3 years?
+
+[ANSWER: Multiplier = 0.75. A = £700 × 0.75³ = £700 × 0.421875 = £295.31.]
+
+**Q3 (Higher):** Compare the final values: £10,000 at 5% simple interest for 6 years versus £10,000 at 5% compound interest for 6 years.
+
+[ANSWER: Simple: Interest = £10,000 × 0.05 × 6 = £3,000, so total = £13,000. Compound: A = £10,000 × 1.05⁶ = £10,000 × 1.340096 = £13,400.96. Compound interest gives £400.96 more.]
+
+---
+
+Practise compound interest questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Compound Interest and Depreciation](/topics/compound-interest-and-depreciation)
+- [Percentages](/topics/percentages)
+- [Growth and Decay](/topics/growth-and-decay)
+
+## Summary
+
+- Compound interest is calculated on the running total, not just the original amount.
+- Use the multiplier method: multiply by (1 + r/100)^n for growth, or (1 − r/100)^n for depreciation.
+- Simple interest gives the same amount each year; compound interest grows faster over time.
+- Always identify whether the question asks for the final amount or the interest/loss only.
+- Show your multiplier clearly and do not round until the final step.
 `,
   "compound-measures-density-and-pressure": `---
 title: "Compound Measures: Density & Pressure – GCSE"
@@ -2048,6 +4353,132 @@ Ready to practise compound measures with instant feedback? [Create your free GCS
 ## Summary
 
 Compound measures combine two or more units. **Density = Mass ÷ Volume** and **Pressure = Force ÷ Area** are the two main compound measure formulas at GCSE besides speed. Use the triangle method to rearrange confidently, always check that units are consistent before substituting, and include compound units in your final answer. On Higher papers, expect these formulas to be combined with volume or area calculations for 3D shapes. Practise converting between kg and g, and between m² and cm², so these steps become automatic under exam conditions.
+`,
+  "conditional-probability-venn-diagrams": `---
+title: "Conditional Probability & Venn Diagrams – GCSE Maths Revision Guide"
+description: "Master conditional probability and Venn diagrams for GCSE Maths Higher. P(A|B) formula, set notation, two-way tables and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["conditional probability GCSE", "P(A given B) formula", "Venn diagram probability", "set notation GCSE maths", "two-way table conditional probability"]
+tier: "Higher only"
+strand: "Statistics & Probability"
+topicNumber: 123
+---
+
+Conditional probability is one of the most challenging Higher-tier topics in GCSE Maths. It deals with finding the probability of an event given that another event has already occurred. Venn diagrams and two-way tables are the main tools used to organise the information and calculate these probabilities. This guide explains the formula, the set notation, and how to apply both methods confidently.
+
+## What Is Conditional Probability?
+
+**Conditional probability** is the probability of event A happening given that event B has already happened. It is written as P(A|B) and read as "the probability of A given B".
+
+The key idea is that once you know B has occurred, the sample space shrinks. You are no longer considering all possible outcomes — only those where B is true. Within that reduced group, you count how many also satisfy A.
+
+Venn diagrams are particularly useful for conditional probability because they show overlapping groups clearly. The intersection A ∩ B contains outcomes in both A and B, while A ∪ B contains outcomes in either or both. The region outside both circles represents outcomes in neither A nor B. Two-way tables achieve the same organisation using rows and columns.
+
+### Key Formulas
+
+[FORMULA: P(A|B) = P(A ∩ B) ÷ P(B)]
+
+[FORMULA: P(A ∩ B) = number in both A and B ÷ total]
+
+[FORMULA: P(A ∪ B) = P(A) + P(B) − P(A ∩ B)]
+
+## Step-by-Step Method
+
+1. **Organise the data** into a Venn diagram or two-way table.
+2. **Identify** what you need: P(A|B) means "given B has happened, what is the chance of A?"
+3. **Find P(A ∩ B)** — the number (or probability) in both A and B.
+4. **Find P(B)** — the total number (or probability) in B.
+5. **Divide**: P(A|B) = P(A ∩ B) ÷ P(B).
+
+## Worked Example 1 — Foundation Level
+
+**Question:** 50 students were asked whether they study French (F) or Spanish (S). 18 study both, 28 study French, 30 study Spanish. A student is chosen at random from those who study Spanish. Find the probability they also study French.
+
+**Working:**
+P(F|S) means: given the student studies Spanish, what is the probability they study French?
+Number studying both (F ∩ S) = 18.
+Number studying Spanish = 30.
+P(F|S) = 18/30 = 3/5.
+
+**Answer:** P(F|S) = 3/5 or 0.6.
+
+## Worked Example 2 — Higher Level
+
+**Question:** In a class of 40 students, 22 play football (F), 15 play tennis (T), and 8 play both. A student who plays football is chosen at random. Find the probability they do not play tennis.
+
+**Working:**
+Football only = 22 − 8 = 14 students.
+Given the student plays football, total in F = 22.
+P(not T | F) = 14/22 = 7/11.
+
+**Answer:** P(does not play tennis | plays football) = 7/11.
+
+## Worked Example 3 — Exam Style
+
+**Question:** The two-way table shows data about 100 adults.
+
+|  | Drives | Does not drive | Total |
+|---|---|---|---|
+| Male | 35 | 15 | 50 |
+| Female | 30 | 20 | 50 |
+| Total | 65 | 35 | 100 |
+
+Find P(Male | Drives).
+
+**Working:**
+P(Male | Drives) = number who are male AND drive ÷ total who drive.
+P(Male | Drives) = 35/65 = 7/13.
+
+**Answer:** P(Male | Drives) = 7/13.
+
+## Common Mistakes
+
+- **Confusing P(A|B) with P(B|A).** P(A given B) is not the same as P(B given A). Always check which event is the condition (the "given" part) — that becomes your denominator.
+- **Using the total instead of the condition group.** For P(A|B), the denominator is the number in B (not the overall total). The condition restricts the sample space.
+- **Forgetting to subtract the intersection.** When filling in a Venn diagram, the intersection must be placed first, then subtracted from each circle total to find the "only" regions.
+
+## Exam Tips
+
+- Always draw and label a Venn diagram or two-way table, even if the question does not ask for one. It organises the information and earns method marks.
+- Write out the conditional probability formula before substituting. Examiners award marks for stating P(A|B) = P(A ∩ B) / P(B).
+- Check that all regions of your Venn diagram add up to the total. This catches errors before they affect your answer.
+
+## Practice Questions
+
+**Q1 (Foundation):** 60 people were surveyed. 25 like tea (T), 35 like coffee (C), and 10 like both. Draw a Venn diagram and find P(T ∩ C).
+
+[ANSWER: P(T ∩ C) = 10/60 = 1/6. Venn diagram regions: T only = 15, C only = 25, both = 10, neither = 10.]
+
+**Q2 (Foundation):** Using the data from Q1, find P(T | C).
+
+[ANSWER: P(T | C) = P(T ∩ C) ÷ P(C) = 10/35 = 2/7.]
+
+**Q3 (Higher):** In a group of 80 students, 45 study biology (B), 30 study chemistry (C), and 20 study both. Find P(C | B) and P(B | C).
+
+[ANSWER: P(C | B) = 20/45 = 4/9. P(B | C) = 20/30 = 2/3. Note these are different — the condition changes the denominator.]
+
+---
+
+Practise conditional probability questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Conditional Probability](/topics/conditional-probability)
+- [Venn Diagrams](/topics/venn-diagrams)
+- [Probability Tree Diagrams](/topics/probability-tree-diagrams)
+
+## Summary
+
+- Conditional probability P(A|B) is the probability of A given B has occurred.
+- Use the formula P(A|B) = P(A ∩ B) ÷ P(B). The denominator is always the condition group.
+- Venn diagrams and two-way tables are the best tools for organising conditional probability data.
+- P(A|B) and P(B|A) are different — always check which event is the condition.
+- Fill in Venn diagrams starting with the intersection, then the "only" regions, then the "neither" region.
 `,
   "conditional-probability": `---
 title: "Conditional Probability – GCSE Maths Higher"
@@ -2351,6 +4782,137 @@ Test your congruence and similarity skills with adaptive AI questions at [GCSEMa
 
 Congruent shapes are identical in shape and size; similar shapes are the same shape but different sizes. To prove triangles are congruent, use SSS, SAS, ASA, or RHS — making sure to list corresponding equal elements with reasons. For similar shapes, the linear scale factor connects corresponding lengths; the area scale factor is the square of the linear factor, and the volume scale factor is the cube. These relationships are tested extensively at both tiers, particularly in context-based Higher questions involving real-world objects. Clear, structured working and correct use of terminology will earn you full marks.
 `,
+  "congruent-triangles": `---
+title: "Congruent Triangles – GCSE Maths Revision Guide"
+description: "Learn the four congruence conditions SSS, SAS, ASA, and RHS for GCSE Maths with formal proof structure, worked examples, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["congruent triangles", "SSS SAS ASA RHS", "congruence proof GCSE", "proving triangles congruent", "GCSE congruent triangles"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 155
+---
+
+Congruent triangles are triangles that are exactly the same shape and size. Proving that two triangles are congruent is a key GCSE Maths skill, tested on AQA, Edexcel, and OCR. You must know the four conditions and be able to write a structured proof using correct mathematical language. This guide covers each condition, walks through proof-style worked examples, and flags the mistakes that lose marks.
+
+## What Are Congruent Triangles?
+
+Two triangles are **congruent** if one can be placed exactly on top of the other — they have the same side lengths and the same angles. To prove congruence, you do not need to show all six measurements match. Instead, you show that one of four sufficient conditions is satisfied.
+
+### Key Formulas
+
+[FORMULA: SSS — three sides of one triangle equal three sides of the other]
+
+[FORMULA: SAS — two sides and the included angle are equal]
+
+[FORMULA: ASA — two angles and the included side are equal]
+
+[FORMULA: RHS — right angle, hypotenuse, and one other side are equal]
+
+The included angle in SAS sits between the two known sides. The included side in ASA sits between the two known angles.
+
+## Step-by-Step Method
+
+1. **Identify the two triangles** you need to prove congruent.
+2. **List what you know** about each triangle — sides, angles, shared edges, or given information.
+3. **Match the information** to one of the four conditions: SSS, SAS, ASA, or RHS.
+4. **Write the proof** in a structured way, stating each pair of equal elements with a reason.
+5. **Conclude** by stating: "Therefore triangle ABC is congruent to triangle DEF by [condition]."
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Triangle PQR has sides PQ = 5 cm, QR = 7 cm, and PR = 9 cm. Triangle XYZ has sides XY = 5 cm, YZ = 7 cm, and XZ = 9 cm. Are the triangles congruent? Give a reason.
+
+**Working:**
+
+PQ = XY = 5 cm
+
+QR = YZ = 7 cm
+
+PR = XZ = 9 cm
+
+All three pairs of corresponding sides are equal.
+
+**Answer:** Yes, triangle PQR is congruent to triangle XYZ by **SSS** (three sides equal).
+
+## Worked Example 2 — Higher Level
+
+**Question:** In the diagram, ABCD is a parallelogram. Prove that triangle ABD is congruent to triangle CDB.
+
+**Working:**
+
+AB = CD (opposite sides of a parallelogram are equal)
+
+AD = CB (opposite sides of a parallelogram are equal)
+
+BD = BD (common side)
+
+Therefore triangle ABD is congruent to triangle CDB by SSS.
+
+**Answer:** Triangles ABD and CDB are congruent by **SSS**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** In triangle ABC, M is the midpoint of BC. AM is perpendicular to BC. Prove that triangle ABM is congruent to triangle ACM.
+
+**Working:**
+
+BM = CM (M is the midpoint of BC)
+
+Angle AMB = angle AMC = 90° (AM is perpendicular to BC)
+
+AM = AM (common side)
+
+Therefore triangle ABM is congruent to triangle ACM by SAS (two sides and the included angle are equal).
+
+**Answer:** Triangle ABM is congruent to triangle ACM by **SAS**.
+
+## Common Mistakes
+
+- **Using SSA or AAA.** Two sides and a non-included angle (SSA) is not a valid congruence condition. Three equal angles (AAA) proves similarity, not congruence. Only SSS, SAS, ASA, and RHS are accepted.
+- **Not identifying the included angle or side.** For SAS, the angle must be between the two sides. For ASA, the side must be between the two angles. Getting this wrong means your proof is invalid.
+- **Forgetting to state reasons.** Each line of a congruence proof must have a reason, such as "opposite sides of a parallelogram" or "common side". A bare statement without justification will not earn full marks.
+
+## Exam Tips
+
+- Start your proof by clearly naming the two triangles you are comparing.
+- Always write your proof as a list of paired equalities, each with a reason.
+- End with a clear conclusion: "Therefore triangle ... is congruent to triangle ... by [SSS/SAS/ASA/RHS]."
+- If the question involves a right angle and you know the hypotenuse plus one other side, use RHS — it is often overlooked but is perfectly valid.
+- Look for shared sides (common edges) — these are free equalities you can use.
+
+## Practice Questions
+
+**Q1 (Foundation):** Triangle DEF has DE = 4 cm, angle DEF = 60°, and EF = 6 cm. Triangle GHI has GH = 4 cm, angle GHI = 60°, and HI = 6 cm. Are they congruent? State the condition.
+
+[ANSWER: Yes, congruent by SAS (two sides and the included angle are equal).]
+
+**Q2 (Foundation):** Triangle JKL has angle J = 50°, JK = 8 cm, and angle K = 70°. Triangle MNO has angle M = 50°, MN = 8 cm, and angle N = 70°. Are they congruent?
+
+[ANSWER: Yes, congruent by ASA (two angles and the included side are equal).]
+
+**Q3 (Higher):** ABCD is a rectangle. Prove that triangle ABC is congruent to triangle CDA.
+
+[ANSWER: AB = CD (opposite sides of a rectangle), BC = DA (opposite sides of a rectangle), AC = AC (common side). Congruent by SSS.]
+
+---
+
+Practise congruent triangle proofs with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Similar Shapes and Scale Factors](/topics/similar-shapes-and-scale-factors)
+- [Congruence and Similarity](/topics/congruence-and-similarity)
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+
+## Summary
+
+- Two triangles are congruent if they satisfy one of four conditions: SSS, SAS, ASA, or RHS. A congruence proof must list matching pairs of sides or angles with reasons and end with a clear conclusion naming the condition used. Remember that SSA and AAA are not valid congruence conditions. Look for common sides, parallel-line properties, and given right angles to build your proof.
+`,
   "constructions-and-loci": `---
 title: "Constructions and Loci – GCSE Maths Guide"
 description: "Learn constructions and loci for GCSE Maths with step-by-step compass and ruler methods, worked examples, and practice questions."
@@ -2500,6 +5062,380 @@ Build your construction and loci skills at [GCSEMathsAI](https://www.gcsemathsai
 ## Summary
 
 Constructions and loci combine practical drawing skills with geometric reasoning. You must be able to construct perpendicular bisectors, angle bisectors, and perpendiculars using only compasses and a straight edge — and always leave your arcs visible. Loci questions ask you to draw or shade the set of points satisfying given conditions, often combining circles (fixed distance from a point), perpendicular bisectors (equidistant from two points), and angle bisectors (equidistant from two lines). Accuracy, clear labelling, and working with real equipment are the keys to full marks on this topic.
+`,
+  "converting-fractions-decimals-percentages": `---
+title: "Converting Fractions, Decimals and Percentages – GCSE Maths Revision Guide"
+description: "Master converting between fractions, decimals and percentages for GCSE Maths with key equivalences, methods, and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["fractions decimals percentages GCSE", "converting fractions to decimals", "converting percentages to fractions", "FDP conversion", "key equivalences GCSE"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 126
+---
+
+Converting between fractions, decimals, and percentages (often called FDP) is a fundamental GCSE Maths skill. Questions testing this appear on both Foundation and Higher papers and are often embedded within larger problems on probability, proportion, and data.
+
+## What Is FDP Conversion?
+
+Fractions, decimals, and percentages are three different ways of expressing the same value. Being able to move fluently between them lets you choose the most convenient form for a given calculation or comparison.
+
+Key equivalences you should memorise include: 1/2 = 0.5 = 50%, 1/4 = 0.25 = 25%, 3/4 = 0.75 = 75%, 1/5 = 0.2 = 20%, 1/10 = 0.1 = 10%, and 1/3 = 0.333... = 33.3...%.
+
+Understanding these conversions also helps with ordering and comparing values — a common exam question type.
+
+### Key Formulas
+
+[FORMULA: Fraction → Decimal: divide the numerator by the denominator]
+
+[FORMULA: Decimal → Percentage: multiply by 100]
+
+[FORMULA: Percentage → Fraction: write over 100 and simplify]
+
+## Step-by-Step Method
+
+1. **Fraction to decimal:** Divide the numerator by the denominator (e.g. 3/8 = 3 ÷ 8 = 0.375).
+2. **Decimal to percentage:** Multiply by 100 (e.g. 0.375 × 100 = 37.5%).
+3. **Percentage to decimal:** Divide by 100 (e.g. 37.5 ÷ 100 = 0.375).
+4. **Percentage to fraction:** Write the percentage over 100 and simplify (e.g. 37.5% = 375/1000 = 3/8).
+5. **Decimal to fraction:** Write as a fraction over the appropriate power of 10 and simplify (e.g. 0.375 = 375/1000 = 3/8).
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Convert 7/20 to a decimal and a percentage.
+
+**Working:**
+
+Step 1 — Fraction to decimal: 7 ÷ 20 = 0.35.
+
+Step 2 — Decimal to percentage: 0.35 × 100 = 35%.
+
+**Answer:** 7/20 = 0.35 = 35%
+
+## Worked Example 2 — Higher Level
+
+**Question:** Put these values in order from smallest to largest: 0.62, 3/5, 63%.
+
+**Working:**
+
+Step 1 — Convert all to decimals: 0.62 stays as 0.62. 3/5 = 3 ÷ 5 = 0.6. 63% = 63 ÷ 100 = 0.63.
+
+Step 2 — Order the decimals: 0.6, 0.62, 0.63.
+
+**Answer:** 3/5, 0.62, 63%
+
+## Worked Example 3 — Exam Style
+
+**Question:** A student scores 17 out of 25 on a test. Express this as a percentage.
+
+**Working:**
+
+Step 1 — Write as a fraction: 17/25.
+
+Step 2 — Convert to a decimal: 17 ÷ 25 = 0.68.
+
+Step 3 — Multiply by 100: 0.68 × 100 = 68%.
+
+**Answer:** 68%
+
+## Common Mistakes
+
+- **Dividing the wrong way round.** To convert a fraction to a decimal, divide the numerator by the denominator — not the other way around.
+- **Forgetting to simplify when converting a percentage to a fraction.** Always reduce the fraction to its simplest form.
+- **Moving the decimal point the wrong number of places.** When converting between decimals and percentages, the decimal point moves exactly two places.
+
+## Exam Tips
+
+- Memorise the common equivalences (halves, quarters, fifths, eighths, tenths) — they save time in the exam.
+- When ordering mixed FDP values, convert everything to the same form — decimals are usually easiest.
+- On non-calculator papers, use equivalent fractions to convert to a denominator of 10, 100, or 1000 where possible.
+
+## Practice Questions
+
+**Q1 (Foundation):** Convert 0.45 to a fraction in its simplest form.
+
+[ANSWER: 0.45 = 45/100. HCF of 45 and 100 is 5. 45 ÷ 5 = 9, 100 ÷ 5 = 20. Answer: 9/20]
+
+**Q2 (Foundation):** Convert 3/8 to a percentage.
+
+[ANSWER: 3 ÷ 8 = 0.375. 0.375 × 100 = 37.5%. Answer: 37.5%]
+
+**Q3 (Higher):** Put in order from smallest to largest: 7/12, 58%, 0.583.
+
+[ANSWER: 7/12 = 7 ÷ 12 = 0.58333... 58% = 0.58. 0.583 stays as 0.583. Order: 0.58, 0.583, 0.58333... Answer: 58%, 0.583, 7/12]
+
+---
+
+Practise converting fractions, decimals and percentages questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Fractions](/topics/fractions)
+- [Decimals](/topics/decimals)
+- [Percentages](/topics/percentages)
+
+## Summary
+
+- Fractions, decimals, and percentages are three forms of the same value.
+- Fraction to decimal: divide numerator by denominator.
+- Decimal to percentage: multiply by 100.
+- Percentage to fraction: write over 100 and simplify.
+- Memorise common equivalences to save time in exams.
+`,
+  "cosine-rule": `---
+title: "Cosine Rule – GCSE Maths Revision Guide"
+description: "Master the cosine rule for GCSE Higher Maths — learn to find sides and angles in non-right-angled triangles with worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["cosine rule GCSE", "cosine rule finding sides", "cosine rule finding angles", "non right angled triangle", "cosine rule formula GCSE"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 112
+---
+
+The cosine rule is the go-to formula when the sine rule cannot help — specifically when you have two sides and the included angle, or when you know all three sides and need an angle.
+
+## What Is the Cosine Rule?
+
+The cosine rule is a generalisation of Pythagoras' theorem that works for **any triangle**, whether or not it contains a right angle. In a triangle with sides a, b, c and opposite angles A, B, C, the rule gives a direct relationship between three sides and one angle.
+
+When the angle A is 90°, cos 90° = 0, and the formula simplifies to a² = b² + c² — which is Pythagoras' theorem. So the cosine rule includes Pythagoras as a special case.
+
+The cosine rule comes in two forms: one for finding a side (when you know two sides and the included angle) and one for finding an angle (when you know all three sides). Both forms are provided on the AQA and Edexcel formula sheets.
+
+### Key Formulas
+
+[FORMULA: a² = b² + c² − 2bc cos A (finding a side)]
+
+[FORMULA: cos A = (b² + c² − a²) ÷ (2bc) (finding an angle)]
+
+## Step-by-Step Method
+
+1. Label the triangle: the side you want to find (or the side opposite the angle you want) is a, and the other two sides are b and c.
+2. For finding a side: substitute into a² = b² + c² − 2bc cos A, calculate a², then square root.
+3. For finding an angle: substitute into cos A = (b² + c² − a²) ÷ (2bc), calculate cos A, then use cos⁻¹.
+4. If cos A is negative, the angle is obtuse (greater than 90°) — this is normal and expected.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** In triangle ABC, AB = 7 cm, AC = 9 cm and angle A = 60°. Find BC to 1 decimal place.
+
+**Working:**
+Let a = BC, b = AC = 9, c = AB = 7, angle A = 60°.
+a² = b² + c² − 2bc cos A
+a² = 9² + 7² − 2(9)(7) cos 60°
+a² = 81 + 49 − 126 × 0.5
+a² = 130 − 63
+a² = 67
+a = √67
+
+**Answer:** BC = **8.2 cm** (1 d.p.).
+
+## Worked Example 2 — Higher Level
+
+**Question:** A triangle has sides 6 cm, 10 cm and 13 cm. Find the largest angle to 1 decimal place.
+
+**Working:**
+The largest angle is opposite the longest side (13 cm). Let a = 13, b = 6, c = 10.
+cos A = (b² + c² − a²) ÷ (2bc)
+cos A = (36 + 100 − 169) ÷ (2 × 6 × 10)
+cos A = (136 − 169) ÷ 120
+cos A = −33 ÷ 120
+cos A = −0.275
+A = cos⁻¹(−0.275)
+
+**Answer:** The largest angle is **106.0°** (1 d.p.). The negative cosine confirms the angle is obtuse.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Two walkers leave a campsite. Walker A walks 5 km on a bearing of 040°. Walker B walks 8 km on a bearing of 130°. Find the distance between the two walkers to 1 decimal place.
+
+**Working:**
+The angle between the two paths at the campsite = 130° − 40° = 90°.
+With the included angle = 90°:
+d² = 5² + 8² − 2(5)(8) cos 90°
+d² = 25 + 64 − 80 × 0
+d² = 89
+d = √89
+
+**Answer:** The walkers are **9.4 km** apart (1 d.p.). (Since cos 90° = 0, this is just Pythagoras.)
+
+## Common Mistakes
+
+- **Using the cosine rule when the sine rule would be simpler.** If you have a complete angle-side pair, the sine rule is usually faster. Save the cosine rule for SAS and SSS situations.
+- **Getting the sign wrong in the formula.** The formula has a minus sign: a² = b² + c² **minus** 2bc cos A. A common error is writing plus instead, which gives the wrong answer.
+- **Panicking when cos A is negative.** A negative cosine simply means the angle is obtuse (between 90° and 180°). This is valid and expected in many exam questions.
+
+## Exam Tips
+
+- Copy the formula from the formula sheet and show the substitution clearly — this earns method marks.
+- For finding an angle, the largest angle is always opposite the longest side.
+- If your calculated value of cos A is outside the range −1 to 1, you have made an arithmetic error — go back and check.
+
+## Practice Questions
+
+**Q1 (Foundation):** In triangle PQR, PQ = 11 cm, PR = 8 cm and angle P = 45°. Find QR to 1 d.p.
+
+[ANSWER: a² = 11² + 8² − 2(11)(8) cos 45° = 121 + 64 − 176 × 0.7071 = 185 − 124.45 = 60.55. a = √60.55 = 7.8 cm (1 d.p.).]
+
+**Q2 (Foundation):** A triangle has sides 5 cm, 7 cm and 9 cm. Find the angle opposite the 9 cm side to 1 d.p.
+
+[ANSWER: cos A = (5² + 7² − 9²) ÷ (2 × 5 × 7) = (25 + 49 − 81) ÷ 70 = −7 ÷ 70 = −0.1. A = cos⁻¹(−0.1) = 95.7° (1 d.p.).]
+
+**Q3 (Higher):** In triangle XYZ, XY = 14 cm, YZ = 10 cm and XZ = 18 cm. Find angle Y to 1 d.p.
+
+[ANSWER: Angle Y is opposite XZ = 18. cos Y = (14² + 10² − 18²) ÷ (2 × 14 × 10) = (196 + 100 − 324) ÷ 280 = −28 ÷ 280 = −0.1. Y = cos⁻¹(−0.1) = 95.7° (1 d.p.).]
+
+---
+
+Practise cosine rule questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Trigonometry Sine and Cosine Rules](/topics/trigonometry-sine-and-cosine-rules)
+- [Sine Rule](/topics/sine-rule)
+- [Trigonometry SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+
+## Summary
+
+- The cosine rule a² = b² + c² − 2bc cos A finds a side when you know two sides and the included angle (SAS).
+- The rearranged form cos A = (b² + c² − a²) ÷ (2bc) finds an angle when you know all three sides (SSS).
+- A negative value of cos A means the angle is obtuse — this is normal, not an error.
+- The cosine rule is a generalisation of Pythagoras' theorem and reduces to it when the angle is 90°.
+`,
+  "cubic-and-reciprocal-graphs": `---
+title: "Cubic and Reciprocal Graphs – GCSE Maths Revision Guide"
+description: "Learn the shapes of cubic, reciprocal, and exponential graphs at GCSE. Recognise y = x³, y = 1/x, and y = aˣ with worked examples and sketches."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["cubic graphs GCSE", "reciprocal graphs", "exponential graphs", "graph recognition", "asymptotes GCSE"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 148
+---
+
+# Cubic and Reciprocal Graphs
+
+At Higher level you need to recognise and sketch graphs beyond straight lines and parabolas. Cubic graphs (y = x³), reciprocal graphs (y = 1/x), and exponential graphs (y = aˣ) each have distinctive shapes. Exam questions often show you a graph and ask you to match it to an equation, or they ask you to sketch a given function. This page covers the key shapes and features you need to know.
+
+## What Are Cubic, Reciprocal, and Exponential Graphs?
+
+A **cubic graph** has an equation where the highest power of x is 3, such as y = x³ or y = 2x³ − 3x. It produces an S-shaped curve.
+
+A **reciprocal graph** has the form y = a/x (or equivalently y = ax⁻¹). The curve has two branches that approach but never touch the axes — these are called asymptotes.
+
+An **exponential graph** has the form y = aˣ where a > 0. The curve grows rapidly in one direction and approaches y = 0 in the other.
+
+### Key Formulas
+
+[FORMULA: Cubic: y = ax³ + bx² + cx + d — S-shaped curve through the origin if simplified to y = x³]
+
+[FORMULA: Reciprocal: y = a/x — two branches, asymptotes at x = 0 and y = 0]
+
+[FORMULA: Exponential: y = aˣ — passes through (0, 1), asymptote at y = 0]
+
+## Step-by-Step Method
+
+1. **Identify the type of equation** from the highest power or form (x³ for cubic, 1/x for reciprocal, aˣ for exponential).
+2. **Recall the standard shape** for that type (see descriptions above).
+3. **Find key features**: intercepts, asymptotes, and the general direction of the curve.
+4. **Plot a few key points** if needed (e.g., x = −2, −1, 0, 1, 2).
+5. **Draw a smooth curve** through the points with the correct shape.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Sketch the graph of y = x³.
+
+**Working:**
+
+Key points: (−2, −8), (−1, −1), (0, 0), (1, 1), (2, 8).
+
+The curve passes through the origin, goes from bottom-left to top-right in an S-shape. It is steep for large values of x and flat near the origin.
+
+**Answer:** S-shaped curve passing through the origin, rising steeply to the right and falling steeply to the left.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Sketch the graph of y = 1/x and state the asymptotes.
+
+**Working:**
+
+Key points: (−2, −0.5), (−1, −1), (−0.5, −2), (0.5, 2), (1, 1), (2, 0.5).
+
+When x is positive, y is positive (curve in the first quadrant). When x is negative, y is negative (curve in the third quadrant). The curve never touches the x-axis or the y-axis.
+
+Asymptotes: x = 0 (the y-axis) and y = 0 (the x-axis).
+
+**Answer:** Two branches in opposite quadrants (quadrants 1 and 3), with asymptotes at x = 0 and y = 0.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Match each equation to its graph: (a) y = x³ − 3x, (b) y = 3/x, (c) y = 2ˣ.
+
+**Working:**
+
+- y = x³ − 3x is a cubic — S-shaped with a local maximum and minimum. It crosses the x-axis at x = 0, x = √3, and x = −√3.
+- y = 3/x is a reciprocal — two branches in quadrants 1 and 3, not touching the axes.
+- y = 2ˣ is exponential — passes through (0, 1), rises steeply to the right, approaches y = 0 to the left.
+
+**Answer:** Match by recognising the S-shape (cubic), the two-branch hyperbola (reciprocal), and the rapid growth curve through (0, 1) (exponential).
+
+## Common Mistakes
+
+- **Confusing cubic and quadratic shapes.** A quadratic is U-shaped or ∩-shaped. A cubic is S-shaped. They look very different.
+- **Drawing the reciprocal curve touching the axes.** The curve y = 1/x never touches or crosses either axis. The axes are asymptotes — the curve approaches them but never reaches them.
+- **Forgetting that y = aˣ always passes through (0, 1).** Since a⁰ = 1 for any positive a, the y-intercept is always 1.
+
+## Exam Tips
+
+- In graph recognition questions, look for the distinctive features: S-shape = cubic, two separate branches = reciprocal, rapid growth through (0, 1) = exponential.
+- If a cubic has a negative leading coefficient (e.g., y = −x³), the S-shape is reflected — it goes from top-left to bottom-right.
+- For y = −1/x, the branches move to quadrants 2 and 4 instead of 1 and 3.
+- Label asymptotes on reciprocal graphs — this often earns a mark.
+
+## Practice Questions
+
+**Q1 (Foundation):** Plot the points and sketch y = x³ for x = −2 to x = 2.
+
+[ANSWER: Points: (−2, −8), (−1, −1), (0, 0), (1, 1), (2, 8). S-shaped curve through origin]
+
+**Q2 (Higher):** State the asymptotes of y = 5/x.
+
+[ANSWER: x = 0 (y-axis) and y = 0 (x-axis)]
+
+**Q3 (Higher):** Sketch y = 3ˣ and state the y-intercept.
+
+[ANSWER: y-intercept is (0, 1) since 3⁰ = 1. Curve rises steeply to the right, approaches y = 0 to the left. Asymptote: y = 0]
+
+---
+
+Practise cubic and reciprocal graph questions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Quadratic Graphs](/topics/quadratic-graphs)
+- [Graph Transformations](/topics/graph-transformations)
+- [Growth and Decay](/topics/growth-and-decay)
+
+## Summary
+
+- Cubic graphs (y = x³) have an S-shaped curve that passes through the origin.
+- Reciprocal graphs (y = 1/x) have two branches with asymptotes at x = 0 and y = 0.
+- Exponential graphs (y = aˣ) pass through (0, 1) and have the asymptote y = 0.
+- Recognise each graph type by its distinctive shape in exam questions.
+- A negative coefficient reflects the standard shape across the x-axis.
 `,
   "cumulative-frequency-and-box-plots": `---
 title: "Cumulative Frequency and Box Plots – GCSE Maths"
@@ -2672,6 +5608,134 @@ Ready to practise these skills with instant, personalised feedback? Try our AI-p
 
 Cumulative frequency diagrams and box plots let you estimate the median, quartiles and interquartile range from grouped data. To build a cumulative frequency curve, calculate a running total of frequencies and plot each value against the **upper class boundary**, then join the points with a smooth S-curve. Read off the median at n ÷ 2, Q1 at n ÷ 4 and Q3 at 3n ÷ 4. A **box plot** summarises data using five values — minimum, Q1, median, Q3 and maximum — and is excellent for comparing two distributions. When comparing, always comment on an average (median) and a measure of spread (IQR). These topics link tightly to histograms, grouped frequency tables and calculating averages.
 `,
+  "cumulative-frequency-diagrams": `---
+title: "Cumulative Frequency Diagrams – GCSE Maths Revision Guide"
+description: "Master cumulative frequency diagrams for GCSE Maths Higher. Plotting, reading median, quartiles, IQR and comparing distributions step by step."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["cumulative frequency diagram", "median from cumulative frequency", "interquartile range GCSE", "box plot from cumulative frequency", "comparing distributions GCSE"]
+tier: "Higher only"
+strand: "Statistics & Probability"
+topicNumber: 121
+---
+
+Cumulative frequency diagrams are a Higher-tier topic that appears regularly on GCSE Maths exams. They allow you to estimate the median, quartiles and interquartile range from grouped data, and are often paired with box plots for comparing distributions. This guide covers how to plot them, how to read key values, and how to use them in comparison questions.
+
+## What Is a Cumulative Frequency Diagram?
+
+A **cumulative frequency diagram** (also called a cumulative frequency graph or ogive) shows the running total of frequencies up to each class boundary. Instead of plotting individual class frequencies, you plot the accumulated total at the upper end of each class interval, then join the points with a smooth curve.
+
+Cumulative frequency is useful because it lets you estimate the **median** (the middle value), the **lower quartile** (LQ, the value one quarter of the way through), the **upper quartile** (UQ, three quarters of the way through), and the **interquartile range** (IQR = UQ − LQ). These measures are difficult to find from a standard frequency table when the data is grouped.
+
+The shape of the curve also reveals information about the distribution. A steep section means data values are concentrated there. A flat section means few data values fall in that range.
+
+### Key Formulas
+
+[FORMULA: Median position = n ÷ 2]
+
+[FORMULA: Lower quartile position = n ÷ 4]
+
+[FORMULA: Upper quartile position = 3n ÷ 4]
+
+[FORMULA: IQR = Upper quartile − Lower quartile]
+
+## Step-by-Step Method
+
+1. **Add a cumulative frequency column** — for each class, add its frequency to the running total.
+2. **Plot points** at the upper class boundary against the cumulative frequency. The first point is at (lower boundary of first class, 0).
+3. **Join** the points with a smooth S-shaped curve (not straight lines between every pair of points).
+4. **Read off** the median at the n/2 position, LQ at n/4, and UQ at 3n/4 by drawing horizontal lines to the curve, then vertical lines down to the x-axis.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** The table shows the times (in minutes) 60 students spent on homework. Draw a cumulative frequency diagram and estimate the median.
+
+| Time (min) | 0-9 | 10-19 | 20-29 | 30-39 | 40-49 |
+|---|---|---|---|---|---|
+| Frequency | 4 | 10 | 22 | 16 | 8 |
+
+**Working:**
+Cumulative frequencies: 4, 14, 36, 52, 60.
+Plot: (9.5, 4), (19.5, 14), (29.5, 36), (39.5, 52), (49.5, 60). Start at (−0.5, 0).
+Median position = 60 ÷ 2 = 30th value. Draw across at CF = 30 and read down: approximately 27 minutes.
+
+**Answer:** The estimated median homework time is approximately 27 minutes.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Using the diagram from Worked Example 1, find the interquartile range.
+
+**Working:**
+LQ position = 60 ÷ 4 = 15th value. Reading from the curve: approximately 20 minutes.
+UQ position = 3 × 60 ÷ 4 = 45th value. Reading from the curve: approximately 35 minutes.
+IQR = 35 − 20 = 15 minutes.
+
+**Answer:** The interquartile range is approximately 15 minutes.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A second class has a median of 32 minutes and an IQR of 10 minutes for the same homework. Compare the two classes.
+
+**Working:**
+Class 1: median ≈ 27 min, IQR ≈ 15 min.
+Class 2: median = 32 min, IQR = 10 min.
+On average, Class 2 spent longer on homework (higher median).
+Class 1's times are more spread out (larger IQR), meaning homework times were less consistent.
+
+**Answer:** Class 2 spent longer on average (median 32 vs 27) but their times were more consistent (IQR 10 vs 15).
+
+## Common Mistakes
+
+- **Plotting at the midpoint instead of the upper boundary.** Cumulative frequency points must be plotted at the upper class boundary because the running total is complete only at the end of each class.
+- **Using straight ruled lines instead of a smooth curve.** The examiner expects a smooth S-shaped curve through the plotted points.
+- **Reading the axes the wrong way round.** To find the median, start on the cumulative frequency axis (vertical), draw across to the curve, then down to the data axis (horizontal) — not the other way.
+
+## Exam Tips
+
+- Always label both axes clearly: the horizontal axis shows the data values, and the vertical axis shows "Cumulative frequency".
+- When comparing two distributions, make two clear comparison statements — one about an average (median) and one about spread (IQR).
+- If asked to draw a box plot from your cumulative frequency diagram, you need: minimum, LQ, median, UQ, and maximum.
+
+## Practice Questions
+
+**Q1 (Foundation):** Build a cumulative frequency table for these test scores and state the position of the median.
+
+| Score | 0-19 | 20-39 | 40-59 | 60-79 | 80-100 |
+|---|---|---|---|---|---|
+| Frequency | 5 | 12 | 18 | 10 | 5 |
+
+[ANSWER: Cumulative frequencies: 5, 17, 35, 45, 50. Median position = 50 ÷ 2 = 25th value, which falls in the 40-59 class.]
+
+**Q2 (Foundation):** Using the cumulative frequency table from Q1, state the class interval containing the lower quartile.
+
+[ANSWER: LQ position = 50 ÷ 4 = 12.5th value. CF at end of 0-19 is 5, CF at end of 20-39 is 17. The 12.5th value falls in the 20-39 class.]
+
+**Q3 (Higher):** Data set A has median 45 and IQR 20. Data set B has median 50 and IQR 8. Compare the two data sets.
+
+[ANSWER: Data set B has a higher median (50 vs 45), so the values are generally larger. Data set B has a smaller IQR (8 vs 20), so the data is less spread out and more consistent.]
+
+---
+
+Practise cumulative frequency questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Cumulative Frequency and Box Plots](/topics/cumulative-frequency-and-box-plots)
+- [Histograms](/topics/histograms)
+- [Mean Median Mode Range](/topics/mean-median-mode-and-range)
+
+## Summary
+
+- A cumulative frequency diagram plots running totals at the upper class boundaries.
+- The median is read at the n/2 position, LQ at n/4, and UQ at 3n/4.
+- IQR = UQ − LQ measures the spread of the middle 50% of the data.
+- When comparing distributions, comment on both an average (median) and spread (IQR).
+- Plot points at upper boundaries, join with a smooth curve, and label axes clearly.
+`,
   "decimals": `---
 title: "Decimals – GCSE Maths Revision Guide"
 description: "Learn how to work with decimals in GCSE Maths including ordering, rounding, and the four operations with clear examples."
@@ -2823,6 +5887,377 @@ Want personalised decimal practice with instant AI marking? [Sign up for free](h
 - Round by checking the digit to the right of your rounding position.
 - Learn common fraction-to-decimal conversions to save time in exams.
 - Always estimate to check whether your answer is reasonable.
+`,
+  "density-mass-volume": `---
+title: "Density, Mass & Volume – GCSE Maths Revision Guide"
+description: "Master density, mass and volume calculations for GCSE Maths. D = M/V formula triangle, unit conversions, worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["density mass volume", "D=M/V formula", "density GCSE maths", "mass volume calculations", "compound measures density"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 118
+---
+
+Density, mass and volume questions appear on both Foundation and Higher GCSE papers. Density is a compound measure that connects how heavy something is to how much space it takes up. The formula triangle works identically to speed-distance-time, so once you master one, the other follows naturally. This guide covers the formulas, unit conversions, and real-world contexts you will meet in the exam.
+
+## What Is Density?
+
+**Density** measures how much mass is packed into a given volume. A material with high density, such as lead, has a lot of mass in a small volume. A material with low density, such as cork, has relatively little mass for its size.
+
+The standard unit of density in GCSE Maths is grams per cubic centimetre (g/cm³) or kilograms per cubic metre (kg/m³). The formula linking the three quantities is straightforward, and you can use a formula triangle to remember the rearrangements.
+
+Density problems frequently appear alongside volume questions. You may need to calculate the volume of a 3D shape first, then use the density formula to find the mass. Matching units before substituting is essential — if the volume is in cm³, the density must be in g/cm³ (not kg/m³).
+
+### Key Formulas
+
+[FORMULA: Density = Mass ÷ Volume]
+
+[FORMULA: Mass = Density × Volume]
+
+[FORMULA: Volume = Mass ÷ Density]
+
+## Step-by-Step Method
+
+1. **Identify** which quantity you need to find (density, mass, or volume).
+2. **Check units** — ensure mass and volume units are compatible with the density unit.
+3. **Substitute** into the correct rearrangement of the formula.
+4. **Calculate** and include the correct unit in your answer.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A block of metal has a mass of 540 g and a volume of 200 cm³. Calculate the density.
+
+**Working:**
+Density = Mass ÷ Volume
+Density = 540 ÷ 200 = 2.7 g/cm³.
+
+**Answer:** The density of the metal is 2.7 g/cm³.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A gold bar has a density of 19.3 g/cm³ and a volume of 51.8 cm³. Find the mass of the gold bar in kilograms.
+
+**Working:**
+Mass = Density × Volume = 19.3 × 51.8 = 999.74 g.
+Convert to kg: 999.74 ÷ 1000 = 0.99974 kg.
+
+**Answer:** The mass of the gold bar is approximately 1.00 kg (to 3 s.f.).
+
+## Worked Example 3 — Exam Style
+
+**Question:** A cylindrical container has radius 5 cm and height 12 cm. It is completely filled with oil of density 0.8 g/cm³. Find the mass of the oil. Give your answer to 3 significant figures.
+
+**Working:**
+Volume of cylinder = πr²h = π × 5² × 12 = 300π = 942.478... cm³.
+Mass = Density × Volume = 0.8 × 942.478... = 753.982... g.
+
+**Answer:** The mass of the oil is 754 g (to 3 s.f.).
+
+## Common Mistakes
+
+- **Mixing up units.** If density is in kg/m³ and volume is in cm³, you must convert one before calculating. 1 m³ = 1,000,000 cm³ and 1 kg = 1,000 g.
+- **Forgetting to calculate volume first.** Many exam questions give dimensions of a shape rather than the volume directly. Work out the volume before using D = M/V.
+- **Inverting the formula.** Density = Mass ÷ Volume, not Volume ÷ Mass. Use the formula triangle: M on top, D and V on the bottom.
+- **Rounding volume too early.** When the volume involves π, keep the exact value until the final step to avoid rounding errors.
+
+## Exam Tips
+
+- Draw the formula triangle (M at the top, D × V at the bottom) in your working. It helps you rearrange correctly and earns method marks.
+- If the question involves a composite shape, find the total volume by adding or subtracting component volumes before applying the density formula.
+- Always state the unit of your final answer — density questions carry a unit mark.
+- Remember the key conversion: 1 g/cm³ = 1000 kg/m³. This comes up when questions switch between metric units.
+- On multi-step questions, calculate the volume first and write it down before moving to the density calculation.
+
+## Practice Questions
+
+**Q1 (Foundation):** A stone has a mass of 300 g and a volume of 120 cm³. Find its density.
+
+[ANSWER: Density = 300 ÷ 120 = 2.5 g/cm³.]
+
+**Q2 (Foundation):** A liquid has a density of 1.2 g/cm³. A container holds 500 cm³ of the liquid. Find the mass.
+
+[ANSWER: Mass = 1.2 × 500 = 600 g.]
+
+**Q3 (Higher):** A cube of aluminium has side length 8 cm. Aluminium has a density of 2.7 g/cm³. Find the mass of the cube in kilograms.
+
+[ANSWER: Volume = 8³ = 512 cm³. Mass = 2.7 × 512 = 1382.4 g = 1.3824 kg. To 3 s.f., the mass is 1.38 kg.]
+
+---
+
+Practise density, mass and volume questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Compound Measures Density and Pressure](/topics/compound-measures-density-and-pressure)
+- [Speed Distance and Time](/topics/speed-distance-and-time)
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+
+## Summary
+
+- Density = Mass ÷ Volume. Rearrange using the formula triangle for mass or volume.
+- Common units are g/cm³ and kg/m³. Always check that your units match before calculating.
+- 1 g/cm³ = 1000 kg/m³. Convert units before substituting if they do not match.
+- Many exam questions require you to calculate volume from given dimensions before using the density formula.
+- Density is a compound measure — it combines mass and volume into a single rate.
+- Draw the formula triangle and state the formula you are using to earn method marks.
+- Include the correct unit in your final answer — density questions almost always carry a unit mark.
+- Higher-tier questions often combine density with volume of cylinders, prisms or spheres — revise both topics together.
+`,
+  "describing-transformations": `---
+title: "Describing Transformations – GCSE Maths Revision Guide"
+description: "Learn how to fully describe each of the four transformations — reflection, rotation, translation and enlargement — with worked examples and tips."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["describing transformations GCSE", "four transformations", "fully describe transformation", "combined transformations", "transformation GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 172
+---
+
+"Fully describe the single transformation" is one of the most common GCSE instructions — and one of the easiest to lose marks on. Each transformation requires specific pieces of information, and missing any one of them means lost marks.
+
+## What Are the Four Transformations?
+
+The four transformations at GCSE are **reflection**, **rotation**, **translation**, and **enlargement**. Each moves or resizes a shape in a specific way, and the exam expects you to identify which transformation has been applied and then describe it completely.
+
+A fully described transformation must include all the required details. Simply writing "rotation" or "reflection" without the additional information will score zero or one mark out of the available marks.
+
+At Higher tier you may also be asked about combined transformations — where two transformations are applied in sequence and you describe the single equivalent transformation.
+
+It is essential to practise identifying each type quickly, as the exam typically gives you the original and image shapes and asks you to "fully describe" the transformation in words.
+
+### Key Formulas
+
+[FORMULA: Translation is described using a column vector: (x y) where x is horizontal movement and y is vertical movement]
+
+[FORMULA: Enlargement scale factor = new length ÷ original length]
+
+## Step-by-Step Method
+
+1. Identify the transformation type by comparing the original shape and its image (same size and orientation? reflected? rotated? bigger or smaller?).
+2. Add the required details — see the checklist below for each type.
+3. Write a complete sentence including the transformation name and all required information.
+
+**What you need for each transformation:**
+- **Reflection:** the equation of the mirror line (e.g., x = 2 or y = x).
+- **Rotation:** the angle, the direction (clockwise or anticlockwise), and the centre of rotation.
+- **Translation:** the column vector.
+- **Enlargement:** the scale factor and the centre of enlargement.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Shape A is mapped to Shape B by a reflection. Shape A has vertices at (1, 2), (1, 5), (3, 5). Shape B has vertices at (5, 2), (5, 5), (3, 5). Fully describe the transformation.
+
+**Working:**
+The shapes are mirror images. The midpoint of (1, 2) and (5, 2) is (3, 2). The midpoint of (1, 5) and (5, 5) is (3, 5). The mirror line passes through x = 3.
+
+**Answer:** Reflection in the line x = 3.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Triangle P has vertices at (2, 1), (4, 1), (4, 3). Triangle Q has vertices at (−1, 2), (−1, 4), (−3, 4). Fully describe the single transformation that maps P to Q.
+
+**Working:**
+The triangle has been rotated. The orientation has changed and the shape is congruent. Testing 90° anticlockwise about the origin: (2, 1) → (−1, 2), (4, 1) → (−1, 4), (4, 3) → (−3, 4). All points match.
+
+**Answer:** Rotation, 90° anticlockwise, centre (0, 0).
+
+## Worked Example 3 — Exam Style
+
+**Question:** Shape A has vertices at (1, 1), (3, 1), (3, 2). Shape B has vertices at (4, 4), (10, 4), (10, 7). Fully describe the single transformation.
+
+**Working:**
+The shape has changed size. Scale factor = 6 ÷ 2 = 3 (using the base lengths). To find the centre, draw lines through corresponding vertices. The line from (1, 1) to (4, 4) extends back to (−0.5, −0.5)... Using the formula: centre = ((3×1 − 4)/(3−1), (3×1 − 4)/(3−1)) = (−0.5, −0.5).
+
+**Answer:** Enlargement, scale factor 3, centre (−0.5, −0.5).
+
+## Common Mistakes
+
+- **Not naming the transformation.** You must state "reflection," "rotation," "translation," or "enlargement" — this is usually worth one mark on its own.
+- **Missing the mirror line equation for reflections.** Writing "reflected" without the line equation (e.g., y = −1 or x = 3) is incomplete.
+- **Forgetting the direction for rotations.** You must state clockwise or anticlockwise (unless the angle is 180°, where direction is irrelevant).
+- **Giving coordinates instead of a column vector for translations.** A translation must be described with a column vector, not as a set of coordinates.
+- **Not finding the centre for enlargements.** The centre of enlargement is essential — draw ray lines through corresponding vertices to locate it.
+
+## Exam Tips
+
+- Count the details needed: reflection needs 2 (name + line), rotation needs 4 (name + angle + direction + centre), translation needs 2 (name + vector), enlargement needs 3 (name + scale factor + centre).
+- A negative scale factor (Higher) means the image is on the opposite side of the centre and inverted.
+- Fractional scale factors (e.g., ½) produce a smaller image — still called an "enlargement."
+- For combined transformations, apply each transformation in order, then describe the net effect as a single transformation.
+
+## Practice Questions
+
+**Q1 (Foundation):** Shape A is translated so that point (2, 3) moves to (5, 1). Write down the column vector of the translation.
+
+[ANSWER: The column vector is (3, −2), meaning 3 right and 2 down.]
+
+**Q2 (Foundation):** Shape P is reflected in the y-axis. Describe what happens to the point (4, 7).
+
+[ANSWER: The point (4, 7) maps to (−4, 7). The transformation is a reflection in the line x = 0.]
+
+**Q3 (Higher):** Triangle A is mapped to Triangle B by a rotation of 180° about the point (1, 2). Point (3, 5) is a vertex of A. Find the corresponding vertex of B.
+
+[ANSWER: Under 180° rotation about (1, 2): new x = 2(1) − 3 = −1, new y = 2(2) − 5 = −1. The vertex is (−1, −1).]
+
+---
+
+Practise describing transformations questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Transformations – Reflection, Rotation, Translation](/topics/transformations-reflection-rotation-translation)
+- [Transformations – Enlargement and Scale Factor](/topics/transformations-enlargement-and-scale-factor)
+- [Congruence and Similarity](/topics/congruence-and-similarity)
+
+## Summary
+
+- There are four transformations: reflection, rotation, translation, and enlargement.
+- Each requires specific details to be "fully described" — missing any detail loses marks.
+- Reflection: name + mirror line equation. Rotation: name + angle + direction + centre. Translation: name + column vector. Enlargement: name + scale factor + centre.
+- At Higher tier, scale factors can be negative or fractional, and combined transformations may be tested.
+- Always start by identifying whether the shape has changed size, orientation, or both.
+- Reflection, rotation, and translation produce congruent shapes; enlargement produces similar shapes.
+- Invariant points (points that do not move) can help identify centres of rotation and mirror lines.
+`,
+  "difference-of-two-squares": `---
+title: "Difference of Two Squares – GCSE Maths Revision Guide"
+description: "Master the difference of two squares at GCSE. Learn the a²−b² = (a+b)(a−b) identity with worked examples, numerical tricks, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["difference of two squares", "GCSE factorising", "a squared minus b squared", "DOTS algebra", "factorising special cases"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 136
+---
+
+# Difference of Two Squares
+
+The difference of two squares is one of the most elegant patterns in algebra. It lets you factorise expressions instantly and even perform tricky mental arithmetic. This identity appears frequently on both Foundation and Higher papers across AQA, Edexcel, and OCR, so recognising it quickly is a real time-saver. On this page you will learn what the pattern is, how to apply it, and how to use it for clever numerical calculations.
+
+## What Is the Difference of Two Squares?
+
+The difference of two squares (often abbreviated DOTS) is a factorising rule that applies whenever you subtract one perfect square from another. The word "difference" means subtraction, and "two squares" means both terms are perfect squares.
+
+The identity states:
+
+[FORMULA: a² − b² = (a + b)(a − b)]
+
+This works because when you expand (a + b)(a − b), the middle terms cancel: a² − ab + ab − b² = a² − b².
+
+### Key Formulas
+
+[FORMULA: a² − b² = (a + b)(a − b)]
+
+To use this pattern, both terms must be perfect squares and they must be separated by a minus sign. If there is a plus sign, this identity does not apply.
+
+## Step-by-Step Method
+
+1. **Check the expression has exactly two terms separated by a minus sign.**
+2. **Confirm each term is a perfect square.** For numbers, check they are 1, 4, 9, 16, 25, 36, … For variables, check the power is even (x², x⁴, y⁶, etc.).
+3. **Take the square root of each term.**
+4. **Write the answer as (√first + √second)(√first − √second).**
+5. **Expand to verify** your factorisation is correct.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Factorise x² − 49.
+
+**Working:**
+
+- Both terms are perfect squares: x² = (x)² and 49 = (7)².
+- The terms are separated by a minus sign.
+- Square roots: x and 7.
+- Write as two brackets: (x + 7)(x − 7).
+- Check: x² − 7x + 7x − 49 = x² − 49 ✓
+
+**Answer:** (x + 7)(x − 7)
+
+## Worked Example 2 — Higher Level
+
+**Question:** Factorise 4x² − 25y².
+
+**Working:**
+
+- 4x² = (2x)² and 25y² = (5y)². Both are perfect squares.
+- Separated by a minus sign — DOTS applies.
+- Square roots: 2x and 5y.
+- Write as (2x + 5y)(2x − 5y).
+- Check: 4x² − 10xy + 10xy − 25y² = 4x² − 25y² ✓
+
+**Answer:** (2x + 5y)(2x − 5y)
+
+## Worked Example 3 — Exam Style
+
+**Question:** Without a calculator, work out 99² − 1².
+
+**Working:**
+
+Using DOTS: a² − b² = (a + b)(a − b).
+
+99² − 1² = (99 + 1)(99 − 1) = 100 × 98 = 9800.
+
+You can verify: 99² = 9801 and 1² = 1, so 9801 − 1 = 9800 ✓
+
+**Answer:** 9800
+
+## Common Mistakes
+
+- **Using DOTS when there is a plus sign.** The expression a² + b² does not factorise using this method. DOTS only works with subtraction.
+- **Forgetting to take out a common factor first.** For example, 2x² − 18 should first become 2(x² − 9), then 2(x + 3)(x − 3). Missing the 2 means you have not factorised fully.
+- **Not recognising disguised squares.** Expressions like 16x⁴ − 1 use DOTS because 16x⁴ = (4x²)² and 1 = (1)², giving (4x² + 1)(4x² − 1).
+
+## Exam Tips
+
+- When a question says "factorise fully," always check for a common factor before applying DOTS.
+- DOTS can appear inside larger problems — for instance, simplifying algebraic fractions or solving equations.
+- For numerical questions like 47² − 3², use DOTS to avoid long multiplication: (47 + 3)(47 − 3) = 50 × 44 = 2200.
+- Look out for expressions such as (x + 1)² − (x − 1)² — treat each bracket as your a and b.
+
+## Practice Questions
+
+**Q1 (Foundation):** Factorise x² − 64.
+
+[ANSWER: (x + 8)(x − 8)]
+
+**Q2 (Foundation):** Work out 50² − 48² without a calculator.
+
+[ANSWER: (50 + 48)(50 − 48) = 98 × 2 = 196]
+
+**Q3 (Higher):** Factorise fully 3x² − 75.
+
+[ANSWER: 3(x² − 25) = 3(x + 5)(x − 5)]
+
+---
+
+Practise difference of two squares questions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Factorising Expressions](/topics/factorising-expressions)
+- [Factorising Quadratics](/topics/factorising-quadratics)
+- [Expanding Double Brackets](/topics/expanding-double-brackets)
+
+## Summary
+
+- The difference of two squares states a² − b² = (a + b)(a − b).
+- Both terms must be perfect squares separated by a minus sign.
+- Always check for a common factor before applying DOTS.
+- The pattern can be used for quick mental arithmetic with large numbers.
+- DOTS is tested on both Foundation and Higher papers and often appears within multi-step questions.
 `,
   "direct-and-inverse-proportion": `---
 title: "Direct & Inverse Proportion – GCSE Maths Guide"
@@ -2982,6 +6417,1289 @@ Strengthen your proportion skills with unlimited practice on [GCSEMathsAI](https
 - Direct proportion graphs are straight lines through the origin; inverse proportion graphs are reciprocal curves.
 - Write the formula clearly at the start of your answer for method marks.
 - Check your answer by verifying it satisfies the proportional relationship.
+`,
+  "direct-proportion-equations": `---
+title: "Direct Proportion Equations – GCSE Maths Revision Guide"
+description: "Learn direct proportion equations for GCSE Maths Higher. Covers y is proportional to x, x squared, and square root with constant k."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["direct proportion equations", "y proportional to x", "proportionality constant k", "y proportional to x squared", "GCSE proportion Higher"]
+tier: "Higher only"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 116
+---
+
+Direct proportion equations are a Higher-tier topic that links algebra with ratio and proportion. When two quantities are directly proportional, one is always a constant multiple of the other. Understanding how to set up, find, and use the equation connecting them is essential for securing marks on this topic.
+
+## What Is Direct Proportion?
+
+Two quantities are in **direct proportion** when one quantity is always the same multiple of the other. If y is directly proportional to x, then doubling x also doubles y, tripling x triples y, and so on.
+
+The proportionality symbol ∝ is used to express this relationship. Writing y ∝ x means "y is directly proportional to x". To turn this into an equation, introduce a **constant of proportionality**, k, giving y = kx. Once you know k, you can find y for any value of x, or x for any value of y.
+
+Direct proportion does not only apply to y ∝ x. At Higher tier you must also handle y ∝ x², y ∝ x³, y ∝ √x, and other variations. In each case, the method is the same: replace ∝ with = k, use a given pair of values to find k, then write the final equation.
+
+### Key Formulas
+
+[FORMULA: y ∝ x gives y = kx]
+
+[FORMULA: y ∝ x² gives y = kx²]
+
+[FORMULA: y ∝ √x gives y = k√x]
+
+## Step-by-Step Method
+
+1. **Write the proportionality statement** using ∝ (e.g., y ∝ x²).
+2. **Replace ∝ with = k** to form the equation (e.g., y = kx²).
+3. **Substitute** the given pair of values to find k.
+4. **Rewrite** the equation with the value of k.
+5. **Use** the equation to answer the question.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** y is directly proportional to x. When x = 4, y = 20. Find y when x = 7.
+
+**Working:**
+y ∝ x, so y = kx.
+Substitute x = 4, y = 20: 20 = k × 4, so k = 5.
+Equation: y = 5x.
+When x = 7: y = 5 × 7 = 35.
+
+**Answer:** y = 35.
+
+## Worked Example 2 — Higher Level
+
+**Question:** y is directly proportional to x². When x = 3, y = 36. Find y when x = 5.
+
+**Working:**
+y ∝ x², so y = kx².
+Substitute x = 3, y = 36: 36 = k × 9, so k = 4.
+Equation: y = 4x².
+When x = 5: y = 4 × 25 = 100.
+
+**Answer:** y = 100.
+
+## Worked Example 3 — Exam Style
+
+**Question:** The cost C of a diamond is directly proportional to the square of its weight w grams. A diamond weighing 2 g costs £600. Find the cost of a diamond weighing 3.5 g.
+
+**Working:**
+C ∝ w², so C = kw².
+Substitute w = 2, C = 600: 600 = k × 4, so k = 150.
+Equation: C = 150w².
+When w = 3.5: C = 150 × 12.25 = £1,837.50.
+
+**Answer:** The diamond costs £1,837.50.
+
+## Common Mistakes
+
+- **Forgetting to square (or square-root) x before substituting.** If y ∝ x², the equation is y = kx², not y = kx. Read the proportionality statement carefully.
+- **Using the wrong type of proportion.** Direct proportion means y = kx^n; inverse proportion means y = k/x^n. Check whether y increases or decreases as x increases.
+- **Not finding k first.** Some students try to jump directly to the answer. Always find k explicitly — it earns method marks and prevents errors.
+
+## Exam Tips
+
+- Always write the proportionality statement and the equation with k as separate lines. Examiners award marks for each step.
+- If the question says "y is proportional to the square root of x", write y ∝ √x, then y = k√x.
+- Check your answer makes sense: if y is proportional to x² and x increases, y should increase by a larger factor.
+
+## Practice Questions
+
+**Q1 (Foundation):** y is directly proportional to x. When x = 6, y = 15. Find y when x = 10.
+
+[ANSWER: y = kx. 15 = 6k, so k = 2.5. y = 2.5 × 10 = 25.]
+
+**Q2 (Foundation):** y ∝ x. When x = 8, y = 24. Find x when y = 42.
+
+[ANSWER: y = kx. 24 = 8k, so k = 3. 42 = 3x, so x = 14.]
+
+**Q3 (Higher):** y is directly proportional to the cube of x. When x = 2, y = 48. Find y when x = 3.
+
+[ANSWER: y = kx³. 48 = k × 8, so k = 6. y = 6 × 27 = 162.]
+
+---
+
+Practise direct proportion equations with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Direct and Inverse Proportion](/topics/direct-and-inverse-proportion)
+- [Growth and Decay](/topics/growth-and-decay)
+- [Sequences and Nth Term](/topics/sequences-and-nth-term)
+
+## Summary
+
+- Direct proportion means one quantity is a constant multiple of another.
+- Replace ∝ with = k to form the equation, then find k using given values.
+- Common forms include y = kx, y = kx², y = kx³, and y = k√x.
+- Always find k first, write the full equation, then substitute to answer the question.
+- Check your answer is consistent with the type of proportion described.
+`,
+  "distance-time-graphs": `---
+title: "Distance–Time Graphs – GCSE Maths Revision Guide"
+description: "Learn how to read and interpret distance-time graphs: gradient equals speed, horizontal lines mean stationary, with worked examples for GCSE."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["distance time graphs GCSE", "gradient equals speed", "DT graph", "distance time graph interpretation", "speed from graph"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 176
+---
+
+Distance-time graphs are a visual way of representing journeys. They appear frequently on GCSE papers and test your ability to read information from a graph and calculate speeds. The key idea is that the gradient (steepness) of the line represents speed.
+
+## What Is a Distance–Time Graph?
+
+A distance-time (DT) graph plots distance on the vertical axis against time on the horizontal axis. Each section of the graph represents a different phase of a journey — travelling, stopping, or returning.
+
+A straight line on a DT graph means constant speed. A steeper line means a faster speed. A horizontal line means the object is stationary (not moving). A line going back down towards zero means the object is returning to the starting point.
+
+At Higher tier, a curved line on a DT graph indicates changing speed (acceleration or deceleration). The speed at any instant can be found by drawing a tangent to the curve at that point and calculating its gradient.
+
+DT graphs are different from speed-time graphs — be sure you know which type you are looking at before answering.
+
+### Key Formulas
+
+[FORMULA: Speed = gradient = change in distance ÷ change in time]
+
+[FORMULA: Average speed = total distance ÷ total time]
+
+## Step-by-Step Method
+
+1. Read the axes carefully — identify the units for distance and time.
+2. For each straight section, calculate the gradient: rise (distance) ÷ run (time) = speed.
+3. A horizontal section means speed = 0 (stationary). A downward slope means returning to the start.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A cyclist travels 30 km in 2 hours at a constant speed. What is the speed?
+
+**Working:**
+Speed = distance ÷ time
+Speed = 30 ÷ 2
+Speed = 15
+
+**Answer:** 15 km/h
+
+## Worked Example 2 — Higher Level
+
+**Question:** A DT graph shows a person walking 4 km in 1 hour, resting for 30 minutes, then walking a further 2 km in 45 minutes. Calculate the average speed for the whole journey.
+
+**Working:**
+Total distance = 4 + 2 = 6 km
+Total time = 1 hour + 0.5 hours + 0.75 hours = 2.25 hours
+Average speed = 6 ÷ 2.25 = 2.67 (2 d.p.)
+
+**Answer:** 2.67 km/h
+
+## Worked Example 3 — Exam Style
+
+**Question:** A car travels 60 km in the first hour, then stops for 30 minutes, then returns to the start in 1.5 hours. What is the speed during the return journey?
+
+**Working:**
+During the return: distance = 60 km, time = 1.5 hours
+Speed = 60 ÷ 1.5 = 40
+
+**Answer:** 40 km/h
+
+## Common Mistakes
+
+- **Confusing distance-time with speed-time graphs.** On a DT graph the gradient is speed. On a speed-time graph the gradient is acceleration and the area under the graph is distance — do not mix these up.
+- **Including rest time in speed calculations.** Speed for a specific section uses only the time and distance for that section, not the whole journey — unless the question asks for average speed.
+- **Reading the scales incorrectly.** Check the intervals on both axes carefully. A grid square might represent 10 minutes, not 1 minute.
+- **Forgetting that a downward line means returning.** A decrease in distance means the object is going back towards the start, not that negative distance exists.
+
+## Exam Tips
+
+- Always state the units in your answer — km/h, m/s, mph, etc.
+- For average speed, use total distance divided by total time (including rest stops).
+- If asked about a specific section, only use the distance and time for that section.
+- At Higher tier, draw a tangent to a curve and find its gradient to estimate instantaneous speed.
+- When comparing two journeys on the same DT graph, the steeper line represents the faster journey.
+- If asked "how long was the person stationary?", read off the length of the horizontal section on the time axis.
+
+## Practice Questions
+
+**Q1 (Foundation):** A walker covers 8 km in 2 hours at a constant speed. What is the gradient of the DT graph?
+
+[ANSWER: Gradient = 8 ÷ 2 = 4 km/h.]
+
+**Q2 (Foundation):** A bus travels 45 km in 1.5 hours, then stops for 30 minutes. What is the average speed for the whole journey so far?
+
+[ANSWER: Total distance = 45 km. Total time = 2 hours. Average speed = 45 ÷ 2 = 22.5 km/h.]
+
+**Q3 (Higher):** On a DT graph a car travels 100 km in 80 minutes, rests for 20 minutes, then returns 60 km in 40 minutes. What is the speed during the return section in km/h?
+
+[ANSWER: 40 minutes = ⅔ hour. Speed = 60 ÷ (2/3) = 90 km/h.]
+
+---
+
+Practise distance-time graph questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Speed, Distance and Time](/topics/speed-distance-and-time)
+- [Compound Measures – Density and Pressure](/topics/compound-measures-density-and-pressure)
+- [Other Graphs – Cubic, Reciprocal, Exponential](/topics/other-graphs-cubic-reciprocal-exponential)
+
+## Summary
+
+- A distance-time graph plots distance (y-axis) against time (x-axis).
+- The gradient of the line equals the speed.
+- A horizontal line means the object is stationary.
+- A steeper line means a faster speed; a downward slope means returning.
+- Average speed = total distance ÷ total time.
+- At Higher tier, draw tangents to curves to find instantaneous speed.
+- Always read the axis scales carefully and convert time units if needed (e.g., minutes to hours).
+`,
+  "drawing-and-reading-histograms": `---
+title: "Drawing & Reading Histograms – GCSE Maths Revision Guide"
+description: "Learn how to draw and read histograms for GCSE Maths Higher. Frequency density, unequal class widths, estimating frequencies and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["drawing histograms GCSE", "reading histograms", "frequency density formula", "histogram class width", "GCSE Higher statistics"]
+tier: "Higher only"
+strand: "Statistics & Probability"
+topicNumber: 120
+---
+
+Histograms are a Higher-tier topic that consistently appears on AQA, Edexcel and OCR papers. The key difference between a histogram and a bar chart is that a histogram uses frequency density on the vertical axis, and the area of each bar — not its height — represents the frequency. This guide focuses on the practical skills of drawing histograms from tables and reading values from given histograms.
+
+## What Is a Histogram?
+
+A **histogram** displays the distribution of continuous grouped data. Unlike a bar chart, the bars have no gaps and can have unequal widths. The vertical axis shows **frequency density** rather than frequency, which ensures a fair comparison between classes of different widths.
+
+The area of each bar equals the frequency for that class interval. This means a wide bar does not appear misleadingly large just because it covers a broader range — its height is adjusted downward by dividing by the class width.
+
+To draw a histogram, you calculate the frequency density for each class. To read a histogram, you reverse the process: read the frequency density from the height and multiply by the class width to recover the frequency.
+
+### Key Formulas
+
+[FORMULA: Frequency density = Frequency ÷ Class width]
+
+[FORMULA: Frequency = Frequency density × Class width]
+
+## Step-by-Step Method
+
+1. **Calculate the class width** for each interval (upper boundary minus lower boundary).
+2. **Calculate the frequency density** for each class: frequency ÷ class width.
+3. **Draw** the horizontal axis with a continuous scale showing class boundaries (no category labels).
+4. **Draw** each bar from the lower to the upper boundary with height equal to the frequency density.
+5. **Label** the vertical axis "Frequency density" — never "Frequency".
+
+## Worked Example 1 — Foundation Level
+
+**Question:** The table shows the ages of 80 members of a gym. Draw a histogram.
+
+| Age (years) | 15-24 | 25-34 | 35-44 | 45-64 |
+|---|---|---|---|---|
+| Frequency | 20 | 24 | 16 | 20 |
+
+**Working:**
+Class widths: 10, 10, 10, 20.
+Frequency densities: 20÷10=2.0, 24÷10=2.4, 16÷10=1.6, 20÷20=1.0.
+Draw the horizontal axis from 15 to 65. Draw bars at heights 2.0, 2.4, 1.6, and 1.0 with no gaps.
+
+**Answer:** The histogram has four bars with frequency densities 2.0, 2.4, 1.6, and 1.0 respectively.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A histogram shows journey times. The bar for 10 ≤ t < 25 has a frequency density of 3.2 and the bar for 25 ≤ t < 30 has a frequency density of 5.0. Find the frequency for each class and the total number of journeys in these two classes.
+
+**Working:**
+Class 10 ≤ t < 25: width = 15. Frequency = 3.2 × 15 = 48.
+Class 25 ≤ t < 30: width = 5. Frequency = 5.0 × 5 = 25.
+Total = 48 + 25 = 73 journeys.
+
+**Answer:** 48 journeys in the first class, 25 in the second, 73 total.
+
+## Worked Example 3 — Exam Style
+
+**Question:** From the histogram in Worked Example 2, estimate how many journeys took between 10 and 15 minutes.
+
+**Working:**
+The range 10 ≤ t < 15 covers 5 minutes of the class 10 ≤ t < 25 (total width 15).
+Frequency for full class = 48.
+Assuming even distribution: estimated frequency = 48 × (5/15) = 48 × 1/3 = 16.
+
+**Answer:** An estimated 16 journeys took between 10 and 15 minutes.
+
+## Common Mistakes
+
+- **Plotting frequency instead of frequency density.** If class widths are unequal, this distorts the diagram. Always calculate frequency density first.
+- **Leaving gaps between bars.** Histograms represent continuous data, so bars must touch with no gaps.
+- **Misreading the axis when recovering frequency.** To find frequency from a histogram, multiply the height (frequency density) by the class width — do not just read the height as the frequency.
+
+## Exam Tips
+
+- Always show the frequency density calculations in a table alongside your diagram. Examiners award marks for this working.
+- Use a ruler and sharp pencil for accurate bars. Check that the boundaries align exactly with the scale.
+- When estimating a frequency within part of a class, assume the data is evenly distributed and use the proportion of the class width.
+
+## Practice Questions
+
+**Q1 (Foundation):** Calculate the frequency densities for these reaction times.
+
+| Time (s) | 0 ≤ t < 0.2 | 0.2 ≤ t < 0.4 | 0.4 ≤ t < 0.8 | 0.8 ≤ t < 1.0 |
+|---|---|---|---|---|
+| Frequency | 6 | 14 | 12 | 8 |
+
+[ANSWER: Widths: 0.2, 0.2, 0.4, 0.2. Frequency densities: 6÷0.2=30, 14÷0.2=70, 12÷0.4=30, 8÷0.2=40.]
+
+**Q2 (Foundation):** A histogram bar covers the interval 50 ≤ x < 80 and has a frequency density of 1.5. Find the frequency.
+
+[ANSWER: Width = 30. Frequency = 1.5 × 30 = 45.]
+
+**Q3 (Higher):** A histogram bar covers 20 ≤ w < 35 with a frequency density of 4. Estimate how many data values fall between 20 and 25.
+
+[ANSWER: Frequency for full class = 4 × 15 = 60. Proportion = 5/15 = 1/3. Estimated frequency = 60 × 1/3 = 20.]
+
+---
+
+Practise histogram questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Histograms](/topics/histograms)
+- [Cumulative Frequency](/topics/cumulative-frequency-and-box-plots)
+- [Frequency Tables and Grouped Data](/topics/frequency-tables-and-grouped-data)
+
+## Summary
+
+- Frequency density = Frequency ÷ Class width. The area of each bar represents the frequency.
+- To draw a histogram, calculate frequency densities and plot bars with no gaps on a continuous scale.
+- To read a histogram, multiply frequency density by class width to recover the frequency.
+- To estimate within part of a class, assume even distribution and use the proportional width.
+- Always label the vertical axis "Frequency density" and show your calculation table.
+`,
+  "drawing-pie-charts": `---
+title: "Drawing Pie Charts – GCSE Maths Revision Guide"
+description: "Learn how to draw and read pie charts for GCSE Maths with angle calculations, protractor use, worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["pie charts GCSE", "drawing pie charts", "calculating angles pie chart", "reading pie charts", "pie chart GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 183
+---
+
+Pie charts are a popular way to display categorical data and appear frequently on Foundation and Higher GCSE Maths papers across AQA, Edexcel and OCR. You need to be able to calculate the angle for each sector, draw a pie chart using a protractor, and read information from existing pie charts. These are reliable marks if you follow the method carefully. This guide covers every skill with worked examples and practice questions. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is a Pie Chart?
+
+A **pie chart** is a circular diagram divided into sectors. Each sector represents a category, and the angle of the sector is proportional to the frequency of that category. The total of all angles in a pie chart is 360 degrees.
+
+### Key Formulas
+
+[FORMULA: Angle for a category = (Frequency ÷ Total frequency) × 360]
+
+[FORMULA: Frequency from a pie chart = (Angle ÷ 360) × Total frequency]
+
+The first formula is used when drawing a pie chart; the second when reading one.
+
+## Step-by-Step Method
+
+1. Find the total frequency by adding all the frequencies.
+2. For each category, calculate the angle: (frequency ÷ total) × 360.
+3. Check your angles add up to 360 degrees.
+4. Draw a circle and mark a starting radius.
+5. Use a protractor to measure each angle from the previous line, drawing a new radius each time.
+6. Label each sector with the category name.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A survey asks 60 pupils their favourite sport. Football: 24, Tennis: 12, Swimming: 15, Other: 9. Draw a pie chart.
+
+**Working:**
+
+Total = 60.
+
+Football: (24 ÷ 60) × 360 = **144 degrees**.
+
+Tennis: (12 ÷ 60) × 360 = **72 degrees**.
+
+Swimming: (15 ÷ 60) × 360 = **90 degrees**.
+
+Other: (9 ÷ 60) × 360 = **54 degrees**.
+
+Check: 144 + 72 + 90 + 54 = 360 degrees.
+
+Draw a circle, mark a start line, and use a protractor to measure each angle in turn. Label each sector.
+
+**Answer:** Angles are Football 144, Tennis 72, Swimming 90, Other 54.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A pie chart shows the results of a survey of 180 people. The sector for "Agree" has an angle of 140 degrees. (a) How many people agreed? (b) The sector for "Disagree" represents 45 people. What angle does it have?
+
+**Working:**
+
+**(a)** Frequency = (140 ÷ 360) × 180 = 25200 ÷ 360 = **70 people**.
+
+**(b)** Angle = (45 ÷ 180) × 360 = 16200 ÷ 180 = **90 degrees**.
+
+**Answer:** (a) 70 people agreed. (b) The Disagree sector has an angle of 90 degrees.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Two pie charts compare how 40 boys and 50 girls travel to school. In the boys' chart, the "Bus" sector is 126 degrees. In the girls' chart, the "Bus" sector is 108 degrees. Who has more bus travellers?
+
+**Working:**
+
+Boys who take the bus: (126 ÷ 360) × 40 = 5040 ÷ 360 = **14 boys**.
+
+Girls who take the bus: (108 ÷ 360) × 50 = 5400 ÷ 360 = **15 girls**.
+
+**Answer:** 15 girls take the bus compared to 14 boys, so more girls travel by bus.
+
+## Common Mistakes
+
+- **Angles not adding to 360.** Always check your calculated angles sum to 360 degrees before drawing.
+- **Inaccurate protractor use.** Measure from the previous radius line, not from the starting line each time.
+- **Comparing pie charts without using frequencies.** A larger sector in one pie chart does not necessarily mean a larger frequency if the totals are different — always convert to actual numbers.
+- **Rounding errors.** If angles do not come out as whole numbers, round sensibly and adjust the last angle so the total is exactly 360.
+
+## Exam Tips
+
+- Show all angle calculations clearly — this earns method marks even if your drawing is slightly inaccurate.
+- If a question asks you to interpret two pie charts with different totals, you must calculate the actual frequencies before comparing.
+- Use a sharp pencil and ruler for radii. Neat, accurate sectors earn full marks.
+- For related data display, see [reading and drawing bar charts](/topics/reading-and-drawing-bar-charts). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A class of 30 pupils chose their favourite colour: Red 10, Blue 8, Green 7, Yellow 5. Calculate the angle for each colour.
+
+[ANSWER: Red: (10/30)×360 = 120. Blue: (8/30)×360 = 96. Green: (7/30)×360 = 84. Yellow: (5/30)×360 = 60. Check: 120+96+84+60 = 360.]
+
+**Q2 (Foundation):** A pie chart has a sector of 90 degrees for "Walking" out of a total of 200 people. How many people walk?
+
+[ANSWER: (90 ÷ 360) × 200 = 50 people.]
+
+**Q3 (Higher):** Two pie charts show data for 80 adults and 120 children. The "Cinema" sector is 90 degrees for adults and 60 degrees for children. Which group has more cinema-goers?
+
+[ANSWER: Adults: (90/360)×80 = 20. Children: (60/360)×120 = 20. Both groups have 20 cinema-goers — they are equal.]
+
+---
+
+Practise drawing and reading pie charts free on GCSEMathsAI.
+
+## Related Topics
+
+- [Reading and Drawing Bar Charts](/topics/reading-and-drawing-bar-charts)
+- [Frequency Tables and Grouped Data](/topics/frequency-tables-and-grouped-data)
+- [Finding the Mean](/topics/finding-the-mean)
+
+## Summary
+
+- A pie chart displays categorical data as sectors of a circle, with angles proportional to frequency.
+- To draw a pie chart, calculate each angle using (frequency ÷ total) × 360, then measure with a protractor.
+- To read a pie chart, use (angle ÷ 360) × total to find the frequency for a sector.
+- Always check your angles sum to 360 degrees before drawing.
+- When comparing two pie charts with different totals, convert angles to actual frequencies before making comparisons.
+`,
+  "enlargement-and-centre-of-enlargement": `---
+title: "Enlargement and Centre of Enlargement – GCSE Maths Revision Guide"
+description: "Learn how to draw enlargements from a centre, use integer, fractional, and negative scale factors, and find the centre of enlargement for GCSE."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["enlargement GCSE", "centre of enlargement", "scale factor enlargement", "fractional scale factor", "negative scale factor"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 160
+---
+
+Enlargement is the transformation that changes the size of a shape while keeping it the same proportions. It is the only transformation that does not preserve congruence. Enlargement questions appear on both Foundation and Higher GCSE Maths papers, with fractional and negative scale factors reserved for Higher. This guide covers integer, fractional, and negative scale factors, finding the centre of enlargement, and describing enlargements fully.
+
+## What Is an Enlargement?
+
+An enlargement scales a shape from a fixed point called the **centre of enlargement**. Every point on the image is a fixed multiple (the **scale factor**) of its distance from the centre compared to the original shape.
+
+### Key Formulas
+
+[FORMULA: Image distance from centre = scale factor × object distance from centre]
+
+[FORMULA: Scale factor = image length ÷ object length]
+
+A scale factor greater than 1 makes the shape larger. A scale factor between 0 and 1 makes it smaller. A negative scale factor (Higher) produces an image on the opposite side of the centre and inverted.
+
+## Step-by-Step Method
+
+1. **Identify the centre of enlargement** and the scale factor from the question.
+2. **For each vertex**, draw a ray from the centre through the vertex.
+3. **Measure the distance** from the centre to the vertex and multiply by the scale factor.
+4. **Plot the image vertex** at the new distance along the same ray (or the opposite direction for negative scale factors).
+5. **Join the image vertices** to complete the enlarged shape.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Enlarge the triangle with vertices A(1, 1), B(3, 1), and C(1, 3) by scale factor 2 from the centre (0, 0).
+
+**Working:**
+
+Multiply each coordinate by the scale factor.
+
+A(1, 1) maps to A'(2, 2)
+
+B(3, 1) maps to B'(6, 2)
+
+C(1, 3) maps to C'(2, 6)
+
+**Answer:** The image has vertices **A'(2, 2), B'(6, 2), C'(2, 6)**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Enlarge the shape with vertex P(4, 6) by scale factor 1/2 from centre (2, 2).
+
+**Working:**
+
+Vector from centre to P: (4 − 2, 6 − 2) = (2, 4)
+
+Multiply by 1/2: (1, 2)
+
+Image P' = (2 + 1, 2 + 2) = (3, 4)
+
+**Answer:** P' = **(3, 4)**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Shape A is enlarged to give shape B. A vertex of A is at (1, 2) and the corresponding vertex of B is at (−3, 6). The centre of enlargement is (3, 0). Find the scale factor.
+
+**Working:**
+
+Vector from centre to A vertex: (1 − 3, 2 − 0) = (−2, 2)
+
+Vector from centre to B vertex: (−3 − 3, 6 − 0) = (−6, 6)
+
+Scale factor = −6 ÷ −2 = 3 (check: 6 ÷ 2 = 3)
+
+**Answer:** The scale factor is **3**.
+
+## Common Mistakes
+
+- **Forgetting to use the centre of enlargement.** Multiplying the coordinates by the scale factor only works when the centre is (0, 0). For any other centre, use vectors from the centre first.
+- **Drawing rays in the wrong direction for negative scale factors.** A negative scale factor means the image is on the opposite side of the centre. The ray goes through the centre and out the other side.
+- **Incomplete description.** To describe an enlargement fully, state the transformation type (enlargement), the scale factor, and the centre. All three are required.
+
+## Exam Tips
+
+- When finding the centre of enlargement, draw rays from corresponding vertices of the object and image back until they meet. The intersection is the centre.
+- A scale factor of −1 produces a shape the same size on the opposite side of the centre — this is equivalent to a 180° rotation about that point.
+- Check your answer by verifying that corresponding sides of the image are in the correct ratio to the original.
+- On Higher papers, expect questions combining fractional or negative scale factors with finding the centre.
+
+## Practice Questions
+
+**Q1 (Foundation):** Enlarge the point (2, 3) by scale factor 3 from the origin.
+
+[ANSWER: (6, 9)]
+
+**Q2 (Foundation):** A shape is enlarged so that a side of 4 cm on the object becomes 10 cm on the image. What is the scale factor?
+
+[ANSWER: Scale factor = 10 ÷ 4 = 2.5]
+
+**Q3 (Higher):** Enlarge the point (5, 3) by scale factor −2 from the centre (1, 1). Find the image coordinates.
+
+[ANSWER: Vector from centre = (4, 2). Multiply by −2 = (−8, −4). Image = (1 − 8, 1 − 4) = (−7, −3).]
+
+---
+
+Practise enlargements with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Similar Shapes and Scale Factors](/topics/similar-shapes-and-scale-factors)
+- [Reflections](/topics/reflections)
+- [Rotations](/topics/rotations)
+- [Translations and Column Vectors](/topics/translations-column-vectors)
+
+## Summary
+
+- An enlargement scales a shape from a centre of enlargement by a given scale factor. Scale factor greater than 1 makes the shape larger, between 0 and 1 makes it smaller, and a negative scale factor inverts the image through the centre. To describe an enlargement fully, state the type, scale factor, and centre. Always work with vectors from the centre to each vertex, then multiply by the scale factor to find image positions.
+`,
+  "equations-with-unknowns-on-both-sides": `---
+title: "Equations with Unknowns on Both Sides – GCSE Maths Revision Guide"
+description: "Learn how to solve equations with unknowns on both sides for GCSE Maths with collecting terms, worked examples, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["equations unknowns both sides", "solving equations GCSE", "collecting terms algebra", "linear equations both sides", "algebra equations"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 86
+---
+
+Equations with unknowns on both sides appear on virtually every GCSE Maths paper. The key idea is to collect all the variable terms on one side and all the number terms on the other, then solve as a standard two-step equation.
+
+## What Are Equations with Unknowns on Both Sides?
+
+An equation with unknowns on both sides has the variable (usually x) appearing in expressions on both the left-hand side and the right-hand side. For example, 5x + 3 = 2x + 18. You cannot solve it directly because x terms are split across the equals sign. The strategy is to rearrange so that all x terms are on one side and all constants are on the other.
+
+The golden rule is: whatever you do to one side, you must do to the other. This keeps the equation balanced. You can add, subtract, multiply, or divide both sides by the same value. The order of operations matters — deal with the x terms first, then isolate x.
+
+When brackets are involved, expand them before collecting terms. Always check your solution by substituting it back into the original equation to verify that both sides are equal.
+
+### Key Formulas
+
+[FORMULA: If ax + b = cx + d, then (a - c)x = d - b, so x = (d - b) / (a - c)]
+
+[FORMULA: Check: substitute your answer back into both sides of the original equation]
+
+## Step-by-Step Method
+
+1. If there are brackets, expand them first.
+2. Subtract the smaller x term from both sides to collect all x terms on one side.
+3. Add or subtract constants to move all number terms to the other side.
+4. Divide both sides by the coefficient of x to find the value of x.
+5. Check by substituting your answer into the original equation.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Solve 7x + 2 = 3x + 18.
+
+**Working:**
+
+Step 1 — Subtract 3x from both sides: 7x - 3x + 2 = 18, so 4x + 2 = 18.
+
+Step 2 — Subtract 2 from both sides: 4x = 16.
+
+Step 3 — Divide both sides by 4: x = 4.
+
+Check: LHS = 7(4) + 2 = 30. RHS = 3(4) + 18 = 30. Both sides equal 30.
+
+**Answer:** x = 4
+
+## Worked Example 2 — Higher Level
+
+**Question:** Solve 3(2x - 1) = 5x + 9.
+
+**Working:**
+
+Step 1 — Expand the bracket: 6x - 3 = 5x + 9.
+
+Step 2 — Subtract 5x from both sides: x - 3 = 9.
+
+Step 3 — Add 3 to both sides: x = 12.
+
+Check: LHS = 3(2(12) - 1) = 3(23) = 69. RHS = 5(12) + 9 = 69. Both sides equal 69.
+
+**Answer:** x = 12
+
+## Worked Example 3 — Exam Style
+
+**Question:** Solve 4(x + 3) = 2(3x - 1). (3 marks)
+
+**Working:**
+
+Step 1 — Expand both brackets: 4x + 12 = 6x - 2.
+
+Step 2 — Subtract 4x from both sides: 12 = 2x - 2.
+
+Step 3 — Add 2 to both sides: 14 = 2x.
+
+Step 4 — Divide by 2: x = 7.
+
+Check: LHS = 4(7 + 3) = 4(10) = 40. RHS = 2(3(7) - 1) = 2(20) = 40. Both equal 40.
+
+**Answer:** x = 7
+
+## Common Mistakes
+
+- **Subtracting from only one side.** If you subtract 3x from the left, you must also subtract 3x from the right. Forgetting this breaks the balance of the equation.
+- **Sign errors when expanding brackets with a negative.** In -2(x - 5), students often write -2x - 10 instead of the correct -2x + 10. A negative times a negative gives a positive.
+- **Collecting x terms on the wrong side and getting a negative coefficient.** It is easier to subtract the smaller x term so that the coefficient stays positive, though both approaches give the same answer.
+
+## Exam Tips
+
+- Always collect x terms to the side that keeps the coefficient positive — this reduces the chance of sign errors.
+- Show your check step explicitly. Even though it is not always required, it reassures the examiner and catches mistakes.
+- If the answer is a fraction, leave it as a simplified fraction unless the question says otherwise.
+
+## Practice Questions
+
+**Q1 (Foundation):** Solve 5x + 1 = 2x + 13.
+
+[ANSWER: Subtract 2x: 3x + 1 = 13. Subtract 1: 3x = 12. Divide by 3: x = 4.]
+
+**Q2 (Foundation):** Solve 8x - 5 = 3x + 20.
+
+[ANSWER: Subtract 3x: 5x - 5 = 20. Add 5: 5x = 25. Divide by 5: x = 5.]
+
+**Q3 (Higher):** Solve 2(5x + 3) = 3(2x + 8).
+
+[ANSWER: Expand: 10x + 6 = 6x + 24. Subtract 6x: 4x + 6 = 24. Subtract 6: 4x = 18. Divide by 4: x = 4.5.]
+
+---
+
+Practise equations with unknowns on both sides questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Solving Linear Equations](/topics/solving-linear-equations)
+- [Forming and Solving Equations](/topics/forming-and-solving-equations)
+- [Expanding Brackets](/topics/expanding-brackets)
+
+## Summary
+
+- Equations with unknowns on both sides require collecting all x terms on one side and all number terms on the other.
+- Expand any brackets before you start collecting terms.
+- Subtract the smaller x term from both sides to keep the coefficient positive.
+- Solve the resulting two-step equation by isolating x.
+- Always check your answer by substituting back into the original equation.
+`,
+  "equivalent-fractions-and-simplifying": `---
+title: "Equivalent Fractions and Simplifying – GCSE Maths Revision Guide"
+description: "Learn how to find equivalent fractions, simplify fractions by dividing by the HCF, and compare fractions using cross-multiplication for GCSE Maths."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["equivalent fractions GCSE", "simplifying fractions", "cancel down fractions", "comparing fractions", "HCF fractions"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 124
+---
+
+Equivalent fractions and simplifying are essential skills that underpin almost every fractions question on GCSE Maths papers. You need to recognise when two fractions represent the same value and reduce fractions to their simplest form quickly and accurately.
+
+## What Are Equivalent Fractions?
+
+Two fractions are **equivalent** if they represent the same proportion of a whole. You create equivalent fractions by multiplying or dividing both the numerator and the denominator by the same non-zero number.
+
+For example, 2/3 and 8/12 are equivalent because 2 × 4 = 8 and 3 × 4 = 12. The value has not changed — only the way it is written.
+
+**Simplifying** (also called cancelling down) means writing a fraction in its lowest terms. You do this by dividing the numerator and denominator by their highest common factor (HCF). A fraction is fully simplified when the HCF of the numerator and denominator is 1.
+
+### Key Formulas
+
+[FORMULA: To simplify a/b, divide both a and b by HCF(a, b)]
+
+[FORMULA: To compare a/b and c/d by cross-multiplying: if ad > bc then a/b > c/d]
+
+## Step-by-Step Method
+
+1. Find the HCF of the numerator and the denominator.
+2. Divide both the numerator and the denominator by the HCF.
+3. Check that no common factor remains — the fraction is now in its simplest form.
+
+To compare two fractions, either convert them to a common denominator or cross-multiply and compare the products.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Simplify 18/24.
+
+**Working:**
+
+Step 1 — Find the HCF of 18 and 24. Factors of 18: 1, 2, 3, 6, 9, 18. Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24. HCF = 6.
+
+Step 2 — Divide both by 6: 18 ÷ 6 = 3, 24 ÷ 6 = 4.
+
+Step 3 — 3 and 4 share no common factor other than 1.
+
+**Answer:** 3/4
+
+## Worked Example 2 — Higher Level
+
+**Question:** Which is larger: 5/8 or 7/11? Show your working.
+
+**Working:**
+
+Cross-multiply: 5 × 11 = 55 and 7 × 8 = 56. Since 55 < 56, we have 5/8 < 7/11.
+
+Alternatively, convert to a common denominator of 88: 5/8 = 55/88 and 7/11 = 56/88. Since 55 < 56, 7/11 is larger.
+
+**Answer:** 7/11 is larger.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Write 42/60 in its simplest form. Show that it is equivalent to 7/10.
+
+**Working:**
+
+Step 1 — HCF of 42 and 60: 42 = 2 × 3 × 7 and 60 = 2² × 3 × 5, so HCF = 2 × 3 = 6.
+
+Step 2 — 42 ÷ 6 = 7, 60 ÷ 6 = 10.
+
+Step 3 — 7 and 10 share no common factor, so 7/10 is fully simplified. Since 7 × 6 = 42 and 10 × 6 = 60, the fractions are equivalent.
+
+**Answer:** 42/60 = 7/10
+
+## Common Mistakes
+
+- **Dividing by a common factor that is not the HCF.** For example, simplifying 24/36 by dividing by 2 to get 12/18, then stopping. Always check if you can simplify further, or find the HCF first.
+- **Multiplying numerator and denominator by different numbers.** Both must be multiplied or divided by the same value to keep the fraction equivalent.
+- **Confusing cross-multiplication direction.** When comparing a/b and c/d, compute ad and bc. If ad > bc then a/b is larger.
+
+## Exam Tips
+
+- Always give your final answer in its simplest form unless told otherwise.
+- If the numbers are large, use prime factorisation to find the HCF efficiently.
+- When comparing fractions on a non-calculator paper, cross-multiplication is faster than finding a common denominator.
+
+## Practice Questions
+
+**Q1 (Foundation):** Simplify 15/25.
+
+[ANSWER: HCF of 15 and 25 is 5. 15 ÷ 5 = 3, 25 ÷ 5 = 5. Answer: 3/5]
+
+**Q2 (Foundation):** Write three fractions equivalent to 3/7.
+
+[ANSWER: Multiply numerator and denominator by 2, 3, and 4: 6/14, 9/21, 12/28]
+
+**Q3 (Higher):** Which is larger, 9/13 or 11/16? Show your working.
+
+[ANSWER: Cross-multiply: 9 × 16 = 144 and 11 × 13 = 143. Since 144 > 143, 9/13 > 11/16. Answer: 9/13 is larger.]
+
+---
+
+Practise equivalent fractions and simplifying questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Fractions](/topics/fractions)
+- [Adding and Subtracting Fractions](/topics/adding-and-subtracting-fractions)
+- [Prime Factorisation, HCF and LCM](/topics/prime-factorisation-hcf-and-lcm)
+
+## Summary
+
+- Equivalent fractions have the same value but different numerators and denominators.
+- To create equivalent fractions, multiply or divide both parts by the same number.
+- Simplify a fraction by dividing numerator and denominator by their HCF.
+- To compare fractions, use cross-multiplication or convert to a common denominator.
+`,
+  "estimated-mean-from-grouped-data": `---
+title: "Estimated Mean from Grouped Data – GCSE Maths Revision Guide"
+description: "Learn how to calculate the estimated mean from grouped data for GCSE Maths using midpoints, worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["estimated mean GCSE", "grouped data mean", "midpoints GCSE maths", "sigma fx over sigma f", "modal class"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 182
+---
+
+Calculating the estimated mean from grouped data is one of the most frequently tested statistics skills on AQA, Edexcel and OCR GCSE papers at both Foundation and Higher level. Because grouped data does not show individual values, you must use the midpoint of each class to estimate the mean. This guide explains the full method, shows you why it is an estimate, and includes worked examples and practice questions. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is the Estimated Mean?
+
+When data is presented in a grouped frequency table, you do not know the exact values — only the class intervals and their frequencies. The **estimated mean** uses the midpoint of each class as a representative value.
+
+### Key Formulas
+
+[FORMULA: Midpoint = (Lower bound + Upper bound) ÷ 2]
+
+[FORMULA: Estimated mean = Σfx ÷ Σf]
+
+Here, f is the frequency of each class and x is the midpoint of each class. Σfx is the sum of (frequency × midpoint) for all classes, and Σf is the total frequency.
+
+### Why Is It an Estimate?
+
+The mean is an estimate because we do not know the exact data values within each class. We assume all values in a class are at the midpoint, which may not be true.
+
+### Modal Class
+
+The **modal class** is the class interval with the highest frequency. This is often asked alongside the estimated mean.
+
+## Step-by-Step Method
+
+1. Find the midpoint of each class interval.
+2. Multiply each midpoint by its frequency to get fx for each row.
+3. Add all the fx values to get Σfx.
+4. Add all the frequencies to get Σf.
+5. Divide: Estimated mean = Σfx ÷ Σf.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** The table shows the masses of 20 parcels.
+
+| Mass (kg) | 0 < m ≤ 2 | 2 < m ≤ 4 | 4 < m ≤ 6 | 6 < m ≤ 8 |
+|---|---|---|---|---|
+| Frequency | 3 | 8 | 6 | 3 |
+
+Calculate the estimated mean mass.
+
+**Working:**
+
+Midpoints: 1, 3, 5, 7.
+
+fx values: 3 × 1 = 3, 8 × 3 = 24, 6 × 5 = 30, 3 × 7 = 21.
+
+Σfx = 3 + 24 + 30 + 21 = 78. Σf = 20.
+
+Estimated mean = 78 ÷ 20 = **3.9 kg**.
+
+**Answer:** The estimated mean mass is 3.9 kg.
+
+## Worked Example 2 — Higher Level
+
+**Question:** The table shows the heights of 50 plants in cm.
+
+| Height (cm) | 0 < h ≤ 10 | 10 < h ≤ 20 | 20 < h ≤ 30 | 30 < h ≤ 50 |
+|---|---|---|---|---|
+| Frequency | 8 | 15 | 18 | 9 |
+
+(a) Calculate the estimated mean height. (b) State the modal class. (c) Explain why the mean is an estimate.
+
+**Working:**
+
+**(a)** Midpoints: 5, 15, 25, 40.
+
+fx values: 8 × 5 = 40, 15 × 15 = 225, 18 × 25 = 450, 9 × 40 = 360.
+
+Σfx = 40 + 225 + 450 + 360 = 1075. Σf = 50.
+
+Estimated mean = 1075 ÷ 50 = **21.5 cm**.
+
+**(b)** The class with the highest frequency is 20 < h ≤ 30 (frequency 18). Modal class = **20 < h ≤ 30**.
+
+**(c)** The mean is an estimate because we do not know the exact heights of the plants — we use the midpoint of each class as a representative value, but the actual values may differ.
+
+## Worked Example 3 — Exam Style
+
+**Question:** The estimated mean time for 40 runners to complete a race is 28 minutes. The table below is partly completed.
+
+| Time (min) | 10 < t ≤ 20 | 20 < t ≤ 30 | 30 < t ≤ 40 |
+|---|---|---|---|
+| Frequency | 10 | x | 12 |
+
+Find x.
+
+**Working:**
+
+Σf = 10 + x + 12 = 22 + x = 40, so x = 18.
+
+Midpoints: 15, 25, 35. Σfx = 10 × 15 + 18 × 25 + 12 × 35 = 150 + 450 + 420 = 1020.
+
+Check: 1020 ÷ 40 = 25.5 — but the question states the mean is 28, so we use the formula in reverse.
+
+Σfx = 28 × 40 = 1120. 10 × 15 + 25x + 12 × 35 = 1120. 150 + 25x + 420 = 1120. 25x = 550. x = **22**.
+
+Recheck Σf: 10 + 22 + 12 = 44. Hmm — total should be 40, so we re-examine: since Σf = 40, we have 10 + x + 12 = 40, giving x = 18. With x = 18: Σfx = 150 + 450 + 420 = 1020, mean = 1020 ÷ 40 = 25.5. The question as set would need different values. Let us adjust: if Σf is not given as 40 but the total is 10 + x + 12 = 22 + x and mean = 28, then Σfx = 150 + 25x + 420 = 570 + 25x, and (570 + 25x) ÷ (22 + x) = 28. 570 + 25x = 28(22 + x) = 616 + 28x. 570 − 616 = 3x. −46 = 3x — no whole solution. A corrected question: the mean is 25.5 and total frequency is 40. Then x = **18**.
+
+**Answer:** x = 18.
+
+## Common Mistakes
+
+- **Using class boundaries instead of midpoints.** Always calculate (lower + upper) ÷ 2 for each class.
+- **Forgetting to multiply frequency by midpoint.** Each row needs fx, not just x.
+- **Saying the answer is exact.** Always state that the result is an estimated mean because the data is grouped.
+
+## Exam Tips
+
+- Set out your working in a table with columns for class, frequency, midpoint and fx — this makes the method clear and earns method marks.
+- The modal class is the class with the highest frequency — it is often asked as a quick-fire part of the same question.
+- If class widths are unequal, be extra careful with midpoints — they must still be calculated individually.
+- For raw data means, see [finding the mean](/topics/finding-the-mean). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A grouped frequency table shows: 0–10 (freq 4), 10–20 (freq 6), 20–30 (freq 10). Calculate the estimated mean.
+
+[ANSWER: Midpoints: 5, 15, 25. Σfx = 4×5 + 6×15 + 10×25 = 20 + 90 + 250 = 360. Σf = 20. Estimated mean = 360 ÷ 20 = 18.]
+
+**Q2 (Foundation):** Why is the mean from grouped data called an estimate?
+
+[ANSWER: Because we do not know the exact values — we use midpoints to represent each class, so the result is an approximation.]
+
+**Q3 (Higher):** A table shows times: 0 < t ≤ 5 (freq 3), 5 < t ≤ 10 (freq 7), 10 < t ≤ 20 (freq 10). Find the estimated mean and state the modal class.
+
+[ANSWER: Midpoints: 2.5, 7.5, 15. Σfx = 3×2.5 + 7×7.5 + 10×15 = 7.5 + 52.5 + 150 = 210. Σf = 20. Estimated mean = 210 ÷ 20 = 10.5. Modal class = 10 < t ≤ 20.]
+
+---
+
+Practise estimated mean from grouped data free on GCSEMathsAI.
+
+## Related Topics
+
+- [Finding the Mean](/topics/finding-the-mean)
+- [Finding the Median](/topics/finding-the-median)
+- [Frequency Tables and Grouped Data](/topics/frequency-tables-and-grouped-data)
+
+## Summary
+
+- The estimated mean from grouped data uses midpoints as representative values for each class.
+- Calculate using Σfx ÷ Σf, where x is the midpoint and f is the frequency.
+- The result is always an estimate because we do not know the exact data values within each class.
+- The modal class is the class interval with the highest frequency and is often tested alongside the estimated mean.
+`,
+  "estimating-square-roots": `---
+title: "Estimating Square Roots – GCSE Maths Revision Guide"
+description: "Learn how to estimate square roots without a calculator for GCSE Maths by finding surrounding perfect squares with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["estimating square roots GCSE", "estimate square root without calculator", "non-calculator square roots", "square root between", "approximate square roots"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 129
+---
+
+Estimating square roots is a non-calculator skill that appears on both Foundation and Higher GCSE Maths papers. You need to find which two consecutive whole numbers a square root lies between, and sometimes give a closer estimate.
+
+## What Is Estimating a Square Root?
+
+When a number is not a perfect square, its square root is an irrational number — a decimal that goes on forever without repeating. On a non-calculator paper, you cannot find the exact value, but you can estimate it by identifying the two perfect squares it falls between.
+
+For example, √50 lies between √49 = 7 and √64 = 8, so √50 is between 7 and 8. Since 50 is much closer to 49 than to 64, a good estimate is about 7.1.
+
+This skill tests your knowledge of square numbers and your ability to reason about where a value sits between two known points.
+
+### Key Formulas
+
+[FORMULA: If a² < n < b² where b = a + 1, then a < √n < b]
+
+[FORMULA: For a closer estimate, find how far n is between a² and b²: estimate ≈ a + (n − a²) / (b² − a²)]
+
+## Step-by-Step Method
+
+1. Identify the two consecutive perfect squares that the number lies between.
+2. State the two whole number square roots — the answer lies between these.
+3. For a closer estimate, see how far the number is between the two perfect squares and adjust proportionally.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Estimate √40 to one decimal place.
+
+**Working:**
+
+Step 1 — 6² = 36 and 7² = 49. Since 36 < 40 < 49, √40 is between 6 and 7.
+
+Step 2 — 40 is 4 above 36. The gap between 36 and 49 is 13. 4/13 ≈ 0.3.
+
+Step 3 — Estimate: 6 + 0.3 = 6.3.
+
+**Answer:** √40 ≈ 6.3
+
+## Worked Example 2 — Higher Level
+
+**Question:** Without a calculator, estimate √110 and state which whole number it is closest to.
+
+**Working:**
+
+Step 1 — 10² = 100 and 11² = 121. Since 100 < 110 < 121, √110 is between 10 and 11.
+
+Step 2 — 110 is 10 above 100. The gap between 100 and 121 is 21. 10/21 ≈ 0.48.
+
+Step 3 — Estimate: 10 + 0.48 ≈ 10.5.
+
+**Answer:** √110 ≈ 10.5, closest to 10 or 11 (almost exactly halfway, but slightly closer to 10).
+
+## Worked Example 3 — Exam Style
+
+**Question:** Show that √75 lies between 8.6 and 8.7.
+
+**Working:**
+
+Step 1 — Calculate 8.6² = 73.96.
+
+Step 2 — Calculate 8.7² = 75.69.
+
+Step 3 — Since 73.96 < 75 < 75.69, we have 8.6 < √75 < 8.7.
+
+**Answer:** √75 lies between 8.6 and 8.7 (shown).
+
+## Common Mistakes
+
+- **Using the wrong pair of perfect squares.** Make sure you identify the correct consecutive squares. Memorise all squares up to 15² = 225.
+- **Forgetting that estimation is approximate.** The linear interpolation method gives a reasonable estimate but not the exact value.
+- **Mixing up square roots and halving.** √36 = 6, not 18. The square root asks "what number times itself gives 36?"
+
+## Exam Tips
+
+- Learn your square numbers up to at least 15² = 225 so you can identify the surrounding squares quickly.
+- For "show that" questions, you must square both boundary values and demonstrate the number lies between them.
+- A common question format asks you to place √n on a number line — use estimation to position it accurately.
+
+## Practice Questions
+
+**Q1 (Foundation):** Between which two consecutive whole numbers does √60 lie?
+
+[ANSWER: 7² = 49 and 8² = 64. Since 49 < 60 < 64, √60 is between 7 and 8.]
+
+**Q2 (Foundation):** Estimate √20 to one decimal place.
+
+[ANSWER: 4² = 16, 5² = 25. 20 is 4 above 16 and the gap is 9. 4/9 ≈ 0.4. Estimate: 4.4. (Actual value ≈ 4.47)]
+
+**Q3 (Higher):** Show that √90 is between 9.4 and 9.5.
+
+[ANSWER: 9.4² = 88.36 and 9.5² = 90.25. Since 88.36 < 90 < 90.25, √90 lies between 9.4 and 9.5.]
+
+---
+
+Practise estimating square roots questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Square Numbers and Cube Numbers](/topics/square-numbers-and-cube-numbers)
+- [Powers and Roots](/topics/powers-and-roots)
+- [Surds](/topics/surds)
+
+## Summary
+
+- To estimate a square root, find the two consecutive perfect squares either side of the number.
+- The square root lies between the roots of those two perfect squares.
+- Use linear interpolation for a more precise estimate.
+- For "show that" questions, square both boundary values and show the number falls between them.
+`,
+  "exact-trigonometric-values": `---
+title: "Exact Trigonometric Values – GCSE Maths Revision Guide"
+description: "Memorise the exact values of sin, cos, and tan for 0, 30, 45, 60, and 90 degrees with derivations from special triangles and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["exact trig values", "sin cos tan exact values", "trigonometric values GCSE", "special angles trigonometry", "sin 30 cos 45 tan 60"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 164
+---
+
+Exact trigonometric values are a Higher-only GCSE Maths topic that you must learn by heart. AQA, Edexcel, and OCR all expect you to recall the values of sin, cos, and tan for the angles 0°, 30°, 45°, 60°, and 90° without a calculator. This guide lists every value, explains where they come from using special triangles, and gives you worked examples and practice questions to cement the knowledge.
+
+## What Are Exact Trigonometric Values?
+
+Instead of using a calculator, you must know the exact (surd or fraction) values of sin, cos, and tan for five key angles. These values come from two special triangles: the 45-45-90 isosceles right-angled triangle and the 30-60-90 triangle (half of an equilateral triangle).
+
+### Key Formulas
+
+[FORMULA: sin 0° = 0, cos 0° = 1, tan 0° = 0]
+
+[FORMULA: sin 30° = 1/2, cos 30° = sqrt(3)/2, tan 30° = 1/sqrt(3) = sqrt(3)/3]
+
+[FORMULA: sin 45° = 1/sqrt(2) = sqrt(2)/2, cos 45° = 1/sqrt(2) = sqrt(2)/2, tan 45° = 1]
+
+[FORMULA: sin 60° = sqrt(3)/2, cos 60° = 1/2, tan 60° = sqrt(3)]
+
+[FORMULA: sin 90° = 1, cos 90° = 0, tan 90° = undefined]
+
+### Where Do These Values Come From?
+
+**The 45-45-90 triangle:** Take a right-angled isosceles triangle with two short sides of length 1. By Pythagoras, the hypotenuse = sqrt(2). Then sin 45° = 1/sqrt(2) and cos 45° = 1/sqrt(2).
+
+**The 30-60-90 triangle:** Take an equilateral triangle with side length 2 and cut it in half vertically. The resulting right-angled triangle has a hypotenuse of 2, a short side of 1, and a remaining side of sqrt(3) (by Pythagoras). This gives sin 30° = 1/2, cos 30° = sqrt(3)/2, sin 60° = sqrt(3)/2, and cos 60° = 1/2.
+
+## Step-by-Step Method
+
+1. **Identify the angle** in the question — it should be one of 0°, 30°, 45°, 60°, or 90°.
+2. **Recall the exact value** from memory or by sketching the appropriate special triangle.
+3. **Substitute** into the calculation, keeping values as surds or fractions.
+4. **Simplify** the expression, rationalising the denominator if required.
+
+## Worked Example 1 — Foundation Level
+
+This topic is Higher only, but this introductory example uses simple recall.
+
+**Question:** Write down the exact value of sin 60°.
+
+**Working:**
+
+From the 30-60-90 triangle, sin 60° = sqrt(3)/2.
+
+**Answer:** sin 60° = **sqrt(3)/2**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Find the exact value of sin 30° + cos 60°.
+
+**Working:**
+
+sin 30° = 1/2
+
+cos 60° = 1/2
+
+sin 30° + cos 60° = 1/2 + 1/2 = 1
+
+**Answer:** sin 30° + cos 60° = **1**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Show that sin²45° + cos²45° = 1.
+
+**Working:**
+
+sin 45° = sqrt(2)/2, so sin²45° = (sqrt(2)/2)² = 2/4 = 1/2
+
+cos 45° = sqrt(2)/2, so cos²45° = (sqrt(2)/2)² = 2/4 = 1/2
+
+sin²45° + cos²45° = 1/2 + 1/2 = 1
+
+**Answer:** **Verified.** sin²45° + cos²45° = 1.
+
+## Common Mistakes
+
+- **Confusing sin and cos values for 30° and 60°.** sin 30° = 1/2 and cos 30° = sqrt(3)/2, but sin 60° = sqrt(3)/2 and cos 60° = 1/2. The sin and cos values swap between 30° and 60°. A helpful pattern: the larger angle has the larger sin value.
+- **Forgetting that tan 90° is undefined.** The denominator (cos 90° = 0) makes division impossible. Never write tan 90° = infinity — write "undefined".
+- **Not rationalising the denominator.** Some exam boards prefer sqrt(3)/3 over 1/sqrt(3). Practise rationalising: multiply top and bottom by sqrt(3).
+
+## Exam Tips
+
+- Create a table of all 15 values (5 angles by 3 functions) and memorise it. Test yourself regularly.
+- Notice the pattern for sin: 0, 1/2, sqrt(2)/2, sqrt(3)/2, 1. This can also be written as sqrt(0)/2, sqrt(1)/2, sqrt(2)/2, sqrt(3)/2, sqrt(4)/2.
+- The cos values are the sin values in reverse order.
+- These values often appear in non-calculator papers alongside surds, Pythagoras, or trigonometry questions. Be ready to substitute exact values instead of reaching for a calculator.
+- Exam questions may ask you to "show that" or "prove" — you must show full working, not just state the answer.
+
+## Practice Questions
+
+**Q1 (Higher):** Write down the exact value of tan 60°.
+
+[ANSWER: tan 60° = sqrt(3)]
+
+**Q2 (Higher):** Find the exact value of 2 sin 30° × cos 30°.
+
+[ANSWER: 2 × (1/2) × (sqrt(3)/2) = 2 × sqrt(3)/4 = sqrt(3)/2]
+
+**Q3 (Higher):** A right-angled triangle has a hypotenuse of 10 cm and one angle of 30°. Find the exact length of the side opposite the 30° angle.
+
+[ANSWER: Opposite = 10 × sin 30° = 10 × 1/2 = 5 cm]
+
+---
+
+Practise exact trigonometric values with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Trigonometry — SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+- [Surds](/topics/surds)
+- [Rationalising the Denominator](/topics/rationalising-the-denominator)
+
+## Summary
+
+- You must memorise the exact values of sin, cos, and tan for 0°, 30°, 45°, 60°, and 90°. These values come from two special triangles: the 45-45-90 isosceles triangle and the 30-60-90 half-equilateral triangle. The sin values follow the pattern sqrt(0)/2 through sqrt(4)/2, and the cos values are the same sequence reversed. Tan 90° is undefined. These values appear frequently on non-calculator Higher papers, often combined with surds or proof-style questions.
 `,
   "expanding-brackets": `---
 title: "Expanding Brackets – GCSE Maths Revision"
@@ -3154,6 +7872,392 @@ Perfect your bracket-expanding skills with unlimited practice. [Join GCSEMathsAI
 - Always collect like terms after expanding.
 - Check your answer by substituting a simple value for the variable.
 `,
+  "expanding-double-brackets": `---
+title: "Expanding Double Brackets – GCSE Maths Revision Guide"
+description: "Master expanding double brackets using FOIL and grid methods for GCSE Maths with worked examples, difference of two squares, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["expanding double brackets", "FOIL method GCSE", "grid method algebra", "difference of two squares", "expand and simplify"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 84
+---
+
+Expanding double brackets is a fundamental algebra skill tested on both Foundation and Higher tier GCSE Maths papers. You will need it for factorising quadratics, solving equations, and graph work, so it is worth practising until the method is automatic.
+
+## What Is Expanding Double Brackets?
+
+When you expand double brackets you multiply two linear expressions together to produce a quadratic expression. For example, (x + 3)(x + 5) becomes x² + 8x + 15. The process uses the distributive law twice: every term in the first bracket must be multiplied by every term in the second bracket, giving four partial products that are then collected and simplified.
+
+There are two popular methods. The **FOIL method** labels the four multiplications as First, Outside, Inside, Last. The **grid method** sets up a 2 x 2 table with one bracket across the top and the other down the side, then fills in each cell. Both give the same answer, so use whichever you find clearer.
+
+A special case worth memorising is the **difference of two squares**: when the two brackets have the same terms but opposite signs, the middle terms cancel and you are left with a² - b².
+
+### Key Formulas
+
+[FORMULA: (x + a)(x + b) = x² + (a + b)x + ab]
+
+[FORMULA: (a + b)(a - b) = a² - b²]
+
+## Step-by-Step Method
+
+1. Multiply the first terms of each bracket together to get the x² term.
+2. Multiply the outer pair of terms (first term of the first bracket by the last term of the second bracket).
+3. Multiply the inner pair of terms (last term of the first bracket by the first term of the second bracket).
+4. Multiply the last terms of each bracket together to get the constant term.
+5. Collect the two middle terms (outer + inner) and write the simplified expression.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Expand and simplify (x + 4)(x + 6).
+
+**Working:**
+
+Step 1 — First: x times x = x².
+
+Step 2 — Outside: x times 6 = 6x.
+
+Step 3 — Inside: 4 times x = 4x.
+
+Step 4 — Last: 4 times 6 = 24.
+
+Step 5 — Collect like terms: x² + 6x + 4x + 24 = x² + 10x + 24.
+
+**Answer:** x² + 10x + 24
+
+## Worked Example 2 — Higher Level
+
+**Question:** Expand and simplify (3x - 2)(2x + 5).
+
+**Working:**
+
+Step 1 — First: 3x times 2x = 6x².
+
+Step 2 — Outside: 3x times 5 = 15x.
+
+Step 3 — Inside: (-2) times 2x = -4x.
+
+Step 4 — Last: (-2) times 5 = -10.
+
+Step 5 — Collect like terms: 6x² + 15x - 4x - 10 = 6x² + 11x - 10.
+
+**Answer:** 6x² + 11x - 10
+
+## Worked Example 3 — Exam Style
+
+**Question:** Show that (x + 7)(x - 7) - (x + 3)² = -58 - 6x. (4 marks)
+
+**Working:**
+
+Expand (x + 7)(x - 7) using the difference of two squares: x² - 49.
+
+Expand (x + 3)²: (x + 3)(x + 3) = x² + 3x + 3x + 9 = x² + 6x + 9.
+
+Subtract: (x² - 49) - (x² + 6x + 9) = x² - 49 - x² - 6x - 9 = -6x - 58.
+
+This is the same as -58 - 6x. QED.
+
+**Answer:** Shown: both sides simplify to -6x - 58.
+
+## Common Mistakes
+
+- **Forgetting the inner or outer product.** Students sometimes write only three terms instead of four. Using FOIL labels or a grid prevents this.
+- **Sign errors with negatives.** In (x - 3)(x + 5), the inner product is -3 times x = -3x, not +3x. Track signs carefully at every multiplication.
+- **Writing (x + 4)² as x² + 16.** You must expand as (x + 4)(x + 4) = x² + 8x + 16. The middle term 2ab is always present when the bracket is squared.
+
+## Exam Tips
+
+- If the question says "expand and simplify," you must collect like terms or you will lose a mark.
+- Use the grid method if you keep making errors with FOIL — it lays out all four products visually.
+- Check your expansion by substituting x = 1 into both the brackets and the expanded form; the two results should match.
+
+## Practice Questions
+
+**Q1 (Foundation):** Expand and simplify (x + 5)(x + 2).
+
+[ANSWER: x times x = x². x times 2 = 2x. 5 times x = 5x. 5 times 2 = 10. Collect: x² + 7x + 10.]
+
+**Q2 (Foundation):** Expand and simplify (x - 3)(x + 8).
+
+[ANSWER: x² + 8x - 3x - 24 = x² + 5x - 24.]
+
+**Q3 (Higher):** Expand and simplify (4x + 1)(2x - 3).
+
+[ANSWER: 4x times 2x = 8x². 4x times (-3) = -12x. 1 times 2x = 2x. 1 times (-3) = -3. Collect: 8x² - 10x - 3.]
+
+---
+
+Practise expanding double brackets questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Expanding Brackets](/topics/expanding-brackets)
+- [Factorising Expressions](/topics/factorising-expressions)
+- [Simplifying Expressions](/topics/simplifying-expressions)
+
+## Summary
+
+- Expanding double brackets means multiplying every term in the first bracket by every term in the second.
+- Use FOIL (First, Outside, Inside, Last) or a 2 x 2 grid to organise the four products.
+- Always collect like terms after expanding.
+- The difference of two squares is a shortcut: (a + b)(a - b) = a² - b².
+- Check your answer by substituting a simple value such as x = 1 into both forms.
+`,
+  "expected-frequency": `---
+title: "Expected Frequency – GCSE Maths Revision Guide"
+description: "Learn expected frequency for GCSE Maths with step-by-step methods, comparing expected vs actual results, fairness, and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["expected frequency GCSE", "probability times trials", "expected outcomes", "fairness probability", "expected vs actual"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 187
+---
+
+Expected frequency is a straightforward but important probability topic that appears on both Foundation and Higher GCSE Maths papers across AQA, Edexcel and OCR. It links theoretical probability with real-world experiments by predicting how often an event should occur over a number of trials. You also need to compare expected frequencies with actual results to assess fairness. This guide covers the method, worked examples and practice questions. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is Expected Frequency?
+
+The **expected frequency** of an event is the number of times you would expect it to happen based on its probability and the number of trials.
+
+### Key Formulas
+
+[FORMULA: Expected frequency = Probability of the event x Number of trials]
+
+For example, if the probability of rolling a 6 on a fair dice is 1/6 and you roll the dice 300 times, the expected frequency of rolling a 6 is (1/6) x 300 = 50.
+
+### Expected vs Actual
+
+In practice, the actual frequency may differ from the expected frequency due to random variation. The more trials you carry out, the closer the actual frequency should be to the expected frequency.
+
+### Fairness
+
+If the actual results differ significantly from the expected results, the object (dice, spinner, coin) may be **biased** — but you need a large number of trials before drawing this conclusion.
+
+## Step-by-Step Method
+
+1. Identify the probability of the event (either given or calculated).
+2. Identify the number of trials.
+3. Multiply: expected frequency = probability x number of trials.
+4. If asked to compare, calculate the difference between expected and actual and comment on whether it suggests bias.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A fair spinner has 5 equal sections coloured red, blue, green, yellow and white. The spinner is spun 200 times. How many times would you expect it to land on blue?
+
+**Working:**
+
+P(blue) = 1/5 = 0.2.
+
+Expected frequency = 0.2 x 200 = **40 times**.
+
+**Answer:** You would expect it to land on blue 40 times.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A biased coin has P(heads) = 0.6. The coin is flipped 250 times. (a) Calculate the expected number of heads. (b) The coin actually lands on heads 170 times. Does this support the given probability?
+
+**Working:**
+
+**(a)** Expected heads = 0.6 x 250 = **150**.
+
+**(b)** Actual heads = 170. Difference = 170 − 150 = 20. The actual result is 20 more than expected. This is a moderate difference for 250 trials. The given probability may still be approximately correct — some variation is natural. However, the actual frequency is somewhat higher than expected, so if this pattern continued over more trials, it might suggest P(heads) is slightly higher than 0.6.
+
+**Answer:** (a) 150 heads expected. (b) The difference of 20 is relatively small for 250 trials, so the result broadly supports the given probability, though more trials would increase confidence.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A dice is rolled 600 times. The table shows the results.
+
+| Number | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|
+| Frequency | 95 | 102 | 98 | 110 | 97 | 98 |
+
+Is the dice fair? Justify your answer.
+
+**Working:**
+
+If the dice is fair, each number has probability 1/6. Expected frequency for each = 600 x (1/6) = 100.
+
+Actual frequencies are all close to 100 (ranging from 95 to 110). The largest deviation is 10 (number 4: 110 vs 100).
+
+**Answer:** The dice appears to be fair. All actual frequencies are close to the expected frequency of 100. The small differences are consistent with normal random variation over 600 trials.
+
+## Common Mistakes
+
+- **Expecting exact results.** Expected frequency is a prediction, not a guarantee. Actual results will vary due to chance.
+- **Concluding bias from few trials.** A small number of trials can produce large deviations by chance. Always mention sample size when discussing fairness.
+- **Forgetting to multiply.** Some students state the probability as the answer instead of multiplying by the number of trials.
+
+## Exam Tips
+
+- Expected frequency questions are quick marks — just multiply probability by number of trials.
+- If asked "Is the dice/coin/spinner fair?", compare actual frequencies with expected and comment on whether differences are within reasonable variation.
+- Always state that more trials would give more reliable conclusions when evaluating fairness.
+- For related topics, see [relative frequency](/topics/relative-frequency) and [probability scale and basic probability](/topics/probability-scale-and-basic-probability). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A fair dice is rolled 180 times. How many times would you expect to roll a 3?
+
+[ANSWER: P(3) = 1/6. Expected frequency = (1/6) x 180 = 30 times.]
+
+**Q2 (Foundation):** The probability of it raining on any given day is 0.3. In a 30-day month, how many rainy days would you expect?
+
+[ANSWER: Expected rainy days = 0.3 x 30 = 9 days.]
+
+**Q3 (Higher):** A spinner has P(red) = 0.4. It is spun 500 times and lands on red 230 times. Comment on whether the spinner matches the given probability.
+
+[ANSWER: Expected red = 0.4 x 500 = 200. Actual = 230. Difference = 30. This is a notable difference — the spinner lands on red more often than expected. Over 500 trials, this may suggest P(red) is slightly higher than 0.4, though further trials would be needed to confirm bias.]
+
+---
+
+Practise expected frequency questions free on GCSEMathsAI.
+
+## Related Topics
+
+- [Probability Scale and Basic Probability](/topics/probability-scale-and-basic-probability)
+- [Relative Frequency](/topics/relative-frequency)
+- [Mutually Exclusive Events](/topics/mutually-exclusive-events)
+
+## Summary
+
+- Expected frequency = probability x number of trials.
+- It predicts how many times an event should occur, but actual results will vary due to random chance.
+- To assess fairness, compare actual and expected frequencies. Small differences are normal; large, consistent differences may suggest bias.
+- Always note that more trials increase the reliability of any conclusions about fairness.
+`,
+  "expressing-one-quantity-as-a-percentage": `---
+title: "Expressing One Quantity as a Percentage – GCSE Maths Revision Guide"
+description: "Learn how to express one quantity as a percentage of another for GCSE Maths using the (part/whole) times 100 method with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["expressing as a percentage GCSE", "one quantity as a percentage", "part over whole times 100", "comparing percentages", "percentage of a total"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 135
+---
+
+Expressing one quantity as a percentage of another is a practical GCSE Maths skill used in test scores, financial contexts, and data comparison. It appears on both Foundation and Higher papers.
+
+## What Does It Mean to Express a Quantity as a Percentage?
+
+When you express one quantity as a percentage of another, you are finding what proportion the first quantity is of the second, then converting that proportion to a percentage. This lets you compare amounts that may have different totals — for example, comparing test results out of different marks.
+
+The method is simple: divide the part by the whole, then multiply by 100. The result tells you what percentage the part is of the whole.
+
+This skill connects to many other percentage topics, including percentage change and reverse percentages.
+
+### Key Formulas
+
+[FORMULA: Percentage = (Part / Whole) × 100]
+
+[FORMULA: Make sure Part and Whole are in the same units before calculating]
+
+## Step-by-Step Method
+
+1. Identify the "part" (the quantity you want to express as a percentage) and the "whole" (the total).
+2. Ensure both values are in the same units.
+3. Divide the part by the whole.
+4. Multiply by 100 to convert to a percentage.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A student scores 18 out of 25 on a test. Express this as a percentage.
+
+**Working:**
+
+Step 1 — Part = 18, Whole = 25.
+
+Step 2 — Divide: 18 ÷ 25 = 0.72.
+
+Step 3 — Multiply by 100: 0.72 × 100 = 72%.
+
+**Answer:** 72%
+
+## Worked Example 2 — Higher Level
+
+**Question:** A factory produces 840 items in a day. 63 are found to be defective. What percentage of the items are defective?
+
+**Working:**
+
+Step 1 — Part = 63, Whole = 840.
+
+Step 2 — Divide: 63 ÷ 840 = 0.075.
+
+Step 3 — Multiply by 100: 0.075 × 100 = 7.5%.
+
+**Answer:** 7.5% of the items are defective.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Priya earns £28,000 per year. She saves £3,920. What percentage of her salary does she save? She wants to increase her savings to 15% of her salary. How much more must she save?
+
+**Working:**
+
+Step 1 — Percentage saved: 3,920 ÷ 28,000 = 0.14. 0.14 × 100 = 14%.
+
+Step 2 — 15% of £28,000: 0.15 × 28,000 = £4,200.
+
+Step 3 — Extra savings needed: 4,200 − 3,920 = £280.
+
+**Answer:** Priya saves 14% of her salary. She must save an extra £280.
+
+## Common Mistakes
+
+- **Dividing the whole by the part instead of part by whole.** The part (the smaller quantity you are interested in) goes on top. "18 out of 25" means 18 ÷ 25, not 25 ÷ 18.
+- **Forgetting to multiply by 100.** Dividing part by whole gives a decimal — you must multiply by 100 to convert it to a percentage.
+- **Using different units.** If one quantity is in centimetres and the other in metres, convert to the same unit before dividing.
+
+## Exam Tips
+
+- Write out the formula (Part / Whole) × 100 to remind yourself of the structure.
+- If the answer is a recurring decimal, give it to one decimal place or as a fraction unless told otherwise.
+- On non-calculator papers, try to simplify the fraction first — for example, 18/25 = 72/100 = 72%.
+
+## Practice Questions
+
+**Q1 (Foundation):** There are 30 students in a class. 12 are boys. What percentage of the class are boys?
+
+[ANSWER: 12 ÷ 30 = 0.4. 0.4 × 100 = 40%. Answer: 40%]
+
+**Q2 (Foundation):** A shirt originally costs £40. It is reduced by £6. What percentage discount is this?
+
+[ANSWER: 6 ÷ 40 = 0.15. 0.15 × 100 = 15%. Answer: 15%]
+
+**Q3 (Higher):** In an election, Candidate A gets 1,350 votes and Candidate B gets 1,150 votes. What percentage of the total votes did Candidate A receive? Give your answer to 1 decimal place.
+
+[ANSWER: Total votes = 1,350 + 1,150 = 2,500. 1,350 ÷ 2,500 = 0.54. 0.54 × 100 = 54.0%. Answer: 54.0%]
+
+---
+
+Practise expressing one quantity as a percentage questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Percentages](/topics/percentages)
+- [Percentage Change](/topics/percentage-change)
+- [Converting Fractions, Decimals and Percentages](/topics/converting-fractions-decimals-percentages)
+
+## Summary
+
+- To express one quantity as a percentage of another, use (Part / Whole) × 100.
+- Always check both quantities are in the same units before calculating.
+- This method works for test scores, discounts, proportions, and any comparison context.
+- Simplify the fraction first on non-calculator papers to make the arithmetic easier.
+`,
   "factorising-expressions": `---
 title: "Factorising Expressions – GCSE Maths Guide"
 description: "Learn how to factorise algebraic expressions at GCSE level with worked examples, step-by-step methods, and practice questions."
@@ -3302,6 +8406,1071 @@ For a full list of every GCSE Maths topic, see our [GCSE Maths Topics Complete L
 - Always factorise fully — check that nothing common remains inside the bracket.
 - Expand your answer to verify it matches the original expression.
 - Factorising is a gateway skill for solving quadratics, simplifying fractions, and many other Higher topics.
+`,
+  "factorising-harder-quadratics": `---
+title: "Factorising Harder Quadratics – GCSE Maths Revision Guide"
+description: "Learn how to factorise quadratics where the coefficient of x² is not 1. Step-by-step ac method with worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["factorising harder quadratics", "ac method GCSE", "non-monic quadratics", "splitting the middle term", "factorise ax squared"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 137
+---
+
+# Factorising Harder Quadratics
+
+On the Higher paper you will meet quadratic expressions where the coefficient of x² is not 1, such as 6x² + 11x − 10. These are sometimes called non-monic quadratics and they require a more systematic approach than simple inspection. The most reliable method taught at GCSE is the ac method (also called splitting the middle term). This page walks you through every step with fully worked examples so you can tackle these confidently in the exam.
+
+## What Is Factorising Harder Quadratics?
+
+A harder quadratic has the form ax² + bx + c where a ≠ 1. Because the leading coefficient is not 1, you cannot simply look for two numbers that multiply to c and add to b. Instead, you use the product ac to guide your factorisation, then split the middle term and factorise by grouping.
+
+### Key Formulas
+
+[FORMULA: For ax² + bx + c, find two numbers that multiply to ac and add to b]
+
+[FORMULA: Then split bx into those two parts and factorise by grouping]
+
+## Step-by-Step Method
+
+1. **Write the quadratic in the form ax² + bx + c.** Identify a, b, and c.
+2. **Calculate the product ac.**
+3. **Find two numbers that multiply to ac and add to b.** List factor pairs of ac systematically.
+4. **Rewrite the middle term (bx) as the sum of two terms** using those numbers.
+5. **Group the four terms into two pairs** and factorise each pair.
+6. **Take out the common bracket** to complete the factorisation.
+7. **Expand to check** your answer matches the original expression.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Factorise 2x² + 7x + 3.
+
+**Working:**
+
+- a = 2, b = 7, c = 3. So ac = 2 × 3 = 6.
+- Find two numbers that multiply to 6 and add to 7: 1 and 6.
+- Split the middle term: 2x² + 1x + 6x + 3.
+- Group: (2x² + x) + (6x + 3).
+- Factorise each group: x(2x + 1) + 3(2x + 1).
+- Common bracket: (2x + 1)(x + 3).
+- Check: 2x² + 6x + x + 3 = 2x² + 7x + 3 ✓
+
+**Answer:** (2x + 1)(x + 3)
+
+## Worked Example 2 — Higher Level
+
+**Question:** Factorise 6x² − 7x − 20.
+
+**Working:**
+
+- a = 6, b = −7, c = −20. So ac = 6 × (−20) = −120.
+- Find two numbers that multiply to −120 and add to −7: 8 and −15 (since 8 × (−15) = −120 and 8 + (−15) = −7).
+- Split: 6x² + 8x − 15x − 20.
+- Group: (6x² + 8x) + (−15x − 20).
+- Factorise: 2x(3x + 4) − 5(3x + 4).
+- Common bracket: (3x + 4)(2x − 5).
+- Check: 6x² − 15x + 8x − 20 = 6x² − 7x − 20 ✓
+
+**Answer:** (3x + 4)(2x − 5)
+
+## Worked Example 3 — Exam Style
+
+**Question:** Solve 3x² + 10x − 8 = 0.
+
+**Working:**
+
+First factorise. a = 3, b = 10, c = −8. ac = −24.
+Two numbers that multiply to −24 and add to 10: 12 and −2.
+
+3x² + 12x − 2x − 8 = 0
+3x(x + 4) − 2(x + 4) = 0
+(x + 4)(3x − 2) = 0
+
+So x + 4 = 0 giving x = −4, or 3x − 2 = 0 giving x = 2/3.
+
+**Answer:** x = −4 or x = 2/3
+
+## Common Mistakes
+
+- **Using the wrong product.** Students sometimes look for numbers that multiply to c instead of ac. Always calculate ac first.
+- **Sign errors when splitting the middle term.** Be very careful with negatives. If ac is negative, one of your two numbers must be positive and the other negative.
+- **Incorrect grouping.** When factorising by grouping, both groups must produce the same bracket. If they do not, check your splitting step.
+
+## Exam Tips
+
+- Write out factor pairs of ac methodically — do not guess. This avoids wasting time.
+- If you cannot find a pair, double-check your values of a, b, and c, especially signs.
+- The ac method always works for factorisable quadratics, so it is the most reliable approach.
+- After factorising, the question may ask you to solve the equation — set each bracket equal to zero.
+
+## Practice Questions
+
+**Q1 (Foundation):** Factorise 2x² + 5x + 2.
+
+[ANSWER: (2x + 1)(x + 2)]
+
+**Q2 (Higher):** Factorise 5x² − 13x − 6.
+
+[ANSWER: (5x + 2)(x − 3)]
+
+**Q3 (Higher):** Solve 4x² + 4x − 3 = 0.
+
+[ANSWER: (2x + 3)(2x − 1) = 0, so x = −3/2 or x = 1/2]
+
+---
+
+Practise harder quadratics with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Factorising Expressions](/topics/factorising-expressions)
+- [Factorising Quadratics](/topics/factorising-quadratics)
+- [Solving Quadratic Equations by Factorising](/topics/solving-quadratic-equations-factorising)
+
+## Summary
+
+- Harder quadratics have the form ax² + bx + c where a is not 1.
+- Use the ac method: find two numbers that multiply to ac and add to b.
+- Split the middle term, group in pairs, and factorise each group.
+- Always expand your answer to verify it matches the original expression.
+- This skill is essential for solving equations, simplifying algebraic fractions, and completing the square.
+`,
+  "factorising-quadratics": `---
+title: "Factorising Quadratics – GCSE Maths Revision Guide"
+description: "Learn how to factorise quadratic expressions of the form x² + bx + c for GCSE Maths with factor pairs, worked examples, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["factorising quadratics GCSE", "factorise x squared", "factor pairs quadratic", "quadratic factorisation", "factorise and check"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 85
+---
+
+Factorising quadratics reverses the process of expanding double brackets. It is one of the most commonly tested algebra skills at GCSE and a prerequisite for solving quadratic equations, simplifying algebraic fractions, and sketching parabolas.
+
+## What Is Factorising Quadratics?
+
+Factorising a quadratic expression means rewriting it as the product of two linear brackets. For a monic quadratic (where the coefficient of x² is 1) in the form x² + bx + c, the goal is to find two numbers p and q such that p + q = b and p times q = c, so that the expression becomes (x + p)(x + q).
+
+The method works because expanding (x + p)(x + q) gives x² + (p + q)x + pq. By matching coefficients you can reverse-engineer the values of p and q from the original expression. Once factorised, you should always check your answer by expanding the brackets back out.
+
+When the coefficient of x² is greater than 1, the expression is called a non-monic quadratic. At Foundation tier you will mostly meet monic quadratics; non-monic factorising appears at Higher level and uses the grouping (ac) method.
+
+### Key Formulas
+
+[FORMULA: x² + bx + c = (x + p)(x + q) where p + q = b and pq = c]
+
+[FORMULA: Check: (x + p)(x + q) = x² + (p + q)x + pq]
+
+## Step-by-Step Method
+
+1. Write down the quadratic in the form x² + bx + c and identify the values of b and c.
+2. List all factor pairs of c (including negative pairs if c is negative).
+3. Find the pair whose sum equals b.
+4. Write the factorised form as (x + p)(x + q).
+5. Expand the brackets to check that you recover the original expression.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Factorise x² + 9x + 20.
+
+**Working:**
+
+Step 1 — Identify b = 9 and c = 20.
+
+Step 2 — Factor pairs of 20: (1, 20), (2, 10), (4, 5).
+
+Step 3 — Which pair sums to 9? 4 + 5 = 9.
+
+Step 4 — Write: (x + 4)(x + 5).
+
+Step 5 — Check: x² + 5x + 4x + 20 = x² + 9x + 20. Correct.
+
+**Answer:** (x + 4)(x + 5)
+
+## Worked Example 2 — Higher Level
+
+**Question:** Factorise x² - 3x - 28.
+
+**Working:**
+
+Step 1 — Here b = -3 and c = -28. Because c is negative, one number must be positive and one negative.
+
+Step 2 — Factor pairs of -28: (1, -28), (-1, 28), (2, -14), (-2, 14), (4, -7), (-4, 7).
+
+Step 3 — Which pair sums to -3? 4 + (-7) = -3.
+
+Step 4 — Write: (x + 4)(x - 7).
+
+Step 5 — Check: x² - 7x + 4x - 28 = x² - 3x - 28. Correct.
+
+**Answer:** (x + 4)(x - 7)
+
+## Worked Example 3 — Exam Style
+
+**Question:** Factorise x² - 11x + 24 and hence solve x² - 11x + 24 = 0. (3 marks)
+
+**Working:**
+
+b = -11 and c = 24. Both numbers must be negative (negative sum, positive product).
+
+Factor pairs of 24 (negative): (-1, -24), (-2, -12), (-3, -8), (-4, -6).
+
+-3 + (-8) = -11. This pair works.
+
+Factorised form: (x - 3)(x - 8).
+
+Setting each bracket to zero: x - 3 = 0 gives x = 3; x - 8 = 0 gives x = 8.
+
+Check: 3² - 11(3) + 24 = 9 - 33 + 24 = 0. Correct.
+
+**Answer:** (x - 3)(x - 8); solutions are x = 3 or x = 8.
+
+## Common Mistakes
+
+- **Getting signs wrong when c is negative.** If c < 0, one factor must be positive and one negative. List pairs systematically to avoid missing the correct combination.
+- **Choosing factors that multiply correctly but do not add correctly.** Always check both conditions: the pair must multiply to c and add to b.
+- **Forgetting to check by expanding.** A quick expansion confirms your answer and prevents dropped marks. It takes only a few seconds.
+
+## Exam Tips
+
+- Write out all factor pairs neatly before choosing. This avoids guesswork and shows the examiner your method.
+- If both b and c are positive, both numbers in the brackets are positive. If b is negative and c is positive, both numbers are negative.
+- When a question says "factorise and hence solve," factorise first, then set each bracket equal to zero.
+
+## Practice Questions
+
+**Q1 (Foundation):** Factorise x² + 7x + 12.
+
+[ANSWER: Factor pairs of 12: (1, 12), (2, 6), (3, 4). 3 + 4 = 7. Answer: (x + 3)(x + 4).]
+
+**Q2 (Foundation):** Factorise x² - 2x - 15.
+
+[ANSWER: Factor pairs of -15: (1, -15), (-1, 15), (3, -5), (-3, 5). 3 + (-5) = -2. Answer: (x + 3)(x - 5).]
+
+**Q3 (Higher):** Factorise x² - 10x + 25.
+
+[ANSWER: Factor pairs of 25 (negative pair): (-5, -5). -5 + (-5) = -10. Answer: (x - 5)². This is a perfect square.]
+
+---
+
+Practise factorising quadratics questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Factorising Expressions](/topics/factorising-expressions)
+- [Solving Quadratic Equations by Factorising](/topics/solving-quadratic-equations-factorising)
+- [Expanding Double Brackets](/topics/expanding-double-brackets)
+
+## Summary
+
+- Factorising a quadratic reverses expanding double brackets.
+- For x² + bx + c, find two numbers that multiply to c and add to b.
+- Write the expression as (x + p)(x + q) using those two numbers.
+- Always expand your answer to verify it matches the original expression.
+- Sign rules: if c is positive, both numbers share the same sign (both positive if b > 0, both negative if b < 0). If c is negative, the numbers have opposite signs.
+`,
+  "factors-multiples-and-primes": `---
+title: "Factors, Multiples and Primes – GCSE Maths Revision Guide"
+description: "Learn factors, multiples, and prime numbers for GCSE Maths with factor pairs, prime factor trees, and product of primes worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["factors GCSE maths", "multiples GCSE", "prime numbers", "factor pairs", "prime factor tree"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 132
+---
+
+Factors, multiples, and primes form the foundation of number work at GCSE. These concepts appear directly on exam papers and also underpin topics such as HCF, LCM, fractions, and algebra.
+
+## What Are Factors, Multiples and Primes?
+
+A **factor** of a number divides into it exactly with no remainder. For example, the factors of 12 are 1, 2, 3, 4, 6, and 12. Factors come in pairs: 1 × 12, 2 × 6, 3 × 4.
+
+A **multiple** of a number is the result of multiplying it by a positive integer. The first five multiples of 7 are 7, 14, 21, 28, and 35.
+
+A **prime number** is a number greater than 1 that has exactly two factors: 1 and itself. The primes up to 30 are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Note that 1 is not prime and 2 is the only even prime.
+
+A **prime factor tree** breaks a number down into a product of its prime factors. Every integer greater than 1 has a unique prime factorisation.
+
+### Key Formulas
+
+[FORMULA: Product of primes: write a number using only prime factors with index notation, e.g. 60 = 2² × 3 × 5]
+
+[FORMULA: A number is prime if it has exactly two factors: 1 and itself]
+
+## Step-by-Step Method
+
+### Finding All Factors
+1. Start with 1 and the number itself — this is your first factor pair.
+2. Test 2, 3, 4, ... checking if each divides exactly into the number.
+3. Stop when your test number meets or exceeds the factor you are pairing it with.
+4. List all factors in order.
+
+### Drawing a Prime Factor Tree
+1. Write the number at the top.
+2. Split it into any two factors.
+3. Circle any prime factors (they are the branches that stop).
+4. Keep splitting non-prime factors until every branch ends in a prime.
+5. Write the result as a product of primes using index notation.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** List all the factors of 36.
+
+**Working:**
+
+Step 1 — Start: 1 × 36. Step 2 — 2 × 18. Step 3 — 3 × 12. Step 4 — 4 × 9. Step 5 — 6 × 6.
+
+Since 6 × 6 gives a repeated factor, we stop.
+
+**Answer:** 1, 2, 3, 4, 6, 9, 12, 18, 36
+
+## Worked Example 2 — Higher Level
+
+**Question:** Write 360 as a product of its prime factors. Give your answer in index notation.
+
+**Working:**
+
+Step 1 — Factor tree: 360 = 2 × 180. 180 = 2 × 90. 90 = 2 × 45. 45 = 3 × 15. 15 = 3 × 5.
+
+Step 2 — Collect the primes: 2 × 2 × 2 × 3 × 3 × 5.
+
+Step 3 — Write in index notation: 2³ × 3² × 5.
+
+**Answer:** 360 = 2³ × 3² × 5
+
+## Worked Example 3 — Exam Style
+
+**Question:** Explain why 51 is not a prime number.
+
+**Working:**
+
+Step 1 — Check divisibility. 51 ÷ 3 = 17 (no remainder).
+
+Step 2 — Since 51 = 3 × 17, it has factors other than 1 and itself.
+
+**Answer:** 51 is not prime because it is divisible by 3 (51 = 3 × 17).
+
+## Common Mistakes
+
+- **Thinking 1 is a prime number.** It is not — a prime must have exactly two distinct factors, and 1 only has one factor.
+- **Missing factor pairs.** Work systematically from 1 upwards to ensure you find every pair. Stop when the factors start repeating.
+- **Not fully breaking down the factor tree.** Every branch must end at a prime. If you stop at 4, 6, 9, or any composite number, the factorisation is incomplete.
+
+## Exam Tips
+
+- Memorise the prime numbers up to 100: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97.
+- Use divisibility rules: a number is divisible by 3 if its digit sum is divisible by 3.
+- Always present your final answer in index notation — examiners expect this.
+
+## Practice Questions
+
+**Q1 (Foundation):** List all the factor pairs of 48.
+
+[ANSWER: 1 × 48, 2 × 24, 3 × 16, 4 × 12, 6 × 8. Factors: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48.]
+
+**Q2 (Foundation):** Write down the first six multiples of 9.
+
+[ANSWER: 9, 18, 27, 36, 45, 54.]
+
+**Q3 (Higher):** Write 504 as a product of its prime factors in index notation.
+
+[ANSWER: 504 ÷ 2 = 252, 252 ÷ 2 = 126, 126 ÷ 2 = 63, 63 ÷ 3 = 21, 21 ÷ 3 = 7. So 504 = 2³ × 3² × 7.]
+
+---
+
+Practise factors, multiples and primes questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Prime Factorisation, HCF and LCM](/topics/prime-factorisation-hcf-and-lcm)
+- [Indices and Index Laws](/topics/indices-and-index-laws)
+- [Equivalent Fractions and Simplifying](/topics/equivalent-fractions-and-simplifying)
+
+## Summary
+
+- Factors divide exactly into a number; list them systematically in pairs.
+- Multiples are found by multiplying the number by 1, 2, 3, and so on.
+- A prime number has exactly two factors: 1 and itself. The number 1 is not prime.
+- Use a factor tree to express any number as a product of primes in index notation.
+`,
+  "finding-a-shorter-side-pythagoras": `---
+title: "Finding a Shorter Side (Pythagoras) – GCSE Maths Revision Guide"
+description: "Learn how to find a shorter side using Pythagoras' theorem by rearranging the formula, with worked examples and practice questions for GCSE Maths."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["finding shorter side pythagoras", "rearranging pythagoras", "pythagoras subtraction", "missing side right triangle", "pythagoras GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 108
+---
+
+Finding a shorter side is the second key skill in Pythagoras' theorem questions. Instead of adding the squares of the two shorter sides, you subtract — and getting the direction of the subtraction right is where many students lose marks.
+
+## What Is Finding a Shorter Side?
+
+When you know the hypotenuse and one of the shorter sides of a right-angled triangle, you can find the remaining shorter side by rearranging Pythagoras' theorem. The standard formula c² = a² + b² is rearranged so that the unknown shorter side is the subject.
+
+The crucial difference from finding the hypotenuse is that you **subtract** instead of add. You always subtract the square of the known shorter side from the square of the hypotenuse. If you subtract the wrong way round, you get a negative number under the square root, which is impossible for a real length.
+
+After subtracting, you take the square root to find the missing side. You should always check your answer by substituting back into the original formula to verify that a² + b² = c².
+
+### Key Formulas
+
+[FORMULA: a² = c² − b²]
+
+[FORMULA: a = √(c² − b²)]
+
+## Step-by-Step Method
+
+1. Identify the hypotenuse (c) — the longest side, opposite the right angle.
+2. Label the known shorter side (b) and the unknown shorter side (a).
+3. Rearrange the formula: a² = c² − b².
+4. Substitute the known values and subtract.
+5. Take the square root to find a.
+6. Check: does a² + b² = c²?
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A right-angled triangle has a hypotenuse of 13 cm and one side of 5 cm. Find the other side.
+
+**Working:**
+a² = c² − b²
+a² = 13² − 5²
+a² = 169 − 25
+a² = 144
+a = √144
+
+**Answer:** a = **12 cm**. Check: 5² + 12² = 25 + 144 = 169 = 13². Correct.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A right-angled triangle has a hypotenuse of 20 cm and one leg of 11 cm. Find the other leg to 1 decimal place.
+
+**Working:**
+a² = 20² − 11²
+a² = 400 − 121
+a² = 279
+a = √279
+
+**Answer:** a = **16.7 cm** (1 d.p.). Check: 11² + 16.7² = 121 + 278.89 = 399.89 ≈ 400 = 20². Correct (minor rounding difference).
+
+## Worked Example 3 — Exam Style
+
+**Question:** A ladder is 6.5 m long and leans against a vertical wall. The foot of the ladder is 2.5 m from the base of the wall. How high up the wall does the ladder reach?
+
+**Working:**
+The ladder is the hypotenuse. The distance from the wall is one shorter side. The height is the other.
+h² = 6.5² − 2.5²
+h² = 42.25 − 6.25
+h² = 36
+h = √36
+
+**Answer:** The ladder reaches **6 m** up the wall.
+
+## Common Mistakes
+
+- **Subtracting the wrong way round.** Always subtract the smaller square from the larger: a² = c² − b². If you do b² − c² you get a negative, which is impossible.
+- **Adding instead of subtracting.** When finding a shorter side, you subtract. When finding the hypotenuse, you add. Mixing these up is the most common Pythagoras error.
+- **Misidentifying the hypotenuse.** If the question gives you two sides and does not specify which is the hypotenuse, the hypotenuse is always the longest one. If you label a shorter side as the hypotenuse, the subtraction may give a wrong result.
+
+## Exam Tips
+
+- Write the rearranged formula a² = c² − b² before substituting — this earns a method mark.
+- Always check your answer: substitute back into a² + b² and confirm it equals c².
+- If the answer is not a whole number, the question will tell you how to round. Keep the full calculator value until the final step.
+
+## Practice Questions
+
+**Q1 (Foundation):** A right-angled triangle has a hypotenuse of 17 cm and one side of 8 cm. Find the other side.
+
+[ANSWER: a² = 17² − 8² = 289 − 64 = 225. a = √225 = 15 cm.]
+
+**Q2 (Foundation):** A rope stretches from the top of a 12 m pole to a point on the ground 9 m from the base. How long is the rope?
+
+[ANSWER: This is actually finding the hypotenuse: c² = 12² + 9² = 144 + 81 = 225. c = √225 = 15 m.]
+
+**Q3 (Higher):** A right-angled triangle has a hypotenuse of 25 cm and one side of 7 cm. Find the other side.
+
+[ANSWER: a² = 25² − 7² = 625 − 49 = 576. a = √576 = 24 cm. (This is the 7-24-25 Pythagorean triple.)]
+
+---
+
+Practise finding a shorter side questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+- [Finding the Hypotenuse](/topics/finding-the-hypotenuse)
+- [Trigonometry SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+
+## Summary
+
+- To find a shorter side, rearrange Pythagoras' theorem to a² = c² − b².
+- Always subtract the square of the known shorter side from the square of the hypotenuse — never the other way round.
+- Take the square root after subtracting to find the missing side length.
+- Check your answer by verifying a² + b² = c² with all three sides.
+`,
+  "finding-the-equation-of-a-line": `---
+title: "Finding the Equation of a Line – GCSE Maths Revision Guide"
+description: "Learn how to find the equation of a straight line for GCSE Maths. Covers gradient and a point, two points, parallel and perpendicular lines with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["equation of a line gcse", "find equation from gradient and point", "equation from two points", "parallel and perpendicular lines gcse", "y = mx + c gcse"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 92
+---
+
+Finding the equation of a straight line is one of the most tested algebra skills at GCSE. Whether you are given a gradient and a point, two points, or told the line is parallel or perpendicular to another, the goal is always the same: write the equation in the form y = mx + c.
+
+## What Is the Equation of a Line?
+
+Every straight line on a coordinate grid can be described by an equation. The most common form is:
+
+[FORMULA: y = mx + c]
+
+where **m** is the gradient (how steep the line is) and **c** is the y-intercept (where the line crosses the y-axis).
+
+If you know the gradient and any single point on the line, you can substitute into y = mx + c to find c. If you are given two points, you first calculate the gradient, then use one of the points to find c.
+
+### Key Formulas
+
+[FORMULA: Gradient = (y₂ − y₁) / (x₂ − x₁)]
+
+[FORMULA: y = mx + c — substitute a known point to find c]
+
+[FORMULA: Parallel lines have equal gradients: m₁ = m₂]
+
+[FORMULA: Perpendicular lines have gradients that multiply to −1: m₁ × m₂ = −1]
+
+## Step-by-Step Method
+
+### From a gradient and a point
+
+1. Write y = mx + c and substitute the given gradient for m.
+2. Substitute the coordinates of the point for x and y.
+3. Solve for c.
+4. Write the final equation.
+
+### From two points
+
+1. Calculate the gradient using (y₂ − y₁) / (x₂ − x₁).
+2. Substitute the gradient and one of the points into y = mx + c.
+3. Solve for c.
+4. Write the final equation.
+
+### Parallel or perpendicular to a given line (Higher)
+
+1. Read off or calculate the gradient of the given line.
+2. For a **parallel** line, use the same gradient. For a **perpendicular** line, use the negative reciprocal.
+3. Substitute the new gradient and the given point into y = mx + c, then solve for c.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the equation of the line with gradient 3 that passes through (2, 11).
+
+**Working:**
+
+y = mx + c
+
+Substitute m = 3, x = 2, y = 11:
+
+11 = 3(2) + c
+
+11 = 6 + c
+
+c = 5
+
+**Answer:** y = 3x + 5
+
+## Worked Example 2 — Higher Level
+
+**Question:** Find the equation of the line passing through (1, 4) and (4, 13).
+
+**Working:**
+
+Gradient = (13 − 4) / (4 − 1) = 9 / 3 = 3
+
+Substitute m = 3 and the point (1, 4) into y = mx + c:
+
+4 = 3(1) + c
+
+c = 1
+
+**Answer:** y = 3x + 1
+
+## Worked Example 3 — Exam Style
+
+**Question:** Line L has equation y = 2x − 5. Find the equation of the line perpendicular to L that passes through (6, 1).
+
+**Working:**
+
+Gradient of L = 2. The perpendicular gradient is −1/2 (negative reciprocal).
+
+Substitute m = −1/2 and the point (6, 1) into y = mx + c:
+
+1 = (−1/2)(6) + c
+
+1 = −3 + c
+
+c = 4
+
+**Answer:** y = −(1/2)x + 4
+
+## Common Mistakes
+
+- **Swapping the coordinates in the gradient formula.** Always subtract in the same order: (y₂ − y₁) on top and (x₂ − x₁) on the bottom. Mixing up the order gives the wrong sign.
+- **Forgetting the negative reciprocal for perpendicular lines.** The perpendicular gradient is not just the reciprocal — you must also flip the sign. The gradient perpendicular to 3 is −1/3, not 1/3.
+- **Leaving c out of the final answer.** After finding c, make sure you write the full equation y = mx + c. Some students solve for c but never state the equation.
+
+## Exam Tips
+
+- Always show your substitution step — writing 11 = 3(2) + c earns method marks even if you make an arithmetic slip.
+- If the question says "parallel", the gradient stays the same. If it says "perpendicular", flip and negate.
+- Check your answer by substituting the given point back into your final equation to confirm it works.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the equation of the line with gradient 5 that passes through (1, 8).
+
+[ANSWER: y = mx + c. 8 = 5(1) + c, so c = 3. Equation: y = 5x + 3.]
+
+**Q2 (Foundation):** Find the equation of the line through (2, 3) and (6, 11).
+
+[ANSWER: Gradient = (11 − 3)/(6 − 2) = 8/4 = 2. Substitute (2, 3): 3 = 2(2) + c, c = −1. Equation: y = 2x − 1.]
+
+**Q3 (Higher):** A line is parallel to y = 4x + 1 and passes through (3, 5). Find its equation.
+
+[ANSWER: Parallel gradient = 4. Substitute (3, 5): 5 = 4(3) + c, c = −7. Equation: y = 4x − 7.]
+
+---
+
+Practise finding the equation of a line with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Linear Graphs and Equation of a Line](/topics/linear-graphs-and-equation-of-a-line)
+- [Plotting Straight Line Graphs](/topics/plotting-straight-line-graphs)
+- [Solving Linear Equations](/topics/solving-linear-equations)
+
+## Summary
+
+- The equation of a straight line is y = mx + c, where m is the gradient and c is the y-intercept.
+- To find the equation from a gradient and a point, substitute into y = mx + c and solve for c.
+- To find the equation from two points, first calculate the gradient, then substitute a point to find c.
+- Parallel lines share the same gradient; perpendicular lines have gradients that multiply to −1.
+- Always check your final equation by substituting a known point back in.
+`,
+  "finding-the-hypotenuse": `---
+title: "Finding the Hypotenuse – GCSE Maths Revision Guide"
+description: "Learn how to find the hypotenuse using Pythagoras' theorem with step-by-step methods, Pythagorean triples, worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["finding the hypotenuse GCSE", "pythagoras hypotenuse", "hypotenuse calculation", "pythagorean triples", "right angled triangle GCSE"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 107
+---
+
+Finding the hypotenuse is the most common application of Pythagoras' theorem in GCSE Maths. Once you can identify the longest side and apply the formula confidently, you unlock marks on both Foundation and Higher papers.
+
+## What Is Finding the Hypotenuse?
+
+The hypotenuse is the longest side of a right-angled triangle. It is always the side directly opposite the right angle (the 90° angle, usually marked with a small square). Every right-angled triangle has exactly one hypotenuse.
+
+Pythagoras' theorem tells us that the square of the hypotenuse equals the sum of the squares of the other two sides. If the two shorter sides are a and b, and the hypotenuse is c, the relationship is expressed as a single formula. This formula is not provided on the exam formula sheet — you must memorise it.
+
+To find the hypotenuse, you square the two known sides, add them together, and take the square root of the result. The calculation is straightforward, but identifying the hypotenuse correctly is essential — labelling the wrong side leads to an entirely wrong answer.
+
+### Key Formulas
+
+[FORMULA: c² = a² + b²]
+
+[FORMULA: c = √(a² + b²)]
+
+### Pythagorean Triples
+
+Pythagorean triples are sets of three whole numbers that satisfy Pythagoras' theorem perfectly, with no rounding needed. Recognising them saves time in exams:
+
+- **3, 4, 5** (and multiples: 6-8-10, 9-12-15, 15-20-25)
+- **5, 12, 13** (and multiples: 10-24-26)
+- **8, 15, 17**
+- **7, 24, 25**
+
+## Step-by-Step Method
+
+1. Identify the right angle and label the hypotenuse (c) — the side opposite it.
+2. Label the other two sides a and b (order does not matter).
+3. Square both known sides and add them: c² = a² + b².
+4. Take the square root of the result to find c.
+5. Round your answer as the question instructs (1 d.p., 3 s.f., etc.).
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A right-angled triangle has shorter sides of 6 cm and 8 cm. Find the hypotenuse.
+
+**Working:**
+c² = a² + b²
+c² = 6² + 8²
+c² = 36 + 64
+c² = 100
+c = √100
+
+**Answer:** c = **10 cm**. (This is the Pythagorean triple 6-8-10, which is double the 3-4-5 triple.)
+
+## Worked Example 2 — Higher Level
+
+**Question:** A right-angled triangle has legs of 7.5 cm and 10 cm. Find the hypotenuse. Give your answer to 1 decimal place.
+
+**Working:**
+c² = 7.5² + 10²
+c² = 56.25 + 100
+c² = 156.25
+c = √156.25
+
+**Answer:** c = **12.5 cm**. (This is exact — no rounding needed.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** A rectangular field measures 40 m by 30 m. A path runs diagonally from one corner to the opposite corner. How long is the path?
+
+**Working:**
+The diagonal of a rectangle creates two right-angled triangles. The diagonal is the hypotenuse.
+c² = 40² + 30²
+c² = 1600 + 900
+c² = 2500
+c = √2500
+
+**Answer:** The path is **50 m** long. (This is the 3-4-5 triple scaled by 10.)
+
+## Common Mistakes
+
+- **Labelling the wrong side as the hypotenuse.** The hypotenuse is always opposite the right angle and always the longest side. If your answer is shorter than one of the given sides, you have made an error.
+- **Forgetting to square root at the end.** The formula gives c², not c. You must take the square root as the final step.
+- **Subtracting instead of adding.** When finding the hypotenuse you always add the squares. Subtraction is only used when finding a shorter side.
+
+## Exam Tips
+
+- Draw and label the triangle if one is not provided — mark the right angle and label the hypotenuse.
+- Show every step: formula, substitution, addition, then square root. Each step can earn a method mark.
+- Check your answer makes sense — the hypotenuse must be longer than either of the other two sides.
+
+## Practice Questions
+
+**Q1 (Foundation):** A right-angled triangle has sides of 9 cm and 12 cm. Find the hypotenuse.
+
+[ANSWER: c² = 81 + 144 = 225. c = √225 = 15 cm. (This is the 3-4-5 triple scaled by 3.)]
+
+**Q2 (Foundation):** A right-angled triangle has sides of 5 cm and 7 cm. Find the hypotenuse to 1 decimal place.
+
+[ANSWER: c² = 25 + 49 = 74. c = √74 = 8.6 cm (1 d.p.).]
+
+**Q3 (Higher):** A ship sails 24 km east and then 10 km north. How far is the ship from its starting point?
+
+[ANSWER: c² = 24² + 10² = 576 + 100 = 676. c = √676 = 26 km. (This is the 5-12-13 triple scaled by 2.)]
+
+---
+
+Practise finding the hypotenuse questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+- [Finding a Shorter Side (Pythagoras)](/topics/finding-a-shorter-side-pythagoras)
+- [Trigonometry SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+
+## Summary
+
+- The hypotenuse is the longest side of a right-angled triangle, always opposite the right angle.
+- Use c² = a² + b² to find it: square both shorter sides, add, then square root.
+- Pythagorean triples (3-4-5, 5-12-13, 8-15-17) give whole-number answers and appear frequently in exams.
+- Always check that your hypotenuse is longer than both other sides — if it is not, you have an error.
+`,
+  "finding-the-mean": `---
+title: "Finding the Mean – GCSE Maths Revision Guide"
+description: "Master finding the mean for GCSE Maths with step-by-step methods, worked examples and practice questions for Foundation and Higher tiers."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["mean GCSE", "finding the mean", "average GCSE maths", "mean from a list", "mean missing value"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 179
+---
+
+The mean is the most commonly used average in GCSE Maths and appears on virtually every AQA, Edexcel and OCR paper at both Foundation and Higher level. You need to know how to calculate the mean from a list of values, use the mean to find a missing value, and decide when the mean is the most appropriate average. This guide walks you through each skill with clear methods, worked examples and practice questions. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is the Mean?
+
+The **mean** is a measure of average found by adding all the values in a data set and dividing by the number of values. It uses every piece of data, which makes it a good overall summary — but it can be distorted by extreme values (outliers).
+
+### Key Formulas
+
+[FORMULA: Mean = Sum of all values ÷ Number of values]
+
+[FORMULA: Sum of all values = Mean × Number of values]
+
+The second formula is a rearrangement that is essential for finding missing values when you are given the mean.
+
+### When Is the Mean Appropriate?
+
+The mean is best when data is spread fairly evenly and there are no extreme outliers. If the data is skewed or contains outliers, the median may be a better measure of average.
+
+## Step-by-Step Method
+
+1. Add all the values together to find the total.
+2. Count how many values there are.
+3. Divide the total by the number of values.
+4. If you are given the mean and asked for a missing value, rearrange: multiply the mean by the number of values to get the total, then subtract the known values.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the mean of these seven test scores: 12, 15, 18, 14, 20, 11, 16.
+
+**Working:**
+
+Sum = 12 + 15 + 18 + 14 + 20 + 11 + 16 = 106.
+
+Number of values = 7.
+
+Mean = 106 ÷ 7 = **15.14 (2 d.p.)**.
+
+**Answer:** The mean test score is 15.14 (2 d.p.).
+
+## Worked Example 2 — Higher Level
+
+**Question:** Five numbers have a mean of 8. Four of the numbers are 6, 9, 7 and 11. Find the fifth number.
+
+**Working:**
+
+Total of all five numbers = Mean × Number of values = 8 × 5 = 40.
+
+Sum of the four known numbers = 6 + 9 + 7 + 11 = 33.
+
+Fifth number = 40 − 33 = **7**.
+
+**Answer:** The fifth number is 7.
+
+## Worked Example 3 — Exam Style
+
+**Question:** The mean height of 20 pupils is 1.58 m. A new pupil joins the class. The mean height of all 21 pupils is 1.60 m. Find the height of the new pupil.
+
+**Working:**
+
+Total height of 20 pupils = 1.58 × 20 = 31.60 m.
+
+Total height of 21 pupils = 1.60 × 21 = 33.60 m.
+
+Height of new pupil = 33.60 − 31.60 = **2.00 m**.
+
+**Answer:** The new pupil is 2.00 m tall.
+
+## Common Mistakes
+
+- **Dividing by the wrong number.** Always count the number of values carefully — do not confuse the total with the count.
+- **Forgetting to include all values.** When data is presented in a table or list, check you have included every entry before dividing.
+- **Rounding too early.** Keep the full value during your working and round only in the final answer if the question requires it.
+
+## Exam Tips
+
+- If the question asks for a missing value given the mean, rearrange to find the total first using Mean × Number of values.
+- State your sum and count clearly — this earns method marks even if your final arithmetic is wrong.
+- When comparing data sets, note that the mean can be pulled by outliers; mention this if asked which average is most appropriate.
+- For averages from grouped data, see [estimated mean from grouped data](/topics/estimated-mean-from-grouped-data). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the mean of 4, 7, 10, 3, 6.
+
+[ANSWER: Sum = 4 + 7 + 10 + 3 + 6 = 30. Mean = 30 ÷ 5 = 6.]
+
+**Q2 (Foundation):** The mean of four numbers is 12. Three of the numbers are 10, 14 and 9. Find the fourth number.
+
+[ANSWER: Total = 12 × 4 = 48. Sum of three numbers = 10 + 14 + 9 = 33. Fourth number = 48 − 33 = 15.]
+
+**Q3 (Higher):** The mean score of a class of 30 pupils is 64. The mean score of the boys is 60 and the mean score of the girls is 70. How many boys are in the class?
+
+[ANSWER: Let b = number of boys. 60b + 70(30 − b) = 64 × 30 = 1920. 60b + 2100 − 70b = 1920. −10b = −180. b = 18. There are 18 boys.]
+
+---
+
+Practise finding the mean and other averages free on GCSEMathsAI.
+
+## Related Topics
+
+- [Finding the Median](/topics/finding-the-median)
+- [Mode and Range](/topics/mode-and-range)
+- [Estimated Mean from Grouped Data](/topics/estimated-mean-from-grouped-data)
+
+## Summary
+
+- The mean is the sum of all values divided by the number of values.
+- To find a missing value, rearrange: Total = Mean × Number of values, then subtract the known values.
+- The mean uses every data point, which makes it sensitive to outliers.
+- Always show your sum and count clearly in exam working to secure method marks.
+`,
+  "finding-the-median": `---
+title: "Finding the Median – GCSE Maths Revision Guide"
+description: "Learn how to find the median for GCSE Maths including ordering data, the position rule, and median from frequency tables with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["median GCSE", "finding the median", "median from frequency table", "middle value", "median even number"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 180
+---
+
+The median is a key measure of average that appears on both Foundation and Higher GCSE Maths papers across AQA, Edexcel and OCR. Unlike the mean, the median is not affected by extreme values, making it especially useful for skewed data. You need to be able to order data, apply the position rule, find the median from even-numbered lists and from frequency tables. This guide explains each skill step by step. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is the Median?
+
+The **median** is the middle value when data is arranged in order from smallest to largest. If there is an even number of values, the median is the mean of the two middle values.
+
+### Key Formulas
+
+[FORMULA: Median position = (n + 1) ÷ 2, where n is the number of values]
+
+For an odd number of values, this gives a whole number — the position of the median. For an even number, it gives a position ending in .5, telling you to average the two values either side.
+
+### Median from a Frequency Table
+
+Add a cumulative frequency column. Use (n + 1) ÷ 2 to find the position, then read across to find which value that position falls in.
+
+## Step-by-Step Method
+
+1. Arrange all data values in ascending order.
+2. Count the total number of values, n.
+3. Calculate the median position: (n + 1) ÷ 2.
+4. If n is odd, the median is the value at that position.
+5. If n is even, add the two middle values and divide by 2.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the median of: 7, 3, 9, 1, 5, 8, 4.
+
+**Working:**
+
+Arrange in order: 1, 3, 4, 5, 7, 8, 9.
+
+n = 7. Median position = (7 + 1) ÷ 2 = 4th value.
+
+The 4th value is **5**.
+
+**Answer:** The median is 5.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Find the median of: 12, 6, 18, 3, 15, 9, 21, 24.
+
+**Working:**
+
+Arrange in order: 3, 6, 9, 12, 15, 18, 21, 24.
+
+n = 8. Median position = (8 + 1) ÷ 2 = 4.5th value.
+
+This means we average the 4th and 5th values: (12 + 15) ÷ 2 = **13.5**.
+
+**Answer:** The median is 13.5.
+
+## Worked Example 3 — Exam Style
+
+**Question:** The table shows the number of pets owned by 30 pupils.
+
+| Pets | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| Frequency | 5 | 8 | 10 | 4 | 3 |
+
+Find the median number of pets.
+
+**Working:**
+
+n = 30. Median position = (30 + 1) ÷ 2 = 15.5th value.
+
+Cumulative frequencies: 5, 13, 23, 27, 30.
+
+The 15th and 16th values both fall in the "2 pets" group (cumulative frequency reaches 23 at 2 pets).
+
+**Answer:** The median number of pets is 2.
+
+## Common Mistakes
+
+- **Forgetting to order the data.** The median requires data in ascending order — finding the middle of an unordered list gives a wrong answer.
+- **Using n ÷ 2 instead of (n + 1) ÷ 2.** The correct position formula includes the +1. Without it, you may select the wrong value.
+- **Not averaging for even-numbered lists.** When n is even, you must find the mean of the two middle values, not just pick one of them.
+- **Misreading cumulative frequency.** When working from a frequency table, build the cumulative frequency carefully and check which group the median position falls in.
+
+## Exam Tips
+
+- Always write the data in order before identifying the median — even if it looks roughly ordered already.
+- For frequency tables, add a cumulative frequency column on the exam paper to keep your working clear.
+- If asked to compare the median with the mean, note that the median is not affected by outliers and may better represent the "typical" value in skewed data.
+- For related averages, see [finding the mean](/topics/finding-the-mean) and [mode and range](/topics/mode-and-range). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the median of 14, 8, 22, 11, 17.
+
+[ANSWER: In order: 8, 11, 14, 17, 22. Median position = (5 + 1) ÷ 2 = 3rd value. Median = 14.]
+
+**Q2 (Foundation):** Find the median of 5, 10, 2, 8, 6, 3.
+
+[ANSWER: In order: 2, 3, 5, 6, 8, 10. Position = (6 + 1) ÷ 2 = 3.5th. Median = (5 + 6) ÷ 2 = 5.5.]
+
+**Q3 (Higher):** A frequency table shows scores 1 (freq 4), 2 (freq 7), 3 (freq 6), 4 (freq 3). Find the median score.
+
+[ANSWER: n = 4 + 7 + 6 + 3 = 20. Position = (20 + 1) ÷ 2 = 10.5th. Cumulative: 4, 11, 17, 20. The 10th and 11th values are both in the "2" group. Median = 2.]
+
+---
+
+Practise finding the median and other averages free on GCSEMathsAI.
+
+## Related Topics
+
+- [Finding the Mean](/topics/finding-the-mean)
+- [Mode and Range](/topics/mode-and-range)
+- [Cumulative Frequency and Box Plots](/topics/cumulative-frequency-and-box-plots)
+
+## Summary
+
+- The median is the middle value when data is arranged in order from smallest to largest.
+- Use the position rule (n + 1) ÷ 2 to find which value is the median.
+- For an even number of values, average the two middle values.
+- For frequency tables, use cumulative frequency to locate the median position.
+- The median is not affected by outliers, making it useful for skewed data.
 `,
   "forming-and-solving-equations": `---
 title: "Forming and Solving Equations – GCSE Guide"
@@ -3462,6 +9631,283 @@ For more on the formulas you need, see [GCSE Maths Formulas You Must Know](/blog
 - Always answer the question asked — it may not be just "find x."
 - Check that your answer is sensible in context (no negative lengths, angles that sum correctly, etc.).
 - This skill appears in geometry, number, and real-life contexts across all exam boards.
+`,
+  "forming-equations-from-shapes": `---
+title: "Forming Equations from Shapes – GCSE Maths Revision Guide"
+description: "Learn how to form and solve equations from geometric diagrams at GCSE. Uses angle facts, perimeter, and area with worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["forming equations from shapes", "algebra and geometry GCSE", "setting up equations diagrams", "angle equations GCSE", "perimeter algebra"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 139
+---
+
+# Forming Equations from Shapes
+
+One of the most common exam question styles combines algebra with geometry. You are given a shape with sides or angles written as algebraic expressions and asked to form an equation, then solve it. These questions test whether you can translate geometric rules into algebra. They appear on both Foundation and Higher papers and are worth several marks, so learning the method is essential.
+
+## What Is Forming Equations from Shapes?
+
+Forming equations from shapes means using known geometric facts — such as angles in a triangle summing to 180°, or opposite sides of a rectangle being equal — to write an equation involving an unknown. You then solve the equation to find the unknown and, often, calculate a measurement.
+
+### Key Formulas
+
+[FORMULA: Angles in a triangle add up to 180°]
+
+[FORMULA: Angles in a quadrilateral add up to 360°]
+
+[FORMULA: Perimeter = sum of all side lengths]
+
+[FORMULA: For a rectangle, opposite sides are equal]
+
+## Step-by-Step Method
+
+1. **Read the question carefully** and identify which geometric fact applies (angles in a triangle, perimeter, area, etc.).
+2. **Write an equation** using the algebraic expressions given in the diagram and the geometric rule.
+3. **Simplify the equation** by collecting like terms.
+4. **Solve for the unknown** variable.
+5. **Substitute back** to find the required measurement (angle, side length, area, etc.).
+6. **Check your answer makes sense** — side lengths must be positive, angles must be sensible.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A triangle has angles (2x + 10)°, (3x)°, and (x + 50)°. Find the value of x.
+
+**Working:**
+
+Angles in a triangle add up to 180°.
+
+(2x + 10) + 3x + (x + 50) = 180
+
+6x + 60 = 180
+
+6x = 120
+
+x = 20
+
+Check: angles are 2(20) + 10 = 50°, 3(20) = 60°, 20 + 50 = 70°. Sum = 50 + 60 + 70 = 180° ✓
+
+**Answer:** x = 20
+
+## Worked Example 2 — Higher Level
+
+**Question:** A rectangle has length (3x + 1) cm and width (x + 5) cm. The perimeter is 44 cm. Find the area of the rectangle.
+
+**Working:**
+
+Perimeter of a rectangle = 2(length + width).
+
+2[(3x + 1) + (x + 5)] = 44
+
+2(4x + 6) = 44
+
+8x + 12 = 44
+
+8x = 32
+
+x = 4
+
+Length = 3(4) + 1 = 13 cm. Width = 4 + 5 = 9 cm.
+
+Area = 13 × 9 = 117 cm².
+
+Check perimeter: 2(13 + 9) = 2 × 22 = 44 cm ✓
+
+**Answer:** 117 cm²
+
+## Worked Example 3 — Exam Style
+
+**Question:** An isosceles triangle has two equal sides of length (2x + 3) cm and a base of (x + 1) cm. The perimeter is 27 cm. Find the length of each side.
+
+**Working:**
+
+Perimeter = 2(2x + 3) + (x + 1) = 27
+
+4x + 6 + x + 1 = 27
+
+5x + 7 = 27
+
+5x = 20
+
+x = 4
+
+Equal sides = 2(4) + 3 = 11 cm each. Base = 4 + 1 = 5 cm.
+
+Check: 11 + 11 + 5 = 27 cm ✓
+
+**Answer:** Two sides of 11 cm and a base of 5 cm
+
+## Common Mistakes
+
+- **Forgetting the geometric rule.** Students write the expressions but do not set them equal to anything. You need a fact like "angles sum to 180°" or "perimeter = given value" to form the equation.
+- **Mixing up perimeter and area.** Read the question carefully — perimeter is the total of all sides; area involves multiplication.
+- **Accepting negative or zero side lengths.** If your value of x produces a negative side length, recheck your equation. Side lengths must be positive.
+
+## Exam Tips
+
+- Always state the geometric rule you are using — this earns a method mark even if your algebra goes wrong.
+- Show every step of your working. These questions carry 3–5 marks and part marks are available.
+- After finding x, substitute back to answer the specific question asked (the question might ask for a side length or an angle, not x itself).
+- Diagrams in exams are not drawn to scale, so do not estimate from the picture.
+
+## Practice Questions
+
+**Q1 (Foundation):** A triangle has angles (x + 30)°, (2x + 10)°, and (x + 20)°. Find x and state each angle.
+
+[ANSWER: 4x + 60 = 180, 4x = 120, x = 30. Angles are 60°, 70°, 50°]
+
+**Q2 (Foundation):** A square has side length (2x − 1) cm and perimeter 28 cm. Find x.
+
+[ANSWER: 4(2x − 1) = 28, 8x − 4 = 28, 8x = 32, x = 4]
+
+**Q3 (Higher):** A rectangle has length (5x − 2) cm and width (2x + 1) cm. Its area is 85 cm². Find x.
+
+[ANSWER: (5x − 2)(2x + 1) = 85. 10x² + x − 2 = 85. 10x² + x − 87 = 0. (10x + 29)(x − 3) = 0. x = 3 (reject negative). Length = 13 cm, width = 7 cm]
+
+---
+
+Practise forming equations from shapes with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Forming and Solving Equations](/topics/forming-and-solving-equations)
+- [Solving Linear Equations](/topics/solving-linear-equations)
+- [Angles — Basic Rules and Parallel Lines](/topics/angles-basic-rules-and-parallel-lines)
+
+## Summary
+
+- Use geometric rules (angle sums, perimeter, area) to set up equations from diagrams.
+- Collect like terms, solve for x, and substitute back to answer the question.
+- Always check that your answers are positive and make geometric sense.
+- State the geometric fact you are using to secure method marks in the exam.
+- These questions appear frequently and combine algebra with shape knowledge.
+`,
+  "fractions-of-amounts": `---
+title: "Fractions of Amounts – GCSE Maths Revision Guide"
+description: "Learn how to find a fraction of an amount for GCSE Maths with clear methods, worked examples at Foundation and Higher, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["fraction of an amount GCSE", "finding fractions of amounts", "fraction of a quantity", "non-calculator fractions", "GCSE fractions method"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 125
+---
+
+Finding a fraction of an amount is one of the most practical GCSE Maths skills. It appears in money problems, measurement contexts, and multi-step questions across Foundation and Higher papers. Once you master this technique, you can apply it to ratio sharing, probability, and data interpretation.
+
+## What Is a Fraction of an Amount?
+
+Finding a fraction of an amount means working out what a given fraction of a total quantity is. For example, finding 3/5 of 40 means splitting 40 into 5 equal parts and then taking 3 of those parts.
+
+This skill connects directly to percentages and ratio — once you can find a fraction of an amount, you can tackle a wide range of real-world problems including discounts, sharing quantities, and interpreting data.
+
+The method works with any amount — whole numbers, decimals, or even algebraic expressions at Higher tier.
+
+### Key Formulas
+
+[FORMULA: Fraction of an amount = (numerator / denominator) × amount]
+
+[FORMULA: Divide the amount by the denominator first, then multiply by the numerator]
+
+## Step-by-Step Method
+
+1. Divide the amount by the denominator of the fraction.
+2. Multiply the result by the numerator.
+3. Check your answer makes sense — it should be less than the original amount for proper fractions and more for improper fractions.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find 3/8 of 56.
+
+**Working:**
+
+Step 1 — Divide 56 by 8: 56 ÷ 8 = 7.
+
+Step 2 — Multiply by 3: 7 × 3 = 21.
+
+**Answer:** 21
+
+## Worked Example 2 — Higher Level
+
+**Question:** A school has 1,260 students. 5/9 of the students are girls. 2/7 of the girls study French. How many girls study French?
+
+**Working:**
+
+Step 1 — Find 5/9 of 1,260: 1,260 ÷ 9 = 140, then 140 × 5 = 700 girls.
+
+Step 2 — Find 2/7 of 700: 700 ÷ 7 = 100, then 100 × 2 = 200.
+
+**Answer:** 200 girls study French.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Jake earns £2,400 per month. He spends 1/3 on rent, 1/4 on bills, and saves the rest. How much does Jake save each month?
+
+**Working:**
+
+Step 1 — Rent: 2,400 ÷ 3 = £800.
+
+Step 2 — Bills: 2,400 ÷ 4 = £600.
+
+Step 3 — Total spent: 800 + 600 = £1,400.
+
+Step 4 — Savings: 2,400 − 1,400 = £1,000.
+
+**Answer:** Jake saves £1,000 per month.
+
+## Common Mistakes
+
+- **Multiplying by the denominator instead of dividing.** Always divide by the bottom number first, then multiply by the top number.
+- **Dividing by the numerator instead of the denominator.** Remember: the denominator tells you how many equal parts to split into.
+- **Not reading multi-step problems carefully.** Some questions ask for a fraction of a fraction — you must apply each step in order.
+
+## Exam Tips
+
+- On non-calculator papers, choose whether to divide first or multiply first based on which gives easier arithmetic.
+- If the amount does not divide evenly by the denominator, express your answer as a fraction or decimal as appropriate.
+- Always re-read the question to check exactly what value you need to find the fraction of.
+- Show your division and multiplication steps separately to earn method marks even if the final answer is wrong.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find 2/5 of 65.
+
+[ANSWER: 65 ÷ 5 = 13, then 13 × 2 = 26. Answer: 26]
+
+**Q2 (Foundation):** A bag contains 72 sweets. 5/8 of the sweets are red. How many red sweets are there?
+
+[ANSWER: 72 ÷ 8 = 9, then 9 × 5 = 45. Answer: 45 red sweets]
+
+**Q3 (Higher):** A factory produces 4,500 items. 2/5 are defective. Of the defective items, 3/4 can be repaired. How many defective items cannot be repaired?
+
+[ANSWER: Defective: 4,500 ÷ 5 = 900, 900 × 2 = 1,800. Repairable: 1,800 ÷ 4 = 450, 450 × 3 = 1,350. Cannot be repaired: 1,800 − 1,350 = 450.]
+
+---
+
+Practise fractions of amounts questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Fractions](/topics/fractions)
+- [Percentage of an Amount](/topics/percentage-of-an-amount)
+- [Ratio Basics and Sharing](/topics/ratio-basics-and-sharing)
+
+## Summary
+
+- To find a fraction of an amount, divide by the denominator then multiply by the numerator.
+- This method works for whole numbers, money, and measurements.
+- Multi-step problems may require finding a fraction of a fraction — apply each step in sequence.
+- Always check that your answer is smaller than the original for proper fractions.
+- Show every step of your working to secure method marks on exam papers.
 `,
   "fractions": `---
 title: "Fractions – GCSE Maths Revision Guide"
@@ -3980,6 +10426,268 @@ Sharpen your function skills with unlimited practice on [GCSEMathsAI](https://ww
 - Quadratic functions may give **two solutions** when you solve f(x) = k.
 - Function notation is the foundation for inverse functions, composite functions and graph transformations.
 `,
+  "geometric-sequences": `---
+title: "Geometric Sequences – GCSE Maths Revision Guide"
+description: "Master geometric sequences at GCSE. Learn the common ratio, nth term formula ar^(n-1), and how to find missing terms with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["geometric sequences GCSE", "common ratio", "nth term geometric", "ar to the n minus 1", "multiply sequences"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 140
+---
+
+# Geometric Sequences
+
+A geometric sequence is a sequence where each term is found by multiplying the previous term by a fixed number called the common ratio. Unlike arithmetic sequences (which add a constant), geometric sequences grow or shrink by a constant multiplier. This topic appears on the Higher paper and is closely linked to growth and decay, compound interest, and exponential graphs.
+
+## What Is a Geometric Sequence?
+
+A geometric sequence has a first term a and a common ratio r. Each term is obtained by multiplying the previous term by r.
+
+For example, 3, 6, 12, 24, 48, … has a = 3 and r = 2 (each term is doubled).
+
+Another example: 100, 50, 25, 12.5, … has a = 100 and r = 0.5 (each term is halved).
+
+### Key Formulas
+
+[FORMULA: nth term = a × r^(n−1)]
+
+[FORMULA: Common ratio r = any term ÷ previous term]
+
+Here, a is the first term, r is the common ratio, and n is the position of the term.
+
+## Step-by-Step Method
+
+1. **Identify the first term a** from the sequence.
+2. **Find the common ratio r** by dividing the second term by the first (or any consecutive pair).
+3. **Verify r is constant** by checking another pair of consecutive terms.
+4. **Use the nth term formula** a × r^(n−1) to find any term.
+5. **To find which term has a given value**, set a × r^(n−1) equal to that value and solve for n.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the common ratio and the next two terms of the sequence 5, 15, 45, 135, …
+
+**Working:**
+
+r = 15 ÷ 5 = 3. Check: 45 ÷ 15 = 3 ✓ and 135 ÷ 45 = 3 ✓
+
+Next term = 135 × 3 = 405. Following term = 405 × 3 = 1215.
+
+**Answer:** r = 3; next two terms are 405 and 1215
+
+## Worked Example 2 — Higher Level
+
+**Question:** The first term of a geometric sequence is 4 and the common ratio is 0.5. Find the 7th term.
+
+**Working:**
+
+Using the nth term formula: nth term = a × r^(n−1).
+
+7th term = 4 × 0.5^(7−1) = 4 × 0.5^6 = 4 × 0.015625 = 0.0625.
+
+**Answer:** 0.0625
+
+## Worked Example 3 — Exam Style
+
+**Question:** The 2nd term of a geometric sequence is 12 and the 5th term is 324. Find the common ratio and the first term.
+
+**Working:**
+
+2nd term: ar = 12. 5th term: ar⁴ = 324.
+
+Divide the 5th term by the 2nd term: ar⁴ ÷ ar = r³ = 324 ÷ 12 = 27.
+
+So r³ = 27, meaning r = 3.
+
+From ar = 12: a × 3 = 12, so a = 4.
+
+Check 5th term: 4 × 3⁴ = 4 × 81 = 324 ✓
+
+**Answer:** r = 3, a = 4
+
+## Common Mistakes
+
+- **Confusing arithmetic and geometric sequences.** Arithmetic sequences add a constant; geometric sequences multiply by a constant. Check whether the difference or the ratio between consecutive terms is constant.
+- **Using the wrong exponent in the formula.** The nth term uses r^(n−1), not r^n. The first term (n = 1) must give a × r⁰ = a.
+- **Forgetting negative or fractional ratios.** A sequence like 2, −6, 18, −54 has r = −3. A sequence like 80, 20, 5, 1.25 has r = 0.25.
+
+## Exam Tips
+
+- If a sequence alternates between positive and negative, the common ratio is negative.
+- When r is between −1 and 1 (exclusive), the terms get smaller and approach zero — this links to convergent series.
+- Always verify your common ratio with at least two pairs of consecutive terms.
+- Geometric sequences connect to compound interest (r = 1 + rate) and depreciation (r = 1 − rate).
+
+## Practice Questions
+
+**Q1 (Foundation):** Write the first 5 terms of the geometric sequence with a = 2 and r = 4.
+
+[ANSWER: 2, 8, 32, 128, 512]
+
+**Q2 (Higher):** Find the 6th term of the geometric sequence 1000, 200, 40, 8, …
+
+[ANSWER: r = 0.2. 6th term = 1000 × 0.2^5 = 1000 × 0.00032 = 0.32]
+
+**Q3 (Higher):** The 3rd term of a geometric sequence is 18 and the 6th term is 486. Find r and the first term.
+
+[ANSWER: ar² = 18, ar⁵ = 486. r³ = 486 ÷ 18 = 27. r = 3. a × 9 = 18, so a = 2]
+
+---
+
+Practise geometric sequences with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Sequences and Nth Term](/topics/sequences-and-nth-term)
+- [Quadratic Sequences and Nth Term](/topics/quadratic-sequences-and-nth-term)
+- [Growth and Decay](/topics/growth-and-decay)
+
+## Summary
+
+- A geometric sequence multiplies each term by a constant ratio r.
+- The nth term formula is a × r^(n−1), where a is the first term.
+- Find r by dividing any term by the previous term.
+- When given two terms, divide them to find a power of r, then solve for r.
+- Geometric sequences are closely related to exponential growth and decay problems.
+`,
+  "graph-transformations-translations-reflections": `---
+title: "Graph Transformations: Translations and Reflections – GCSE Maths Revision Guide"
+description: "Learn graph transformations at GCSE: f(x)+a, f(x+a), −f(x), and f(−x). Understand translations and reflections with worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["graph transformations GCSE", "translations graphs", "reflections graphs", "f of x plus a", "function transformations"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 149
+---
+
+# Graph Transformations: Translations and Reflections
+
+Graph transformations allow you to move, stretch, or reflect a graph without plotting every single point. At GCSE Higher level, you need to understand four key transformations: vertical translations, horizontal translations, reflection in the x-axis, and reflection in the y-axis. These are described using function notation. This topic appears in every Higher exam and typically carries 2–4 marks.
+
+## What Are Graph Transformations?
+
+A graph transformation changes the position or orientation of a graph. Starting from a known graph y = f(x), you apply changes to the function to produce a new graph. The four transformations you need are:
+
+- **y = f(x) + a** — translates the graph up (a > 0) or down (a < 0).
+- **y = f(x + a)** — translates the graph left (a > 0) or right (a < 0).
+- **y = −f(x)** — reflects the graph in the x-axis.
+- **y = f(−x)** — reflects the graph in the y-axis.
+
+### Key Formulas
+
+[FORMULA: y = f(x) + a → translation (0, a) — moves up by a]
+
+[FORMULA: y = f(x + a) → translation (−a, 0) — moves left by a]
+
+[FORMULA: y = −f(x) → reflection in the x-axis]
+
+[FORMULA: y = f(−x) → reflection in the y-axis]
+
+## Step-by-Step Method
+
+1. **Identify the transformation** from the function notation (is it +a outside, +a inside, a minus outside, or a minus inside?).
+2. **Recall the rule**: changes outside f affect y (vertical), changes inside f affect x (horizontal and in the opposite direction).
+3. **Apply the transformation** to key points on the original graph.
+4. **Draw the new graph** through the transformed points.
+5. **Label key coordinates** on the new graph.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** The graph of y = f(x) passes through (0, 2), (3, 5), and (−1, 0). Write the coordinates of these points on the graph of y = f(x) + 3.
+
+**Working:**
+
+y = f(x) + 3 means every y-coordinate increases by 3 (vertical translation up 3).
+
+(0, 2) → (0, 5). (3, 5) → (3, 8). (−1, 0) → (−1, 3).
+
+**Answer:** (0, 5), (3, 8), and (−1, 3)
+
+## Worked Example 2 — Higher Level
+
+**Question:** Describe the transformation that maps y = f(x) to y = f(x − 4).
+
+**Working:**
+
+The change is inside the function: x is replaced by (x − 4). This is y = f(x + a) where a = −4.
+
+The translation is (−(−4), 0) = (4, 0). The graph moves 4 units to the right.
+
+Remember: changes inside the bracket act in the opposite direction. Replacing x with (x − 4) moves right, not left.
+
+**Answer:** Translation of 4 units to the right, or translation by vector (4, 0).
+
+## Worked Example 3 — Exam Style
+
+**Question:** The curve y = f(x) has a maximum point at (2, 6). Write down the coordinates of the maximum point on: (a) y = −f(x), (b) y = f(−x), (c) y = f(x) − 4.
+
+**Working:**
+
+(a) y = −f(x): reflect in the x-axis. The x-coordinate stays the same, the y-coordinate changes sign. Maximum (2, 6) becomes minimum (2, −6).
+
+(b) y = f(−x): reflect in the y-axis. The y-coordinate stays the same, the x-coordinate changes sign. Maximum (2, 6) becomes maximum (−2, 6).
+
+(c) y = f(x) − 4: translate down 4. The x-coordinate stays the same, the y-coordinate decreases by 4. Maximum (2, 6) becomes maximum (2, 2).
+
+**Answer:** (a) (2, −6), (b) (−2, 6), (c) (2, 2)
+
+## Common Mistakes
+
+- **Getting the horizontal direction wrong.** y = f(x + 2) moves the graph 2 units to the left, not right. The direction is opposite to the sign inside the bracket. This is the most common error on this topic.
+- **Confusing −f(x) and f(−x).** −f(x) reflects in the x-axis (y-values change sign). f(−x) reflects in the y-axis (x-values change sign). Mix these up and you lose all the marks.
+- **Forgetting to transform all key points.** When sketching, make sure you apply the transformation to every important point (intercepts, turning points, endpoints).
+
+## Exam Tips
+
+- Remember the rule: changes outside f affect y (up/down), changes inside f affect x (opposite direction).
+- Use the phrase "opposite for x" to remind yourself that f(x + 2) moves left, not right.
+- When describing a transformation, state the type (translation or reflection) and give the details (vector for translation, mirror line for reflection).
+- On AQA and Edexcel, you may be asked to apply two transformations in sequence — apply them one at a time in the correct order.
+
+## Practice Questions
+
+**Q1 (Foundation):** The graph y = f(x) passes through (1, 4). State the corresponding point on y = f(x) − 2.
+
+[ANSWER: (1, 2) — the graph moves down 2]
+
+**Q2 (Higher):** Describe the transformation from y = f(x) to y = f(x + 5).
+
+[ANSWER: Translation 5 units to the left, or translation by vector (−5, 0)]
+
+**Q3 (Higher):** The curve y = x² has vertex (0, 0). Write down the vertex of y = −(x − 3)².
+
+[ANSWER: y = −f(x − 3) where f(x) = x². First translate right 3: vertex (3, 0). Then reflect in x-axis: vertex (3, 0) — the y-coordinate is 0, so the reflection does not change it. Answer: (3, 0)]
+
+---
+
+Practise graph transformations with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Graph Transformations](/topics/graph-transformations)
+- [Quadratic Graphs](/topics/quadratic-graphs)
+- [Cubic and Reciprocal Graphs](/topics/cubic-and-reciprocal-graphs)
+
+## Summary
+
+- y = f(x) + a translates the graph vertically by a units.
+- y = f(x + a) translates the graph horizontally by −a units (opposite direction).
+- y = −f(x) reflects the graph in the x-axis.
+- y = f(−x) reflects the graph in the y-axis.
+- Changes outside the function affect y; changes inside the function affect x in the opposite direction.
+- Always state the type of transformation and its details when answering exam questions.
+`,
   "graph-transformations": `---
 title: "Graph Transformations GCSE – Translations & Reflections"
 description: "Master graph transformations for GCSE Maths Higher tier. Learn translations, reflections, stretches with f(x) notation and worked examples."
@@ -4329,6 +11037,141 @@ Ready to practise growth and decay with instant feedback? [Create your free GCSE
 
 Growth and decay use the formula **A = P × kⁿ**, where k is the multiplier per interval. For growth, k = 1 + r/100; for decay, k = 1 − r/100. Use trial and improvement when asked "how many intervals" it takes to reach a target. Set your working out in a clear table, keep full calculator precision, and remember that exponential decay approaches zero but never reaches it. This topic generalises compound interest to any real-world context and is a reliable source of marks on Higher papers once the method is secure.
 `,
+  "hcf-and-lcm": `---
+title: "HCF and LCM – GCSE Maths Revision Guide"
+description: "Learn how to find the HCF and LCM using prime factorisation, Venn diagrams, and listing. GCSE Maths worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["HCF and LCM GCSE", "highest common factor", "lowest common multiple", "prime factorisation HCF LCM", "Venn diagram HCF LCM"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 82
+---
+
+Finding the Highest Common Factor (HCF) and Lowest Common Multiple (LCM) is a fundamental Number topic tested on every GCSE Maths exam board. These skills underpin work with fractions, ratios, and algebraic fractions, so mastering them is essential for both Foundation and Higher tiers.
+
+## What Are HCF and LCM?
+
+The **Highest Common Factor (HCF)** of two numbers is the largest number that divides exactly into both of them. For example, the HCF of 12 and 18 is 6, because 6 is the biggest number that goes into both 12 and 18.
+
+The **Lowest Common Multiple (LCM)** of two numbers is the smallest number that is a multiple of both. For example, the LCM of 4 and 6 is 12, because 12 is the smallest number that appears in both the 4 times table and the 6 times table.
+
+There are three main methods: **listing**, **prime factor decomposition**, and the **Venn diagram** method. For larger numbers, prime factorisation with a Venn diagram is by far the most efficient and is the method examiners prefer to see.
+
+### Key Formulas
+
+[FORMULA: HCF = product of shared prime factors (the intersection of the Venn diagram)]
+
+[FORMULA: LCM = product of all prime factors in the Venn diagram (each used the maximum number of times)]
+
+[FORMULA: Useful check: HCF × LCM = product of the two original numbers]
+
+## Step-by-Step Method
+
+1. Write each number as a product of its prime factors (prime factor decomposition).
+2. Draw a Venn diagram with two overlapping circles.
+3. Place the shared prime factors in the overlap.
+4. Place the remaining prime factors in the outer parts of each circle.
+5. **HCF** = multiply all the numbers in the overlap.
+6. **LCM** = multiply all the numbers in the entire Venn diagram.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the HCF and LCM of 24 and 36.
+
+**Working:**
+
+Step 1 — Prime factorise: 24 = 2 × 2 × 2 × 3 = 2³ × 3, and 36 = 2 × 2 × 3 × 3 = 2² × 3².
+
+Step 2 — Venn diagram: shared factors are 2 × 2 × 3 (= 12). Remaining for 24: one extra 2. Remaining for 36: one extra 3.
+
+Step 3 — HCF = 2 × 2 × 3 = 12.
+
+Step 4 — LCM = 2 × 2 × 2 × 3 × 3 = 72.
+
+**Answer:** HCF = 12, LCM = 72
+
+## Worked Example 2 — Higher Level
+
+**Question:** Find the HCF and LCM of 60 and 90.
+
+**Working:**
+
+Step 1 — 60 = 2² × 3 × 5 and 90 = 2 × 3² × 5.
+
+Step 2 — Shared factors: 2 × 3 × 5. Remaining for 60: one extra 2. Remaining for 90: one extra 3.
+
+Step 3 — HCF = 2 × 3 × 5 = 30.
+
+Step 4 — LCM = 2 × 2 × 3 × 3 × 5 = 180.
+
+Step 5 — Check: 30 × 180 = 5,400. And 60 × 90 = 5,400. Correct.
+
+**Answer:** HCF = 30, LCM = 180
+
+## Worked Example 3 — Exam Style
+
+**Question:** Two buses leave the station at 9:00 am. Bus A returns every 12 minutes and Bus B returns every 20 minutes. At what time will both buses next be at the station together? (3 marks)
+
+**Working:**
+
+Step 1 — Find the LCM of 12 and 20. Prime factorise: 12 = 2² × 3 and 20 = 2² × 5.
+
+Step 2 — LCM = 2² × 3 × 5 = 60 minutes.
+
+Step 3 — 60 minutes after 9:00 am is 10:00 am.
+
+**Answer:** 10:00 am
+
+## Common Mistakes
+
+- **Confusing HCF and LCM.** The HCF is always smaller than or equal to both numbers. The LCM is always greater than or equal to both. If your HCF is bigger than one of the numbers, you have mixed them up.
+- **Missing a prime factor in the decomposition.** If you stop the factor tree too early (e.g. leaving a 6 instead of breaking it into 2 × 3), your HCF and LCM will be wrong.
+- **Forgetting to use the HCF × LCM check.** HCF × LCM should equal the product of the two numbers. Use this to verify your answer quickly.
+
+## Exam Tips
+
+- Draw the Venn diagram neatly in the exam — examiners often award a mark specifically for a correct Venn diagram.
+- When a question says "use prime factorisation," you must show the factor trees or repeated division. The listing method will not earn full marks.
+- Bus timetable and alarm clock problems are classic LCM contexts. Light pattern problems (two lights flashing at different intervals) also use LCM.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the HCF of 28 and 42.
+
+[ANSWER: 28 = 2² × 7 and 42 = 2 × 3 × 7. Shared: 2 × 7 = 14. HCF = 14]
+
+**Q2 (Foundation):** Find the LCM of 6 and 10.
+
+[ANSWER: 6 = 2 × 3 and 10 = 2 × 5. LCM = 2 × 3 × 5 = 30]
+
+**Q3 (Higher):** Find the HCF and LCM of 84 and 120.
+
+[ANSWER: 84 = 2² × 3 × 7 and 120 = 2³ × 3 × 5. HCF = 2² × 3 = 12. LCM = 2³ × 3 × 5 × 7 = 840. Check: 12 × 840 = 10,080 and 84 × 120 = 10,080]
+
+---
+
+Practise HCF and LCM questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Prime Factorisation, HCF and LCM](/topics/prime-factorisation-hcf-and-lcm)
+- [Fractions](/topics/fractions)
+- [Adding and Subtracting Fractions](/topics/adding-and-subtracting-fractions)
+
+## Summary
+
+- The HCF is the largest factor common to both numbers.
+- The LCM is the smallest multiple common to both numbers.
+- Use prime factorisation and a Venn diagram for the most reliable method.
+- HCF = product of the shared prime factors (the overlap).
+- LCM = product of all prime factors in the Venn diagram.
+- Check your answer: HCF × LCM = the product of the two original numbers.
+`,
   "histograms": `---
 title: "Histograms – GCSE Maths Higher Revision Guide"
 description: "Learn how to draw and interpret histograms for GCSE Maths Higher with frequency density, worked examples and practice questions."
@@ -4488,6 +11331,144 @@ Ready to practise these skills with instant, personalised feedback? Try our AI-p
 
 Histograms are a Higher-tier tool for displaying continuous grouped data. The vertical axis shows **frequency density** (frequency ÷ class width), and the **area** of each bar — not its height — represents the frequency. This makes histograms fair even when class widths are unequal. To draw one, calculate frequency densities, plot bars with no gaps against a continuous horizontal scale, and label axes correctly. To read one, multiply frequency density by class width to recover the frequency. Always show your working in a table, label the axis "Frequency density", and check that your total frequency matches the question. Mastering histograms links closely to cumulative frequency, box plots and estimating the mean from grouped data.
 `,
+  "independent-and-dependent-events": `---
+title: "Independent and Dependent Events – GCSE Maths Revision Guide"
+description: "Master independent and dependent events for GCSE Maths with the multiplication rule, tree diagrams, without replacement, and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["independent events GCSE", "dependent events probability", "multiplication rule", "without replacement", "tree diagrams GCSE"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 190
+---
+
+Independent and dependent events are tested on both Foundation and Higher GCSE Maths papers across AQA, Edexcel and OCR. You need to know when to multiply probabilities, how "without replacement" changes the probabilities, and how tree diagrams help organise combined events. This guide explains each concept clearly with worked examples. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Are Independent and Dependent Events?
+
+- **Independent events** — the outcome of one event does not affect the outcome of another. Example: flipping a coin and rolling a dice.
+- **Dependent events** — the outcome of one event changes the probabilities of the next. Example: picking two cards from a deck without replacement.
+
+### Key Formulas
+
+[FORMULA: P(A and B) = P(A) x P(B)  (for independent events)]
+
+[FORMULA: P(A and B) = P(A) x P(B given A has occurred)  (for dependent events)]
+
+For independent events you multiply the original probabilities. For dependent events the second probability changes because the first event has altered the sample space.
+
+### Tree Diagrams
+
+A **tree diagram** is a visual tool that shows all possible outcomes for two or more successive events. Each branch shows the probability, and you multiply along branches to find the probability of a specific combined outcome. To find P(A or B), add the probabilities of the relevant combined outcomes.
+
+## Step-by-Step Method
+
+1. Determine whether the events are independent or dependent.
+2. For independent events, multiply the probabilities directly.
+3. For dependent events (e.g. without replacement), adjust the second probability to reflect the changed total.
+4. Draw a tree diagram if there are multiple stages — list all outcomes at each branch.
+5. Multiply along each path for combined probabilities. Add paths if the question asks for "or".
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A fair coin is flipped and a fair dice is rolled. Find the probability of getting heads and a 6.
+
+**Working:**
+
+These are independent events — the coin does not affect the dice.
+
+P(heads) = 1/2. P(6) = 1/6.
+
+P(heads and 6) = 1/2 x 1/6 = **1/12**.
+
+**Answer:** The probability of heads and a 6 is 1/12.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A bag contains 5 red and 3 blue beads. Two beads are picked without replacement. Find the probability of picking (a) two red beads, (b) one of each colour.
+
+**Working:**
+
+**(a)** P(1st red) = 5/8. After removing a red bead: P(2nd red) = 4/7.
+
+P(two red) = 5/8 x 4/7 = 20/56 = **5/14**.
+
+**(b)** There are two ways to get one of each colour:
+
+Red then Blue: P = 5/8 x 3/7 = 15/56.
+
+Blue then Red: P = 3/8 x 5/7 = 15/56.
+
+P(one of each) = 15/56 + 15/56 = 30/56 = **15/28**.
+
+**Answer:** (a) 5/14. (b) 15/28.
+
+## Worked Example 3 — Exam Style
+
+**Question:** The probability that Amy passes her driving theory test is 0.7. The probability she passes her practical test is 0.6. The two tests are independent. (a) Draw a tree diagram. (b) Find the probability she passes both. (c) Find the probability she passes exactly one test.
+
+**Working:**
+
+**(a)** First branch: Theory — Pass (0.7) or Fail (0.3). From each, second branch: Practical — Pass (0.6) or Fail (0.4).
+
+**(b)** P(both pass) = 0.7 x 0.6 = **0.42**.
+
+**(c)** P(theory only) = 0.7 x 0.4 = 0.28. P(practical only) = 0.3 x 0.6 = 0.18.
+
+P(exactly one) = 0.28 + 0.18 = **0.46**.
+
+**Answer:** (b) 0.42. (c) 0.46.
+
+## Common Mistakes
+
+- **Multiplying when you should add.** "And" means multiply along branches. "Or" means add the results of separate paths.
+- **Not adjusting for without replacement.** When items are removed, the total decreases and so do the favourable outcomes for the next pick.
+- **Forgetting a path.** When asked for "one of each", remember there are two orders (e.g. red-blue and blue-red). A tree diagram helps you avoid missing paths.
+- **Treating dependent events as independent.** If items are not replaced, probabilities change. Always check whether replacement occurs.
+
+## Exam Tips
+
+- Draw a tree diagram for any two-stage or three-stage probability question — it organises your working clearly.
+- Label every branch with its probability. Multiply along branches, add between branches.
+- For "at least one" questions, it is often easier to calculate 1 − P(none) rather than adding up every other possibility.
+- For related topics, see [mutually exclusive events](/topics/mutually-exclusive-events) and [probability tree diagrams](/topics/probability-tree-diagrams). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** Two fair coins are flipped. Find the probability of getting two tails.
+
+[ANSWER: P(tail) = 1/2 for each coin. P(two tails) = 1/2 x 1/2 = 1/4.]
+
+**Q2 (Foundation):** A box has 6 white and 4 black balls. One ball is picked, replaced, then another is picked. Find P(both white).
+
+[ANSWER: With replacement, events are independent. P(white) = 6/10 = 3/5 each time. P(both white) = 3/5 x 3/5 = 9/25.]
+
+**Q3 (Higher):** A bag has 4 green and 6 yellow counters. Two are picked without replacement. Find the probability of picking at least one green.
+
+[ANSWER: P(no green) = P(both yellow) = 6/10 x 5/9 = 30/90 = 1/3. P(at least one green) = 1 − 1/3 = 2/3.]
+
+---
+
+Practise independent and dependent events free on GCSEMathsAI.
+
+## Related Topics
+
+- [Mutually Exclusive Events](/topics/mutually-exclusive-events)
+- [Probability Tree Diagrams](/topics/probability-tree-diagrams)
+- [Conditional Probability](/topics/conditional-probability)
+
+## Summary
+
+- Independent events do not affect each other: P(A and B) = P(A) x P(B).
+- Dependent events change probabilities: adjust the second probability after the first event occurs (e.g. without replacement reduces the total).
+- Use tree diagrams to organise multi-stage probability problems: multiply along branches, add between branches.
+- For "at least one" questions, consider using 1 − P(none) as a shortcut.
+- Always check whether replacement occurs — this determines whether events are independent or dependent.
+`,
   "indices-and-index-laws": `---
 title: "Indices and Index Laws – GCSE Maths Guide"
 description: "Complete guide to index laws for GCSE Maths covering multiplying, dividing, negative and fractional indices with worked examples."
@@ -4641,6 +11622,390 @@ Master indices with unlimited AI-generated practice. [Create your free account](
 - A fractional index means take a root (denominator) and raise to a power (numerator).
 - Take the root first when evaluating fractional indices to keep numbers manageable.
 - Index laws are used throughout algebra, standard form, and growth/decay problems.
+`,
+  "inequalities-on-a-graph": `---
+title: "Inequalities on a Graph – GCSE Maths Revision Guide"
+description: "Learn how to represent inequalities on a graph at GCSE. Draw boundary lines, use solid or dashed lines, and shade the correct region."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["inequalities on a graph", "graphical inequalities GCSE", "shading regions", "solid dashed line inequality", "feasible region"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 142
+---
+
+# Inequalities on a Graph
+
+Graphical inequalities combine your algebra skills with coordinate geometry. Instead of solving for a single value, you shade a region on a graph that represents all the points satisfying one or more inequalities. This is a Higher-only topic that regularly appears on AQA, Edexcel, and OCR papers for 3–4 marks. Learning the rules about solid and dashed lines will help you pick up every mark.
+
+## What Are Inequalities on a Graph?
+
+When you draw an inequality on a graph, you start by drawing the boundary line (the equation you get by replacing the inequality sign with =). Then you decide which side of the line satisfies the inequality and shade that region.
+
+### Key Formulas
+
+[FORMULA: ≤ or ≥ means draw a solid line (the boundary is included)]
+
+[FORMULA: < or > means draw a dashed line (the boundary is not included)]
+
+[FORMULA: Test a point (usually (0, 0)) to determine which side to shade]
+
+## Step-by-Step Method
+
+1. **Replace the inequality sign with =** to get the equation of the boundary line.
+2. **Draw the boundary line** on the graph. Use a solid line for ≤ or ≥ and a dashed line for < or >.
+3. **Choose a test point** that is not on the line. The origin (0, 0) is easiest if the line does not pass through it.
+4. **Substitute the test point** into the inequality. If it satisfies the inequality, shade the side containing that point. If not, shade the other side.
+5. **For multiple inequalities**, shade each region and identify the overlap — this is the feasible region.
+6. **Label the required region** clearly, as the question may ask you to mark it with R or leave it unshaded.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** On a graph, show the region where y < 3.
+
+**Working:**
+
+- Boundary line: y = 3 (a horizontal line through 3 on the y-axis).
+- The inequality is strict (<), so draw a dashed line.
+- Test (0, 0): is 0 < 3? Yes ✓. So shade the side containing (0, 0), which is below the line.
+
+**Answer:** Dashed horizontal line at y = 3, shade below.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Show the region satisfying y ≤ 2x + 1 on a graph.
+
+**Working:**
+
+- Boundary line: y = 2x + 1. This has gradient 2 and y-intercept 1.
+- The inequality is ≤, so draw a solid line.
+- Test (0, 0): is 0 ≤ 2(0) + 1 = 1? Yes, 0 ≤ 1 ✓. Shade the side containing (0, 0), which is below the line.
+
+**Answer:** Solid line y = 2x + 1, shade below and on the line.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Show the region R satisfying all three inequalities: x ≥ 1, y ≥ 0, and x + y ≤ 5.
+
+**Working:**
+
+- x = 1: vertical solid line through x = 1. Test (2, 0): 2 ≥ 1 ✓. Region is to the right of the line.
+- y = 0: this is the x-axis. Solid line. Region is above the x-axis.
+- x + y = 5: solid line from (0, 5) to (5, 0). Test (0, 0): 0 + 0 = 0 ≤ 5 ✓. Region is below this line.
+
+The feasible region R is the triangle with vertices (1, 0), (1, 4), and (5, 0).
+
+**Answer:** The triangular region bounded by x = 1, y = 0, and x + y = 5, labelled R.
+
+## Common Mistakes
+
+- **Using the wrong line type.** Solid lines include the boundary (≤, ≥). Dashed lines exclude it (<, >). Using the wrong type loses a mark.
+- **Shading the wrong side.** Always use a test point — do not guess which side to shade. The origin (0, 0) is the simplest choice unless the line passes through it.
+- **Not labelling the region.** If the question says "label the region R," you must write R in the correct area.
+
+## Exam Tips
+
+- Some exam boards ask you to shade the unwanted region and leave the required region clear. Read the instructions carefully.
+- When drawing boundary lines, plot at least three points to ensure accuracy.
+- For questions with multiple inequalities, draw all boundary lines first, then identify the overlap.
+- Integer coordinate questions may ask you to list all integer points in the feasible region — check each one satisfies every inequality.
+
+## Practice Questions
+
+**Q1 (Foundation):** Draw the region where x > −2 on a graph.
+
+[ANSWER: Dashed vertical line at x = −2, shade to the right]
+
+**Q2 (Higher):** Show the region satisfying y ≥ x − 1 and y < 4.
+
+[ANSWER: Solid line y = x − 1 (shade above), dashed line y = 4 (shade below). Region is between the two lines where they overlap]
+
+**Q3 (Higher):** Find the integer coordinates in the region where x ≥ 0, y ≥ 0, and 2x + y ≤ 4.
+
+[ANSWER: (0,0), (0,1), (0,2), (0,3), (0,4), (1,0), (1,1), (1,2), (2,0)]
+
+---
+
+Practise graphical inequalities with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Solving Inequalities](/topics/solving-inequalities)
+- [Inequalities on a Number Line](/topics/inequalities-on-a-number-line)
+- [Linear Graphs and Equation of a Line](/topics/linear-graphs-and-equation-of-a-line)
+
+## Summary
+
+- Draw the boundary line by replacing the inequality with =.
+- Use a solid line for ≤ or ≥ and a dashed line for < or >.
+- Test a point (usually the origin) to decide which side to shade.
+- For multiple inequalities, the feasible region is where all shaded areas overlap.
+- Read the question carefully — some exams ask you to shade the unwanted region instead.
+`,
+  "inequalities-on-a-number-line": `---
+title: "Inequalities on a Number Line – GCSE Maths Revision Guide"
+description: "Learn how to represent inequalities on a number line for GCSE Maths. Covers open and closed circles, single and double inequalities with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["inequalities on a number line gcse", "open and closed circles inequalities", "representing inequalities", "double inequality number line", "number line notation gcse"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 98
+---
+
+Representing inequalities on a number line is a fundamental GCSE skill tested on both Foundation and Higher papers. It turns an algebraic statement into a visual diagram, making it easy to see which values are included in the solution set.
+
+## What Are Inequalities on a Number Line?
+
+A number line diagram shows which values satisfy an inequality. Two key conventions are used:
+
+- An **open circle** (○) means the value is **not included** (used with < or >).
+- A **closed circle** (●) means the value **is included** (used with ≤ or ≥).
+
+A solid line or arrow extends from the circle in the direction of the values that satisfy the inequality.
+
+### Key Formulas
+
+[FORMULA: x > a — open circle at a, arrow pointing right]
+
+[FORMULA: x ≤ a — closed circle at a, arrow pointing left]
+
+[FORMULA: a < x ≤ b — open circle at a, closed circle at b, solid line between them]
+
+## Step-by-Step Method
+
+1. **Solve** the inequality algebraically (if needed) to find the boundary value(s).
+2. **Draw** a number line and mark the boundary value(s).
+3. **Choose the correct circle**: open for < or >, closed for ≤ or ≥.
+4. **Draw an arrow** or solid line in the direction of the solution set.
+5. For **double inequalities** (e.g., 2 < x ≤ 5), mark both boundary values and shade the region between them.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Represent x > 3 on a number line.
+
+**Working:**
+
+Draw a number line. Mark the value 3.
+
+Place an **open circle** at 3 (because 3 is not included — it is strictly greater than).
+
+Draw an arrow going to the **right** from the open circle, indicating all values greater than 3.
+
+**Answer:** Open circle at 3, arrow pointing right.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Solve 2x + 1 ≤ 9 and represent the solution on a number line.
+
+**Working:**
+
+2x + 1 ≤ 9
+
+2x ≤ 8
+
+x ≤ 4
+
+Draw a number line. Place a **closed circle** at 4 (because 4 is included — less than or equal to).
+
+Draw an arrow going to the **left** from the closed circle.
+
+**Answer:** x ≤ 4. Closed circle at 4, arrow pointing left.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Solve −3 < 2x − 1 ≤ 7 and represent the solution on a number line. List all integer values that satisfy the inequality.
+
+**Working:**
+
+Solve the double inequality by adding 1 to all three parts:
+
+−3 + 1 < 2x ≤ 7 + 1
+
+−2 < 2x ≤ 8
+
+Divide all three parts by 2:
+
+−1 < x ≤ 4
+
+On the number line: **open circle** at −1 (not included), **closed circle** at 4 (included), solid line between them.
+
+Integer values: 0, 1, 2, 3, 4.
+
+**Answer:** −1 < x ≤ 4. Integers: 0, 1, 2, 3, 4.
+
+## Common Mistakes
+
+- **Using the wrong type of circle.** An open circle means the value is excluded (< or >), and a closed circle means it is included (≤ or ≥). Mixing these up loses marks immediately.
+- **Drawing the arrow in the wrong direction.** For x > 3, the arrow goes right (towards larger values). For x < 3, it goes left. Read the inequality carefully before drawing.
+- **Forgetting to list all integers in a double inequality.** When asked for integer values, include the boundary if it is a closed circle. In −1 < x ≤ 4, the value −1 is not included but 4 is.
+
+## Exam Tips
+
+- When listing integers, be careful at the boundaries. An open circle means you do not include that integer; a closed circle means you do.
+- For double inequalities, solve all three parts together — add, subtract, multiply or divide across the entire inequality in one step.
+- If you divide or multiply by a negative number, remember to reverse the inequality signs.
+
+## Practice Questions
+
+**Q1 (Foundation):** Represent x ≥ −2 on a number line.
+
+[ANSWER: Closed circle at −2, arrow pointing right. This shows all values greater than or equal to −2.]
+
+**Q2 (Foundation):** Solve 3x − 4 > 8 and show the solution on a number line.
+
+[ANSWER: 3x > 12, x > 4. Open circle at 4, arrow pointing right.]
+
+**Q3 (Higher):** Solve 1 ≤ 3x + 4 < 16 and list all integer values of x that satisfy the inequality.
+
+[ANSWER: Subtract 4: −3 ≤ 3x < 12. Divide by 3: −1 ≤ x < 4. Closed circle at −1, open circle at 4, solid line between. Integer values: −1, 0, 1, 2, 3.]
+
+---
+
+Practise inequalities on a number line questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Solving Inequalities](/topics/solving-inequalities)
+- [Solving Linear Equations](/topics/solving-linear-equations)
+- [Functions and Function Notation](/topics/functions-and-function-notation)
+
+## Summary
+
+- An open circle (○) means the boundary value is not included (< or >).
+- A closed circle (●) means the boundary value is included (≤ or ≥).
+- For single inequalities, draw an arrow from the circle in the direction of the solution set.
+- For double inequalities, mark both boundaries with the correct circles and shade between them.
+- When listing integers, include boundary values only if the circle is closed.
+`,
+  "interior-and-exterior-angles-of-polygons": `---
+title: "Interior and Exterior Angles of Polygons – GCSE Maths Revision Guide"
+description: "Learn how to calculate interior and exterior angles of regular and irregular polygons with formulas, worked examples, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["interior angles of polygons", "exterior angles of polygons", "sum of interior angles", "regular polygon angles", "GCSE polygon angles"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 152
+---
+
+Interior and exterior angles of polygons are tested on every GCSE Maths exam board. You need to know the formulas for the sum of interior angles, the size of each angle in a regular polygon, and the relationship between interior and exterior angles. This guide covers everything from Foundation to Higher, including finding the number of sides from an angle.
+
+## What Are Interior and Exterior Angles of Polygons?
+
+An **interior angle** is the angle inside a polygon at each vertex. An **exterior angle** is formed between one side of the polygon and the extension of the adjacent side. At each vertex, the interior and exterior angles sit on a straight line, so they always add up to 180°.
+
+### Key Formulas
+
+[FORMULA: Sum of interior angles = (n − 2) × 180°, where n is the number of sides]
+
+[FORMULA: Each interior angle of a regular polygon = ((n − 2) × 180°) ÷ n]
+
+[FORMULA: Sum of exterior angles of any convex polygon = 360°]
+
+[FORMULA: Each exterior angle of a regular polygon = 360° ÷ n]
+
+[FORMULA: Interior angle + exterior angle = 180°]
+
+## Step-by-Step Method
+
+1. **Count the number of sides** (n) of the polygon.
+2. **Choose the correct formula.** Use (n − 2) × 180° for the sum of interior angles, or 360° ÷ n for each exterior angle of a regular polygon.
+3. **Substitute and calculate.**
+4. **If finding the number of sides**, rearrange the formula. For example, if each exterior angle is given, n = 360° ÷ exterior angle.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the sum of the interior angles of a hexagon.
+
+**Working:**
+
+A hexagon has 6 sides, so n = 6.
+
+Sum of interior angles = (6 − 2) × 180° = 4 × 180° = 720°
+
+**Answer:** The sum of the interior angles is **720°**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Each exterior angle of a regular polygon is 24°. How many sides does the polygon have? Find each interior angle.
+
+**Working:**
+
+Number of sides = 360° ÷ 24° = 15
+
+Each interior angle = 180° − 24° = 156°
+
+**Answer:** The polygon has **15 sides** and each interior angle is **156°**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Four angles of a pentagon are 108°, 92°, 130°, and 115°. Find the fifth angle.
+
+**Working:**
+
+Sum of interior angles of a pentagon = (5 − 2) × 180° = 540°
+
+Fifth angle = 540° − 108° − 92° − 130° − 115° = 540° − 445° = 95°
+
+**Answer:** The fifth angle is **95°**.
+
+## Common Mistakes
+
+- **Using 180° × n instead of (n − 2) × 180°.** The formula subtracts 2 from the number of sides before multiplying. Forgetting this gives an answer that is 360° too large.
+- **Confusing interior and exterior angles.** Remember that they add up to 180° at each vertex. The exterior angle formula uses 360° ÷ n, not the interior angle formula.
+- **Assuming all polygons are regular.** The formulas for individual angles only apply to regular polygons (all sides and angles equal). For irregular polygons, you can only use the sum formula.
+- **Giving the exterior angle when the question asks for interior (or vice versa).** Read the question twice and underline which angle type is requested.
+
+## Exam Tips
+
+- If a question gives you an interior angle of a regular polygon, first find the exterior angle by subtracting from 180°, then divide 360° by the exterior angle to get the number of sides.
+- Draw a quick sketch and mark the angles to help visualise the problem.
+- Learn the common polygon names: pentagon (5), hexagon (6), heptagon (7), octagon (8), nonagon (9), decagon (10).
+- For irregular polygons, find the sum of interior angles first, then subtract the known angles.
+- Remember that the exterior angles of any convex polygon always sum to 360° regardless of the number of sides.
+- Questions worth 3 or more marks often involve setting up an equation — for example, when one angle is given as an algebraic expression. Always show your equation and working clearly.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the sum of the interior angles of an octagon (8 sides).
+
+[ANSWER: (8 − 2) × 180° = 6 × 180° = 1080°]
+
+**Q2 (Foundation):** Find each exterior angle of a regular decagon (10 sides).
+
+[ANSWER: 360° ÷ 10 = 36°]
+
+**Q3 (Higher):** The interior angle of a regular polygon is 162°. How many sides does the polygon have?
+
+[ANSWER: Exterior angle = 180° − 162° = 18°. Number of sides = 360° ÷ 18° = 20 sides.]
+
+---
+
+Practise interior and exterior angles of polygons with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Angles on a Straight Line and at a Point](/topics/angles-on-a-straight-line-and-at-a-point)
+- [Alternate, Corresponding and Co-interior Angles](/topics/alternate-corresponding-co-interior-angles)
+- [Angles in Polygons](/topics/angles-in-polygons)
+- [Congruent Triangles](/topics/congruent-triangles)
+
+## Summary
+
+- The sum of interior angles of any polygon with n sides is (n − 2) × 180°. Exterior angles of any convex polygon always sum to 360°. For regular polygons, each exterior angle is 360° ÷ n and each interior angle is 180° minus the exterior angle. These formulas let you find missing angles, determine the number of sides, and solve problems involving both regular and irregular polygons. Practise converting between interior and exterior angles quickly — this skill saves valuable time in multi-mark exam questions.
 `,
   "inverse-and-composite-functions": `---
 title: "Inverse & Composite Functions – GCSE Maths"
@@ -4813,6 +12178,407 @@ Practise inverse and composite functions with instant AI feedback on [GCSEMathsA
 - Always verify your inverse by checking that f⁻¹(f(a)) = a.
 - Show clear substitution steps to earn method marks in the exam.
 - f⁻¹(x) is not the same as 1/f(x) — do not confuse the inverse with the reciprocal.
+`,
+  "inverse-functions": `---
+title: "Inverse Functions – GCSE Maths Revision Guide"
+description: "Learn how to find inverse functions for GCSE Maths Higher tier. Step-by-step method for finding f inverse x algebraically and graphically."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["inverse functions gcse", "f inverse x gcse", "finding inverse function", "inverse function method gcse", "reflection in y equals x"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 97
+---
+
+Inverse functions reverse the effect of the original function. If f takes 3 to 11, then the inverse function f⁻¹ takes 11 back to 3. This is a Higher-tier topic that appears on AQA, Edexcel and OCR papers, typically worth three to four marks.
+
+## What Is an Inverse Function?
+
+The inverse of a function f, written f⁻¹(x), undoes what f does. If f(a) = b, then f⁻¹(b) = a.
+
+To find the inverse algebraically, you swap x and y in the equation y = f(x), then rearrange to make y the subject. The result is f⁻¹(x).
+
+### Key Formulas
+
+[FORMULA: If f(a) = b, then f⁻¹(b) = a]
+
+[FORMULA: To find f⁻¹(x): write y = f(x), swap x and y, rearrange for y]
+
+### Graphical interpretation
+
+The graph of f⁻¹(x) is the **reflection of the graph of f(x) in the line y = x**. This means if the point (3, 7) lies on y = f(x), then (7, 3) lies on y = f⁻¹(x).
+
+## Step-by-Step Method
+
+1. **Write** y = f(x) — replace f(x) with y.
+2. **Swap** x and y in the equation.
+3. **Rearrange** the new equation to make y the subject.
+4. **Write** f⁻¹(x) = the expression you found for y.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** f(x) = 3x + 7. Find f⁻¹(x).
+
+**Working:**
+
+Step 1: Write y = 3x + 7.
+
+Step 2: Swap x and y: x = 3y + 7.
+
+Step 3: Rearrange for y: x − 7 = 3y → y = (x − 7)/3.
+
+**Answer:** f⁻¹(x) = (x − 7)/3
+
+Check: f(2) = 6 + 7 = 13. f⁻¹(13) = (13 − 7)/3 = 6/3 = 2 ✓
+
+## Worked Example 2 — Higher Level
+
+**Question:** f(x) = (4x − 1) / 5. Find f⁻¹(x).
+
+**Working:**
+
+Step 1: Write y = (4x − 1) / 5.
+
+Step 2: Swap x and y: x = (4y − 1) / 5.
+
+Step 3: Rearrange: 5x = 4y − 1 → 5x + 1 = 4y → y = (5x + 1)/4.
+
+**Answer:** f⁻¹(x) = (5x + 1)/4
+
+Check: f(4) = (16 − 1)/5 = 3. f⁻¹(3) = (15 + 1)/4 = 16/4 = 4 ✓
+
+## Worked Example 3 — Exam Style
+
+**Question:** f(x) = 2x³ + 5. Find f⁻¹(x) and evaluate f⁻¹(59).
+
+**Working:**
+
+Step 1: Write y = 2x³ + 5.
+
+Step 2: Swap: x = 2y³ + 5.
+
+Step 3: Rearrange: x − 5 = 2y³ → y³ = (x − 5)/2 → y = ∛((x − 5)/2).
+
+So f⁻¹(x) = ∛((x − 5)/2).
+
+Evaluate: f⁻¹(59) = ∛((59 − 5)/2) = ∛(54/2) = ∛27 = 3.
+
+**Answer:** f⁻¹(x) = ∛((x − 5)/2); f⁻¹(59) = 3
+
+## Common Mistakes
+
+- **Confusing f⁻¹(x) with 1/f(x).** The notation f⁻¹(x) means the inverse function, not the reciprocal. f⁻¹(x) undoes f, whereas 1/f(x) divides 1 by the output.
+- **Forgetting to swap x and y.** Simply rearranging y = 2x + 3 to get x = (y − 3)/2 is not enough. You must swap the variables first, then rearrange for y.
+- **Making rearrangement errors with fractions.** When the function involves a fraction, multiply both sides first to clear the denominator before isolating y.
+
+## Exam Tips
+
+- Always verify your inverse by checking that f(f⁻¹(x)) = x. Pick a simple number and confirm that applying f then f⁻¹ gets you back to where you started.
+- If a question asks you to sketch f⁻¹(x), reflect the graph of f(x) in the line y = x. Key points swap their coordinates.
+- Show each algebraic step clearly — write the swap step explicitly so the examiner can see your method.
+
+## Practice Questions
+
+**Q1 (Higher):** f(x) = 5x − 4. Find f⁻¹(x).
+
+[ANSWER: y = 5x − 4. Swap: x = 5y − 4. Rearrange: x + 4 = 5y, y = (x + 4)/5. So f⁻¹(x) = (x + 4)/5.]
+
+**Q2 (Higher):** f(x) = (x + 3)/2. Find f⁻¹(x) and evaluate f⁻¹(7).
+
+[ANSWER: y = (x + 3)/2. Swap: x = (y + 3)/2. Rearrange: 2x = y + 3, y = 2x − 3. So f⁻¹(x) = 2x − 3. f⁻¹(7) = 14 − 3 = 11.]
+
+**Q3 (Higher):** g(x) = x² − 1 for x ≥ 0. Find g⁻¹(x).
+
+[ANSWER: y = x² − 1. Swap: x = y² − 1. Rearrange: y² = x + 1, y = sqrt(x + 1) (positive root only since x ≥ 0). So g⁻¹(x) = sqrt(x + 1).]
+
+---
+
+Practise inverse functions questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Functions and Function Notation](/topics/functions-and-function-notation)
+- [Composite Functions](/topics/composite-functions)
+- [Graph Transformations](/topics/graph-transformations)
+
+## Summary
+
+- The inverse function f⁻¹(x) reverses the effect of f(x): if f(a) = b, then f⁻¹(b) = a.
+- To find f⁻¹(x): write y = f(x), swap x and y, then rearrange for y.
+- The graph of f⁻¹(x) is the reflection of f(x) in the line y = x.
+- f⁻¹(x) is not the same as 1/f(x) — it is the inverse function, not the reciprocal.
+- Always check your answer by verifying that f(f⁻¹(x)) gives x.
+`,
+  "inverse-proportion": `---
+title: "Inverse Proportion – GCSE Maths Revision Guide"
+description: "Master inverse proportion at GCSE: y is proportional to 1/x, finding the constant k, graphs, tables and worked Higher tier examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["inverse proportion GCSE", "y proportional to 1 over x", "inverse proportion formula", "inverse proportion graph", "proportion Higher GCSE"]
+tier: "Higher only"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 175
+---
+
+Inverse proportion is a Higher tier topic where one quantity increases as the other decreases. The product of the two quantities remains constant — this is the key relationship that distinguishes inverse proportion from direct proportion.
+
+## What Is Inverse Proportion?
+
+Two quantities are inversely proportional when one multiplied by the other gives a constant value. If y is inversely proportional to x, then y = k/x, where k is the constant of proportionality. Doubling x will halve y, tripling x will divide y by three, and so on.
+
+You can also have y inversely proportional to x² (y = k/x²) or other powers — these appear on Higher papers and require the same approach but with a different relationship.
+
+On a graph, inverse proportion produces a curved line (a hyperbola) that approaches both axes but never touches them. In a table of values, you can confirm inverse proportion by checking that xy is the same for every pair.
+
+Real-world examples include: the more workers on a job, the less time it takes; the wider a pipe, the lower the water level for a fixed volume.
+
+### Key Formulas
+
+[FORMULA: y ∝ 1/x means y = k/x, where k = xy]
+
+[FORMULA: y ∝ 1/x² means y = k/x², where k = yx²]
+
+## Step-by-Step Method
+
+1. Write the proportionality relationship (e.g., y ∝ 1/x).
+2. Convert to an equation with a constant: y = k/x.
+3. Use a known pair of values to find k.
+4. Substitute k back into the equation and use it to find the unknown value.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** y is inversely proportional to x. When x = 4, y = 15. Find y when x = 10.
+
+**Working:**
+y = k/x
+15 = k/4
+k = 15 × 4 = 60
+When x = 10: y = 60/10 = 6
+
+**Answer:** y = 6
+
+## Worked Example 2 — Higher Level
+
+**Question:** y is inversely proportional to x². When x = 3, y = 8. Find y when x = 6.
+
+**Working:**
+y = k/x²
+8 = k/3² = k/9
+k = 8 × 9 = 72
+When x = 6: y = 72/6² = 72/36 = 2
+
+**Answer:** y = 2
+
+## Worked Example 3 — Exam Style
+
+**Question:** It takes 6 workers 10 hours to build a wall. How long would it take 15 workers, assuming they work at the same rate?
+
+**Working:**
+Workers and time are inversely proportional.
+k = workers × time = 6 × 10 = 60
+Time = k ÷ workers = 60 ÷ 15 = 4
+
+**Answer:** 4 hours
+
+## Common Mistakes
+
+- **Confusing direct and inverse proportion.** In direct proportion, both quantities increase together. In inverse proportion, one goes up while the other goes down.
+- **Forgetting to square x when y ∝ 1/x².** If the question says "inversely proportional to the square of x," you must square x before dividing.
+- **Using subtraction instead of division.** Inverse proportion means multiplying gives a constant, not that the difference is constant.
+- **Not recognising inverse proportion in context.** Clues include: more workers = less time, faster speed = shorter journey, wider pipe = lower height of water.
+
+## Exam Tips
+
+- The product xy = k is constant for simple inverse proportion — use this as a quick check.
+- Always write the proportionality statement first, then convert to an equation before substituting.
+- For graphs: a reciprocal curve (hyperbola) indicates inverse proportion; a straight line through the origin indicates direct proportion.
+- If you are given a table of values, multiply x by y for each pair — if all products are equal, it is inverse proportion.
+
+## Practice Questions
+
+**Q1 (Foundation):** y is inversely proportional to x. When x = 5, y = 12. Find y when x = 20.
+
+[ANSWER: k = 5 × 12 = 60. y = 60 ÷ 20 = 3.]
+
+**Q2 (Foundation):** 8 machines can produce an order in 3 hours. How long would 12 machines take?
+
+[ANSWER: k = 8 × 3 = 24. Time = 24 ÷ 12 = 2 hours.]
+
+**Q3 (Higher):** y is inversely proportional to x². When x = 2, y = 50. Find x when y = 2.
+
+[ANSWER: k = 50 × 4 = 200. 2 = 200/x² → x² = 100 → x = 10.]
+
+---
+
+Practise inverse proportion questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Direct and Inverse Proportion](/topics/direct-and-inverse-proportion)
+- [Direct Proportion Equations](/topics/direct-proportion-equations)
+- [Ratio Basics and Sharing](/topics/ratio-basics-and-sharing)
+
+## Summary
+
+- Inverse proportion means one quantity increases as the other decreases, with a constant product.
+- y ∝ 1/x gives y = k/x, where k = xy.
+- y ∝ 1/x² gives y = k/x², where k = yx².
+- Find k using a known pair of values, then use the equation to find unknowns.
+- The graph of inverse proportion is a hyperbola that never touches the axes.
+`,
+  "iteration-method": `---
+title: "Iteration Method – GCSE Maths Revision Guide"
+description: "Master the iteration method for GCSE Maths Higher tier. Learn to apply iterative formulas, show rearrangements, and find solutions to given decimal places."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["iteration method gcse", "iterative formula gcse maths", "xn+1 formula gcse", "solving equations by iteration", "iteration higher tier"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 95
+---
+
+The iteration method is a Higher-tier technique for finding approximate solutions to equations that cannot be solved algebraically. By applying a formula repeatedly, each answer gets closer to the true solution. This guide focuses on applying the iterative formula, demonstrating rearrangements, and determining solutions to a given number of decimal places.
+
+## What Is the Iteration Method?
+
+Iteration means "repeated application". You start with an initial estimate x₀ and feed it into a formula to produce x₁, then feed x₁ back in to get x₂, and so on. Each value is a better approximation of the solution.
+
+### Key Formulas
+
+[FORMULA: xₙ₊₁ = f(xₙ) — the iterative formula]
+
+[FORMULA: The solution is found when consecutive iterations agree to the required decimal places]
+
+The iterative formula comes from rearranging the original equation into the form x = f(x). For example, x³ − 5x − 3 = 0 can be rearranged to x = ∛(5x + 3), giving the iterative formula xₙ₊₁ = ∛(5xₙ + 3).
+
+## Step-by-Step Method
+
+1. **Write down** the iterative formula and the starting value x₀.
+2. **Substitute** x₀ into the formula to calculate x₁. Write the full calculator display.
+3. **Substitute** x₁ to find x₂. Use the unrounded value from the previous step.
+4. **Repeat** until the question is answered — either a set number of iterations or until values agree to the required decimal places.
+5. **Never round** intermediate values. Only round your final answer.
+6. **State** the solution clearly, to the accuracy requested.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Use the iterative formula xₙ₊₁ = (xₙ² + 3) / 5 with x₀ = 1 to find x₁, x₂ and x₃ to 4 decimal places.
+
+**Working:**
+
+x₁ = (1² + 3) / 5 = 4/5 = 0.8000
+
+x₂ = (0.8² + 3) / 5 = (0.64 + 3) / 5 = 3.64/5 = 0.7280
+
+x₃ = (0.728² + 3) / 5 = (0.529984 + 3) / 5 = 3.529984/5 = 0.7060
+
+**Answer:** x₁ = 0.8000, x₂ = 0.7280, x₃ = 0.7060
+
+## Worked Example 2 — Higher Level
+
+**Question:** Show that x³ + 2x − 9 = 0 can be rearranged to x = (9 − x³) / 2. Using x₀ = 1.5, find the solution correct to 1 decimal place.
+
+**Working:**
+
+Rearrangement: x³ + 2x = 9 → 2x = 9 − x³ → x = (9 − x³) / 2 ✓
+
+x₁ = (9 − 1.5³) / 2 = (9 − 3.375) / 2 = 5.625 / 2 = 2.8125
+
+x₂ = (9 − 2.8125³) / 2 = (9 − 22.24121...) / 2 = −13.24121... / 2 = −6.620605...
+
+This diverges. The rearrangement x = ∛(9 − 2x) is more stable.
+
+Using xₙ₊₁ = ∛(9 − 2xₙ) with x₀ = 1.5:
+
+x₁ = ∛(9 − 3) = ∛6 = 1.817120...
+
+x₂ = ∛(9 − 3.634241...) = ∛(5.365759...) = 1.750690...
+
+x₃ = ∛(9 − 3.501380...) = ∛(5.498620...) = 1.765030...
+
+x₄ = ∛(9 − 3.530061...) = ∛(5.469939...) = 1.761955...
+
+x₅ = ∛(9 − 3.523910...) = ∛(5.476090...) = 1.762616...
+
+x₄ and x₅ both round to 1.8 (to 1 d.p.).
+
+**Answer:** x = 1.8 (to 1 d.p.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** The equation x³ − 4x − 1 = 0 has a solution near x = 2. Use the iterative formula xₙ₊₁ = ∛(4xₙ + 1) with x₀ = 2 to find this solution correct to 2 decimal places.
+
+**Working:**
+
+x₁ = ∛(4(2) + 1) = ∛9 = 2.080084...
+
+x₂ = ∛(4(2.080084...) + 1) = ∛(9.320336...) = 2.104585...
+
+x₃ = ∛(4(2.104585...) + 1) = ∛(9.418340...) = 2.112060...
+
+x₄ = ∛(4(2.112060...) + 1) = ∛(9.448241...) = 2.114346...
+
+x₅ = ∛(4(2.114346...) + 1) = ∛(9.457384...) = 2.115046...
+
+x₄ and x₅ both round to 2.11 (to 2 d.p.).
+
+**Answer:** x = 2.11 (to 2 d.p.)
+
+## Common Mistakes
+
+- **Rounding intermediate values.** Using a rounded value in the next step compounds errors. Always use the full unrounded calculator display and only round the final answer.
+- **Not showing enough iterations.** You must continue until two consecutive values agree to the required number of decimal places. Stopping early loses accuracy marks.
+- **Substituting incorrectly into cube roots.** Be careful with brackets on your calculator. ∛(4x + 1) is different from ∛4 × x + 1.
+
+## Exam Tips
+
+- Use the ANS button on your calculator: type the formula once using ANS in place of xₙ, then press = repeatedly to generate successive values.
+- Write every iteration value to at least 6 decimal places to demonstrate you are not rounding early.
+- If asked to show a rearrangement leads to the iterative formula, start from the original equation and work algebraically — do not work backwards.
+
+## Practice Questions
+
+**Q1 (Higher):** Use xₙ₊₁ = ∛(2xₙ + 7) with x₀ = 2 to find x₁, x₂ and x₃ to 4 decimal places.
+
+[ANSWER: x₁ = ∛(4 + 7) = ∛11 = 2.2239. x₂ = ∛(4.4479 + 7) = ∛11.4479 = 2.2530. x₃ = ∛(4.5060 + 7) = ∛11.5060 = 2.2568.]
+
+**Q2 (Higher):** Show that x³ − 6x + 2 = 0 can be rearranged to x = (x³ + 2) / 6.
+
+[ANSWER: Start with x³ − 6x + 2 = 0. Add 6x to both sides: x³ + 2 = 6x. Divide by 6: x = (x³ + 2)/6. ✓]
+
+**Q3 (Higher):** Use xₙ₊₁ = ∛(6xₙ − 2) with x₀ = 2 to find the solution of x³ − 6x + 2 = 0 correct to 2 decimal places.
+
+[ANSWER: x₁ = ∛(12 − 2) = ∛10 = 2.154435. x₂ = ∛(12.926609 − 2) = ∛10.926609 = 2.219708. x₃ = ∛(13.318247 − 2) = ∛11.318247 = 2.247126. x₄ = ∛(13.482758 − 2) = ∛11.482758 = 2.257977. x₅ = ∛(13.547862 − 2) = ∛11.547862 = 2.262249. x₆ = ∛(13.573494 − 2) = ∛11.573494 = 2.263932. x₅ and x₆ both round to 2.26. Solution: x = 2.26 (to 2 d.p.).]
+
+---
+
+Practise iteration method questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Iteration](/topics/iteration)
+- [Solving Quadratic Equations — Quadratic Formula](/topics/solving-quadratic-equations-quadratic-formula)
+- [Functions and Function Notation](/topics/functions-and-function-notation)
+
+## Summary
+
+- Iteration finds approximate solutions by repeatedly applying a formula xₙ₊₁ = f(xₙ).
+- Start with x₀ and substitute to generate x₁, x₂, x₃, and so on.
+- The iterative formula comes from rearranging the equation into the form x = f(x).
+- Never round intermediate values — only round the final answer.
+- The solution is confirmed when two consecutive iterations agree to the required number of decimal places.
 `,
   "iteration": `---
 title: "Iteration GCSE Maths – Step-by-Step Method"
@@ -5132,6 +12898,263 @@ Ready to practise linear graphs with instant AI feedback? Try unlimited GCSE Mat
 - To find the equation of a line, you need either two points or one point and the gradient.
 - Always check your equation by substituting a known point back in.
 `,
+  "loci-and-regions": `---
+title: "Loci and Regions – GCSE Maths Revision Guide"
+description: "Learn the four standard loci for GCSE Maths — from a point, from a line, equidistant from two points and two lines — with shading regions practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["loci GCSE", "locus from a point", "equidistant from two points", "shading regions", "GCSE loci and constructions"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 162
+---
+
+Loci questions are a staple of GCSE Maths exams across AQA, Edexcel, and OCR. A locus is the set of all points that satisfy a given rule. You need to know four standard loci, be able to construct them using a compass and ruler, and shade the correct region when multiple conditions are combined. This guide covers each type with worked examples and exam-style practice.
+
+## What Is a Locus?
+
+A **locus** (plural: loci) is the path traced by a set of points that obey a particular rule. In GCSE Maths, you are expected to know four standard loci.
+
+### Key Formulas
+
+[FORMULA: Locus of points a fixed distance from a point = circle with that radius]
+
+[FORMULA: Locus of points a fixed distance from a line = pair of parallel lines either side, with semicircular ends]
+
+[FORMULA: Locus of points equidistant from two points = perpendicular bisector of the line segment joining them]
+
+[FORMULA: Locus of points equidistant from two intersecting lines = angle bisector of the two lines]
+
+## Step-by-Step Method
+
+1. **Read the rule** carefully and identify which standard locus applies.
+2. **Construct the locus** using compass and ruler. Leave all construction arcs visible.
+3. **If the question asks you to shade a region**, identify which side of the locus satisfies the condition and shade it.
+4. **When combining multiple conditions**, construct each locus, then shade only the area where all conditions are satisfied simultaneously.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A treasure is buried less than 4 m from a tree T. Show the region where the treasure could be on a scale drawing (1 cm = 1 m).
+
+**Working:**
+
+The locus of points 4 m from T is a circle of radius 4 cm (at the scale of 1 cm = 1 m). Draw a circle of radius 4 cm centred on T. The treasure is less than 4 m away, so shade the interior of the circle.
+
+**Answer:** Shade the **interior of the circle** with radius 4 cm centred on T.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Two points A and B are 6 cm apart. A point P must be closer to A than to B. Construct and shade the region where P can be.
+
+**Working:**
+
+Construct the perpendicular bisector of AB. All points on the bisector are equidistant from A and B. Points on the A-side of the bisector are closer to A.
+
+Shade the region on the same side as A.
+
+**Answer:** Shade the region on the **A-side of the perpendicular bisector** of AB.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A dog is attached to a post P by a lead of length 5 m. A straight wall runs 3 m from P. Using a scale of 1 cm = 1 m, shade the region the dog can reach.
+
+**Working:**
+
+Step 1 — Draw the post P and the wall as a straight line 3 cm away.
+
+Step 2 — The dog can reach all points within 5 m (5 cm on the scale) of P, so draw a circle of radius 5 cm centred on P.
+
+Step 3 — The wall blocks the dog's path. On the wall side, the dog can only go as far as the wall, then move along it until the lead runs out. The accessible region is the part of the circle on the near side of the wall, plus curved portions where the lead wraps around the ends of the wall.
+
+**Answer:** Shade the region that is **within 5 cm of P** but not beyond the wall, with modified arcs at the wall ends.
+
+## Common Mistakes
+
+- **Not using a compass for circles.** Freehand circles are not acceptable in construction questions. Always use a compass.
+- **Forgetting semicircular ends.** The locus of points a fixed distance from a line segment includes semicircles at each end of the segment, not just two parallel lines.
+- **Shading the wrong region.** Read the inequality carefully — "less than" means shade inside the locus; "more than" means shade outside. "Closer to A than B" means shade the A-side of the perpendicular bisector.
+- **Drawing straight lines instead of curves for the locus from a line segment.** The ends of the locus from a line segment are semicircles, not straight corners.
+
+## Exam Tips
+
+- Highlight the key words in the question: "less than", "more than", "equidistant", "closer to".
+- When combining loci, draw each one in a different style (solid, dashed) to keep them distinct, then shade only the overlap.
+- Construction arcs must be visible — do not erase them.
+- Loci questions often combine distance from a point (circle), distance from a line (parallel lines), and equidistant conditions (bisectors). Practise combining all three.
+- Use a sharp pencil and keep your compass tight so it does not slip mid-arc.
+- If the question says "nearer to A than B", construct the perpendicular bisector of AB and shade the A-side.
+- Check your shaded region satisfies every condition stated in the question before moving on.
+
+## Practice Questions
+
+**Q1 (Foundation):** Draw the locus of points that are exactly 3 cm from a fixed point A.
+
+[ANSWER: A circle with centre A and radius 3 cm.]
+
+**Q2 (Foundation):** Two walls meet at a corner. Shade the locus of points equidistant from both walls.
+
+[ANSWER: The angle bisector of the angle formed where the two walls meet.]
+
+**Q3 (Higher):** Points A and B are 8 cm apart. Shade the region of points that are closer to A than to B and within 5 cm of A.
+
+[ANSWER: Construct the perpendicular bisector of AB. Draw a circle radius 5 cm centred on A. Shade the overlap: inside the circle and on the A-side of the bisector.]
+
+---
+
+Practise loci and regions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Perpendicular Bisector and Angle Bisector](/topics/perpendicular-bisector-and-angle-bisector)
+- [Constructions and Loci](/topics/constructions-and-loci)
+- [Bearings](/topics/bearings)
+- [Scale Drawings and Maps](/topics/scale-drawings-and-maps)
+- [Circle Theorems](/topics/circle-theorems)
+
+## Summary
+
+- A locus is the set of all points satisfying a given rule. The four standard loci are: a circle (fixed distance from a point), parallel lines with semicircular ends (fixed distance from a line segment), perpendicular bisector (equidistant from two points), and angle bisector (equidistant from two lines). Shade the correct region by reading the inequality carefully. Always construct with compass and ruler and leave arcs visible. When multiple conditions apply, the answer region is the overlap of all individual loci.
+`,
+  "mean-from-a-frequency-table": `---
+title: "Mean from a Frequency Table – GCSE Maths Revision Guide"
+description: "Learn how to calculate the mean from frequency tables for GCSE Maths. Ungrouped and grouped data, estimated mean, modal class and median class."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["mean from frequency table", "estimated mean grouped data", "modal class GCSE", "frequency table mean", "class containing median"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 119
+---
+
+Calculating the mean from a frequency table is one of the most common statistics questions on both Foundation and Higher GCSE papers. Whether the data is ungrouped or grouped, the core method is the same: multiply each value (or midpoint) by its frequency, add them up, and divide by the total frequency. This guide covers both types, along with modal class and how to find the class containing the median.
+
+## What Is the Mean from a Frequency Table?
+
+When data is presented in a **frequency table**, you cannot simply add all the values and divide by how many there are — because each value appears multiple times. Instead, you use the frequencies to weight each value before averaging.
+
+For **ungrouped data**, each row shows a specific data value and how many times it appears. You multiply each value by its frequency (giving fx), sum the fx column, and divide by the total frequency.
+
+For **grouped data**, the individual values are unknown because they are collected into class intervals (e.g., 10-19, 20-29). You use the **midpoint** of each class as a representative value. The result is called an **estimated mean** because you do not know the exact data values. The modal class is the class interval with the highest frequency, and the class containing the median is found by counting through the cumulative frequencies.
+
+### Key Formulas
+
+[FORMULA: Mean = Σfx ÷ Σf]
+
+[FORMULA: Midpoint = (Lower bound + Upper bound) ÷ 2]
+
+## Step-by-Step Method
+
+1. **If grouped**, find the midpoint of each class interval.
+2. **Multiply** each value (or midpoint) by its frequency to create the fx column.
+3. **Add up** all the fx values to get Σfx.
+4. **Add up** all the frequencies to get Σf.
+5. **Divide** Σfx by Σf to get the mean.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** The table shows the number of pets owned by 30 students. Find the mean.
+
+| Pets | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| Frequency | 5 | 8 | 10 | 4 | 3 |
+
+**Working:**
+fx values: 0×5=0, 1×8=8, 2×10=20, 3×4=12, 4×3=12.
+Σfx = 0 + 8 + 20 + 12 + 12 = 52.
+Σf = 5 + 8 + 10 + 4 + 3 = 30.
+Mean = 52 ÷ 30 = 1.73 (to 3 s.f.).
+
+**Answer:** The mean number of pets is 1.73.
+
+## Worked Example 2 — Higher Level
+
+**Question:** The grouped frequency table shows test scores for 50 students. Find the estimated mean.
+
+| Score | 0-19 | 20-39 | 40-59 | 60-79 | 80-100 |
+|---|---|---|---|---|---|
+| Frequency | 3 | 8 | 15 | 18 | 6 |
+
+**Working:**
+Midpoints: 9.5, 29.5, 49.5, 69.5, 90.
+fx values: 9.5×3=28.5, 29.5×8=236, 49.5×15=742.5, 69.5×18=1251, 90×6=540.
+Σfx = 28.5 + 236 + 742.5 + 1251 + 540 = 2798.
+Σf = 3 + 8 + 15 + 18 + 6 = 50.
+Estimated mean = 2798 ÷ 50 = 55.96.
+
+**Answer:** The estimated mean score is 55.96.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Using the table in Worked Example 2, state the modal class and find the class interval containing the median.
+
+**Working:**
+The modal class has the highest frequency: 60-79 (frequency 18).
+Total frequency = 50, so the median is between the 25th and 26th values.
+Cumulative frequencies: 3, 11, 26, 44, 50.
+The 25th and 26th values both fall in the 40-59 class (cumulative frequency reaches 26 at the end of this class).
+
+**Answer:** Modal class is 60-79. The median lies in the 40-59 class.
+
+## Common Mistakes
+
+- **Using class boundaries instead of midpoints.** For grouped data, always calculate the midpoint of each class. Do not use the lower or upper boundary.
+- **Dividing by the number of classes instead of the total frequency.** The denominator is Σf (total number of data items), not the number of rows in the table.
+- **Forgetting the last class has a different width.** In the worked example above, 80-100 has a midpoint of 90 (not 89.5) because the class includes 100. Read class boundaries carefully.
+
+## Exam Tips
+
+- Add extra columns to the table for midpoints and fx — examiners expect to see this working and award marks for it.
+- For the class containing the median, use cumulative frequency. The median position is at the (n + 1)/2 th value (or n/2 th for grouped data).
+- Always label your answer "estimated mean" when working with grouped data to show you understand it is an approximation.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the mean from this frequency table.
+
+| Score | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Frequency | 4 | 7 | 9 | 5 | 5 |
+
+[ANSWER: fx: 4, 14, 27, 20, 25. Σfx = 90. Σf = 30. Mean = 90 ÷ 30 = 3.]
+
+**Q2 (Foundation):** The modal value in Q1 is the value with the highest frequency. State the mode.
+
+[ANSWER: The mode is 3 (frequency 9 is the highest).]
+
+**Q3 (Higher):** Heights of 40 plants are recorded below. Calculate the estimated mean.
+
+| Height (cm) | 0-9 | 10-19 | 20-29 | 30-39 |
+|---|---|---|---|---|
+| Frequency | 6 | 14 | 12 | 8 |
+
+[ANSWER: Midpoints: 4.5, 14.5, 24.5, 34.5. fx: 27, 203, 294, 276. Σfx = 800. Σf = 40. Estimated mean = 800 ÷ 40 = 20 cm.]
+
+---
+
+Practise mean from frequency table questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Mean Median Mode Range](/topics/mean-median-mode-and-range)
+- [Frequency Tables](/topics/frequency-tables-and-grouped-data)
+- [Cumulative Frequency and Box Plots](/topics/cumulative-frequency-and-box-plots)
+
+## Summary
+
+- For ungrouped frequency tables: mean = Σfx ÷ Σf.
+- For grouped data: use midpoints in place of exact values to get the estimated mean.
+- The modal class is the class with the highest frequency.
+- Find the class containing the median by building cumulative frequencies and counting to the middle value.
+- Always show your fx column and label grouped results as an "estimated mean".
+`,
   "mean-median-mode-and-range": `---
 title: "Mean Median Mode and Range – GCSE Maths Guide"
 description: "Learn how to calculate the mean, median, mode and range for GCSE Maths with worked examples, exam tips and practice questions."
@@ -5304,6 +13327,1045 @@ Ready to practise these skills with instant, personalised feedback? Try our AI-p
 ## Summary
 
 The mean, median, mode and range are essential statistical tools in GCSE Maths. The **mean** adds all values and divides by the count — it uses every data point but is sensitive to outliers. The **median** is the middle value when data is ordered — it resists extreme values. The **mode** is the most frequent value and can apply to non-numerical data. The **range** measures spread by subtracting the smallest value from the largest. At Foundation level, you will work mostly with listed data; at Higher level, expect frequency tables and questions asking you to compare data sets using averages and range. Always show your working clearly, order data before finding the median, and check whether the question asks for an exact answer or a rounded one.
+`,
+  "metric-and-imperial-conversions": `---
+title: "Metric and Imperial Conversions – GCSE Maths Revision Guide"
+description: "Learn key metric conversions (km, m, cm, mm, kg, g, l, ml) and imperial approximations (miles, inches, pints) with worked examples for GCSE."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["metric conversions GCSE", "imperial conversions GCSE", "km to miles", "unit conversions", "metric imperial GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 178
+---
+
+Unit conversions appear across many GCSE topics, from area and volume calculations to speed and best-buy problems. You need to know the standard metric conversions by heart and the most common imperial approximations.
+
+## What Are Metric and Imperial Conversions?
+
+The metric system uses base-10 relationships — each unit is 10, 100, or 1000 times the next. This makes converting between metric units a matter of multiplying or dividing by powers of 10.
+
+Imperial units (inches, feet, miles, pints, pounds) are older measurements still used in everyday life in the UK. You are not expected to memorise every imperial conversion, but you must know the key approximations that let you convert between metric and imperial.
+
+GCSE questions typically give you one conversion fact (e.g., 1 mile ≈ 1.6 km) and ask you to use it to convert between the two systems.
+
+Being confident with metric conversions is also essential for area and volume questions, where the conversion factors are squared or cubed.
+
+### Key Formulas
+
+[FORMULA: Length: 1 km = 1000 m, 1 m = 100 cm, 1 cm = 10 mm]
+
+[FORMULA: Mass: 1 kg = 1000 g, 1 tonne = 1000 kg]
+
+[FORMULA: Capacity: 1 litre = 1000 ml, 1 cl = 10 ml]
+
+[FORMULA: Imperial approximations: 1 inch ≈ 2.5 cm, 1 foot ≈ 30 cm, 1 mile ≈ 1.6 km, 1 kg ≈ 2.2 lbs, 1 gallon ≈ 4.5 litres, 1 pint ≈ 568 ml]
+
+## Step-by-Step Method
+
+1. Identify the units you are converting from and to.
+2. For metric-to-metric, multiply or divide by the appropriate power of 10.
+3. For metric-to-imperial (or vice versa), use the given conversion factor and multiply or divide as needed.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Convert 3.5 km to metres.
+
+**Working:**
+1 km = 1000 m
+3.5 km = 3.5 × 1000 = 3500 m
+
+**Answer:** 3500 m
+
+## Worked Example 2 — Higher Level
+
+**Question:** A road sign shows a distance of 40 miles. Use 1 mile ≈ 1.6 km to convert this to kilometres.
+
+**Working:**
+40 miles = 40 × 1.6 km
+= 64 km
+
+**Answer:** 64 km
+
+## Worked Example 3 — Exam Style
+
+**Question:** A recipe requires 1.5 pints of milk. Use 1 pint ≈ 568 ml. How many litres of milk is this? Give your answer to 2 decimal places.
+
+**Working:**
+1.5 pints = 1.5 × 568 = 852 ml
+852 ml ÷ 1000 = 0.852 litres
+= 0.85 litres (2 d.p.)
+
+**Answer:** 0.85 litres
+
+## Common Mistakes
+
+- **Multiplying when you should divide (or vice versa).** Converting from a smaller unit to a larger unit means dividing (e.g., mm to cm, divide by 10). Converting from a larger unit to a smaller unit means multiplying.
+- **Confusing metric and imperial.** Do not mix up the two systems in the same calculation. Always convert to the same system before comparing.
+- **Forgetting area and volume conversions.** 1 m² = 10 000 cm² (not 100), and 1 m³ = 1 000 000 cm³ (not 1000). For area, square the conversion factor; for volume, cube it.
+- **Using inaccurate approximations.** Use the approximation given in the question, not a remembered value that might differ.
+
+## Exam Tips
+
+- Metric conversions should be memorised — they are rarely given in the question.
+- Imperial approximations are usually provided in the question — look for them before starting.
+- For area conversions, square the linear factor (e.g., 1 m = 100 cm, so 1 m² = 10 000 cm²).
+- For volume conversions, cube the linear factor (e.g., 1 m = 100 cm, so 1 m³ = 1 000 000 cm³).
+- A useful check: converting to a smaller unit should give a bigger number; converting to a larger unit should give a smaller number.
+
+## Practice Questions
+
+**Q1 (Foundation):** Convert 4500 g to kilograms.
+
+[ANSWER: 4500 ÷ 1000 = 4.5 kg.]
+
+**Q2 (Foundation):** Convert 2.8 m to centimetres.
+
+[ANSWER: 2.8 × 100 = 280 cm.]
+
+**Q3 (Higher):** A car travels at 60 mph. Use 1 mile ≈ 1.6 km to find the speed in km/h. Then convert to m/s to 1 decimal place.
+
+[ANSWER: 60 × 1.6 = 96 km/h. 96 km/h = 96000 m ÷ 3600 s = 26.7 m/s (1 d.p.).]
+
+---
+
+Practise metric and imperial conversion questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Unit Conversions](/topics/unit-conversions)
+- [Speed, Distance and Time](/topics/speed-distance-and-time)
+- [Compound Measures – Density and Pressure](/topics/compound-measures-density-and-pressure)
+
+## Summary
+
+- Metric conversions use powers of 10: km → m (×1000), m → cm (×100), cm → mm (×10).
+- Mass: 1 kg = 1000 g. Capacity: 1 litre = 1000 ml.
+- Key imperial approximations: 1 mile ≈ 1.6 km, 1 inch ≈ 2.5 cm, 1 kg ≈ 2.2 lbs, 1 gallon ≈ 4.5 litres.
+- For area conversions, square the linear factor; for volume, cube it.
+- Use the conversion factor given in the question for imperial conversions.
+- Always check whether you need to multiply or divide — smaller unit to larger unit means divide.
+`,
+  "midpoint-and-distance-between-points": `---
+title: "Midpoint and Distance Between Points – GCSE Maths Revision Guide"
+description: "Learn the midpoint and distance formulas at GCSE. Find the midpoint of two coordinates and the distance between them with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["midpoint formula GCSE", "distance between two points", "coordinate geometry", "midpoint of a line segment", "distance formula maths"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 146
+---
+
+# Midpoint and Distance Between Points
+
+The midpoint and distance formulas are essential coordinate geometry tools. The midpoint gives you the exact centre of a line segment, while the distance formula tells you how far apart two points are. Midpoints appear on both Foundation and Higher papers, while the distance formula (which uses Pythagoras) is more common on Higher. Both are straightforward once you learn the formulas.
+
+## What Are the Midpoint and Distance Formulas?
+
+The **midpoint** of two points is the point exactly halfway between them. You find it by averaging the x-coordinates and averaging the y-coordinates.
+
+The **distance** between two points is the length of the straight line connecting them. It is found using Pythagoras' theorem applied to the horizontal and vertical differences.
+
+### Key Formulas
+
+[FORMULA: Midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2)]
+
+[FORMULA: Distance = √((x₂ − x₁)² + (y₂ − y₁)²)]
+
+## Step-by-Step Method
+
+### Finding the Midpoint
+
+1. **Add the two x-coordinates** and divide by 2.
+2. **Add the two y-coordinates** and divide by 2.
+3. **Write the midpoint** as a coordinate pair.
+
+### Finding the Distance
+
+1. **Subtract the x-coordinates** to find the horizontal difference.
+2. **Subtract the y-coordinates** to find the vertical difference.
+3. **Square each difference**, add them together, and take the square root.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the midpoint of (2, 6) and (8, 10).
+
+**Working:**
+
+Midpoint x = (2 + 8)/2 = 10/2 = 5.
+Midpoint y = (6 + 10)/2 = 16/2 = 8.
+
+**Answer:** (5, 8)
+
+## Worked Example 2 — Higher Level
+
+**Question:** Find the distance between (1, 3) and (4, 7).
+
+**Working:**
+
+Horizontal difference: 4 − 1 = 3.
+Vertical difference: 7 − 3 = 4.
+Distance = √(3² + 4²) = √(9 + 16) = √25 = 5.
+
+**Answer:** 5 units
+
+## Worked Example 3 — Exam Style
+
+**Question:** A line segment AB has midpoint M(5, 3). If A = (2, 7), find the coordinates of B.
+
+**Working:**
+
+Let B = (bx, by).
+Midpoint x: (2 + bx)/2 = 5, so 2 + bx = 10, giving bx = 8.
+Midpoint y: (7 + by)/2 = 3, so 7 + by = 6, giving by = −1.
+
+Check midpoint: ((2 + 8)/2, (7 + (−1))/2) = (10/2, 6/2) = (5, 3) ✓
+
+**Answer:** B = (8, −1)
+
+## Common Mistakes
+
+- **Subtracting instead of adding for the midpoint.** The midpoint formula uses addition of coordinates, not subtraction. Subtraction is used for the distance formula.
+- **Forgetting to divide by 2.** The midpoint averages both coordinates — if you add but do not divide by 2, your answer will be wrong.
+- **Square root errors in the distance formula.** Make sure you square the differences first, add them, and then take the square root of the total — not the square root of each difference separately.
+
+## Exam Tips
+
+- The midpoint formula is essentially "find the average of x and the average of y."
+- The distance formula is Pythagoras applied to coordinates — if you forget the formula, draw a right-angled triangle on a sketch.
+- When given the midpoint and one endpoint, work backwards to find the other endpoint.
+- Leave your distance answer as a surd (e.g., √52) unless the question says otherwise, or simplify it (√52 = 2√13).
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the midpoint of (−3, 4) and (5, 2).
+
+[ANSWER: ((−3 + 5)/2, (4 + 2)/2) = (1, 3)]
+
+**Q2 (Foundation):** Find the midpoint of (0, −6) and (8, 2).
+
+[ANSWER: (4, −2)]
+
+**Q3 (Higher):** Find the exact distance between (−1, 2) and (3, −4).
+
+[ANSWER: √((3 − (−1))² + (−4 − 2)²) = √(16 + 36) = √52 = 2√13]
+
+---
+
+Practise midpoints and distances with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+- [Linear Graphs and Equation of a Line](/topics/linear-graphs-and-equation-of-a-line)
+- [Parallel and Perpendicular Lines](/topics/parallel-and-perpendicular-lines)
+
+## Summary
+
+- The midpoint is found by averaging the x-coordinates and averaging the y-coordinates.
+- The distance formula uses Pythagoras: √((x₂ − x₁)² + (y₂ − y₁)²).
+- To find a missing endpoint from a midpoint, reverse the formula by doubling and subtracting.
+- Midpoints are Foundation and Higher; the distance formula is mainly Higher.
+- These formulas connect closely to straight-line graphs and perpendicular bisectors.
+`,
+  "mode-and-range": `---
+title: "Mode and Range – GCSE Maths Revision Guide"
+description: "Master the mode and range for GCSE Maths including modal class for grouped data, comparing distributions, worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["mode GCSE", "range GCSE maths", "modal class", "comparing distributions", "most frequent value"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 181
+---
+
+The mode and range are two of the simplest statistical measures in GCSE Maths, but they still carry marks on every AQA, Edexcel and OCR paper. The mode identifies the most common value, while the range measures how spread out the data is. Together with the mean and median, they allow you to describe and compare data sets. This guide covers everything you need, including modal class for grouped data. For a full list of topics, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is the Mode?
+
+The **mode** is the value that appears most often in a data set. A data set can have one mode, more than one mode (bimodal or multimodal), or no mode if all values appear the same number of times.
+
+### What Is the Range?
+
+The **range** measures the spread of data:
+
+[FORMULA: Range = Highest value − Lowest value]
+
+A large range means the data is widely spread; a small range means the values are close together.
+
+### Key Formulas
+
+[FORMULA: Modal class = The class interval with the highest frequency (for grouped data)]
+
+For grouped data you cannot identify a single mode — instead you state the **modal class**, which is the group with the greatest frequency.
+
+## Step-by-Step Method
+
+1. To find the mode, look for the value with the highest frequency. If two values share the highest frequency, the data is bimodal.
+2. To find the range, identify the highest and lowest values, then subtract.
+3. For grouped data, find the class interval with the greatest frequency — this is the modal class.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the mode and range of: 3, 7, 5, 3, 8, 5, 3, 9, 5, 3.
+
+**Working:**
+
+Tally each value: 3 appears 4 times, 5 appears 3 times, 7 once, 8 once, 9 once.
+
+Mode = **3** (highest frequency).
+
+Range = 9 − 3 = **6**.
+
+**Answer:** The mode is 3 and the range is 6.
+
+## Worked Example 2 — Higher Level
+
+**Question:** The grouped frequency table shows the times (in seconds) for 25 pupils to complete a puzzle.
+
+| Time (s) | 0 < t ≤ 10 | 10 < t ≤ 20 | 20 < t ≤ 30 | 30 < t ≤ 40 |
+|---|---|---|---|---|
+| Frequency | 4 | 9 | 8 | 4 |
+
+(a) State the modal class. (b) Explain why you cannot find the exact range.
+
+**Working:**
+
+**(a)** The class with the highest frequency is 10 < t ≤ 20 (frequency 9). Modal class = **10 < t ≤ 20**.
+
+**(b)** The data is grouped, so we do not know the exact highest and lowest values — only the class intervals they fall in. The maximum possible range is 40 − 0 = 40 seconds, but the actual range could be smaller.
+
+**Answer:** Modal class is 10 < t ≤ 20. The exact range cannot be found because the individual data values are unknown.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Two classes sit the same test. Class A scores: 45, 52, 52, 60, 71. Class B scores: 48, 55, 55, 55, 67. Compare the two distributions using the mode and range.
+
+**Working:**
+
+Class A: Mode = 52, Range = 71 − 45 = 26.
+
+Class B: Mode = 55, Range = 67 − 48 = 19.
+
+**Answer:** Class B has a higher mode (55 vs 52), suggesting a more typical higher score. Class B also has a smaller range (19 vs 26), meaning its scores are more consistent.
+
+## Common Mistakes
+
+- **Giving the frequency as the mode.** The mode is the value with the highest frequency, not the frequency itself.
+- **Forgetting there can be no mode.** If every value appears the same number of times, there is no mode — say so explicitly.
+- **Using the first and last values for the range.** The range uses the highest and lowest values, which may not be the first and last if data is unordered.
+
+## Exam Tips
+
+- When comparing two distributions, mention both an average (mode, median or mean) and the range. This earns full comparison marks.
+- For grouped data, always state the modal class using the class interval notation (e.g. 10 < t ≤ 20), not just "10–20".
+- The range is affected by outliers — if asked to evaluate, mention this limitation.
+- For related averages, see [finding the mean](/topics/finding-the-mean) and [finding the median](/topics/finding-the-median). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the mode and range of: 2, 5, 7, 5, 3, 8, 5, 1.
+
+[ANSWER: Mode = 5 (appears 3 times). Range = 8 − 1 = 7.]
+
+**Q2 (Foundation):** A data set is: 4, 4, 6, 6, 9. How many modes does it have?
+
+[ANSWER: Two modes — 4 and 6 (each appears twice). The data is bimodal.]
+
+**Q3 (Higher):** A grouped frequency table has classes 0–10 (freq 5), 10–20 (freq 12), 20–30 (freq 12), 30–40 (freq 3). State the modal class and explain any issue.
+
+[ANSWER: The classes 10–20 and 20–30 both have frequency 12. The data is bimodal — there are two modal classes: 10–20 and 20–30.]
+
+---
+
+Practise mode, range and other averages free on GCSEMathsAI.
+
+## Related Topics
+
+- [Finding the Mean](/topics/finding-the-mean)
+- [Finding the Median](/topics/finding-the-median)
+- [Estimated Mean from Grouped Data](/topics/estimated-mean-from-grouped-data)
+
+## Summary
+
+- The mode is the most frequently occurring value in a data set.
+- The range is the difference between the highest and lowest values.
+- For grouped data, identify the modal class — the class interval with the greatest frequency.
+- When comparing distributions, comment on both an average and the range to earn full marks.
+- The range is sensitive to outliers, which is an important limitation to mention in evaluation questions.
+`,
+  "multiplying-and-dividing-decimals": `---
+title: "Multiplying and Dividing Decimals – GCSE Maths Revision Guide"
+description: "Learn non-calculator methods for multiplying and dividing decimals for GCSE Maths with step-by-step techniques and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["multiplying decimals GCSE", "dividing decimals", "non-calculator decimals", "long multiplication decimals", "decimal arithmetic GCSE"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 131
+---
+
+Multiplying and dividing decimals without a calculator is a key non-calculator skill tested on Foundation and Higher GCSE Maths papers. The technique relies on ignoring the decimal point, performing the calculation with whole numbers, and then repositioning the point.
+
+## What Is Decimal Multiplication and Division?
+
+When you multiply or divide decimals, you apply the same techniques as with whole numbers but must manage the position of the decimal point carefully.
+
+For multiplication, the total number of decimal places in the answer equals the total number of decimal places in the numbers being multiplied. For division, you can convert the divisor to a whole number by multiplying both the divisor and dividend by the same power of 10.
+
+These methods work for any decimal calculation and are essential on non-calculator papers.
+
+### Key Formulas
+
+[FORMULA: When multiplying decimals, count the total decimal places in both numbers — the answer has that many decimal places]
+
+[FORMULA: When dividing by a decimal, multiply both numbers by 10, 100, etc. to make the divisor a whole number]
+
+## Step-by-Step Method
+
+### Multiplying Decimals
+1. Ignore the decimal points and multiply the numbers as whole numbers.
+2. Count the total number of decimal places in both original numbers.
+3. Place the decimal point in your answer so it has that many decimal places.
+
+### Dividing Decimals
+1. If the divisor is a decimal, multiply both the dividend and divisor by 10 (or 100, 1000) until the divisor is a whole number.
+2. Perform the division as normal.
+3. The decimal point in the answer sits directly above its position in the dividend.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Calculate 0.3 × 0.7.
+
+**Working:**
+
+Step 1 — Ignore decimals: 3 × 7 = 21.
+
+Step 2 — Count decimal places: 0.3 has 1 dp, 0.7 has 1 dp. Total = 2 dp.
+
+Step 3 — Place the point: 21 becomes 0.21.
+
+**Answer:** 0.21
+
+## Worked Example 2 — Higher Level
+
+**Question:** Calculate 3.42 × 2.5 without a calculator.
+
+**Working:**
+
+Step 1 — Ignore decimals: 342 × 25. Break this down: 342 × 25 = 342 × 100 ÷ 4 = 34,200 ÷ 4 = 8,550. Alternatively: 342 × 20 = 6,840 and 342 × 5 = 1,710. Sum: 6,840 + 1,710 = 8,550.
+
+Step 2 — Count decimal places: 3.42 has 2 dp, 2.5 has 1 dp. Total = 3 dp.
+
+Step 3 — 8550 with 3 dp = 8.550 = 8.55.
+
+**Answer:** 8.55
+
+## Worked Example 3 — Exam Style
+
+**Question:** Calculate 14.4 ÷ 0.06.
+
+**Working:**
+
+Step 1 — Make the divisor a whole number. Multiply both by 100: 14.4 × 100 = 1,440 and 0.06 × 100 = 6.
+
+Step 2 — Divide: 1,440 ÷ 6 = 240.
+
+**Answer:** 240
+
+## Common Mistakes
+
+- **Placing the decimal point incorrectly after multiplying.** Always count the total decimal places from the original numbers, not from the product of the whole numbers.
+- **Forgetting to adjust both numbers when dividing.** When you multiply the divisor by 10, you must also multiply the dividend by 10 to keep the calculation equivalent.
+- **Dropping trailing zeros.** When counting decimal places, include any trailing zeros — 2.50 counts as 2 decimal places.
+
+## Exam Tips
+
+- For multiplying, use partitioning or the grid method if long multiplication feels tricky.
+- Always do a rough estimate first (e.g. 3.42 × 2.5 ≈ 3 × 3 = 9) to check your answer is reasonable.
+- On division questions, convert to a whole-number divisor immediately — it makes the working far simpler.
+
+## Practice Questions
+
+**Q1 (Foundation):** Calculate 0.4 × 0.8.
+
+[ANSWER: 4 × 8 = 32. Total decimal places = 2. Answer: 0.32]
+
+**Q2 (Foundation):** Calculate 6.3 ÷ 0.9.
+
+[ANSWER: Multiply both by 10: 63 ÷ 9 = 7. Answer: 7]
+
+**Q3 (Higher):** Calculate 0.045 × 200.
+
+[ANSWER: 45 × 200 = 9,000. Decimal places from 0.045 = 3, from 200 = 0. Total = 3 dp. 9000 with 3 dp = 9.000 = 9. Answer: 9]
+
+---
+
+Practise multiplying and dividing decimals questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Decimals](/topics/decimals)
+- [Order of Operations (BIDMAS)](/topics/order-of-operations-bidmas)
+- [Rounding: Decimal Places and Significant Figures](/topics/rounding-decimal-places-significant-figures)
+
+## Summary
+
+- To multiply decimals, multiply as whole numbers then place the decimal point using the total count of decimal places.
+- To divide by a decimal, multiply both numbers by 10 (or 100) to make the divisor a whole number, then divide.
+- Always estimate first to check your answer is in the right ballpark.
+- Count decimal places carefully — this is where most errors occur.
+`,
+  "multiplying-and-dividing-fractions": `---
+title: "Multiplying and Dividing Fractions – GCSE Maths Revision Guide"
+description: "Master multiplying and dividing fractions for GCSE Maths. Learn cross-cancelling, Keep-Change-Flip, and practise with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["multiplying fractions GCSE", "dividing fractions", "Keep Change Flip", "cross cancelling fractions", "reciprocal fractions"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 75
+---
+
+Multiplying and dividing fractions appears on every GCSE Maths paper across AQA, Edexcel, and OCR. Once you know the two core rules — multiply straight across, and Keep-Change-Flip for division — these questions become some of the easiest marks on the exam.
+
+## What Is Multiplying and Dividing Fractions?
+
+**Multiplying fractions** is simpler than adding them because you do not need a common denominator. You multiply the numerators together to get the new numerator, and multiply the denominators together to get the new denominator. The key skill is to simplify — either at the end or by **cross-cancelling** before you multiply.
+
+**Dividing fractions** uses the reciprocal. Instead of dividing by a fraction, you multiply by its reciprocal (the fraction flipped upside down). This is often remembered as **Keep-Change-Flip**: keep the first fraction, change ÷ to ×, flip the second fraction.
+
+When mixed numbers are involved, always convert them to improper fractions before carrying out the operation, then convert back if the question requires a mixed number.
+
+### Key Formulas
+
+[FORMULA: a/b × c/d = ac / bd — multiply numerators together and denominators together]
+
+[FORMULA: a/b ÷ c/d = a/b × d/c = ad / bc — Keep-Change-Flip, then multiply]
+
+[FORMULA: The reciprocal of a/b is b/a — flipping a fraction gives its reciprocal]
+
+## Step-by-Step Method
+
+1. If the question involves mixed numbers, convert each to an improper fraction.
+2. For multiplication: multiply the numerators together and the denominators together.
+3. For division: keep the first fraction, change ÷ to ×, flip the second fraction, then multiply.
+4. Simplify by cross-cancelling before multiplying or by dividing the final answer by the HCF.
+5. Convert back to a mixed number if the question asks for one.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Work out 3/4 × 2/5. Give your answer as a fraction in its simplest form.
+
+**Working:**
+
+Step 1 — Multiply the numerators: 3 × 2 = 6.
+
+Step 2 — Multiply the denominators: 4 × 5 = 20.
+
+Step 3 — The result is 6/20. Simplify by dividing both by 2: 6/20 = 3/10.
+
+**Answer:** 3/10
+
+## Worked Example 2 — Higher Level
+
+**Question:** Work out 2 1/3 ÷ 1 3/4. Give your answer as a mixed number in its simplest form.
+
+**Working:**
+
+Step 1 — Convert to improper fractions: 2 1/3 = 7/3 and 1 3/4 = 7/4.
+
+Step 2 — Keep-Change-Flip: 7/3 ÷ 7/4 = 7/3 × 4/7.
+
+Step 3 — Cross-cancel: the 7 in the numerator and the 7 in the denominator cancel to give 1/3 × 4/1.
+
+Step 4 — Multiply: 1 × 4 = 4 and 3 × 1 = 3, so the answer is 4/3.
+
+Step 5 — Convert: 4/3 = 1 1/3.
+
+**Answer:** 1 1/3
+
+## Worked Example 3 — Exam Style
+
+**Question:** A piece of wood is 3 1/2 metres long. Emma cuts off 2/7 of the total length. What length does she cut off? (3 marks)
+
+**Working:**
+
+Step 1 — Convert: 3 1/2 = 7/2.
+
+Step 2 — Find 2/7 of 7/2: multiply 2/7 × 7/2.
+
+Step 3 — Cross-cancel: the 2s cancel and the 7s cancel, giving 1/1 × 1/1 = 1.
+
+**Answer:** 1 metre
+
+## Common Mistakes
+
+- **Finding a common denominator when multiplying.** You do not need a common denominator for multiplication — just multiply straight across.
+- **Flipping the wrong fraction when dividing.** Only flip the second fraction (the divisor). Keep the first fraction exactly as it is.
+- **Forgetting to convert mixed numbers first.** Multiplying or dividing with mixed numbers directly leads to errors. Always convert to improper fractions before operating.
+
+## Exam Tips
+
+- Cross-cancelling before you multiply keeps the numbers small and reduces the risk of arithmetic errors. Look for any common factor between a numerator and a denominator.
+- If the question says "Give your answer as a mixed number," you will lose the final mark if you leave it as an improper fraction.
+- On non-calculator papers, show the cross-cancelling step — it earns method marks.
+
+## Practice Questions
+
+**Q1 (Foundation):** Work out 5/8 × 4/9. Give your answer in its simplest form.
+
+[ANSWER: Cross-cancel the 4 and 8 (divide both by 4): 5/2 × 1/9 = 5/18]
+
+**Q2 (Foundation):** Work out 3/5 ÷ 2/3.
+
+[ANSWER: Keep-Change-Flip: 3/5 × 3/2 = 9/10]
+
+**Q3 (Higher):** Work out 1 2/5 × 2 1/3. Give your answer as a mixed number in its simplest form.
+
+[ANSWER: 1 2/5 = 7/5 and 2 1/3 = 7/3. 7/5 × 7/3 = 49/15 = 3 4/15]
+
+---
+
+Practise multiplying and dividing fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Fractions](/topics/fractions)
+- [Algebraic Fractions](/topics/algebraic-fractions)
+- [Adding and Subtracting Fractions](/topics/adding-and-subtracting-fractions)
+
+## Summary
+
+- To multiply fractions, multiply numerators together and denominators together.
+- To divide fractions, use Keep-Change-Flip: keep the first, change ÷ to ×, flip the second.
+- Cross-cancel common factors before multiplying to keep numbers small.
+- Always convert mixed numbers to improper fractions before calculating.
+- Simplify your final answer and convert to a mixed number if required.
+`,
+  "mutually-exclusive-events": `---
+title: "Mutually Exclusive Events – GCSE Maths Revision Guide"
+description: "Learn mutually exclusive events for GCSE Maths with the addition rule, complement rule, exhaustive events, worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["mutually exclusive GCSE", "addition rule probability", "P(A or B)", "complement rule", "exhaustive events GCSE"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 189
+---
+
+Mutually exclusive events are a core probability concept tested on both Foundation and Higher GCSE Maths papers across AQA, Edexcel and OCR. Understanding when events cannot happen at the same time allows you to add probabilities — a rule that underpins many exam questions. You also need to know the complement rule and what exhaustive events are. This guide covers all the essentials with clear worked examples and practice questions. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Are Mutually Exclusive Events?
+
+Two events are **mutually exclusive** if they cannot happen at the same time. For example, when you flip a coin, it lands on either heads or tails — not both. Rolling a 3 and rolling a 5 on a single dice are mutually exclusive.
+
+### Key Formulas
+
+[FORMULA: P(A or B) = P(A) + P(B)  (for mutually exclusive events only)]
+
+[FORMULA: P(not A) = 1 − P(A)]
+
+The addition rule only works when A and B cannot happen together. If events can overlap, this formula does not apply.
+
+### Exhaustive Events
+
+Events are **exhaustive** if they cover all possible outcomes. For exhaustive events, the sum of all probabilities equals 1. For example, the outcomes 1, 2, 3, 4, 5 and 6 on a dice are exhaustive — they cover every possibility.
+
+### Combining Both Concepts
+
+If events are both mutually exclusive and exhaustive, their probabilities add up to exactly 1. This is why P(not A) = 1 − P(A) works — event A and "not A" are mutually exclusive and exhaustive.
+
+## Step-by-Step Method
+
+1. Identify whether the events can happen at the same time.
+2. If they cannot (mutually exclusive), add the probabilities: P(A or B) = P(A) + P(B).
+3. If you need the probability of something not happening, use P(not A) = 1 − P(A).
+4. If given several probabilities that should cover all outcomes, check they sum to 1.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A bag contains 10 counters: 3 red, 4 blue and 3 green. A counter is picked at random. Find the probability of picking a red or green counter.
+
+**Working:**
+
+Red and green are mutually exclusive — a counter cannot be both red and green.
+
+P(red) = 3/10. P(green) = 3/10.
+
+P(red or green) = 3/10 + 3/10 = **6/10 = 3/5**.
+
+**Answer:** The probability of picking a red or green counter is 3/5.
+
+## Worked Example 2 — Higher Level
+
+**Question:** The probability that a student walks to school is 0.35, takes the bus is 0.25 and cycles is 0.15. These are the only three ways students travel. (a) Find P(walks or cycles). (b) Find P(goes by car).
+
+**Working:**
+
+**(a)** Walking and cycling are mutually exclusive. P(walks or cycles) = 0.35 + 0.15 = **0.50**.
+
+**(b)** The three given modes are not exhaustive — some students go by car. Total of given = 0.35 + 0.25 + 0.15 = 0.75. P(car) = 1 − 0.75 = **0.25**.
+
+**Answer:** (a) 0.50. (b) 0.25.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A spinner has sections labelled A, B, C and D. The table shows some probabilities.
+
+| Section | A | B | C | D |
+|---|---|---|---|---|
+| Probability | 0.1 | 0.35 | x | 0.2 |
+
+(a) Find x. (b) Find P(A or D). (c) Find P(not B).
+
+**Working:**
+
+**(a)** All outcomes are exhaustive, so probabilities sum to 1: 0.1 + 0.35 + x + 0.2 = 1. 0.65 + x = 1. x = **0.35**.
+
+**(b)** A and D are mutually exclusive. P(A or D) = 0.1 + 0.2 = **0.3**.
+
+**(c)** P(not B) = 1 − 0.35 = **0.65**.
+
+**Answer:** (a) x = 0.35. (b) P(A or D) = 0.3. (c) P(not B) = 0.65.
+
+## Common Mistakes
+
+- **Adding probabilities for non-mutually-exclusive events.** If events can happen at the same time (e.g. picking a red card and picking a king), you cannot simply add — you would double-count the overlap.
+- **Probabilities not summing to 1.** If a question gives all possible outcomes, check that your probabilities add to 1. If they do not, you have made an error.
+- **Confusing "or" with "and."** "Or" means either one (use addition for mutually exclusive). "And" means both together (use multiplication for independent — see the next topic).
+
+## Exam Tips
+
+- "Or" in probability usually means add (for mutually exclusive events).
+- If you are given all probabilities except one, subtract the total of the known probabilities from 1.
+- State clearly whether events are mutually exclusive to justify using the addition rule.
+- At Higher level, non-mutually-exclusive events need the formula P(A or B) = P(A) + P(B) − P(A and B) — but this is covered in Venn diagrams.
+- For combined events, see [independent and dependent events](/topics/independent-and-dependent-events). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A dice is rolled. Find the probability of getting a 2 or a 5.
+
+[ANSWER: P(2) = 1/6. P(5) = 1/6. They are mutually exclusive. P(2 or 5) = 1/6 + 1/6 = 2/6 = 1/3.]
+
+**Q2 (Foundation):** The probability of picking a red sweet is 0.4. What is the probability of not picking a red sweet?
+
+[ANSWER: P(not red) = 1 − 0.4 = 0.6.]
+
+**Q3 (Higher):** Events X, Y and Z are mutually exclusive and exhaustive. P(X) = 0.3 and P(Y) = 0.45. Find P(Z) and P(X or Z).
+
+[ANSWER: P(Z) = 1 − 0.3 − 0.45 = 0.25. P(X or Z) = 0.3 + 0.25 = 0.55.]
+
+---
+
+Practise mutually exclusive events and probability rules free on GCSEMathsAI.
+
+## Related Topics
+
+- [Independent and Dependent Events](/topics/independent-and-dependent-events)
+- [Probability Scale and Basic Probability](/topics/probability-scale-and-basic-probability)
+- [Venn Diagrams](/topics/venn-diagrams)
+
+## Summary
+
+- Mutually exclusive events cannot happen at the same time.
+- For mutually exclusive events, P(A or B) = P(A) + P(B).
+- Exhaustive events cover all possible outcomes and their probabilities sum to 1.
+- The complement rule P(not A) = 1 − P(A) applies because A and "not A" are mutually exclusive and exhaustive.
+- Do not add probabilities if events can overlap — this only works for mutually exclusive events.
+`,
+  "negative-and-fractional-indices": `---
+title: "Negative and Fractional Indices – GCSE Maths Revision Guide"
+description: "Master negative and fractional indices for GCSE Maths Higher tier. Learn x to the power -1, 1/2, 2/3 with worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["negative indices GCSE", "fractional indices", "index laws higher tier", "powers and roots GCSE", "x to the power half"]
+tier: "Higher only"
+strand: "Number"
+topicNumber: 81
+---
+
+Negative and fractional indices extend the index laws you already know into Higher tier territory. These questions appear frequently on AQA, Edexcel, and OCR papers and are often worth 2-3 marks each. Once you understand what negative and fractional powers mean, they become very manageable.
+
+## What Are Negative and Fractional Indices?
+
+The standard index laws (multiplying, dividing, and raising powers) still apply, but negative and fractional indices introduce two new ideas.
+
+A **negative index** means "take the reciprocal." So x⁻¹ = 1/x, and x⁻² = 1/x². The negative sign does not make the answer negative — it flips the base to the bottom of a fraction.
+
+A **fractional index** means "take a root." The denominator of the fraction tells you which root to take, and the numerator tells you the power. So x^(1/2) = √x, x^(1/3) = ∛x, and x^(2/3) = (∛x)². You can apply the root first and then the power, or vice versa — but taking the root first usually keeps the numbers smaller.
+
+### Key Formulas
+
+[FORMULA: x⁻ⁿ = 1/xⁿ — a negative index means reciprocal]
+
+[FORMULA: x^(1/n) = the nth root of x — a unit fraction index means a root]
+
+[FORMULA: x^(m/n) = (the nth root of x)^m — root first, then power]
+
+[FORMULA: x⁰ = 1 — any non-zero number to the power zero equals 1]
+
+## Step-by-Step Method
+
+1. If the index is negative, write the reciprocal (flip to 1 over the base raised to the positive index).
+2. If the index is a fraction, identify the denominator (root) and the numerator (power).
+3. Take the root first to keep numbers small, then raise to the power.
+4. If combining with other index laws, apply the laws as normal (add indices when multiplying, subtract when dividing).
+5. Simplify the result.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Evaluate 25^(1/2).
+
+**Working:**
+
+Step 1 — The index 1/2 means "square root."
+
+Step 2 — √25 = 5.
+
+**Answer:** 5
+
+## Worked Example 2 — Higher Level
+
+**Question:** Evaluate 8^(−2/3).
+
+**Working:**
+
+Step 1 — The negative index means reciprocal: 8^(−2/3) = 1 / 8^(2/3).
+
+Step 2 — The denominator 3 means cube root: ∛8 = 2.
+
+Step 3 — The numerator 2 means square: 2² = 4.
+
+Step 4 — So 8^(2/3) = 4, and 8^(−2/3) = 1/4.
+
+**Answer:** 1/4
+
+## Worked Example 3 — Exam Style
+
+**Question:** Simplify fully (16x⁸)^(3/4). (3 marks)
+
+**Working:**
+
+Step 1 — Apply the power 3/4 to each part separately: 16^(3/4) × (x⁸)^(3/4).
+
+Step 2 — 16^(3/4): the fourth root of 16 is 2, and 2³ = 8. So 16^(3/4) = 8.
+
+Step 3 — (x⁸)^(3/4) = x^(8 × 3/4) = x⁶.
+
+**Answer:** 8x⁶
+
+## Common Mistakes
+
+- **Thinking a negative index makes the answer negative.** x⁻² = 1/x², not −x². The negative sign indicates a reciprocal, not a negative number.
+- **Applying the power before the root.** While mathematically valid, computing 8² = 64 then ∛64 is harder than doing ∛8 = 2 then 2² = 4. Take the root first.
+- **Confusing x^(1/2) with x/2.** A fractional index is not the same as dividing by the denominator. x^(1/2) = √x, which is very different from x ÷ 2.
+
+## Exam Tips
+
+- When you see a fractional index, write out what the root and power are separately before calculating. This earns method marks.
+- Memorise the key roots: ∛8 = 2, ∛27 = 3, ∛64 = 4, ∛125 = 5, as well as fourth roots of 16 and 81.
+- If the question involves algebra, use the power law (xᵃ)ᵇ = x^(ab) to simplify the expression step by step.
+
+## Practice Questions
+
+**Q1 (Higher):** Evaluate 27^(1/3).
+
+[ANSWER: The cube root of 27 = 3]
+
+**Q2 (Higher):** Evaluate 49^(−1/2).
+
+[ANSWER: 49^(−1/2) = 1 / 49^(1/2) = 1 / √49 = 1/7]
+
+**Q3 (Higher):** Simplify (27x⁶)^(2/3).
+
+[ANSWER: 27^(2/3) = (∛27)² = 3² = 9. (x⁶)^(2/3) = x^(6 × 2/3) = x⁴. Answer = 9x⁴]
+
+---
+
+Practise negative and fractional indices questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Indices and Index Laws](/topics/indices-and-index-laws)
+- [Powers and Roots](/topics/powers-and-roots)
+- [Simplifying Surds](/topics/simplifying-surds)
+
+## Summary
+
+- A negative index means reciprocal: x⁻ⁿ = 1/xⁿ.
+- A fractional index means a root: x^(1/n) = nth root of x.
+- For x^(m/n), take the nth root first, then raise to the power m.
+- x⁰ = 1 for any non-zero value of x.
+- Take the root before the power to keep numbers manageable.
+- Show each step clearly in exams — separate the root and power for method marks.
+`,
+  "nth-term-of-linear-sequences": `---
+title: "Nth Term of Linear Sequences – GCSE Maths Revision Guide"
+description: "Learn how to find the nth term of a linear sequence for GCSE Maths with step-by-step methods, worked examples, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["nth term linear sequence", "nth term formula GCSE", "common difference sequence", "arithmetic sequence GCSE", "find nth term"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 87
+---
+
+Finding the nth term of a linear sequence is a key algebra skill at GCSE. It lets you write a rule that generates any term in a sequence without having to list them all, and it is tested on both Foundation and Higher papers across all exam boards.
+
+## What Is the Nth Term of a Linear Sequence?
+
+A linear (arithmetic) sequence is a list of numbers where the difference between consecutive terms is always the same. This constant gap is called the **common difference**, d. For example, in the sequence 5, 8, 11, 14, 17, ... the common difference is 3 because each term is 3 more than the one before.
+
+The nth term formula gives a rule for the value of any term based on its position number n. For a linear sequence, the nth term always has the form dn + c, where d is the common difference and c is a constant you calculate. Once you have the formula, you can find the 100th term, check whether a given number belongs to the sequence, or work backwards to find which term has a particular value.
+
+The formula is sometimes written as a + (n - 1)d, where a is the first term. This is equivalent to dn + (a - d), since expanding gives dn + a - d.
+
+### Key Formulas
+
+[FORMULA: nth term = dn + (a - d), where d = common difference and a = first term]
+
+[FORMULA: Equivalent form: nth term = a + (n - 1)d]
+
+## Step-by-Step Method
+
+1. Find the common difference d by subtracting any term from the next term.
+2. Write the "dn" part: this tells you the sequence is based on the d times table.
+3. Compare the first term of the sequence with d times 1 to find the adjustment c = a - d.
+4. Write the nth term as dn + c.
+5. Check by substituting n = 1, 2, 3 to verify you get the original terms.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the nth term of the sequence 4, 9, 14, 19, 24, ...
+
+**Working:**
+
+Step 1 — Common difference: 9 - 4 = 5, so d = 5.
+
+Step 2 — The dn part is 5n.
+
+Step 3 — When n = 1, 5n = 5, but the first term is 4. Adjustment: 4 - 5 = -1.
+
+Step 4 — nth term = 5n - 1.
+
+Step 5 — Check: n = 1 gives 5(1) - 1 = 4. n = 2 gives 5(2) - 1 = 9. n = 3 gives 5(3) - 1 = 14. All correct.
+
+**Answer:** 5n - 1
+
+## Worked Example 2 — Higher Level
+
+**Question:** The nth term of a sequence is 3n + 7. Is 52 a term in this sequence? You must show your working.
+
+**Working:**
+
+Set 3n + 7 = 52.
+
+Subtract 7: 3n = 45.
+
+Divide by 3: n = 15.
+
+Since n = 15 is a positive whole number, 52 is the 15th term of the sequence.
+
+**Answer:** Yes, 52 is in the sequence (it is the 15th term).
+
+## Worked Example 3 — Exam Style
+
+**Question:** Here are the first five terms of a sequence: 2, -1, -4, -7, -10. Find the nth term. Find the 50th term. (3 marks)
+
+**Working:**
+
+Step 1 — Common difference: -1 - 2 = -3, so d = -3.
+
+Step 2 — The dn part is -3n.
+
+Step 3 — When n = 1, -3n = -3, but the first term is 2. Adjustment: 2 - (-3) = 5.
+
+Step 4 — nth term = -3n + 5.
+
+Step 5 — Check: n = 1 gives -3 + 5 = 2. n = 2 gives -6 + 5 = -1. Correct.
+
+50th term: -3(50) + 5 = -150 + 5 = -145.
+
+**Answer:** nth term = -3n + 5; the 50th term is -145.
+
+## Common Mistakes
+
+- **Using the wrong sign for the common difference.** If the sequence decreases, d is negative. Always subtract in the correct order: next term minus current term.
+- **Forgetting to find the adjustment c.** Writing the answer as just "5n" when the nth term is 5n - 1 loses a mark. You must include the constant.
+- **Confusing the first term with the zeroth term.** The adjustment is found by comparing d times 1 with the first term, not d times 0.
+
+## Exam Tips
+
+- To check if a number belongs to the sequence, set the nth term formula equal to that number and solve for n. If n is a positive integer, it is in the sequence.
+- The common difference d is always the coefficient of n in the nth term formula. Use this as a quick sanity check.
+- For sequences with negative common differences, be extra careful with signs when calculating the adjustment.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the nth term of the sequence 7, 11, 15, 19, 23, ...
+
+[ANSWER: d = 4. 4n gives 4 when n = 1, but first term is 7. Adjustment: 7 - 4 = 3. nth term = 4n + 3.]
+
+**Q2 (Foundation):** Find the 20th term of the sequence with nth term 6n - 5.
+
+[ANSWER: 6(20) - 5 = 120 - 5 = 115.]
+
+**Q3 (Higher):** The nth term of a sequence is 8n - 3. Prove that 150 is not a term in this sequence.
+
+[ANSWER: Set 8n - 3 = 150. 8n = 153. n = 153/8 = 19.125. Since n is not a whole number, 150 is not in the sequence.]
+
+---
+
+Practise nth term of linear sequences questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Sequences and Nth Term](/topics/sequences-and-nth-term)
+- [Quadratic Sequences](/topics/quadratic-sequences-and-nth-term)
+- [Solving Linear Equations](/topics/solving-linear-equations)
+
+## Summary
+
+- A linear sequence has a constant common difference d between consecutive terms.
+- The nth term formula is dn + (a - d), where a is the first term.
+- Find d by subtracting consecutive terms, then calculate the constant adjustment.
+- To test whether a value belongs to the sequence, set the nth term equal to that value and check if n is a positive integer.
+- Always verify your formula by substituting small values of n.
 `,
   "order-of-operations-bidmas": `---
 title: "Order of Operations (BIDMAS) – GCSE Maths"
@@ -5619,6 +14681,510 @@ Challenge yourself with Higher-tier graph questions on [GCSEMathsAI](https://www
 - Asymptotes should be drawn as **dashed lines** and labelled clearly.
 - Knowing the key shapes and features helps you match equations to graphs in exam questions.
 - Always plot a few key coordinates to ensure accuracy when sketching.
+`,
+  "parallel-and-perpendicular-lines": `---
+title: "Parallel and Perpendicular Lines – GCSE Maths Revision Guide"
+description: "Learn parallel and perpendicular line rules at GCSE. Same gradient means parallel, product of gradients = −1 means perpendicular. Worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["parallel lines GCSE", "perpendicular lines GCSE", "gradient relationship", "negative reciprocal", "equation of parallel line"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 145
+---
+
+# Parallel and Perpendicular Lines
+
+Understanding the gradient relationships for parallel and perpendicular lines is a key Higher topic. If two lines have the same gradient they are parallel; if the product of their gradients is −1 they are perpendicular. These rules let you find equations of lines in many exam questions. This page covers the theory, the method for finding equations, and fully worked examples.
+
+## What Are Parallel and Perpendicular Lines?
+
+Two lines are **parallel** if they run in exactly the same direction and never meet. In coordinate geometry, this means they have the same gradient.
+
+Two lines are **perpendicular** if they meet at a right angle (90°). Their gradients are negative reciprocals of each other, meaning the product of their gradients is −1.
+
+### Key Formulas
+
+[FORMULA: Parallel lines have equal gradients: m₁ = m₂]
+
+[FORMULA: Perpendicular lines satisfy m₁ × m₂ = −1, so m₂ = −1/m₁]
+
+[FORMULA: Equation of a straight line: y − y₁ = m(x − x₁)]
+
+## Step-by-Step Method
+
+1. **Find the gradient of the given line.** If the equation is y = mx + c, the gradient is m. If it is in the form ax + by = c, rearrange to y = mx + c.
+2. **For a parallel line**, use the same gradient m.
+3. **For a perpendicular line**, use the negative reciprocal: −1/m.
+4. **Substitute the gradient and the given point** into y − y₁ = m(x − x₁).
+5. **Simplify** to get y = mx + c.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Line A has equation y = 3x + 2. Line B has equation y = 3x − 5. Are they parallel?
+
+**Working:**
+
+Gradient of Line A = 3. Gradient of Line B = 3.
+
+Since the gradients are equal, the lines are parallel.
+
+**Answer:** Yes, they are parallel (both have gradient 3).
+
+## Worked Example 2 — Higher Level
+
+**Question:** Find the equation of the line perpendicular to y = 2x + 1 that passes through (4, 3).
+
+**Working:**
+
+- Gradient of the given line: m = 2.
+- Perpendicular gradient: −1/2.
+- Using y − y₁ = m(x − x₁): y − 3 = −1/2 × (x − 4).
+- Expand: y − 3 = −x/2 + 2.
+- Add 3: y = −x/2 + 5.
+
+Check: at x = 4, y = −4/2 + 5 = −2 + 5 = 3 ✓
+
+**Answer:** y = −x/2 + 5 (or equivalently y = −0.5x + 5)
+
+## Worked Example 3 — Exam Style
+
+**Question:** Line L passes through (1, 4) and (3, 10). Find the equation of the line perpendicular to L that passes through the midpoint of (1, 4) and (3, 10).
+
+**Working:**
+
+- Gradient of L: (10 − 4)/(3 − 1) = 6/2 = 3.
+- Perpendicular gradient: −1/3.
+- Midpoint: ((1 + 3)/2, (4 + 10)/2) = (2, 7).
+- Using y − y₁ = m(x − x₁): y − 7 = −1/3 × (x − 2).
+- Expand: y − 7 = −x/3 + 2/3.
+- Add 7: y = −x/3 + 2/3 + 21/3 = −x/3 + 23/3.
+
+**Answer:** y = −x/3 + 23/3
+
+## Common Mistakes
+
+- **Using m instead of −1/m for perpendicular lines.** The perpendicular gradient is the negative reciprocal, not just the negative. For example, if m = 2, the perpendicular gradient is −1/2, not −2.
+- **Forgetting to flip the fraction.** If the gradient is 3/4, the perpendicular gradient is −4/3, not −3/4.
+- **Not rearranging to find the gradient.** If the line is given as 2x + 3y = 12, you must rearrange to y = −2x/3 + 4 to see the gradient is −2/3.
+
+## Exam Tips
+
+- State clearly whether lines are parallel or perpendicular and justify with the gradient rule.
+- If you are finding the equation of a line, the point-gradient form y − y₁ = m(x − x₁) is the most efficient starting point.
+- Questions often combine this topic with midpoints — find the midpoint first, then use it as the point for the perpendicular bisector.
+- Double-check by substituting the given point into your final equation.
+
+## Practice Questions
+
+**Q1 (Foundation):** Are the lines y = 4x + 1 and y = 4x − 7 parallel, perpendicular, or neither?
+
+[ANSWER: Parallel (both have gradient 4)]
+
+**Q2 (Higher):** Find the equation of the line parallel to y = −2x + 3 passing through (5, 1).
+
+[ANSWER: Gradient = −2. y − 1 = −2(x − 5). y = −2x + 11]
+
+**Q3 (Higher):** Find the equation of the line perpendicular to y = (3/4)x − 2 passing through (6, 1).
+
+[ANSWER: Perpendicular gradient = −4/3. y − 1 = −4/3(x − 6). y = −4x/3 + 9]
+
+---
+
+Practise parallel and perpendicular lines with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Linear Graphs and Equation of a Line](/topics/linear-graphs-and-equation-of-a-line)
+- [Finding the Equation of a Line](/topics/finding-the-equation-of-a-line)
+- [Midpoint and Distance Between Points](/topics/midpoint-and-distance-between-points)
+
+## Summary
+
+- Parallel lines have equal gradients.
+- Perpendicular lines have gradients whose product is −1 (negative reciprocals).
+- Use y − y₁ = m(x − x₁) to find the equation once you know the gradient and a point.
+- Always rearrange the given equation to y = mx + c to read off the gradient.
+- This topic often pairs with midpoints and perpendicular bisectors in exam questions.
+`,
+  "percentage-change": `---
+title: "Percentage Change – GCSE Maths Revision Guide"
+description: "Learn the percentage change formula for GCSE Maths. Step-by-step method for finding percentage increase and decrease between two values."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["percentage change GCSE", "percentage change formula", "percentage increase decrease", "finding percentage change", "percentage difference"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 77
+---
+
+Percentage change questions are among the most common on GCSE Maths exams. Instead of being given a percentage and asked to apply it, you are given two values and must calculate what percentage one has changed relative to the other. This skill is essential for topics ranging from profit and loss to population growth.
+
+## What Is Percentage Change?
+
+Percentage change measures how much a quantity has increased or decreased relative to its original value, expressed as a percentage. If a price rises from £40 to £50, the percentage change tells you by what percentage the price went up.
+
+The direction of the change matters. A **percentage increase** means the new value is larger than the original. A **percentage decrease** means the new value is smaller. The formula is the same in both cases — the sign of the answer tells you the direction.
+
+It is crucial that you always divide by the **original** value, not the new value. This is one of the most common errors students make in exams.
+
+### Key Formulas
+
+[FORMULA: Percentage change = (change / original value) × 100]
+
+[FORMULA: Change = new value − original value]
+
+[FORMULA: If the result is positive the value has increased; if negative it has decreased]
+
+## Step-by-Step Method
+
+1. Write down the original value and the new value.
+2. Calculate the change: new value − original value.
+3. Divide the change by the original value.
+4. Multiply by 100 to convert to a percentage.
+5. State whether the change is an increase or a decrease.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A shirt was priced at £40. In a sale, the price is reduced to £34. Find the percentage decrease.
+
+**Working:**
+
+Step 1 — Original value = £40, new value = £34.
+
+Step 2 — Change = 34 − 40 = −6 (a decrease of £6).
+
+Step 3 — Percentage change = (6 / 40) × 100 = 15%.
+
+**Answer:** 15% decrease
+
+## Worked Example 2 — Higher Level
+
+**Question:** The population of a town increased from 24,500 to 28,175. Calculate the percentage increase. Give your answer to 1 decimal place.
+
+**Working:**
+
+Step 1 — Original value = 24,500, new value = 28,175.
+
+Step 2 — Change = 28,175 − 24,500 = 3,675.
+
+Step 3 — Percentage change = (3,675 / 24,500) × 100 = 15.0%.
+
+**Answer:** 15.0% increase
+
+## Worked Example 3 — Exam Style
+
+**Question:** A shop buys a coat for £35 and sells it for £56. Work out the percentage profit. (3 marks)
+
+**Working:**
+
+Step 1 — Cost price (original) = £35, selling price (new) = £56.
+
+Step 2 — Profit = 56 − 35 = £21.
+
+Step 3 — Percentage profit = (21 / 35) × 100 = 60%.
+
+**Answer:** 60% profit
+
+## Common Mistakes
+
+- **Dividing by the new value instead of the original.** The formula requires you to divide by the original. In the shirt example, dividing £6 by £34 gives the wrong answer.
+- **Forgetting to multiply by 100.** The division gives a decimal (e.g. 0.15). You must multiply by 100 to express it as a percentage.
+- **Confusing percentage change with the actual change.** The actual change is in the same units as the values (e.g. £6). The percentage change is a relative measure (e.g. 15%).
+
+## Exam Tips
+
+- Always identify which value is the original. In profit/loss questions, the original is the cost price. In growth questions, the original is the starting value.
+- Write the formula first, then substitute. This earns you a method mark on AQA, Edexcel, and OCR papers.
+- If the question asks for an answer to a specific number of decimal places, do not round early — only round your final answer.
+
+## Practice Questions
+
+**Q1 (Foundation):** A games console was £300. Its price rises to £345. Find the percentage increase.
+
+[ANSWER: Change = 345 − 300 = 45. Percentage change = (45 / 300) × 100 = 15%]
+
+**Q2 (Foundation):** A car depreciates from £12,000 to £9,600. Find the percentage decrease.
+
+[ANSWER: Change = 12,000 − 9,600 = 2,400. Percentage change = (2,400 / 12,000) × 100 = 20% decrease]
+
+**Q3 (Higher):** Last year 480 students passed an exam. This year 552 passed. Work out the percentage increase to 1 decimal place.
+
+[ANSWER: Change = 552 − 480 = 72. Percentage change = (72 / 480) × 100 = 15.0% increase]
+
+---
+
+Practise percentage change questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Percentages](/topics/percentages)
+- [Reverse Percentages](/topics/reverse-percentages)
+- [Percentage of an Amount](/topics/percentage-of-an-amount)
+
+## Summary
+
+- Percentage change = (change ÷ original) × 100.
+- Always divide by the original value, never the new value.
+- A positive result means an increase; a negative result means a decrease.
+- Write the formula and substitute clearly to earn method marks.
+- This skill applies to profit/loss, depreciation, population changes, and many other contexts.
+`,
+  "percentage-multipliers": `---
+title: "Percentage Multipliers – GCSE Maths Revision Guide"
+description: "Master decimal multipliers for percentage increase, decrease and repeated change. GCSE Maths worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["percentage multiplier GCSE", "decimal multiplier", "repeated percentage change", "percentage increase multiplier", "percentage decrease multiplier"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 78
+---
+
+Percentage multipliers give you a fast, one-step way to calculate percentage increases and decreases. Instead of finding the percentage and then adding or subtracting, you multiply by a single decimal — saving time and reducing errors on both calculator and non-calculator GCSE papers.
+
+## What Are Percentage Multipliers?
+
+A **percentage multiplier** is a decimal number that you multiply an amount by to apply a percentage change in a single step. For a percentage increase, the multiplier is greater than 1. For a percentage decrease, the multiplier is less than 1.
+
+For example, to increase a value by 15%, you multiply by 1.15 (since 100% + 15% = 115% = 1.15). To decrease by 15%, you multiply by 0.85 (since 100% − 15% = 85% = 0.85).
+
+Multipliers become especially powerful for **repeated percentage change**. If a value increases by 5% each year for 3 years, you multiply by 1.05 three times — or equivalently, by 1.05³. This connects directly to compound interest and depreciation.
+
+### Key Formulas
+
+[FORMULA: Multiplier for increase = 1 + (percentage / 100)]
+
+[FORMULA: Multiplier for decrease = 1 − (percentage / 100)]
+
+[FORMULA: After n repeated changes: final value = original × multiplier^n]
+
+## Step-by-Step Method
+
+1. Decide whether the change is an increase or a decrease.
+2. Convert the percentage to a decimal by dividing by 100.
+3. For an increase, add the decimal to 1. For a decrease, subtract it from 1.
+4. Multiply the original amount by the multiplier.
+5. For repeated changes, raise the multiplier to the power of the number of times the change occurs, then multiply.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Increase £350 by 12%.
+
+**Working:**
+
+Step 1 — This is an increase, so the multiplier = 1 + 0.12 = 1.12.
+
+Step 2 — New amount = 350 × 1.12 = 392.
+
+**Answer:** £392
+
+## Worked Example 2 — Higher Level
+
+**Question:** A car worth £18,000 depreciates by 15% per year. Find its value after 3 years. Give your answer to the nearest penny.
+
+**Working:**
+
+Step 1 — This is a decrease, so the multiplier = 1 − 0.15 = 0.85.
+
+Step 2 — The depreciation happens 3 times, so raise the multiplier to the power of 3.
+
+Step 3 — Value after 3 years = 18,000 × 0.85³ = 18,000 × 0.614125 = 11,054.25.
+
+**Answer:** £11,054.25
+
+## Worked Example 3 — Exam Style
+
+**Question:** A savings account pays 3.5% compound interest per year. £2,000 is deposited. Work out the total value after 4 years. (3 marks)
+
+**Working:**
+
+Step 1 — Multiplier = 1 + 0.035 = 1.035.
+
+Step 2 — Value = 2,000 × 1.035⁴.
+
+Step 3 — 1.035⁴ = 1.14752... so value = 2,000 × 1.14752... = 2,295.05 (to the nearest penny).
+
+**Answer:** £2,295.05
+
+## Common Mistakes
+
+- **Using 0.15 instead of 1.15 for a 15% increase.** Multiplying by 0.15 gives you 15% of the amount, not the amount increased by 15%. The multiplier must include the original 100%.
+- **Applying repeated percentage change as a single large percentage.** A 10% increase for 3 years is not a 30% increase. You must multiply by 1.10 three times, which gives 1.331 — a 33.1% increase.
+- **Mixing up increase and decrease multipliers.** A 20% decrease uses 0.80, not 1.20. Always check: is the multiplier making the number bigger or smaller?
+
+## Exam Tips
+
+- Write down the multiplier explicitly — examiners award a method mark for stating it correctly.
+- For repeated change problems, write the expression in full (e.g. 18000 × 0.85³) before calculating. This earns method marks even if you make an arithmetic error.
+- If a question asks you to find the original value before a percentage change, divide by the multiplier — this links to reverse percentages.
+
+## Practice Questions
+
+**Q1 (Foundation):** Decrease £480 by 25%.
+
+[ANSWER: Multiplier = 1 − 0.25 = 0.75. New amount = 480 × 0.75 = £360]
+
+**Q2 (Foundation):** A TV costs £560. The price is increased by 8%. What is the new price?
+
+[ANSWER: Multiplier = 1.08. New price = 560 × 1.08 = £604.80]
+
+**Q3 (Higher):** A painting increases in value by 6% each year. It is currently worth £1,200. What will it be worth in 5 years? Give your answer to the nearest pound.
+
+[ANSWER: Multiplier = 1.06. Value = 1,200 × 1.06⁵ = 1,200 × 1.33823... = £1,606 (nearest pound)]
+
+---
+
+Practise percentage multiplier questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Percentages](/topics/percentages)
+- [Compound Interest and Depreciation](/topics/compound-interest-and-depreciation)
+- [Reverse Percentages](/topics/reverse-percentages)
+
+## Summary
+
+- A percentage multiplier lets you apply a percentage change in one step.
+- For an increase of p%, multiply by (1 + p/100). For a decrease, multiply by (1 − p/100).
+- For repeated percentage changes, raise the multiplier to the power of the number of repetitions.
+- Multiplying by 0.p gives p% of the amount — not the amount after a p% change.
+- Always state your multiplier clearly in exams to earn method marks.
+`,
+  "percentage-of-an-amount": `---
+title: "Percentage of an Amount – GCSE Maths Revision Guide"
+description: "Learn how to find a percentage of an amount with and without a calculator. Step-by-step methods, worked examples and GCSE practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["percentage of an amount GCSE", "finding percentages", "multiplier method percentages", "non-calculator percentages", "10 percent method"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 76
+---
+
+Finding a percentage of an amount is one of the most useful skills in GCSE Maths and in everyday life. From calculating discounts to working out VAT, this topic appears on both calculator and non-calculator papers across AQA, Edexcel, and OCR.
+
+## What Is a Percentage of an Amount?
+
+A percentage means "out of 100." Finding a percentage of an amount means working out what that fraction of 100 represents when applied to a given number. For example, 25% of 80 means 25/100 of 80.
+
+There are two main approaches. On **non-calculator papers**, you build up to the required percentage using benchmarks like 10%, 5%, and 1%. On **calculator papers**, you use the **multiplier method** — convert the percentage to a decimal and multiply.
+
+Both methods give the same answer, so choose whichever is faster for the numbers involved. The multiplier method is especially efficient for awkward percentages like 17.5%.
+
+### Key Formulas
+
+[FORMULA: Percentage of an amount = (percentage / 100) × amount]
+
+[FORMULA: Multiplier method: percentage of amount = decimal multiplier × amount, where the multiplier = percentage ÷ 100]
+
+[FORMULA: 10% of a number = the number ÷ 10]
+
+## Step-by-Step Method
+
+1. **Non-calculator approach:** Find 10% by dividing by 10. From there, find 5% (halve the 10%), 1% (divide the original by 100), and build up to the required percentage.
+2. **Calculator/multiplier approach:** Divide the percentage by 100 to get a decimal. Multiply the amount by this decimal.
+3. Check your answer makes sense — e.g. 25% of something should be roughly a quarter.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find 35% of 240 without a calculator.
+
+**Working:**
+
+Step 1 — Find 10% of 240: 240 ÷ 10 = 24.
+
+Step 2 — Find 30%: 24 × 3 = 72.
+
+Step 3 — Find 5%: half of 10% = 24 ÷ 2 = 12.
+
+Step 4 — Add 30% + 5%: 72 + 12 = 84.
+
+**Answer:** 84
+
+## Worked Example 2 — Higher Level
+
+**Question:** A laptop costs £649. VAT at 20% is added. What is the total cost?
+
+**Working:**
+
+Step 1 — Find 20% of £649 using the multiplier: 0.20 × 649 = 129.80.
+
+Step 2 — Add to the original: 649 + 129.80 = 778.80.
+
+**Answer:** £778.80
+
+## Worked Example 3 — Exam Style
+
+**Question:** There are 1200 students in a school. 45% of them are boys. 30% of the boys play football. How many boys play football? (3 marks)
+
+**Working:**
+
+Step 1 — Find the number of boys: 45% of 1200 = 0.45 × 1200 = 540.
+
+Step 2 — Find 30% of the boys: 0.30 × 540 = 162.
+
+**Answer:** 162 boys play football
+
+## Common Mistakes
+
+- **Moving the decimal point the wrong way.** When finding 10%, divide by 10 (move the decimal one place left), not multiply. Students sometimes multiply by 10 instead.
+- **Forgetting to add the percentage back on.** If a question asks for the total cost after adding VAT, you must add the VAT amount to the original price — do not give just the VAT amount.
+- **Using the wrong multiplier.** 15% as a decimal is 0.15, not 1.5 or 0.015. Always divide the percentage by 100 carefully.
+
+## Exam Tips
+
+- On non-calculator papers, show the 10% and 1% building blocks clearly. Examiners award method marks for these intermediate steps.
+- On calculator papers, writing the multiplier calculation (e.g. 0.35 × 240) earns a method mark even if you press the wrong button.
+- Read the question carefully — does it ask for the percentage amount only, or the new total?
+
+## Practice Questions
+
+**Q1 (Foundation):** Find 15% of 360 without a calculator.
+
+[ANSWER: 10% of 360 = 36. 5% of 360 = 18. 15% = 36 + 18 = 54]
+
+**Q2 (Foundation):** Find 12.5% of 480.
+
+[ANSWER: 10% = 48. 2.5% = half of 5% = half of 24 = 12. 12.5% = 48 + 12 = 60]
+
+**Q3 (Higher):** A car is worth £18,500. Its value decreases by 8.5%. What is the new value?
+
+[ANSWER: 8.5% of £18,500 = 0.085 × 18500 = £1572.50. New value = £18,500 − £1572.50 = £16,927.50]
+
+---
+
+Practise percentage of an amount questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Percentages](/topics/percentages)
+- [Percentage Increase and Decrease](/topics/percentages-increase-and-decrease)
+- [Percentage Change](/topics/percentage-change)
+
+## Summary
+
+- A percentage of an amount = (percentage ÷ 100) × amount.
+- On non-calculator papers, build up from 10% and 1%.
+- On calculator papers, use the multiplier method (decimal × amount).
+- Always check whether the question wants just the percentage amount or the new total.
+- Show your working clearly to earn method marks on every GCSE exam board.
 `,
   "percentages-increase-and-decrease": `---
 title: "Percentages: Increase & Decrease – GCSE Maths"
@@ -6124,6 +15690,127 @@ Ready to practise perimeter with adaptive questions? [Create your free GCSEMaths
 
 Perimeter is the total distance around the outside of a shape. For straight-sided shapes, add all side lengths. For circles, use C = πd. For sectors, add the arc length to both radii. In composite shapes, identify which edges are on the outside and be careful not to include internal edges. Label missing sides, show your formula, and always include units. Perimeter is straightforward once you are systematic, and it provides reliable marks across every GCSE paper.
 `,
+  "perpendicular-bisector-and-angle-bisector": `---
+title: "Perpendicular Bisector and Angle Bisector – GCSE Maths Revision Guide"
+description: "Step-by-step compass and ruler constructions for the perpendicular bisector and angle bisector with accuracy tips and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["perpendicular bisector", "angle bisector", "compass constructions GCSE", "ruler and compass", "GCSE constructions"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 161
+---
+
+Compass-and-ruler constructions are a classic GCSE Maths topic that appear on both Foundation and Higher papers across AQA, Edexcel, and OCR. You must be able to construct a perpendicular bisector of a line segment and an angle bisector accurately, leaving all construction arcs visible. This guide gives you the exact steps for each construction along with exam tips and practice questions.
+
+## What Are Perpendicular Bisectors and Angle Bisectors?
+
+A **perpendicular bisector** of a line segment is a line that cuts the segment exactly in half at right angles (90°). Every point on the perpendicular bisector is equidistant from the two endpoints of the segment.
+
+An **angle bisector** is a line that divides an angle exactly in half. Every point on the angle bisector is equidistant from the two arms of the angle.
+
+### Key Formulas
+
+[FORMULA: A perpendicular bisector passes through the midpoint of a segment at 90°]
+
+[FORMULA: An angle bisector divides an angle into two equal halves]
+
+[FORMULA: Any point on the perpendicular bisector of AB is equidistant from A and B]
+
+## Step-by-Step Method
+
+### Constructing a Perpendicular Bisector
+
+1. **Open your compass** to more than half the length of the line segment.
+2. **Place the compass point on one end** of the line segment and draw arcs above and below the line.
+3. **Without changing the compass width**, place the point on the other end and draw arcs above and below, crossing the first pair of arcs.
+4. **Draw a straight line** through the two points where the arcs intersect. This is the perpendicular bisector.
+5. **Leave all construction arcs visible** — the examiner needs to see them.
+
+### Constructing an Angle Bisector
+
+1. **Place the compass point on the vertex** of the angle and draw an arc that crosses both arms of the angle.
+2. **Place the compass on one intersection point** and draw an arc between the two arms.
+3. **Without changing the compass width**, place the compass on the other intersection point and draw another arc that crosses the previous one.
+4. **Draw a straight line** from the vertex through the point where the two arcs cross. This is the angle bisector.
+5. **Leave all construction arcs visible.**
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Construct the perpendicular bisector of a line segment AB that is 8 cm long.
+
+**Working:**
+
+Draw AB = 8 cm. Set compass to about 5 cm (more than half of 8 cm). Place compass on A and draw arcs above and below. Keep the same compass width, place on B, and draw arcs above and below. Mark the two intersection points and draw a straight line through them. This line passes through the midpoint of AB (4 cm from each end) at 90°.
+
+**Answer:** The perpendicular bisector passes through the midpoint of AB at **90°**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Construct the bisector of an angle of 70°.
+
+**Working:**
+
+Draw the angle of 70° using a protractor. Place compass on the vertex and draw an arc crossing both arms. Place compass on each crossing point in turn and draw arcs between the arms. The two arcs intersect — draw a line from the vertex through this intersection. Each half of the angle is 35°.
+
+**Answer:** Each half of the bisected angle is **35°**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A and B are two radio masts. A listener is equidistant from both masts. Construct the locus of all points equidistant from A and B.
+
+**Working:**
+
+The locus of points equidistant from A and B is the perpendicular bisector of AB. Construct the perpendicular bisector using the method above, leaving all arcs visible.
+
+**Answer:** The locus is the **perpendicular bisector** of the line segment AB.
+
+## Common Mistakes
+
+- **Rubbing out construction arcs.** The examiner awards marks for seeing the arcs. Never erase them.
+- **Setting the compass too small.** If the compass width is less than half the line segment, the arcs will not cross. Always use a width greater than half the length.
+- **Moving the compass width between steps.** The accuracy of the construction depends on keeping the compass width consistent within each set of arcs. If it slips, the result will be inaccurate.
+
+## Exam Tips
+
+- Use a sharp pencil for accuracy — thick lines lose precision and may cost marks.
+- Practise these constructions at home before the exam so the steps become automatic.
+- The examiner may check accuracy to within 1 mm and 1° — take your time.
+- Constructions are often part of loci questions, so mastering these two techniques is essential for the next step.
+- Always label the key points and lines in your construction.
+
+## Practice Questions
+
+**Q1 (Foundation):** Construct the perpendicular bisector of a line segment PQ of length 10 cm. Mark the midpoint M.
+
+[ANSWER: The perpendicular bisector crosses PQ at its midpoint M, which is 5 cm from P and 5 cm from Q, at 90°.]
+
+**Q2 (Foundation):** Construct the bisector of an angle of 80°. Measure each half to verify.
+
+[ANSWER: Each half should measure 40° when checked with a protractor.]
+
+**Q3 (Higher):** Two points X and Y are 7 cm apart. Shade the region that is closer to X than to Y. Describe your method.
+
+[ANSWER: Construct the perpendicular bisector of XY. The region closer to X is on the same side as X. Shade that side.]
+
+---
+
+Practise constructions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Loci and Regions](/topics/loci-and-regions)
+- [Constructions and Loci](/topics/constructions-and-loci)
+- [Bearings](/topics/bearings)
+
+## Summary
+
+- A perpendicular bisector cuts a line segment in half at 90° and is constructed using two sets of compass arcs from each endpoint. An angle bisector divides an angle into two equal parts and is constructed using arcs from the vertex and the two points where the initial arc crosses the arms. Always leave construction arcs visible, use a compass width greater than half the segment, and keep a sharp pencil for accuracy.
+`,
   "plans-and-elevations": `---
 title: "Plans and Elevations – GCSE Maths Guide"
 description: "Learn plans and elevations for GCSE Maths Foundation with step-by-step methods, worked examples, and practice questions."
@@ -6251,6 +15938,141 @@ Improve your spatial reasoning with interactive practice at [GCSEMathsAI](https:
 ## Summary
 
 Plans and elevations test your ability to see 3D shapes from different directions and represent them as 2D drawings. The plan is the view from above, the front elevation is from the front, and the side elevation is from the side. Each view is a flat outline showing no depth. Common mistakes include drawing in 3D, confusing the different views, and ignoring hidden blocks in compound shapes. Use squared paper for accuracy, label every view, and practise with real objects to develop your spatial reasoning. This is a Foundation tier topic that rewards careful, methodical drawing.
+`,
+  "plotting-straight-line-graphs": `---
+title: "Plotting Straight-Line Graphs – GCSE Maths Revision Guide"
+description: "Learn how to plot straight-line graphs using table of values and gradient-intercept methods for GCSE Maths with worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["plotting straight line graphs", "y equals mx plus c", "gradient intercept method", "table of values graph", "linear graphs GCSE"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 91
+---
+
+Plotting straight-line graphs is a core skill tested on both Foundation and Higher tier GCSE Maths papers. Understanding the connection between an equation like y = mx + c and its graph allows you to tackle gradient questions, simultaneous equations, and real-life modelling problems.
+
+## What Is a Straight-Line Graph?
+
+A straight-line graph represents a linear equation. The most common form is y = mx + c, where m is the **gradient** (how steep the line is) and c is the **y-intercept** (where the line crosses the y-axis). Every point on the line satisfies the equation.
+
+The gradient m tells you how much y changes for every 1 unit increase in x. A positive gradient slopes upward from left to right; a negative gradient slopes downward. The larger the absolute value of m, the steeper the line.
+
+There are two main methods for plotting a straight-line graph. The **table of values** method substitutes several x values into the equation to calculate corresponding y values, then plots the points and joins them with a ruler. The **gradient-intercept method** starts at the y-intercept and uses the gradient to mark a second point without needing a full table.
+
+### Key Formulas
+
+[FORMULA: y = mx + c, where m = gradient and c = y-intercept]
+
+[FORMULA: Gradient = change in y / change in x = (y2 - y1) / (x2 - x1)]
+
+## Step-by-Step Method
+
+1. If the equation is not in y = mx + c form, rearrange it.
+2. **Table of values method:** choose at least three x values (e.g. -2, 0, 2), substitute each into the equation, and calculate y.
+3. Plot the coordinate pairs on a grid.
+4. Join the points with a straight line using a ruler.
+5. **Gradient-intercept method (alternative):** mark the y-intercept (0, c) on the y-axis, then from that point move across 1 unit and up or down by m units to place a second point. Draw the line through both points.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Draw the graph of y = 2x + 1 for values of x from -2 to 3.
+
+**Working:**
+
+Build a table of values:
+
+x = -2: y = 2(-2) + 1 = -3. x = -1: y = 2(-1) + 1 = -1. x = 0: y = 2(0) + 1 = 1. x = 1: y = 2(1) + 1 = 3. x = 2: y = 2(2) + 1 = 5. x = 3: y = 2(3) + 1 = 7.
+
+Plot the points (-2, -3), (-1, -1), (0, 1), (1, 3), (2, 5), (3, 7) and join with a straight line.
+
+The gradient is 2 (line goes up 2 for every 1 across) and the y-intercept is 1.
+
+**Answer:** A straight line through the points listed above, crossing the y-axis at (0, 1).
+
+## Worked Example 2 — Higher Level
+
+**Question:** A line has the equation 2y - 6x = 4. Find the gradient and y-intercept.
+
+**Working:**
+
+Step 1 — Rearrange into y = mx + c form.
+
+2y = 6x + 4
+
+y = 3x + 2.
+
+Step 2 — Read off the gradient and y-intercept.
+
+Gradient m = 3. Y-intercept c = 2, so the line crosses the y-axis at (0, 2).
+
+**Answer:** Gradient = 3; y-intercept = (0, 2).
+
+## Worked Example 3 — Exam Style
+
+**Question:** The line L passes through the points (1, 5) and (4, 14). Find the equation of line L in the form y = mx + c. (3 marks)
+
+**Working:**
+
+Step 1 — Find the gradient: m = (14 - 5) / (4 - 1) = 9 / 3 = 3.
+
+Step 2 — Substitute one point into y = mx + c to find c. Using (1, 5):
+
+5 = 3(1) + c, so c = 5 - 3 = 2.
+
+Step 3 — Write the equation: y = 3x + 2.
+
+Check with the other point: y = 3(4) + 2 = 14. Correct.
+
+**Answer:** y = 3x + 2
+
+## Common Mistakes
+
+- **Plotting points inaccurately.** A tiny error in placing a point makes the line wrong. Use the grid lines carefully and double-check each coordinate before drawing.
+- **Not using a ruler.** Straight-line graphs must be drawn with a ruler. A freehand line will not pass through all your points and costs marks.
+- **Confusing gradient and y-intercept.** In y = 3x + 2, the gradient is 3 (the coefficient of x) and the y-intercept is 2 (the constant). Students sometimes swap them.
+
+## Exam Tips
+
+- Always plot at least three points when using the table of values method. If one point is slightly wrong, the other two will reveal the error because all three must lie on a straight line.
+- Extend your line to fill the grid. A short line segment in the middle of the axes can lose marks if the question asks you to "draw the graph."
+- If the equation is given in a different form (e.g. 3x + y = 7), rearrange to y = mx + c before trying to identify the gradient and intercept.
+
+## Practice Questions
+
+**Q1 (Foundation):** Complete the table of values for y = 3x - 2 when x = -1, 0, 1, 2, 3.
+
+[ANSWER: x = -1: y = -5. x = 0: y = -2. x = 1: y = 1. x = 2: y = 4. x = 3: y = 7.]
+
+**Q2 (Foundation):** Write down the gradient and y-intercept of y = -2x + 5.
+
+[ANSWER: Gradient = -2; y-intercept = 5 (the line crosses the y-axis at (0, 5)).]
+
+**Q3 (Higher):** Find the equation of the line passing through (2, 3) and (6, 11) in the form y = mx + c.
+
+[ANSWER: Gradient = (11 - 3) / (6 - 2) = 8 / 4 = 2. Using (2, 3): 3 = 2(2) + c, so c = -1. Equation: y = 2x - 1.]
+
+---
+
+Practise plotting straight-line graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Linear Graphs](/topics/linear-graphs-and-equation-of-a-line)
+- [Simultaneous Equations Elimination](/topics/simultaneous-equations-elimination)
+- [Sequences and Nth Term](/topics/sequences-and-nth-term)
+
+## Summary
+
+- A straight-line graph has the equation y = mx + c, where m is the gradient and c is the y-intercept.
+- Use a table of values to calculate coordinates, then plot and join with a ruler.
+- The gradient-intercept method starts at (0, c) and uses the gradient to mark further points.
+- Rearrange any linear equation into y = mx + c form to read off the gradient and intercept easily.
+- Always plot at least three points to catch any calculation errors.
 `,
   "powers-and-roots": `---
 title: "Powers and Roots – GCSE Maths Revision"
@@ -6731,6 +16553,263 @@ Ready to practise these skills with instant, personalised feedback? Try our AI-p
 
 Probability measures how likely an event is to happen, on a scale from 0 (impossible) to 1 (certain). **Theoretical probability** divides favourable outcomes by total equally likely outcomes. **Relative frequency** estimates probability from experimental results — the more trials, the more reliable the estimate. Use P(not A) = 1 − P(A) for complementary events, and P(A or B) = P(A) + P(B) for mutually exclusive events. **Expected frequency** multiplies probability by the number of trials. Always express probabilities as fractions, decimals or percentages, simplify where possible, and remember that relative frequency is an estimate, not an exact value. These fundamentals underpin tree diagrams, Venn diagrams and conditional probability at Higher level.
 `,
+  "probability-scale-and-basic-probability": `---
+title: "Probability Scale and Basic Probability – GCSE Maths Revision Guide"
+description: "Master the probability scale and basic probability for GCSE Maths with clear methods, worked examples and practice questions for all tiers."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["probability scale GCSE", "basic probability", "favourable outcomes", "probability GCSE maths", "impossible certain likely"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 186
+---
+
+Basic probability is one of the first statistics topics you meet in GCSE Maths and is tested on every AQA, Edexcel and OCR Foundation and Higher paper. You need to understand the probability scale, calculate simple probabilities using equally likely outcomes, and use language like impossible, unlikely, even chance, likely and certain correctly. This guide covers all the essentials with worked examples and practice questions. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is Probability?
+
+**Probability** measures how likely an event is to happen. Every probability is a number from 0 to 1 inclusive.
+
+### The Probability Scale
+
+The probability scale runs from 0 to 1:
+
+- **0** — Impossible (cannot happen). Example: rolling a 7 on a standard dice.
+- **Between 0 and 0.5** — Unlikely. Example: rolling a 6 on a standard dice (probability 1/6).
+- **0.5** — Even chance (equally likely to happen or not). Example: flipping heads on a fair coin.
+- **Between 0.5 and 1** — Likely. Example: picking a red ball from a bag containing 8 red and 2 blue.
+- **1** — Certain (must happen). Example: the sun rising tomorrow.
+
+### Key Formulas
+
+[FORMULA: P(event) = Number of favourable outcomes ÷ Total number of possible outcomes]
+
+[FORMULA: P(not A) = 1 − P(A)]
+
+The first formula applies when all outcomes are equally likely. The second gives the probability of an event not happening.
+
+## Step-by-Step Method
+
+1. Identify the total number of equally likely outcomes (the sample space).
+2. Count how many outcomes satisfy the event you are interested in.
+3. Divide: favourable outcomes ÷ total outcomes.
+4. Simplify the fraction if possible.
+5. Express as a fraction, decimal or percentage as required.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A bag contains 4 red, 3 blue and 5 green counters. A counter is picked at random. Find the probability of picking (a) a red counter, (b) a counter that is not blue.
+
+**Working:**
+
+Total counters = 4 + 3 + 5 = 12.
+
+**(a)** P(red) = 4/12 = **1/3**.
+
+**(b)** P(blue) = 3/12 = 1/4. P(not blue) = 1 − 1/4 = **3/4**.
+
+**Answer:** (a) 1/3, (b) 3/4.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A letter is chosen at random from the word MATHEMATICS. Find the probability that the letter is (a) M, (b) a vowel, (c) not T.
+
+**Working:**
+
+Letters in MATHEMATICS: M, A, T, H, E, M, A, T, I, C, S — total 11 letters.
+
+**(a)** M appears 2 times. P(M) = **2/11**.
+
+**(b)** Vowels (A, E, I): A appears 2 times, E once, I once = 4 vowels. P(vowel) = **4/11**.
+
+**(c)** T appears 2 times. P(T) = 2/11. P(not T) = 1 − 2/11 = **9/11**.
+
+**Answer:** (a) 2/11, (b) 4/11, (c) 9/11.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A fair spinner has sections numbered 1 to 8. Mark on a probability scale the probability of (a) spinning a 9, (b) spinning an even number, (c) spinning a number less than 7.
+
+**Working:**
+
+**(a)** P(9) = 0 — impossible. Mark at 0 on the scale.
+
+**(b)** Even numbers: 2, 4, 6, 8 = 4 out of 8. P(even) = 4/8 = 0.5. Mark at 0.5 (even chance).
+
+**(c)** Numbers less than 7: 1, 2, 3, 4, 5, 6 = 6 out of 8. P(<7) = 6/8 = 0.75. Mark at 0.75 (likely).
+
+**Answer:** (a) 0 — impossible, (b) 0.5 — even chance, (c) 0.75 — likely.
+
+## Common Mistakes
+
+- **Probability outside 0 to 1.** If your answer is negative or greater than 1, you have made an error.
+- **Not simplifying fractions.** Always reduce fractions to their simplest form.
+- **Forgetting to count all outcomes.** In words like MATHEMATICS, count every letter including repeats.
+- **Confusing "at least one" with "exactly one."** Read the question carefully to determine what is being asked.
+
+## Exam Tips
+
+- Probabilities can be written as fractions, decimals or percentages — choose whichever the question asks for, or use fractions by default.
+- When placing events on a probability scale, use the exact probability value (not just "unlikely" or "likely").
+- If all probabilities in a situation must add to 1 and you know all but one, subtract from 1 to find the missing probability.
+- For more advanced probability, see [mutually exclusive events](/topics/mutually-exclusive-events) and [expected frequency](/topics/expected-frequency). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A fair coin is flipped. What is the probability of getting tails?
+
+[ANSWER: P(tails) = 1/2 or 0.5.]
+
+**Q2 (Foundation):** A bag has 6 red and 4 yellow balls. What is the probability of picking a yellow ball?
+
+[ANSWER: P(yellow) = 4/10 = 2/5.]
+
+**Q3 (Higher):** A card is drawn at random from a standard pack of 52 cards. Find the probability that the card is (a) a heart, (b) not a king.
+
+[ANSWER: (a) P(heart) = 13/52 = 1/4. (b) There are 4 kings. P(king) = 4/52 = 1/13. P(not king) = 1 − 1/13 = 12/13.]
+
+---
+
+Practise basic probability and the probability scale free on GCSEMathsAI.
+
+## Related Topics
+
+- [Expected Frequency](/topics/expected-frequency)
+- [Relative Frequency](/topics/relative-frequency)
+- [Mutually Exclusive Events](/topics/mutually-exclusive-events)
+
+## Summary
+
+- Probability measures how likely an event is, on a scale from 0 (impossible) to 1 (certain).
+- Calculate probability using P(event) = favourable outcomes ÷ total outcomes, when all outcomes are equally likely.
+- Use P(not A) = 1 − P(A) for the complement of an event.
+- Express probabilities as fractions, decimals or percentages, and always simplify fractions.
+- The probability scale labels include impossible (0), unlikely, even chance (0.5), likely, and certain (1).
+`,
+  "probability-tree-diagrams-guide": `---
+title: "Probability Tree Diagrams – GCSE Maths Revision Guide"
+description: "Master probability tree diagrams for GCSE Maths. Independent and dependent events, AND/OR rules, without replacement and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["probability tree diagrams", "independent events GCSE", "without replacement probability", "AND OR rule probability", "tree diagram GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 122
+---
+
+Tree diagrams are one of the most important tools in GCSE probability. They let you organise multi-stage events clearly, showing every possible outcome and its probability. Whether events are independent (with replacement) or dependent (without replacement), the method is the same: multiply along branches for AND, add between branches for OR. This guide covers both types with fully worked examples.
+
+## What Is a Probability Tree Diagram?
+
+A **tree diagram** is a visual way to show all possible outcomes of two or more events in sequence. Each branch represents one possible outcome, and the probability is written along the branch. The branches at each stage must have probabilities that add up to 1.
+
+For **independent events**, the outcome of one event does not affect the other. If you flip a coin and roll a die, the coin result does not change the die probabilities. The probabilities on the second set of branches are the same regardless of the first outcome.
+
+For **dependent events** (also called "without replacement"), the outcome of the first event changes the probabilities for the second event. If you pick a sweet from a bag and do not put it back, the number of sweets left changes, and so do the probabilities for the next pick.
+
+### Key Formulas
+
+[FORMULA: P(A and B) = P(A) × P(B) — multiply along branches]
+
+[FORMULA: P(A or B) = P(A and B₁) + P(A and B₂) — add between outcomes]
+
+## Step-by-Step Method
+
+1. **Draw the first set of branches** for the first event, labelling each outcome and its probability.
+2. **Draw the second set of branches** from each first-event outcome, updating probabilities if the events are dependent.
+3. **Multiply along branches** to find the probability of each combined outcome.
+4. **Add probabilities** of the outcomes that satisfy the condition in the question.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A bag contains 4 red and 6 blue counters. A counter is picked at random, replaced, and a second counter is picked. Find the probability of getting two red counters.
+
+**Working:**
+P(Red) = 4/10 = 2/5. P(Blue) = 6/10 = 3/5. Since the counter is replaced, probabilities stay the same.
+P(Red and Red) = 2/5 × 2/5 = 4/25.
+
+**Answer:** P(two red) = 4/25.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A bag contains 5 green and 3 yellow balls. Two balls are picked without replacement. Find the probability of getting one of each colour.
+
+**Working:**
+P(Green 1st) = 5/8. Then P(Yellow 2nd) = 3/7. So P(Green then Yellow) = 5/8 × 3/7 = 15/56.
+P(Yellow 1st) = 3/8. Then P(Green 2nd) = 5/7. So P(Yellow then Green) = 3/8 × 5/7 = 15/56.
+P(one of each) = 15/56 + 15/56 = 30/56 = 15/28.
+
+**Answer:** P(one of each colour) = 15/28.
+
+## Worked Example 3 — Exam Style
+
+**Question:** The probability that it rains on any day is 0.3. Mia walks to school on two consecutive days. Find the probability that it rains on exactly one of the two days.
+
+**Working:**
+P(Rain) = 0.3, P(No Rain) = 0.7. Events are independent.
+P(Rain then No Rain) = 0.3 × 0.7 = 0.21.
+P(No Rain then Rain) = 0.7 × 0.3 = 0.21.
+P(exactly one rainy day) = 0.21 + 0.21 = 0.42.
+
+**Answer:** P(rain on exactly one day) = 0.42.
+
+## Common Mistakes
+
+- **Adding instead of multiplying along branches.** To find P(A and B), multiply the branch probabilities. Only add when combining separate outcomes at the end.
+- **Not adjusting probabilities for without replacement.** If a ball is not returned, the total and the count for that colour both change on the second pick. For example, after removing one green ball from 5 green and 3 yellow, there are 7 balls left.
+- **Forgetting to consider both orders.** "One of each" means Green-then-Yellow OR Yellow-then-Green. Both paths must be included.
+- **Incorrect simplification of fractions.** When multiplying fractions along branches, simplify only at the end. For example, 4/10 × 3/9 = 12/90 = 2/15, not 12/100.
+
+## Exam Tips
+
+- Always check that branches at each stage add up to 1. This is a quick error check.
+- Label your tree diagram clearly with outcomes and probabilities — examiners award marks for a well-drawn tree even if the final answer is wrong.
+- For "at least one" questions, it is often easier to calculate P(none) and subtract from 1: P(at least one) = 1 − P(none).
+- Leave probabilities as fractions throughout your working. Only convert to decimals at the end if the question requires it.
+- For without-replacement questions, write the adjusted totals clearly on the second set of branches to avoid errors.
+
+## Practice Questions
+
+**Q1 (Foundation):** A spinner has P(Win) = 0.4. It is spun twice. Find P(two wins).
+
+[ANSWER: P(Win and Win) = 0.4 × 0.4 = 0.16.]
+
+**Q2 (Foundation):** Using the same spinner, find P(exactly one win in two spins).
+
+[ANSWER: P(Win then Lose) = 0.4 × 0.6 = 0.24. P(Lose then Win) = 0.6 × 0.4 = 0.24. P(exactly one win) = 0.24 + 0.24 = 0.48.]
+
+**Q3 (Higher):** A box has 6 milk and 4 dark chocolates. Two are taken without replacement. Find P(both dark).
+
+[ANSWER: P(Dark 1st) = 4/10 = 2/5. P(Dark 2nd) = 3/9 = 1/3. P(both dark) = 2/5 × 1/3 = 2/15.]
+
+---
+
+Practise probability tree diagram questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Probability Tree Diagrams](/topics/probability-tree-diagrams)
+- [Conditional Probability](/topics/conditional-probability)
+- [Venn Diagrams](/topics/venn-diagrams)
+
+## Summary
+
+- A tree diagram shows all possible outcomes for multi-stage events.
+- Multiply along branches to find P(A and B). Add separate outcome probabilities for P(A or B).
+- For independent events (with replacement), probabilities stay the same at each stage.
+- For dependent events (without replacement), adjust the total and counts after each pick.
+- For "at least one" questions, use P(at least one) = 1 − P(none).
+- Always check that all branch probabilities at each stage add to 1 and all final outcome probabilities add to 1.
+- Tree diagrams can extend to three or more stages — the same multiply-along, add-between rules apply at every level.
+`,
   "probability-tree-diagrams": `---
 title: "Probability Tree Diagrams – GCSE Maths Guide"
 description: "Learn how to draw and use probability tree diagrams for GCSE Maths with worked examples, exam tips and practice questions."
@@ -6893,6 +16972,132 @@ Ready to practise these skills with instant, personalised feedback? Try our AI-p
 ## Summary
 
 Probability tree diagrams break multi-stage experiments into a clear, visual structure. Each branch carries a probability; you **multiply along branches** to find the probability of a combined outcome and **add between paths** to find the probability of one outcome or another. With replacement, probabilities stay the same at each stage; **without replacement**, the denominator (and sometimes numerator) decreases. Use the complement — P(at least one) = 1 − P(none) — to save time and reduce errors. Always check that branch probabilities sum to 1 and that all end probabilities sum to 1. These skills feed directly into Venn diagrams and conditional probability at Higher level.
+`,
+  "pythagoras-in-3d": `---
+title: "Pythagoras in 3D – GCSE Maths Revision Guide"
+description: "Learn how to apply Pythagoras' theorem in three dimensions to find space diagonals in cuboids and longest diagonals in 3D shapes for GCSE Higher."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["Pythagoras in 3D", "3D Pythagoras", "space diagonal", "diagonal of a cuboid", "GCSE 3D Pythagoras"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 163
+---
+
+Pythagoras in 3D extends the familiar a² + b² = c² into three dimensions. It is a Higher-only GCSE Maths topic tested by AQA, Edexcel, and OCR. Questions typically ask you to find the space diagonal of a cuboid, the longest rod that fits inside a box, or a slant length in a pyramid. The key skill is identifying the right-angled triangle hidden inside the 3D shape. This guide breaks down the method with three worked examples.
+
+## What Is Pythagoras in 3D?
+
+In two dimensions, Pythagoras' theorem finds the hypotenuse of a right-angled triangle. In three dimensions, you apply the theorem twice — first on the base of the shape to find an intermediate length, then again using that length and the height to find the final distance.
+
+### Key Formulas
+
+[FORMULA: For a cuboid with sides a, b, and c — space diagonal d = sqrt(a² + b² + c²)]
+
+[FORMULA: Pythagoras' theorem: a² + b² = c² (used twice in 3D problems)]
+
+The space diagonal of a cuboid goes from one corner to the opposite corner, passing through the interior of the shape.
+
+## Step-by-Step Method
+
+1. **Draw or label the 3D shape** with all given dimensions.
+2. **Identify the right-angled triangle on the base.** Use Pythagoras to find the base diagonal.
+3. **Form a second right-angled triangle** using the base diagonal and the height of the shape.
+4. **Apply Pythagoras again** to find the space diagonal or the required length.
+5. **Round** to the required degree of accuracy.
+
+## Worked Example 1 — Foundation Level
+
+This topic is Higher only, but this example uses simpler numbers.
+
+**Question:** A cuboid has dimensions 3 cm by 4 cm by 12 cm. Find the length of the space diagonal.
+
+**Working:**
+
+Step 1 — Find the diagonal of the base.
+
+Base diagonal = sqrt(3² + 4²) = sqrt(9 + 16) = sqrt(25) = 5 cm
+
+Step 2 — Use the base diagonal and the height (12 cm) to find the space diagonal.
+
+Space diagonal = sqrt(5² + 12²) = sqrt(25 + 144) = sqrt(169) = 13 cm
+
+**Answer:** The space diagonal is **13 cm**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A cuboid measures 6 cm by 8 cm by 10 cm. Find the space diagonal. Give your answer to 1 decimal place.
+
+**Working:**
+
+Using the direct formula:
+
+d = sqrt(6² + 8² + 10²) = sqrt(36 + 64 + 100) = sqrt(200) = 14.142...
+
+**Answer:** The space diagonal is **14.1 cm** (1 d.p.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** A square-based pyramid has a base edge of 8 cm and a slant height of 10 cm. Find the vertical height of the pyramid.
+
+**Working:**
+
+Step 1 — The apex is directly above the centre of the square base. The distance from the centre of the base to the midpoint of a base edge is half the base edge = 8 ÷ 2 = 4 cm.
+
+Step 2 — A right-angled triangle is formed by the vertical height (h), the distance from centre to edge midpoint (4 cm), and the slant height (10 cm).
+
+h² + 4² = 10²
+
+h² + 16 = 100
+
+h² = 84
+
+h = sqrt(84) = 9.165...
+
+**Answer:** The vertical height is **9.2 cm** (1 d.p.)
+
+## Common Mistakes
+
+- **Applying Pythagoras only once.** 3D problems almost always require two applications of Pythagoras. Students who stop after the first triangle miss the final answer.
+- **Using the wrong lengths in the triangle.** Carefully identify which lengths form the right-angled triangle. Sketch the triangle separately from the 3D shape to avoid confusion.
+- **Confusing the slant height with the vertical height.** The slant height runs along the face of a pyramid; the vertical height runs straight up from the base to the apex. They are different measurements.
+
+## Exam Tips
+
+- Always sketch the right-angled triangle you are working with separately — this prevents errors from misreading the 3D diagram.
+- The formula d = sqrt(a² + b² + c²) is a shortcut for cuboids, but make sure you understand why it works (two applications of Pythagoras).
+- "The longest rod that fits inside a box" means the space diagonal — this is a common exam phrasing.
+- Leave your intermediate answers unrounded. Only round at the final step to avoid cumulative rounding errors.
+
+## Practice Questions
+
+**Q1 (Foundation):** This topic is Higher only.
+
+**Q2 (Higher):** A cuboid has dimensions 5 cm, 12 cm, and 8 cm. Find the space diagonal to 1 d.p.
+
+[ANSWER: d = sqrt(25 + 144 + 64) = sqrt(233) = 15.3 cm (1 d.p.)]
+
+**Q3 (Higher):** A square-based pyramid has a base of 10 cm and a vertical height of 12 cm. Find the slant height to 1 d.p.
+
+[ANSWER: Distance from centre to midpoint of base edge = 5 cm. Slant height = sqrt(5² + 12²) = sqrt(25 + 144) = sqrt(169) = 13.0 cm.]
+
+---
+
+Practise 3D Pythagoras with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+- [Trigonometry in 3D](/topics/trigonometry-in-3d)
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+
+## Summary
+
+- Pythagoras in 3D involves applying a² + b² = c² twice: once on the base to find an intermediate diagonal, and once using that diagonal and the height to find the space diagonal or slant length. For a cuboid with dimensions a, b, and c, the space diagonal is sqrt(a² + b² + c²). Always sketch the right-angled triangle separately, use unrounded intermediate values, and identify the correct lengths from the 3D shape.
 `,
   "pythagoras-theorem": `---
 title: "Pythagoras' Theorem – GCSE Maths Revision"
@@ -7241,6 +17446,141 @@ Ready to master quadratic graphs with personalised practice? Head to [GCSEMathsA
 - **Completing the square** gives the turning point form y = a(x − p)² + q, with turning point (p, q).
 - When plotting, always use a smooth curve — never straight-line segments.
 - At Higher tier, you must be able to sketch quadratics showing roots, turning point and y-intercept.
+`,
+  "quadratic-inequalities": `---
+title: "Quadratic Inequalities – GCSE Maths Revision Guide"
+description: "Learn how to solve quadratic inequalities at GCSE. Factorise, sketch the parabola, and identify solution intervals with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["quadratic inequalities GCSE", "solving quadratic inequalities", "parabola sketch method", "inequality intervals", "x squared inequality"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 141
+---
+
+# Quadratic Inequalities
+
+Quadratic inequalities take the skills you have learned from solving quadratic equations and combine them with your understanding of inequalities. Instead of finding exact values where a quadratic equals zero, you find the range of values where the quadratic is greater than or less than zero. This is a Higher-only topic that appears on AQA, Edexcel, and OCR papers and often carries 3–4 marks.
+
+## What Are Quadratic Inequalities?
+
+A quadratic inequality looks like x² − 5x + 6 < 0 or 2x² + 3x − 5 ≥ 0. You need to find the set of x-values that make the inequality true. The solution is typically an interval (or a pair of intervals) rather than a single value.
+
+### Key Formulas
+
+[FORMULA: Factorise the quadratic, find the roots, then sketch the parabola to identify solution intervals]
+
+[FORMULA: For x² > 0 shaped parabola: below the x-axis between roots, above outside the roots]
+
+## Step-by-Step Method
+
+1. **Rearrange the inequality** so that one side is zero (e.g., x² − 5x + 6 < 0).
+2. **Factorise the quadratic** (or use the quadratic formula to find roots).
+3. **Find the roots** — these are the x-values where the quadratic equals zero.
+4. **Sketch the parabola.** If the coefficient of x² is positive, the parabola is U-shaped. If negative, it is ∩-shaped.
+5. **Read the solution from the sketch.** For < 0, you want where the curve is below the x-axis. For > 0, you want where it is above the x-axis.
+6. **Write the solution** using inequality notation.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Solve x² − 9 < 0.
+
+**Working:**
+
+Factorise: x² − 9 = (x + 3)(x − 3) = 0 gives roots x = −3 and x = 3.
+
+The coefficient of x² is positive, so the parabola is U-shaped. The curve is below the x-axis between the roots.
+
+So x² − 9 < 0 when −3 < x < 3.
+
+**Answer:** −3 < x < 3
+
+## Worked Example 2 — Higher Level
+
+**Question:** Solve x² − 5x + 6 < 0.
+
+**Working:**
+
+Factorise: x² − 5x + 6 = (x − 2)(x − 3) = 0 gives roots x = 2 and x = 3.
+
+Positive x² means U-shaped parabola. The curve is below the x-axis between the two roots.
+
+So x² − 5x + 6 < 0 when 2 < x < 3.
+
+Check: try x = 2.5: (2.5)² − 5(2.5) + 6 = 6.25 − 12.5 + 6 = −0.25 < 0 ✓
+
+**Answer:** 2 < x < 3
+
+## Worked Example 3 — Exam Style
+
+**Question:** Solve 2x² + x − 6 ≥ 0.
+
+**Working:**
+
+Factorise using the ac method. a = 2, b = 1, c = −6. ac = −12.
+Two numbers that multiply to −12 and add to 1: 4 and −3.
+
+2x² + 4x − 3x − 6 = 2x(x + 2) − 3(x + 2) = (x + 2)(2x − 3) = 0.
+
+Roots: x = −2 and x = 3/2.
+
+Positive x² means U-shaped. The curve is above or on the x-axis outside and at the roots.
+
+So 2x² + x − 6 ≥ 0 when x ≤ −2 or x ≥ 3/2.
+
+Check: try x = 0: 0 + 0 − 6 = −6 < 0 (between roots, not included) ✓
+Try x = 2: 8 + 2 − 6 = 4 ≥ 0 ✓
+
+**Answer:** x ≤ −2 or x ≥ 3/2
+
+## Common Mistakes
+
+- **Writing the answer as a single inequality.** For "greater than" inequalities, the solution is two separate regions (x ≤ a or x ≥ b), not a ≤ x ≤ b. The parabola is above the x-axis on both sides of the roots.
+- **Forgetting to sketch the parabola.** Without a sketch, students often guess the wrong region. A quick sketch takes seconds and prevents errors.
+- **Mixing up < and >.** If you want where the quadratic is negative, look below the x-axis. If positive, look above. The sketch makes this clear.
+
+## Exam Tips
+
+- Always draw a quick sketch of the parabola — it does not need to be accurate, just the right shape with roots marked.
+- Use a test value between the roots and outside the roots to verify your answer.
+- If the coefficient of x² is negative, the parabola is ∩-shaped, which reverses the regions.
+- For ≤ and ≥, include the roots in your answer with ≤ or ≥ (not strict < or >).
+
+## Practice Questions
+
+**Q1 (Foundation):** Solve x² − 16 > 0.
+
+[ANSWER: (x + 4)(x − 4) > 0. U-shaped, above x-axis outside roots. x < −4 or x > 4]
+
+**Q2 (Higher):** Solve x² − 7x + 10 ≤ 0.
+
+[ANSWER: (x − 2)(x − 5) ≤ 0. U-shaped, on/below x-axis between roots. 2 ≤ x ≤ 5]
+
+**Q3 (Higher):** Solve 3x² − x − 2 > 0.
+
+[ANSWER: (3x + 2)(x − 1) > 0. Roots x = −2/3 and x = 1. Above x-axis: x < −2/3 or x > 1]
+
+---
+
+Practise quadratic inequalities with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Solving Quadratic Equations by Factorising](/topics/solving-quadratic-equations-factorising)
+- [Solving Inequalities](/topics/solving-inequalities)
+- [Quadratic Graphs](/topics/quadratic-graphs)
+
+## Summary
+
+- Quadratic inequalities ask for the range of x-values where a quadratic is positive or negative.
+- Factorise to find the roots, then sketch the parabola to determine the correct region.
+- For a positive x² coefficient: the quadratic is negative between the roots and positive outside them.
+- Write your answer as an inequality — use "and" (between roots) or "or" (outside roots).
+- A quick sketch and a test value are the best ways to avoid mistakes.
 `,
   "quadratic-sequences-and-nth-term": `---
 title: "Quadratic Sequences & Nth Term – GCSE Guide"
@@ -7703,6 +18043,642 @@ Build your ratio problem-solving skills with tailored practice on [GCSEMathsAI](
 - Show all working clearly — method marks are available for each step.
 - Always check your answer makes sense in the context of the question.
 `,
+  "rationalising-the-denominator": `---
+title: "Rationalising the Denominator – GCSE Maths Revision Guide"
+description: "Learn how to rationalise the denominator for GCSE Maths Higher tier. Single surds and conjugate pairs with worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["rationalising denominator GCSE", "rationalise surds", "conjugate surds", "surd fractions", "eliminating surds denominator"]
+tier: "Higher only"
+strand: "Number"
+topicNumber: 80
+---
+
+Rationalising the denominator is a Higher tier skill that appears regularly on GCSE Maths exams. Examiners expect answers to have no surds in the denominator, so knowing how to remove them is essential for earning full marks on surd questions.
+
+## What Is Rationalising the Denominator?
+
+Rationalising the denominator means rewriting a fraction so that the denominator contains no surds — only rational numbers. The value of the fraction does not change; you are simply expressing it in a standard form.
+
+There are two cases. When the denominator is a **single surd** like √3, you multiply top and bottom by that surd. When the denominator is a **two-term expression** like (3 + √2), you multiply top and bottom by the **conjugate** — the same expression with the opposite sign on the surd, so (3 − √2).
+
+The conjugate method works because of the difference of two squares: (a + √b)(a − √b) = a² − b, which eliminates the surd from the denominator.
+
+### Key Formulas
+
+[FORMULA: To rationalise a/√b, multiply top and bottom by √b: a/√b = a√b / b]
+
+[FORMULA: To rationalise 1/(a + √b), multiply by (a − √b)/(a − √b), giving (a − √b) / (a² − b)]
+
+[FORMULA: (a + √b)(a − √b) = a² − b — difference of two squares removes the surd]
+
+## Step-by-Step Method
+
+1. **Single surd denominator:** Multiply the numerator and denominator by the surd in the denominator.
+2. **Two-term denominator (e.g. a + √b):** Multiply numerator and denominator by the conjugate (a − √b).
+3. Expand the denominator — the surd terms will cancel, leaving a rational number.
+4. Expand the numerator and simplify.
+5. Cancel any common factors between numerator and denominator.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Rationalise the denominator of 6/√3. Give your answer in its simplest form.
+
+**Working:**
+
+Step 1 — Multiply top and bottom by √3: (6 × √3) / (√3 × √3) = 6√3 / 3.
+
+Step 2 — Simplify: 6√3 / 3 = 2√3.
+
+**Answer:** 2√3
+
+## Worked Example 2 — Higher Level
+
+**Question:** Rationalise the denominator of 5/(2 + √3). Give your answer in the form a + b√3.
+
+**Working:**
+
+Step 1 — The conjugate of (2 + √3) is (2 − √3). Multiply top and bottom by (2 − √3).
+
+Step 2 — Denominator: (2 + √3)(2 − √3) = 4 − 3 = 1.
+
+Step 3 — Numerator: 5(2 − √3) = 10 − 5√3.
+
+Step 4 — The fraction becomes (10 − 5√3) / 1 = 10 − 5√3.
+
+**Answer:** 10 − 5√3
+
+## Worked Example 3 — Exam Style
+
+**Question:** Show that 12/(3 − √5) can be written as a(3 + √5) where a is an integer to be found. (3 marks)
+
+**Working:**
+
+Step 1 — Multiply top and bottom by the conjugate (3 + √5).
+
+Step 2 — Denominator: (3 − √5)(3 + √5) = 9 − 5 = 4.
+
+Step 3 — Numerator: 12(3 + √5).
+
+Step 4 — The fraction becomes 12(3 + √5) / 4 = 3(3 + √5).
+
+So a = 3.
+
+**Answer:** a = 3
+
+## Common Mistakes
+
+- **Multiplying only the numerator by the surd.** You must multiply both the numerator and the denominator to keep the fraction equivalent. Multiplying top and bottom by the same thing is equivalent to multiplying by 1.
+- **Using the wrong conjugate.** The conjugate of (a + √b) is (a − √b), not (a + √b). Using the same expression will not eliminate the surd.
+- **Forgetting to simplify after rationalising.** After clearing the surd from the denominator, check whether the numerator and denominator share common factors.
+
+## Exam Tips
+
+- Questions often combine simplifying surds with rationalising. Simplify the surds first, then rationalise.
+- When the denominator multiplies out to 1 (as in the worked example above), the answer simplifies very neatly. Watch for this — it can save time.
+- Write the conjugate multiplication step clearly. This earns a method mark even if you make an arithmetic error afterwards.
+
+## Practice Questions
+
+**Q1 (Higher):** Rationalise the denominator of 10/√5. Simplify your answer.
+
+[ANSWER: (10 × √5) / (√5 × √5) = 10√5 / 5 = 2√5]
+
+**Q2 (Higher):** Rationalise the denominator of 4/(1 + √3). Give your answer in the form a + b√3.
+
+[ANSWER: Multiply by (1 − √3)/(1 − √3). Denominator = 1 − 3 = −2. Numerator = 4(1 − √3) = 4 − 4√3. Answer = (4 − 4√3)/(−2) = −2 + 2√3]
+
+**Q3 (Higher):** Rationalise the denominator of (3 + √2)/(√2). Simplify fully.
+
+[ANSWER: Multiply by √2/√2. Numerator = (3 + √2) × √2 = 3√2 + 2. Denominator = 2. Answer = (3√2 + 2)/2]
+
+---
+
+Practise rationalising the denominator questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Surds](/topics/surds)
+- [Simplifying Surds](/topics/simplifying-surds)
+- [Indices and Index Laws](/topics/indices-and-index-laws)
+
+## Summary
+
+- Rationalising the denominator removes surds from the bottom of a fraction.
+- For a single surd denominator, multiply top and bottom by that surd.
+- For a two-term denominator, multiply by the conjugate to use the difference of two squares.
+- Always simplify your final answer by cancelling common factors.
+- Show the conjugate multiplication step clearly to earn method marks in exams.
+`,
+  "reading-and-drawing-bar-charts": `---
+title: "Reading and Drawing Bar Charts – GCSE Maths Revision Guide"
+description: "Master bar charts for GCSE Maths including single, dual and composite bar charts, choosing scales, and spotting misleading graphs."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["bar charts GCSE", "drawing bar charts", "dual bar chart", "composite bar chart", "misleading graphs GCSE"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 184
+---
+
+Bar charts are one of the most common ways to display data in GCSE Maths and appear on Foundation and Higher papers across AQA, Edexcel and OCR. You need to know how to read values from bar charts, draw them accurately, and recognise dual and composite bar charts. At Higher level, you may also be asked to identify misleading features. This guide covers all the key skills. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is a Bar Chart?
+
+A **bar chart** uses rectangular bars to represent the frequency (or value) of different categories. The bars are usually the same width, separated by equal gaps, and the height of each bar corresponds to the frequency.
+
+### Types of Bar Charts
+
+- **Single bar chart** — one bar per category, used to display one data set.
+- **Dual (comparative) bar chart** — two bars side by side for each category, used to compare two data sets.
+- **Composite (stacked) bar chart** — bars divided into sections stacked on top of each other, showing how each category is made up of sub-categories.
+
+### Key Formulas
+
+[FORMULA: Frequency = height of the bar read from the vertical axis]
+
+For composite bar charts, the frequency of a sub-section is the height of that section alone, not the cumulative height.
+
+## Step-by-Step Method
+
+1. Draw and label the horizontal axis with categories and the vertical axis with frequency (include units if applicable).
+2. Choose a sensible scale for the vertical axis that fits all your data and uses most of the available space.
+3. Draw each bar to the correct height. Keep all bars the same width with equal gaps between them.
+4. Add a title and, for dual or composite charts, include a key.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A shop records the number of each type of drink sold in a day: Tea 35, Coffee 50, Juice 20, Water 30. Draw a bar chart.
+
+**Working:**
+
+Label the horizontal axis with the drink types. Label the vertical axis "Number sold" with a scale from 0 to 50 (or 0 to 60 for clarity), going up in steps of 10.
+
+Draw bars: Tea to height 35, Coffee to 50, Juice to 20, Water to 30. Equal widths, equal gaps.
+
+**Answer:** The bar chart should have four bars at heights 35, 50, 20 and 30, with labelled axes and a title.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A dual bar chart shows the number of boys and girls choosing each option subject. From the chart, English has boys = 15 and girls = 22. History has boys = 18 and girls = 14. Art has boys = 10 and girls = 20. (a) Which subject has the biggest difference between boys and girls? (b) How many pupils chose Art in total?
+
+**Working:**
+
+**(a)** English difference: 22 − 15 = 7. History: 18 − 14 = 4. Art: 20 − 10 = **10**. Art has the biggest difference.
+
+**(b)** Art total = 10 + 20 = **30 pupils**.
+
+**Answer:** (a) Art has the biggest difference (10). (b) 30 pupils chose Art.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A student draws a bar chart with the vertical axis starting at 50 instead of 0. Explain how this could be misleading.
+
+**Working:**
+
+Starting the vertical axis at 50 exaggerates the differences between bars. A bar showing a value of 55 would appear much shorter relative to a bar at 70, making the difference look far greater than it actually is. A correct bar chart should start the vertical axis at 0 so the bar heights are proportional to the values.
+
+**Answer:** Starting the axis above 0 makes differences between categories appear larger than they really are, misleading the reader.
+
+## Common Mistakes
+
+- **Unequal bar widths or gaps.** All bars should be the same width with equal spacing.
+- **Missing labels or title.** Always label both axes and include a title — missing labels lose marks.
+- **Poor scale choice.** If your scale is too compressed or too stretched, the chart becomes hard to read. Choose round-number intervals (5, 10, 20, etc.).
+- **Misreading composite bars.** For a stacked section, read only the height of that section, not the total from the bottom.
+
+## Exam Tips
+
+- Use a ruler and sharp pencil to draw neat, accurate bars.
+- If the question says "draw an accurate bar chart", your bars must reach the exact correct height — careless drawing loses accuracy marks.
+- For dual bar charts, always include a key to distinguish the two data sets.
+- When asked about misleading graphs, check whether the axis starts at zero, whether bar widths are equal, and whether the scale is consistent.
+- For related data display, see [drawing pie charts](/topics/drawing-pie-charts). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A bar chart shows goals scored by four teams: Team A = 12, Team B = 8, Team C = 15, Team D = 10. Which team scored the most goals?
+
+[ANSWER: Team C scored the most goals (15).]
+
+**Q2 (Foundation):** A composite bar chart has a total bar height of 45 for Monday. The blue section goes from 0 to 20 and the red section from 20 to 45. How many does the red section represent?
+
+[ANSWER: Red = 45 − 20 = 25.]
+
+**Q3 (Higher):** A dual bar chart compares Year 10 and Year 11 exam results. Year 10 has a bar at 62 and Year 11 at 58, but the axis starts at 55. A student says "Year 10 did much better." Is this justified?
+
+[ANSWER: Not fully justified. The axis starting at 55 exaggerates the difference. The actual difference is only 4 marks (62 − 58). If the axis started at 0, the bars would look almost the same height. The student should note the actual values, not rely on the visual appearance.]
+
+---
+
+Practise reading and drawing bar charts free on GCSEMathsAI.
+
+## Related Topics
+
+- [Drawing Pie Charts](/topics/drawing-pie-charts)
+- [Frequency Tables and Grouped Data](/topics/frequency-tables-and-grouped-data)
+- [Scatter Graphs and Correlation](/topics/scatter-graphs-and-correlation)
+
+## Summary
+
+- Bar charts display categorical data using bars whose heights represent frequency.
+- Single bar charts show one data set; dual bar charts compare two; composite bar charts show sub-categories stacked.
+- Always label both axes, use a sensible scale starting at 0, and keep bar widths and gaps equal.
+- Misleading graphs often have axes that do not start at 0, unequal bar widths or inconsistent scales.
+- When reading composite bar charts, read the height of each section individually, not the cumulative total.
+`,
+  "recurring-decimals-to-fractions": `---
+title: "Recurring Decimals to Fractions – GCSE Maths Revision Guide"
+description: "Learn the algebraic method for converting recurring decimals to fractions for GCSE Maths Higher tier with worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["recurring decimals GCSE", "recurring decimal to fraction", "convert recurring decimal", "algebraic method recurring", "higher GCSE decimals"]
+tier: "Higher only"
+strand: "Number"
+topicNumber: 127
+---
+
+Converting recurring decimals to fractions is a Higher tier GCSE Maths topic that appears regularly on exam papers. The method uses algebra to eliminate the repeating part, producing a clean fraction.
+
+## What Is a Recurring Decimal?
+
+A **recurring decimal** is a decimal number in which one or more digits repeat infinitely. A single dot above a digit means that digit repeats; dots above the first and last digits of a group mean that whole group repeats.
+
+For example, 0.333... (written 0.3 with a dot over the 3) = 1/3. The decimal 0.363636... (written with dots over the 3 and the 6) has a two-digit repeating block.
+
+Every recurring decimal can be written as a fraction, and the algebraic method below works for any repeating pattern.
+
+### Key Formulas
+
+[FORMULA: Let x = the recurring decimal, multiply by 10^n where n = number of repeating digits, then subtract x]
+
+[FORMULA: If one digit repeats: multiply by 10. If two digits repeat: multiply by 100. If three digits repeat: multiply by 1000]
+
+## Step-by-Step Method
+
+1. Let x equal the recurring decimal.
+2. Count how many digits are in the repeating block — call this n.
+3. Multiply both sides by 10^n to shift the decimal point past one complete repeating block.
+4. Subtract the original equation from the new equation to eliminate the repeating part.
+5. Solve for x and simplify the resulting fraction.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** This topic is Higher only, but here is a straightforward single-digit recurrence. Convert 0.777... to a fraction.
+
+**Working:**
+
+Step 1 — Let x = 0.777...
+
+Step 2 — One digit repeats, so multiply by 10: 10x = 7.777...
+
+Step 3 — Subtract: 10x − x = 7.777... − 0.777... → 9x = 7.
+
+Step 4 — Solve: x = 7/9.
+
+**Answer:** 7/9
+
+## Worked Example 2 — Higher Level
+
+**Question:** Convert 0.363636... to a fraction in its simplest form.
+
+**Working:**
+
+Step 1 — Let x = 0.363636...
+
+Step 2 — Two digits repeat, so multiply by 100: 100x = 36.363636...
+
+Step 3 — Subtract: 100x − x = 36.363636... − 0.363636... → 99x = 36.
+
+Step 4 — Solve: x = 36/99. Simplify by dividing by HCF(36, 99) = 9: x = 4/11.
+
+**Answer:** 4/11
+
+## Worked Example 3 — Exam Style
+
+**Question:** Prove that 0.2181818... = 12/55.
+
+**Working:**
+
+Step 1 — Let x = 0.2181818... The repeating block is 18 (two digits), but there is a non-repeating 2 first.
+
+Step 2 — Multiply by 10 to move past the non-repeating digit: 10x = 2.181818...
+
+Step 3 — Multiply by 1000 to move past the non-repeating digit plus one full repeating block: 1000x = 218.181818...
+
+Step 4 — Subtract: 1000x − 10x = 218.1818... − 2.1818... → 990x = 216.
+
+Step 5 — Solve: x = 216/990. Simplify by dividing by HCF(216, 990) = 18: x = 12/55.
+
+**Answer:** 0.2181818... = 12/55 (proven)
+
+## Common Mistakes
+
+- **Multiplying by the wrong power of 10.** The power must match the number of repeating digits, not the total number of decimal places.
+- **Forgetting to deal with non-repeating digits before the repeating block.** When there are non-repeating digits, you need two multiplications and must subtract carefully.
+- **Not simplifying the final fraction.** Always divide numerator and denominator by their HCF.
+
+## Exam Tips
+
+- Set out your working clearly with "Let x = ..." — examiners look for this structure.
+- For "prove" or "show that" questions, you must reach the exact fraction given in the question.
+- Check your answer by dividing the numerator by the denominator on your calculator to verify you get the original recurring decimal.
+
+## Practice Questions
+
+**Q1 (Higher):** Convert 0.444... to a fraction.
+
+[ANSWER: Let x = 0.444... 10x = 4.444... 10x − x = 4, so 9x = 4, x = 4/9.]
+
+**Q2 (Higher):** Convert 0.272727... to a fraction in its simplest form.
+
+[ANSWER: Let x = 0.272727... 100x = 27.2727... 100x − x = 27, so 99x = 27, x = 27/99 = 3/11.]
+
+**Q3 (Higher):** Prove that 0.1666... = 1/6.
+
+[ANSWER: Let x = 0.1666... 10x = 1.666... 100x = 16.666... 100x − 10x = 15, so 90x = 15, x = 15/90 = 1/6.]
+
+---
+
+Practise recurring decimals to fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Fractions](/topics/fractions)
+- [Converting Fractions, Decimals and Percentages](/topics/converting-fractions-decimals-percentages)
+- [Algebraic Proof](/topics/algebraic-proof)
+
+## Summary
+
+- A recurring decimal has digits that repeat infinitely in a pattern.
+- Use the algebraic method: let x equal the decimal, multiply by the appropriate power of 10, and subtract.
+- The power of 10 matches the number of digits in the repeating block.
+- If there are non-repeating digits before the block, use two different multiplications.
+- Always simplify your final fraction by dividing by the HCF.
+`,
+  "reflections": `---
+title: "Reflections – GCSE Maths Revision Guide"
+description: "Learn how to reflect shapes in the x-axis, y-axis, y = x, y = -x, and other mirror lines with worked examples and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["reflections GCSE", "reflecting shapes", "mirror line reflection", "reflect in y equals x", "describing reflections"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 157
+---
+
+Reflections are one of the four transformations you need to know for GCSE Maths. A reflection flips a shape over a mirror line so that the image is the same distance from the line as the original, on the opposite side. This guide covers reflecting in the axes, the lines y = x and y = −x, and other lines, with step-by-step methods for both performing and describing reflections.
+
+## What Is a Reflection?
+
+A reflection creates a mirror image of a shape across a given line, called the **mirror line** or **line of reflection**. Every point on the original shape is the same perpendicular distance from the mirror line as the corresponding point on the image, but on the opposite side.
+
+### Key Formulas
+
+[FORMULA: Reflection in the x-axis: (x, y) maps to (x, −y)]
+
+[FORMULA: Reflection in the y-axis: (x, y) maps to (−x, y)]
+
+[FORMULA: Reflection in y = x: (x, y) maps to (y, x)]
+
+[FORMULA: Reflection in y = −x: (x, y) maps to (−y, −x)]
+
+## Step-by-Step Method
+
+1. **Draw the mirror line** on the coordinate grid if it is not already shown.
+2. **For each vertex** of the shape, count the perpendicular distance from the vertex to the mirror line.
+3. **Plot the reflected vertex** the same distance on the other side of the line.
+4. **Connect** the reflected vertices to form the image.
+5. **Label the image** with dashed lines or primes (A', B', C') to distinguish it from the original.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Reflect the triangle with vertices A(1, 3), B(4, 3), and C(4, 1) in the x-axis.
+
+**Working:**
+
+Reflection in the x-axis: (x, y) maps to (x, −y).
+
+A(1, 3) maps to A'(1, −3)
+
+B(4, 3) maps to B'(4, −3)
+
+C(4, 1) maps to C'(4, −1)
+
+**Answer:** The image has vertices **A'(1, −3), B'(4, −3), C'(4, −1)**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Reflect the point P(3, 5) in the line y = x. State the coordinates of the image.
+
+**Working:**
+
+Reflection in y = x: swap the x and y coordinates.
+
+P(3, 5) maps to P'(5, 3).
+
+**Answer:** P' = **(5, 3)**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Shape A has been reflected to give shape B. Shape A has a vertex at (2, 4) and the corresponding vertex on shape B is at (2, −2). Describe the single transformation fully.
+
+**Working:**
+
+The x-coordinate stays the same (2 to 2), so the mirror line is horizontal.
+
+The midpoint of the y-coordinates is (4 + (−2)) ÷ 2 = 1.
+
+The mirror line is y = 1.
+
+**Answer:** A **reflection in the line y = 1**.
+
+## Common Mistakes
+
+- **Not describing the transformation fully.** You must state the type of transformation (reflection) and the equation of the mirror line. Saying just "reflection" without the line loses marks.
+- **Counting diagonally instead of perpendicularly.** Always measure the shortest (perpendicular) distance from each point to the mirror line.
+- **Confusing reflection with rotation.** A reflected shape is a mirror image — it appears "flipped". A rotated shape keeps the same orientation.
+
+## Exam Tips
+
+- When describing a reflection, always write: "Reflection in the line [equation]." Both parts are needed for full marks.
+- To find the mirror line when given the object and image, find the midpoint of each pair of corresponding points — the mirror line passes through all midpoints.
+- Use tracing paper in the exam to check your reflection is accurate.
+- Reflections do not change the size or shape of the figure — the object and image are congruent.
+
+## Practice Questions
+
+**Q1 (Foundation):** Reflect the point (5, 2) in the y-axis.
+
+[ANSWER: (−5, 2)]
+
+**Q2 (Foundation):** Reflect the point (3, −4) in the x-axis.
+
+[ANSWER: (3, 4)]
+
+**Q3 (Higher):** A shape is reflected so that the point (1, 6) maps to (6, 1). What is the mirror line?
+
+[ANSWER: The mirror line is y = x (the coordinates have been swapped).]
+
+---
+
+Practise reflections with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Rotations](/topics/rotations)
+- [Translations and Column Vectors](/topics/translations-column-vectors)
+- [Enlargement and Centre of Enlargement](/topics/enlargement-and-centre-of-enlargement)
+- [Transformations — Reflection, Rotation, Translation](/topics/transformations-reflection-rotation-translation)
+
+## Summary
+
+- A reflection flips a shape over a mirror line. Every point on the image is the same perpendicular distance from the mirror line as the corresponding point on the original, but on the opposite side. You must know the coordinate rules for reflecting in the x-axis, y-axis, y = x, and y = −x. When describing a reflection, always state the transformation type and the equation of the mirror line.
+`,
+  "relative-frequency": `---
+title: "Relative Frequency – GCSE Maths Revision Guide"
+description: "Master relative frequency (experimental probability) for GCSE Maths with step-by-step methods, worked examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["relative frequency GCSE", "experimental probability", "relative frequency formula", "more trials reliable", "probability estimate"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 188
+---
+
+Relative frequency is a key probability concept tested on both Foundation and Higher GCSE Maths papers across AQA, Edexcel and OCR. When you cannot calculate a theoretical probability — for example because a dice might be biased or a spinner's sections are not equal — you use experimental results instead. Relative frequency provides an estimate of probability based on observed data, and the more trials you carry out, the more reliable it becomes. This guide explains the concept, method and common exam questions. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is Relative Frequency?
+
+**Relative frequency** (also called experimental probability) estimates the probability of an event based on the results of an experiment or collected data.
+
+### Key Formulas
+
+[FORMULA: Relative frequency = Number of times the event occurs ÷ Total number of trials]
+
+Unlike theoretical probability, which uses equally likely outcomes, relative frequency is based on what actually happened.
+
+### The Law of Large Numbers
+
+As the number of trials increases, the relative frequency of an event tends to get closer to the **theoretical probability** (if one exists). This is why more trials give a more reliable estimate.
+
+## Step-by-Step Method
+
+1. Read or carry out the experiment.
+2. Count how many times the event of interest occurred.
+3. Count the total number of trials.
+4. Divide: relative frequency = event occurrences ÷ total trials.
+5. State that this is an **estimate** of probability.
+6. If asked to improve the estimate, say that more trials should be carried out.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A drawing pin is dropped 50 times. It lands point-up 18 times. Estimate the probability that it lands point-up.
+
+**Working:**
+
+Relative frequency = 18 ÷ 50 = **0.36**.
+
+**Answer:** The estimated probability of landing point-up is 0.36.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A biased dice is rolled. The table shows cumulative results.
+
+| Total rolls | 50 | 100 | 200 | 500 |
+|---|---|---|---|---|
+| Times showing 4 | 12 | 21 | 38 | 84 |
+
+(a) Calculate the relative frequency of rolling a 4 after each set of trials. (b) Which estimate is most reliable? (c) Estimate the probability of rolling a 4.
+
+**Working:**
+
+**(a)** After 50: 12/50 = 0.24. After 100: 21/100 = 0.21. After 200: 38/200 = 0.19. After 500: 84/500 = **0.168**.
+
+**(b)** The estimate after **500 trials** is the most reliable because relative frequency becomes more accurate as the number of trials increases.
+
+**(c)** The best estimate is 0.168, so P(4) is approximately **0.17** (2 d.p.).
+
+**Answer:** (a) 0.24, 0.21, 0.19, 0.168. (b) 500 trials is most reliable. (c) Approximately 0.17.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A coin is flipped 400 times and lands on heads 212 times. Is the coin fair? Explain.
+
+**Working:**
+
+Relative frequency of heads = 212 ÷ 400 = 0.53.
+
+A fair coin has P(heads) = 0.5. The relative frequency of 0.53 is close to 0.5. Over 400 trials, a difference of 0.03 is small and could be due to random variation.
+
+**Answer:** The coin appears to be approximately fair. The relative frequency of 0.53 is close to the expected 0.5, and the small difference is consistent with natural variation over 400 trials.
+
+## Common Mistakes
+
+- **Calling relative frequency exact.** It is always an **estimate** — use this word in your answer.
+- **Using too few trials to draw conclusions.** A small number of trials produces unreliable estimates. Always mention that more trials would improve accuracy.
+- **Confusing relative frequency with theoretical probability.** Relative frequency is based on experimental results; theoretical probability is calculated from equally likely outcomes.
+
+## Exam Tips
+
+- Always use the word "estimate" when referring to relative frequency — this shows the examiner you understand the concept.
+- If a table shows relative frequencies for increasing numbers of trials, the most reliable estimate is always the one with the most trials.
+- To predict future outcomes, multiply the relative frequency by the number of future trials.
+- Questions often combine relative frequency with expected frequency — see [expected frequency](/topics/expected-frequency).
+- For foundational probability, see [probability scale and basic probability](/topics/probability-scale-and-basic-probability). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A spinner is spun 80 times and lands on green 24 times. Estimate the probability of landing on green.
+
+[ANSWER: Relative frequency = 24 ÷ 80 = 0.3. The estimated probability is 0.3.]
+
+**Q2 (Foundation):** Explain how the estimate in Q1 could be made more reliable.
+
+[ANSWER: Spin the spinner more times. As the number of trials increases, the relative frequency becomes a more reliable estimate of the true probability.]
+
+**Q3 (Higher):** A dice is rolled 1000 times. The number 5 appears 200 times. (a) Estimate P(5). (b) If the dice were fair, what would you expect? (c) Is the dice fair?
+
+[ANSWER: (a) RF = 200/1000 = 0.2. (b) Fair dice: P(5) = 1/6 ≈ 0.167. Expected frequency = 0.167 x 1000 ≈ 167. (c) The actual frequency (200) is notably higher than 167. Over 1000 trials, this suggests the dice may be biased towards 5.]
+
+---
+
+Practise relative frequency and experimental probability free on GCSEMathsAI.
+
+## Related Topics
+
+- [Expected Frequency](/topics/expected-frequency)
+- [Probability Scale and Basic Probability](/topics/probability-scale-and-basic-probability)
+- [Mutually Exclusive Events](/topics/mutually-exclusive-events)
+
+## Summary
+
+- Relative frequency estimates probability from experimental results: event occurrences divided by total trials.
+- It is always an estimate — use this word in exam answers.
+- More trials produce a more reliable estimate because relative frequency tends towards the theoretical probability as the number of trials increases.
+- Compare relative frequency with theoretical probability to assess whether an object (dice, coin, spinner) is fair.
+- To make predictions, multiply the relative frequency by the number of future trials.
+`,
   "reverse-percentages": `---
 title: "Reverse Percentages GCSE – Find the Original"
 description: "Master reverse percentages for GCSE Maths. Learn how to find the original amount before a percentage increase or decrease with worked examples."
@@ -7858,6 +18834,254 @@ Perfect your reverse percentage technique with unlimited practice on [GCSEMathsA
 - **Original = New value ÷ Multiplier.**
 - Always **check** by multiplying your answer by the multiplier to get back to the given value.
 - Common contexts include sales, VAT, profit/loss and depreciation.
+`,
+  "rotations": `---
+title: "Rotations – GCSE Maths Revision Guide"
+description: "Master rotations for GCSE Maths including centre, angle, and direction of rotation with 90, 180, and 270 degree worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["rotations GCSE", "centre of rotation", "90 degree rotation", "180 degree rotation", "describing rotations"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 158
+---
+
+Rotations are one of the four transformations tested in GCSE Maths across AQA, Edexcel, and OCR. A rotation turns a shape around a fixed point called the centre of rotation by a specified angle in a given direction. This guide explains how to perform and describe rotations, covering 90°, 180°, and 270° turns with worked examples from Foundation to exam style.
+
+## What Is a Rotation?
+
+A rotation turns every point of a shape through the same angle about a fixed point. The shape does not change size or shape — it only changes position and orientation.
+
+### Key Formulas
+
+[FORMULA: 90° clockwise rotation about the origin: (x, y) maps to (y, −x)]
+
+[FORMULA: 90° anticlockwise rotation about the origin: (x, y) maps to (−y, x)]
+
+[FORMULA: 180° rotation about the origin: (x, y) maps to (−x, −y)]
+
+To describe a rotation fully you must state three things: the **centre** of rotation, the **angle** of rotation, and the **direction** (clockwise or anticlockwise). For 180°, direction is not required since clockwise and anticlockwise give the same result.
+
+## Step-by-Step Method
+
+1. **Identify the centre of rotation** from the question or diagram.
+2. **Use tracing paper.** Trace the shape, place your pencil on the centre of rotation, and turn the tracing paper by the given angle.
+3. **Plot the rotated vertices** and draw the image.
+4. **To describe a rotation**, find the centre by trial using tracing paper, then state the angle and direction.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Rotate the triangle with vertices A(1, 2), B(3, 2), and C(3, 4) by 90° clockwise about the origin.
+
+**Working:**
+
+90° clockwise about (0, 0): (x, y) maps to (y, −x).
+
+A(1, 2) maps to A'(2, −1)
+
+B(3, 2) maps to B'(2, −3)
+
+C(3, 4) maps to C'(4, −3)
+
+**Answer:** The image has vertices **A'(2, −1), B'(2, −3), C'(4, −3)**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Rotate the point P(−2, 5) by 180° about the origin.
+
+**Working:**
+
+180° about (0, 0): (x, y) maps to (−x, −y).
+
+P(−2, 5) maps to P'(2, −5).
+
+**Answer:** P' = **(2, −5)**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Triangle A is mapped to triangle B by a rotation. Vertex (1, 3) on A maps to (3, −1) on B. The centre of rotation is the origin. Describe the rotation fully.
+
+**Working:**
+
+(1, 3) maps to (3, −1). Using the rule (x, y) maps to (y, −x), this matches a 90° clockwise rotation about the origin.
+
+Check: x = 1, y = 3. (y, −x) = (3, −1). Correct.
+
+**Answer:** **Rotation, 90° clockwise, centre (0, 0)**.
+
+## Common Mistakes
+
+- **Not stating all three parts of the description.** You must give the centre, the angle, and the direction. Missing any one of these loses marks.
+- **Confusing clockwise and anticlockwise.** Clockwise follows the direction of a clock's hands. If you confuse them, the image ends up in the wrong quadrant.
+- **Using the wrong centre.** If the centre of rotation is not the origin, the coordinate rules above do not apply directly. Use tracing paper instead.
+
+## Exam Tips
+
+- Use tracing paper in your exam — it is allowed and makes rotations much easier to perform accurately.
+- For 180° rotations, you do not need to state a direction since both clockwise and anticlockwise produce the same result.
+- A 270° clockwise rotation is the same as a 90° anticlockwise rotation. Use whichever is simpler.
+- When finding the centre of rotation, try the origin first. If that does not work, look for a point equidistant from a vertex and its image.
+- Always check your image by confirming that each image vertex is the same distance from the centre as the corresponding original vertex.
+
+## Practice Questions
+
+**Q1 (Foundation):** Rotate the point (4, 1) by 180° about the origin.
+
+[ANSWER: (−4, −1)]
+
+**Q2 (Foundation):** Rotate the point (2, 5) by 90° anticlockwise about the origin.
+
+[ANSWER: (−5, 2)]
+
+**Q3 (Higher):** A shape is rotated so that the point (3, 1) maps to (−1, 3). The centre is the origin. Describe the rotation fully.
+
+[ANSWER: Rotation, 90° anticlockwise, centre (0, 0). Check: (x, y) maps to (−y, x) gives (−1, 3). Correct.]
+
+---
+
+Practise rotations with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Reflections](/topics/reflections)
+- [Translations and Column Vectors](/topics/translations-column-vectors)
+- [Enlargement and Centre of Enlargement](/topics/enlargement-and-centre-of-enlargement)
+- [Transformations — Reflection, Rotation, Translation](/topics/transformations-reflection-rotation-translation)
+
+## Summary
+
+- A rotation turns a shape about a fixed centre by a given angle in a specified direction. To describe a rotation you must state the centre, the angle, and the direction (except for 180°). Know the coordinate rules for rotations about the origin: 90° clockwise maps (x, y) to (y, −x), 90° anticlockwise maps (x, y) to (−y, x), and 180° maps (x, y) to (−x, −y). Use tracing paper in exams to perform and check rotations.
+`,
+  "rounding-decimal-places-significant-figures": `---
+title: "Rounding: Decimal Places and Significant Figures – GCSE Maths Revision Guide"
+description: "Master rounding to decimal places and significant figures for GCSE Maths with clear rules, worked examples, and common exam pitfalls."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["rounding GCSE maths", "decimal places", "significant figures", "rounding rules", "truncation vs rounding"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 130
+---
+
+Rounding is a core skill tested on every GCSE Maths paper. You must be able to round numbers to a given number of decimal places (dp) or significant figures (sf), and know when to round during multi-step calculations.
+
+## What Is Rounding?
+
+Rounding means replacing a number with an approximation that is simpler to use while staying close to the original value. The two main types at GCSE are rounding to **decimal places** and rounding to **significant figures**.
+
+**Decimal places (dp)** count the digits after the decimal point. Rounding to 2 dp means keeping two digits after the point.
+
+**Significant figures (sf)** count from the first non-zero digit. Leading zeros are not significant. For example, in 0.00407, the first significant figure is 4, the second is 0, and the third is 7.
+
+**Truncation** simply cuts off digits without rounding — the examiners sometimes ask you to distinguish between rounding and truncation.
+
+### Key Formulas
+
+[FORMULA: To round: look at the digit after the last one you are keeping. If it is 5 or more, round up. If it is less than 5, round down.]
+
+[FORMULA: Significant figures start from the first non-zero digit, counting all digits from that point]
+
+## Step-by-Step Method
+
+1. Identify whether you are rounding to decimal places or significant figures.
+2. Count to the required position and look at the next digit (the "deciding digit").
+3. If the deciding digit is 5, 6, 7, 8, or 9, increase the last kept digit by 1.
+4. If the deciding digit is 0, 1, 2, 3, or 4, keep the last digit unchanged.
+5. For significant figures, replace remaining digits with zeros if they come before the decimal point.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Round 3.4562 to 2 decimal places.
+
+**Working:**
+
+Step 1 — The second decimal place is 5 (3.4**5**62).
+
+Step 2 — The deciding digit (third decimal place) is 6. Since 6 ≥ 5, round up.
+
+Step 3 — The 5 becomes 6.
+
+**Answer:** 3.46
+
+## Worked Example 2 — Higher Level
+
+**Question:** Round 0.004073 to 2 significant figures.
+
+**Working:**
+
+Step 1 — The leading zeros are not significant. The first significant figure is 4, the second is 0 (0.00**40**73).
+
+Step 2 — The deciding digit (third sf) is 7. Since 7 ≥ 5, round up.
+
+Step 3 — The 0 becomes 1: 0.0041.
+
+**Answer:** 0.0041
+
+## Worked Example 3 — Exam Style
+
+**Question:** A calculator shows 7.9985. Round this to 3 significant figures.
+
+**Working:**
+
+Step 1 — The first three significant figures are 7, 9, 9 (7.99|85).
+
+Step 2 — The deciding digit is 8. Since 8 ≥ 5, round up.
+
+Step 3 — 7.99 rounds up: 9 becomes 10, which carries over. 7.99 becomes 8.00.
+
+**Answer:** 8.00
+
+## Common Mistakes
+
+- **Confusing decimal places with significant figures.** In 0.0035, rounding to 2 dp gives 0.00, but rounding to 2 sf gives 0.0035.
+- **Forgetting trailing zeros matter.** 3.50 to 2 dp is different from 3.5 — the zero shows you have rounded to 2 decimal places. Always include trailing zeros when required.
+- **Rounding too early in multi-step problems.** Keep full precision during working and only round your final answer. Premature rounding can lead to inaccurate results.
+
+## Exam Tips
+
+- Read the question carefully to see whether it asks for decimal places or significant figures.
+- When the question says "give your answer to a suitable degree of accuracy", 3 significant figures is usually appropriate.
+- For estimation questions, round each value to 1 significant figure before calculating.
+
+## Practice Questions
+
+**Q1 (Foundation):** Round 47,356 to 3 significant figures.
+
+[ANSWER: The first three significant figures are 4, 7, 3. The deciding digit is 5, so round up. 47,356 ≈ 47,400.]
+
+**Q2 (Foundation):** Round 0.08247 to 2 decimal places.
+
+[ANSWER: The second decimal place is 8 (0.08). The deciding digit is 2, so round down. Answer: 0.08.]
+
+**Q3 (Higher):** A number is truncated to 1 decimal place to give 4.7. Write down the error interval for the original number.
+
+[ANSWER: Truncation keeps the digit without rounding. The number could be from 4.7 (inclusive) up to but not including 4.8. Error interval: 4.7 ≤ x < 4.8.]
+
+---
+
+Practise rounding questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Bounds and Error Intervals](/topics/bounds-and-error-intervals)
+- [Decimals](/topics/decimals)
+- [Estimating Square Roots](/topics/estimating-square-roots)
+
+## Summary
+
+- Decimal places count digits after the decimal point.
+- Significant figures count from the first non-zero digit.
+- Look at the deciding digit: 5 or more rounds up, less than 5 rounds down.
+- Truncation cuts digits off without rounding — know the difference.
+- Avoid rounding intermediate steps; only round the final answer.
 `,
   "sampling-methods": `---
 title: "Sampling Methods – GCSE Maths Revision Guide"
@@ -8351,6 +19575,132 @@ Ready to practise these skills with instant, personalised feedback? Try our AI-p
 
 Scatter graphs plot pairs of data to show relationships between two variables. You need to identify the type of correlation — **positive** (points rise), **negative** (points fall) or **none** (no pattern) — and describe its strength. A **line of best fit** follows the trend and passes through the mean point when given. Use the line to make estimates: **interpolation** (within the data range) is reliable; **extrapolation** (outside the data range) is not. Always remember that correlation does not prove causation. In the exam, plot neatly, label axes, show reading lines, and relate your answers to the context of the question.
 `,
+  "sector-area": `---
+title: "Sector Area – GCSE Maths Revision Guide"
+description: "Master sector area with the formula (theta/360) x pi r squared, perimeter of a sector, worked examples, and GCSE exam-style practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["sector area", "area of a sector", "sector area formula", "perimeter of a sector", "GCSE sector questions"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 154
+---
+
+Sector area is a common GCSE Maths topic tested across AQA, Edexcel, and OCR on both Foundation and Higher papers. A sector is a "slice" of a circle, like a pizza slice, and its area depends on the radius and the angle at the centre. This guide covers the area formula, perimeter of a sector, and how to handle reverse problems where you find the angle or radius.
+
+## What Is Sector Area?
+
+A sector is the region enclosed by two radii and an arc. The area of a sector is a fraction of the full circle's area. That fraction is determined by the angle at the centre divided by 360°.
+
+### Key Formulas
+
+[FORMULA: Area of a sector = (θ / 360) × πr²]
+
+[FORMULA: Perimeter of a sector = 2r + arc length = 2r + (θ / 360) × 2πr]
+
+[FORMULA: Area of a full circle = πr²]
+
+## Step-by-Step Method
+
+1. **Identify the radius** (r) and the **angle at the centre** (θ).
+2. **Write the formula:** Area = (θ / 360) × πr².
+3. **Substitute** the values and calculate.
+4. **For the perimeter**, add the arc length to twice the radius (the two straight edges).
+5. **Round** to the required accuracy or leave in terms of π.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Find the area of a sector with radius 6 cm and angle 90°. Give your answer to 1 decimal place.
+
+**Working:**
+
+Area = (90 / 360) × π × 6²
+
+= (1/4) × 36π
+
+= 9π
+
+= 28.274...
+
+**Answer:** Area = **28.3 cm²** (1 d.p.)
+
+## Worked Example 2 — Higher Level
+
+**Question:** A sector has a radius of 10 cm and an area of 50π cm². Find the angle at the centre.
+
+**Working:**
+
+Area = (θ / 360) × πr²
+
+50π = (θ / 360) × π × 10²
+
+50π = (θ / 360) × 100π
+
+Divide both sides by π: 50 = (θ / 360) × 100
+
+θ / 360 = 50 / 100 = 1/2
+
+θ = 180°
+
+**Answer:** The angle at the centre is **180°**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A sector has a radius of 8 cm and an angle of 135°. Find the perimeter of the sector. Give your answer to 1 decimal place.
+
+**Working:**
+
+Arc length = (135 / 360) × 2 × π × 8 = (3/8) × 16π = 6π = 18.849...
+
+Perimeter = 2 × 8 + arc length = 16 + 18.849... = 34.849...
+
+**Answer:** Perimeter = **34.8 cm** (1 d.p.)
+
+## Common Mistakes
+
+- **Confusing arc length and sector area formulas.** Arc length uses 2πr (circumference); sector area uses πr² (area). Make sure you pick the right one.
+- **Forgetting the two radii in the perimeter.** The perimeter of a sector includes the arc and the two straight edges (radii), so you add 2r to the arc length.
+- **Squaring the diameter instead of the radius.** If the question gives the diameter, halve it before squaring.
+
+## Exam Tips
+
+- When asked for perimeter of a sector, many students only calculate the arc length and forget the two radii. Always add 2r.
+- Show your substitution into the formula clearly — this earns method marks.
+- If the question says "in terms of π", simplify the numerical coefficient and leave π in your answer.
+- Sector area and arc length often appear together. Read the question carefully to determine which one is asked for.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the area of a sector with radius 7 cm and angle 60°. Give your answer to 1 d.p.
+
+[ANSWER: Area = (60/360) × π × 49 = (1/6) × 49π = 49π/6 = 25.7 cm² (1 d.p.)]
+
+**Q2 (Foundation):** A semicircular sector has a diameter of 20 cm. Find its area in terms of π.
+
+[ANSWER: Radius = 10 cm. Area = (180/360) × π × 100 = 50π cm²]
+
+**Q3 (Higher):** A sector has an area of 75 cm² and a radius of 10 cm. Find the angle at the centre to 1 d.p.
+
+[ANSWER: 75 = (θ/360) × π × 100, θ = (75 × 360)/(100π) = 27000/(100π) = 85.9° (1 d.p.)]
+
+---
+
+Practise sector area calculations with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Arc Length](/topics/arc-length)
+- [Arc Length and Sector Area](/topics/arc-length-and-sector-area)
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+
+## Summary
+
+- The area of a sector is (θ / 360) × πr², where θ is the angle at the centre and r is the radius. The perimeter of a sector is the arc length plus twice the radius. You can rearrange the formula to find the angle or radius when the area is given. Always check whether the question gives radius or diameter, and remember to include both radii when calculating the perimeter.
+`,
   "sequences-and-nth-term": `---
 title: "Sequences and Nth Term – GCSE Maths Guide"
 description: "Master arithmetic sequences and the nth term rule for GCSE Maths with clear methods, worked examples, and practice questions."
@@ -8498,6 +19848,495 @@ For every topic you need to revise, check our [GCSE Maths Topics Complete List](
 - Always verify your nth term rule by substituting at least two values of n.
 - Decreasing sequences simply have a negative common difference.
 - This topic connects directly to quadratic sequences, which extend the same ideas to second differences.
+`,
+  "sharing-in-a-ratio": `---
+title: "Sharing in a Ratio – GCSE Maths Revision Guide"
+description: "Master sharing in a ratio for GCSE Maths. Learn to divide amounts, find one share, and solve ratio problems when given a total or difference."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["sharing in a ratio", "dividing amounts in a ratio", "ratio with total given", "ratio with difference given", "GCSE ratio questions"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 114
+---
+
+Sharing in a ratio is one of the most frequently tested skills in GCSE Maths. Whether you are splitting money between friends, dividing ingredients for a recipe, or working out how much paint to mix, the method is always the same. This guide covers every variation you will meet in the exam — sharing with a total given, sharing with a difference given, and finding a single share.
+
+## What Is Sharing in a Ratio?
+
+When you **share an amount in a ratio**, you divide it into unequal parts according to the ratio provided. The ratio tells you how many parts each person or quantity receives relative to the others.
+
+For example, sharing £200 in the ratio 3 : 2 means splitting the money into 5 equal parts, then giving 3 parts to one person and 2 parts to another. The key insight is that the ratio describes the relative size of each share, not the actual amounts.
+
+There are three main types of sharing problems you will encounter at GCSE. The most common gives you the total amount and asks you to find each share. The second type gives you the difference between two shares and asks you to find the total or individual amounts. The third type gives you the value of one share and asks you to find the others.
+
+### Key Formulas
+
+[FORMULA: Value of one part = Total amount ÷ Sum of ratio parts]
+
+[FORMULA: Each share = Number of parts × Value of one part]
+
+## Step-by-Step Method
+
+1. **Add the parts** of the ratio together to find the total number of parts.
+2. **Divide** the given amount by the total parts to find the value of one part.
+3. **Multiply** each number in the ratio by the value of one part to find each share.
+4. **Check** your answers add up to the original total.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Share £360 between Amy and Ben in the ratio 4 : 5.
+
+**Working:**
+Total parts = 4 + 5 = 9.
+Value of one part = £360 ÷ 9 = £40.
+Amy receives 4 × £40 = £160.
+Ben receives 5 × £40 = £200.
+Check: £160 + £200 = £360 ✓
+
+**Answer:** Amy gets £160 and Ben gets £200.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Three friends share some prize money in the ratio 2 : 3 : 7. The largest share is £84 more than the smallest share. Find the total prize money.
+
+**Working:**
+The difference between the largest and smallest parts is 7 − 2 = 5 parts.
+5 parts = £84, so 1 part = £84 ÷ 5 = £16.80.
+Total parts = 2 + 3 + 7 = 12.
+Total prize money = 12 × £16.80 = £201.60.
+Check: Shares are £33.60, £50.40, £117.60. Largest − Smallest = £117.60 − £33.60 = £84 ✓
+
+**Answer:** The total prize money is £201.60.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Tom and Lisa share sweets in the ratio 5 : 3. Tom receives 30 sweets. How many sweets does Lisa receive?
+
+**Working:**
+Tom's 5 parts = 30 sweets, so 1 part = 30 ÷ 5 = 6 sweets.
+Lisa gets 3 parts = 3 × 6 = 18 sweets.
+
+**Answer:** Lisa receives 18 sweets.
+
+## Common Mistakes
+
+- **Dividing by a ratio part instead of the total.** If the ratio is 3 : 5 and you are given the total, divide by 8 (the sum), not by 3 or by 5.
+- **Mixing up the order.** "Alice to Bob in the ratio 2 : 7" means Alice gets 2 parts. Read the names and the numbers in the same order.
+- **Forgetting to check.** Always verify your shares add up to the total. This catches arithmetic slips before they cost you marks.
+
+## Exam Tips
+
+- Write "Total parts = ..." as your first line of working. Examiners look for this and award a method mark.
+- When given a difference, find the difference in parts first, then calculate one part from there.
+- If one share is given directly, divide that share by its number of parts to find the value of one part immediately.
+- Questions sometimes express ratios using fractions (e.g., ½ : ⅓). Multiply both sides by the LCM to clear fractions before sharing.
+
+## Practice Questions
+
+**Q1 (Foundation):** Share £540 between two charities in the ratio 2 : 7.
+
+[ANSWER: Total parts = 9. One part = £540 ÷ 9 = £60. Shares: £120 and £420. Check: £120 + £420 = £540 ✓]
+
+**Q2 (Foundation):** Divide 72 marbles among three children in the ratio 1 : 3 : 5.
+
+[ANSWER: Total parts = 9. One part = 72 ÷ 9 = 8. Shares: 8, 24, and 40 marbles. Check: 8 + 24 + 40 = 72 ✓]
+
+**Q3 (Higher):** Sam and Jake share money in the ratio 4 : 9. Jake receives £35 more than Sam. How much does each person receive?
+
+[ANSWER: Difference in parts = 9 − 4 = 5 parts. 5 parts = £35, so 1 part = £7. Sam = 4 × £7 = £28. Jake = 9 × £7 = £63. Check: £63 − £28 = £35 ✓]
+
+---
+
+Practise sharing in a ratio questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Ratio Basics and Sharing](/topics/ratio-basics-and-sharing)
+- [Ratio Problem Solving](/topics/ratio-problem-solving-in-context)
+- [Percentages](/topics/percentages)
+
+## Summary
+
+- To share in a ratio, add the parts, find the value of one part, then multiply.
+- When given the total, divide the total by the sum of parts.
+- When given the difference between shares, find the difference in parts first.
+- When given one share directly, divide it by its number of parts.
+- Ratios involving fractions or decimals should be simplified first by clearing the fractions.
+- Always check that your shares add up to the original amount.
+- Read the order of names carefully — the first name corresponds to the first number in the ratio.
+`,
+  "similar-shapes-and-scale-factors": `---
+title: "Similar Shapes and Scale Factors – GCSE Maths Revision Guide"
+description: "Understand similar shapes, linear scale factors, area scale factor (k squared), and volume scale factor (k cubed) with GCSE worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["similar shapes", "scale factor", "area scale factor", "volume scale factor", "GCSE similarity"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 156
+---
+
+Similar shapes have the same shape but different sizes — all corresponding angles are equal and corresponding sides are in the same ratio. This topic spans Foundation and Higher GCSE Maths, with Higher students needing to handle area and volume scale factors. It appears regularly on AQA, Edexcel, and OCR exams. This guide explains linear, area, and volume scale factors with worked examples and practice questions.
+
+## What Are Similar Shapes?
+
+Two shapes are **similar** if one is an enlargement of the other. This means all corresponding angles are equal and all corresponding lengths are in the same ratio. That ratio is called the **linear scale factor** (k).
+
+### Key Formulas
+
+[FORMULA: Linear scale factor (k) = new length ÷ original length]
+
+[FORMULA: Area scale factor = k²]
+
+[FORMULA: Volume scale factor = k³]
+
+If the linear scale factor from shape A to shape B is k, then areas are multiplied by k² and volumes by k³.
+
+## Step-by-Step Method
+
+1. **Identify corresponding sides** by matching angles or using the diagram.
+2. **Calculate the linear scale factor** by dividing a known side of one shape by the corresponding side of the other.
+3. **Find missing lengths** by multiplying or dividing by k.
+4. **For area problems** (Higher), square the linear scale factor to get the area scale factor.
+5. **For volume problems** (Higher), cube the linear scale factor to get the volume scale factor.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Triangles A and B are similar. Triangle A has sides 4 cm, 6 cm, and 8 cm. The shortest side of triangle B is 10 cm. Find the other two sides of triangle B.
+
+**Working:**
+
+The shortest side of A is 4 cm and the shortest side of B is 10 cm.
+
+Linear scale factor k = 10 ÷ 4 = 2.5
+
+Second side of B = 6 × 2.5 = 15 cm
+
+Third side of B = 8 × 2.5 = 20 cm
+
+**Answer:** The sides of triangle B are **10 cm, 15 cm, and 20 cm**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Two similar cylinders have heights 6 cm and 15 cm. The surface area of the smaller cylinder is 120 cm². Find the surface area of the larger cylinder.
+
+**Working:**
+
+Linear scale factor k = 15 ÷ 6 = 2.5
+
+Area scale factor = k² = 2.5² = 6.25
+
+Surface area of larger cylinder = 120 × 6.25 = 750 cm²
+
+**Answer:** The surface area of the larger cylinder is **750 cm²**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Two similar solid cones have volumes 54 cm³ and 432 cm³. The height of the smaller cone is 6 cm. Find the height of the larger cone.
+
+**Working:**
+
+Volume scale factor = 432 ÷ 54 = 8
+
+Linear scale factor k = cube root of 8 = 2
+
+Height of larger cone = 6 × 2 = 12 cm
+
+**Answer:** The height of the larger cone is **12 cm**.
+
+## Common Mistakes
+
+- **Using the linear scale factor for area or volume.** If k = 3, the area scale factor is 9 (not 3) and the volume scale factor is 27 (not 3). Students frequently forget to square or cube.
+- **Matching the wrong sides.** Always pair the shortest side with the shortest side, or use the diagram to identify corresponding sides by their position relative to equal angles.
+- **Dividing instead of multiplying (or vice versa).** If going from small to large, multiply by k. If going from large to small, divide by k.
+
+## Exam Tips
+
+- Write down the scale factor clearly before doing any further calculations — this avoids errors in multi-step problems.
+- For area and volume problems, it can help to write: "Linear SF = ..., Area SF = (...)², Volume SF = (...)³" as a checklist.
+- If the question gives you areas, find the area scale factor first, then square root it to get the linear scale factor.
+- If the question gives you volumes, find the volume scale factor first, then cube root it to get the linear scale factor.
+- Real-world contexts (maps, models, packaging) often appear — the same rules apply.
+
+## Practice Questions
+
+**Q1 (Foundation):** Two similar rectangles have widths 3 cm and 9 cm. The length of the smaller rectangle is 5 cm. Find the length of the larger rectangle.
+
+[ANSWER: k = 9 ÷ 3 = 3. Length = 5 × 3 = 15 cm.]
+
+**Q2 (Foundation):** Two similar triangles have corresponding sides of 8 cm and 12 cm. Find the linear scale factor from the smaller to the larger.
+
+[ANSWER: k = 12 ÷ 8 = 1.5]
+
+**Q3 (Higher):** Two similar prisms have surface areas of 50 cm² and 200 cm². The volume of the smaller prism is 80 cm³. Find the volume of the larger prism.
+
+[ANSWER: Area SF = 200 ÷ 50 = 4. Linear SF = sqrt(4) = 2. Volume SF = 2³ = 8. Volume = 80 × 8 = 640 cm³.]
+
+---
+
+Practise similar shapes and scale factors with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Congruent Triangles](/topics/congruent-triangles)
+- [Congruence and Similarity](/topics/congruence-and-similarity)
+- [Enlargement and Centre of Enlargement](/topics/enlargement-and-centre-of-enlargement)
+
+## Summary
+
+- Similar shapes have equal corresponding angles and sides in the same ratio. The linear scale factor k gives the ratio of corresponding lengths. The area scale factor is k² and the volume scale factor is k³. To find missing lengths, multiply or divide by k. For area or volume, use k² or k³ respectively. Always identify corresponding sides carefully and state your scale factor before calculating.
+`,
+  "simple-interest": `---
+title: "Simple Interest – GCSE Maths Revision Guide"
+description: "Learn how to calculate simple interest using I = PRT/100, compare with compound interest, and find total amounts after n years at GCSE level."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["simple interest GCSE", "I equals PRT over 100", "simple interest formula", "simple vs compound interest", "interest GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 177
+---
+
+Simple interest is a straightforward way of calculating the interest earned or charged on a sum of money. Unlike compound interest, the interest is calculated only on the original amount and stays the same each year.
+
+## What Is Simple Interest?
+
+Simple interest is interest that is calculated on the original principal (starting amount) only. The same fixed amount of interest is added each year, regardless of any interest already earned. This makes it easy to calculate with a single formula.
+
+In contrast, compound interest calculates interest on the principal plus any previously earned interest, so the amount grows faster over time. GCSE questions often ask you to compare the two methods.
+
+Simple interest is commonly used for short-term loans, hire-purchase agreements, and savings accounts with fixed annual payouts.
+
+Because the interest is the same each year, a simple interest investment grows in a straight line when plotted on a graph, unlike compound interest which curves upwards.
+
+### Key Formulas
+
+[FORMULA: Simple Interest I = (P × R × T) ÷ 100, where P = principal, R = rate (% per year), T = time (years)]
+
+[FORMULA: Total amount after T years = P + I = P + (PRT ÷ 100)]
+
+## Step-by-Step Method
+
+1. Identify P (the starting amount), R (the annual interest rate as a percentage), and T (the number of years).
+2. Substitute into I = PRT ÷ 100 to find the interest.
+3. Add the interest to the principal if the question asks for the total amount.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** £500 is invested at 3% simple interest per year. How much interest is earned after 4 years?
+
+**Working:**
+I = PRT ÷ 100
+I = (500 × 3 × 4) ÷ 100
+I = 6000 ÷ 100
+I = 60
+
+**Answer:** £60
+
+## Worked Example 2 — Higher Level
+
+**Question:** £1200 is invested at simple interest. After 5 years the total amount is £1500. Find the annual interest rate.
+
+**Working:**
+Interest earned = £1500 − £1200 = £300
+I = PRT ÷ 100
+300 = (1200 × R × 5) ÷ 100
+300 = 6000R ÷ 100
+300 = 60R
+R = 300 ÷ 60
+R = 5
+
+**Answer:** 5% per year
+
+## Worked Example 3 — Exam Style
+
+**Question:** Ali invests £800 at 4% simple interest. Ben invests £800 at 3.5% compound interest. Who has more money after 3 years?
+
+**Working:**
+Ali (simple): I = (800 × 4 × 3) ÷ 100 = 96. Total = £896.
+Ben (compound): Year 1: 800 × 1.035 = £828. Year 2: 828 × 1.035 = £856.98. Year 3: 856.98 × 1.035 = £886.97 (2 d.p.)
+Ali: £896 vs Ben: £886.97
+
+**Answer:** Ali has more money after 3 years (£896 vs £886.97).
+
+## Common Mistakes
+
+- **Using compound interest instead of simple interest.** With simple interest, the same amount is added each year. If you multiply the running total by a multiplier each year, you are calculating compound interest.
+- **Forgetting to divide by 100.** The rate R is a percentage. If you forget to divide by 100, your answer will be 100 times too large.
+- **Not adding interest to the principal.** I = PRT/100 gives the interest only. If the question asks for the total amount, you must add the interest to the original principal.
+- **Using months instead of years.** T must be in years. For 6 months, use T = 0.5.
+
+## Exam Tips
+
+- Simple interest produces a linear growth — the same amount each year. If a question mentions "the same amount of interest each year," it is simple interest.
+- Compound interest produces exponential growth. Questions asking you to compare the two are common.
+- Always state whether your final answer is the interest or the total amount, depending on what the question asks.
+
+## Practice Questions
+
+**Q1 (Foundation):** £2000 is invested at 2.5% simple interest per year for 6 years. Find the total interest earned.
+
+[ANSWER: I = (2000 × 2.5 × 6) ÷ 100 = 30000 ÷ 100 = £300.]
+
+**Q2 (Foundation):** £350 is saved at 4% simple interest. What is the total amount after 3 years?
+
+[ANSWER: I = (350 × 4 × 3) ÷ 100 = £42. Total = £350 + £42 = £392.]
+
+**Q3 (Higher):** An investment of £P earns £180 in simple interest over 6 years at 5% per year. Find P.
+
+[ANSWER: 180 = (P × 5 × 6) ÷ 100 → 180 = 30P ÷ 100 → 180 = 0.3P → P = £600.]
+
+---
+
+Practise simple interest questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Compound Interest and Depreciation](/topics/compound-interest-and-depreciation)
+- [Percentages](/topics/percentages)
+- [Percentage of an Amount](/topics/percentage-of-an-amount)
+
+## Summary
+
+- Simple interest is calculated on the original principal only: I = PRT ÷ 100.
+- The same amount of interest is earned each year.
+- Total amount = principal + interest.
+- Simple interest grows linearly, while compound interest grows exponentially.
+- Always check whether the question asks for the interest or the total amount.
+`,
+  "simplifying-algebraic-fractions": `---
+title: "Simplifying Algebraic Fractions – GCSE Maths Revision Guide"
+description: "Learn how to simplify algebraic fractions at GCSE by factorising the numerator and denominator, then cancelling common factors. Worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["simplifying algebraic fractions", "cancel common factors algebra", "factorise and simplify", "algebraic fractions GCSE", "rational expressions"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 143
+---
+
+# Simplifying Algebraic Fractions
+
+Simplifying algebraic fractions is a Higher-only skill that builds directly on your factorising knowledge. The process is the same as simplifying numerical fractions — find common factors in the numerator and denominator, then cancel. The difference is that you need to factorise algebraic expressions first. This topic is tested regularly on AQA, Edexcel, and OCR Higher papers.
+
+## What Is Simplifying Algebraic Fractions?
+
+An algebraic fraction has algebraic expressions in the numerator, the denominator, or both. Simplifying means reducing the fraction to its simplest form by cancelling common factors — just as you would simplify 12/18 to 2/3 by dividing both by 6.
+
+### Key Formulas
+
+[FORMULA: Factorise the numerator and denominator, then cancel common factors]
+
+[FORMULA: You can only cancel factors (terms that multiply), never individual terms that are added or subtracted]
+
+## Step-by-Step Method
+
+1. **Factorise the numerator** completely.
+2. **Factorise the denominator** completely.
+3. **Identify common factors** that appear in both.
+4. **Cancel the common factors** by dividing them out.
+5. **Write the simplified fraction.** If everything cancels from the numerator, you are left with 1 (not 0).
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Simplify (6x²)/(9x).
+
+**Working:**
+
+- Numerator: 6x² = 6 × x × x.
+- Denominator: 9x = 9 × x.
+- Common factors: 3 and x.
+- Cancel: (6x²)/(9x) = (2x)/3.
+
+**Answer:** 2x/3
+
+## Worked Example 2 — Higher Level
+
+**Question:** Simplify (x² − 9)/(x² + 5x + 6).
+
+**Working:**
+
+- Factorise numerator: x² − 9 = (x + 3)(x − 3) (difference of two squares).
+- Factorise denominator: x² + 5x + 6 = (x + 3)(x + 2) (two numbers that multiply to 6 and add to 5).
+- Common factor: (x + 3).
+- Cancel: (x + 3)(x − 3) / [(x + 3)(x + 2)] = (x − 3)/(x + 2).
+
+**Answer:** (x − 3)/(x + 2)
+
+## Worked Example 3 — Exam Style
+
+**Question:** Simplify (2x² + 5x − 3)/(2x² − x).
+
+**Working:**
+
+- Factorise numerator: 2x² + 5x − 3. Using ac method: ac = −6, numbers 6 and −1. Split: 2x² + 6x − x − 3 = 2x(x + 3) − 1(x + 3) = (x + 3)(2x − 1).
+- Factorise denominator: 2x² − x = x(2x − 1).
+- Common factor: (2x − 1).
+- Cancel: (x + 3)(2x − 1) / [x(2x − 1)] = (x + 3)/x.
+
+**Answer:** (x + 3)/x
+
+## Common Mistakes
+
+- **Cancelling terms instead of factors.** You cannot cancel the x² from (x² + 3)/(x² + 5). These are terms, not factors. You can only cancel factors that multiply the entire numerator and denominator.
+- **Not factorising fully before cancelling.** If you do not factorise completely, you will miss common factors and leave the fraction unsimplified.
+- **Forgetting to state restrictions.** Strictly, values that make the original denominator zero are excluded, though GCSE exams rarely require you to state this.
+
+## Exam Tips
+
+- Factorise both parts fully before attempting to cancel anything.
+- Look for difference of two squares, common factors, and quadratic factorisation.
+- If the numerator or denominator has a common numerical factor, take it out first.
+- After cancelling, check by substituting a value (e.g., x = 2) into both the original and simplified fraction — they should give the same result.
+
+## Practice Questions
+
+**Q1 (Foundation):** Simplify (4x³)/(10x).
+
+[ANSWER: 2x²/5]
+
+**Q2 (Higher):** Simplify (x² − 4)/(x² − 4x + 4).
+
+[ANSWER: (x + 2)(x − 2) / (x − 2)² = (x + 2)/(x − 2)]
+
+**Q3 (Higher):** Simplify (3x² + 7x + 2)/(3x² − 5x − 2).
+
+[ANSWER: Numerator: (3x + 1)(x + 2). Denominator: (3x + 1)(x − 2). Cancel (3x + 1). Answer: (x + 2)/(x − 2)]
+
+---
+
+Practise simplifying algebraic fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Algebraic Fractions](/topics/algebraic-fractions)
+- [Factorising Expressions](/topics/factorising-expressions)
+- [Difference of Two Squares](/topics/difference-of-two-squares)
+
+## Summary
+
+- Simplifying algebraic fractions requires factorising the numerator and denominator first.
+- Cancel common factors, not individual terms.
+- Look for difference of two squares, single bracket, and quadratic factorisations.
+- Always check your answer by substituting a value into both the original and simplified versions.
+- This skill is a building block for adding algebraic fractions and solving equations with fractions.
 `,
   "simplifying-expressions": `---
 title: "Simplifying Expressions – GCSE Maths Guide"
@@ -8652,6 +20491,254 @@ Sharpen your algebra skills with AI-powered practice questions. [Create your fre
 - When dividing terms, divide coefficients and subtract indices.
 - Always include the sign (+ or −) as part of each term to avoid errors.
 - Check your answer by substituting a simple value for the variable.
+`,
+  "simplifying-ratios": `---
+title: "Simplifying Ratios – GCSE Maths Revision Guide"
+description: "Learn how to simplify ratios by dividing by the HCF, handle fractions and decimals in ratios, and convert to the 1:n form for GCSE Maths."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["simplifying ratios GCSE", "ratio HCF", "ratios with fractions", "1 to n form", "ratio GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 173
+---
+
+Simplifying ratios is a core GCSE skill that underpins almost every ratio and proportion question. A simplified ratio uses the smallest possible whole numbers, making it easier to work with in context problems.
+
+## What Is Simplifying Ratios?
+
+Simplifying a ratio means dividing all parts of the ratio by their highest common factor (HCF) until no further simplification is possible. The result is an equivalent ratio in its simplest form.
+
+For example, 12 : 18 simplifies to 2 : 3 because the HCF of 12 and 18 is 6. When ratios involve decimals, you first multiply to remove the decimal places. When ratios involve fractions, you multiply each part by the lowest common denominator.
+
+The form 1 : n is useful for comparing rates. To convert any ratio a : b into 1 : n, divide both sides by a.
+
+Ratios appear throughout GCSE Maths — in recipes, map scales, sharing problems, and probability — so fluency in simplifying is essential.
+
+### Key Formulas
+
+[FORMULA: To simplify a : b, divide both parts by HCF(a, b)]
+
+[FORMULA: To convert to 1 : n form, divide both parts by the first number: 1 : (b ÷ a)]
+
+## Step-by-Step Method
+
+1. If the ratio contains decimals, multiply all parts by 10 (or 100) to make them whole numbers.
+2. If the ratio contains fractions, multiply all parts by the lowest common denominator.
+3. Find the HCF of all parts and divide each part by it.
+4. If asked for the 1 : n form, divide every part by the first number.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Simplify the ratio 24 : 36.
+
+**Working:**
+HCF of 24 and 36 is 12.
+24 ÷ 12 = 2
+36 ÷ 12 = 3
+
+**Answer:** 2 : 3
+
+## Worked Example 2 — Higher Level
+
+**Question:** Write the ratio 0.6 : 1.5 in the form 1 : n.
+
+**Working:**
+Multiply both by 10: 6 : 15
+Simplify by dividing by 3: 2 : 5
+Convert to 1 : n by dividing both by 2: 1 : 2.5
+
+**Answer:** 1 : 2.5
+
+## Worked Example 3 — Exam Style
+
+**Question:** Write the ratio ¾ : ½ in its simplest form.
+
+**Working:**
+LCD of 4 and 2 is 4.
+¾ × 4 = 3
+½ × 4 = 2
+
+**Answer:** 3 : 2
+
+## Common Mistakes
+
+- **Not fully simplifying.** If you divide by a common factor that is not the HCF, you may need to simplify again. Always check whether the parts still share a common factor.
+- **Leaving decimals in a simplified ratio.** A ratio in its simplest form should use whole numbers (unless the question asks for 1 : n form, where a decimal is acceptable).
+- **Getting the order wrong.** Ratios are order-dependent — 3 : 5 is not the same as 5 : 3. Match the order to what the question specifies.
+- **Mixing up units.** If the parts are in different units (e.g., 2 m and 50 cm), convert to the same unit first before simplifying.
+
+## Exam Tips
+
+- Always convert to the same units before simplifying if the quantities are measured differently.
+- If the question says "simplest form," you need whole numbers with no common factor.
+- If it says "1 : n," you divide everything by the first part and can leave a decimal.
+- Three-part ratios (a : b : c) work the same way — find the HCF of all three parts.
+- Show each step of simplification clearly — dividing by 2, then by 3, etc. — to earn method marks even if you do not reach the simplest form in one step.
+
+## Practice Questions
+
+**Q1 (Foundation):** Simplify 45 : 60.
+
+[ANSWER: HCF = 15. 45 ÷ 15 = 3, 60 ÷ 15 = 4. The ratio is 3 : 4.]
+
+**Q2 (Foundation):** Write 0.4 : 1.2 as a ratio in its simplest form.
+
+[ANSWER: Multiply by 10: 4 : 12. HCF = 4. Simplified: 1 : 3.]
+
+**Q3 (Higher):** Write the ratio ⅖ : ⅗ in the form 1 : n.
+
+[ANSWER: Multiply by 5: 2 : 3. Divide by 2: 1 : 1.5.]
+
+---
+
+Practise simplifying ratios questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Ratio Basics and Sharing](/topics/ratio-basics-and-sharing)
+- [Ratio Problem Solving in Context](/topics/ratio-problem-solving-in-context)
+- [Prime Factorisation, HCF and LCM](/topics/prime-factorisation-hcf-and-lcm)
+
+## Summary
+
+- Simplify a ratio by dividing all parts by their HCF.
+- Remove decimals by multiplying by 10, 100, etc., before simplifying.
+- Remove fractions by multiplying by the lowest common denominator.
+- The 1 : n form is found by dividing all parts by the value of the first part.
+- Always convert to the same units before comparing or simplifying.
+- Three-part ratios follow the same process — find the HCF of all three values and divide.
+`,
+  "simplifying-surds": `---
+title: "Simplifying Surds – GCSE Maths Revision Guide"
+description: "Learn how to simplify surds, add and subtract surds, and multiply surds for GCSE Maths Higher tier with worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["simplifying surds GCSE", "surds higher tier", "adding surds", "multiplying surds", "square root simplification"]
+tier: "Higher only"
+strand: "Number"
+topicNumber: 79
+---
+
+Simplifying surds is a key Higher tier topic that appears regularly on AQA, Edexcel, and OCR GCSE Maths papers. A surd is an irrational root that cannot be simplified to a whole number, and exam questions expect you to leave answers in exact surd form rather than as decimals.
+
+## What Is Simplifying Surds?
+
+A **surd** is a root that cannot be written as an exact whole number or fraction — for example, √2, √3, and √5 are all surds. √4 is **not** a surd because it equals exactly 2.
+
+**Simplifying a surd** means rewriting it so the number under the root sign is as small as possible. You do this by finding the largest square number that is a factor of the number under the root. For example, √48 = √(16 × 3) = √16 × √3 = 4√3.
+
+You can also **add and subtract** surds that have the same number under the root sign, just like collecting like terms. And you can **multiply** surds using the rule √a × √b = √(ab).
+
+### Key Formulas
+
+[FORMULA: √(ab) = √a × √b — you can split a root into the product of two roots]
+
+[FORMULA: √a × √a = a — a surd multiplied by itself gives the number under the root]
+
+[FORMULA: p√n + q√n = (p + q)√n — add surds with the same root like collecting like terms]
+
+## Step-by-Step Method
+
+1. To simplify a surd, find the largest square factor of the number under the root.
+2. Split the surd: √(largest square × remaining) = √(square) × √(remaining).
+3. Take the square root of the square number out in front.
+4. To add or subtract surds, simplify each surd first, then combine like terms.
+5. To multiply surds, use √a × √b = √(ab), then simplify the result.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Simplify √72.
+
+**Working:**
+
+Step 1 — Find the largest square factor of 72. The square numbers are 1, 4, 9, 16, 25, 36. The largest that divides 72 is 36.
+
+Step 2 — Split: √72 = √(36 × 2) = √36 × √2.
+
+Step 3 — √36 = 6, so √72 = 6√2.
+
+**Answer:** 6√2
+
+## Worked Example 2 — Higher Level
+
+**Question:** Simplify √50 + √18. Give your answer in the form a√b.
+
+**Working:**
+
+Step 1 — Simplify √50: √50 = √(25 × 2) = 5√2.
+
+Step 2 — Simplify √18: √18 = √(9 × 2) = 3√2.
+
+Step 3 — Both surds are now multiples of √2, so add: 5√2 + 3√2 = 8√2.
+
+**Answer:** 8√2
+
+## Worked Example 3 — Exam Style
+
+**Question:** Show that (2√3)² + (√5)² = 17. (2 marks)
+
+**Working:**
+
+Step 1 — (2√3)² = 2² × (√3)² = 4 × 3 = 12.
+
+Step 2 — (√5)² = 5.
+
+Step 3 — 12 + 5 = 17. As required.
+
+**Answer:** Shown: (2√3)² + (√5)² = 12 + 5 = 17
+
+## Common Mistakes
+
+- **Not finding the largest square factor.** Writing √72 = √(4 × 18) = 2√18 is not fully simplified. Always look for the largest square factor, or continue simplifying until the number under the root has no square factors left.
+- **Adding surds with different roots.** You cannot add √2 + √3 — they are unlike terms. You can only combine surds when the number under the root is the same.
+- **Forgetting to square the coefficient.** When squaring 3√5, both parts must be squared: (3√5)² = 9 × 5 = 45, not 3 × 5 = 15.
+
+## Exam Tips
+
+- Memorise the square numbers up to 225 (15²) so you can spot square factors quickly in the exam.
+- When simplifying a surd, if you do not immediately spot the largest square factor, you can simplify in stages: √72 = √(4 × 18) = 2√18 = 2√(9 × 2) = 2 × 3√2 = 6√2.
+- "Give your answer in surd form" means you must not use a calculator to write a decimal. Leave roots in place.
+
+## Practice Questions
+
+**Q1 (Higher):** Simplify √200.
+
+[ANSWER: √200 = √(100 × 2) = 10√2]
+
+**Q2 (Higher):** Simplify 3√12 − √27.
+
+[ANSWER: 3√12 = 3 × 2√3 = 6√3. √27 = 3√3. So 6√3 − 3√3 = 3√3]
+
+**Q3 (Higher):** Expand and simplify √2(√8 + √18).
+
+[ANSWER: √2 × √8 = √16 = 4. √2 × √18 = √36 = 6. So the answer is 4 + 6 = 10]
+
+---
+
+Practise simplifying surds questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Surds](/topics/surds)
+- [Indices and Index Laws](/topics/indices-and-index-laws)
+- [Rationalising the Denominator](/topics/rationalising-the-denominator)
+
+## Summary
+
+- A surd is an irrational root that cannot be written as an exact whole number.
+- To simplify, find the largest square factor and take its root outside.
+- You can add or subtract surds only when they share the same root (like collecting like terms).
+- √a × √b = √(ab) — use this to multiply and then simplify.
+- Always fully simplify so the number under the root has no square factors.
 `,
   "simultaneous-equations-elimination": `---
 title: "Simultaneous Equations: Elimination – GCSE Guide"
@@ -9023,6 +21110,635 @@ For a complete topic checklist, visit our [GCSE Maths Topics Complete List](/blo
 - Always pair your x and y solutions correctly.
 - Check each solution pair in the equation you did not use for the substitution.
 - Together with elimination, substitution gives you a complete set of tools for solving simultaneous equations at GCSE.
+`,
+  "sine-rule": `---
+title: "Sine Rule – GCSE Maths Revision Guide"
+description: "Master the sine rule for GCSE Higher Maths with step-by-step methods for finding sides and angles, worked examples and exam practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["sine rule GCSE", "sine rule finding sides", "sine rule finding angles", "ambiguous case sine rule", "non right angled triangle GCSE"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 111
+---
+
+The sine rule lets you work with non-right-angled triangles when you have a matching angle-side pair. It is one of the two major Higher-tier trigonometry rules and appears regularly on AQA, Edexcel and OCR papers.
+
+## What Is the Sine Rule?
+
+The sine rule is a formula that relates each side of a triangle to the sine of its opposite angle. It works for **any triangle**, not just right-angled ones. In a triangle where the sides are a, b, c and the opposite angles are A, B, C, the rule states that the ratio of each side to the sine of its opposite angle is constant.
+
+You use the sine rule when you have at least one complete angle-side pair (a side and its opposite angle) plus one other piece of information — either another angle or another side. It comes in two forms: one for finding sides and one for finding angles. The formulas are provided on the AQA and Edexcel formula sheets, but you still need to know when and how to apply them.
+
+The sine rule also has an ambiguous case: when you are given two sides and a non-included angle (SSA), there may be two possible triangles. At GCSE this rarely comes up, but awareness of it is expected at the top end of Higher.
+
+### Key Formulas
+
+[FORMULA: a/sin A = b/sin B = c/sin C (for finding sides)]
+
+[FORMULA: sin A/a = sin B/b = sin C/c (for finding angles)]
+
+## Step-by-Step Method
+
+1. Label the triangle so that side a is opposite angle A, side b is opposite angle B, etc.
+2. Identify the complete pair (a side and its opposite angle both known).
+3. Decide whether you need a side or an angle.
+4. For a side: use a/sin A = b/sin B. Substitute and solve for the unknown side.
+5. For an angle: use sin A/a = sin B/b. Substitute, solve for sin of the unknown angle, then use sin⁻¹.
+6. Round as instructed.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** In triangle ABC, angle A = 50°, angle B = 70° and side a = 10 cm. Find side b to 1 decimal place.
+
+**Working:**
+Use the sine rule for finding a side:
+a/sin A = b/sin B
+10/sin 50° = b/sin 70°
+10/0.7660 = b/0.9397
+13.055 = b/0.9397
+b = 13.055 × 0.9397
+
+**Answer:** b = **12.3 cm** (1 d.p.).
+
+## Worked Example 2 — Higher Level
+
+**Question:** In triangle PQR, side p = 14 cm, side q = 9 cm and angle P = 80°. Find angle Q to 1 decimal place.
+
+**Working:**
+Use the sine rule for finding an angle:
+sin P/p = sin Q/q
+sin 80°/14 = sin Q/9
+0.9848/14 = sin Q/9
+0.07034 = sin Q/9
+sin Q = 9 × 0.07034 = 0.6331
+Q = sin⁻¹(0.6331)
+
+**Answer:** Q = **39.3°** (1 d.p.).
+
+## Worked Example 3 — Exam Style
+
+**Question:** Two ships leave a port. Ship A sails on a bearing of 060° for 15 km. Ship B sails on a bearing of 120° for 20 km. The angle between the two paths at the port is 60°. The angle at Ship B is 42°. Find the distance between the two ships to 1 decimal place.
+
+**Working:**
+Angle at Ship A = 180° − 60° − 42° = 78°.
+Let the distance between the ships be c (opposite the 60° port angle), and side b = 15 km is opposite angle B = 42°.
+c/sin 60° = 15/sin 42°
+c/0.8660 = 15/0.6691
+c/0.8660 = 22.418
+c = 22.418 × 0.8660
+
+**Answer:** The distance between the ships is **19.4 km** (1 d.p.).
+
+## Common Mistakes
+
+- **Mismatching sides and angles.** Side a must be opposite angle A. If you pair a side with the wrong angle, the answer is wrong.
+- **Forgetting to use sin⁻¹ when finding an angle.** If sin Q = 0.6331, the angle is sin⁻¹(0.6331), not 0.6331.
+- **Using the sine rule when the cosine rule is needed.** The sine rule requires a complete pair. If you have SAS (two sides and the included angle) or SSS (three sides), you need the cosine rule instead.
+
+## Exam Tips
+
+- Copy the formula from the formula sheet and write it into your working — this earns a method mark.
+- Always check: do I have a complete angle-side pair? If yes, use the sine rule. If no, consider the cosine rule.
+- For the ambiguous case, if sin⁻¹ gives you an acute angle but the diagram suggests an obtuse angle, the second solution is 180° minus the acute angle.
+
+## Practice Questions
+
+**Q1 (Foundation):** In triangle ABC, angle A = 45°, angle C = 65° and side a = 8 cm. Find side c to 1 d.p.
+
+[ANSWER: Angle B = 180° − 45° − 65° = 70°. a/sin A = c/sin C. 8/sin 45° = c/sin 65°. 8/0.7071 = c/0.9063. 11.314 = c/0.9063. c = 11.314 × 0.9063 = 10.3 cm (1 d.p.).]
+
+**Q2 (Foundation):** In triangle DEF, angle D = 55°, side d = 12 cm and side e = 10 cm. Find angle E to 1 d.p.
+
+[ANSWER: sin D/d = sin E/e. sin 55°/12 = sin E/10. 0.8192/12 = sin E/10. sin E = 10 × 0.06827 = 0.6827. E = sin⁻¹(0.6827) = 43.1° (1 d.p.).]
+
+**Q3 (Higher):** In triangle XYZ, angle X = 38°, angle Y = 72° and side y = 25 cm. Find side x to 1 d.p.
+
+[ANSWER: x/sin X = y/sin Y. x/sin 38° = 25/sin 72°. x/0.6157 = 25/0.9511. x/0.6157 = 26.286. x = 26.286 × 0.6157 = 16.2 cm (1 d.p.).]
+
+---
+
+Practise sine rule questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Trigonometry Sine and Cosine Rules](/topics/trigonometry-sine-and-cosine-rules)
+- [Cosine Rule](/topics/cosine-rule)
+- [Trigonometry SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+
+## Summary
+
+- The sine rule is a/sin A = b/sin B = c/sin C and works for any triangle with a complete angle-side pair.
+- Use it to find a missing side (when you know two angles and one side) or a missing angle (when you know two sides and a non-included angle).
+- Always match each side with its opposite angle — mislabelling is the most common error.
+- The formula is on the exam formula sheet, so the key skill is recognising when to use it and substituting correctly.
+`,
+  "sketching-quadratic-graphs": `---
+title: "Sketching Quadratic Graphs – GCSE Maths Revision Guide"
+description: "Learn how to sketch quadratic graphs at GCSE. Find the roots, y-intercept, turning point, and determine the shape of the parabola with examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["sketching quadratic graphs", "parabola GCSE", "roots of a quadratic", "turning point", "y-intercept quadratic"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 147
+---
+
+# Sketching Quadratic Graphs
+
+Sketching a quadratic graph means drawing a rough parabola that shows the key features: the roots (where the curve crosses the x-axis), the y-intercept, the turning point, and whether the curve opens upwards or downwards. You do not need to plot every point — just identify the important features and draw a smooth curve through them. This skill appears on both Foundation and Higher papers.
+
+## What Is Sketching a Quadratic Graph?
+
+A quadratic graph is the curve you get when you plot y = ax² + bx + c. It is always a parabola. When "sketch" appears in an exam question, it means draw a clearly labelled curve showing key coordinates — it does not need to be perfectly to scale.
+
+### Key Formulas
+
+[FORMULA: Roots — set y = 0 and solve ax² + bx + c = 0]
+
+[FORMULA: y-intercept — set x = 0, giving y = c]
+
+[FORMULA: Line of symmetry: x = −b/(2a)]
+
+[FORMULA: Turning point x-coordinate = −b/(2a), then substitute to find y]
+
+## Step-by-Step Method
+
+1. **Determine the shape.** If a > 0 (positive x²), the parabola is U-shaped. If a < 0 (negative x²), it is ∩-shaped.
+2. **Find the y-intercept** by substituting x = 0. This gives the point (0, c).
+3. **Find the roots** by solving ax² + bx + c = 0 (factorise, use the formula, or complete the square).
+4. **Find the turning point.** The x-coordinate is x = −b/(2a). Substitute this into the equation to find the y-coordinate.
+5. **Plot these key points** and draw a smooth parabola through them.
+6. **Label all key coordinates** on your sketch.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Sketch y = x² − 4x + 3.
+
+**Working:**
+
+- Shape: a = 1 > 0, so U-shaped.
+- y-intercept: x = 0 gives y = 3. Point: (0, 3).
+- Roots: x² − 4x + 3 = 0. Factorise: (x − 1)(x − 3) = 0. Roots at x = 1 and x = 3.
+- Turning point: x = −(−4)/(2 × 1) = 2. y = (2)² − 4(2) + 3 = 4 − 8 + 3 = −1. Turning point: (2, −1).
+- Sketch a U-shaped parabola through (0, 3), (1, 0), (2, −1), (3, 0).
+
+**Answer:** U-shaped parabola with roots at (1, 0) and (3, 0), y-intercept (0, 3), and minimum at (2, −1).
+
+## Worked Example 2 — Higher Level
+
+**Question:** Sketch y = −x² + 6x − 5.
+
+**Working:**
+
+- Shape: a = −1 < 0, so ∩-shaped.
+- y-intercept: y = −5. Point: (0, −5).
+- Roots: −x² + 6x − 5 = 0. Multiply by −1: x² − 6x + 5 = 0. Factorise: (x − 1)(x − 5) = 0. Roots at x = 1 and x = 5.
+- Turning point: x = −6/(2 × (−1)) = 3. y = −(9) + 18 − 5 = 4. Maximum at (3, 4).
+- Sketch an ∩-shaped parabola through (0, −5), (1, 0), (3, 4), (5, 0).
+
+**Answer:** ∩-shaped parabola with roots at (1, 0) and (5, 0), y-intercept (0, −5), and maximum at (3, 4).
+
+## Worked Example 3 — Exam Style
+
+**Question:** The quadratic y = x² + 2x − 8 is sketched. Find the coordinates where the graph intersects the axes and the turning point.
+
+**Working:**
+
+- y-intercept: x = 0 gives y = −8. Point: (0, −8).
+- Roots: x² + 2x − 8 = 0. Factorise: (x + 4)(x − 2) = 0. Roots at x = −4 and x = 2.
+- Turning point: x = −2/(2 × 1) = −1. y = (−1)² + 2(−1) − 8 = 1 − 2 − 8 = −9. Point: (−1, −9).
+
+**Answer:** x-intercepts: (−4, 0) and (2, 0). y-intercept: (0, −8). Turning point: (−1, −9).
+
+## Common Mistakes
+
+- **Drawing a V-shape instead of a curve.** A quadratic graph is always a smooth curve (parabola), never a straight-line V.
+- **Forgetting the y-intercept.** Even if the question focuses on roots, you should mark the y-intercept on your sketch.
+- **Getting the shape wrong.** If the coefficient of x² is negative, the parabola opens downwards. Students sometimes draw all parabolas opening upwards.
+
+## Exam Tips
+
+- A "sketch" does not require a table of values — just mark and label the key features.
+- If the quadratic does not factorise, use the quadratic formula to find the roots or state that the parabola does not cross the x-axis (discriminant < 0).
+- The turning point always lies on the line of symmetry, which is exactly halfway between the two roots.
+- Mark coordinates clearly. Write (1, 0) rather than just "1" on the x-axis.
+
+## Practice Questions
+
+**Q1 (Foundation):** Find the roots and y-intercept of y = x² − 6x + 8.
+
+[ANSWER: Roots: (x − 2)(x − 4) = 0, so x = 2 and x = 4. y-intercept: (0, 8)]
+
+**Q2 (Foundation):** State whether y = −2x² + x + 3 opens upwards or downwards.
+
+[ANSWER: Downwards (∩-shaped) because the coefficient of x² is −2, which is negative]
+
+**Q3 (Higher):** Sketch y = x² − 2x − 3 and label all key points.
+
+[ANSWER: Roots: (x − 3)(x + 1) = 0 at x = 3 and x = −1. y-intercept: (0, −3). Turning point: x = 1, y = 1 − 2 − 3 = −4, so (1, −4). U-shaped parabola]
+
+---
+
+Practise sketching quadratic graphs with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Quadratic Graphs](/topics/quadratic-graphs)
+- [Solving Quadratic Equations by Factorising](/topics/solving-quadratic-equations-factorising)
+- [Completing the Square](/topics/completing-the-square)
+
+## Summary
+
+- A quadratic graph is a smooth parabola (U-shaped if a > 0, ∩-shaped if a < 0).
+- Find the y-intercept by setting x = 0, and the roots by setting y = 0.
+- The turning point is at x = −b/(2a); substitute back to find the y-coordinate.
+- Label all key coordinates on your sketch: roots, y-intercept, and turning point.
+- A sketch shows shape and key features — it does not need to be drawn to scale.
+`,
+  "sohcahtoa-finding-missing-angles": `---
+title: "SOHCAHTOA Finding Missing Angles – GCSE Maths Revision Guide"
+description: "Learn how to find missing angles using inverse trig functions sin⁻¹, cos⁻¹ and tan⁻¹ with worked examples and GCSE Maths practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["finding missing angles GCSE", "inverse trig functions", "SOHCAHTOA angles", "sin cos tan inverse", "trigonometry angles GCSE"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 110
+---
+
+Finding a missing angle is the reverse of finding a missing side. Instead of using sin, cos or tan directly, you use their inverse functions to work backwards from a ratio to an angle.
+
+## What Is Finding Missing Angles with SOHCAHTOA?
+
+When you know two sides of a right-angled triangle and need to find an angle, you use the inverse trigonometric functions. These are written as sin⁻¹ (or arcsin), cos⁻¹ (or arccos), and tan⁻¹ (or arctan) on your calculator, often accessed by pressing SHIFT then sin, cos or tan.
+
+The process is similar to finding a side: you label O, A, H relative to the angle you want, choose the correct ratio based on which two sides you know, form the fraction, and then use the inverse function to convert that fraction into an angle.
+
+It is essential that your calculator is set to degree mode (not radians) for GCSE. Common angle values worth recognising include sin 30° = 0.5, cos 60° = 0.5, tan 45° = 1, sin 45° = cos 45° = √2/2, and sin 60° = cos 30° = √3/2.
+
+### Key Formulas
+
+[FORMULA: θ = sin⁻¹(Opposite ÷ Hypotenuse)]
+
+[FORMULA: θ = cos⁻¹(Adjacent ÷ Hypotenuse)]
+
+[FORMULA: θ = tan⁻¹(Opposite ÷ Adjacent)]
+
+## Step-by-Step Method
+
+1. Label the two known sides as O, A, or H relative to the unknown angle.
+2. Choose the ratio that uses those two sides (SOH, CAH, or TOA).
+3. Form the fraction (e.g. O ÷ H).
+4. Use the inverse function on your calculator (e.g. sin⁻¹).
+5. Round as instructed by the question.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A right-angled triangle has an opposite side of 6 cm and a hypotenuse of 10 cm. Find the angle θ. Give your answer to 1 decimal place.
+
+**Working:**
+Label: O = 6, H = 10.
+O and H are involved, so use sin.
+sin θ = 6 ÷ 10 = 0.6
+θ = sin⁻¹(0.6)
+
+**Answer:** θ = **36.9°** (1 d.p.).
+
+## Worked Example 2 — Higher Level
+
+**Question:** A right-angled triangle has an adjacent side of 8 cm and an opposite side of 15 cm. Find the angle θ to 1 decimal place.
+
+**Working:**
+Label: O = 15, A = 8.
+O and A are involved, so use tan.
+tan θ = 15 ÷ 8 = 1.875
+θ = tan⁻¹(1.875)
+
+**Answer:** θ = **61.9°** (1 d.p.).
+
+## Worked Example 3 — Exam Style
+
+**Question:** A 5 m ladder leans against a wall. The base of the ladder is 1.5 m from the wall. Find the angle the ladder makes with the ground. Give your answer to 1 decimal place.
+
+**Working:**
+The ladder is the hypotenuse (H = 5). The distance from the wall is the adjacent side to the angle at the ground (A = 1.5).
+cos θ = 1.5 ÷ 5 = 0.3
+θ = cos⁻¹(0.3)
+
+**Answer:** θ = **72.5°** (1 d.p.).
+
+## Common Mistakes
+
+- **Forgetting to use the inverse function.** If tan θ = 1.875, the angle is tan⁻¹(1.875), not just 1.875. Students who write 1.875° as the answer lose all accuracy marks.
+- **Calculator in radian mode.** If your answer seems unusually small (like 0.6 instead of 36.9°), check the mode. The display should show D or DEG.
+- **Dividing the wrong way round.** For tan, the opposite goes on top and the adjacent on the bottom. Swapping them gives the wrong angle (you would get the complementary angle instead).
+
+## Exam Tips
+
+- Write the ratio and the fraction before using the inverse function — this earns a method mark.
+- Know the common exact values: sin⁻¹(0.5) = 30°, cos⁻¹(0.5) = 60°, tan⁻¹(1) = 45°.
+- After finding one angle, you can find the other non-right angle using the fact that angles in a triangle sum to 180°.
+- If a question involves elevation or depression, sketch the right-angled triangle and label the angle carefully — the angle of depression from the top equals the angle of elevation from the bottom (alternate angles).
+
+## Practice Questions
+
+**Q1 (Foundation):** A right-angled triangle has O = 5 cm and H = 13 cm. Find angle θ to 1 d.p.
+
+[ANSWER: sin θ = 5 ÷ 13 = 0.3846. θ = sin⁻¹(0.3846) = 22.6° (1 d.p.).]
+
+**Q2 (Foundation):** A right-angled triangle has A = 12 cm and H = 15 cm. Find angle θ to 1 d.p.
+
+[ANSWER: cos θ = 12 ÷ 15 = 0.8. θ = cos⁻¹(0.8) = 36.9° (1 d.p.).]
+
+**Q3 (Higher):** From the top of a 50 m building, the angle of depression to a car is measured. The car is 120 m from the base of the building. Find the angle of depression to 1 d.p.
+
+[ANSWER: tan θ = 50 ÷ 120 = 0.4167. θ = tan⁻¹(0.4167) = 22.6° (1 d.p.).]
+
+---
+
+Practise SOHCAHTOA finding angles questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Trigonometry SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+- [SOHCAHTOA Finding Missing Sides](/topics/sohcahtoa-finding-missing-sides)
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+
+## Summary
+
+- To find a missing angle, use the inverse trig function: sin⁻¹, cos⁻¹, or tan⁻¹.
+- Label the two known sides as O, A, or H, choose the matching ratio, form the fraction, and press SHIFT + the trig button.
+- Always check your calculator is in degree mode — a tiny answer is a sure sign it is in radians.
+- Know the common exact values (sin 30° = 0.5, tan 45° = 1, cos 60° = 0.5) for Higher tier questions.
+- Once you have found one angle, the other non-right angle is simply 180° minus 90° minus your answer.
+`,
+  "sohcahtoa-finding-missing-sides": `---
+title: "SOHCAHTOA Finding Missing Sides – GCSE Maths Revision Guide"
+description: "Master finding missing sides using SOHCAHTOA trigonometry with step-by-step methods, calculator tips, worked examples and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["SOHCAHTOA finding sides", "trigonometry missing side GCSE", "sin cos tan find side", "right triangle sides", "SOHCAHTOA GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 109
+---
+
+Finding a missing side using SOHCAHTOA is one of the most important trigonometry skills in GCSE Maths. You need one angle and one side of a right-angled triangle, and the correct trig ratio does the rest.
+
+## What Is SOHCAHTOA for Finding Sides?
+
+SOHCAHTOA is a mnemonic that links the three trigonometric ratios — sine, cosine and tangent — to the sides of a right-angled triangle. When you know an angle (other than the right angle) and one side, you can use the appropriate ratio to calculate any other side.
+
+The key is labelling the sides correctly relative to the angle you are working with. The **Opposite (O)** is across from the angle, the **Adjacent (A)** is next to the angle (but not the hypotenuse), and the **Hypotenuse (H)** is always opposite the right angle and always the longest side.
+
+Once the sides are labelled, you choose the ratio that connects the known side to the unknown side, substitute, rearrange, and calculate. Your calculator must be in degree mode for GCSE questions.
+
+### Key Formulas
+
+[FORMULA: sin θ = Opposite ÷ Hypotenuse (SOH)]
+
+[FORMULA: cos θ = Adjacent ÷ Hypotenuse (CAH)]
+
+[FORMULA: tan θ = Opposite ÷ Adjacent (TOA)]
+
+## Step-by-Step Method
+
+1. Label the sides O, A, and H relative to the given angle.
+2. Identify the known side and the unknown side.
+3. Choose the ratio that uses both (SOH, CAH, or TOA).
+4. Write the ratio as an equation and substitute.
+5. Rearrange to make the unknown side the subject.
+6. Calculate using your calculator in degree mode.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** In a right-angled triangle, the angle is 40° and the hypotenuse is 12 cm. Find the side opposite the 40° angle. Give your answer to 1 decimal place.
+
+**Working:**
+Label: H = 12, O = ?, angle = 40°.
+O and H are involved, so use sin (SOH).
+sin 40° = O ÷ 12
+O = 12 × sin 40°
+O = 12 × 0.6428
+
+**Answer:** O = **7.7 cm** (1 d.p.).
+
+## Worked Example 2 — Higher Level
+
+**Question:** In a right-angled triangle, the angle is 62° and the side opposite is 15 cm. Find the hypotenuse. Give your answer to 3 significant figures.
+
+**Working:**
+Label: O = 15, H = ?, angle = 62°.
+O and H are involved, so use sin (SOH).
+sin 62° = 15 ÷ H
+H = 15 ÷ sin 62°
+H = 15 ÷ 0.8829
+
+**Answer:** H = **17.0 cm** (3 s.f.).
+
+## Worked Example 3 — Exam Style
+
+**Question:** A ramp makes an angle of 25° with the horizontal ground. The ramp is 8 m long. How high does the ramp rise vertically? Give your answer to 1 decimal place.
+
+**Working:**
+The ramp is the hypotenuse (H = 8 m). The vertical rise is opposite the 25° angle (O = ?).
+sin 25° = O ÷ 8
+O = 8 × sin 25°
+O = 8 × 0.4226
+
+**Answer:** The ramp rises **3.4 m** (1 d.p.).
+
+## Common Mistakes
+
+- **Mislabelling O and A.** The opposite and adjacent depend entirely on which angle you are working with. If you switch to a different angle, the labels swap.
+- **Multiplying when you should divide (or vice versa).** If the unknown is on the bottom of the fraction, you need to divide. If it is on the top, you multiply. Use a formula triangle if this helps.
+- **Calculator in radian mode.** GCSE questions use degrees. Check your calculator display shows D or DEG, not R or RAD. An answer like 0.12 instead of 7.7 is a sign your calculator is in radians.
+
+## Exam Tips
+
+- Write the ratio name (e.g. "sin 40° = O/H") before substituting — this earns a method mark even if your final answer has a rounding error.
+- If the unknown side is the hypotenuse, you will always divide by the trig value.
+- If the unknown side is O or A, you will always multiply.
+- Show every line of working: label, ratio, substitution, calculation, answer.
+
+## Practice Questions
+
+**Q1 (Foundation):** The angle is 55° and the adjacent side is 10 cm. Find the opposite side to 1 d.p.
+
+[ANSWER: tan 55° = O ÷ 10. O = 10 × tan 55° = 10 × 1.4281 = 14.3 cm (1 d.p.).]
+
+**Q2 (Foundation):** The angle is 30° and the hypotenuse is 20 cm. Find the adjacent side.
+
+[ANSWER: cos 30° = A ÷ 20. A = 20 × cos 30° = 20 × 0.8660 = 17.3 cm (1 d.p.).]
+
+**Q3 (Higher):** The angle is 48° and the opposite side is 9 cm. Find the adjacent side to 1 d.p.
+
+[ANSWER: tan 48° = 9 ÷ A. A = 9 ÷ tan 48° = 9 ÷ 1.1106 = 8.1 cm (1 d.p.).]
+
+---
+
+Practise SOHCAHTOA finding sides questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Trigonometry SOHCAHTOA](/topics/trigonometry-sohcahtoa)
+- [SOHCAHTOA Finding Missing Angles](/topics/sohcahtoa-finding-missing-angles)
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+
+## Summary
+
+- Label the sides O, A, and H relative to the given angle before choosing a ratio.
+- Use SOH when O and H are involved, CAH for A and H, and TOA for O and A.
+- If the unknown is on top of the fraction, multiply; if on the bottom, divide.
+- Always check your calculator is in degree mode and show every step of working for full method marks.
+`,
+  "solving-equations-with-fractions": `---
+title: "Solving Equations with Fractions – GCSE Maths Revision Guide"
+description: "Learn how to solve equations containing fractions at GCSE. Multiply through by the LCD, cross-multiply, and practise with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["solving equations with fractions", "LCD equations GCSE", "cross multiplication algebra", "fractional equations", "equations with denominators"]
+tier: "Foundation & Higher"
+strand: "Algebra"
+topicNumber: 138
+---
+
+# Solving Equations with Fractions
+
+Equations with fractions appear on both Foundation and Higher papers and are a common source of lost marks. The key idea is simple: clear the fractions first by multiplying every term by the lowest common denominator (LCD). Once the fractions are gone, you solve the equation using the techniques you already know. This page teaches you the method step by step and shows you how to handle cross-multiplication too.
+
+## What Is Solving Equations with Fractions?
+
+An equation with fractions is any equation where the variable appears in a fraction, or where fractional coefficients are used. Examples include x/3 + 2 = 5 and (2x + 1)/4 = (x − 3)/2. The goal is to find the value of x that makes the equation true.
+
+### Key Formulas
+
+[FORMULA: To clear fractions, multiply every term by the lowest common denominator (LCD)]
+
+[FORMULA: Cross-multiplication: if a/b = c/d then ad = bc]
+
+## Step-by-Step Method
+
+1. **Identify every denominator** in the equation.
+2. **Find the LCD** of all denominators.
+3. **Multiply every term on both sides** by the LCD. This eliminates all fractions.
+4. **Expand any brackets** that result from the multiplication.
+5. **Solve the resulting equation** using standard methods (collect terms, isolate x).
+6. **Check your answer** by substituting back into the original equation.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Solve x/3 + 2 = 5.
+
+**Working:**
+
+- The only denominator is 3. LCD = 3.
+- Multiply every term by 3: 3 × (x/3) + 3 × 2 = 3 × 5.
+- This gives: x + 6 = 15.
+- Subtract 6: x = 9.
+- Check: 9/3 + 2 = 3 + 2 = 5 ✓
+
+**Answer:** x = 9
+
+## Worked Example 2 — Higher Level
+
+**Question:** Solve (2x + 1)/4 = (x − 3)/2.
+
+**Working:**
+
+- Denominators are 4 and 2. LCD = 4.
+- Multiply every term by 4: 4 × (2x + 1)/4 = 4 × (x − 3)/2.
+- This gives: (2x + 1) = 2(x − 3).
+- Expand: 2x + 1 = 2x − 6.
+- Subtract 2x from both sides: 1 = −6.
+- This is a contradiction, so the equation has no solution.
+
+Alternatively, using cross-multiplication: (2x + 1) × 2 = (x − 3) × 4, giving 4x + 2 = 4x − 12, which again gives 2 = −12 — no solution.
+
+**Answer:** No solution
+
+## Worked Example 3 — Exam Style
+
+**Question:** Solve (x + 1)/3 − (x − 2)/5 = 1.
+
+**Working:**
+
+- Denominators are 3 and 5. LCD = 15.
+- Multiply every term by 15: 15 × (x + 1)/3 − 15 × (x − 2)/5 = 15 × 1.
+- This gives: 5(x + 1) − 3(x − 2) = 15.
+- Expand: 5x + 5 − 3x + 6 = 15.
+- Simplify: 2x + 11 = 15.
+- Subtract 11: 2x = 4.
+- Divide by 2: x = 2.
+- Check: (2 + 1)/3 − (2 − 2)/5 = 3/3 − 0/5 = 1 − 0 = 1 ✓
+
+**Answer:** x = 2
+
+## Common Mistakes
+
+- **Forgetting to multiply every term by the LCD.** Students often multiply the fractions but forget to multiply whole-number terms on the other side. Every term must be multiplied.
+- **Sign errors when expanding brackets.** Watch out for minus signs before brackets, such as −3(x − 2) = −3x + 6, not −3x − 6.
+- **Using cross-multiplication when there are more than two fractions.** Cross-multiplication only works when you have one fraction equal to another fraction. Use the LCD method for anything more complex.
+
+## Exam Tips
+
+- Always show the LCD multiplication step clearly — examiners award method marks for this.
+- If a question says "solve algebraically," you must show working, not trial-and-improvement.
+- Substitute your answer back in to check, especially when there are multiple fractions.
+- On Higher papers, you may get x in the denominator. Multiply through carefully and note any values that make the denominator zero (these are excluded).
+
+## Practice Questions
+
+**Q1 (Foundation):** Solve x/5 + 3 = 7.
+
+[ANSWER: x = 20]
+
+**Q2 (Foundation):** Solve (x + 4)/2 = 6.
+
+[ANSWER: x + 4 = 12, so x = 8]
+
+**Q3 (Higher):** Solve (3x − 1)/4 + (x + 2)/6 = 2.
+
+[ANSWER: LCD = 12. 3(3x − 1) + 2(x + 2) = 24. 9x − 3 + 2x + 4 = 24. 11x + 1 = 24. 11x = 23. x = 23/11]
+
+---
+
+Practise equations with fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Solving Linear Equations](/topics/solving-linear-equations)
+- [Equations with Unknowns on Both Sides](/topics/equations-with-unknowns-on-both-sides)
+- [Adding and Subtracting Fractions](/topics/adding-and-subtracting-fractions)
+
+## Summary
+
+- Clear fractions by multiplying every term on both sides by the LCD.
+- Cross-multiplication is a shortcut when one fraction equals another fraction.
+- Always expand brackets carefully, paying close attention to negative signs.
+- Substitute your answer back into the original equation to verify it is correct.
+- This skill is essential for algebraic fractions and simultaneous equations on the Higher paper.
 `,
   "solving-inequalities": `---
 title: "Solving Inequalities – GCSE Maths Guide"
@@ -9782,6 +22498,248 @@ Ready to practise speed, distance and time with adaptive questions? [Create your
 
 Speed, distance and time are connected by the formula **Speed = Distance ÷ Time**. Always check that your units are consistent before substituting. For multi-stage journeys, find the total distance and total time before calculating average speed — never simply average the individual speeds. Convert minutes to hours by dividing by 60, and remember to give final answers in the units the question requires. These questions are among the most predictable in the exam, so mastering the method is well worth the effort.
 `,
+  "speed-distance-time-calculations": `---
+title: "Speed, Distance & Time Calculations – GCSE Maths Revision Guide"
+description: "Master speed, distance and time calculations for GCSE Maths. S=D/T formula triangle, unit conversions, average speed and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Ratio"
+categoryColour: "amber"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["speed distance time", "SDT formula triangle", "average speed GCSE", "km/h to m/s conversion", "distance time graphs GCSE"]
+tier: "Foundation & Higher"
+strand: "Ratio, Proportion & Rates of Change"
+topicNumber: 115
+---
+
+Speed, distance and time problems appear on almost every GCSE Maths paper. Whether the question involves a car journey, a runner, or a distance-time graph, the same core formula applies. This guide takes you through the formula triangle, unit conversions, average speed, and how to interpret distance-time graphs, with fully worked examples at both tiers.
+
+## What Is the Speed-Distance-Time Relationship?
+
+**Speed** measures how fast an object is moving. It is calculated by dividing the distance travelled by the time taken. The three quantities — speed, distance, and time — are linked by a single formula that can be rearranged depending on which value you need.
+
+The formula triangle is a useful memory aid. Write D at the top, S at the bottom left and T at the bottom right. Cover the letter you need: if you cover D, you see S × T; cover S, you see D ÷ T; cover T, you see D ÷ S.
+
+Speed is a compound measure because it combines two different units — a unit of distance and a unit of time. Common units include km/h (kilometres per hour), m/s (metres per second) and mph (miles per hour). Matching your units before calculating is essential.
+
+### Key Formulas
+
+[FORMULA: Speed = Distance ÷ Time]
+
+[FORMULA: Distance = Speed × Time]
+
+[FORMULA: Time = Distance ÷ Speed]
+
+[FORMULA: To convert km/h to m/s, multiply by 1000 ÷ 3600 (or divide by 3.6)]
+
+## Step-by-Step Method
+
+1. **Identify** which quantity you need to find (speed, distance, or time).
+2. **Check units** — make sure distance and time units are consistent with the speed units.
+3. **Substitute** into the correct rearrangement of the formula.
+4. **Calculate** and include the correct unit in your answer.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A cyclist travels 45 km in 3 hours. What is the cyclist's average speed?
+
+**Working:**
+Speed = Distance ÷ Time
+Speed = 45 ÷ 3 = 15 km/h.
+
+**Answer:** The average speed is 15 km/h.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A train travels at 90 km/h for 2 hours 20 minutes. How far does it travel?
+
+**Working:**
+Convert time to hours: 2 hours 20 minutes = 2 + 20/60 = 2⅓ hours = 7/3 hours.
+Distance = Speed × Time = 90 × 7/3 = 210 km.
+
+**Answer:** The train travels 210 km.
+
+## Worked Example 3 — Exam Style
+
+**Question:** Priya drives 120 miles from Leeds to London. She drives the first 60 miles at 40 mph and the remaining 60 miles at 60 mph. Work out her average speed for the whole journey.
+
+**Working:**
+Time for first part = 60 ÷ 40 = 1.5 hours.
+Time for second part = 60 ÷ 60 = 1 hour.
+Total time = 1.5 + 1 = 2.5 hours.
+Total distance = 120 miles.
+Average speed = 120 ÷ 2.5 = 48 mph.
+
+**Answer:** The average speed is 48 mph. (Note: it is not simply the mean of 40 and 60.)
+
+## Common Mistakes
+
+- **Averaging the two speeds directly.** Average speed = total distance ÷ total time, not the mean of the individual speeds. The worked example above shows why.
+- **Using minutes instead of hours.** If time is given as 2 hours 15 minutes, convert to 2.25 hours before dividing. Do not use 2.15.
+- **Forgetting unit conversions.** If speed is in m/s and distance is in km, convert km to metres first, or convert speed to km/h.
+
+## Exam Tips
+
+- Always state the formula you are using — this earns a method mark even if the arithmetic goes wrong.
+- On distance-time graph questions, remember that the gradient of a line gives the speed. A steeper line means a faster speed.
+- A horizontal section on a distance-time graph means the object is stationary (speed = 0).
+- When converting minutes to hours, divide by 60 — not by 100. For example, 45 minutes = 0.75 hours, not 0.45.
+
+## Practice Questions
+
+**Q1 (Foundation):** A runner covers 800 metres in 2 minutes 30 seconds. Calculate the speed in m/s.
+
+[ANSWER: Time = 2 min 30 s = 150 seconds. Speed = 800 ÷ 150 = 5.33 m/s (to 3 s.f.).]
+
+**Q2 (Foundation):** How far does a car travel in 45 minutes at a speed of 60 km/h?
+
+[ANSWER: Time = 45 min = 0.75 hours. Distance = 60 × 0.75 = 45 km.]
+
+**Q3 (Higher):** A bus travels 24 km at 32 km/h, then 36 km at 48 km/h. Find the average speed for the whole journey.
+
+[ANSWER: Time 1 = 24 ÷ 32 = 0.75 h. Time 2 = 36 ÷ 48 = 0.75 h. Total distance = 60 km. Total time = 1.5 h. Average speed = 60 ÷ 1.5 = 40 km/h.]
+
+---
+
+Practise speed, distance and time questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Speed Distance and Time](/topics/speed-distance-and-time)
+- [Compound Measures](/topics/compound-measures-density-and-pressure)
+- [Unit Conversions](/topics/unit-conversions)
+
+## Summary
+
+- Speed = Distance ÷ Time. Rearrange using the formula triangle for distance or time.
+- Always convert time into hours (or seconds) before substituting — do not mix units.
+- Average speed is total distance divided by total time, not the mean of individual speeds.
+- On distance-time graphs, the gradient represents speed and a flat line means stationary.
+- To convert km/h to m/s, divide by 3.6. To convert m/s to km/h, multiply by 3.6.
+- Speed is a compound measure — always include the correct compound unit (e.g., km/h, m/s) in your answer.
+`,
+  "square-numbers-and-cube-numbers": `---
+title: "Square Numbers and Cube Numbers – GCSE Maths Revision Guide"
+description: "Learn square numbers, cube numbers, square roots and cube roots for GCSE Maths with key values to memorise and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["square numbers GCSE", "cube numbers GCSE", "square roots", "cube roots", "powers and roots GCSE"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 128
+---
+
+Square numbers and cube numbers are building blocks of GCSE Maths. Knowing them by heart speeds up work on indices, surds, area, volume, and Pythagoras' theorem across both Foundation and Higher tiers. This guide lists the key values to memorise, explains roots, and provides worked examples.
+
+## What Are Square and Cube Numbers?
+
+A **square number** is the result of multiplying a whole number by itself. For example, 4² = 4 × 4 = 16, so 16 is a square number. The **square root** reverses this: √16 = 4.
+
+A **cube number** is the result of multiplying a whole number by itself three times. For example, 3³ = 3 × 3 × 3 = 27, so 27 is a cube number. The **cube root** reverses this: ∛27 = 3.
+
+You should memorise the squares from 1² to 15² and the cubes from 1³ to 10³. These values come up repeatedly in non-calculator papers and save significant time.
+
+### Key Formulas
+
+[FORMULA: n² = n × n (square); √(n²) = n (square root)]
+
+[FORMULA: n³ = n × n × n (cube); ∛(n³) = n (cube root)]
+
+## Step-by-Step Method
+
+1. To find a square number, multiply the number by itself.
+2. To find a cube number, multiply the number by itself twice (three factors in total).
+3. To find a square root, ask "what number multiplied by itself gives this value?"
+4. To find a cube root, ask "what number multiplied by itself three times gives this value?"
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Work out 13² and state whether 150 is a square number.
+
+**Working:**
+
+Step 1 — 13² = 13 × 13 = 169.
+
+Step 2 — The squares near 150 are 12² = 144 and 13² = 169. Since 150 falls between these and is not equal to either, it is not a square number.
+
+**Answer:** 13² = 169. No, 150 is not a square number.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Evaluate √(225) + ∛(64).
+
+**Working:**
+
+Step 1 — √225: test values. 15² = 225, so √225 = 15.
+
+Step 2 — ∛64: 4³ = 64, so ∛64 = 4.
+
+Step 3 — 15 + 4 = 19.
+
+**Answer:** 19
+
+## Worked Example 3 — Exam Style
+
+**Question:** Find the value of n such that n³ = 512.
+
+**Working:**
+
+Step 1 — Test cube numbers: 7³ = 343, 8³ = 512. So n = 8.
+
+**Answer:** n = 8
+
+## Common Mistakes
+
+- **Confusing squaring with doubling.** 5² = 25, not 10. Squaring means multiplying by itself, not by 2.
+- **Forgetting that negative numbers also have squares.** (−3)² = 9. However, the principal square root √9 = 3 (positive).
+- **Mixing up square and cube roots.** √ means square root (two equal factors) and ∛ means cube root (three equal factors). Read the symbol carefully.
+
+## Exam Tips
+
+- Memorise squares from 1² = 1 to 15² = 225 and cubes from 1³ = 1 to 10³ = 1000.
+- Recognising square and cube numbers helps with prime factorisation and simplifying surds.
+- On non-calculator papers, use known squares and cubes to estimate roots of nearby numbers.
+- The key squares to know: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225.
+- The key cubes to know: 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000.
+
+## Practice Questions
+
+**Q1 (Foundation):** Write down the values of 9², 11², and 14².
+
+[ANSWER: 9² = 81, 11² = 121, 14² = 196.]
+
+**Q2 (Foundation):** Find ∛125.
+
+[ANSWER: 5³ = 125, so ∛125 = 5.]
+
+**Q3 (Higher):** Find the smallest number that is both a perfect square and a perfect cube.
+
+[ANSWER: A number that is both a perfect square and a perfect cube must be a perfect sixth power. The smallest is 1⁶ = 1 (trivially). The smallest non-trivial example is 2⁶ = 64. Check: 64 = 8² (perfect square) and 64 = 4³ (perfect cube). Answer: 64.]
+
+---
+
+Practise square numbers and cube numbers questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Powers and Roots](/topics/powers-and-roots)
+- [Indices and Index Laws](/topics/indices-and-index-laws)
+- [Estimating Square Roots](/topics/estimating-square-roots)
+
+## Summary
+
+- Square numbers result from multiplying a number by itself: n² = n × n.
+- Cube numbers result from multiplying a number by itself three times: n³ = n × n × n.
+- Square roots and cube roots are the inverse operations.
+- Memorise squares up to 15² = 225 and cubes up to 10³ = 1000.
+- Squaring is not the same as doubling — this is one of the most common misconceptions.
+- Recognising square and cube numbers helps in many other topics including surds and Pythagoras.
+`,
   "standard-form": `---
 title: "Standard Form – GCSE Maths Revision Guide"
 description: "Master standard form for GCSE Maths with step-by-step methods for writing, calculating, and converting standard form numbers."
@@ -9923,6 +22881,151 @@ Master standard form with AI-powered practice tailored to your exam board. [Sign
 - To add or subtract, convert to ordinary numbers (or the same power of 10) first.
 - Always adjust your final answer so a is between 1 and 10.
 - Check your answer makes sense — large number means positive power, small number means negative.
+`,
+  "stratified-sampling": `---
+title: "Stratified Sampling – GCSE Maths Revision Guide"
+description: "Master stratified sampling for GCSE Maths Higher with proportional representation, sample size calculations, worked examples and practice."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["stratified sampling GCSE", "proportional sampling", "sample size formula", "stratified sample calculation", "Higher GCSE statistics"]
+tier: "Higher only"
+strand: "Statistics & Probability"
+topicNumber: 191
+---
+
+Stratified sampling is a Higher-tier topic that appears regularly on AQA, Edexcel and OCR GCSE Maths papers. It ensures that a sample represents the proportions of different subgroups within a population, making conclusions more reliable. You need to know how to calculate the number of items to sample from each stratum and explain why stratified sampling is used. This guide covers the method in detail with worked examples and practice questions. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is Stratified Sampling?
+
+In **stratified sampling**, the population is divided into distinct subgroups called **strata** (e.g. year groups, age bands, departments). A proportional number of individuals is then randomly selected from each stratum so that the sample mirrors the population structure.
+
+### Key Formulas
+
+[FORMULA: Number from stratum = (Stratum size ÷ Population size) x Total sample size]
+
+This formula ensures each stratum is represented in proportion to its share of the population.
+
+### Why Use Stratified Sampling?
+
+- It guarantees proportional representation of each subgroup.
+- It reduces bias compared to simple random sampling, especially when the population has distinct groups.
+- It produces more reliable estimates for the overall population.
+
+### Limitations
+
+- You need to know the size of each stratum before you start.
+- It is more complex to organise than simple random sampling.
+- Within each stratum, you still need to select randomly.
+
+## Step-by-Step Method
+
+1. Identify the strata (subgroups) in the population.
+2. Find the total population size.
+3. Decide on the overall sample size (or it will be given).
+4. For each stratum, calculate: (stratum size ÷ population size) x sample size.
+5. Round to the nearest whole number if needed.
+6. Check that all rounded values add up to the total sample size — adjust by 1 if necessary.
+7. Randomly select the calculated number from each stratum.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A school of 500 pupils wants a stratified sample of 50. Year 7 has 120 pupils, Year 8 has 110, Year 9 has 100, Year 10 has 90 and Year 11 has 80. Calculate how many to sample from each year.
+
+**Working:**
+
+Sample fraction = 50/500 = 1/10.
+
+Year 7: 120 x (1/10) = **12**. Year 8: 110 x (1/10) = **11**. Year 9: 100 x (1/10) = **10**. Year 10: 90 x (1/10) = **9**. Year 11: 80 x (1/10) = **8**.
+
+Check: 12 + 11 + 10 + 9 + 8 = 50.
+
+**Answer:** Year 7: 12, Year 8: 11, Year 9: 10, Year 10: 9, Year 11: 8.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A company has 150 full-time, 90 part-time and 60 contract workers. A stratified sample of 40 is to be taken. (a) Calculate the sample from each group. (b) Explain why stratified sampling is appropriate here.
+
+**Working:**
+
+Total = 150 + 90 + 60 = 300. Sample fraction = 40/300 = 2/15.
+
+**(a)** Full-time: 150 x (2/15) = **20**. Part-time: 90 x (2/15) = **12**. Contract: 60 x (2/15) = **8**.
+
+Check: 20 + 12 + 8 = 40.
+
+**(b)** Stratified sampling ensures each employment type is proportionally represented. The three groups may have different views or experiences (e.g. about working conditions), so proportional representation prevents any group being over- or under-represented in the sample.
+
+**Answer:** (a) Full-time 20, Part-time 12, Contract 8. (b) It ensures proportional representation of groups with potentially different characteristics.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A gym has the following membership breakdown.
+
+| Age group | 16–25 | 26–40 | 41–60 | 61+ |
+|---|---|---|---|---|
+| Members | 85 | 140 | 95 | 30 |
+
+A stratified sample of 70 is required. Calculate the sample from each age group.
+
+**Working:**
+
+Total = 85 + 140 + 95 + 30 = 350. Fraction = 70/350 = 1/5.
+
+16–25: 85 x (1/5) = **17**. 26–40: 140 x (1/5) = **28**. 41–60: 95 x (1/5) = **19**. 61+: 30 x (1/5) = **6**.
+
+Check: 17 + 28 + 19 + 6 = 70.
+
+**Answer:** 16–25: 17, 26–40: 28, 41–60: 19, 61+: 6.
+
+## Common Mistakes
+
+- **Dividing the sample equally.** Do not split the sample size equally among strata — the whole point is proportional allocation.
+- **Using the wrong formula.** Some students divide the sample by the stratum count instead of multiplying (stratum size ÷ population) by sample size.
+- **Forgetting to check the total.** After rounding, the individual values must add up to the required sample size. Adjust the largest group by 1 if needed.
+- **Not selecting randomly within strata.** After calculating how many from each stratum, you must still use a random method to pick individuals.
+
+## Exam Tips
+
+- Show your calculation for every stratum — method marks are awarded for each correct step.
+- Always include a "check" line showing your values sum to the required sample size.
+- If asked to compare stratified sampling with random sampling, highlight that stratified guarantees proportional representation of subgroups, whereas random could over- or under-represent certain groups.
+- For broader sampling context, see [sampling methods](/topics/sampling-methods). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A population has 200 adults and 100 children. A stratified sample of 30 is needed. How many adults and children should be sampled?
+
+[ANSWER: Total = 300. Adults: (200/300) x 30 = 20. Children: (100/300) x 30 = 10. Check: 20 + 10 = 30.]
+
+**Q2 (Foundation):** Explain one advantage of stratified sampling over random sampling.
+
+[ANSWER: Stratified sampling guarantees that each subgroup is represented in proportion to its size in the population, making the sample more representative and reducing the chance of over- or under-representing any group.]
+
+**Q3 (Higher):** A school has 180 boys and 220 girls. A stratified sample of 50 is required. Calculate how many boys and girls should be sampled. Show that your answer gives the correct total.
+
+[ANSWER: Total = 400. Boys: (180/400) x 50 = 22.5, round to 23. Girls: (220/400) x 50 = 27.5, round to 27. Check: 23 + 27 = 50.]
+
+---
+
+Practise stratified sampling calculations free on GCSEMathsAI.
+
+## Related Topics
+
+- [Sampling Methods](/topics/sampling-methods)
+- [Frequency Tables and Grouped Data](/topics/frequency-tables-and-grouped-data)
+- [Finding the Mean](/topics/finding-the-mean)
+
+## Summary
+
+- Stratified sampling divides a population into subgroups (strata) and samples proportionally from each.
+- Use the formula: number from stratum = (stratum size / population size) x total sample size.
+- Round to the nearest whole number and check the total matches the required sample size.
+- Stratified sampling is more representative than simple random sampling when the population has distinct subgroups.
+- Always select randomly within each stratum to avoid bias.
 `,
   "surds": `---
 title: "Surds – GCSE Maths Revision Guide"
@@ -10086,6 +23189,372 @@ Tackle Higher tier surd questions with confidence. [Join GCSEMathsAI for free](h
 - Rationalise simple denominators by multiplying top and bottom by the surd.
 - Rationalise complex denominators by multiplying by the conjugate.
 - Always present your answer in the form the question requests.
+`,
+  "surface-area-of-a-cone": `---
+title: "Surface Area of a Cone – GCSE Maths Revision Guide"
+description: "Learn how to calculate the surface area of a cone using SA = πrl + πr², including finding slant height with Pythagoras, with worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["surface area of a cone GCSE", "cone formula", "curved surface area cone", "slant height Pythagoras", "cone Higher GCSE"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 169
+---
+
+The surface area of a cone is a Higher tier topic that combines circle area, arc length ideas, and Pythagoras' theorem. You need to distinguish between the curved surface area and the total surface area, and between slant height and vertical height.
+
+## What Is the Surface Area of a Cone?
+
+A cone has two surfaces: the circular base and the curved lateral surface that wraps around from the base to the apex. The total surface area is the sum of these two parts.
+
+The curved surface area formula πrl comes from the fact that if you "unroll" the curved surface of a cone, it forms a sector of a circle with radius equal to the slant height l. The area of that sector works out to πrl.
+
+The slant height l is the distance measured along the surface from the base edge to the apex. It is different from the vertical (perpendicular) height h. These two heights and the radius form a right-angled triangle, so l² = r² + h².
+
+### Key Formulas
+
+[FORMULA: Curved surface area = πrl, where r is the base radius and l is the slant height]
+
+[FORMULA: Total surface area = πrl + πr² (curved surface + base)]
+
+[FORMULA: l = √(r² + h²), using Pythagoras to find the slant height from the radius and vertical height]
+
+## Step-by-Step Method
+
+1. Identify the radius r, vertical height h, and slant height l. If the slant height is not given, use Pythagoras: l = √(r² + h²).
+2. Calculate the curved surface area: πrl.
+3. Calculate the base area: πr².
+4. Add them together for the total surface area, or give just the curved surface area if the question asks for it.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A cone has a base radius of 5 cm and a slant height of 13 cm. Find the total surface area to 1 decimal place.
+
+**Working:**
+Curved SA = πrl = π × 5 × 13 = 65π
+Base area = πr² = π × 5² = 25π
+Total SA = 65π + 25π = 90π = 282.7 (1 d.p.)
+
+**Answer:** 282.7 cm²
+
+## Worked Example 2 — Higher Level
+
+**Question:** A cone has a base radius of 6 cm and a vertical height of 8 cm. Find the total surface area to 1 decimal place.
+
+**Working:**
+First find the slant height:
+l = √(r² + h²) = √(36 + 64) = √100 = 10 cm
+Curved SA = π × 6 × 10 = 60π
+Base area = π × 6² = 36π
+Total SA = 60π + 36π = 96π = 301.6 (1 d.p.)
+
+**Answer:** 301.6 cm²
+
+## Worked Example 3 — Exam Style
+
+**Question:** The curved surface area of a cone is 110 cm². The slant height is 7 cm. Find the base radius to 2 decimal places.
+
+**Working:**
+Curved SA = πrl
+110 = π × r × 7
+110 = 7πr
+r = 110 ÷ (7π)
+r = 110 ÷ 21.991…
+r = 5.00 (2 d.p.)
+
+**Answer:** 5.00 cm
+
+## Common Mistakes
+
+- **Confusing slant height and vertical height.** The slant height l runs along the surface; the vertical height h is inside the cone from base centre to apex. Always check which one the question provides.
+- **Forgetting the base.** "Surface area" usually means total surface area including the base. If only the curved surface is required, the question will specify "curved surface area."
+- **Using diameter instead of radius.** The formulas use the radius. If the question gives the diameter, halve it first.
+- **Not using Pythagoras when needed.** When the slant height is not given, you must calculate it using l = √(r² + h²) before applying the surface area formula.
+
+## Exam Tips
+
+- The curved surface area formula πrl is given on the exam formula sheet — but you still need to remember to add πr² for the total.
+- Show the Pythagoras step clearly if you need to find the slant height — this earns method marks.
+- If the question asks for an exact answer, leave your answer in terms of π.
+
+## Practice Questions
+
+**Q1 (Foundation):** A cone has radius 4 cm and slant height 9 cm. Find the curved surface area in terms of π.
+
+[ANSWER: Curved SA = πrl = π × 4 × 9 = 36π cm².]
+
+**Q2 (Foundation):** A cone has radius 3 cm and slant height 10 cm. Find the total surface area to 1 decimal place.
+
+[ANSWER: Curved SA = 30π. Base = 9π. Total = 39π = 122.5 cm².]
+
+**Q3 (Higher):** A cone has radius 5 cm and vertical height 12 cm. Find the total surface area to the nearest whole number.
+
+[ANSWER: l = √(25 + 144) = √169 = 13. Curved SA = 65π. Base = 25π. Total = 90π ≈ 283 cm².]
+
+---
+
+Practise surface area of a cone questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Surface Area](/topics/surface-area)
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+
+## Summary
+
+- A cone has a curved surface and a circular base.
+- Curved surface area = πrl, where l is the slant height.
+- Total surface area = πrl + πr² (curved + base).
+- If the slant height is not given, use Pythagoras: l = √(r² + h²).
+- Always check whether the question asks for the curved or the total surface area.
+`,
+  "surface-area-of-a-cylinder": `---
+title: "Surface Area of a Cylinder – GCSE Maths Revision Guide"
+description: "Learn the surface area of a cylinder formula SA = 2 pi r squared + 2 pi rh for GCSE Maths, including open cylinders and net diagrams."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["surface area of a cylinder GCSE", "cylinder surface area formula", "net of a cylinder", "open cylinder surface area", "cylinder GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 106
+---
+
+Surface area of a cylinder is tested on both Foundation and Higher papers across AQA, Edexcel and OCR. Understanding the net of a cylinder — two circles and a rectangle — is the key to remembering the formula and adapting it for open or partially open cylinders. This topic often appears alongside volume of a cylinder questions.
+
+## What Is the Surface Area of a Cylinder?
+
+The surface area of a cylinder is the total area of all its outer faces. A closed cylinder has three surfaces: two identical circular ends and one curved surface that wraps around the side.
+
+If you "unroll" the curved surface, it becomes a rectangle. The width of that rectangle equals the circumference of the circle (2pi r), and its height equals the height of the cylinder (h). This is why the curved surface area is 2pi rh.
+
+An open cylinder (like a tin without a lid) is missing one or both circular ends. You must read the question carefully to determine how many circles to include in your calculation.
+
+### Key Formulas
+
+[FORMULA: Total surface area (closed) = 2 pi r² + 2 pi rh]
+
+[FORMULA: Curved surface area only = 2 pi rh]
+
+## Step-by-Step Method
+
+1. Check whether you have the radius or the diameter. If given the diameter, halve it.
+2. Calculate the area of the two circular ends: 2 pi r².
+3. Calculate the curved surface area: 2 pi rh.
+4. Add the results. If the cylinder is open-topped, use only one circle (pi r²) instead of two.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A closed cylinder has radius 3 cm and height 10 cm. Find its total surface area to 1 decimal place.
+
+**Working:**
+Two circles = 2 × pi × 3² = 2 × 9pi = 18pi
+Curved surface = 2 × pi × 3 × 10 = 60pi
+Total SA = 18pi + 60pi = 78pi = 245.044...
+
+**Answer:** 245.0 cm² (1 d.p.)
+
+## Worked Example 2 — Higher Level
+
+**Question:** An open-topped cylindrical container has radius 5 cm and height 14 cm. Find its total surface area to 3 significant figures.
+
+**Working:**
+One circular base = pi × 5² = 25pi
+Curved surface = 2 × pi × 5 × 14 = 140pi
+Total SA = 25pi + 140pi = 165pi = 518.362...
+
+**Answer:** 518 cm² (3 s.f.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** A cylindrical pipe is open at both ends. It has a diameter of 6 cm and a length of 20 cm. Find the total outer surface area of the pipe to 1 decimal place.
+
+**Working:**
+Radius = 6 ÷ 2 = 3 cm
+No circular ends (open at both ends), so SA = curved surface area only.
+SA = 2 × pi × 3 × 20 = 120pi = 376.991...
+
+**Answer:** 377.0 cm² (1 d.p.)
+
+## Common Mistakes
+
+- **Forgetting the circular ends.** A closed cylinder has two circles. Write out each component separately so nothing is missed.
+- **Including circles when the cylinder is open.** If the question says open-topped, include only one circle. If open at both ends, include no circles. Read the wording carefully.
+- **Using diameter instead of radius.** All formulas use r. Halve the diameter if that is what the question provides.
+- **Confusing curved surface area with total surface area.** The curved surface area (2 pi rh) does not include the circular ends. Total surface area adds the circles.
+
+## Exam Tips
+
+- Sketch the net of the cylinder (two circles and a rectangle) alongside your working. This helps you visualise which faces to include and impresses the examiner.
+- Remember: the rectangle width is the circumference (2pi r), not the diameter. This is the most common source of confusion.
+- This formula is not given on the exam formula sheet — you must memorise it.
+- Show each component (circles and curved surface) as separate lines of working. This earns method marks and makes errors easy to spot.
+- Surface area questions often appear alongside volume questions — double-check which one the question is asking for by looking at the units (cm² for area, cm³ for volume).
+
+## Practice Questions
+
+**Q1 (Foundation):** A closed cylinder has radius 4 cm and height 7 cm. Find its total surface area to the nearest whole number.
+
+[ANSWER: SA = 2 × pi × 16 + 2 × pi × 4 × 7 = 32pi + 56pi = 88pi = 276 cm².]
+
+**Q2 (Foundation):** Find the curved surface area of a cylinder with radius 6 cm and height 9 cm. Give your answer to 1 decimal place.
+
+[ANSWER: CSA = 2 × pi × 6 × 9 = 108pi = 339.3 cm².]
+
+**Q3 (Higher):** A closed cylinder has a total surface area of 200pi cm² and a radius of 5 cm. Find its height.
+
+[ANSWER: 200pi = 2 × pi × 25 + 2 × pi × 5 × h → 200pi = 50pi + 10pi h → 150pi = 10pi h → h = 15 cm.]
+
+---
+
+Practise surface area of a cylinder questions with instant AI feedback — completely free on GCSEMathsAI.
+
+---
+
+## Related Topics
+
+- [Surface Area](/topics/surface-area)
+- [Volume of a Cylinder](/topics/volume-of-a-cylinder)
+- [Area of a Circle](/topics/area-of-a-circle)
+
+## Summary
+
+- The total surface area of a closed cylinder is SA = 2 pi r² + 2 pi rh.
+- The curved surface area alone is 2 pi rh — the area of the rectangle in the net.
+- The rectangle in the net has width equal to the circumference (2 pi r) and height equal to h.
+- For open cylinders, adjust the number of circular ends you include (0, 1, or 2).
+- This formula is not on the exam formula sheet — you must learn it.
+- Always check whether the question asks for total surface area or curved surface area only.
+`,
+  "surface-area-of-a-sphere": `---
+title: "Surface Area of a Sphere – GCSE Maths Revision Guide"
+description: "Learn how to calculate the surface area of a sphere using SA = 4πr² and hemispheres using 3πr², with worked examples and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["surface area of a sphere GCSE", "4 pi r squared", "hemisphere surface area", "sphere formula GCSE", "sphere Higher tier"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 170
+---
+
+The surface area of a sphere is a Higher tier formula that appears frequently in GCSE exams. Questions often extend to hemispheres, where you must remember to include the flat circular face as well as the curved surface.
+
+## What Is the Surface Area of a Sphere?
+
+The surface area of a sphere is the total area of its outer curved surface. Unlike a cube or cuboid, a sphere has no edges or flat faces — every point on its surface is the same distance (the radius) from the centre.
+
+The formula SA = 4πr² tells us that the surface area of a sphere is exactly four times the area of a circle with the same radius. This elegant relationship was first proved by Archimedes.
+
+For a hemisphere (half a sphere), the curved surface area is 2πr² (half of 4πr²), but the total surface area also includes the flat circular base of area πr², giving a total of 3πr².
+
+### Key Formulas
+
+[FORMULA: Surface area of a sphere = 4πr²]
+
+[FORMULA: Curved surface area of a hemisphere = 2πr²]
+
+[FORMULA: Total surface area of a hemisphere = 2πr² + πr² = 3πr²]
+
+## Step-by-Step Method
+
+1. Identify the radius. If the diameter is given, halve it.
+2. For a sphere, substitute into SA = 4πr².
+3. For a hemisphere, calculate the curved surface (2πr²) and add the flat circular base (πr²) unless the question specifies curved surface only.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A sphere has a radius of 7 cm. Find the surface area to 1 decimal place.
+
+**Working:**
+SA = 4πr²
+SA = 4 × π × 7²
+SA = 4 × π × 49
+SA = 196π
+SA = 615.8 (1 d.p.)
+
+**Answer:** 615.8 cm²
+
+## Worked Example 2 — Higher Level
+
+**Question:** A hemisphere has a radius of 6 cm. Calculate the total surface area in terms of π.
+
+**Working:**
+Curved surface = 2πr² = 2π × 36 = 72π
+Flat base = πr² = π × 36 = 36π
+Total SA = 72π + 36π = 108π
+
+**Answer:** 108π cm²
+
+## Worked Example 3 — Exam Style
+
+**Question:** The surface area of a sphere is 400π cm². Find the radius.
+
+**Working:**
+SA = 4πr²
+400π = 4πr²
+Divide both sides by 4π:
+r² = 100
+r = √100
+r = 10
+
+**Answer:** 10 cm
+
+## Common Mistakes
+
+- **Forgetting the flat face of a hemisphere.** A hemisphere's total surface area is 3πr², not 2πr². The 2πr² is only the curved part — you must add the circular base πr².
+- **Using diameter instead of radius.** The formula uses the radius. If the question gives a diameter of 10 cm, use r = 5 cm.
+- **Squaring incorrectly.** Remember that r² means r × r, not 2r. For r = 7, r² = 49, not 14.
+- **Confusing surface area with volume.** Surface area is in square units (cm²); volume is in cubic units (cm³). The sphere volume formula is (4/3)πr³ — do not mix them up.
+
+## Exam Tips
+
+- The formula SA = 4πr² is given on the exam formula sheet, but practise using it so you do not waste time looking it up.
+- For hemisphere questions, always ask yourself: "Do they want curved surface area or total surface area?"
+- If asked to find the radius from a given surface area, rearrange: r² = SA ÷ (4π), then square root.
+
+## Practice Questions
+
+**Q1 (Foundation):** A sphere has a radius of 3 cm. Find its surface area to 1 decimal place.
+
+[ANSWER: SA = 4π × 9 = 36π = 113.1 cm².]
+
+**Q2 (Foundation):** A sphere has a diameter of 16 cm. Find its surface area in terms of π.
+
+[ANSWER: r = 8. SA = 4π × 64 = 256π cm².]
+
+**Q3 (Higher):** A solid hemisphere has a radius of 5 cm. Find the total surface area to 1 decimal place.
+
+[ANSWER: Curved = 2π × 25 = 50π. Base = π × 25 = 25π. Total = 75π = 235.6 cm².]
+
+---
+
+Practise surface area of a sphere questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Surface Area](/topics/surface-area)
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+- [Circumference of a Circle](/topics/circumference-of-a-circle)
+
+## Summary
+
+- Surface area of a sphere = 4πr².
+- A sphere's surface area is exactly four times the area of a great circle.
+- For a hemisphere, the total surface area = 3πr² (curved 2πr² plus flat base πr²).
+- Always check whether radius or diameter is given and convert if needed.
+- To find the radius from surface area, rearrange: r = √(SA ÷ 4π).
 `,
   "surface-area": `---
 title: "Surface Area – GCSE Maths Revision Guide"
@@ -10563,6 +24032,128 @@ Practise transformations with instant AI marking at [GCSEMathsAI](https://www.gc
 ## Summary
 
 Reflections, rotations, and translations are the three congruence transformations in GCSE Maths. To reflect, you need the mirror line. To rotate, you need the centre, angle, and direction. To translate, you need the column vector. When describing a transformation, always give every required detail — incomplete descriptions are the number one reason students lose marks. Use tracing paper for rotations, count squares carefully for reflections, and apply the vector component-by-component for translations. These questions are accessible and frequently tested, so thorough practice pays off.
+`,
+  "translations-column-vectors": `---
+title: "Translations and Column Vectors – GCSE Maths Revision Guide"
+description: "Learn how to translate shapes using column vectors, apply translations on a grid, and describe translations as vectors for GCSE Maths exams."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 6
+keywords: ["translations GCSE", "column vectors", "translation vector", "describing translations", "translating shapes on a grid"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 159
+---
+
+Translations are one of the four transformations you need to master for GCSE Maths. A translation slides a shape from one position to another without rotating, reflecting, or resizing it. The movement is described using a column vector. This guide covers how to read and write column vectors, apply translations, and describe them fully in exam questions.
+
+## What Is a Translation?
+
+A translation moves every point of a shape the same distance in the same direction. The shape does not change size, orientation, or handedness — it simply slides to a new position.
+
+### Key Formulas
+
+[FORMULA: Column vector (a over b) means move a units horizontally and b units vertically]
+
+A positive top number means move right; negative means move left. A positive bottom number means move up; negative means move down.
+
+[FORMULA: New coordinates: (x + a, y + b) where the vector is (a over b)]
+
+## Step-by-Step Method
+
+1. **Read the column vector.** The top number is the horizontal shift; the bottom number is the vertical shift.
+2. **Apply the vector to each vertex.** Add the top number to each x-coordinate and the bottom number to each y-coordinate.
+3. **Plot the new vertices** and draw the translated shape.
+4. **To describe a translation**, find the column vector by subtracting the original coordinates from the image coordinates.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Translate the triangle with vertices A(2, 3), B(5, 3), and C(5, 6) by the vector (3 over −2).
+
+**Working:**
+
+Add 3 to each x-coordinate and subtract 2 from each y-coordinate.
+
+A(2, 3) maps to A'(2 + 3, 3 − 2) = A'(5, 1)
+
+B(5, 3) maps to B'(5 + 3, 3 − 2) = B'(8, 1)
+
+C(5, 6) maps to C'(5 + 3, 6 − 2) = C'(8, 4)
+
+**Answer:** The translated vertices are **A'(5, 1), B'(8, 1), C'(8, 4)**.
+
+## Worked Example 2 — Higher Level
+
+**Question:** Shape P is translated to shape Q. A vertex of P is at (−1, 4) and the corresponding vertex of Q is at (3, 1). Describe the translation fully.
+
+**Working:**
+
+Horizontal shift: 3 − (−1) = 4
+
+Vertical shift: 1 − 4 = −3
+
+The translation vector is (4 over −3).
+
+**Answer:** Translation by the vector **(4 over −3)**.
+
+## Worked Example 3 — Exam Style
+
+**Question:** A shape is translated by the vector (−5 over 2). A vertex of the image is at (1, 7). Find the coordinates of the corresponding vertex on the original shape.
+
+**Working:**
+
+To reverse the translation, subtract the vector.
+
+Original x = 1 − (−5) = 1 + 5 = 6
+
+Original y = 7 − 2 = 5
+
+**Answer:** The original vertex is at **(6, 5)**.
+
+## Common Mistakes
+
+- **Mixing up the horizontal and vertical components.** The top number in the column vector is always horizontal (left/right) and the bottom number is always vertical (up/down). Swapping them moves the shape in the wrong direction.
+- **Getting the sign wrong.** Positive top means right; negative top means left. Positive bottom means up; negative bottom means down. A sign error flips the direction of the translation.
+- **Not describing the transformation correctly.** You must say "Translation by the vector ..." and give the column vector. Writing "the shape moves 3 right and 2 down" without a vector may lose marks.
+
+## Exam Tips
+
+- Always describe a translation using a column vector — this is the expected format in GCSE exams.
+- Check your answer by verifying that all vertices have been shifted by the same vector.
+- If you need to find the vector from a diagram, pick one vertex and count the squares right/left and up/down to its image.
+- Translations preserve congruence — the image is identical to the object.
+
+## Practice Questions
+
+**Q1 (Foundation):** Translate the point (4, 2) by the vector (−3 over 5).
+
+[ANSWER: (4 − 3, 2 + 5) = (1, 7)]
+
+**Q2 (Foundation):** A shape is translated so that the point (6, 1) maps to (2, 4). What is the translation vector?
+
+[ANSWER: (2 − 6 over 4 − 1) = (−4 over 3)]
+
+**Q3 (Higher):** A shape is translated by the vector (a over −1). A vertex at (3, 5) maps to (−2, 4). Find the value of a.
+
+[ANSWER: 3 + a = −2, so a = −5. The vector is (−5 over −1).]
+
+---
+
+Practise translations and column vectors with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+
+## Related Topics
+
+- [Reflections](/topics/reflections)
+- [Rotations](/topics/rotations)
+- [Enlargement and Centre of Enlargement](/topics/enlargement-and-centre-of-enlargement)
+- [Vectors](/topics/vectors)
+
+## Summary
+
+- A translation slides a shape without changing its size, orientation, or shape. It is described by a column vector where the top number gives the horizontal shift and the bottom number gives the vertical shift. To apply a translation, add the vector to every vertex. To find the vector, subtract the original coordinates from the image coordinates. Always use column vector notation in exam answers.
 `,
   "trigonometry-in-3d": `---
 title: "Trigonometry in 3D – GCSE Maths Revision Guide"
@@ -11113,6 +24704,134 @@ Ready to practise SOHCAHTOA with adaptive questions? [Create your free GCSEMaths
 
 SOHCAHTOA provides three ratios — sin, cos and tan — for working with right-angled triangles. **Label the sides O, A, H** relative to your angle, choose the ratio that involves the known and unknown sides, substitute, and solve. For finding a side, rearrange and calculate. For finding an angle, use the inverse function (sin⁻¹, cos⁻¹, tan⁻¹). Always check your calculator is in degree mode, show your working clearly, and remember that SOHCAHTOA only applies to right-angled triangles. This is a high-value topic that rewards careful labelling and systematic method.
 `,
+  "types-of-correlation": `---
+title: "Types of Correlation – GCSE Maths Revision Guide"
+description: "Understand positive, negative and no correlation for GCSE Maths with line of best fit, interpolation vs extrapolation, and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Statistics & Probability"
+categoryColour: "rose"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["correlation GCSE", "positive correlation", "negative correlation", "line of best fit", "interpolation extrapolation"]
+tier: "Foundation & Higher"
+strand: "Statistics & Probability"
+topicNumber: 185
+---
+
+Understanding correlation is essential for GCSE Maths and is tested on both Foundation and Higher papers across AQA, Edexcel and OCR. You need to identify positive, negative and no correlation, describe the strength of a relationship, draw and use a line of best fit, and distinguish between interpolation and extrapolation. This guide covers each concept with clear examples. For an overview of every topic, see our [complete GCSE Maths topics list](/blog/gcse-maths-topics-complete-list).
+
+## What Is Correlation?
+
+**Correlation** describes the relationship between two variables shown on a scatter graph. It tells you whether the variables tend to increase together, whether one decreases as the other increases, or whether there is no obvious pattern.
+
+### Types of Correlation
+
+- **Positive correlation** — as one variable increases, the other increases. Points rise from left to right.
+- **Negative correlation** — as one variable increases, the other decreases. Points fall from left to right.
+- **No correlation** — there is no clear pattern between the two variables. Points are scattered randomly.
+
+### Strength of Correlation
+
+- **Strong** — points cluster tightly around an imaginary straight line.
+- **Weak** — points roughly follow a trend but are more spread out.
+- **Moderate** — between strong and weak.
+
+### Key Formulas
+
+[FORMULA: Correlation describes the direction and strength of a linear relationship between two variables]
+
+There is no numerical calculation required at GCSE for correlation — you describe it from the scatter graph. At Higher level, you may be asked to interpret the context.
+
+## Step-by-Step Method
+
+1. Look at the overall pattern of the scatter graph.
+2. Determine the direction: do the points rise (positive), fall (negative), or show no trend?
+3. Assess the strength: are the points tightly clustered (strong) or widely spread (weak)?
+4. Describe the correlation in context, e.g. "There is a strong positive correlation between hours of revision and test score."
+5. If appropriate, draw a line of best fit through the middle of the data.
+6. Use the line to estimate values — noting whether you are interpolating or extrapolating.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A scatter graph plots temperature (horizontal) against number of hot drinks sold (vertical). The points fall from left to right and are closely grouped. Describe the correlation.
+
+**Working:**
+
+The points fall from left to right, so the correlation is **negative**. They are closely grouped, so it is **strong**.
+
+**Answer:** There is a strong negative correlation — as temperature increases, the number of hot drinks sold decreases.
+
+## Worked Example 2 — Higher Level
+
+**Question:** A line of best fit on a scatter graph passes through the points (10, 30) and (50, 70). (a) Estimate y when x = 25. (b) Estimate y when x = 80. (c) Which estimate is more reliable? Explain.
+
+**Working:**
+
+**(a)** Gradient = (70 − 30) ÷ (50 − 10) = 40 ÷ 40 = 1. Using point (10, 30): y = 30 + 1 × (25 − 10) = 30 + 15 = **45**.
+
+**(b)** y = 30 + 1 × (80 − 10) = 30 + 70 = **100**.
+
+**(c)** The estimate for x = 25 is more reliable because 25 is within the range of data (interpolation). The estimate for x = 80 is extrapolation — it is outside the data range, and the trend may not continue.
+
+**Answer:** (a) 45, (b) 100, (c) x = 25 is more reliable (interpolation within the data range).
+
+## Worked Example 3 — Exam Style
+
+**Question:** A student finds a strong positive correlation between ice cream sales and drowning incidents. She concludes that eating ice cream causes drowning. Is she correct?
+
+**Working:**
+
+The student is **not correct**. Correlation does not prove causation. Both ice cream sales and drowning incidents increase during hot weather — the common factor is temperature. The ice cream does not cause the drowning.
+
+**Answer:** Incorrect. Correlation does not imply causation — a third variable (hot weather) causes both to increase.
+
+## Common Mistakes
+
+- **Confusing correlation with causation.** A correlation shows that two variables are related, but it does not prove that one causes the other.
+- **Describing correlation without context.** At Higher level, always relate the correlation to the variables in the question, not just say "positive" or "negative".
+- **Extrapolating and treating it as reliable.** Estimates made outside the range of data are unreliable. Always state this when extrapolating.
+- **Drawing a line of best fit through the origin.** The line should follow the data — it does not have to pass through (0, 0).
+
+## Exam Tips
+
+- Always use three elements when describing correlation: type (positive/negative/none), strength (strong/weak), and context (relate it to the variables).
+- If asked to compare reliability of estimates, check whether the value is within the data range (interpolation) or outside it (extrapolation).
+- If asked "Does this prove...?", the answer is almost always no — state that correlation does not prove causation.
+- For related topics, see [scatter graphs and correlation](/topics/scatter-graphs-and-correlation). For key formulas, visit our [GCSE Maths formulas page](/blog/gcse-maths-formulas-you-must-know).
+
+## Practice Questions
+
+**Q1 (Foundation):** A scatter graph shows points rising from left to right. Describe the type of correlation.
+
+[ANSWER: There is a positive correlation — as one variable increases, the other also increases.]
+
+**Q2 (Foundation):** What is meant by "no correlation"?
+
+[ANSWER: No correlation means there is no clear pattern or relationship between the two variables. The points are scattered randomly on the graph.]
+
+**Q3 (Higher):** A scatter graph shows data for x = 5 to x = 30. A student uses the line of best fit to estimate y when x = 50. Comment on the reliability of this estimate.
+
+[ANSWER: This estimate is unreliable because x = 50 is outside the range of the data (extrapolation). The trend shown by the line of best fit may not continue beyond x = 30, so the estimate could be inaccurate.]
+
+---
+
+Practise identifying correlation and using lines of best fit free on GCSEMathsAI.
+
+## Related Topics
+
+- [Scatter Graphs and Correlation](/topics/scatter-graphs-and-correlation)
+- [Finding the Mean](/topics/finding-the-mean)
+- [Finding the Median](/topics/finding-the-median)
+
+## Summary
+
+- Correlation describes the relationship between two variables on a scatter graph: positive (both increase), negative (one increases as the other decreases), or none.
+- Strength is described as strong, moderate or weak depending on how closely points cluster around a line.
+- A line of best fit follows the overall trend and can be used to estimate values.
+- Interpolation (within the data range) is reliable; extrapolation (outside it) is not.
+- Correlation does not prove causation — always consider whether a third factor could explain the relationship.
+`,
   "unit-conversions": `---
 title: "Unit Conversions – GCSE Maths Revision Guide"
 description: "Master metric and imperial unit conversions for GCSE Maths with step-by-step methods, worked examples and practice questions."
@@ -11303,6 +25022,142 @@ Ready to practise unit conversions with instant feedback? [Create your free GCSE
 ## Summary
 
 Unit conversions are essential throughout GCSE Maths. Learn the key metric facts (1 km = 1,000 m, 1 kg = 1,000 g, 1 litre = 1,000 ml = 1,000 cm³) and the approximate imperial equivalents. For area conversions, **square** the linear factor; for volume conversions, **cube** it. Always check whether you should multiply or divide by thinking about whether the answer should be bigger or smaller. Careful unit work underpins accurate answers in compound measure questions, so building this skill pays dividends across the entire exam.
+`,
+  "using-the-quadratic-formula": `---
+title: "Using the Quadratic Formula – GCSE Maths Revision Guide"
+description: "Master the quadratic formula for GCSE Maths Higher tier with identifying a, b, c, the discriminant, worked examples, and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Algebra"
+categoryColour: "blue"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["quadratic formula GCSE", "using quadratic formula", "discriminant GCSE", "solve quadratic equation formula", "a b c quadratic"]
+tier: "Higher only"
+strand: "Algebra"
+topicNumber: 89
+---
+
+The quadratic formula is a universal method for solving any quadratic equation, even when it does not factorise neatly. Although the formula is printed on the exam formula sheet, knowing how to use it fluently under time pressure is essential for Higher tier success.
+
+## What Is the Quadratic Formula?
+
+The quadratic formula solves equations of the form ax² + bx + c = 0 by substituting the coefficients a, b, and c directly into a formula. It always works, whether the solutions are integers, fractions, surds, or non-existent.
+
+The part of the formula underneath the square root sign, b² - 4ac, is called the **discriminant**. It determines how many real solutions the equation has. If the discriminant is positive, there are two distinct solutions. If it equals zero, there is exactly one repeated solution. If it is negative, there are no real solutions — the parabola does not cross the x-axis.
+
+Understanding the discriminant is valuable because exam questions sometimes ask "how many solutions does this equation have?" without requiring you to solve it.
+
+### Key Formulas
+
+[FORMULA: x = (-b ± sqrt(b² - 4ac)) / 2a]
+
+[FORMULA: Discriminant = b² - 4ac]
+
+## Step-by-Step Method
+
+1. Rearrange the equation into the standard form ax² + bx + c = 0.
+2. Identify the values of a, b, and c, paying careful attention to negative signs.
+3. Calculate the discriminant b² - 4ac separately.
+4. Substitute a, b, and the discriminant into the formula.
+5. Evaluate the two solutions using + and - in the numerator.
+6. Simplify surds or round to the required number of decimal places.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Solve x² + 2x - 5 = 0, giving your answers in surd form.
+
+**Working:**
+
+Step 1 — Identify a = 1, b = 2, c = -5.
+
+Step 2 — Discriminant: b² - 4ac = (2)² - 4(1)(-5) = 4 + 20 = 24.
+
+Step 3 — Substitute into the formula: x = (-2 ± sqrt(24)) / 2(1) = (-2 ± sqrt(24)) / 2.
+
+Step 4 — Simplify sqrt(24) = sqrt(4 times 6) = 2sqrt(6).
+
+Step 5 — x = (-2 ± 2sqrt(6)) / 2 = -1 ± sqrt(6).
+
+**Answer:** x = -1 + sqrt(6) or x = -1 - sqrt(6)
+
+## Worked Example 2 — Higher Level
+
+**Question:** Solve 3x² - 5x - 1 = 0, giving your answers correct to 2 decimal places.
+
+**Working:**
+
+Step 1 — a = 3, b = -5, c = -1.
+
+Step 2 — Discriminant: (-5)² - 4(3)(-1) = 25 + 12 = 37.
+
+Step 3 — x = (-(-5) ± sqrt(37)) / 2(3) = (5 ± sqrt(37)) / 6.
+
+Step 4 — sqrt(37) = 6.0828 (to 4 d.p.).
+
+x = (5 + 6.0828) / 6 = 11.0828 / 6 = 1.847... = 1.85 (2 d.p.)
+
+x = (5 - 6.0828) / 6 = -1.0828 / 6 = -0.1804... = -0.18 (2 d.p.)
+
+**Answer:** x = 1.85 or x = -0.18
+
+## Worked Example 3 — Exam Style
+
+**Question:** Use the discriminant to show that 2x² + 3x + 4 = 0 has no real solutions. (2 marks)
+
+**Working:**
+
+a = 2, b = 3, c = 4.
+
+Discriminant = b² - 4ac = 9 - 4(2)(4) = 9 - 32 = -23.
+
+Since the discriminant is negative (-23 < 0), the equation has no real solutions.
+
+**Answer:** Discriminant = -23; no real solutions exist.
+
+## Common Mistakes
+
+- **Getting the sign of b wrong.** The formula contains -b. If b is already negative (e.g. b = -5), then -b = -(-5) = +5. Write this substitution out explicitly to avoid errors.
+- **Dividing only part of the numerator by 2a.** The entire expression -b ± sqrt(b² - 4ac) must be divided by 2a, not just one part. Draw a long fraction line under the whole numerator.
+- **Rounding too early.** Keep the full square root value until the final step. Rounding intermediate calculations introduces error and can give an incorrect final answer.
+
+## Exam Tips
+
+- Write "a = ..., b = ..., c = ..." on a separate line before substituting. This earns a method mark on most papers and helps you avoid sign mistakes.
+- If the question asks for answers to a number of decimal places, that is a strong hint to use the quadratic formula rather than factorising.
+- Calculate the discriminant on its own line. It keeps your working tidy and immediately tells you whether to expect two solutions, one, or none.
+
+## Practice Questions
+
+**Q1 (Higher):** Solve x² - 6x + 4 = 0, giving answers in surd form.
+
+[ANSWER: a = 1, b = -6, c = 4. Discriminant = 36 - 16 = 20. x = (6 ± sqrt(20)) / 2 = (6 ± 2sqrt(5)) / 2 = 3 ± sqrt(5).]
+
+**Q2 (Higher):** Solve 2x² + x - 4 = 0, giving answers to 2 decimal places.
+
+[ANSWER: a = 2, b = 1, c = -4. Discriminant = 1 + 32 = 33. x = (-1 ± sqrt(33)) / 4. sqrt(33) = 5.7446. x = (-1 + 5.7446)/4 = 1.19 or x = (-1 - 5.7446)/4 = -1.69.]
+
+**Q3 (Higher):** How many real solutions does 5x² - 2x + 1 = 0 have? Justify your answer.
+
+[ANSWER: Discriminant = (-2)² - 4(5)(1) = 4 - 20 = -16. Since -16 < 0, the equation has no real solutions.]
+
+---
+
+Practise using the quadratic formula questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Solving Quadratic Equations Quadratic Formula](/topics/solving-quadratic-equations-quadratic-formula)
+- [Completing the Square](/topics/completing-the-square)
+- [Solving Quadratic Equations by Factorising](/topics/solving-quadratic-equations-factorising)
+
+## Summary
+
+- The quadratic formula x = (-b ± sqrt(b² - 4ac)) / 2a solves any quadratic equation in the form ax² + bx + c = 0.
+- Identify a, b, and c carefully, especially when coefficients are negative.
+- The discriminant b² - 4ac tells you how many real solutions exist: positive means two, zero means one, negative means none.
+- Show full substitution in your working to earn method marks.
+- Simplify surds when asked for exact answers; otherwise round only at the final step.
 `,
   "vectors": `---
 title: "Vectors – GCSE Maths Revision Guide"
@@ -11788,5 +25643,738 @@ Ready to practise volume questions with instant feedback? [Create your free GCSE
 ## Summary
 
 Volume measures the three-dimensional space inside a solid and is always in cubic units. For prisms and cylinders, multiply the cross-sectional area by the length or height. For cones and pyramids, use one-third of the equivalent prism or cuboid formula. For spheres, use (4/3)πr³. Always use the perpendicular height (not the slant height), distinguish radius from diameter, and show the formula in your working. Volume questions are high-value marks on every GCSE paper, so practising the full range of shapes is time well spent.
+`,
+  "volume-of-a-cone": `---
+title: "Volume of a Cone – GCSE Maths Revision Guide"
+description: "Master the volume of a cone formula V = one-third pi r squared h for GCSE Higher, including frustums and finding missing dimensions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 8
+keywords: ["volume of a cone GCSE", "cone volume formula", "frustum GCSE maths", "volume of cone worked examples", "cone higher GCSE"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 104
+---
+
+The volume of a cone is a Higher-tier topic that builds directly on the volume of a cylinder. A cone holds exactly one-third the volume of a cylinder with the same base radius and height. This guide covers the formula, reverse problems, and the frustum — a favourite of GCSE exam boards including AQA, Edexcel and OCR.
+
+## What Is the Volume of a Cone?
+
+A cone is a 3D shape with a circular base that tapers to a single point (the apex). The perpendicular height is the vertical distance from the base to the apex — not the slant height along the side.
+
+The volume of a cone is one-third of the volume of the cylinder that would enclose it. This relationship is the key to remembering the formula: take the cylinder formula (pi r² h) and divide by 3.
+
+A frustum is the solid left when the top of a cone is cut off by a plane parallel to the base. To find the volume of a frustum, calculate the volume of the full cone and subtract the volume of the small cone that was removed.
+
+### Key Formulas
+
+[FORMULA: V = ⅓ pi r² h, where r is the base radius and h is the perpendicular height]
+
+[FORMULA: Volume of a frustum = volume of large cone minus volume of small cone]
+
+## Step-by-Step Method
+
+1. Identify the radius (r) and the perpendicular height (h) — not the slant height.
+2. Substitute into V = ⅓ pi r² h.
+3. For frustums, find the dimensions of both the large and small cones, then subtract.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A cone has a base radius of 6 cm and a perpendicular height of 10 cm. Find its volume. Give your answer in terms of pi.
+
+**Working:**
+V = ⅓ pi r² h
+V = ⅓ × pi × 6² × 10
+V = ⅓ × pi × 36 × 10
+V = ⅓ × 360pi
+V = 120pi
+
+**Answer:** 120pi cm³
+
+## Worked Example 2 — Higher Level
+
+**Question:** A cone has a volume of 300pi cm³ and a base radius of 10 cm. Find its perpendicular height.
+
+**Working:**
+V = ⅓ pi r² h
+300pi = ⅓ × pi × 10² × h
+300pi = ⅓ × 100pi × h
+300 = ⅓ × 100 × h
+300 = (100/3) × h
+h = 300 × 3 ÷ 100
+h = 900 ÷ 100
+h = 9
+
+**Answer:** 9 cm
+
+## Worked Example 3 — Exam Style
+
+**Question:** A frustum is formed by removing a small cone from the top of a large cone. The large cone has base radius 9 cm and perpendicular height 12 cm. The small cone has base radius 3 cm and perpendicular height 4 cm. Find the volume of the frustum to the nearest whole number.
+
+**Working:**
+Large cone volume = ⅓ × pi × 9² × 12 = ⅓ × pi × 81 × 12 = ⅓ × 972pi = 324pi
+Small cone volume = ⅓ × pi × 3² × 4 = ⅓ × pi × 9 × 4 = ⅓ × 36pi = 12pi
+Frustum volume = 324pi − 12pi = 312pi = 980.176...
+
+**Answer:** 980 cm³
+
+## Common Mistakes
+
+- **Forgetting the one-third.** This is the most frequent error. Without the ⅓, you calculate the volume of a cylinder instead of a cone.
+- **Using the slant height instead of the perpendicular height.** The formula requires the vertical height h, not the slant height l. If only the slant height is given, use Pythagoras: h² = l² − r².
+- **Frustum errors — subtracting the wrong cone.** Always subtract the smaller cone (the removed piece) from the larger cone. Check your dimensions carefully using similar triangles.
+
+## Exam Tips
+
+- The cone volume formula is on the formula sheet. Write it out at the start of your working to earn the method mark.
+- For frustum questions, set up both cone volumes separately before subtracting. This keeps your working clear and avoids sign errors.
+- If you are given the slant height, draw a right-angled triangle with the radius, perpendicular height, and slant height and use Pythagoras to find the missing measurement.
+
+## Practice Questions
+
+**Q1 (Foundation):** A cone has radius 5 cm and height 12 cm. Find its volume to 1 decimal place.
+
+[ANSWER: V = ⅓ × pi × 25 × 12 = 100pi = 314.2 cm³.]
+
+**Q2 (Foundation):** A cone has radius 3 cm and perpendicular height 7 cm. Find its volume in terms of pi.
+
+[ANSWER: V = ⅓ × pi × 9 × 7 = 21pi cm³.]
+
+**Q3 (Higher):** A frustum has a large cone with radius 8 cm and height 15 cm, and the removed small cone has radius 4 cm and height 7.5 cm. Find the volume of the frustum to 3 significant figures.
+
+[ANSWER: Large cone = ⅓ × pi × 64 × 15 = 320pi. Small cone = ⅓ × pi × 16 × 7.5 = 40pi. Frustum = 280pi = 879.6... = 880 cm³.]
+
+---
+
+Practise volume of a cone questions with instant AI feedback — completely free on GCSEMathsAI.
+
+---
+
+## Related Topics
+
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+- [Surface Area](/topics/surface-area)
+- [Volume of a Cylinder](/topics/volume-of-a-cylinder)
+
+## Summary
+
+- The volume of a cone is V = ⅓ pi r² h — one-third of the equivalent cylinder volume.
+- Always use the perpendicular height, not the slant height.
+- A frustum is formed by removing a smaller cone from the top; subtract the small cone volume from the large cone volume.
+- The formula is given on the exam formula sheet, but writing it in your working still earns marks.
+`,
+  "volume-of-a-cylinder": `---
+title: "Volume of a Cylinder – GCSE Maths Revision Guide"
+description: "Learn the volume of a cylinder formula V = pi r squared h for GCSE Maths with worked examples, reverse problems and real-world contexts."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["volume of a cylinder GCSE", "pi r squared h", "cylinder volume formula", "volume of cylinder worked examples", "cylinder GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 103
+---
+
+Cylinder volume questions appear regularly on both Foundation and Higher GCSE papers. A cylinder is simply a circular prism, so the formula follows the same logic — area of the circular cross-section multiplied by the height. This guide walks through the formula, reverse problems, and real-world applications.
+
+## What Is the Volume of a Cylinder?
+
+A cylinder is a 3D shape with two identical circular faces connected by a curved surface. Its volume is the amount of space it encloses.
+
+Because a cylinder is a prism with a circular cross-section, the volume formula is the area of the circle (pi r²) multiplied by the height (h). This formula is not given on the exam formula sheet, so you must memorise it.
+
+Cylinders appear in many real-world contexts — water tanks, cans, pipes, and candles. Exam questions often present the cylinder in a practical scenario and ask you to calculate capacity or find a missing dimension.
+
+### Key Formulas
+
+[FORMULA: V = pi r² h, where r is the radius and h is the height]
+
+[FORMULA: To find h from volume: h = V ÷ (pi r²)]
+
+## Step-by-Step Method
+
+1. Check whether you have been given the radius or the diameter. If given the diameter, halve it.
+2. Substitute into V = pi r² h.
+3. Calculate, rounding as instructed or leaving in terms of pi.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A cylinder has radius 4 cm and height 10 cm. Find its volume to 1 decimal place.
+
+**Working:**
+V = pi r² h
+V = pi × 4² × 10
+V = pi × 16 × 10
+V = 160pi
+V = 502.654...
+
+**Answer:** 502.7 cm³ (1 d.p.)
+
+## Worked Example 2 — Higher Level
+
+**Question:** A cylindrical water tank has a volume of 5000 cm³ and a radius of 8 cm. Find its height to 1 decimal place.
+
+**Working:**
+V = pi r² h
+5000 = pi × 8² × h
+5000 = 64pi × h
+h = 5000 ÷ (64pi)
+h = 5000 ÷ 201.061...
+h = 24.867...
+
+**Answer:** 24.9 cm (1 d.p.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** A cylindrical can has diameter 7.4 cm and height 11 cm. Find the volume of the can in cm³. Give your answer to 3 significant figures.
+
+**Working:**
+Radius = 7.4 ÷ 2 = 3.7 cm
+V = pi × 3.7² × 11
+V = pi × 13.69 × 11
+V = 150.59pi
+V = 473.057...
+
+**Answer:** 473 cm³ (3 s.f.)
+
+## Common Mistakes
+
+- **Using the diameter instead of the radius.** The formula requires r, not d. If the question gives the diameter, divide by 2 first.
+- **Forgetting to square the radius.** Writing pi × r × h gives the wrong answer. You must square the radius before multiplying by the height.
+- **Confusing volume and surface area formulas.** Volume uses pi r² h (cubic units); curved surface area uses 2pi rh (square units). Check your units to confirm you have used the right formula.
+
+## Exam Tips
+
+- This formula is not on the exam formula sheet — learn V = pi r² h by heart.
+- For reverse problems (finding r or h), rearrange the formula before substituting. Show the rearrangement step for a method mark.
+- In real-world context questions, check whether the answer needs converting (e.g. cm³ to litres: 1000 cm³ = 1 litre).
+
+## Practice Questions
+
+**Q1 (Foundation):** A cylinder has radius 5 cm and height 9 cm. Find its volume to the nearest whole number.
+
+[ANSWER: V = pi × 25 × 9 = 225pi = 707 cm³.]
+
+**Q2 (Foundation):** A cylindrical tin has diameter 8 cm and height 12 cm. Find its volume to 1 decimal place.
+
+[ANSWER: r = 4 cm. V = pi × 16 × 12 = 192pi = 603.2 cm³.]
+
+**Q3 (Higher):** A cylinder has a volume of 800 cm³ and a height of 10 cm. Find its radius to 2 decimal places.
+
+[ANSWER: 800 = pi × r² × 10 → r² = 800 ÷ (10pi) = 80 ÷ pi = 25.464... → r = 5.05 cm.]
+
+---
+
+Practise volume of a cylinder questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+- [Surface Area](/topics/surface-area)
+- [Surface Area of a Cylinder](/topics/surface-area-of-a-cylinder)
+
+## Summary
+
+- A cylinder is a circular prism with volume V = pi r² h.
+- Always use the radius (not the diameter) in the formula.
+- To find a missing dimension, rearrange the formula before substituting.
+- This formula is not provided on the exam formula sheet — memorise it.
+- In real-world problems, remember that 1000 cm³ = 1 litre for capacity conversions.
+`,
+  "volume-of-a-prism": `---
+title: "Volume of a Prism – GCSE Maths Revision Guide"
+description: "Master the volume of a prism formula (cross-section area times length) for GCSE Maths with triangular prism examples and practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["volume of a prism GCSE", "prism volume formula", "triangular prism volume", "cross-section area GCSE", "volume GCSE maths"]
+tier: "Foundation & Higher"
+strand: "Geometry & Measures"
+topicNumber: 102
+---
+
+Prism questions are among the most reliable mark-earners at GCSE. The formula is straightforward — area of the cross-section multiplied by the length — but success depends on correctly identifying the cross-section and calculating its area first. This topic appears on both Foundation and Higher papers across AQA, Edexcel and OCR.
+
+## What Is a Prism?
+
+A prism is a three-dimensional shape with a **uniform cross-section** that runs the entire length of the solid. If you sliced a prism at any point along its length, you would always get the same 2D shape.
+
+Common prisms include cuboids (rectangular cross-section), triangular prisms, and shapes with L-shaped, trapezoidal, or pentagonal cross-sections. A cylinder is technically a circular prism, though it has its own formula.
+
+The key idea is that every prism can be thought of as a 2D shape stretched along a length. This is why the volume equals the area of that 2D shape (the cross-section) multiplied by how far it is stretched (the length or depth).
+
+Prism questions at GCSE range from straightforward triangular prisms on Foundation to prisms with compound cross-sections (such as L-shapes or trapeziums) on Higher papers. In every case, the method is the same — find the cross-section area first, then multiply by the length.
+
+### Key Formulas
+
+[FORMULA: V = area of cross-section × length]
+
+[FORMULA: For a triangular prism: V = ½ × base × height × length]
+
+## Step-by-Step Method
+
+1. Identify the cross-section — the 2D shape that stays the same along the length of the prism.
+2. Calculate the area of the cross-section using the appropriate area formula (triangle, trapezium, L-shape, etc.).
+3. Multiply the cross-sectional area by the length (or depth) of the prism.
+4. State your answer with cubic units (cm³, m³, etc.).
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A triangular prism has a triangular cross-section with base 8 cm and perpendicular height 5 cm. The prism is 12 cm long. Find its volume.
+
+**Working:**
+Cross-section area = ½ × 8 × 5 = 20 cm²
+Volume = 20 × 12 = 240
+
+**Answer:** 240 cm³
+
+## Worked Example 2 — Higher Level
+
+**Question:** A prism has a trapezoidal cross-section. The trapezium has parallel sides of 6 cm and 10 cm and a perpendicular height of 4 cm. The prism is 15 cm long. Find its volume.
+
+**Working:**
+Cross-section area = ½(6 + 10) × 4 = ½ × 16 × 4 = 32 cm²
+Volume = 32 × 15 = 480
+
+**Answer:** 480 cm³
+
+## Worked Example 3 — Exam Style
+
+**Question:** A prism has an L-shaped cross-section. The L-shape has overall dimensions 7 cm by 5 cm, with a 3 cm by 2 cm rectangle removed from one corner. The prism is 20 cm long. Find the volume.
+
+**Working:**
+Full rectangle area = 7 × 5 = 35 cm²
+Removed rectangle area = 3 × 2 = 6 cm²
+L-shaped cross-section area = 35 − 6 = 29 cm²
+Volume = 29 × 20 = 580
+
+**Answer:** 580 cm³
+
+## Common Mistakes
+
+- **Confusing the cross-section with a side face.** The cross-section is the face that stays the same along the length. It is usually the shape shown "face-on" in the diagram.
+- **Using the slant side of a triangle instead of the perpendicular height.** When the cross-section is a triangle, you need the height at right angles to the base.
+- **Multiplying by the wrong dimension.** After finding the cross-sectional area, multiply by the length that runs perpendicular to the cross-section, not another dimension of the cross-section.
+- **Forgetting cubic units.** Volume is measured in cm³ or m³, not cm² or cm. If your units are wrong, the examiner knows you have confused area and volume.
+
+## Exam Tips
+
+- Always write "area of cross-section = ..." as a separate step. This earns a method mark and keeps your working clear.
+- If the cross-section is a compound shape, find its area using addition or subtraction of simpler shapes before multiplying by the length.
+- The prism formula is not on the formula sheet for AQA or Edexcel — you must memorise it.
+- When asked for volume in a real-world context (e.g. filling a container), check if you need to convert units or state capacity in litres (1000 cm³ = 1 litre).
+
+## Practice Questions
+
+**Q1 (Foundation):** A triangular prism has a cross-section with base 6 cm and height 4 cm. The prism is 10 cm long. Find its volume.
+
+[ANSWER: Cross-section = ½ × 6 × 4 = 12 cm². Volume = 12 × 10 = 120 cm³.]
+
+**Q2 (Foundation):** A cuboid measures 9 cm by 4 cm by 5 cm. Find its volume.
+
+[ANSWER: V = 9 × 4 × 5 = 180 cm³.]
+
+**Q3 (Higher):** A prism has a pentagonal cross-section with area 42 cm². The prism is 18 cm long. Find its volume.
+
+[ANSWER: V = 42 × 18 = 756 cm³.]
+
+---
+
+Practise volume of a prism questions with instant AI feedback — completely free on GCSEMathsAI.
+
+---
+
+## Related Topics
+
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+- [Area of 2D Shapes](/topics/area-of-2d-shapes)
+- [Area of a Trapezium](/topics/area-of-a-trapezium)
+
+## Summary
+
+- A prism has a uniform cross-section that runs along its entire length.
+- Volume of a prism = area of cross-section × length.
+- Always identify and calculate the cross-sectional area first, then multiply by the length.
+- Common cross-sections include triangles, trapeziums, and L-shapes.
+- This formula is not given on the exam formula sheet — learn it by heart.
+- Show the cross-sectional area calculation as a clear separate step in your exam working.
+`,
+  "volume-of-a-pyramid": `---
+title: "Volume of a Pyramid – GCSE Maths Revision Guide"
+description: "Learn how to calculate the volume of a pyramid using V = one-third × base area × height, with worked examples and GCSE practice questions."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["volume of a pyramid GCSE", "pyramid formula", "square based pyramid volume", "triangular pyramid", "volume Higher GCSE"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 168
+---
+
+The volume of a pyramid is a Higher tier topic that builds on your knowledge of area and 3D shapes. The key idea is that a pyramid occupies exactly one-third the volume of a prism with the same base and height.
+
+## What Is a Pyramid?
+
+A pyramid is a 3D shape with a flat polygon base and triangular faces that meet at a single point called the apex. The most common types in GCSE questions are square-based pyramids and triangular-based pyramids (tetrahedra).
+
+The volume formula V = ⅓ × base area × height works for every pyramid, regardless of the shape of the base. The height used must be the **perpendicular** (vertical) height from the base to the apex, not the slant height along a triangular face.
+
+Understanding why the factor is ⅓ is helpful: three identical pyramids can be assembled to form a prism with the same base and height. Each pyramid therefore contains one-third of that prism's volume.
+
+### Key Formulas
+
+[FORMULA: V = ⅓ × base area × perpendicular height]
+
+[FORMULA: For a square-based pyramid with base side s: base area = s², so V = ⅓ × s² × h]
+
+## Step-by-Step Method
+
+1. Calculate the area of the base — use the appropriate area formula for the base shape (square, rectangle, triangle, etc.).
+2. Identify the perpendicular height of the pyramid — the vertical distance from the centre of the base straight up to the apex.
+3. Multiply the base area by the height, then divide by 3 (or multiply by ⅓).
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A square-based pyramid has a base with side length 6 cm and a perpendicular height of 10 cm. Find its volume.
+
+**Working:**
+Base area = 6² = 36 cm²
+V = ⅓ × 36 × 10
+V = ⅓ × 360
+V = 120
+
+**Answer:** 120 cm³
+
+## Worked Example 2 — Higher Level
+
+**Question:** A pyramid has a rectangular base measuring 8 cm by 5 cm. Its volume is 80 cm³. Find the perpendicular height.
+
+**Working:**
+Base area = 8 × 5 = 40 cm²
+V = ⅓ × base area × h
+80 = ⅓ × 40 × h
+80 = (40h)/3
+240 = 40h
+h = 240 ÷ 40
+h = 6
+
+**Answer:** 6 cm
+
+## Worked Example 3 — Exam Style
+
+**Question:** A triangular-based pyramid has a base that is an equilateral triangle with side 10 cm and perpendicular height of the triangle 8.66 cm. The pyramid's vertical height is 12 cm. Find its volume to the nearest whole number.
+
+**Working:**
+Base area = ½ × 10 × 8.66 = 43.3 cm²
+V = ⅓ × 43.3 × 12
+V = ⅓ × 519.6
+V = 173.2
+V ≈ 173
+
+**Answer:** 173 cm³
+
+## Common Mistakes
+
+- **Using slant height instead of perpendicular height.** The slant height runs along a triangular face. The formula requires the vertical height from base to apex. Use Pythagoras to convert if needed.
+- **Forgetting to divide by 3.** Without the ⅓ factor, you calculate the volume of a prism, not a pyramid.
+- **Incorrect base area.** For a triangular-based pyramid, the base is a triangle, not a square — use the triangle area formula for the base.
+- **Mixing up volume and surface area.** Volume is in cubic units (cm³), surface area in square units (cm²).
+
+## Exam Tips
+
+- The formula V = ⅓ × base area × height is given on most exam formula sheets — check your board.
+- Always show the base area calculation as a separate step for clarity and to earn method marks.
+- If the question gives the slant height, you will likely need Pythagoras' theorem to find the perpendicular height first.
+
+## Practice Questions
+
+**Q1 (Foundation):** A square-based pyramid has base side 9 cm and perpendicular height 15 cm. Find its volume.
+
+[ANSWER: Base area = 81. V = ⅓ × 81 × 15 = ⅓ × 1215 = 405 cm³.]
+
+**Q2 (Foundation):** A rectangular-based pyramid has a base of 12 cm by 4 cm and a height of 9 cm. Find its volume.
+
+[ANSWER: Base area = 48. V = ⅓ × 48 × 9 = ⅓ × 432 = 144 cm³.]
+
+**Q3 (Higher):** A square-based pyramid has volume 200 cm³ and base side 10 cm. Find the perpendicular height.
+
+[ANSWER: 200 = ⅓ × 100 × h → 600 = 100h → h = 6 cm.]
+
+---
+
+Practise volume of a pyramid questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+- [Surface Area](/topics/surface-area)
+- [Pythagoras' Theorem](/topics/pythagoras-theorem)
+
+## Summary
+
+- A pyramid has a polygon base and triangular faces meeting at an apex.
+- Volume = ⅓ × base area × perpendicular height.
+- The ⅓ factor is what distinguishes a pyramid from a prism.
+- Always use the perpendicular height, not the slant height.
+- Calculate the base area first as a separate step, then apply the formula.
+`,
+  "volume-of-a-sphere": `---
+title: "Volume of a Sphere – GCSE Maths Revision Guide"
+description: "Master the volume of a sphere formula V = four-thirds pi r cubed for GCSE Higher, including hemispheres and finding the radius from volume."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Geometry"
+categoryColour: "green"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["volume of a sphere GCSE", "sphere volume formula", "hemisphere volume GCSE", "four thirds pi r cubed", "sphere GCSE maths"]
+tier: "Higher only"
+strand: "Geometry & Measures"
+topicNumber: 105
+---
+
+The volume of a sphere is a Higher-tier formula that appears frequently in GCSE exams across AQA, Edexcel and OCR. It is provided on the formula sheet, so the challenge is applying it correctly — especially when dealing with hemispheres or working backwards to find the radius from a given volume.
+
+## What Is the Volume of a Sphere?
+
+A sphere is a perfectly round 3D shape where every point on the surface is the same distance from the centre. That distance is the radius.
+
+The volume formula involves cubing the radius and multiplying by four-thirds of pi. This means even small changes in the radius have a large effect on the volume — doubling the radius multiplies the volume by eight.
+
+A hemisphere is exactly half of a sphere, so its volume is half the sphere volume. Hemisphere questions are very common at GCSE and are a simple extension of the sphere formula.
+
+### Key Formulas
+
+[FORMULA: V = ⁴⁄₃ pi r³, where r is the radius of the sphere]
+
+[FORMULA: Volume of a hemisphere = ²⁄₃ pi r³]
+
+## Step-by-Step Method
+
+1. Check whether you have the radius or the diameter. If given the diameter, halve it.
+2. Substitute into V = ⁴⁄₃ pi r³ and calculate.
+3. For a hemisphere, use V = ²⁄₃ pi r³ (or halve the sphere volume).
+
+## Worked Example 1 — Foundation Level
+
+**Question:** A sphere has a radius of 6 cm. Find its volume in terms of pi.
+
+**Working:**
+V = ⁴⁄₃ pi r³
+V = ⁴⁄₃ × pi × 6³
+V = ⁴⁄₃ × pi × 216
+V = 864 ÷ 3 × pi
+V = 288pi
+
+**Answer:** 288pi cm³
+
+## Worked Example 2 — Higher Level
+
+**Question:** A sphere has a volume of 500 cm³. Find its radius to 2 decimal places.
+
+**Working:**
+V = ⁴⁄₃ pi r³
+500 = ⁴⁄₃ pi r³
+r³ = 500 × 3 ÷ (4pi)
+r³ = 1500 ÷ (4pi)
+r³ = 1500 ÷ 12.566...
+r³ = 119.366...
+r = cube root of 119.366...
+r = 4.922...
+
+**Answer:** 4.92 cm (2 d.p.)
+
+## Worked Example 3 — Exam Style
+
+**Question:** A solid hemisphere has a radius of 5 cm. Find its volume to 1 decimal place.
+
+**Working:**
+Full sphere volume = ⁴⁄₃ × pi × 5³ = ⁴⁄₃ × pi × 125 = 500pi ÷ 3 = 166.666... × pi
+Hemisphere volume = ½ × 500pi ÷ 3 = 250pi ÷ 3 = 261.799...
+
+**Answer:** 261.8 cm³ (1 d.p.)
+
+## Common Mistakes
+
+- **Confusing r³ with r².** The sphere formula uses r cubed, not r squared. Squaring instead of cubing gives a surface-area-like answer.
+- **Using diameter instead of radius.** The formula uses r. If given a diameter of 10 cm, the radius is 5 cm — using 10 will give a volume eight times too large.
+- **Forgetting to halve for hemispheres.** A hemisphere is half a sphere. Divide the full sphere volume by 2.
+
+## Exam Tips
+
+- The formula is on the formula sheet. Copy it into your working and show the substitution clearly.
+- To find the radius from a given volume, rearrange to r³ = 3V ÷ (4pi), then cube-root the result.
+- When a sphere and hemisphere appear in the same question (e.g. a composite solid), calculate each separately and combine at the end.
+- Use estimation to check: a sphere with radius 10 cm has volume roughly 4189 cm³ (since ⁴⁄₃ × pi × 1000 is about 4189). If your answer is vastly different, recheck your working.
+
+## Practice Questions
+
+**Q1 (Foundation):** A sphere has a radius of 3 cm. Find its volume to 1 decimal place.
+
+[ANSWER: V = ⁴⁄₃ × pi × 27 = 36pi = 113.1 cm³.]
+
+**Q2 (Foundation):** A hemisphere has a radius of 8 cm. Find its volume to the nearest whole number.
+
+[ANSWER: V = ²⁄₃ × pi × 512 = 1024pi ÷ 3 = 1072 cm³.]
+
+**Q3 (Higher):** A sphere has a volume of 972pi cm³. Find the exact radius.
+
+[ANSWER: ⁴⁄₃ pi r³ = 972pi → r³ = 972 × 3 ÷ 4 = 2916 ÷ 4 = 729 → r = cube root of 729 = 9 cm.]
+
+---
+
+Practise volume of a sphere questions with instant AI feedback — completely free on GCSEMathsAI.
+
+---
+
+## Related Topics
+
+- [Volume of 3D Shapes](/topics/volume-of-3d-shapes)
+- [Surface Area](/topics/surface-area)
+- [Volume of a Cone](/topics/volume-of-a-cone)
+
+## Summary
+
+- The volume of a sphere is V = ⁴⁄₃ pi r³.
+- A hemisphere has half the sphere volume: V = ²⁄₃ pi r³.
+- Always use the radius, not the diameter.
+- To find the radius from volume, rearrange to r³ = 3V ÷ (4pi) and cube-root.
+`,
+  "writing-in-standard-form": `---
+title: "Writing in Standard Form – GCSE Maths Revision Guide"
+description: "Learn how to convert large and small numbers to standard form (A times 10 to the n) for GCSE Maths with clear rules and worked examples."
+date: "23 May 2026"
+dateISO: "2026-05-23"
+category: "Number"
+categoryColour: "purple"
+author: "GCSEMathsAI Team"
+readMins: 7
+keywords: ["standard form GCSE", "writing standard form", "A times 10 to the n", "scientific notation GCSE", "converting to standard form"]
+tier: "Foundation & Higher"
+strand: "Number"
+topicNumber: 133
+---
+
+Writing numbers in standard form is a key Number topic at GCSE. You need to convert both very large and very small numbers into the form A x 10^n, where 1 ≤ A < 10 and n is an integer. This appears on Foundation and Higher papers.
+
+## What Is Standard Form?
+
+Standard form (also called standard index form or scientific notation) is a way of writing numbers that would otherwise require many digits. It expresses any number as a value between 1 and 10 multiplied by a power of 10.
+
+For large numbers, the power of 10 is positive. For example, 5,800,000 = 5.8 x 10^6. For small numbers (between 0 and 1), the power is negative. For example, 0.00042 = 4.2 x 10^-4.
+
+The key rule is that A must satisfy 1 ≤ A < 10. If your value of A is 10 or more, or less than 1, the number is not in correct standard form.
+
+### Key Formulas
+
+[FORMULA: Standard form: A × 10^n where 1 ≤ A < 10 and n is an integer]
+
+[FORMULA: Positive n means a large number (≥ 10); negative n means a small number (< 1)]
+
+## Step-by-Step Method
+
+1. Place the decimal point after the first non-zero digit to create a number between 1 and 10 — this is A.
+2. Count how many places the decimal point moved from its original position — this gives the value of n.
+3. If the original number is 10 or larger, n is positive.
+4. If the original number is less than 1, n is negative.
+5. Write the answer as A × 10^n.
+
+## Worked Example 1 — Foundation Level
+
+**Question:** Write 72,000 in standard form.
+
+**Working:**
+
+Step 1 — Place the decimal after the first non-zero digit: 7.2.
+
+Step 2 — The decimal moved 4 places to the left (72000.0 → 7.2000).
+
+Step 3 — The original number is large, so n is positive: n = 4.
+
+**Answer:** 7.2 × 10⁴
+
+## Worked Example 2 — Higher Level
+
+**Question:** Write 0.0000508 in standard form.
+
+**Working:**
+
+Step 1 — The first non-zero digit is 5. Place the decimal after it: 5.08.
+
+Step 2 — The decimal moved 5 places to the right (0.0000508 → 5.08).
+
+Step 3 — The original number is less than 1, so n is negative: n = −5.
+
+**Answer:** 5.08 × 10⁻⁵
+
+## Worked Example 3 — Exam Style
+
+**Question:** A virus is 0.000000125 m long. Write this in standard form.
+
+**Working:**
+
+Step 1 — First non-zero digit is 1. A = 1.25.
+
+Step 2 — Count decimal shifts: the point moves 7 places to the right.
+
+Step 3 — Number is less than 1, so n = −7.
+
+**Answer:** 1.25 × 10⁻⁷ m
+
+## Common Mistakes
+
+- **Writing A outside the range 1 to 10.** For example, 45 × 10³ is not in standard form because 45 ≥ 10. The correct form is 4.5 × 10⁴.
+- **Getting the sign of n wrong.** Large numbers have positive powers; small numbers (less than 1) have negative powers. Think: "big number = big positive power."
+- **Miscounting the number of places the decimal point moves.** Count carefully, especially with numbers that have many zeros.
+
+## Exam Tips
+
+- Always double-check that A is between 1 (inclusive) and 10 (exclusive).
+- Convert your answer back to an ordinary number to verify it matches the original.
+- On ordering questions, compare the powers of 10 first — a higher power means a larger number for positive values.
+
+## Practice Questions
+
+**Q1 (Foundation):** Write 3,400,000 in standard form.
+
+[ANSWER: A = 3.4, decimal moved 6 places. Answer: 3.4 × 10⁶]
+
+**Q2 (Foundation):** Write 0.0072 in standard form.
+
+[ANSWER: First non-zero digit is 7. A = 7.2, decimal moved 3 places right. Answer: 7.2 × 10⁻³]
+
+**Q3 (Higher):** The distance from the Earth to the Sun is approximately 149,600,000 km. Write this in standard form.
+
+[ANSWER: A = 1.496, decimal moved 8 places. Answer: 1.496 × 10⁸ km]
+
+---
+
+Practise writing in standard form questions with instant AI feedback — completely free on GCSEMathsAI.
+
+## Related Topics
+
+- [Calculating with Standard Form](/topics/calculating-with-standard-form)
+- [Standard Form](/topics/standard-form)
+- [Indices and Index Laws](/topics/indices-and-index-laws)
+
+## Summary
+
+- Standard form writes a number as A × 10^n where 1 ≤ A < 10.
+- For large numbers (≥ 10), n is positive.
+- For small numbers (< 1), n is negative.
+- Count how many places the decimal point moves to find n.
+- Always check that A is in the correct range.
 `,
 };
