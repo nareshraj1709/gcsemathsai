@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 }
 
 const STRAND_META: Record<string, { icon: string; colour: string; bg: string; border: string }> = {
-  'Number':                              { icon: 'ðŸ”¢', colour: 'var(--green)',     bg: 'var(--green-soft)',   border: 'var(--rule)' },
-  'Algebra':                             { icon: 'ðŸ“', colour: 'var(--navy)',      bg: 'var(--navy-soft)',    border: 'var(--rule)' },
-  'Ratio, Proportion & Rates of Change': { icon: 'âš–ï¸', colour: 'var(--gold)',      bg: 'var(--gold-soft)',    border: 'var(--rule)' },
-  'Geometry & Measures':                 { icon: 'ðŸ“', colour: 'var(--burgundy)',  bg: 'var(--burgundy-soft)',border: 'var(--rule)' },
-  'Statistics & Probability':            { icon: 'ðŸ“Š', colour: 'var(--green-mid)', bg: 'var(--green-soft)',   border: 'var(--rule)' },
+  'Number':                              { icon: '#',  colour: 'var(--green)',     bg: 'var(--green-soft)',   border: 'var(--rule)' },
+  'Algebra':                             { icon: 'x',  colour: 'var(--navy)',      bg: 'var(--navy-soft)',    border: 'var(--rule)' },
+  'Ratio, Proportion & Rates of Change': { icon: '%',  colour: 'var(--gold)',      bg: 'var(--gold-soft)',    border: 'var(--rule)' },
+  'Geometry & Measures':                 { icon: '△', colour: 'var(--burgundy)',  bg: 'var(--burgundy-soft)',border: 'var(--rule)' },
+  'Statistics & Probability':            { icon: 'σ', colour: 'var(--green-mid)', bg: 'var(--green-soft)',   border: 'var(--rule)' },
 }
 
 const BASE = 'https://www.gcsemathsai.co.uk'
