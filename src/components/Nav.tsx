@@ -88,6 +88,7 @@ export default function Nav() {
 
   const resourceLinks = [
     { label: 'Diagnostic Quizzes', path: '/diagnostic', desc: 'MCQ quizzes for every topic' },
+    { label: 'Higher Revision Bundle', path: '/higher-bundle', desc: 'Free revision pack for Papers 2 & 3' },
     { label: 'Higher Practice Papers', path: '/practice-papers', desc: 'Edexcel Higher Paper 2 & 3 practice papers' },
     { label: 'Foundation Practice Papers', path: '/foundation-papers', desc: 'Edexcel Foundation practice papers' },
     { label: 'Glossary', path: '/glossary', desc: '60+ GCSE Maths terms defined' },
