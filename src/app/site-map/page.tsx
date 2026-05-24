@@ -41,6 +41,7 @@ export default function SiteMapPage() {
     { href: '/features/writing-pad', label: 'Writing Pad' },
     { href: '/features/parent-report', label: 'Parent Report' },
     { href: '/topics', label: 'All 245 topics' },
+    { href: '/diagnostic', label: 'Diagnostic MCQ quizzes' },
     { href: '/blog', label: 'Blog' },
     { href: '/glossary', label: 'Glossary' },
     { href: '/question-types', label: 'Question type guides' },

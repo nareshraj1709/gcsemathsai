@@ -85,15 +85,16 @@ export default function Nav() {
   ]
 
   const resourceLinks = [
-    { label: 'Higher Practice Papers · NEW', path: '/practice-papers', desc: 'Edexcel Higher Paper-2 & Paper-3 style practice papers' },
-    { label: 'Foundation Practice Papers · NEW', path: '/foundation-papers', desc: 'Edexcel Foundation — 10 calculator practice papers' },
+    { label: 'Diagnostic Quizzes · NEW', path: '/diagnostic', desc: 'MCQ quizzes for every topic — spot misconceptions fast' },
+    { label: 'Higher Practice Papers', path: '/practice-papers', desc: 'Edexcel Higher Paper-2 & Paper-3 style practice papers' },
+    { label: 'Foundation Practice Papers', path: '/foundation-papers', desc: 'Edexcel Foundation — 10 calculator practice papers' },
     { label: 'Blog', path: '/blog', desc: 'Revision guides and exam tips' },
     { label: 'Glossary', path: '/glossary', desc: '60+ GCSE Maths terms defined' },
     { label: 'Question Types', path: '/question-types', desc: 'How to answer every command word' },
+    { label: 'Formula Sheet', path: '/formula-sheet', desc: 'Every formula as a free PDF' },
     { label: 'AQA Hub', path: '/aqa', desc: 'AQA 8300 — paper structure & boundaries' },
     { label: 'Edexcel Hub', path: '/edexcel', desc: 'Edexcel 1MA1 — paper structure & boundaries' },
     { label: 'OCR Hub', path: '/ocr', desc: 'OCR J560 — paper structure & boundaries' },
-    { label: 'Formula Sheet', path: '/formula-sheet', desc: 'Every formula as a free PDF' },
     { label: 'Site Map', path: '/site-map', desc: 'Every page on the site' },
   ]
 

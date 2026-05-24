@@ -152,6 +152,31 @@ export default async function TopicPage({ params }: Props) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
+          {/* Diagnostic Quiz CTA */}
+          <div style={{
+            marginTop: 48, padding: '20px 24px', borderRadius: 12,
+            background: 'var(--gold-soft)', border: '1px solid var(--rule)',
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            flexWrap: 'wrap' as const, gap: 12,
+          }}>
+            <div>
+              <p style={{ fontSize: 15, fontWeight: 700, color: 'var(--ink)', margin: '0 0 4px' }}>
+                Test your understanding
+              </p>
+              <p style={{ fontSize: 13, color: 'var(--ink-2)', margin: 0 }}>
+                5 quick MCQs to identify any misconceptions on this topic.
+              </p>
+            </div>
+            <Link href={`/diagnostic/${slug}`} style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'var(--green)', color: 'var(--cream)', padding: '10px 20px',
+              borderRadius: 10, fontSize: 14, fontWeight: 700, fontFamily: 'var(--sans)',
+              textDecoration: 'none', whiteSpace: 'nowrap' as const,
+            }}>
+              Take Diagnostic Quiz
+            </Link>
+          </div>
+
           {/* Academic References */}
           <div style={{
             marginTop: 48, paddingTop: 32, borderTop: '1px solid var(--rule)',
