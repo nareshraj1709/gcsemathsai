@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["area of 2D shapes GCSE", "area formulas GCSE maths", "area of triangle", "area of circle", "area of trapezium GCSE"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 44
 ---
 

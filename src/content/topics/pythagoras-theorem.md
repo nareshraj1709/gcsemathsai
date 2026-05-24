@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["pythagoras theorem GCSE", "pythagoras theorem examples", "3D pythagoras GCSE", "right angled triangle", "hypotenuse GCSE maths"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 48
 ---
 

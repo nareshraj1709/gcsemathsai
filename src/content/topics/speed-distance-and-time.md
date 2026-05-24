@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["speed distance time GCSE", "speed formula GCSE maths", "average speed GCSE", "distance time graphs", "speed distance time triangle"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 39
 ---
 

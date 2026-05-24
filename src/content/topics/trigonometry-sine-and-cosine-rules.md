@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["sine rule GCSE", "cosine rule GCSE", "sine and cosine rule", "non right angled triangles GCSE", "area of triangle sine rule"]
 tier: "Higher only"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 50
 ---
 

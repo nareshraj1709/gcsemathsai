@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["density GCSE maths", "pressure GCSE", "compound measures GCSE", "mass volume density", "force area pressure"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 40
 ---
 

@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["unit conversions GCSE", "metric conversions GCSE maths", "imperial to metric GCSE", "converting units", "area volume unit conversion"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 41
 ---
 

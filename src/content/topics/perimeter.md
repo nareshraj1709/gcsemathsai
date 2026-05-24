@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["perimeter GCSE maths", "circumference of circle", "perimeter of shapes", "perimeter of compound shapes", "arc length GCSE"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 45
 ---
 

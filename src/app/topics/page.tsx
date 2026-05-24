@@ -174,7 +174,7 @@ export default function TopicsIndexPage() {
                           lineHeight: 1.4,
                           margin: 0,
                         }}>
-                          {idx + 1}. {topic.title.replace(/ â€” .*$/, '').replace(/ GCSE.*$/, '')}
+                          {idx + 1}. {topic.title.replace(/\s*[–—–—-]\s*(GCSE|Revision|Step).*$/, '').replace(/ GCSE.*$/, '')}
                         </p>
                         <p style={{
                           fontSize: 12,

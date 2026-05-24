@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["volume of 3D shapes GCSE", "volume of cylinder", "volume of cone", "volume of sphere GCSE", "volume of prism GCSE"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 46
 ---
 

@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["exponential growth GCSE", "exponential decay GCSE", "growth and decay GCSE higher", "exponential functions GCSE", "percentage multiplier"]
 tier: "Higher only"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 43
 ---
 

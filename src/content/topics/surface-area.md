@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["surface area GCSE", "surface area of cylinder", "surface area of cone", "surface area of sphere GCSE", "surface area of cuboid"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 47
 ---
 

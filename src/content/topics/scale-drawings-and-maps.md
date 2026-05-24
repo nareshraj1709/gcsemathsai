@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["scale drawings GCSE", "maps GCSE maths", "scale factor", "ratio scale", "reading maps GCSE"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 42
 ---
 

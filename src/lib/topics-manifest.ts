@@ -1714,7 +1714,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["area of 2D shapes GCSE", "area formulas GCSE maths", "area of triangle", "area of circle", "area of trapezium GCSE"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 44
 ---
 
@@ -4723,7 +4723,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["compound interest GCSE", "depreciation GCSE maths", "compound interest formula", "percentage increase decrease", "repeated percentage change"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 38
 ---
 
@@ -5018,7 +5018,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["density GCSE maths", "pressure GCSE", "compound measures GCSE", "mass volume density", "force area pressure"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 40
 ---
 
@@ -13027,7 +13027,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["exponential growth GCSE", "exponential decay GCSE", "growth and decay GCSE higher", "exponential functions GCSE", "percentage multiplier"]
 tier: "Higher only"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 43
 ---
 
@@ -18941,7 +18941,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["perimeter GCSE maths", "circumference of circle", "perimeter of shapes", "perimeter of compound shapes", "arc length GCSE"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 45
 ---
 
@@ -21366,7 +21366,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["pythagoras theorem GCSE", "pythagoras theorem examples", "3D pythagoras GCSE", "right angled triangle", "hypotenuse GCSE maths"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 48
 ---
 
@@ -25203,7 +25203,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["scale drawings GCSE", "maps GCSE maths", "scale factor", "ratio scale", "reading maps GCSE"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 42
 ---
 
@@ -28830,7 +28830,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["speed distance time GCSE", "speed formula GCSE maths", "average speed GCSE", "distance time graphs", "speed distance time triangle"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 39
 ---
 
@@ -30592,7 +30592,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["surface area GCSE", "surface area of cylinder", "surface area of cone", "surface area of sphere GCSE", "surface area of cuboid"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 47
 ---
 
@@ -31745,7 +31745,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["sine rule GCSE", "cosine rule GCSE", "sine and cosine rule", "non right angled triangles GCSE", "area of triangle sine rule"]
 tier: "Higher only"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 50
 ---
 
@@ -31955,7 +31955,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["SOHCAHTOA GCSE", "trigonometry GCSE maths", "sin cos tan GCSE", "right angled triangle trigonometry", "finding angles GCSE"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 49
 ---
 
@@ -32401,7 +32401,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["unit conversions GCSE", "metric conversions GCSE maths", "imperial to metric GCSE", "converting units", "area volume unit conversion"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 41
 ---
 
@@ -33311,7 +33311,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["volume of 3D shapes GCSE", "volume of cylinder", "volume of cone", "volume of sphere GCSE", "volume of prism GCSE"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 46
 ---
 

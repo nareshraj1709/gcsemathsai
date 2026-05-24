@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["compound interest GCSE", "depreciation GCSE maths", "compound interest formula", "percentage increase decrease", "repeated percentage change"]
 tier: "Foundation & Higher"
-strand: "Ratio"
+strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 38
 ---
 

@@ -9,7 +9,7 @@ author: "GCSEMathsAI Team"
 readMins: 8
 keywords: ["SOHCAHTOA GCSE", "trigonometry GCSE maths", "sin cos tan GCSE", "right angled triangle trigonometry", "finding angles GCSE"]
 tier: "Foundation & Higher"
-strand: "Geometry"
+strand: "Geometry & Measures"
 topicNumber: 49
 ---
 
