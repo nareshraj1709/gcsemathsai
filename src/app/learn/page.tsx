@@ -183,7 +183,7 @@ const GCSE_BOARDS = [
   { name: 'Edexcel', desc: 'Pearson / BTEC group'   },
   { name: 'OCR',     desc: 'Oxford, Cambridge & RSA' },
 ]
-const GCSE_YEARS  = ['Year 9', 'Year 10', 'Year 11', 'Resit (Adult)']
+const GCSE_YEARS  = ['Year 11', 'Year 10', 'Year 9', 'Resit (Adult)']
 
 // ── Main component ───────────────────────────────────────────
 export default function Learn() {
@@ -196,32 +196,33 @@ export default function Learn() {
   const [difficulty, setDifficulty] = useState<'Easy' | 'Medium' | 'Exam Level'>('Medium')
   const [format, setFormat] = useState<'mcq' | 'written'>('mcq')
 
-  // Auto-fill from saved profile and skip to phase 2
+  // Auto-fill from saved profile — only skip to phase 2 for signed-in users
   useEffect(() => {
-    // Try cache first for instant load
-    const cached = getProfileFromCache()
-    if (cached?.year && cached?.board) {
-      setYear(cached.year)
-      setBoard(cached.board)
-      if (cached.tier === 'Higher') setTier('Higher')
-      setPhase(2)
-      return
-    }
-
-    // Fall back to Supabase for returning users on new devices
-    import('@/lib/profile').then(({ loadProfile }) => {
-      loadProfile().then(profile => {
-        if (profile?.year && profile?.board) {
-          setYear(profile.year)
-          setBoard(profile.board)
-          if (profile.tier === 'Higher') setTier('Higher')
-          setPhase(2)
-        } else {
-          router.push('/onboarding')
+    import('@/lib/supabase').then(({ supabase }) => {
+      supabase.auth.getUser().then(({ data }) => {
+        if (data.user) {
+          const cached = getProfileFromCache()
+          if (cached?.year && cached?.board) {
+            setYear(cached.year)
+            setBoard(cached.board)
+            if (cached.tier === 'Higher') setTier('Higher')
+            setPhase(2)
+            return
+          }
+          import('@/lib/profile').then(({ loadProfile }) => {
+            loadProfile().then(profile => {
+              if (profile?.year && profile?.board) {
+                setYear(profile.year)
+                setBoard(profile.board)
+                if (profile.tier === 'Higher') setTier('Higher')
+                setPhase(2)
+              }
+            })
+          })
         }
       })
     })
-  }, [router])
+  }, [])
 
   const boards = GCSE_BOARDS
   const canProceed = !!year && !!board

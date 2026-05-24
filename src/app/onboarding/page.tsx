@@ -22,9 +22,9 @@ const font = {
 }
 
 const YEAR_OPTIONS = [
-  "Year 9",
-  "Year 10",
   "Year 11",
+  "Year 10",
+  "Year 9",
   "Resit (Adult)",
 ]
 
