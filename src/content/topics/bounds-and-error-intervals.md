@@ -148,7 +148,7 @@ So the area can be given to 1 significant figure.
 
 ---
 
-Get targeted Higher tier practice on bounds and error intervals. [Create your free account](https://www.gcsemathsai.co.uk/auth) and let our AI tutor guide your revision.
+Get targeted Higher tier practice on bounds and error intervals. [Create your free account](https://www.gcsemathsai.co.uk/auth) and let our expert system guide your revision.
 
 ## Related Topics
 

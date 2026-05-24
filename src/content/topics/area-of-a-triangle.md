@@ -102,7 +102,7 @@ h = 6
 
 ---
 
-Practise area of a triangle questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of a triangle questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

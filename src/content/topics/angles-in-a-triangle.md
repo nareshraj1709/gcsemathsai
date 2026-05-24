@@ -119,7 +119,7 @@ Step 5 — Check: 60 + 70 + 50 = 180°. Correct.
 
 ---
 
-Practise triangle angle questions with instant AI feedback free on GCSEMathsAI.
+Practise triangle angle questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

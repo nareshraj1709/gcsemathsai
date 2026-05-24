@@ -136,7 +136,7 @@ Focus first on:
 - Geometry (perimeter, area, Pythagoras, basic trigonometry)
 - Statistics (mean/median/mode, probability, pie charts)
 
-These topics carry the most marks at Foundation and are most accessible with focused practice. Use our [topic practice](/learn) to work through each area with instant AI marking — select Foundation tier and your exam board to get questions pitched at exactly the right level.
+These topics carry the most marks at Foundation and are most accessible with focused practice. Use our [topic practice](/learn) to work through each area with instant instant marking — select Foundation tier and your exam board to get questions pitched at exactly the right level.
 
 ### For Higher students:
 Foundation topics still appear in Higher papers — often in the first half of each paper. Do not neglect them. Then build progressively through the Higher-only topics listed above.
@@ -147,7 +147,7 @@ The topics where Higher students most commonly lose marks:
 - Conditional probability (Venn diagrams and two-way tables)
 - Vectors (combining and proving using vector notation)
 
-[Practise Higher-tier questions](/learn) on any of these topics with AI feedback that explains exactly where your method went wrong.
+[Practise Higher-tier questions](/learn) on any of these topics with instant feedback that explains exactly where your method went wrong.
 
 ## A Note on the AQA, Edexcel and OCR Tier Split
 
@@ -167,4 +167,4 @@ If your mock grade is 1–4 and your target is Grade 4 or 5, Foundation is the r
 
 ---
 
-Ready to find out how you perform on your tier? Try [topic-by-topic practice questions](/learn) with instant AI marking — free for all students, Foundation and Higher.
+Ready to find out how you perform on your tier? Try [topic-by-topic practice questions](/learn) with instant instant marking — free for all students, Foundation and Higher.

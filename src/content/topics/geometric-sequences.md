@@ -112,7 +112,7 @@ Check 5th term: 4 × 3⁴ = 4 × 81 = 324 ✓
 
 ---
 
-Practise geometric sequences with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise geometric sequences with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

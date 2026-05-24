@@ -122,7 +122,7 @@ Try brackets around (3 + 5): 4 × (3 + 5) − 1 = 4 × 8 − 1 = 32 − 1 = 31. 
 
 ---
 
-Build rock-solid BIDMAS skills with AI-powered practice that adapts to you. [Create your free account](https://www.gcsemathsai.co.uk/auth) and never get caught out by operation order again.
+Build rock-solid BIDMAS skills with smart practice that adapts to you. [Create your free account](https://www.gcsemathsai.co.uk/auth) and never get caught out by operation order again.
 
 ## Related Topics
 

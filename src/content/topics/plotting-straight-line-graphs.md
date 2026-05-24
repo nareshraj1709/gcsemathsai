@@ -117,7 +117,7 @@ Check with the other point: y = 3(4) + 2 = 14. Correct.
 
 ---
 
-Practise plotting straight-line graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise plotting straight-line graphs questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -100,7 +100,7 @@ Volume = 29 × 20 = 580
 
 ---
 
-Practise volume of a prism questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a prism questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 

@@ -125,7 +125,7 @@ Since n is not a whole number, 100 is **not** in the sequence.
 
 ---
 
-Ready to build your sequence skills with adaptive practice? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor generates unlimited sequence questions tailored to your level.
+Ready to build your sequence skills with adaptive practice? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system generates unlimited sequence questions tailored to your level.
 
 ## Related Topics
 

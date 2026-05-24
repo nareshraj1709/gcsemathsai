@@ -117,7 +117,7 @@ This is the same as -58 - 6x. QED.
 
 ---
 
-Practise expanding double brackets questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise expanding double brackets questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

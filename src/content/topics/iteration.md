@@ -127,7 +127,7 @@ Since two consecutive iterations agree to 2 decimal places, the solution is **x 
 
 ---
 
-Master iteration with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI provides instant step-by-step feedback so you can build confidence before exam day.
+Master iteration with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). We provide instant step-by-step feedback so you can build confidence before exam day.
 
 ---
 

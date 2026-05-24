@@ -125,7 +125,7 @@ Try x = 0 (which should not satisfy): −3(−4) = 12. Is 12 ≥ 30? No ✓
 
 ---
 
-Need more help with inequalities? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor walks you through each step and adjusts the difficulty as your confidence grows.
+Need more help with inequalities? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system walks you through each step and adjusts the difficulty as your confidence grows.
 
 ## Related Topics
 

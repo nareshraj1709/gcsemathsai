@@ -147,7 +147,7 @@ The curve passes through (0, 1) and rises steeply to the right. The x-axis is a 
 
 ---
 
-Challenge yourself with Higher-tier graph questions on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI tutor generates unlimited practice and marks your sketches instantly.
+Challenge yourself with Higher-tier graph questions on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). our expert system generates unlimited practice and marks your sketches instantly.
 
 ---
 

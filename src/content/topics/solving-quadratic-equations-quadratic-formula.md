@@ -120,7 +120,7 @@ x₂ = (3 − 8.0623) / 4 = −5.0623 / 4 ≈ −1.27
 
 ---
 
-Need to practise the quadratic formula until it becomes second nature? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor provides step-by-step guidance and checks every line of your working.
+Need to practise the quadratic formula until it becomes second nature? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system provides step-by-step guidance and checks every line of your working.
 
 ## Related Topics
 

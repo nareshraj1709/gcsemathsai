@@ -103,7 +103,7 @@ Time = k ÷ workers = 60 ÷ 15 = 4
 
 ---
 
-Practise inverse proportion questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise inverse proportion questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

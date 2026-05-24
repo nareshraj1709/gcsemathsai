@@ -104,4 +104,4 @@ Equally, every mark matters. One question worth 3 marks that you gain through be
 
 ---
 
-Practise past paper questions with instant AI marking to find out exactly where you are losing marks — completely free on GCSEMathsAI.
+Practise past paper questions with instant instant marking to find out exactly where you are losing marks — completely free on GCSEMathsAI.

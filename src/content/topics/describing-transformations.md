@@ -101,7 +101,7 @@ The shape has changed size. Scale factor = 6 ÷ 2 = 3 (using the base lengths). 
 
 ---
 
-Practise describing transformations questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise describing transformations questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

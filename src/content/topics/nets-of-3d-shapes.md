@@ -124,7 +124,7 @@ Step 5 — Total surface area = 36 + 60 = 96 cm².
 
 ---
 
-Practise nets and surface area questions with instant AI feedback free on GCSEMathsAI.
+Practise nets and surface area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -109,7 +109,7 @@ Check midpoint: ((2 + 8)/2, (7 + (−1))/2) = (10/2, 6/2) = (5, 3) ✓
 
 ---
 
-Practise midpoints and distances with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise midpoints and distances with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

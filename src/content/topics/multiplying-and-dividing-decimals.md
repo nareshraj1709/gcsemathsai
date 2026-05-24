@@ -109,7 +109,7 @@ Step 2 — Divide: 1,440 ÷ 6 = 240.
 
 ---
 
-Practise multiplying and dividing decimals questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise multiplying and dividing decimals questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

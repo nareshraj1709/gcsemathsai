@@ -43,11 +43,11 @@ Pearson publishes all past papers from the current 9–1 specification (2017 onw
 
 **Where to find them:** Search for "Edexcel 1MA1 past papers" on the Pearson Qualifications website. Papers are free to download as PDFs.
 
-**Limitations:** With only eight series available, students who start past paper practice early can exhaust the supply. This is where predicted and AI-generated papers become valuable.
+**Limitations:** With only eight series available, students who start past paper practice early can exhaust the supply. This is where predicted and expertly crafted papers become valuable.
 
-**AI-generated practice papers**
+**expertly crafted practice papers**
 
-GCSEMathsAI offers free AI-marked practice questions for every Edexcel topic, plus full practice paper packs for Paper 2 and Paper 3. The AI marking gives you instant, detailed feedback on your method — not just whether the answer is right, but whether your working would earn method marks.
+GCSEMathsAI offers free expert-marked practice questions for every Edexcel topic, plus full practice paper packs for Paper 2 and Paper 3. The instant marking gives you instant, detailed feedback on your method — not just whether the answer is right, but whether your working would earn method marks.
 
 ### AQA (8300)
 
@@ -160,23 +160,23 @@ The mark scheme tells you exactly how marks are awarded. Many students lose mark
 
 ## Using AI for Practice and Feedback
 
-Traditional practice papers give you a score, but they do not explain *why* you went wrong or how to improve your method. This is where AI-powered practice tools add value.
+Traditional practice papers give you a score, but they do not explain *why* you went wrong or how to improve your method. This is where smart practice tools add value.
 
-GCSEMathsAI provides AI-marked practice for every GCSE Maths topic. You can:
+GCSEMathsAI provides expert-marked practice for every GCSE Maths topic. You can:
 
 - Practise individual topics with instant feedback on your working
 - Get method-level marking — not just "right or wrong" but "you used the correct method but made an arithmetic error in step 3"
 - Generate unlimited fresh questions on any topic at any difficulty level
 - Track which topics you are strong on and which need more work
 
-This is particularly useful between exam papers. After Paper 1, you can target your weakest areas with focused AI practice before Papers 2 and 3.
+This is particularly useful between exam papers. After Paper 1, you can target your weakest areas with focused targeted practice before Papers 2 and 3.
 
 ## Quick-Reference: Free Resources Summary
 
 | Resource | Boards covered | Type | Cost |
 |----------|---------------|------|------|
 | Exam board websites | Own board only | Official past papers | Free |
-| GCSEMathsAI | All boards | AI-marked topic practice + practice papers | Free (topic practice) |
+| GCSEMathsAI | All boards | expert-marked topic practice + practice papers | Free (topic practice) |
 | Maths Genie | Edexcel focus | Past paper solutions, topic questions | Free |
 | Corbett Maths | All boards | 5-a-day questions, textbook exercises | Free |
 | Dr Frost Maths | All boards | Topic questions, past paper by topic | Free (basic) |
@@ -195,4 +195,4 @@ If you are reading this between Paper 1 and Paper 2 (or between Paper 2 and Pape
 
 ---
 
-Practise GCSE Maths questions on any topic with instant AI feedback — completely free on GCSEMathsAI.
+Practise GCSE Maths questions on any topic with instant feedback — completely free on GCSEMathsAI.

@@ -107,7 +107,7 @@ Step 3 — 1.035⁴ = 1.14752... so value = 2,000 × 1.14752... = 2,295.05 (to t
 
 ---
 
-Practise percentage multiplier questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise percentage multiplier questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

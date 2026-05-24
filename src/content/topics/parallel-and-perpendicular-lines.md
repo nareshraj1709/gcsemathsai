@@ -111,7 +111,7 @@ Check: at x = 4, y = −4/2 + 5 = −2 + 5 = 3 ✓
 
 ---
 
-Practise parallel and perpendicular lines with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise parallel and perpendicular lines with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

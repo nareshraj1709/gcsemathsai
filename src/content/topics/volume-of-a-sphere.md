@@ -103,7 +103,7 @@ Hemisphere volume = ½ × 500pi ÷ 3 = 250pi ÷ 3 = 261.799...
 
 ---
 
-Practise volume of a sphere questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a sphere questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 

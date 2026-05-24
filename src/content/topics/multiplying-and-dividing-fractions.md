@@ -113,7 +113,7 @@ Step 3 — Cross-cancel: the 2s cancel and the 7s cancel, giving 1/1 × 1/1 = 1.
 
 ---
 
-Practise multiplying and dividing fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise multiplying and dividing fractions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

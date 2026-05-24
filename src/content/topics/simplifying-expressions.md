@@ -133,7 +133,7 @@ Step 4 — Combine: 3x²y².
 
 ---
 
-Sharpen your algebra skills with AI-powered practice questions. [Create your free account](https://www.gcsemathsai.co.uk/auth) and get instant feedback every time.
+Sharpen your algebra skills with smart practice questions. [Create your free account](https://www.gcsemathsai.co.uk/auth) and get instant feedback every time.
 
 ## Related Topics
 

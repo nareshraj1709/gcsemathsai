@@ -130,7 +130,7 @@ Step 6 — 18L = 816. L = 816 ÷ 18 = 45.3 cm (1 d.p.).
 
 ---
 
-Practise triangular prism surface area questions with instant AI feedback free on GCSEMathsAI.
+Practise triangular prism surface area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

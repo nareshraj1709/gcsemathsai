@@ -115,7 +115,7 @@ Check: LHS = 4(7 + 3) = 4(10) = 40. RHS = 2(3(7) - 1) = 2(20) = 40. Both equal 4
 
 ---
 
-Practise equations with unknowns on both sides questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise equations with unknowns on both sides questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

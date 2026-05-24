@@ -109,7 +109,7 @@ Step 5 — Divide both sides by (y - 3): x = (5 + 2y) / (y - 3).
 
 ---
 
-Practise rearranging formulae questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise rearranging formulae questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -122,7 +122,7 @@ Step 4 — (550/3)π = 183.333... × 3.14159... = 575.958... ≈ 576.0 cm³.
 
 ---
 
-Practise hemisphere volume and surface area questions with instant AI feedback free on GCSEMathsAI.
+Practise hemisphere volume and surface area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -145,7 +145,7 @@ Step 3 — LCM: take the highest power of each prime.
 
 ---
 
-Practise prime factorisation, HCF, and LCM with unlimited AI-generated questions. [Start for free](https://www.gcsemathsai.co.uk/auth) and track your progress.
+Practise prime factorisation, HCF, and LCM with unlimited expertly crafted questions. [Start for free](https://www.gcsemathsai.co.uk/auth) and track your progress.
 
 ## Related Topics
 

@@ -218,4 +218,4 @@ $$V = \frac{1}{3}\pi r^2 h = \frac{1}{3} \times \pi \times 16 \times 9 = 48\pi =
 
 ---
 
-The best way to make formulae stick is to practise using them — not just reading them. [Try formula-based practice questions](/learn) with instant AI marking, free for all students.
+The best way to make formulae stick is to practise using them — not just reading them. [Try formula-based practice questions](/learn) with instant instant marking, free for all students.

@@ -132,7 +132,7 @@ Step 5: Check neither solution makes a denominator zero. x + 1 = 0 when x = −1
 
 ---
 
-Ready to conquer algebraic fractions? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor provides targeted practice on simplifying, combining, and solving with algebraic fractions.
+Ready to conquer algebraic fractions? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system provides targeted practice on simplifying, combining, and solving with algebraic fractions.
 
 ## Related Topics
 

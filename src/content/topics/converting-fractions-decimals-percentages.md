@@ -105,7 +105,7 @@ Step 3 — Multiply by 100: 0.68 × 100 = 68%.
 
 ---
 
-Practise converting fractions, decimals and percentages questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise converting fractions, decimals and percentages questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

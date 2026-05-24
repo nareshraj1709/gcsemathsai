@@ -113,7 +113,7 @@ Alternatively, using cross-multiplication: (2x + 1) × 2 = (x − 3) × 4, givin
 
 ---
 
-Practise equations with fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise equations with fractions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

@@ -137,7 +137,7 @@ Step 7: Area = length × width = 17 × 10 = 170 cm²
 
 ---
 
-Want to practise forming equations with instant hints? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor breaks down word problems step by step and helps you set up the algebra.
+Want to practise forming equations with instant hints? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system breaks down word problems step by step and helps you set up the algebra.
 
 ## Related Topics
 

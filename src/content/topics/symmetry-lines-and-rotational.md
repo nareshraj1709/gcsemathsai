@@ -123,7 +123,7 @@ Step 3 — Check for rotational symmetry by testing 180° rotation. If both halv
 
 ---
 
-Practise symmetry questions with instant AI feedback free on GCSEMathsAI.
+Practise symmetry questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

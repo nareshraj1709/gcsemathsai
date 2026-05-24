@@ -115,7 +115,7 @@ Step 5 — Solve: x = 216/990. Simplify by dividing by HCF(216, 990) = 18: x = 1
 
 ---
 
-Practise recurring decimals to fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise recurring decimals to fractions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

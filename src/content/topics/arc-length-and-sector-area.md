@@ -143,7 +143,7 @@ Step 2 — Rearrange to find θ:
 
 ---
 
-Want instant feedback on arc and sector questions? Try [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor adapts questions to your ability and marks your working in real time.
+Want instant feedback on arc and sector questions? Try [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system adapts questions to your ability and marks your working in real time.
 
 ## Related Topics
 

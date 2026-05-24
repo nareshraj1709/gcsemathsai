@@ -168,7 +168,7 @@ All three boards mark iteration the same way. The mark scheme rewards substituti
 
 Once iteration is solid, the next topic that combines well with it is **solving equations approximately by trial and improvement** — a Foundation-level technique that builds intuition for what iteration is doing geometrically. Then move on to **algebraic proof** for the kind of multi-step reasoning that closes out most Higher papers.
 
-For drills on iteration with instant feedback, [practise iteration questions with AI marking](/learn). Free, unlimited, calibrated to AQA, Edexcel and OCR mark schemes.
+For drills on iteration with instant feedback, [practise iteration questions with instant marking](/learn). Free, unlimited, calibrated to AQA, Edexcel and OCR mark schemes.
 
 ---
 

@@ -103,7 +103,7 @@ When w = 3.5: C = 150 × 12.25 = £1,837.50.
 
 ---
 
-Practise direct proportion equations with instant AI feedback — completely free on GCSEMathsAI.
+Practise direct proportion equations with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

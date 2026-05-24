@@ -109,7 +109,7 @@ A quadratic graph is the curve you get when you plot y = ax² + bx + c. It is al
 
 ---
 
-Practise sketching quadratic graphs with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise sketching quadratic graphs with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

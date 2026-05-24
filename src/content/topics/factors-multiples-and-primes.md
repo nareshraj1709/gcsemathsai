@@ -112,7 +112,7 @@ Step 2 — Since 51 = 3 × 17, it has factors other than 1 and itself.
 
 ---
 
-Practise factors, multiples and primes questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise factors, multiples and primes questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

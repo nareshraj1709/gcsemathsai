@@ -134,7 +134,7 @@ Step 3 — 235200 ÷ 1.12 = 210000.
 
 ---
 
-Practise percentages with personalised AI-generated questions and instant feedback. [Create your free account](https://www.gcsemathsai.co.uk/auth) and boost your grade today.
+Practise percentages with personalised expertly crafted questions and instant feedback. [Create your free account](https://www.gcsemathsai.co.uk/auth) and boost your grade today.
 
 ## Related Topics
 

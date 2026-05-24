@@ -140,7 +140,7 @@ n + (n + 1) + (n + 2) = 3n + 3
 
 ---
 
-Put your proof skills to the test with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI marks your working step by step and flags exactly where you might lose marks.
+Put your proof skills to the test with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our system marks your working step by step and flags exactly where you might lose marks.
 
 ---
 

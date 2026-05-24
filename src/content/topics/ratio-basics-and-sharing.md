@@ -127,7 +127,7 @@ For example, in the ratio 3 : 5, the fraction that is boys is 3/(3 + 5) = 3/8.
 
 ---
 
-Practise ratio questions with personalised feedback on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI generates unlimited questions at your level with full worked solutions.
+Practise ratio questions with personalised feedback on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). we generate unlimited questions at your level with full worked solutions.
 
 ---
 

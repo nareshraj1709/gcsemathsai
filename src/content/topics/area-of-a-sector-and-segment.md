@@ -125,7 +125,7 @@ Step 5 — Major segment area = full circle − minor segment = 201.062 − 67.7
 
 ---
 
-Practise sector and segment area questions with instant AI feedback free on GCSEMathsAI.
+Practise sector and segment area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

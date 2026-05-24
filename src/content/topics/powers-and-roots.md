@@ -130,7 +130,7 @@ Step 6 — Since 9.49² ≈ 90, √90 ≈ 9.5 to one decimal place.
 
 ---
 
-Build your confidence with powers and roots using adaptive AI practice. [Start for free](https://www.gcsemathsai.co.uk/auth) and get instant feedback on every question.
+Build your confidence with powers and roots using adaptive targeted practice. [Start for free](https://www.gcsemathsai.co.uk/auth) and get instant feedback on every question.
 
 ## Related Topics
 

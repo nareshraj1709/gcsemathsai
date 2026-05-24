@@ -131,7 +131,7 @@ Step 3 — Place the decimal point: 840 with 5 decimal places = 0.00840 = 0.0084
 
 ---
 
-Want personalised decimal practice with instant AI marking? [Sign up for free](https://www.gcsemathsai.co.uk/auth) and get targeted questions matched to your level.
+Want personalised decimal practice with instant expert marking? [Sign up for free](https://www.gcsemathsai.co.uk/auth) and get targeted questions matched to your level.
 
 ## Related Topics
 

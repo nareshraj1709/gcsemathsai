@@ -133,7 +133,7 @@ Step 4 — Check with y-component: (−2)/(2) = −1. Consistent.
 
 ---
 
-Practise negative enlargement questions with instant AI feedback free on GCSEMathsAI.
+Practise negative enlargement questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

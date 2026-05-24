@@ -103,7 +103,7 @@ An algebraic fraction has algebraic expressions in the numerator, the denominato
 
 ---
 
-Practise simplifying algebraic fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise simplifying algebraic fractions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

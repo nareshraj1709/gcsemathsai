@@ -143,7 +143,7 @@ Step 4 — Bearing of R from P = 060° + 36.9° = 096.9° ≈ **096.9°**
 
 ---
 
-Sharpen your bearing skills with personalised practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI adapts to your level and provides step-by-step solutions.
+Sharpen your bearing skills with personalised practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our platform adapts to your level and provides step-by-step solutions.
 
 ## Related Topics
 

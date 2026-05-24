@@ -102,7 +102,7 @@ Average speed = 120 ÷ 2.5 = 48 mph.
 
 ---
 
-Practise speed, distance and time questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise speed, distance and time questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

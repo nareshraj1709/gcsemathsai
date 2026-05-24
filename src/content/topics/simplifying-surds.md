@@ -109,7 +109,7 @@ Step 3 — 12 + 5 = 17. As required.
 
 ---
 
-Practise simplifying surds questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simplifying surds questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

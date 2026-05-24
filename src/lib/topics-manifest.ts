@@ -131,7 +131,7 @@ Step 3 — Because the cut is halfway up, the cross-section is smaller than the 
 
 ---
 
-Practise 3D shape questions with instant AI feedback free on GCSEMathsAI.
+Practise 3D shape questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -254,7 +254,7 @@ The denominators are already the same (both are x).
 
 ---
 
-Practise adding algebraic fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise adding algebraic fractions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -386,7 +386,7 @@ Step 3 — Subtract: 9/12 − 8/12 = 1/12.
 
 ---
 
-Practise adding and subtracting fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise adding and subtracting fractions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -536,7 +536,7 @@ Step 5: Check neither solution makes a denominator zero. x + 1 = 0 when x = −1
 
 ---
 
-Ready to conquer algebraic fractions? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor provides targeted practice on simplifying, combining, and solving with algebraic fractions.
+Ready to conquer algebraic fractions? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system provides targeted practice on simplifying, combining, and solving with algebraic fractions.
 
 ## Related Topics
 
@@ -699,7 +699,7 @@ n + (n + 1) + (n + 2) = 3n + 3
 
 ---
 
-Put your proof skills to the test with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI marks your working step by step and flags exactly where you might lose marks.
+Put your proof skills to the test with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our system marks your working step by step and flags exactly where you might lose marks.
 
 ---
 
@@ -981,7 +981,7 @@ Angle PAB = 3(10) + 10 = 40°
 
 ---
 
-Need more practice on angle rules? Try [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI generates unlimited angle problems and marks your working instantly.
+Need more practice on angle rules? Try [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — we generate unlimited angle problems and marks your working instantly.
 
 ## Related Topics
 
@@ -1115,7 +1115,7 @@ Step 5 — Check: 60 + 70 + 50 = 180°. Correct.
 
 ---
 
-Practise triangle angle questions with instant AI feedback free on GCSEMathsAI.
+Practise triangle angle questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -1268,7 +1268,7 @@ n = 360° / 24° = 15
 
 ---
 
-Practise polygon angle problems with personalised AI feedback at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our platform adapts to your ability and helps you improve faster.
+Practise polygon angle problems with personalised instant feedback at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our platform adapts to your ability and helps you improve faster.
 
 ## Related Topics
 
@@ -1559,7 +1559,7 @@ Step 2 — Rearrange to find θ:
 
 ---
 
-Want instant feedback on arc and sector questions? Try [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor adapts questions to your ability and marks your working in real time.
+Want instant feedback on arc and sector questions? Try [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system adapts questions to your ability and marks your working in real time.
 
 ## Related Topics
 
@@ -1973,7 +1973,7 @@ Total area = 60 + 14.137... = 74.137...
 
 ---
 
-Practise area of a circle questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of a circle questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -2093,7 +2093,7 @@ Total area = 40 + 30 = 70
 
 ---
 
-Practise area of a parallelogram questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of a parallelogram questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -2237,7 +2237,7 @@ Step 5 — Major segment area = full circle − minor segment = 201.062 − 67.7
 
 ---
 
-Practise sector and segment area questions with instant AI feedback free on GCSEMathsAI.
+Practise sector and segment area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -2353,7 +2353,7 @@ Total area = 60 + 30 = 90
 
 ---
 
-Practise area of a trapezium questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of a trapezium questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -2474,7 +2474,7 @@ h = 6
 
 ---
 
-Practise area of a triangle questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of a triangle questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -2594,7 +2594,7 @@ Total area = 60 + 40 = 100
 
 ---
 
-Practise area of compound shapes questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of compound shapes questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 
@@ -2746,7 +2746,7 @@ Step 5 — AC = √89.836 = 9.5 cm (1 d.p.).
 
 ---
 
-Practise triangle area questions with instant AI feedback free on GCSEMathsAI.
+Practise triangle area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -2896,7 +2896,7 @@ Calculate the angle for each sector of a pie chart.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -3013,7 +3013,7 @@ Check: 305° is between 0° and 360°, so this is the final answer.
 
 ---
 
-Practise bearings and trigonometry questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise bearings and trigonometry questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -3175,7 +3175,7 @@ Step 4 — Bearing of R from P = 060° + 36.9° = 096.9° ≈ **096.9°**
 
 ---
 
-Sharpen your bearing skills with personalised practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI adapts to your level and provides step-by-step solutions.
+Sharpen your bearing skills with personalised practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our platform adapts to your level and provides step-by-step solutions.
 
 ## Related Topics
 
@@ -3291,7 +3291,7 @@ Pack: total volume = 6 × 330 = 1980 ml. £2.70 ÷ 1980 = 0.1364p per ml (4 d.p.
 
 ---
 
-Practise best buy problems with instant AI feedback — completely free on GCSEMathsAI.
+Practise best buy problems with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -3459,7 +3459,7 @@ So the area can be given to 1 significant figure.
 
 ---
 
-Get targeted Higher tier practice on bounds and error intervals. [Create your free account](https://www.gcsemathsai.co.uk/auth) and let our AI tutor guide your revision.
+Get targeted Higher tier practice on bounds and error intervals. [Create your free account](https://www.gcsemathsai.co.uk/auth) and let our expert system guide your revision.
 
 ## Related Topics
 
@@ -3746,7 +3746,7 @@ Step 3 — 4.82 is between 1 and 10, so this is already in standard form.
 
 ---
 
-Practise calculating with standard form questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise calculating with standard form questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -3882,7 +3882,7 @@ Angle ADC = 180° − 72° = 108°
 
 ---
 
-Want to practise circle theorems with instant feedback? Visit [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) and let our AI tutor generate questions tailored to your level.
+Want to practise circle theorems with instant feedback? Visit [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) and let our expert system generate questions tailored to your level.
 
 ## Related Topics
 
@@ -3999,7 +3999,7 @@ Perimeter = 30π + 60 = 94.248… + 60 = 154.2 (1 d.p.)
 
 ---
 
-Practise circumference of a circle questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise circumference of a circle questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -4416,7 +4416,7 @@ Check: x = -2 + sqrt(7) is approximately 0.646. (0.646)² + 4(0.646) - 3 = 0.417
 
 ---
 
-Practise completing the square method questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise completing the square method questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -4556,7 +4556,7 @@ Step 5: Subtract 3: x = −3 ± √10.
 
 ---
 
-Want to master completing the square with guided practice? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor walks you through each step and builds your confidence for exam day.
+Want to master completing the square with guided practice? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system walks you through each step and builds your confidence for exam day.
 
 ## Related Topics
 
@@ -4696,7 +4696,7 @@ Check: g(8) = 4 + 1 = 5. f(5) = 20 − 3 = 17 ✓
 
 ---
 
-Practise composite functions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise composite functions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -4991,7 +4991,7 @@ Year 4: £4,917.27 × 1.03 = £5,064.79
 
 ---
 
-Practise compound interest questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise compound interest questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -5295,7 +5295,7 @@ P(Male | Drives) = 35/65 = 7/13.
 
 ---
 
-Practise conditional probability questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise conditional probability questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -5451,7 +5451,7 @@ Since 0.24 ≠ 0.20, the events are **not independent**.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -5881,7 +5881,7 @@ Step 4 — The valid region is the intersection of all three conditions. Shade i
 
 ---
 
-Build your construction and loci skills at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor can guide you through each step and mark your working.
+Build your construction and loci skills at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system can guide you through each step and mark your working.
 
 ## Related Topics
 
@@ -6147,7 +6147,7 @@ Step 3 — Multiply by 100: 0.68 × 100 = 68%.
 
 ---
 
-Practise converting fractions, decimals and percentages questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise converting fractions, decimals and percentages questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -6272,7 +6272,7 @@ Step 4 — Subtract 5: y = 1.
 
 ---
 
-Practise coordinates and plotting questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise coordinates and plotting questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -6398,7 +6398,7 @@ d = √89
 
 ---
 
-Practise cosine rule questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise cosine rule questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -6523,7 +6523,7 @@ Asymptotes: x = 0 (the y-axis) and y = 0 (the x-axis).
 
 ---
 
-Practise cubic and reciprocal graph questions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise cubic and reciprocal graph questions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -6697,7 +6697,7 @@ Estimate the median and the IQR.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -6822,7 +6822,7 @@ Class 1's times are more spread out (larger IQR), meaning homework times were le
 
 ---
 
-Practise cumulative frequency questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise cumulative frequency questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -6971,7 +6971,7 @@ Step 3 — Place the decimal point: 840 with 5 decimal places = 0.00840 = 0.0084
 
 ---
 
-Want personalised decimal practice with instant AI marking? [Sign up for free](https://www.gcsemathsai.co.uk/auth) and get targeted questions matched to your level.
+Want personalised decimal practice with instant expert marking? [Sign up for free](https://www.gcsemathsai.co.uk/auth) and get targeted questions matched to your level.
 
 ## Related Topics
 
@@ -7091,7 +7091,7 @@ Mass = Density × Volume = 0.8 × 942.478... = 753.982... g.
 
 ---
 
-Practise density, mass and volume questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise density, mass and volume questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -7213,7 +7213,7 @@ The shape has changed size. Scale factor = 6 ÷ 2 = 3 (using the base lengths). 
 
 ---
 
-Practise describing transformations questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise describing transformations questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -7345,7 +7345,7 @@ You can verify: 99² = 9801 and 1² = 1, so 9801 − 1 = 9800 ✓
 
 ---
 
-Practise difference of two squares questions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise difference of two squares questions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -7625,7 +7625,7 @@ When w = 3.5: C = 150 × 12.25 = £1,837.50.
 
 ---
 
-Practise direct proportion equations with instant AI feedback — completely free on GCSEMathsAI.
+Practise direct proportion equations with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -7752,7 +7752,7 @@ Step 3 — When x = 14: y = 2.5 × 14 = 35.
 
 ---
 
-Practise direct proportion graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise direct proportion graphs questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -7871,7 +7871,7 @@ Speed = 60 ÷ 1.5 = 40
 
 ---
 
-Practise distance-time graph questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise distance-time graph questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -7997,7 +7997,7 @@ Assuming even distribution: estimated frequency = 48 × (5/15) = 48 × 1/3 = 16.
 
 ---
 
-Practise histogram questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise histogram questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -8373,7 +8373,7 @@ Step 4 — Use y - y₁ = m(x - x₁): y - (-5) = 1(x - 5), so y + 5 = x - 5, wh
 
 ---
 
-Practise equation of a circle questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise equation of a circle questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -8506,7 +8506,7 @@ Check: LHS = 4(7 + 3) = 4(10) = 40. RHS = 2(3(7) - 1) = 2(20) = 40. Both equal 4
 
 ---
 
-Practise equations with unknowns on both sides questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise equations with unknowns on both sides questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -8629,7 +8629,7 @@ Step 3 — 7 and 10 share no common factor, so 7/10 is fully simplified. Since 7
 
 ---
 
-Practise equivalent fractions and simplifying questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise equivalent fractions and simplifying questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -8910,7 +8910,7 @@ Step 3 — Since 73.96 < 75 < 75.69, we have 8.6 < √75 < 8.7.
 
 ---
 
-Practise estimating square roots questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise estimating square roots questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -9329,7 +9329,7 @@ Step 6 — Collect like terms: 2x² + 7x − 15.
 
 ---
 
-Perfect your bracket-expanding skills with unlimited practice. [Join GCSEMathsAI for free](https://www.gcsemathsai.co.uk/auth) and let our AI tutor guide you through algebra step by step.
+Perfect your bracket-expanding skills with unlimited practice. [Join GCSEMathsAI for free](https://www.gcsemathsai.co.uk/auth) and let our expert system guide you through algebra step by step.
 
 ## Related Topics
 
@@ -9467,7 +9467,7 @@ This is the same as -58 - 6x. QED.
 
 ---
 
-Practise expanding double brackets questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise expanding double brackets questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -9606,7 +9606,7 @@ This matches the right-hand side. QED.
 
 ---
 
-Practise expanding triple brackets questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise expanding triple brackets questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -10010,7 +10010,7 @@ Step 3 — Extra savings needed: 4,200 − 3,920 = £280.
 
 ---
 
-Practise expressing one quantity as a percentage questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise expressing one quantity as a percentage questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -10150,7 +10150,7 @@ Step 3 — Angle ACD = angle ACE + angle ECD = angle BAC + angle ABC.
 
 ---
 
-Practise exterior angle questions with instant AI feedback free on GCSEMathsAI.
+Practise exterior angle questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -10290,7 +10290,7 @@ So x² − 5x − 14 = (x + 2)(x − 7).
 
 ---
 
-Ready to practise more factorising questions with instant feedback? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor adapts to your level and helps you build confidence before exam day.
+Ready to practise more factorising questions with instant feedback? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -10428,7 +10428,7 @@ So x + 4 = 0 giving x = −4, or 3x − 2 = 0 giving x = 2/3.
 
 ---
 
-Practise harder quadratics with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise harder quadratics with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -10567,7 +10567,7 @@ Check: 3² - 11(3) + 24 = 9 - 33 + 24 = 0. Correct.
 
 ---
 
-Practise factorising quadratics questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise factorising quadratics questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -10697,7 +10697,7 @@ Step 2 — Since 51 = 3 × 17, it has factors other than 1 and itself.
 
 ---
 
-Practise factors, multiples and primes questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise factors, multiples and primes questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -10818,7 +10818,7 @@ h = √36
 
 ---
 
-Practise finding a shorter side questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise finding a shorter side questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -10972,7 +10972,7 @@ c = 4
 
 ---
 
-Practise finding the equation of a line with instant AI feedback — completely free on GCSEMathsAI.
+Practise finding the equation of a line with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -11102,7 +11102,7 @@ c = √2500
 
 ---
 
-Practise finding the hypotenuse questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise finding the hypotenuse questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -11515,7 +11515,7 @@ Step 7: Area = length × width = 17 × 10 = 170 cm²
 
 ---
 
-Want to practise forming equations with instant hints? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor breaks down word problems step by step and helps you set up the algebra.
+Want to practise forming equations with instant hints? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system breaks down word problems step by step and helps you set up the algebra.
 
 ## Related Topics
 
@@ -11675,7 +11675,7 @@ Check: 11 + 11 + 5 = 27 cm ✓
 
 ---
 
-Practise forming equations from shapes with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise forming equations from shapes with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -11797,7 +11797,7 @@ Step 4 — Savings: 2,400 − 1,400 = £1,000.
 
 ---
 
-Practise fractions of amounts questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise fractions of amounts questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -11953,7 +11953,7 @@ Step 4 — Convert to a mixed number: 52 ÷ 25 = 2 remainder 2, so 52/25 = 2 2/2
 
 ---
 
-Ready to practise fractions and thousands of other GCSE Maths questions with instant AI feedback? [Create your free account](https://www.gcsemathsai.co.uk/auth) and start revising smarter today.
+Ready to practise fractions and thousands of other GCSE Maths questions with instant feedback? [Create your free account](https://www.gcsemathsai.co.uk/auth) and start revising smarter today.
 
 ## Related Topics
 
@@ -12283,7 +12283,7 @@ Estimate the mean height and state the modal class.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -12411,7 +12411,7 @@ Step 3 — Divide by 3: x = 6.
 
 ---
 
-Practise function machines questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise function machines questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -12703,7 +12703,7 @@ Check 5th term: 4 × 3⁴ = 4 × 81 = 324 ✓
 
 ---
 
-Practise geometric sequences with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise geometric sequences with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -12834,7 +12834,7 @@ Remember: changes inside the bracket act in the opposite direction. Replacing x 
 
 ---
 
-Practise graph transformations with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise graph transformations with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -12993,7 +12993,7 @@ Note that (0, 1) stays the same because it lies on the y-axis (the mirror line).
 
 ---
 
-Build confidence with graph transformations on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI generates tailored questions at your level with step-by-step solutions.
+Build confidence with graph transformations on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). we generate tailored questions at your level with step-by-step solutions.
 
 ---
 
@@ -13318,7 +13318,7 @@ Step 3 — 60 minutes after 9:00 am is 10:00 am.
 
 ---
 
-Practise HCF and LCM questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise HCF and LCM questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -13481,7 +13481,7 @@ Calculate the frequency density for each class.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -13767,7 +13767,7 @@ Step 4 — Apply the reciprocal: 1/9.
 
 ---
 
-Master indices with unlimited AI-generated practice. [Create your free account](https://www.gcsemathsai.co.uk/auth) and start building your skills today.
+Master indices with unlimited expertly crafted practice. [Create your free account](https://www.gcsemathsai.co.uk/auth) and start building your skills today.
 
 ## Related Topics
 
@@ -13893,7 +13893,7 @@ The feasible region R is the triangle with vertices (1, 0), (1, 4), and (5, 0).
 
 ---
 
-Practise graphical inequalities with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise graphical inequalities with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -14033,7 +14033,7 @@ Integer values: 0, 1, 2, 3, 4.
 
 ---
 
-Practise inequalities on a number line questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise inequalities on a number line questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -14453,7 +14453,7 @@ Check using the expression from (a): 4(16) − 12(4) + 10 = 64 − 48 + 10 = 26 
 
 ---
 
-Practise inverse and composite functions with instant AI feedback on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our platform generates unlimited Higher-tier questions with full worked solutions.
+Practise inverse and composite functions with instant feedback on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our platform generates unlimited Higher-tier questions with full worked solutions.
 
 ---
 
@@ -14594,7 +14594,7 @@ Evaluate: f⁻¹(59) = ∛((59 − 5)/2) = ∛(54/2) = ∛27 = 3.
 
 ---
 
-Practise inverse functions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise inverse functions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -14715,7 +14715,7 @@ Time = k ÷ workers = 60 ÷ 15 = 4
 
 ---
 
-Practise inverse proportion questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise inverse proportion questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -14865,7 +14865,7 @@ Step 3 — The plan view (looking from above) is a 2 × 2 square. In the back-ri
 
 ---
 
-Practise isometric drawing questions with instant AI feedback free on GCSEMathsAI.
+Practise isometric drawing questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -15007,7 +15007,7 @@ x₄ and x₅ both round to 2.11 (to 2 d.p.).
 
 ---
 
-Practise iteration method questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise iteration method questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -15152,7 +15152,7 @@ Since two consecutive iterations agree to 2 decimal places, the solution is **x 
 
 ---
 
-Master iteration with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI provides instant step-by-step feedback so you can build confidence before exam day.
+Master iteration with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). We provide instant step-by-step feedback so you can build confidence before exam day.
 
 ---
 
@@ -15318,7 +15318,7 @@ y = 2x + 3
 
 ---
 
-Ready to practise linear graphs with instant AI feedback? Try unlimited GCSE Maths questions on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and shows full worked solutions for every question.
+Ready to practise linear graphs with instant feedback? Try unlimited GCSE Maths questions on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and shows full worked solutions for every question.
 
 ---
 
@@ -15582,7 +15582,7 @@ The 25th and 26th values both fall in the 40-59 class (cumulative frequency reac
 
 ---
 
-Practise mean from frequency table questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise mean from frequency table questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -15758,7 +15758,7 @@ Calculate the mean number of pets.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -15876,7 +15876,7 @@ Being confident with metric conversions is also essential for area and volume qu
 
 ---
 
-Practise metric and imperial conversion questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise metric and imperial conversion questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -16004,7 +16004,7 @@ Check midpoint: ((2 + 8)/2, (7 + (−1))/2) = (10/2, 6/2) = (5, 3) ✓
 
 ---
 
-Practise midpoints and distances with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise midpoints and distances with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -16382,7 +16382,7 @@ Step 2 — Divide: 1,440 ÷ 6 = 240.
 
 ---
 
-Practise multiplying and dividing decimals questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise multiplying and dividing decimals questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -16512,7 +16512,7 @@ Step 3 — Cross-cancel: the 2s cancel and the 7s cancel, giving 1/1 × 1/1 = 1.
 
 ---
 
-Practise multiplying and dividing fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise multiplying and dividing fractions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -16777,7 +16777,7 @@ Step 3 — (x⁸)^(3/4) = x^(8 × 3/4) = x⁶.
 
 ---
 
-Practise negative and fractional indices questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise negative and fractional indices questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -16929,7 +16929,7 @@ Step 4 — Check with y-component: (−2)/(2) = −1. Consistent.
 
 ---
 
-Practise negative enlargement questions with instant AI feedback free on GCSEMathsAI.
+Practise negative enlargement questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -17067,7 +17067,7 @@ Step 5 — Total surface area = 36 + 60 = 96 cm².
 
 ---
 
-Practise nets and surface area questions with instant AI feedback free on GCSEMathsAI.
+Practise nets and surface area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -17200,7 +17200,7 @@ Step 5 — Check: n = 1 gives -3 + 5 = 2. n = 2 gives -6 + 5 = -1. Correct.
 
 ---
 
-Practise nth term of linear sequences questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise nth term of linear sequences questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -17340,7 +17340,7 @@ Try brackets around (3 + 5): 4 × (3 + 5) − 1 = 4 × 8 − 1 = 32 − 1 = 31. 
 
 ---
 
-Build rock-solid BIDMAS skills with AI-powered practice that adapts to you. [Create your free account](https://www.gcsemathsai.co.uk/auth) and never get caught out by operation order again.
+Build rock-solid BIDMAS skills with smart practice that adapts to you. [Create your free account](https://www.gcsemathsai.co.uk/auth) and never get caught out by operation order again.
 
 ## Related Topics
 
@@ -17508,7 +17508,7 @@ The curve passes through (0, 1) and rises steeply to the right. The x-axis is a 
 
 ---
 
-Challenge yourself with Higher-tier graph questions on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI tutor generates unlimited practice and marks your sketches instantly.
+Challenge yourself with Higher-tier graph questions on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). our expert system generates unlimited practice and marks your sketches instantly.
 
 ---
 
@@ -17644,7 +17644,7 @@ Check: at x = 4, y = −4/2 + 5 = −2 + 5 = 3 ✓
 
 ---
 
-Practise parallel and perpendicular lines with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise parallel and perpendicular lines with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -17793,7 +17793,7 @@ Step 4 — PT = √144 = 12 cm.
 
 ---
 
-Practise circle terminology and calculation questions with instant AI feedback free on GCSEMathsAI.
+Practise circle terminology and calculation questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -17916,7 +17916,7 @@ Step 3 — Percentage profit = (21 / 35) × 100 = 60%.
 
 ---
 
-Practise percentage change questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise percentage change questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -18198,7 +18198,7 @@ Step 3 — 1.035⁴ = 1.14752... so value = 2,000 × 1.14752... = 2,295.05 (to t
 
 ---
 
-Practise percentage multiplier questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise percentage multiplier questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -18321,7 +18321,7 @@ Step 2 — Find 30% of the boys: 0.30 × 540 = 162.
 
 ---
 
-Practise percentage of an amount questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise percentage of an amount questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -18620,7 +18620,7 @@ Both methods give the same answer, but the multiplier method is quicker and less
 
 ---
 
-Sharpen your percentage skills with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI adapts to your level and provides instant, step-by-step worked solutions.
+Sharpen your percentage skills with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). our platform adapts to your level and provides instant, step-by-step worked solutions.
 
 ---
 
@@ -18779,7 +18779,7 @@ Step 3 — 235200 ÷ 1.12 = 210000.
 
 ---
 
-Practise percentages with personalised AI-generated questions and instant feedback. [Create your free account](https://www.gcsemathsai.co.uk/auth) and boost your grade today.
+Practise percentages with personalised expertly crafted questions and instant feedback. [Create your free account](https://www.gcsemathsai.co.uk/auth) and boost your grade today.
 
 ## Related Topics
 
@@ -18918,7 +18918,7 @@ Step 4 — Total perimeter = 200 + 40π = 200 + 125.664 = 325.7 m (1 d.p.).
 
 ---
 
-Practise compound shape perimeter questions with instant AI feedback free on GCSEMathsAI.
+Practise compound shape perimeter questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -19345,7 +19345,7 @@ Step 3 — **Side elevation (from the right):** From the right side, you see onl
 
 ---
 
-Improve your spatial reasoning with interactive practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor guides you step by step through plans and elevations questions.
+Improve your spatial reasoning with interactive practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system guides you step by step through plans and elevations questions.
 
 ## Related Topics
 
@@ -19477,7 +19477,7 @@ Check with the other point: y = 3(4) + 2 = 14. Correct.
 
 ---
 
-Practise plotting straight-line graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise plotting straight-line graphs questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -19625,7 +19625,7 @@ Step 6 — Since 9.49² ≈ 90, √90 ≈ 9.5 to one decimal place.
 
 ---
 
-Build your confidence with powers and roots using adaptive AI practice. [Start for free](https://www.gcsemathsai.co.uk/auth) and get instant feedback on every question.
+Build your confidence with powers and roots using adaptive targeted practice. [Start for free](https://www.gcsemathsai.co.uk/auth) and get instant feedback on every question.
 
 ## Related Topics
 
@@ -19921,7 +19921,7 @@ Step 3 — LCM: take the highest power of each prime.
 
 ---
 
-Practise prime factorisation, HCF, and LCM with unlimited AI-generated questions. [Start for free](https://www.gcsemathsai.co.uk/auth) and track your progress.
+Practise prime factorisation, HCF, and LCM with unlimited expertly crafted questions. [Start for free](https://www.gcsemathsai.co.uk/auth) and track your progress.
 
 ## Related Topics
 
@@ -20089,7 +20089,7 @@ Total marbles = 3 + 5 + 2 = 10.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -20482,7 +20482,7 @@ P(exactly one rainy day) = 0.21 + 0.21 = 0.42.
 
 ---
 
-Practise probability tree diagram questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise probability tree diagram questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -20650,7 +20650,7 @@ Alternatively: 15/56 + 15/56 + 6/56 = 36/56 = 9/14.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -20780,7 +20780,7 @@ Step 5 — Since 8(n + 1) is 8 multiplied by an integer, the difference is alway
 
 ---
 
-Practise proof and counter-examples questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise proof and counter-examples questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -20915,7 +20915,7 @@ Step 4 — Perimeter = 4 × 13 = 52 cm.
 
 ---
 
-Practise quadrilateral property questions with instant AI feedback free on GCSEMathsAI.
+Practise quadrilateral property questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -21065,7 +21065,7 @@ Step 5 — Check: 70 + 55 + 55 = 180°. Correct.
 
 ---
 
-Practise triangle property questions with instant AI feedback free on GCSEMathsAI.
+Practise triangle property questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -21652,7 +21652,7 @@ Step 4 — 4k² = 36, so k² = 9, giving k = 3 or k = -3.
 
 ---
 
-Practise quadratic formula and discriminant questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise quadratic formula and discriminant questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -21961,7 +21961,7 @@ Try x = 2: 8 + 2 − 6 = 4 ≥ 0 ✓
 
 ---
 
-Practise quadratic inequalities with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise quadratic inequalities with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -22113,7 +22113,7 @@ Step 6: Full nth term = 2n² − n − 1.
 
 ---
 
-Want to practise quadratic sequences with step-by-step hints? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor gives you instant feedback and adapts to your level.
+Want to practise quadratic sequences with step-by-step hints? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system gives you instant feedback and adapts to your level.
 
 ## Related Topics
 
@@ -22847,7 +22847,7 @@ For example, in the ratio 3 : 5, the fraction that is boys is 3/(3 + 5) = 3/8.
 
 ---
 
-Practise ratio questions with personalised feedback on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI generates unlimited questions at your level with full worked solutions.
+Practise ratio questions with personalised feedback on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). we generate unlimited questions at your level with full worked solutions.
 
 ---
 
@@ -23138,7 +23138,7 @@ You can use this to set up and solve equations when one quantity is known.
 
 ---
 
-Build your ratio problem-solving skills with tailored practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI tutor adapts to your level and gives instant feedback on every question.
+Build your ratio problem-solving skills with tailored practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). our expert system adapts to your level and gives instant feedback on every question.
 
 ---
 
@@ -23276,7 +23276,7 @@ So a = 3.
 
 ---
 
-Practise rationalising the denominator questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise rationalising the denominator questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -23524,7 +23524,7 @@ Step 3 — Since the rate of pouring is constant but the cross-section decreases
 
 ---
 
-Practise real-life graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise real-life graphs questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -23657,7 +23657,7 @@ Step 4 — Divide by t²: a = 2(s - ut) / t².
 
 ---
 
-Practise rearranging complex formulae questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise rearranging complex formulae questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -23784,7 +23784,7 @@ Step 5 — Divide both sides by (y - 3): x = (5 + 2y) / (y - 3).
 
 ---
 
-Practise rearranging formulae questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise rearranging formulae questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -24053,7 +24053,7 @@ Step 5 — Solve: x = 216/990. Simplify by dividing by HCF(216, 990) = 18: x = 1
 
 ---
 
-Practise recurring decimals to fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise recurring decimals to fractions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -24615,7 +24615,7 @@ Both methods give the same answer.
 
 ---
 
-Perfect your reverse percentage technique with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI generates questions at your level and gives instant step-by-step solutions.
+Perfect your reverse percentage technique with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). we generate questions at your level and gives instant step-by-step solutions.
 
 ---
 
@@ -24870,7 +24870,7 @@ Step 3 — 7.99 rounds up: 9 becomes 10, which carries over. 7.99 becomes 8.00.
 
 ---
 
-Practise rounding questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise rounding questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -25179,7 +25179,7 @@ Check: 13 + 19 + 8 = 40 ✓
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -25497,7 +25497,7 @@ A **line of best fit** is a straight line drawn through the data that best repre
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -25763,7 +25763,7 @@ Since n is not a whole number, 100 is **not** in the sequence.
 
 ---
 
-Ready to build your sequence skills with adaptive practice? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor generates unlimited sequence questions tailored to your level.
+Ready to build your sequence skills with adaptive practice? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system generates unlimited sequence questions tailored to your level.
 
 ## Related Topics
 
@@ -26022,7 +26022,7 @@ Lisa gets 3 parts = 3 × 6 = 18 sweets.
 
 ---
 
-Practise sharing in a ratio questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise sharing in a ratio questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -26271,7 +26271,7 @@ Ali: £896 vs Ben: £886.97
 
 ---
 
-Practise simple interest questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simple interest questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -26392,7 +26392,7 @@ An algebraic fraction has algebraic expressions in the numerator, the denominato
 
 ---
 
-Practise simplifying algebraic fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise simplifying algebraic fractions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -26543,7 +26543,7 @@ Step 4 — Combine: 3x²y².
 
 ---
 
-Sharpen your algebra skills with AI-powered practice questions. [Create your free account](https://www.gcsemathsai.co.uk/auth) and get instant feedback every time.
+Sharpen your algebra skills with smart practice questions. [Create your free account](https://www.gcsemathsai.co.uk/auth) and get instant feedback every time.
 
 ## Related Topics
 
@@ -26666,7 +26666,7 @@ LCD of 4 and 2 is 4.
 
 ---
 
-Practise simplifying ratios questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simplifying ratios questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -26794,7 +26794,7 @@ Step 3 — 12 + 5 = 17. As required.
 
 ---
 
-Practise simplifying surds questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simplifying surds questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -26990,7 +26990,7 @@ Substitute y = 2 into ①: 2x + 6 = 12 → 2x = 6 → x = 3.
 
 ---
 
-Ready to sharpen your simultaneous equations skills? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor generates unlimited practice pairs and shows you every step of the elimination process.
+Ready to sharpen your simultaneous equations skills? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system generates unlimited practice pairs and shows you every step of the elimination process.
 
 ## Related Topics
 
@@ -27126,7 +27126,7 @@ Step 5 — Check: 2(3) + 2 = 8 and 3 - 2 = 1. Both correct.
 
 ---
 
-Practise simultaneous equations graphically questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simultaneous equations graphically questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -27291,7 +27291,7 @@ If x = −2: y = 2(−2) + 1 = −3.
 
 ---
 
-Need to build confidence with substitution? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor generates paired equations at your level and guides you through every substitution step.
+Need to build confidence with substitution? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system generates paired equations at your level and guides you through every substitution step.
 
 ## Related Topics
 
@@ -27423,7 +27423,7 @@ c = 22.418 × 0.8660
 
 ---
 
-Practise sine rule questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise sine rule questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -27549,7 +27549,7 @@ A quadratic graph is the curve you get when you plot y = ax² + bx + c. It is al
 
 ---
 
-Practise sketching quadratic graphs with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise sketching quadratic graphs with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -27670,7 +27670,7 @@ cos θ = 1.5 ÷ 5 = 0.3
 
 ---
 
-Practise SOHCAHTOA finding angles questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise SOHCAHTOA finding angles questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -27795,7 +27795,7 @@ O = 8 × 0.4226
 
 ---
 
-Practise SOHCAHTOA finding sides questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise SOHCAHTOA finding sides questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -27923,7 +27923,7 @@ Step 5 — Divide by 3: x = 2.
 
 ---
 
-Practise solving equations with brackets questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise solving equations with brackets questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -28054,7 +28054,7 @@ Alternatively, using cross-multiplication: (2x + 1) × 2 = (x − 3) × 4, givin
 
 ---
 
-Practise equations with fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise equations with fractions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 
@@ -28197,7 +28197,7 @@ Try x = 0 (which should not satisfy): −3(−4) = 12. Is 12 ≥ 30? No ✓
 
 ---
 
-Need more help with inequalities? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor walks you through each step and adjusts the difficulty as your confidence grows.
+Need more help with inequalities? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system walks you through each step and adjusts the difficulty as your confidence grows.
 
 ## Related Topics
 
@@ -28353,7 +28353,7 @@ x = 13/5 = 2.6
 
 ---
 
-Want personalised practice on linear equations? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor generates questions matched to your current level and gives you instant, detailed feedback.
+Want personalised practice on linear equations? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system generates questions matched to your current level and gives you instant, detailed feedback.
 
 ## Related Topics
 
@@ -28508,7 +28508,7 @@ For a deeper dive into all quadratic methods, see our blog post on [How to Solve
 
 ---
 
-Want unlimited quadratic practice with instant working shown? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor helps you master factorising and solving step by step.
+Want unlimited quadratic practice with instant working shown? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system helps you master factorising and solving step by step.
 
 ## Related Topics
 
@@ -28649,7 +28649,7 @@ x₂ = (3 − 8.0623) / 4 = −5.0623 / 4 ≈ −1.27
 
 ---
 
-Need to practise the quadratic formula until it becomes second nature? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor provides step-by-step guidance and checks every line of your working.
+Need to practise the quadratic formula until it becomes second nature? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system provides step-by-step guidance and checks every line of your working.
 
 ## Related Topics
 
@@ -28803,7 +28803,7 @@ Step 7 — Check in Equation 1: 5(7) + 3(3) = 35 + 9 = 44. Correct.
 
 ---
 
-Practise simultaneous equations from context questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simultaneous equations from context questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -29081,7 +29081,7 @@ Average speed = 120 ÷ 2.5 = 48 mph.
 
 ---
 
-Practise speed, distance and time questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise speed, distance and time questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -29202,7 +29202,7 @@ Step 1 — Test cube numbers: 7³ = 343, 8³ = 512. So n = 8.
 
 ---
 
-Practise square numbers and cube numbers questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise square numbers and cube numbers questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -29342,7 +29342,7 @@ Step 3 — 14.4 is not between 1 and 10. Adjust: 14.4 = 1.44 × 10¹. So 14.4 ×
 
 ---
 
-Master standard form with AI-powered practice tailored to your exam board. [Sign up for free](https://www.gcsemathsai.co.uk/auth) and start improving today.
+Master standard form with smart practice tailored to your exam board. [Sign up for free](https://www.gcsemathsai.co.uk/auth) and start improving today.
 
 ## Related Topics
 
@@ -29758,7 +29758,7 @@ Step 5 — Evaluate: 78π = 78 × 3.14159... = 245.04...
 
 ---
 
-Practise substitution into expressions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise substitution into expressions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -29918,7 +29918,7 @@ Step 4 — Divide through:
 
 ---
 
-Tackle Higher tier surd questions with confidence. [Join GCSEMathsAI for free](https://www.gcsemathsai.co.uk/auth) and get AI-powered practice matched to your ability.
+Tackle Higher tier surd questions with confidence. [Join GCSEMathsAI for free](https://www.gcsemathsai.co.uk/auth) and get smart practice matched to your ability.
 
 ## Related Topics
 
@@ -30044,7 +30044,7 @@ r = 5.00 (2 d.p.)
 
 ---
 
-Practise surface area of a cone questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise surface area of a cone questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -30182,7 +30182,7 @@ Step 4 — = 160 + 64 + 40 = 264 cm².
 
 ---
 
-Practise surface area questions with instant AI feedback free on GCSEMathsAI.
+Practise surface area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -30296,7 +30296,7 @@ SA = 2 × pi × 3 × 20 = 120pi = 376.991...
 
 ---
 
-Practise surface area of a cylinder questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise surface area of a cylinder questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 
@@ -30421,7 +30421,7 @@ r = 10
 
 ---
 
-Practise surface area of a sphere questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise surface area of a sphere questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -30569,7 +30569,7 @@ Step 6 — 18L = 816. L = 816 ÷ 18 = 45.3 cm (1 d.p.).
 
 ---
 
-Practise triangular prism surface area questions with instant AI feedback free on GCSEMathsAI.
+Practise triangular prism surface area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -30877,7 +30877,7 @@ Step 3 — Check for rotational symmetry by testing 180° rotation. If both halv
 
 ---
 
-Practise symmetry questions with instant AI feedback free on GCSEMathsAI.
+Practise symmetry questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -31284,7 +31284,7 @@ A' = (3 + (−4), 2 + (−2)) = (−1, 0)
 
 ---
 
-Master enlargement with personalised AI practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — get instant feedback and track your progress across all transformation topics.
+Master enlargement with personalised targeted practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — get instant feedback and track your progress across all transformation topics.
 
 ## Related Topics
 
@@ -31441,7 +31441,7 @@ Step 2 — The x-coordinates have been negated while y-coordinates remain the sa
 
 ---
 
-Practise transformations with instant AI marking at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — questions adapt to your level so you always face the right challenge.
+Practise transformations with instant expert marking at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — questions adapt to your level so you always face the right challenge.
 
 ## Related Topics
 
@@ -31721,7 +31721,7 @@ tan θ = 12 / 7.0711…
 
 ---
 
-Ready to practise 3D trigonometry with instant AI feedback? Head over to [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) and try our adaptive question generator — it adjusts to your level in real time.
+Ready to practise 3D trigonometry with instant feedback? Head over to [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) and try our adaptive question generator — it adjusts to your level in real time.
 
 ## Related Topics
 
@@ -32701,7 +32701,7 @@ Since the discriminant is negative (-23 < 0), the equation has no real solutions
 
 ---
 
-Practise using the quadratic formula questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise using the quadratic formula questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -32846,7 +32846,7 @@ Step 5 — DC = OC − OD = 4 × OD − OD = 3 × OD. Therefore OD : DC = 1 : 3.
 
 ---
 
-Practise vector proof questions with instant AI feedback free on GCSEMathsAI.
+Practise vector proof questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -33013,7 +33013,7 @@ OP = OA + AP = **a** + ⅓**c** (same as above — the method is what matters).
 
 ---
 
-Build your vector skills with adaptive AI practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — instant feedback on every step of your working.
+Build your vector skills with adaptive targeted practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — instant feedback on every step of your working.
 
 ## Related Topics
 
@@ -33141,7 +33141,7 @@ Step 5 — Deceleration = change in velocity / time = (0 - 24) / 8 = -3 m/s². T
 
 ---
 
-Practise velocity-time graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise velocity-time graphs questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -33287,7 +33287,7 @@ A = {3, 6, 9, 12}. B = {2, 4, 6, 8, 10, 12}. A ∩ B = {6, 12}.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 
@@ -33579,7 +33579,7 @@ Frustum volume = 324pi − 12pi = 312pi = 980.176...
 
 ---
 
-Practise volume of a cone questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a cone questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 
@@ -33701,7 +33701,7 @@ V = 473.057...
 
 ---
 
-Practise volume of a cylinder questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a cylinder questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -33841,7 +33841,7 @@ Step 4 — (550/3)π = 183.333... × 3.14159... = 575.958... ≈ 576.0 cm³.
 
 ---
 
-Practise hemisphere volume and surface area questions with instant AI feedback free on GCSEMathsAI.
+Practise hemisphere volume and surface area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -33955,7 +33955,7 @@ Volume = 29 × 20 = 580
 
 ---
 
-Practise volume of a prism questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a prism questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 
@@ -34080,7 +34080,7 @@ V ≈ 173
 
 ---
 
-Practise volume of a pyramid questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a pyramid questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
@@ -34201,7 +34201,7 @@ Hemisphere volume = ½ × 500pi ÷ 3 = 250pi ÷ 3 = 261.799...
 
 ---
 
-Practise volume of a sphere questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a sphere questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 
@@ -34327,7 +34327,7 @@ Step 3 — Number is less than 1, so n = −7.
 
 ---
 
-Practise writing in standard form questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise writing in standard form questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

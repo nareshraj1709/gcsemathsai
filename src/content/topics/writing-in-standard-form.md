@@ -107,7 +107,7 @@ Step 3 — Number is less than 1, so n = −7.
 
 ---
 
-Practise writing in standard form questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise writing in standard form questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

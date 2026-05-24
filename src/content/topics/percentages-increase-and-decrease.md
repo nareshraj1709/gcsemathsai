@@ -145,7 +145,7 @@ Both methods give the same answer, but the multiplier method is quicker and less
 
 ---
 
-Sharpen your percentage skills with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI adapts to your level and provides instant, step-by-step worked solutions.
+Sharpen your percentage skills with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). our platform adapts to your level and provides instant, step-by-step worked solutions.
 
 ---
 

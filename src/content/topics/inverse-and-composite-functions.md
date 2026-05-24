@@ -147,7 +147,7 @@ Check using the expression from (a): 4(16) − 12(4) + 10 = 64 − 48 + 10 = 26 
 
 ---
 
-Practise inverse and composite functions with instant AI feedback on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our platform generates unlimited Higher-tier questions with full worked solutions.
+Practise inverse and composite functions with instant feedback on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our platform generates unlimited Higher-tier questions with full worked solutions.
 
 ---
 

@@ -104,7 +104,7 @@ Total area = 60 + 14.137... = 74.137...
 
 ---
 
-Practise area of a circle questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of a circle questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -112,7 +112,7 @@ You can verify: 99² = 9801 and 1² = 1, so 9801 − 1 = 9800 ✓
 
 ---
 
-Practise difference of two squares questions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise difference of two squares questions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

@@ -193,7 +193,7 @@ Most students find Paper 1 harder than Papers 2 and 3 simply because they do not
 
 ### Use topic practice to close gaps
 
-After sitting a past paper, identify every topic where you lost marks. Before sitting the next paper, close those gaps with focused topic practice. [Pick any topic from the AQA specification](/learn) — Number, Algebra, Geometry, Statistics or Ratio — and work through AI-marked practice questions at exactly the right difficulty level.
+After sitting a past paper, identify every topic where you lost marks. Before sitting the next paper, close those gaps with focused topic practice. [Pick any topic from the AQA specification](/learn) — Number, Algebra, Geometry, Statistics or Ratio — and work through expert-marked practice questions at exactly the right difficulty level.
 
 This gap-closing cycle — paper, analyse, topic practice, next paper — is how grades improve consistently.
 
@@ -225,4 +225,4 @@ Across thousands of AQA mark schemes, these are the most frequent reasons studen
 
 ---
 
-Start practising AQA GCSE Maths questions right now — [select your topics, difficulty and tier](/learn) for instant AI-marked practice, completely free.
+Start practising AQA GCSE Maths questions right now — [select your topics, difficulty and tier](/learn) for instant expert-marked practice, completely free.

@@ -181,7 +181,7 @@ Estimate the mean height and state the modal class.
 
 ---
 
-Ready to practise these skills with instant, personalised feedback? Try our AI-powered GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
+Ready to practise these skills with instant, personalised feedback? Try our smart GCSE Maths tutor at [gcsemathsai.co.uk](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 

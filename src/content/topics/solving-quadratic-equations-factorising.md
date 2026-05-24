@@ -132,7 +132,7 @@ For a deeper dive into all quadratic methods, see our blog post on [How to Solve
 
 ---
 
-Want unlimited quadratic practice with instant working shown? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor helps you master factorising and solving step by step.
+Want unlimited quadratic practice with instant working shown? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system helps you master factorising and solving step by step.
 
 ## Related Topics
 

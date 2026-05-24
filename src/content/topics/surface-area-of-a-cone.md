@@ -105,7 +105,7 @@ r = 5.00 (2 d.p.)
 
 ---
 
-Practise surface area of a cone questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise surface area of a cone questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -120,7 +120,7 @@ Step 4 — = 160 + 64 + 40 = 264 cm².
 
 ---
 
-Practise surface area questions with instant AI feedback free on GCSEMathsAI.
+Practise surface area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

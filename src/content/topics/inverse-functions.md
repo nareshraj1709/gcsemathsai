@@ -116,7 +116,7 @@ Evaluate: f⁻¹(59) = ∛((59 − 5)/2) = ∛(54/2) = ∛27 = 3.
 
 ---
 
-Practise inverse functions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise inverse functions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -203,7 +203,7 @@ If those felt fast, you have got the core formula. The rest is just careful read
 
 ---
 
-[Practise GCSE Higher histogram questions with AI marking →](/learn) — instant feedback on every step of your working. Free for all students.
+[Practise GCSE Higher histogram questions with instant marking →](/learn) — instant feedback on every step of your working. Free for all students.
 
 Related guides:
 - [How to Revise GCSE Maths](/blog/how-to-revise-gcse-maths)

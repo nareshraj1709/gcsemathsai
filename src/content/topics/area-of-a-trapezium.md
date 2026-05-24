@@ -102,7 +102,7 @@ Total area = 60 + 30 = 90
 
 ---
 
-Practise area of a trapezium questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of a trapezium questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

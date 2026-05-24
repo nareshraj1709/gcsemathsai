@@ -116,7 +116,7 @@ Step 3 — 60 minutes after 9:00 am is 10:00 am.
 
 ---
 
-Practise HCF and LCM questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise HCF and LCM questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -101,7 +101,7 @@ Lisa gets 3 parts = 3 × 6 = 18 sweets.
 
 ---
 
-Practise sharing in a ratio questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise sharing in a ratio questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

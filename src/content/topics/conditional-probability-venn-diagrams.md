@@ -108,7 +108,7 @@ P(Male | Drives) = 35/65 = 7/13.
 
 ---
 
-Practise conditional probability questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise conditional probability questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

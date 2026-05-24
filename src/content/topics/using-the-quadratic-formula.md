@@ -118,7 +118,7 @@ Since the discriminant is negative (-23 < 0), the equation has no real solutions
 
 ---
 
-Practise using the quadratic formula questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise using the quadratic formula questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -178,7 +178,7 @@ Substitute y = 2 into ①: 2x + 6 = 12 → 2x = 6 → x = 3.
 
 ---
 
-Ready to sharpen your simultaneous equations skills? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor generates unlimited practice pairs and shows you every step of the elimination process.
+Ready to sharpen your simultaneous equations skills? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system generates unlimited practice pairs and shows you every step of the elimination process.
 
 ## Related Topics
 

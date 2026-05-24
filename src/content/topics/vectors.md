@@ -153,7 +153,7 @@ OP = OA + AP = **a** + ⅓**c** (same as above — the method is what matters).
 
 ---
 
-Build your vector skills with adaptive AI practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — instant feedback on every step of your working.
+Build your vector skills with adaptive targeted practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — instant feedback on every step of your working.
 
 ## Related Topics
 

@@ -112,7 +112,7 @@ If you want a 9 on AQA Higher, the boundary is around 195–210. Train for 215+.
 
 Use the official mark scheme — never give yourself a benefit of the doubt. If you wrote "x = 4" but the mark scheme demands "x = 4 or x = −4", you lose a mark. That mark loss costs you on the boundary on exam day too.
 
-[Practising with AI-marked questions](/learn) gives you the same kind of honest, examiner-style feedback. We award method marks the way the real boards do — including follow-through and alternative methods.
+[Practising with expert-marked questions](/learn) gives you the same kind of honest, examiner-style feedback. We award method marks the way the real boards do — including follow-through and alternative methods.
 
 ### Track Your Mark Trend, Not Just Your Score
 
@@ -151,4 +151,4 @@ The actual 2026 boundaries are published on results day — Thursday 21 August 2
 
 ---
 
-Use the boundaries to set your target, then use [topic-by-topic practice with AI marking](/learn) to close the gap. Free for every Year 9, 10 and 11 student.
+Use the boundaries to set your target, then use [topic-by-topic practice with instant marking](/learn) to close the gap. Free for every Year 9, 10 and 11 student.

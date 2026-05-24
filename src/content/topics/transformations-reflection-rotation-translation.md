@@ -142,7 +142,7 @@ Step 2 — The x-coordinates have been negated while y-coordinates remain the sa
 
 ---
 
-Practise transformations with instant AI marking at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — questions adapt to your level so you always face the right challenge.
+Practise transformations with instant expert marking at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — questions adapt to your level so you always face the right challenge.
 
 ## Related Topics
 

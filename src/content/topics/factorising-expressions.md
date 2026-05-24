@@ -126,7 +126,7 @@ So x² − 5x − 14 = (x + 2)(x − 7).
 
 ---
 
-Ready to practise more factorising questions with instant feedback? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor adapts to your level and helps you build confidence before exam day.
+Ready to practise more factorising questions with instant feedback? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system adapts to your level and helps you build confidence before exam day.
 
 ## Related Topics
 

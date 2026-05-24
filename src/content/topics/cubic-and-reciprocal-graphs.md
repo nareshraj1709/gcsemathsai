@@ -108,7 +108,7 @@ Asymptotes: x = 0 (the y-axis) and y = 0 (the x-axis).
 
 ---
 
-Practise cubic and reciprocal graph questions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise cubic and reciprocal graph questions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

@@ -105,7 +105,7 @@ Step 4 — Use y - y₁ = m(x - x₁): y - (-5) = 1(x - 5), so y + 5 = x - 5, wh
 
 ---
 
-Practise equation of a circle questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise equation of a circle questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

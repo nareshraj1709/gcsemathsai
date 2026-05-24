@@ -113,7 +113,7 @@ Step 5 — Deceleration = change in velocity / time = (0 - 24) / 8 = -3 m/s². T
 
 ---
 
-Practise velocity-time graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise velocity-time graphs questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

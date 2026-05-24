@@ -103,7 +103,7 @@ Being confident with metric conversions is also essential for area and volume qu
 
 ---
 
-Practise metric and imperial conversion questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise metric and imperial conversion questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -104,7 +104,7 @@ h = √36
 
 ---
 
-Practise finding a shorter side questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise finding a shorter side questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

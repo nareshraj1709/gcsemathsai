@@ -105,7 +105,7 @@ Step 2 — Find 30% of the boys: 0.30 × 540 = 162.
 
 ---
 
-Practise percentage of an amount questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise percentage of an amount questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

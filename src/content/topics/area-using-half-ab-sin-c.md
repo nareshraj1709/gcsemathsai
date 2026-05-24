@@ -131,7 +131,7 @@ Step 5 — AC = √89.836 = 9.5 cm (1 d.p.).
 
 ---
 
-Practise triangle area questions with instant AI feedback free on GCSEMathsAI.
+Practise triangle area questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

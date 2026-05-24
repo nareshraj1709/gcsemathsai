@@ -113,7 +113,7 @@ So a = 3.
 
 ---
 
-Practise rationalising the denominator questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise rationalising the denominator questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

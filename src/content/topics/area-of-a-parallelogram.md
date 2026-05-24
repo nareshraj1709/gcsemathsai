@@ -103,7 +103,7 @@ Total area = 40 + 30 = 70
 
 ---
 
-Practise area of a parallelogram questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of a parallelogram questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

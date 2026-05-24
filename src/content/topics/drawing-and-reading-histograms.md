@@ -106,7 +106,7 @@ Assuming even distribution: estimated frequency = 48 × (5/15) = 48 × 1/3 = 16.
 
 ---
 
-Practise histogram questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise histogram questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

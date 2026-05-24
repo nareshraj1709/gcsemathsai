@@ -109,7 +109,7 @@ Step 3 — Percentage profit = (21 / 35) × 100 = 60%.
 
 ---
 
-Practise percentage change questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise percentage change questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

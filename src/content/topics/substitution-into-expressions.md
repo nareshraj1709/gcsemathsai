@@ -113,7 +113,7 @@ Step 5 — Evaluate: 78π = 78 × 3.14159... = 245.04...
 
 ---
 
-Practise substitution into expressions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise substitution into expressions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

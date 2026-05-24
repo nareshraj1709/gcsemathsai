@@ -119,7 +119,7 @@ Step 5 — Check: n = 1 gives -3 + 5 = 2. n = 2 gives -6 + 5 = -1. Correct.
 
 ---
 
-Practise nth term of linear sequences questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise nth term of linear sequences questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -126,7 +126,7 @@ Check: x = -2 + sqrt(7) is approximately 0.646. (0.646)² + 4(0.646) - 3 = 0.417
 
 ---
 
-Practise completing the square method questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise completing the square method questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

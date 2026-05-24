@@ -143,7 +143,7 @@ tan θ = 12 / 7.0711…
 
 ---
 
-Ready to practise 3D trigonometry with instant AI feedback? Head over to [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) and try our adaptive question generator — it adjusts to your level in real time.
+Ready to practise 3D trigonometry with instant feedback? Head over to [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) and try our adaptive question generator — it adjusts to your level in real time.
 
 ## Related Topics
 

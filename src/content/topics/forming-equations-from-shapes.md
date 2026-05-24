@@ -137,7 +137,7 @@ Check: 11 + 11 + 5 = 27 cm ✓
 
 ---
 
-Practise forming equations from shapes with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise forming equations from shapes with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

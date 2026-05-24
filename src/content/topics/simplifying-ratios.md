@@ -102,7 +102,7 @@ LCD of 4 and 2 is 4.
 
 ---
 
-Practise simplifying ratios questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simplifying ratios questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

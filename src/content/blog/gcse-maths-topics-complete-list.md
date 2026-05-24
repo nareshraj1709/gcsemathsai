@@ -163,4 +163,4 @@ Only move a topic to "done" when it reaches stage 3.
 
 ---
 
-Practise questions on every topic in this list with instant AI feedback — completely free on GCSEMathsAI.
+Practise questions on every topic in this list with instant feedback — completely free on GCSEMathsAI.

@@ -114,7 +114,7 @@ Step 3 — Subtract: 9/12 − 8/12 = 1/12.
 
 ---
 
-Practise adding and subtracting fractions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise adding and subtracting fractions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

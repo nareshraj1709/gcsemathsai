@@ -101,7 +101,7 @@ Pack: total volume = 6 × 330 = 1980 ml. £2.70 ÷ 1980 = 0.1364p per ml (4 d.p.
 
 ---
 
-Practise best buy problems with instant AI feedback — completely free on GCSEMathsAI.
+Practise best buy problems with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

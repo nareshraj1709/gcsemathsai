@@ -102,7 +102,7 @@ Perimeter = 30π + 60 = 94.248… + 60 = 154.2 (1 d.p.)
 
 ---
 
-Practise circumference of a circle questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise circumference of a circle questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

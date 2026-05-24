@@ -118,7 +118,7 @@ Angle ADC = 180° − 72° = 108°
 
 ---
 
-Want to practise circle theorems with instant feedback? Visit [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) and let our AI tutor generate questions tailored to your level.
+Want to practise circle theorems with instant feedback? Visit [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) and let our expert system generate questions tailored to your level.
 
 ## Related Topics
 

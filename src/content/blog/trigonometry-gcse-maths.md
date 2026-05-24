@@ -242,4 +242,4 @@ Your calculator should be in degrees (DEG) mode, not radians (RAD). Check this a
 
 ---
 
-[Practise trigonometry questions from Foundation SOH-CAH-TOA to Higher sine and cosine rule](/learn) — select Geometry & Measures and choose your tier for instant AI-marked practice.
+[Practise trigonometry questions from Foundation SOH-CAH-TOA to Higher sine and cosine rule](/learn) — select Geometry & Measures and choose your tier for instant expert-marked practice.

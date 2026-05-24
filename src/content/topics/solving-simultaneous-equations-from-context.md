@@ -131,7 +131,7 @@ Step 7 — Check in Equation 1: 5(7) + 3(3) = 35 + 9 = 44. Correct.
 
 ---
 
-Practise simultaneous equations from context questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simultaneous equations from context questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

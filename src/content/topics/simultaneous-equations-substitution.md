@@ -147,7 +147,7 @@ If x = −2: y = 2(−2) + 1 = −3.
 
 ---
 
-Need to build confidence with substitution? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor generates paired equations at your level and guides you through every substitution step.
+Need to build confidence with substitution? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system generates paired equations at your level and guides you through every substitution step.
 
 ## Related Topics
 

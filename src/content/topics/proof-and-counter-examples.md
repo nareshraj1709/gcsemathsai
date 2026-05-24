@@ -115,7 +115,7 @@ Step 5 — Since 8(n + 1) is 8 multiplied by an integer, the difference is alway
 
 ---
 
-Practise proof and counter-examples questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise proof and counter-examples questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

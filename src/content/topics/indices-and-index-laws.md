@@ -133,7 +133,7 @@ Step 4 — Apply the reciprocal: 1/9.
 
 ---
 
-Master indices with unlimited AI-generated practice. [Create your free account](https://www.gcsemathsai.co.uk/auth) and start building your skills today.
+Master indices with unlimited expertly crafted practice. [Create your free account](https://www.gcsemathsai.co.uk/auth) and start building your skills today.
 
 ## Related Topics
 

@@ -110,7 +110,7 @@ Class 1's times are more spread out (larger IQR), meaning homework times were le
 
 ---
 
-Practise cumulative frequency questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise cumulative frequency questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

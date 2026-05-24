@@ -175,7 +175,7 @@ Before you tackle a full vector proof, make sure you can answer these in under 3
 
 **Answers:** (1) (−4, 2); (2) (4, 3); (3) 13; (4) Yes, YZ = 2 × XY so they are parallel. They share the point Y, so X, Y, Z are collinear.
 
-If you can answer those four cleanly, you have the foundations to tackle the full proof questions. If any of them tripped you up, [practise targeted vector questions with AI marking](/learn) before moving on.
+If you can answer those four cleanly, you have the foundations to tackle the full proof questions. If any of them tripped you up, [practise targeted vector questions with instant marking](/learn) before moving on.
 
 ## What to Practise Next
 
@@ -189,4 +189,4 @@ For vector questions specifically, the only way to get fast is repetition. Do fi
 
 ---
 
-[Practise GCSE Higher vector questions with AI marking →](/learn) — free for every student.
+[Practise GCSE Higher vector questions with instant marking →](/learn) — free for every student.

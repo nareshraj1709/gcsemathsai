@@ -103,7 +103,7 @@ Year 4: £4,917.27 × 1.03 = £5,064.79
 
 ---
 
-Practise compound interest questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise compound interest questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

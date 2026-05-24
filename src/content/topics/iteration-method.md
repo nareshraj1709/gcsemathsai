@@ -128,7 +128,7 @@ x₄ and x₅ both round to 2.11 (to 2 d.p.).
 
 ---
 
-Practise iteration method questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise iteration method questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

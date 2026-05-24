@@ -105,7 +105,7 @@ The feasible region R is the triangle with vertices (1, 0), (1, 4), and (5, 0).
 
 ---
 
-Practise graphical inequalities with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise graphical inequalities with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

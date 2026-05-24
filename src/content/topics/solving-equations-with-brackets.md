@@ -111,7 +111,7 @@ Step 5 — Divide by 3: x = 2.
 
 ---
 
-Practise solving equations with brackets questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise solving equations with brackets questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -128,7 +128,7 @@ Step 3 — Because the cut is halfway up, the cross-section is smaller than the 
 
 ---
 
-Practise 3D shape questions with instant AI feedback free on GCSEMathsAI.
+Practise 3D shape questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

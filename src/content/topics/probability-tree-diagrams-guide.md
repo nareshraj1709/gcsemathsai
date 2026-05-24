@@ -100,7 +100,7 @@ P(exactly one rainy day) = 0.21 + 0.21 = 0.42.
 
 ---
 
-Practise probability tree diagram questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise probability tree diagram questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

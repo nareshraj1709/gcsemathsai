@@ -108,7 +108,7 @@ d = √89
 
 ---
 
-Practise cosine rule questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise cosine rule questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -115,7 +115,7 @@ Step 4 — Divide by t²: a = 2(s - ut) / t².
 
 ---
 
-Practise rearranging complex formulae questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise rearranging complex formulae questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

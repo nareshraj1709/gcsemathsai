@@ -142,7 +142,7 @@ Step 4 — Divide through:
 
 ---
 
-Tackle Higher tier surd questions with confidence. [Join GCSEMathsAI for free](https://www.gcsemathsai.co.uk/auth) and get AI-powered practice matched to your ability.
+Tackle Higher tier surd questions with confidence. [Join GCSEMathsAI for free](https://www.gcsemathsai.co.uk/auth) and get smart practice matched to your ability.
 
 ## Related Topics
 

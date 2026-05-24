@@ -109,7 +109,7 @@ Step 3 — When x = 14: y = 2.5 × 14 = 35.
 
 ---
 
-Practise direct proportion graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise direct proportion graphs questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

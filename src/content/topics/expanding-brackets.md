@@ -150,7 +150,7 @@ Step 6 — Collect like terms: 2x² + 7x − 15.
 
 ---
 
-Perfect your bracket-expanding skills with unlimited practice. [Join GCSEMathsAI for free](https://www.gcsemathsai.co.uk/auth) and let our AI tutor guide you through algebra step by step.
+Perfect your bracket-expanding skills with unlimited practice. [Join GCSEMathsAI for free](https://www.gcsemathsai.co.uk/auth) and let our expert system guide you through algebra step by step.
 
 ## Related Topics
 

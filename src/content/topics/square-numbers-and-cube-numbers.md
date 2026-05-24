@@ -102,7 +102,7 @@ Step 1 — Test cube numbers: 7³ = 343, 8³ = 512. So n = 8.
 
 ---
 
-Practise square numbers and cube numbers questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise square numbers and cube numbers questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

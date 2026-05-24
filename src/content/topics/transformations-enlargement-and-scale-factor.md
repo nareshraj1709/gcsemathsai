@@ -134,7 +134,7 @@ A' = (3 + (−4), 2 + (−2)) = (−1, 0)
 
 ---
 
-Master enlargement with personalised AI practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — get instant feedback and track your progress across all transformation topics.
+Master enlargement with personalised targeted practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — get instant feedback and track your progress across all transformation topics.
 
 ## Related Topics
 

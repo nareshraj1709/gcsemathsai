@@ -106,7 +106,7 @@ Step 3 — Extra savings needed: 4,200 − 3,920 = £280.
 
 ---
 
-Practise expressing one quantity as a percentage questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise expressing one quantity as a percentage questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

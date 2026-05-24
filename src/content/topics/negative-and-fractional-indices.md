@@ -111,7 +111,7 @@ Step 3 — (x⁸)^(3/4) = x^(8 × 3/4) = x⁶.
 
 ---
 
-Practise negative and fractional indices questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise negative and fractional indices questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -129,7 +129,7 @@ Angle PAB = 3(10) + 10 = 40°
 
 ---
 
-Need more practice on angle rules? Try [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI generates unlimited angle problems and marks your working instantly.
+Need more practice on angle rules? Try [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — we generate unlimited angle problems and marks your working instantly.
 
 ## Related Topics
 

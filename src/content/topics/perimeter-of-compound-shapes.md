@@ -118,7 +118,7 @@ Step 4 — Total perimeter = 200 + 40π = 200 + 125.664 = 325.7 m (1 d.p.).
 
 ---
 
-Practise compound shape perimeter questions with instant AI feedback free on GCSEMathsAI.
+Practise compound shape perimeter questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

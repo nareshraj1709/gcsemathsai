@@ -113,7 +113,7 @@ Step 5 — Check: 2(3) + 2 = 8 and 3 - 2 = 1. Both correct.
 
 ---
 
-Practise simultaneous equations graphically questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simultaneous equations graphically questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

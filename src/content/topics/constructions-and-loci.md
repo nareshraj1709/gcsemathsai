@@ -135,7 +135,7 @@ Step 4 — The valid region is the intersection of all three conditions. Shade i
 
 ---
 
-Build your construction and loci skills at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor can guide you through each step and mark your working.
+Build your construction and loci skills at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system can guide you through each step and mark your working.
 
 ## Related Topics
 

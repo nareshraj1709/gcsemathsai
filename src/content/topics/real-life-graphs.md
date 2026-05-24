@@ -109,7 +109,7 @@ Step 3 — Since the rate of pouring is constant but the cross-section decreases
 
 ---
 
-Practise real-life graphs questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise real-life graphs questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -121,7 +121,7 @@ Step 3 — 14.4 is not between 1 and 10. Adjust: 14.4 = 1.44 × 10¹. So 14.4 ×
 
 ---
 
-Master standard form with AI-powered practice tailored to your exam board. [Sign up for free](https://www.gcsemathsai.co.uk/auth) and start improving today.
+Master standard form with smart practice tailored to your exam board. [Sign up for free](https://www.gcsemathsai.co.uk/auth) and start improving today.
 
 ## Related Topics
 

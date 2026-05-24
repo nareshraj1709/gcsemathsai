@@ -103,7 +103,7 @@ Frustum volume = 324pi − 12pi = 312pi = 980.176...
 
 ---
 
-Practise volume of a cone questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a cone questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 

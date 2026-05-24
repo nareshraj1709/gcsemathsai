@@ -140,7 +140,7 @@ Note that (0, 1) stays the same because it lies on the y-axis (the mirror line).
 
 ---
 
-Build confidence with graph transformations on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI generates tailored questions at your level with step-by-step solutions.
+Build confidence with graph transformations on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). we generate tailored questions at your level with step-by-step solutions.
 
 ---
 

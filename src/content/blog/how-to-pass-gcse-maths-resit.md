@@ -129,4 +129,4 @@ On the day: read every question carefully. Show all working. If you are unsure, 
 
 ---
 
-Practise resit questions on the most important GCSE Maths topics with instant AI feedback — completely free on GCSEMathsAI.
+Practise resit questions on the most important GCSE Maths topics with instant feedback — completely free on GCSEMathsAI.

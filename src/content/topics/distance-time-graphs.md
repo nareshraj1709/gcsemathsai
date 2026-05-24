@@ -101,7 +101,7 @@ Speed = 60 ÷ 1.5 = 40
 
 ---
 
-Practise distance-time graph questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise distance-time graph questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

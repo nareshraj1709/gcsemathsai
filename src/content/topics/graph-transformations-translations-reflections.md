@@ -113,7 +113,7 @@ Remember: changes inside the bracket act in the opposite direction. Replacing x 
 
 ---
 
-Practise graph transformations with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise graph transformations with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

@@ -105,7 +105,7 @@ Step 3 — Since 73.96 < 75 < 75.69, we have 8.6 < √75 < 8.7.
 
 ---
 
-Practise estimating square roots questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise estimating square roots questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

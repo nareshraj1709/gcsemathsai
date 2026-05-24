@@ -109,7 +109,7 @@ Step 3 — 7.99 rounds up: 9 becomes 10, which carries over. 7.99 becomes 8.00.
 
 ---
 
-Practise rounding questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise rounding questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -113,7 +113,7 @@ Step 3 — Divide by 3: x = 6.
 
 ---
 
-Practise function machines questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise function machines questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

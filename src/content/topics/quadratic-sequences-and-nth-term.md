@@ -134,7 +134,7 @@ Step 6: Full nth term = 2n² − n − 1.
 
 ---
 
-Want to practise quadratic sequences with step-by-step hints? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor gives you instant feedback and adapts to your level.
+Want to practise quadratic sequences with step-by-step hints? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system gives you instant feedback and adapts to your level.
 
 ## Related Topics
 

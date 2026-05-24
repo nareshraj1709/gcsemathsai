@@ -104,7 +104,7 @@ V ≈ 173
 
 ---
 
-Practise volume of a pyramid questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a pyramid questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

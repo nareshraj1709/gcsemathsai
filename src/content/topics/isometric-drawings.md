@@ -132,7 +132,7 @@ Step 3 — The plan view (looking from above) is a 2 × 2 square. In the back-ri
 
 ---
 
-Practise isometric drawing questions with instant AI feedback free on GCSEMathsAI.
+Practise isometric drawing questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

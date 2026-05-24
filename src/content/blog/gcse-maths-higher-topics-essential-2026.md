@@ -388,4 +388,4 @@ To find the maximum value of a/b, use the upper bound of a divided by the lower 
 
 ---
 
-Practise every Higher-only topic from this guide with instant AI feedback — completely free on GCSEMathsAI.
+Practise every Higher-only topic from this guide with instant feedback — completely free on GCSEMathsAI.

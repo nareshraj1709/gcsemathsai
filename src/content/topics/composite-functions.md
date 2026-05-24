@@ -117,7 +117,7 @@ Check: g(8) = 4 + 1 = 5. f(5) = 20 − 3 = 17 ✓
 
 ---
 
-Practise composite functions questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise composite functions questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

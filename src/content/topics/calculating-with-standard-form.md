@@ -116,7 +116,7 @@ Step 3 — 4.82 is between 1 and 10, so this is already in standard form.
 
 ---
 
-Practise calculating with standard form questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise calculating with standard form questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

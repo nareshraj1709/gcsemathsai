@@ -121,7 +121,7 @@ Step 4 — 4k² = 36, so k² = 9, giving k = 3 or k = -3.
 
 ---
 
-Practise quadratic formula and discriminant questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise quadratic formula and discriminant questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -138,7 +138,7 @@ Step 4 — Convert to a mixed number: 52 ÷ 25 = 2 remainder 2, so 52/25 = 2 2/2
 
 ---
 
-Ready to practise fractions and thousands of other GCSE Maths questions with instant AI feedback? [Create your free account](https://www.gcsemathsai.co.uk/auth) and start revising smarter today.
+Ready to practise fractions and thousands of other GCSE Maths questions with instant feedback? [Create your free account](https://www.gcsemathsai.co.uk/auth) and start revising smarter today.
 
 ## Related Topics
 

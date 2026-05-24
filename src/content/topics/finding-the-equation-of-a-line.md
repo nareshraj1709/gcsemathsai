@@ -137,7 +137,7 @@ c = 4
 
 ---
 
-Practise finding the equation of a line with instant AI feedback — completely free on GCSEMathsAI.
+Practise finding the equation of a line with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

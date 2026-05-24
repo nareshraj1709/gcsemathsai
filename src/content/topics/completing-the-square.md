@@ -122,7 +122,7 @@ Step 5: Subtract 3: x = −3 ± √10.
 
 ---
 
-Want to master completing the square with guided practice? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor walks you through each step and builds your confidence for exam day.
+Want to master completing the square with guided practice? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system walks you through each step and builds your confidence for exam day.
 
 ## Related Topics
 

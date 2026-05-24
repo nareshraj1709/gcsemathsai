@@ -210,4 +210,4 @@ Proportion connects directly to:
 
 ---
 
-[Practise GCSE proportion questions with AI marking →](/learn) — direct, inverse, square and square root proportion at every difficulty level. Free for every student.
+[Practise GCSE proportion questions with instant marking →](/learn) — direct, inverse, square and square root proportion at every difficulty level. Free for every student.

@@ -131,7 +131,7 @@ Step 4 — PT = √144 = 12 cm.
 
 ---
 
-Practise circle terminology and calculation questions with instant AI feedback free on GCSEMathsAI.
+Practise circle terminology and calculation questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

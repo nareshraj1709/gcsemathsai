@@ -44,7 +44,7 @@ This topic appears on every GCSE Maths paper. Make sure you can do all three typ
 3. **Reverse percentage:** After a 20% discount, a jacket costs £64. What was the original price?
 4. **Compound interest:** £3,000 invested at 4% per year. What is it worth after 3 years?
 
-[Practise percentage questions with AI marking →](/learn)
+[Practise percentage questions with instant marking →](/learn)
 
 **End of day:** Note any questions you got wrong. These are your gaps for review tomorrow morning.
 
@@ -145,7 +145,7 @@ Work through 10 questions — 5 finding the hypotenuse, 5 finding a shorter side
 
 For step-by-step worked examples on both topics, see our full [Pythagoras and Trigonometry revision guide](/blog/pythagoras-theorem-gcse).
 
-[Practise trigonometry questions with AI marking →](/learn)
+[Practise trigonometry questions with instant marking →](/learn)
 
 ---
 
@@ -190,7 +190,7 @@ For every question you got wrong, categorise the error:
 - **Arithmetic slip:** Be more careful — check your arithmetic at each step
 - **Careless mistake:** Re-read questions before starting; underline key words
 
-After analysis, spend 30 minutes on [targeted topic practice](/learn) for your worst two topics. AI marking will give you immediate feedback on exactly where your method breaks down.
+After analysis, spend 30 minutes on [targeted topic practice](/learn) for your worst two topics. instant marking will give you immediate feedback on exactly where your method breaks down.
 
 **Evening (30 min): Light review**
 Go through your formula flashcards. Review the [full formula list](/blog/gcse-maths-formulas-you-must-know). Identify any formula you are still shaky on and write it out 5 times.
@@ -222,4 +222,4 @@ If your exam is this week:
 
 ---
 
-[Start practising the topics in this plan](/learn) — pick any topic, set your difficulty and get instant AI feedback. Free for all students.
+[Start practising the topics in this plan](/learn) — pick any topic, set your difficulty and get instant feedback. Free for all students.

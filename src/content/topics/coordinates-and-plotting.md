@@ -107,7 +107,7 @@ Step 4 — Subtract 5: y = 1.
 
 ---
 
-Practise coordinates and plotting questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise coordinates and plotting questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

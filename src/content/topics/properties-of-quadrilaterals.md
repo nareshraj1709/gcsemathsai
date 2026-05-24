@@ -117,7 +117,7 @@ Step 4 — Perimeter = 4 × 13 = 52 cm.
 
 ---
 
-Practise quadrilateral property questions with instant AI feedback free on GCSEMathsAI.
+Practise quadrilateral property questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

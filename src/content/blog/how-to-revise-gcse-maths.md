@@ -143,4 +143,4 @@ For the calculator papers, know your calculator well. Practice entering complex 
 
 ---
 
-Practise GCSE Maths questions on every topic from this guide with instant AI feedback — completely free on GCSEMathsAI.
+Practise GCSE Maths questions on every topic from this guide with instant feedback — completely free on GCSEMathsAI.

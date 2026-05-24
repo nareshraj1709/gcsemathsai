@@ -122,7 +122,7 @@ Integer values: 0, 1, 2, 3, 4.
 
 ---
 
-Practise inequalities on a number line questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise inequalities on a number line questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

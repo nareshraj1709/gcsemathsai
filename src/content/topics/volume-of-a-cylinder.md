@@ -103,7 +103,7 @@ V = 473.057...
 
 ---
 
-Practise volume of a cylinder questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise volume of a cylinder questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

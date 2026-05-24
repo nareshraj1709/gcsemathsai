@@ -131,7 +131,7 @@ Both methods give the same answer.
 
 ---
 
-Perfect your reverse percentage technique with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI generates questions at your level and gives instant step-by-step solutions.
+Perfect your reverse percentage technique with unlimited practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). we generate questions at your level and gives instant step-by-step solutions.
 
 ---
 

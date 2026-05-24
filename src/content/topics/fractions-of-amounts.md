@@ -104,7 +104,7 @@ Step 4 — Savings: 2,400 − 1,400 = £1,000.
 
 ---
 
-Practise fractions of amounts questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise fractions of amounts questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

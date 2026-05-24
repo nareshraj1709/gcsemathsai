@@ -103,7 +103,7 @@ cos θ = 1.5 ÷ 5 = 0.3
 
 ---
 
-Practise SOHCAHTOA finding angles questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise SOHCAHTOA finding angles questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

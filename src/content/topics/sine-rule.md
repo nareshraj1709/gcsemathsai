@@ -109,7 +109,7 @@ c = 22.418 × 0.8660
 
 ---
 
-Practise sine rule questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise sine rule questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

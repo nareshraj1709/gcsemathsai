@@ -127,7 +127,7 @@ Step 5 — DC = OC − OD = 4 × OD − OD = 3 × OD. Therefore OD : DC = 1 : 3.
 
 ---
 
-Practise vector proof questions with instant AI feedback free on GCSEMathsAI.
+Practise vector proof questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

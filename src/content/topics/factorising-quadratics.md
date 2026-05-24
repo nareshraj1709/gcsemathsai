@@ -121,7 +121,7 @@ Check: 3² - 11(3) + 24 = 9 - 33 + 24 = 0. Correct.
 
 ---
 
-Practise factorising quadratics questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise factorising quadratics questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

@@ -117,7 +117,7 @@ Try x = 2: 8 + 2 − 6 = 4 ≥ 0 ✓
 
 ---
 
-Practise quadratic inequalities with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise quadratic inequalities with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

@@ -127,7 +127,7 @@ You can use this to set up and solve equations when one quantity is known.
 
 ---
 
-Build your ratio problem-solving skills with tailored practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). Our AI tutor adapts to your level and gives instant feedback on every question.
+Build your ratio problem-solving skills with tailored practice on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth). our expert system adapts to your level and gives instant feedback on every question.
 
 ---
 

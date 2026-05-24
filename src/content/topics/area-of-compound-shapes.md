@@ -101,7 +101,7 @@ Total area = 60 + 40 = 100
 
 ---
 
-Practise area of compound shapes questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise area of compound shapes questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 

@@ -113,7 +113,7 @@ Step 3 — **Side elevation (from the right):** From the right side, you see onl
 
 ---
 
-Improve your spatial reasoning with interactive practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor guides you step by step through plans and elevations questions.
+Improve your spatial reasoning with interactive practice at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system guides you step by step through plans and elevations questions.
 
 ## Related Topics
 

@@ -246,4 +246,4 @@ Substitute: a + 4(5) = 31 → a = 11 → **a = 11**
 
 ---
 
-[Practise simultaneous equations with AI marking](/learn) — select Algebra and choose Simultaneous Equations for instant feedback on your method.
+[Practise simultaneous equations with instant marking](/learn) — select Algebra and choose Simultaneous Equations for instant feedback on your method.

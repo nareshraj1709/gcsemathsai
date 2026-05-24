@@ -123,7 +123,7 @@ Step 3 — Angle ACD = angle ACE + angle ECD = angle BAC + angle ABC.
 
 ---
 
-Practise exterior angle questions with instant AI feedback free on GCSEMathsAI.
+Practise exterior angle questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

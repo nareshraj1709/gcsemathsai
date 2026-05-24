@@ -112,7 +112,7 @@ c = √2500
 
 ---
 
-Practise finding the hypotenuse questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise finding the hypotenuse questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

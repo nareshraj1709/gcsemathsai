@@ -104,7 +104,7 @@ Ali: £896 vs Ben: £886.97
 
 ---
 
-Practise simple interest questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise simple interest questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

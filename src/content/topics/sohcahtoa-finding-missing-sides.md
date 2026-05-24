@@ -107,7 +107,7 @@ O = 8 × 0.4226
 
 ---
 
-Practise SOHCAHTOA finding sides questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise SOHCAHTOA finding sides questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

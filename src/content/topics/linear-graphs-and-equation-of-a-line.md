@@ -141,7 +141,7 @@ y = 2x + 3
 
 ---
 
-Ready to practise linear graphs with instant AI feedback? Try unlimited GCSE Maths questions on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and shows full worked solutions for every question.
+Ready to practise linear graphs with instant feedback? Try unlimited GCSE Maths questions on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — it adapts to your level and shows full worked solutions for every question.
 
 ---
 

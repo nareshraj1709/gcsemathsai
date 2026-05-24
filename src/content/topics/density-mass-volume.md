@@ -99,7 +99,7 @@ Mass = Density × Volume = 0.8 × 942.478... = 753.982... g.
 
 ---
 
-Practise density, mass and volume questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise density, mass and volume questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

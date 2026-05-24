@@ -102,7 +102,7 @@ Check: 305° is between 0° and 360°, so this is the final answer.
 
 ---
 
-Practise bearings and trigonometry questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise bearings and trigonometry questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

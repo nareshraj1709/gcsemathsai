@@ -136,7 +136,7 @@ Step 5 — Check: 70 + 55 + 55 = 180°. Correct.
 
 ---
 
-Practise triangle property questions with instant AI feedback free on GCSEMathsAI.
+Practise triangle property questions with instant feedback free on GCSEMathsAI.
 
 ## Related Topics
 

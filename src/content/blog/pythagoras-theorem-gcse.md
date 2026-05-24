@@ -189,4 +189,4 @@ When you see a right angle in any question — even if Pythagoras is not explici
 
 ---
 
-[Practise Pythagoras questions at Foundation and Higher level](/learn) — select Geometry & Measures from the topic menu for AI-marked practice, free for all students.
+[Practise Pythagoras questions at Foundation and Higher level](/learn) — select Geometry & Measures from the topic menu for expert-marked practice, free for all students.

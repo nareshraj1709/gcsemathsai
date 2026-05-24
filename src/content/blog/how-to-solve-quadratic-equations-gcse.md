@@ -173,4 +173,4 @@ At Foundation tier, simple factorising of x² + bx + c = 0 (where a = 1) may app
 
 ---
 
-Practise quadratic equations with instant AI feedback — completely free on GCSEMathsAI.
+Practise quadratic equations with instant feedback — completely free on GCSEMathsAI.

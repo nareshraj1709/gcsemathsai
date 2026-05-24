@@ -118,7 +118,7 @@ The 25th and 26th values both fall in the 40-59 class (cumulative frequency reac
 
 ---
 
-Practise mean from frequency table questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise mean from frequency table questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

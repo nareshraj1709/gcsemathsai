@@ -133,7 +133,7 @@ x = 13/5 = 2.6
 
 ---
 
-Want personalised practice on linear equations? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our AI tutor generates questions matched to your current level and gives you instant, detailed feedback.
+Want personalised practice on linear equations? [Start revising with GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our expert system generates questions matched to your current level and gives you instant, detailed feedback.
 
 ## Related Topics
 

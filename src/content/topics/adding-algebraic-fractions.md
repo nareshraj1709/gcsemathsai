@@ -109,7 +109,7 @@ The denominators are already the same (both are x).
 
 ---
 
-Practise adding algebraic fractions with instant AI feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
+Practise adding algebraic fractions with instant feedback free on [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth).
 
 ## Related Topics
 

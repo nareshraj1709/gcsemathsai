@@ -248,4 +248,4 @@ Strong exam technique can be worth 10–20 extra marks across your three GCSE Ma
 
 ---
 
-Practise your exam technique with AI-marked GCSE Maths questions — get instant feedback on your method and working, completely free on GCSEMathsAI.
+Practise your exam technique with expert-marked GCSE Maths questions — get instant feedback on your method and working, completely free on GCSEMathsAI.

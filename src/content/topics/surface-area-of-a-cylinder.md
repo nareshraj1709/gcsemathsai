@@ -100,7 +100,7 @@ SA = 2 × pi × 3 × 20 = 120pi = 376.991...
 
 ---
 
-Practise surface area of a cylinder questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise surface area of a cylinder questions with instant feedback — completely free on GCSEMathsAI.
 
 ---
 

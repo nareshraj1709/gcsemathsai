@@ -105,7 +105,7 @@ Step 3 — 7 and 10 share no common factor, so 7/10 is fully simplified. Since 7
 
 ---
 
-Practise equivalent fractions and simplifying questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise equivalent fractions and simplifying questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 

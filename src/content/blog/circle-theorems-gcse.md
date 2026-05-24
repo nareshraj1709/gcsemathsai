@@ -218,4 +218,4 @@ Exam questions frequently require you to use two or more theorems in sequence. A
 
 ---
 
-[Practise circle theorem questions with instant AI feedback](/learn) — select Geometry & Measures → Circle Theorems for Higher tier practice questions.
+[Practise circle theorem questions with instant feedback](/learn) — select Geometry & Measures → Circle Theorems for Higher tier practice questions.

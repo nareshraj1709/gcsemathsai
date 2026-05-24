@@ -139,7 +139,7 @@ n = 360° / 24° = 15
 
 ---
 
-Practise polygon angle problems with personalised AI feedback at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our platform adapts to your ability and helps you improve faster.
+Practise polygon angle problems with personalised instant feedback at [GCSEMathsAI](https://www.gcsemathsai.co.uk/auth) — our platform adapts to your ability and helps you improve faster.
 
 ## Related Topics
 

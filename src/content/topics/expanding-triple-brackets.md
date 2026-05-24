@@ -121,7 +121,7 @@ This matches the right-hand side. QED.
 
 ---
 
-Practise expanding triple brackets questions with instant AI feedback — completely free on GCSEMathsAI.
+Practise expanding triple brackets questions with instant feedback — completely free on GCSEMathsAI.
 
 ## Related Topics
 
