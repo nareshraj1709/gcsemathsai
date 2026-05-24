@@ -138,6 +138,56 @@ export default function FormulaSheetPage() {
         </div>
       </section>
 
+      {/* Downloadable Formula Sheets */}
+      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '48px 24px' }}>
+          <div style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'var(--gold)', marginBottom: 10 }}>
+            Free Downloads
+          </div>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 8px' }}>
+            Printable Formula Sheets
+          </h2>
+          <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.55, maxWidth: 520, marginBottom: 24 }}>
+            Download by strand or get the complete set. Each sheet covers Foundation and Higher tier formulas with clear layouts for revision.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 14 }}>
+            {[
+              { title: 'Complete Formula Sheet', desc: 'All topics — Number, Algebra, Geometry, Ratio, Statistics', file: '/formula-pdfs/GCSE-Maths-Formula-Sheet-All-Topics.pdf', accent: 'var(--green)' },
+              { title: 'Number, Algebra & Ratio', desc: 'Indices, surds, equations, sequences, proportion', file: '/formula-pdfs/GCSE-Maths-Formulas-Number-Algebra-Ratio.pdf', accent: 'var(--navy)' },
+              { title: 'Geometry & Measures', desc: 'Area, volume, Pythagoras, trigonometry, circle theorems', file: '/formula-pdfs/GCSE-Maths-Formulas-Geometry-Measures.pdf', accent: 'var(--burgundy)' },
+              { title: 'Statistics & Probability', desc: 'Averages, frequency density, probability rules', file: '/formula-pdfs/GCSE-Maths-Formulas-Statistics-Probability.pdf', accent: 'var(--gold)' },
+            ].map(sheet => (
+              <div key={sheet.title} style={{
+                background: 'var(--cream)', border: '1px solid var(--rule)', borderRadius: 12, padding: '20px',
+              }}>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 16, fontWeight: 700, color: 'var(--ink)', margin: '0 0 4px' }}>{sheet.title}</p>
+                <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: '0 0 16px', lineHeight: 1.4 }}>{sheet.desc}</p>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <a href={sheet.file} target="_blank" rel="noopener noreferrer" style={{
+                    display: 'inline-flex', alignItems: 'center', gap: 6,
+                    background: sheet.accent, color: 'var(--cream)', padding: '8px 16px',
+                    borderRadius: 8, fontSize: 13, fontWeight: 700, fontFamily: 'var(--sans)',
+                    textDecoration: 'none',
+                  }}>
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h12v12H2z" stroke="currentColor" strokeWidth="1.5"/><path d="M5 8h6M8 5v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                    View
+                  </a>
+                  <a href={sheet.file} download style={{
+                    display: 'inline-flex', alignItems: 'center', gap: 6,
+                    background: 'transparent', color: sheet.accent, padding: '8px 16px',
+                    borderRadius: 8, fontSize: 13, fontWeight: 600, fontFamily: 'var(--sans)',
+                    textDecoration: 'none', border: `1.5px solid ${sheet.accent}`,
+                  }}>
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M8 11l-3-3M8 11l3-3M2 14h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    Download
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '64px 24px 96px' }}>
 
         {/* Section header */}
