@@ -106,7 +106,7 @@ export default async function TopicPage({ params }: Props) {
             }}>
               {topic.tier}
             </span>
-            <span style={{ fontSize: 12, color: 'var(--ink-3)' }}>Topic {topic.topicNumber} of 73</span>
+            <span style={{ fontSize: 12, color: 'var(--ink-3)' }}>Topic {currentIdx + 1} of {allTopics.length}</span>
           </div>
           <h1 style={{
             fontFamily: 'var(--serif)',
