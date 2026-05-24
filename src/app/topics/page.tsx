@@ -93,7 +93,7 @@ export default function TopicsIndexPage() {
           textTransform: 'uppercase',
           marginBottom: 16,
         }}>
-          245 Topics
+          {topics.length} Topics
         </span>
         <h1 style={{
           fontFamily: 'var(--serif)',
@@ -150,7 +150,7 @@ export default function TopicsIndexPage() {
                 gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
                 gap: 12,
               }}>
-                {strandTopics.map(topic => (
+                {strandTopics.map((topic, idx) => (
                   <Link
                     key={topic.slug}
                     href={`/topics/${topic.slug}`}
@@ -174,7 +174,7 @@ export default function TopicsIndexPage() {
                           lineHeight: 1.4,
                           margin: 0,
                         }}>
-                          {topic.topicNumber}. {topic.title.replace(/ â€” .*$/, '').replace(/ GCSE.*$/, '')}
+                          {idx + 1}. {topic.title.replace(/ â€” .*$/, '').replace(/ GCSE.*$/, '')}
                         </p>
                         <p style={{
                           fontSize: 12,
