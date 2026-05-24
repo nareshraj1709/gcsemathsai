@@ -59,33 +59,32 @@ export default function HigherBundlePage() {
         <div style={{ position: 'absolute', top: -100, right: -100, width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(184,137,61,0.15), transparent 60%)' }} />
         <div style={{ position: 'relative', maxWidth: 700, margin: '0 auto' }}>
           <span style={{ ...monoLabel, color: 'var(--gold-soft)', display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-            <span style={{ color: 'var(--gold)' }}>{'◆'}</span> Free Download — Edexcel Higher 2026
+            <span style={{ color: 'var(--gold)' }}>{'◆'}</span> Edexcel Higher 2026 · £9.99
           </span>
           <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 500, lineHeight: 1.08, letterSpacing: '-0.025em', marginBottom: 16 }}>
             Papers 2 &amp; 3 <em style={{ fontStyle: 'italic', color: 'var(--gold-soft)' }}>Final Push</em> Bundle
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.55, opacity: 0.85, maxWidth: 540, margin: '0 auto 28px', fontWeight: 500 }}>
-            Everything you need between now and your last exam — key topics, worked examples, calculator skills, a 17-day revision plan and a printable formula sheet. All free.
+            Everything you need between now and your last exam — key topics, worked examples, calculator skills, a 17-day revision plan and a printable formula sheet. Instant download.
           </p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' as const }}>
-            <a href="/higher-bundle/GCSE-Maths---Papers-2-and-3-Final-Push-Bundle.pdf" download style={{
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' as const, alignItems: 'center' }}>
+            <a href="https://buy.stripe.com/5kQ7sM1lKaIM0Vp3jpgIo02" style={{
               display: 'inline-flex', alignItems: 'center', gap: 8, background: 'var(--gold)', color: 'var(--cream)',
-              padding: '14px 28px', borderRadius: 10, fontSize: 15, fontWeight: 700, fontFamily: 'var(--sans)',
+              padding: '16px 32px', borderRadius: 10, fontSize: 16, fontWeight: 700, fontFamily: 'var(--sans)',
               textDecoration: 'none', boxShadow: '0 2px 8px -1px rgba(184,137,61,0.4)',
             }}>
-              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M8 11l-3-3M8 11l3-3M2 14h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              Download Full Bundle
+              Buy Bundle — £9.99
             </a>
-            <a href="/higher-bundle/GCSE-Maths---Papers-2-and-3-Final-Push-Bundle.pdf" target="_blank" rel="noopener noreferrer" style={{
+            <Link href="/practice-papers" style={{
               display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: 'var(--cream)',
               padding: '14px 24px', borderRadius: 10, fontSize: 15, fontWeight: 600, fontFamily: 'var(--sans)',
               textDecoration: 'none', border: '1.5px solid rgba(247,243,234,0.3)',
             }}>
-              View Online
-            </a>
+              See what{"'"}s included
+            </Link>
           </div>
           <p style={{ fontSize: 12, color: 'rgba(247,243,234,0.5)', marginTop: 14 }}>
-            4 PDFs &middot; No sign-up required &middot; Print-ready
+            One-off payment &middot; Instant download &middot; 4 PDFs + 10 practice papers
           </p>
         </div>
       </section>
@@ -97,7 +96,7 @@ export default function HigherBundlePage() {
           4 resources, one goal: <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>maximise your marks</em>
         </h2>
         <p style={{ fontSize: 15, color: 'var(--ink-3)', lineHeight: 1.6, maxWidth: 560, marginBottom: 36 }}>
-          Each resource targets a different aspect of your final revision — topics, technique, planning and reference. Download them individually or grab the full bundle above.
+          Each resource targets a different aspect of your final revision — topics, technique, planning and reference. All four included in the bundle.
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column' as const, gap: 18 }}>
@@ -132,27 +131,38 @@ export default function HigherBundlePage() {
                     </span>
                   ))}
                 </div>
-                <div style={{ display: 'flex', gap: 8 }}>
-                  <a href={item.file} target="_blank" rel="noopener noreferrer" style={{
-                    display: 'inline-flex', alignItems: 'center', gap: 6,
-                    background: 'var(--green)', color: 'var(--cream)', padding: '8px 18px',
-                    borderRadius: 8, fontSize: 13, fontWeight: 700, fontFamily: 'var(--sans)',
-                    textDecoration: 'none',
-                  }}>
-                    View PDF
-                  </a>
-                  <a href={item.file} download style={{
-                    display: 'inline-flex', alignItems: 'center', gap: 6,
-                    background: 'transparent', color: 'var(--green)', padding: '8px 18px',
-                    borderRadius: 8, fontSize: 13, fontWeight: 600, fontFamily: 'var(--sans)',
-                    textDecoration: 'none', border: '1.5px solid var(--green)',
-                  }}>
-                    Download
-                  </a>
-                </div>
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 5,
+                  fontSize: 12, fontFamily: 'var(--mono)', fontWeight: 700,
+                  color: 'var(--green)', background: 'var(--green-soft)',
+                  padding: '4px 12px', borderRadius: 999,
+                }}>
+                  Included in bundle
+                </span>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Buy CTA */}
+        <div style={{
+          marginTop: 32, background: 'var(--green)', borderRadius: 14, padding: '32px 28px',
+          textAlign: 'center',
+        }}>
+          <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 600, color: '#fff', margin: '0 0 8px' }}>
+            Get all 4 resources — instant download
+          </h3>
+          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', margin: '0 0 20px', lineHeight: 1.5 }}>
+            Key topics &middot; Calculator skills &middot; 17-day plan &middot; Formula sheet &middot; Plus 10 full practice papers
+          </p>
+          <a href="https://buy.stripe.com/5kQ7sM1lKaIM0Vp3jpgIo02" style={{
+            display: 'inline-flex', alignItems: 'center', gap: 8,
+            background: '#fff', color: 'var(--green)', padding: '14px 32px',
+            borderRadius: 10, fontSize: 16, fontWeight: 700, fontFamily: 'var(--sans)',
+            textDecoration: 'none',
+          }}>
+            Buy Bundle — £9.99
+          </a>
         </div>
       </section>
 
