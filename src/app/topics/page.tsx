@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { getAllTopics } from '@/lib/topics-markdown'
 import PredictedPapersPromo from '@/components/PredictedPapersPromo'
+import StrandAccordion from '@/components/StrandAccordion'
 
 export const metadata: Metadata = {
   title: 'All GCSE Maths Topics â€” Complete Revision Guide',
@@ -117,97 +118,21 @@ export default function TopicsIndexPage() {
 
       <div style={{ maxWidth: 1000, margin: '0 auto', padding: '48px 24px' }}>
 
-        {strandOrder.map(strand => {
+        {strandOrder.map((strand, i) => {
           const strandTopics = strands[strand]
           if (!strandTopics?.length) return null
           const meta = STRAND_META[strand] ?? STRAND_META['Number']
 
           return (
-            <div key={strand} style={{ marginBottom: 48 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-                <span style={{ fontSize: 24 }}>{meta.icon}</span>
-                <h2 style={{
-                  fontFamily: 'var(--serif)',
-                  fontSize: 20,
-                  fontWeight: 700,
-                  color: meta.colour,
-                  margin: 0,
-                }}>{strand}</h2>
-                <span style={{
-                  fontSize: 11,
-                  fontFamily: 'var(--mono)',
-                  color: 'var(--ink-3)',
-                  background: 'var(--cream-2)',
-                  padding: '2px 10px',
-                  borderRadius: 999,
-                }}>
-                  {strandTopics.length} topics
-                </span>
-              </div>
-
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                gap: 12,
-              }}>
-                {strandTopics.map((topic, idx) => (
-                  <Link
-                    key={topic.slug}
-                    href={`/topics/${topic.slug}`}
-                    style={{
-                      display: 'block',
-                      background: 'var(--paper)',
-                      border: '1px solid var(--rule)',
-                      borderRadius: 12,
-                      padding: '14px 16px',
-                      transition: 'all 0.2s',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <p style={{
-                          fontFamily: 'var(--serif)',
-                          fontSize: 14,
-                          fontWeight: 700,
-                          color: 'var(--ink)',
-                          lineHeight: 1.4,
-                          margin: 0,
-                        }}>
-                          {idx + 1}. {topic.title.replace(/\s*[–—–—-]\s*(GCSE|Revision|Step).*$/, '').replace(/ GCSE.*$/, '')}
-                        </p>
-                        <p style={{
-                          fontSize: 12,
-                          color: 'var(--ink-3)',
-                          marginTop: 4,
-                          lineHeight: 1.4,
-                          display: '-webkit-box',
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: 'vertical',
-                          overflow: 'hidden',
-                        }}>
-                          {topic.description}
-                        </p>
-                      </div>
-                      {topic.tier === 'Higher only' && (
-                        <span style={{
-                          flexShrink: 0,
-                          fontSize: 10,
-                          fontWeight: 700,
-                          fontFamily: 'var(--mono)',
-                          color: 'var(--gold)',
-                          background: 'var(--gold-soft)',
-                          padding: '2px 6px',
-                          borderRadius: 4,
-                        }}>
-                          H
-                        </span>
-                      )}
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <StrandAccordion
+              key={strand}
+              strand={strand}
+              icon={meta.icon}
+              colour={meta.colour}
+              bg={meta.bg}
+              topics={strandTopics}
+              defaultOpen={i === 0}
+            />
           )
         })}
 
