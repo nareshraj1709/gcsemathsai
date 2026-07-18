@@ -92,6 +92,14 @@ export async function POST(req: Request) {
     sectionId, // section slug, e.g. "fractions-decimals" — enables section cache
   } = await req.json()
 
+  // Cache key for non-paper requests: prefer explicit sectionId, else derive from topic+subtopic.
+  // This ensures every generation (sections page, practice page, etc.) saves to the DB.
+  const cacheKey: string | null = !paperStyle
+    ? (sectionId ?? (topic && subtopic
+        ? `${topic}|${subtopic}`.toLowerCase().replace(/\s+/g, '-')
+        : null))
+    : null
+
   if (!examBoard || !tier) {
     return NextResponse.json({ error: 'Missing examBoard or tier' }, { status: 400 })
   }
@@ -239,16 +247,18 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
   }
 
   // ── Section cache: load a random cached set as API-failure fallback ──
+  // Runs for every non-paper request (sections page, practice page, etc.)
   let sectionCachedFallback: unknown[] | null = null
-  if (!paperStyle && sectionId && supabaseAdmin) {
+  if (cacheKey && supabaseAdmin) {
     try {
       const { data: cached } = await supabaseAdmin
         .from(SECTIONS_TABLE)
         .select('id, questions')
-        .eq('section_id', sectionId)
+        .eq('section_id', cacheKey)
         .eq('board', examBoard)
         .eq('tier', tier)
         .eq('difficulty', difficulty)
+        .eq('format', format)
         .limit(20)
       if (cached && cached.length > 0) {
         const pick = cached[Math.floor(Math.random() * cached.length)]
@@ -322,11 +332,12 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
       }
     }
 
-    // Persist section questions to cache (best-effort, fire-and-forget)
-    if (!paperStyle && sectionId && supabaseAdmin) {
+    // Persist every generated question set to the cache (best-effort, fire-and-forget).
+    // cacheKey is set for all non-paper requests so the pool grows with every use.
+    if (cacheKey && supabaseAdmin) {
       supabaseAdmin
         .from(SECTIONS_TABLE)
-        .insert({ section_id: sectionId, board: examBoard, tier, difficulty, questions })
+        .insert({ section_id: cacheKey, board: examBoard, tier, difficulty, format, questions })
         .then(() => { /* noop */ }, () => { /* ignore */ })
     }
 
