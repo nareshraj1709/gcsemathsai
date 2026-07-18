@@ -61,6 +61,7 @@ function SectionPractice() {
         count: 10,
         paperStyle: false,
         difficulty,
+        sectionId: id,
       }
       if (yearChoice !== 'random') body.year = yearChoice
       if (calcMode === 'calc') body.calculator = true

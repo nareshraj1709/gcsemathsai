@@ -15,6 +15,7 @@ const supabaseAdmin = (() => {
 
 const PAPERS_TABLE = 'generated_papers'
 const SEEN_TABLE = 'seen_papers'
+const SECTIONS_TABLE = 'generated_sections'
 
 /**
  * Recover from a truncated JSON array response by trimming back to the last
@@ -88,6 +89,7 @@ export async function POST(req: Request) {
     format = 'written',
     paperId, // stable paper identifier, e.g. "aqa-higher-2024-p1"
     userId, // optional — used to dedupe variants per student
+    sectionId, // section slug, e.g. "fractions-decimals" — enables section cache
   } = await req.json()
 
   if (!examBoard || !tier) {
@@ -236,6 +238,27 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
     }
   }
 
+  // ── Section cache: load a random cached set as API-failure fallback ──
+  let sectionCachedFallback: unknown[] | null = null
+  if (!paperStyle && sectionId && supabaseAdmin) {
+    try {
+      const { data: cached } = await supabaseAdmin
+        .from(SECTIONS_TABLE)
+        .select('id, questions')
+        .eq('section_id', sectionId)
+        .eq('board', examBoard)
+        .eq('tier', tier)
+        .eq('difficulty', difficulty)
+        .limit(20)
+      if (cached && cached.length > 0) {
+        const pick = cached[Math.floor(Math.random() * cached.length)]
+        sectionCachedFallback = pick.questions as unknown[]
+      }
+    } catch {
+      // Table missing or transient — fallback stays null
+    }
+  }
+
   const callClaude = async (attempt: number): Promise<unknown[] | null> => {
     const message = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
@@ -264,6 +287,10 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
       questions = await callClaude(1) // one retry
     }
     if (!questions || questions.length === 0) {
+      // Before giving up, serve from section cache if available
+      if (sectionCachedFallback) {
+        return NextResponse.json({ questions: sectionCachedFallback, cached: true })
+      }
       return NextResponse.json(
         { error: 'The model returned an incomplete response. Please try again.' },
         { status: 502 },
@@ -295,9 +322,21 @@ Return a JSON array of exactly ${count} questions (no markdown, no explanation):
       }
     }
 
+    // Persist section questions to cache (best-effort, fire-and-forget)
+    if (!paperStyle && sectionId && supabaseAdmin) {
+      supabaseAdmin
+        .from(SECTIONS_TABLE)
+        .insert({ section_id: sectionId, board: examBoard, tier, difficulty, questions })
+        .then(() => { /* noop */ }, () => { /* ignore */ })
+    }
+
     return NextResponse.json({ questions })
   } catch (err) {
     console.error('Generate error:', err)
+    // API failure (e.g. credits exhausted) — serve cached section questions if available
+    if (sectionCachedFallback) {
+      return NextResponse.json({ questions: sectionCachedFallback, cached: true })
+    }
     return NextResponse.json({ error: 'Failed to generate questions' }, { status: 500 })
   }
 }
