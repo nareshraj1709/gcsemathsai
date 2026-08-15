@@ -3,20 +3,22 @@ import Link from 'next/link'
 import { FOUNDATION_PAPERS, getCheckoutUrl } from '@/lib/predicted-papers'
 
 export const metadata: Metadata = {
-  title: 'Edexcel GCSE Maths Foundation Practice Papers — Paper 2 & Paper 3',
-  description: 'Ten Foundation-tier calculator practice papers for Edexcel GCSE Maths (1MA1) — five Paper-2 style, five Paper-3 style. Full mark schemes and worked solutions. Instant PDF download.',
+  title: 'GCSE Maths November Resit Practice Papers — Edexcel Foundation Paper 2 & Paper 3',
+  description: 'Ten Foundation-tier calculator practice papers for the Edexcel GCSE Maths (1MA1) November resit — five Paper-2 style, five Paper-3 style. Full mark schemes and worked solutions. Instant PDF download.',
   keywords: [
+    'gcse maths november resit foundation',
+    'gcse maths resit practice papers',
+    'edexcel november resit maths',
     'edexcel gcse maths foundation practice papers',
     'gcse maths foundation paper 2 practice',
     'gcse maths foundation paper 3 practice',
     'edexcel 1ma1 foundation practice',
     'gcse maths grade 1 to 5 practice papers',
-    'foundation tier maths papers 2026',
   ],
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/foundation-papers' },
   openGraph: {
-    title: 'Edexcel GCSE Maths Foundation Practice Papers | GCSEMathsAI',
-    description: 'Ten Foundation-tier calculator practice papers with full mark schemes and worked solutions.',
+    title: 'GCSE Maths November Resit Practice Papers — Foundation | GCSEMathsAI',
+    description: 'Ten Foundation-tier calculator practice papers for the November resit, with full mark schemes and worked solutions.',
     url: 'https://www.gcsemathsai.co.uk/foundation-papers',
     type: 'website',
   },
@@ -50,13 +52,16 @@ export default function FoundationPapersPage() {
       {/* Hero */}
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
         <span style={{ ...monoLabel, color: 'var(--gold)', background: 'var(--gold-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 16 }}>
-          Foundation Practice Papers · Edexcel 2026
+          November Resit · Edexcel Foundation
         </span>
         <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 760 }}>
-          Foundation Paper 2 &amp; Paper 3 — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>full-length practice, every grade-boundary topic</em>.
+          Foundation Paper 2 &amp; Paper 3 — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>built for the November GCSE resit</em>.
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 640, margin: '0 auto' }}>
           Ten Foundation-tier calculator practice papers, carefully written by our team from the published Edexcel 1MA1 Foundation specification — five Paper-2 style, five Paper-3 style. Calibrated to the grade 1–5 difficulty curve, with full mark schemes, M1/A1/B1 codes and worked solutions for every question. Sitting Higher? <Link href="/practice-papers" style={{ color: 'var(--green)', textDecoration: 'underline' }}>Our Higher practice papers are here</Link>.
+        </p>
+        <p style={{ color: 'var(--ink-3)', fontSize: 12.5, lineHeight: 1.6, maxWidth: 560, margin: '10px auto 0' }}>
+          The November GCSE series is for post-16 resit candidates (Maths &amp; English only) — check with your school or college that you&rsquo;re entered before you sit it.
         </p>
       </section>
 
@@ -171,6 +176,7 @@ export default function FoundationPapersPage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
           {[
             { q: 'Are these the real exam papers?', a: 'No. Every question is written from scratch by our team, in the style of Edexcel 1MA1 Foundation and pitched at grades 1–5. These are independent practice papers — full-length, exam-shaped, and based entirely on the publicly available specification. We are not affiliated with, endorsed by, or associated with Pearson Edexcel.' },
+            { q: 'Who can sit the GCSE Maths resit in November?', a: 'The November GCSE series is restricted to post-16 resit candidates who did not achieve their target grade in the summer — it is only offered for Maths and English Language, and is not open to Year 11 students sitting for the first time. Check with your school or college that you are entered.' },
             { q: 'Are Sets 1–5 different from Sets 6–10?', a: 'Yes. Sets 1–5 mirror the Edexcel Paper 2F style (percentages, ratio, statistics, scatter graphs, pie charts, speed-distance-time). Sets 6–10 mirror Paper 3F style (compound interest, Pythagoras, volume / surface area, sequences, probability with trees and two-way tables, bearings, and at least one explicit "show that" per paper).' },
             { q: 'How quickly do I get the PDFs?', a: 'Instantly. After Stripe confirms the payment you are taken to a download page and can also receive the links by email. Each PDF is watermarked with your buyer reference.' },
             { q: 'Which pack should I buy first?', a: 'If you can only buy one, get the bundle — it is the cheapest per paper and covers the full Foundation specification. If you have a specific weakness in Paper 2 or Paper 3, pick the matching pack.' },
@@ -189,13 +195,13 @@ export default function FoundationPapersPage() {
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
           <p style={{ ...monoLabel, color: 'var(--gold)', marginBottom: 10 }}>Sitting Higher tier?</p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(20px, 3vw, 26px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 14px', letterSpacing: '-0.01em' }}>
-            Our Higher predicted papers are here too.
+            Our Higher resit practice papers are here too.
           </h2>
           <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6, marginBottom: 18 }}>
-            Ten predicted Paper 2 and Paper 3 papers for Edexcel 1MA1 Higher — calibrated to the 2026 series.
+            Ten Paper 2 and Paper 3 practice papers for Edexcel 1MA1 Higher — built for the November resit.
           </p>
           <Link href="/practice-papers" className="btn btn-outline" style={{ padding: '10px 20px', fontSize: 14 }}>
-            See Higher predicted papers →
+            See Higher practice papers →
           </Link>
         </div>
       </section>

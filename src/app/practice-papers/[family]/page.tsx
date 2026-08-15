@@ -79,6 +79,9 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
           <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 640, margin: '0 auto' }}>
             {f.heroBlurb}
           </p>
+          <p style={{ color: 'var(--ink-3)', fontSize: 12.5, lineHeight: 1.6, maxWidth: 560, margin: '10px auto 0' }}>
+            The November GCSE series is for post-16 resit candidates (Maths &amp; English only) — check with your school or college that you&rsquo;re entered before you sit it.
+          </p>
         </div>
       </section>
 
@@ -169,7 +172,7 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
             {[
-              { num: 'I.', title: `Calibrated to ${f.year}`, body: `Each paper is built around the topics most likely to appear in the ${f.year} series, using the last six years of ${f.board} question style as the base.` },
+              { num: 'I.', title: 'Built for the resit', body: `Each paper is built around the full ${f.board} specification, using the last six years of ${f.board} question style as the base — the same content the November resit series draws from.` },
               { num: 'II.', title: 'Full mark schemes', body: `Every question has a full ${f.board}-style mark scheme. Method (M) marks, accuracy (A) marks and follow-through are all annotated.` },
               { num: 'III.', title: 'Worked solutions', body: 'Not just the answer. Every solution is written the way a top student would lay it out — clear method, every step earning its mark.' },
               { num: 'IV.', title: 'Topic coverage map', body: 'A one-page topic map per paper so you can spot your weak areas at a glance and know exactly what to revise next.' },
@@ -192,7 +195,8 @@ export default async function PredictedPaperFamilyPage({ params }: Props) {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
           {[
-            { q: 'Are these the real exam papers?', a: `No. Every question is written from scratch by our team, in the style of ${f.board} ${f.tier} and calibrated to the published 1MA1 specification. These are independent practice papers — we are not affiliated with, endorsed by, or associated with Pearson Edexcel.` },
+            { q: 'Are these the real exam papers?', a: `No. Every question is written from scratch by our team, in the style of ${f.board} ${f.tier} and based on the published 1MA1 specification. These are independent practice papers — we are not affiliated with, endorsed by, or associated with Pearson Edexcel.` },
+            { q: 'Who can sit the GCSE Maths resit in November?', a: 'The November GCSE series is restricted to post-16 resit candidates who did not achieve their target grade in the summer — it is only offered for Maths and English Language, and is not open to Year 11 students sitting for the first time. Check with your school or college that you are entered.' },
             { q: 'How quickly do I get the PDFs?', a: 'Instantly. After Stripe confirms the payment you will receive an email with a download link for the PDFs — usually within 60 seconds.' },
             { q: 'Which paper should I buy first?', a: 'If you can only buy one, get Paper 2. It is typically the first calculator paper in the exam series and the bigger predictor of how Paper 3 will run.' },
             { q: 'Can I share these with my class?', a: 'A single purchase is for one student. For class / school licences, get in touch via /contact — we offer per-student rates from £4.' },

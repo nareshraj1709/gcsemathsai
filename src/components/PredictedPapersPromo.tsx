@@ -43,13 +43,13 @@ export default function PredictedPapersPromo({
         }}
       >
         <span style={{ fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--gold-soft)' }}>
-          ◆ New · Edexcel Higher 2026
+          ◆ Edexcel · November Resit
         </span>
         <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(20px, 2.6vw, 26px)', fontWeight: 600, color: 'var(--cream)', margin: 0, letterSpacing: '-0.01em', lineHeight: 1.18 }}>
-          Practising for the real thing? <em style={{ color: 'var(--gold-soft)' }}>Practice Papers</em> are here.
+          Resitting in November? <em style={{ color: 'var(--gold-soft)' }}>Practice Papers</em> are here.
         </h3>
         <p style={{ fontSize: 14, color: 'var(--cream)', opacity: 0.92, lineHeight: 1.55, margin: 0 }}>
-          Ten practice papers for Edexcel 1MA1 Higher 2026 — five Paper-2 style, five Paper-3 style, written by our team from the published specification. Full mark schemes and worked solutions. Instant PDF download.
+          Ten practice papers for the Edexcel 1MA1 Higher November GCSE resit — five Paper-2 style, five Paper-3 style, written by our team from the published specification. Full mark schemes and worked solutions. Instant PDF download.
         </p>
         <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', marginTop: 6 }}>
           <a href={link(bundle)} target="_blank" rel="noopener"
@@ -78,7 +78,7 @@ export default function PredictedPapersPromo({
     return (
       <section style={{ margin: '40px 0', background: 'var(--paper)', border: '2px solid var(--green)', borderRadius: 14, padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}>
         <p style={{ fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 10 }}>
-          New · Edexcel Higher 2026
+          Edexcel · November Resit
         </p>
         <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(20px, 2.6vw, 26px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 10px', letterSpacing: '-0.01em' }}>
           Ten practice papers between you and your exam.
@@ -101,10 +101,10 @@ export default function PredictedPapersPromo({
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 24 }}>
           <span style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--gold)', background: 'var(--gold-soft)', padding: '4px 12px', borderRadius: 999, display: 'inline-block', marginBottom: 12 }}>
-            New · Edexcel Higher 2026
+            Edexcel · November Resit
           </span>
           <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 600, color: 'var(--ink)', margin: '0 0 8px', letterSpacing: '-0.01em' }}>
-            Practice Papers — calibrated for the 2026 exam.
+            Practice Papers — built for the November resit.
           </h3>
           <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.6, maxWidth: 540, margin: '0 auto' }}>
             Ten Paper-2 and Paper-3 style practice papers, written by our team from the published Edexcel 1MA1 specification. Full mark schemes and worked solutions. Instant PDF download.

@@ -95,7 +95,7 @@ export default function MyPapersPage() {
             My Papers
           </span>
           <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.15, margin: '0 0 8px' }}>
-            Your predicted papers
+            Your practice papers
           </h1>
           <p style={{ color: 'var(--ink-3)', fontSize: 14, lineHeight: 1.65, margin: 0 }}>
             Signed in as <strong style={{ color: 'var(--ink-2)' }}>{email || '…'}</strong>. Downloads here only work for the email you used to pay through Stripe.
@@ -115,7 +115,7 @@ export default function MyPapersPage() {
             <p style={{ fontSize: 14, color: 'var(--ink-3)', lineHeight: 1.65, marginBottom: 16 }}>
               If you bought a pack, check the email you used at Stripe checkout — your download access is tied to that address. Sign in here with the same email and your papers will appear.
             </p>
-            <Link href="/practice-papers/edexcel-gcse-maths-higher-2026" className="btn btn-primary">See predicted packs →</Link>
+            <Link href="/practice-papers/edexcel-gcse-maths-higher-2026" className="btn btn-primary">See practice packs →</Link>
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>

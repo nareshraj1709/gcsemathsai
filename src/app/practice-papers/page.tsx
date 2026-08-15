@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { PREDICTED_PAPERS, getCheckoutUrl } from '@/lib/predicted-papers'
 
 export const metadata: Metadata = {
-  title: 'Edexcel GCSE Maths Predicted Papers 2026 — Paper 2 & Paper 3',
-  description: 'Five predicted Paper 2 and five predicted Paper 3 papers for Edexcel GCSE Maths Higher (1MA1), with full mark schemes and worked solutions. Calibrated to 2026 exams.',
-  keywords: ['edexcel gcse maths predicted papers', 'gcse maths paper 2 prediction', 'gcse maths paper 3 prediction', 'edexcel 1ma1 higher predicted', 'gcse maths 2026 predicted papers', 'edexcel higher predicted'],
+  title: 'GCSE Maths November Resit Practice Papers — Edexcel Paper 2 & Paper 3',
+  description: 'Five Paper 2 and five Paper 3 practice papers for the Edexcel GCSE Maths Higher (1MA1) November resit, with full mark schemes and worked solutions.',
+  keywords: ['gcse maths november resit', 'gcse maths resit practice papers', 'edexcel november resit maths', 'edexcel gcse maths practice papers', 'gcse maths paper 2 practice', 'gcse maths paper 3 practice', 'edexcel 1ma1 higher practice'],
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/practice-papers' },
   openGraph: {
-    title: 'Edexcel GCSE Maths Predicted Papers 2026 | GCSEMathsAI',
-    description: 'Five predicted Paper 2 and five predicted Paper 3 papers for Edexcel Higher, with mark schemes and worked solutions.',
+    title: 'GCSE Maths November Resit Practice Papers | GCSEMathsAI',
+    description: 'Five Paper 2 and five Paper 3 practice papers for the Edexcel Higher November resit, with mark schemes and worked solutions.',
     url: 'https://www.gcsemathsai.co.uk/practice-papers',
     type: 'website',
   },
@@ -43,13 +43,16 @@ export default function PredictedPapersPage() {
       {/* Hero */}
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
         <span style={{ ...monoLabel, color: 'var(--gold)', background: 'var(--gold-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 16 }}>
-          Predicted Papers · Edexcel Higher 2026
+          November Resit · Edexcel Higher
         </span>
         <h1 style={{ color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 760 }}>
-          Paper 2 &amp; Paper 3 practice — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>written for the topics likeliest to appear</em>.
+          Paper 2 &amp; Paper 3 practice — <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>built for the November GCSE resit</em>.
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 620, margin: '0 auto' }}>
-          Ten practice papers for Edexcel 1MA1 Higher — five Paper-2 style, five Paper-3 style. Carefully written by our team from the published 1MA1 specification, with full mark schemes and worked solutions. Each paper is shaped to the topics most commonly examined in recent series.
+          Ten practice papers for Edexcel 1MA1 Higher — five Paper-2 style, five Paper-3 style. Carefully written by our team from the published 1MA1 specification, with full mark schemes and worked solutions.
+        </p>
+        <p style={{ color: 'var(--ink-3)', fontSize: 12.5, lineHeight: 1.6, maxWidth: 560, margin: '10px auto 0' }}>
+          The November GCSE series is for post-16 resit candidates (Maths &amp; English only) — check with your school or college that you&rsquo;re entered before you sit it.
         </p>
       </section>
 
@@ -141,7 +144,7 @@ export default function PredictedPapersPage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
             {[
-              { num: 'I.', title: 'Calibrated to 2026', body: 'Each paper is built around the topics most likely to appear in the 2026 series, using the last six years of Edexcel question style as the base.' },
+              { num: 'I.', title: 'Built for the resit', body: 'Each paper is built around the full Edexcel 1MA1 Higher specification, using the last six years of Edexcel question style as the base — the same content the November resit series draws from.' },
               { num: 'II.', title: 'Full mark schemes', body: 'Every question has a full Edexcel-style mark scheme. Method (M) marks, accuracy (A) marks and follow-through are all annotated.' },
               { num: 'III.', title: 'Worked solutions', body: 'Not just the answer. Every solution is written the way a top student would lay it out — clear method, every step earning its mark.' },
               { num: 'IV.', title: 'Topic coverage map', body: 'A one-page topic map per paper so you can spot your weak areas at a glance and know exactly what to revise next.' },
@@ -164,7 +167,8 @@ export default function PredictedPapersPage() {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
           {[
-            { q: 'Are these the real exam papers?', a: 'No. Every question is written from scratch by our team, in the style of Edexcel 1MA1 Higher and calibrated to the published 1MA1 specification. These are independent practice papers — we are not affiliated with, endorsed by, or associated with Pearson Edexcel.' },
+            { q: 'Are these the real exam papers?', a: 'No. Every question is written from scratch by our team, in the style of Edexcel 1MA1 Higher and based on the published 1MA1 specification. These are independent practice papers — we are not affiliated with, endorsed by, or associated with Pearson Edexcel.' },
+            { q: 'Who can sit the GCSE Maths resit in November?', a: 'The November GCSE series is restricted to post-16 resit candidates who did not achieve their target grade in the summer — it is only offered for Maths and English Language, and is not open to Year 11 students sitting for the first time. Check with your school or college that you are entered.' },
             { q: 'How quickly do I get the PDFs?', a: 'Instantly. After Stripe confirms the payment you will receive an email with a download link for the PDFs — usually within 60 seconds.' },
             { q: 'Which paper should I buy first?', a: 'If you can only buy one, get Paper 2. It is typically the first calculator paper in the exam series and the bigger predictor of how Paper 3 will run.' },
             { q: 'Can I share these with my class?', a: 'A single purchase is for one student. For class / school licences, get in touch via /contact — we offer per-student rates from £4.' },

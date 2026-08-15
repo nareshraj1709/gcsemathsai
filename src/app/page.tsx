@@ -130,10 +130,10 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head" style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 32px' }}>
             <div className="sec-label" style={{ justifyContent: 'center' }}>
-              <span style={{ background: 'var(--gold-soft)', color: 'var(--gold)', padding: '3px 10px', borderRadius: 999, fontSize: 10 }}>NEW · 2026</span>
+              <span style={{ background: 'var(--gold-soft)', color: 'var(--gold)', padding: '3px 10px', borderRadius: 999, fontSize: 10 }}>NOVEMBER RESIT</span>
               <span style={{ marginLeft: 8 }}>Higher Practice Papers · Edexcel style</span>
             </div>
-            <h2>Ten practice papers, <em>calibrated for 2026</em>.</h2>
+            <h2>Ten practice papers, <em>built for the November resit</em>.</h2>
             <p className="sec-sub" style={{ margin: '0 auto' }}>
               Paper-2 style and Paper-3 style practice papers, carefully written by our team from the published Edexcel 1MA1 Higher specification. Full mark schemes and worked solutions. Instant PDF download after Stripe checkout. <em style={{ color: 'var(--ink-3)' }}>Not affiliated with Pearson Edexcel.</em>
             </p>
@@ -184,7 +184,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head" style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 32px' }}>
             <div className="sec-label" style={{ justifyContent: 'center' }}>
-              <span style={{ background: 'var(--gold-soft)', color: 'var(--gold)', padding: '3px 10px', borderRadius: 999, fontSize: 10 }}>NEW</span>
+              <span style={{ background: 'var(--gold-soft)', color: 'var(--gold)', padding: '3px 10px', borderRadius: 999, fontSize: 10 }}>NOVEMBER RESIT</span>
               <span style={{ marginLeft: 8 }}>Foundation Practice Papers · Edexcel</span>
             </div>
             <h2>Foundation tier? <em>Ten full practice papers</em>, every grade-boundary topic.</h2>
