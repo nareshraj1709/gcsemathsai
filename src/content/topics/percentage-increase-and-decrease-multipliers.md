@@ -7,7 +7,7 @@ category: "Ratio"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["percentage multipliers GCSE", "percentage increase multiplier", "percentage decrease multiplier", "repeated percentage change GCSE", "find original after percentage change", "percentage multiplier method"]
+keywords: ["percentage multiplier", "percentage multipliers GCSE", "percentage increase multiplier", "percentage decrease multiplier", "repeated percentage change GCSE", "find original after percentage change"]
 tier: "Foundation & Higher"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 236

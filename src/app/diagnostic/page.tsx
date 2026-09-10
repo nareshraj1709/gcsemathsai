@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { getAllDiagnosticSets } from '@/lib/diagnostic-mcqs'
 
 export const metadata: Metadata = {
-  title: 'Diagnostic Quizzes — GCSE Maths | GCSEMathsAI',
+  title: 'Diagnostic Quizzes — GCSE Maths',
   description: 'Free diagnostic MCQ quizzes for every GCSE Maths topic. Identify misconceptions in minutes with targeted multiple-choice questions.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/diagnostic' },
   openGraph: {

@@ -7,7 +7,7 @@ category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 6
-keywords: ["isometric drawings GCSE", "isometric paper Maths", "drawing 3D shapes isometric", "plans and elevations to isometric", "isometric grid GCSE Maths", "3D drawing GCSE revision", "isometric projection Maths"]
+keywords: ["isometric drawings GCSE", "isometric paper Maths", "drawing 3D shapes isometric", "converting plans and elevations to isometric drawing", "isometric grid GCSE Maths", "isometric projection Maths"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 221

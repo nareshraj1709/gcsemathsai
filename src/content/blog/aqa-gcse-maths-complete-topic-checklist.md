@@ -7,7 +7,7 @@ category: "AQA"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 12
-keywords: ["aqa gcse maths", "aqa gcse maths past papers", "aqa gcse maths topics", "aqa gcse maths revision", "aqa maths 8300", "aqa gcse maths higher", "aqa gcse maths foundation", "aqa gcse maths grade boundaries"]
+keywords: ["aqa gcse maths topics", "gcse maths topics", "aqa maths specification gcse", "aqa gcse maths syllabus", "maths topics gcse", "aqa maths 8300", "aqa gcse maths grade boundaries"]
 ---
 
 AQA is the most widely sat GCSE Maths exam board in England, with over 1.5 million candidates each year. If your school entered you for AQA (specification code 8300), this guide gives you everything you need — from how the papers are structured to a complete topic checklist you can use right through to your exam.

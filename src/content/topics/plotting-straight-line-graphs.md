@@ -7,7 +7,7 @@ category: "Algebra"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["plotting straight line graphs", "y equals mx plus c", "gradient intercept method", "table of values graph", "linear graphs GCSE"]
+keywords: ["plotting straight line graphs", "table of values graph", "gradient intercept method", "how to plot a straight line graph", "drawing straight line graphs GCSE"]
 tier: "Foundation & Higher"
 strand: "Algebra"
 topicNumber: 91

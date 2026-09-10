@@ -2,12 +2,12 @@
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'OCR GCSE Maths (J560) â€” Complete Hub | GCSEMathsAI',
-  description: 'OCR GCSE Maths J560 â€” paper structure, grade boundaries, problem-solving style, exam guidance for Foundation and Higher tier students.',
+  title: 'OCR GCSE Maths (J560) — Complete Hub',
+  description: 'OCR GCSE Maths J560 — paper structure, grade boundaries, problem-solving style, exam guidance for Foundation and Higher tier students.',
   keywords: ['ocr gcse maths', 'ocr j560', 'ocr gcse maths past papers', 'ocr gcse maths topics', 'ocr gcse maths grade boundaries', 'ocr gcse maths higher foundation'],
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/ocr' },
   openGraph: {
-    title: 'OCR GCSE Maths (J560) â€” Complete Revision Hub | GCSEMathsAI',
+    title: 'OCR GCSE Maths (J560) — Complete Revision Hub | GCSEMathsAI',
     description: 'Paper structure, grade boundaries, problem-solving style and revision guidance for OCR GCSE Maths J560.',
     url: 'https://www.gcsemathsai.co.uk/ocr',
   },
@@ -24,16 +24,16 @@ const PAPERS = [
 const HIGHER_GB = [['9','240â€“262'],['8','210â€“235'],['7','180â€“205'],['6','145â€“170'],['5','110â€“135'],['4','75â€“100']]
 const FOUNDATION_GB = [['5','175â€“205'],['4','130â€“158'],['3','90â€“115']]
 const STYLE_NOTES = [
-  { title: 'Problem-solving emphasis', body: 'OCR papers contain a higher density of multi-step problem-solving questions. Questions often start in a real context and require you to identify the maths needed â€” closer to the way mathematics is used outside the classroom.' },
+  { title: 'Problem-solving emphasis', body: 'OCR papers contain a higher density of multi-step problem-solving questions. Questions often start in a real context and require you to identify the maths needed — closer to the way mathematics is used outside the classroom.' },
   { title: 'Alternative methods credited', body: 'OCR mark schemes explicitly mention alternative methods. If you reach the right answer with a valid different approach, you usually get full credit. This rewards confident, creative problem solving.' },
   { title: 'Strong communication focus', body: 'OCR awards communication marks for clearly laid-out working, including the use of correct notation. Sloppy presentation can lose marks even when the maths is right.' },
-  { title: 'Smaller candidate base', body: 'About 10% of GCSE Maths candidates sit OCR. Resources are slightly less abundant than for AQA or Edexcel â€” past papers and worked solutions are more valuable as a result.' },
+  { title: 'Smaller candidate base', body: 'About 10% of GCSE Maths candidates sit OCR. Resources are slightly less abundant than for AQA or Edexcel — past papers and worked solutions are more valuable as a result.' },
 ]
 const USEFUL_LINKS = [
   { label: 'OCR GCSE Maths Complete Guide', href: '/blog/ocr-gcse-maths-complete-guide' },
   { label: 'GCSE Maths 2026 Grade Boundaries Forecast', href: '/blog/gcse-maths-2026-grade-boundaries-forecast' },
   { label: 'GCSE Maths Exam Technique', href: '/blog/gcse-maths-exam-technique' },
-  { label: 'Iteration at GCSE Maths â€” Higher', href: '/blog/iteration-gcse-maths-higher-guide' },
+  { label: 'Iteration at GCSE Maths — Higher', href: '/blog/iteration-gcse-maths-higher-guide' },
   { label: 'Trigonometry at GCSE', href: '/blog/trigonometry-gcse-maths' },
   { label: 'All 245 GCSE Maths Topics', href: '/topics' },
 ]
@@ -142,7 +142,7 @@ export default function OCRHubPage() {
           Practise calibrated to <em style={{ color: 'var(--gold-soft)', fontStyle: 'italic' }}>OCR mark schemes</em>.
         </h2>
         <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
-          Instant marking that awards alternative methods and communication marks â€” the OCR way.
+          Instant marking that awards alternative methods and communication marks — the OCR way.
         </p>
         <Link href="/auth" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>Start free â†’</Link>
       </section>

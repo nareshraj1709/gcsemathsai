@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Revision Planner — 15 Minutes a Day | GCSEMathsAI',
+  title: 'Revision Planner — 15 Minutes a Day',
   description: 'Set your GCSE Maths exam date. We schedule personalised 15-minute revision sessions around your weak spots, every day until your exam.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/features/revision-planner' },
   openGraph: {

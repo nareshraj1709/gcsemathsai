@@ -6,11 +6,11 @@ import { GLOSSARY } from '@/lib/glossary-data'
 import { QUESTION_TYPES } from '@/lib/question-types-data'
 
 export const metadata: Metadata = {
-  title: 'Site Map â€” Every Page on GCSEMathsAI',
-  description: 'A complete index of every GCSE Maths revision page on GCSEMathsAI â€” topics, blog articles, glossary, command-word guides and exam-board hubs.',
+  title: 'Site Map — Every Page on GCSEMathsAI',
+  description: 'A complete index of every GCSE Maths revision page on GCSEMathsAI — topics, blog articles, glossary, command-word guides and exam-board hubs.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/site-map' },
   openGraph: {
-    title: 'Site Map â€” Every Page on GCSEMathsAI',
+    title: 'Site Map — Every Page on GCSEMathsAI',
     description: 'Browse every revision resource on the site in one place.',
     url: 'https://www.gcsemathsai.co.uk/site-map',
   },
@@ -65,7 +65,7 @@ export default function SiteMapPage() {
           Every page on <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>GCSEMathsAI</em>.
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 580, margin: '0 auto' }}>
-          A browsable index of every revision resource on the site â€” topics, blog guides, glossary terms, command-word explainers and exam-board hubs.
+          A browsable index of every revision resource on the site — topics, blog guides, glossary terms, command-word explainers and exam-board hubs.
         </p>
       </section>
 

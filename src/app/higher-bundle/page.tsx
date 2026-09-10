@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Papers 2 & 3 Final Push Bundle — Edexcel Higher 2026 | GCSEMathsAI',
+  title: 'Papers 2 & 3 Final Push Bundle — Edexcel Higher 2026',
   description: 'Free revision bundle for Edexcel GCSE Maths Higher Papers 2 & 3 — key topics, worked examples, calculator skills, 17-day revision plan and formula quick sheet.',
   keywords: ['GCSE maths paper 2 revision', 'GCSE maths paper 3 revision', 'edexcel higher revision bundle', 'GCSE maths calculator paper revision', 'GCSE maths 2026 revision pack'],
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/higher-bundle' },

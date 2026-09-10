@@ -1136,7 +1136,7 @@ category: "Geometry & Measures"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["angles in polygons GCSE", "interior angles", "exterior angles", "sum of angles polygon", "regular polygon angles"]
+keywords: ["angles in polygons GCSE", "interior angles", "exterior angles", "sum of angles polygon", "angles in polygons formula"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 55
@@ -4721,7 +4721,7 @@ category: "Ratio"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["compound interest GCSE", "depreciation GCSE maths", "compound interest formula", "percentage increase decrease", "repeated percentage change"]
+keywords: ["compound interest and depreciation GCSE", "compound interest formula", "depreciation GCSE maths", "reducing balance depreciation", "compound interest word problems"]
 tier: "Foundation & Higher"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 38
@@ -4888,14 +4888,14 @@ Compound interest and depreciation both use the **multiplier method**. For compo
 `,
   "compound-interest-calculations": `---
 title: "Compound Interest Calculations – GCSE Maths Revision Guide"
-description: "Master compound interest calculations for GCSE Maths. A = P(1 + r/100)^n, multiplier method, simple vs compound interest and depreciation."
+description: "Step-by-step compound interest calculations for GCSE Maths using the multiplier method: A = P(1 + r/100)^n, worked examples, and simple vs compound interest."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Ratio"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["compound interest formula", "multiplier method GCSE", "simple vs compound interest", "depreciation GCSE maths", "compound interest calculations"]
+keywords: ["multiplier method GCSE", "simple vs compound interest", "compound interest step by step", "compound interest calculations", "A = P(1 + r/100)^n"]
 tier: "Foundation & Higher"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 117
@@ -13025,7 +13025,7 @@ category: "Ratio"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["exponential growth GCSE", "exponential decay GCSE", "growth and decay GCSE higher", "exponential functions GCSE", "percentage multiplier"]
+keywords: ["exponential growth GCSE", "exponential decay GCSE", "growth and decay GCSE higher", "exponential functions GCSE", "compound growth formula"]
 tier: "Higher only"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 43
@@ -14058,7 +14058,7 @@ category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["interior angles of polygons", "exterior angles of polygons", "sum of interior angles", "regular polygon angles", "GCSE polygon angles"]
+keywords: ["interior angles of polygons", "exterior angles of polygons", "sum of interior angles", "regular polygon angles", "irregular polygon angles GCSE"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 152
@@ -14740,7 +14740,7 @@ category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 6
-keywords: ["isometric drawings GCSE", "isometric paper Maths", "drawing 3D shapes isometric", "plans and elevations to isometric", "isometric grid GCSE Maths", "3D drawing GCSE revision", "isometric projection Maths"]
+keywords: ["isometric drawings GCSE", "isometric paper Maths", "drawing 3D shapes isometric", "converting plans and elevations to isometric drawing", "isometric grid GCSE Maths", "isometric projection Maths"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 221
@@ -17941,7 +17941,7 @@ category: "Ratio"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["percentage multipliers GCSE", "percentage increase multiplier", "percentage decrease multiplier", "repeated percentage change GCSE", "find original after percentage change", "percentage multiplier method"]
+keywords: ["percentage multiplier", "percentage multipliers GCSE", "percentage increase multiplier", "percentage decrease multiplier", "repeated percentage change GCSE", "find original after percentage change"]
 tier: "Foundation & Higher"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 236
@@ -18091,14 +18091,14 @@ Practise percentage multiplier questions with instant feedback free on GCSEMaths
 `,
   "percentage-multipliers": `---
 title: "Percentage Multipliers – GCSE Maths Revision Guide"
-description: "Master decimal multipliers for percentage increase, decrease and repeated change. GCSE Maths worked examples and practice questions."
+description: "Converting a percentage to a decimal multiplier for GCSE Maths: quick-reference table, common multipliers, and how to build one in seconds."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Number"
 categoryColour: "purple"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["percentage multiplier GCSE", "decimal multiplier", "repeated percentage change", "percentage increase multiplier", "percentage decrease multiplier"]
+keywords: ["converting percentage to multiplier", "decimal multiplier GCSE", "percentage multiplier quick reference", "how to find a multiplier", "percentage to decimal conversion GCSE"]
 tier: "Foundation & Higher"
 strand: "Number"
 topicNumber: 78
@@ -18482,7 +18482,7 @@ category: "Ratio, Proportion & Rates of Change"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["percentage increase gcse", "percentage decrease gcse", "percentage multiplier", "compound interest gcse maths", "percentage change gcse"]
+keywords: ["percentage increase gcse", "percentage decrease gcse", "percentage change gcse", "percentage increase and decrease examples", "gcse percentage increase decrease questions"]
 tier: "Foundation & Higher"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 36
@@ -19367,7 +19367,7 @@ category: "Algebra"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["plotting straight line graphs", "y equals mx plus c", "gradient intercept method", "table of values graph", "linear graphs GCSE"]
+keywords: ["plotting straight line graphs", "table of values graph", "gradient intercept method", "how to plot a straight line graph", "drawing straight line graphs GCSE"]
 tier: "Foundation & Higher"
 strand: "Algebra"
 topicNumber: 91

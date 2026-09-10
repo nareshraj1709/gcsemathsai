@@ -1,13 +1,13 @@
 ---
 title: "Compound Interest Calculations – GCSE Maths Revision Guide"
-description: "Master compound interest calculations for GCSE Maths. A = P(1 + r/100)^n, multiplier method, simple vs compound interest and depreciation."
+description: "Step-by-step compound interest calculations for GCSE Maths using the multiplier method: A = P(1 + r/100)^n, worked examples, and simple vs compound interest."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Ratio"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["compound interest formula", "multiplier method GCSE", "simple vs compound interest", "depreciation GCSE maths", "compound interest calculations"]
+keywords: ["multiplier method GCSE", "simple vs compound interest", "compound interest step by step", "compound interest calculations", "A = P(1 + r/100)^n"]
 tier: "Foundation & Higher"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 117

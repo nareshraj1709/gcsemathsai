@@ -5,11 +5,11 @@ import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 import StrandAccordion from '@/components/StrandAccordion'
 
 export const metadata: Metadata = {
-  title: 'All GCSE Maths Topics â€” Complete Revision Guide',
+  title: 'All GCSE Maths Topics — Complete Revision Guide',
   description: 'Browse all 245 GCSE Maths topics with step-by-step explanations, worked examples and practice questions. Covers AQA, Edexcel and OCR specifications.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/topics' },
   openGraph: {
-    title: 'All GCSE Maths Topics â€” Complete Revision Guide',
+    title: 'All GCSE Maths Topics — Complete Revision Guide',
     description: 'Browse all 245 GCSE Maths topics with explanations, worked examples and practice questions.',
     url: 'https://www.gcsemathsai.co.uk/topics',
   },
@@ -47,7 +47,7 @@ export default function TopicsIndexPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'GCSE Maths â€” Complete Topic Guide',
+    name: 'GCSE Maths — Complete Topic Guide',
     description: 'Step-by-step guides, worked examples and practice questions for all 245 GCSE Maths topics across AQA, Edexcel and OCR specifications.',
     provider: { '@type': 'Organization', name: 'GCSEMathsAI', url: BASE },
     url: `${BASE}/topics`,
@@ -103,7 +103,7 @@ export default function TopicsIndexPage() {
           color: 'var(--ink)',
           margin: '0 0 8px',
         }}>
-          Every GCSE Maths Topic â€” Explained
+          Every GCSE Maths Topic — Explained
         </h1>
         <p style={{
           fontSize: 14,
@@ -158,7 +158,7 @@ export default function TopicsIndexPage() {
             margin: '0 auto 24px',
             lineHeight: 1.5,
           }}>
-            Get AI-marked practice questions on any topic â€” with instant feedback and step-by-step solutions.
+            Get AI-marked practice questions on any topic — with instant feedback and step-by-step solutions.
           </p>
           <Link
             href="/auth"

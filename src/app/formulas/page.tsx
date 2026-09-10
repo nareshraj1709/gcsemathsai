@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { getAllFormulaSheets, getSheetsByStrand } from '@/lib/formula-sheet-extractor'
 
 export const metadata: Metadata = {
-  title: 'GCSE Maths Formula Sheets — Every Topic, Free PDF & Print',
+  title: 'GCSE Maths Formula Sheets by Topic — Free PDF & Print',
   description: 'Free formula sheets for every GCSE Maths topic — Number, Algebra, Ratio, Geometry, Statistics. Each sheet lists definitions, formulas, worked examples, common mistakes and exam tips. Printable and downloadable as PDF.',
-  keywords: ['gcse maths formula sheet', 'gcse maths formulas pdf', 'gcse maths formula list', 'gcse maths topic formulas', 'aqa edexcel ocr formula sheet', 'gcse maths formula download'],
+  keywords: ['gcse maths formula sheets by topic', 'printable gcse maths formulas', 'gcse maths formula reference', 'gcse maths topic formulas', 'aqa edexcel ocr formula sheet'],
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/formulas' },
   openGraph: {
     title: 'GCSE Maths Formula Sheets — Every Topic | GCSEMathsAI',

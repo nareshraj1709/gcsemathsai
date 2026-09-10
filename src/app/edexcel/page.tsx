@@ -2,12 +2,12 @@
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Edexcel GCSE Maths (1MA1) â€” Complete Hub | GCSEMathsAI',
-  description: 'Edexcel GCSE Maths 1MA1 â€” paper structure, grade boundaries, most-examined topics, formula sheet and revision guidance for Foundation and Higher tier students.',
+  title: 'Edexcel GCSE Maths (1MA1) — Complete Hub',
+  description: 'Edexcel GCSE Maths 1MA1 — paper structure, grade boundaries, most-examined topics, formula sheet and revision guidance for Foundation and Higher tier students.',
   keywords: ['edexcel gcse maths', 'edexcel 1ma1', 'edexcel gcse maths past papers', 'edexcel gcse maths topics', 'edexcel gcse maths grade boundaries', 'edexcel gcse maths higher foundation'],
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/edexcel' },
   openGraph: {
-    title: 'Edexcel GCSE Maths (1MA1) â€” Complete Revision Hub | GCSEMathsAI',
+    title: 'Edexcel GCSE Maths (1MA1) — Complete Revision Hub | GCSEMathsAI',
     description: 'Paper structure, grade boundaries, question style and revision guidance for Edexcel GCSE Maths 1MA1.',
     url: 'https://www.gcsemathsai.co.uk/edexcel',
   },
@@ -26,13 +26,13 @@ const FOUNDATION_GB = [['5','150â€“172'],['4','110â€“135'],['3','75â�
 const STYLE_NOTES = [
   { title: 'Structured, methodical questions', body: 'Edexcel questions tend to scaffold a clear method. Show-that and prove questions are common, with each step contributing one mark. This rewards careful, well-laid-out working.' },
   { title: 'Detailed mark schemes', body: "Pearson's mark schemes spell out exactly what counts as a method mark and what counts as an accuracy mark. Following the standard layout (write the formula, substitute, calculate) maximises mark recovery on tough questions." },
-  { title: 'Strong on functional maths', body: 'Edexcel includes more "real-world maths" style questions â€” bills, percentages of money, time and distance scenarios â€” particularly at Foundation tier.' },
-  { title: 'Higher tier puts proofs at the back', body: 'Algebraic proof, vector proof and circle theorem proof typically appear in the last few questions of each paper. Practise these specifically â€” they are predictable and high-value.' },
+  { title: 'Strong on functional maths', body: 'Edexcel includes more "real-world maths" style questions — bills, percentages of money, time and distance scenarios — particularly at Foundation tier.' },
+  { title: 'Higher tier puts proofs at the back', body: 'Algebraic proof, vector proof and circle theorem proof typically appear in the last few questions of each paper. Practise these specifically — they are predictable and high-value.' },
 ]
 const USEFUL_LINKS = [
   { label: 'Edexcel GCSE Maths Past Papers Guide', href: '/blog/edexcel-gcse-maths-past-papers-guide' },
   { label: 'GCSE Maths 2026 Grade Boundaries Forecast', href: '/blog/gcse-maths-2026-grade-boundaries-forecast' },
-  { label: 'Vectors at GCSE Maths â€” Higher Guide', href: '/blog/vectors-gcse-maths-higher-guide' },
+  { label: 'Vectors at GCSE Maths — Higher Guide', href: '/blog/vectors-gcse-maths-higher-guide' },
   { label: 'Circle Theorems at GCSE', href: '/blog/circle-theorems-gcse' },
   { label: 'How to Solve Quadratic Equations', href: '/blog/how-to-solve-quadratic-equations-gcse' },
   { label: 'All 245 GCSE Maths Topics', href: '/topics' },
@@ -58,7 +58,7 @@ export default function EdexcelHubPage() {
           Edexcel GCSE Maths <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>(1MA1)</em>
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 620, margin: '0 auto' }}>
-          Pearson&apos;s flagship maths qualification, the second most-sat GCSE Maths spec in England. Edexcel papers are known for structured, methodical questions and detailed mark schemes â€” this page covers every aspect you need to revise.
+          Pearson&apos;s flagship maths qualification, the second most-sat GCSE Maths spec in England. Edexcel papers are known for structured, methodical questions and detailed mark schemes — this page covers every aspect you need to revise.
         </p>
       </section>
 
@@ -142,7 +142,7 @@ export default function EdexcelHubPage() {
           Practise calibrated to <em style={{ color: 'var(--gold-soft)', fontStyle: 'italic' }}>Edexcel mark schemes</em>.
         </h2>
         <p style={{ color: 'var(--green-soft)', fontSize: 14, lineHeight: 1.6, maxWidth: 480, margin: '0 auto 22px' }}>
-          Instant marking that follows the M-A-C structure â€” method, accuracy, communication.
+          Instant marking that follows the M-A-C structure — method, accuracy, communication.
         </p>
         <Link href="/auth" className="btn" style={{ background: 'var(--cream)', color: 'var(--green)', padding: '11px 24px', fontWeight: 600 }}>Start free â†’</Link>
       </section>

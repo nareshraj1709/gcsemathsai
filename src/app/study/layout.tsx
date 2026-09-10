@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'GCSE Maths Study Notes — Free Revision Guides for Every Topic | GCSEMathsAI',
+  title: 'GCSE Maths Study Notes — Free Revision Guides for Every Topic',
   description:
     'Free GCSE Maths study notes covering all AQA, Edexcel and OCR topics — Number, Algebra, Geometry, Statistics and Probability. Key facts, formulas, worked examples and exam tips for Foundation and Higher.',
   keywords: [

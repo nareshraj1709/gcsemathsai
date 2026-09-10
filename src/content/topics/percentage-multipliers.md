@@ -1,13 +1,13 @@
 ---
 title: "Percentage Multipliers – GCSE Maths Revision Guide"
-description: "Master decimal multipliers for percentage increase, decrease and repeated change. GCSE Maths worked examples and practice questions."
+description: "Converting a percentage to a decimal multiplier for GCSE Maths: quick-reference table, common multipliers, and how to build one in seconds."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Number"
 categoryColour: "purple"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["percentage multiplier GCSE", "decimal multiplier", "repeated percentage change", "percentage increase multiplier", "percentage decrease multiplier"]
+keywords: ["converting percentage to multiplier", "decimal multiplier GCSE", "percentage multiplier quick reference", "how to find a multiplier", "percentage to decimal conversion GCSE"]
 tier: "Foundation & Higher"
 strand: "Number"
 topicNumber: 78

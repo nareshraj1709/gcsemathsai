@@ -7,7 +7,7 @@ category: "Reference"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 10
-keywords: ["gcse maths formula sheet", "gcse maths formulas", "gcse maths formulae", "gcse maths formulas to memorise", "gcse maths formula list", "aqa gcse maths formula sheet", "edexcel gcse maths formula sheet", "gcse higher maths formulas"]
+keywords: ["gcse maths formulas you must know", "gcse maths formulas to memorise", "which formulas are given gcse maths", "gcse maths formulae explained", "higher maths formula sheet", "gcse maths formula list"]
 ---
 
 One of the most common revision mistakes is memorising formulae that are actually given on the exam paper — and failing to memorise the ones that are not. This guide tells you exactly which formulae each board provides, which ones you must know from memory, and how to apply them.

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Writing Pad — Write Your Working, Get It Marked | GCSEMathsAI',
+  title: 'Writing Pad — Write Your Working, Get It Marked',
   description: 'Write your GCSE Maths working with a stylus or finger on iPad or phone. Your handwriting is recognised and marked line by line — method marks, accuracy marks and follow-through.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/features/writing-pad' },
   openGraph: {

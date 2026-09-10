@@ -7,7 +7,7 @@ category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["interior angles of polygons", "exterior angles of polygons", "sum of interior angles", "regular polygon angles", "GCSE polygon angles"]
+keywords: ["interior angles of polygons", "exterior angles of polygons", "sum of interior angles", "regular polygon angles", "irregular polygon angles GCSE"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 152

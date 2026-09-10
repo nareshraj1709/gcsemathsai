@@ -7,7 +7,7 @@ category: "Ratio"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["exponential growth GCSE", "exponential decay GCSE", "growth and decay GCSE higher", "exponential functions GCSE", "percentage multiplier"]
+keywords: ["exponential growth GCSE", "exponential decay GCSE", "growth and decay GCSE higher", "exponential functions GCSE", "compound growth formula"]
 tier: "Higher only"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 43

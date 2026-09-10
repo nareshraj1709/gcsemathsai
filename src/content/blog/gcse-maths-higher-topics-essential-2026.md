@@ -7,7 +7,7 @@ category: "Revision Strategy"
 categoryColour: "purple"
 author: "GCSEMathsAI Team"
 readMins: 12
-keywords: ["higher GCSE maths topics", "GCSE higher maths topics 2026", "higher tier GCSE maths", "GCSE maths higher only topics", "what is on higher GCSE maths", "higher GCSE maths revision", "grade 7 8 9 GCSE maths topics", "GCSE maths higher tier topics list"]
+keywords: ["gcse maths topic list edexcel higher", "gcse maths higher topic list", "aqa gcse maths topic list higher", "edexcel maths topic list higher", "higher GCSE maths topics", "what is on higher GCSE maths", "grade 7 8 9 GCSE maths topics"]
 ---
 
 Higher tier GCSE Maths covers everything on the Foundation specification plus around 30 additional topics. These Higher-only topics are where the grade 7, 8 and 9 marks are earned — and where many students lose marks they could have picked up with targeted revision.

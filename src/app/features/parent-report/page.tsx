@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Parent Report — Weekly GCSE Maths Email | GCSEMathsAI',
+  title: 'Parent Report — Weekly GCSE Maths Email',
   description: 'A Monday morning email parents will actually read. Current predicted GCSE Maths grade, weekly progress, and topics to encourage practice on — opt-in, no nagging.',
   alternates: { canonical: 'https://www.gcsemathsai.co.uk/features/parent-report' },
   openGraph: {

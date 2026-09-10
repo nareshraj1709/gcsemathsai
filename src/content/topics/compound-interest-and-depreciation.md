@@ -7,7 +7,7 @@ category: "Ratio"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["compound interest GCSE", "depreciation GCSE maths", "compound interest formula", "percentage increase decrease", "repeated percentage change"]
+keywords: ["compound interest and depreciation GCSE", "compound interest formula", "depreciation GCSE maths", "reducing balance depreciation", "compound interest word problems"]
 tier: "Foundation & Higher"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 38

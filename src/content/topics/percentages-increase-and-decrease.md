@@ -7,7 +7,7 @@ category: "Ratio, Proportion & Rates of Change"
 categoryColour: "amber"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["percentage increase gcse", "percentage decrease gcse", "percentage multiplier", "compound interest gcse maths", "percentage change gcse"]
+keywords: ["percentage increase gcse", "percentage decrease gcse", "percentage change gcse", "percentage increase and decrease examples", "gcse percentage increase decrease questions"]
 tier: "Foundation & Higher"
 strand: "Ratio, Proportion & Rates of Change"
 topicNumber: 36
