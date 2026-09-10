@@ -5,7 +5,8 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { getSkuById } from '@/lib/predicted-papers'
+import { getSkuById, isKnownSkuId } from '@/lib/predicted-papers'
+import { isPsleSkuId, PSLE_PRODUCT, PSLE_SKU_ID } from '@/lib/psle-papers'
 
 export const runtime = 'nodejs'
 
@@ -34,30 +35,36 @@ export async function POST(req: NextRequest) {
     cache: 'no-store',
   })
   if (!sessionRes.ok) return NextResponse.json({ error: 'session not found' }, { status: 404 })
-  const session = await sessionRes.json() as { payment_status?: string }
+  const session = await sessionRes.json() as { payment_status?: string; client_reference_id?: string | null }
   if (session.payment_status !== 'paid') {
     return NextResponse.json({ error: 'not paid' }, { status: 402 })
   }
 
-  // We over-deliver bundle to every paid buyer (see /api/purchase),
-  // so the email lists all ten predicted papers.
-  const sku = getSkuById('bundle')
-  if (!sku) return NextResponse.json({ error: 'catalogue missing bundle' }, { status: 500 })
+  // Identify which product this session paid for. PSLE is checked first since
+  // it's a distinct product line from the GCSE predicted papers.
+  const ref = session.client_reference_id
+  const isPsle = isPsleSkuId(ref)
+  const skuId = isKnownSkuId(ref) ? ref : 'bundle' // GCSE over-delivers bundle when unidentified (see /api/purchase)
+
+  const downloadSkuSegment = isPsle ? PSLE_SKU_ID : skuId
+  const files = isPsle ? PSLE_PRODUCT.files : (getSkuById(skuId)?.files ?? [])
+  if (files.length === 0) return NextResponse.json({ error: 'catalogue missing sku' }, { status: 500 })
 
   const linkFor = (filename: string) =>
-    `${BASE}/api/downloads/bundle/${encodeURIComponent(filename)}?session_id=${encodeURIComponent(sessionId)}`
+    `${BASE}/api/downloads/${downloadSkuSegment}/${encodeURIComponent(filename)}?session_id=${encodeURIComponent(sessionId)}`
 
-  const linesText = sku.files.map(f => `• ${f.label} — ${linkFor(f.filename)}`).join('\n')
-  const linesHtml = sku.files.map(f =>
+  const linesText = files.map(f => `• ${f.label} — ${linkFor(f.filename)}`).join('\n')
+  const linesHtml = files.map(f =>
     `<li style="margin:6px 0"><a href="${linkFor(f.filename)}" style="color:#1b6a4f;text-decoration:underline">${f.label}</a></li>`
   ).join('')
 
+  const productName = isPsle ? 'PSLE Maths practice papers' : 'predicted papers'
   const resend = new Resend(resendKey)
   const { error } = await resend.emails.send({
     from: 'GCSEMathsAI <noreply@gcsemathsai.co.uk>',
     to: email,
     replyTo: 'enquiriesgcsemath@yahoo.com',
-    subject: 'Your GCSEMathsAI predicted papers — download links',
+    subject: `Your GCSEMathsAI ${productName} — download links`,
     text:
 `Thanks for your purchase from GCSEMathsAI.
 

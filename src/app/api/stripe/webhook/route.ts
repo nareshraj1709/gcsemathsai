@@ -10,6 +10,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import crypto from 'crypto'
 import { getSkuByStripePriceId, isKnownSkuId } from '@/lib/predicted-papers'
+import { isPsleSkuId } from '@/lib/psle-papers'
 
 export const runtime = 'nodejs'
 
@@ -81,6 +82,12 @@ export async function POST(req: NextRequest) {
   let skuId: string | null = null
   const ref = session.client_reference_id as string | undefined
   if (isKnownSkuId(ref)) {
+    skuId = ref
+  }
+  // PSLE is a separate product line — checked before the GCSE price-ID lookup
+  // and amount-based fallback below so a PSLE purchase never gets logged as
+  // a GCSE 'bundle' sale.
+  if (isPsleSkuId(ref)) {
     skuId = ref
   }
 

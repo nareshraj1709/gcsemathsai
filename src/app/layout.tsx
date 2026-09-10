@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import NavWrapper from "@/components/NavWrapper";
 import InstallBanner from "@/components/InstallBanner";
+import PslePromoBanner from "@/components/PslePromoBanner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -131,6 +132,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} antialiased`}>
+        <PslePromoBanner />
         <NavWrapper />
         {children}
         <InstallBanner />

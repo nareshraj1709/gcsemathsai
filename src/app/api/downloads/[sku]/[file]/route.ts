@@ -15,6 +15,7 @@ import {
   getSkuById, getSkuByStripePriceId, PREDICTED_PAPER_FAMILIES,
   entitlingSkus, isKnownSkuId,
 } from '@/lib/predicted-papers'
+import { PSLE_SKU_ID, PSLE_FILES } from '@/lib/psle-papers'
 import { applyWatermark } from '@/lib/watermark-pdf'
 
 export const runtime = 'nodejs'
@@ -82,6 +83,57 @@ async function verifyByStripeSession(sessionId: string, skuId: string): Promise<
 
 type Props = { params: Promise<{ sku: string; file: string }> }
 
+/**
+ * PSLE is a separate, single-SKU product line — handled entirely here rather
+ * than folded into the GCSE family/tier machinery below, so it can never
+ * collide with or be affected by changes to the GCSE catalogue.
+ */
+async function handlePsleDownload(req: NextRequest, decodedFile: string): Promise<NextResponse> {
+  if (!PSLE_FILES.some(f => f.filename === decodedFile)) {
+    return NextResponse.json({ error: 'unknown file for this sku' }, { status: 404 })
+  }
+
+  const sessionId = req.nextUrl.searchParams.get('session_id')
+  if (!sessionId || !sessionId.startsWith('cs_')) {
+    return NextResponse.json({ error: 'sign in required' }, { status: 401 })
+  }
+  const stripeKey = process.env.STRIPE_SECRET_KEY
+  if (!stripeKey) return NextResponse.json({ error: 'stripe not configured' }, { status: 500 })
+
+  const sessionRes = await fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}`, {
+    headers: { Authorization: `Bearer ${stripeKey}` }, cache: 'no-store',
+  })
+  if (!sessionRes.ok) return NextResponse.json({ error: 'session does not entitle this file' }, { status: 403 })
+  const session = await sessionRes.json() as {
+    payment_status?: string
+    customer_details?: { email?: string }; customer_email?: string
+  }
+  if (session.payment_status !== 'paid') {
+    return NextResponse.json({ error: 'session does not entitle this file' }, { status: 403 })
+  }
+
+  const filePath = path.join(process.cwd(), 'content', 'psle-papers', decodedFile)
+  let raw: Buffer
+  try { raw = await fs.readFile(filePath) }
+  catch { return NextResponse.json({ error: 'file missing on server' }, { status: 404 }) }
+
+  let stamped: Uint8Array
+  try {
+    stamped = await applyWatermark(raw, { reference: sessionId })
+  } catch (err) {
+    console.error('Watermark failed', err)
+    stamped = raw
+  }
+
+  return new NextResponse(new Uint8Array(stamped), {
+    headers: {
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': `attachment; filename="${decodedFile}"`,
+      'Cache-Control': 'private, no-store',
+    },
+  })
+}
+
 export async function GET(req: NextRequest, { params }: Props) {
   const { sku, file } = await params
   const decodedFile = decodeURIComponent(file)
@@ -89,6 +141,11 @@ export async function GET(req: NextRequest, { params }: Props) {
   if (decodedFile.includes('/') || decodedFile.includes('\\') || decodedFile.includes('..')) {
     return NextResponse.json({ error: 'invalid filename' }, { status: 400 })
   }
+
+  if (sku === PSLE_SKU_ID) {
+    return handlePsleDownload(req, decodedFile)
+  }
+
   if (!fileBelongsToSku(sku, decodedFile) && !fileBelongsToBundle(sku, decodedFile)) {
     return NextResponse.json({ error: 'unknown file for this sku' }, { status: 404 })
   }

@@ -4,6 +4,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { getSkuById, getSkuByStripePriceId, isKnownSkuId } from '@/lib/predicted-papers'
+import { isPsleSkuId, PSLE_PRODUCT } from '@/lib/psle-papers'
 
 export const runtime = 'nodejs'
 
@@ -37,6 +38,18 @@ export async function GET(req: NextRequest) {
   let skuId: string | null = null
   const ref = session.client_reference_id
   if (isKnownSkuId(ref)) skuId = ref
+  // PSLE is a separate product line — checked before any GCSE amount-based
+  // fallback below so a PSLE purchase can never resolve to a GCSE SKU.
+  if (isPsleSkuId(ref)) {
+    return NextResponse.json({
+      sku_id: PSLE_PRODUCT.id,
+      title: PSLE_PRODUCT.title,
+      email: session.customer_details?.email || session.customer_email || null,
+      amount_total: session.amount_total ?? null,
+      currency: session.currency ?? 'sgd',
+      files: PSLE_PRODUCT.files.map(f => ({ filename: f.filename, label: f.label })),
+    })
+  }
   if (!skuId && itemsRes.ok) {
     const items = await itemsRes.json() as { data?: Array<{ price?: { id?: string } }> }
     for (const it of items.data ?? []) {
