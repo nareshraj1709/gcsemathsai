@@ -2,6 +2,8 @@
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { PREDICTED_PAPERS, FOUNDATION_PAPERS, getCheckoutUrl } from '@/lib/predicted-papers'
+import { PSLE_PRODUCT } from '@/lib/psle-papers'
+import { OLEVEL_PRODUCT } from '@/lib/olevel-papers'
 
 export default function Home() {
   return (
@@ -230,6 +232,72 @@ export default function Home() {
             <span style={{ margin: '0 10px', opacity: 0.4 }}>·</span>
             <Link href="/my-papers" style={{ color: 'var(--green)' }}>Already bought? Sign in to download →</Link>
           </p>
+        </div>
+      </section>
+
+      {/* PSLE PRACTICE PAPERS */}
+      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: '64px 0' }}>
+        <div className="wrap">
+          <div className="sec-head" style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 32px' }}>
+            <div className="sec-label" style={{ justifyContent: 'center' }}>
+              <span style={{ background: 'var(--burgundy-soft)', color: 'var(--burgundy)', padding: '3px 10px', borderRadius: 999, fontSize: 10 }}>SINGAPORE &middot; P6</span>
+              <span style={{ marginLeft: 8 }}>PSLE Maths Practice Papers</span>
+            </div>
+            <h2>Ten PSLE Maths papers, <em>fully worked</em>.</h2>
+            <p className="sec-sub" style={{ margin: '0 auto' }}>
+              Exam-style questions across every major P6 topic, with complete step-by-step solutions. Instant PDF download. <em style={{ color: 'var(--ink-3)' }}>Independent resource, not affiliated with Singapore&rsquo;s MOE.</em>
+            </p>
+          </div>
+          <div style={{ maxWidth: 400, margin: '0 auto' }}>
+            <article style={{ background: 'var(--cream)', border: '2px solid var(--green)', borderRadius: 14, padding: 24, display: 'flex', flexDirection: 'column', gap: 10, position: 'relative' }}>
+              <span style={{ position: 'absolute', top: 10, right: 10, fontFamily: 'var(--mono)', fontSize: 9.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--cream)', background: 'var(--green)', padding: '3px 9px', borderRadius: 999 }}>
+                Best seller
+              </span>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--green)' }}>Complete bundle</span>
+              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 600, color: 'var(--ink)', margin: 0, letterSpacing: '-0.015em' }}>10-Paper Set</h3>
+              <p style={{ fontSize: 13, color: 'var(--ink-3)', lineHeight: 1.5, margin: 0 }}>Every major P6 topic, full worked solutions</p>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, margin: '6px 0' }}>
+                <span style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.02em', lineHeight: 1 }}>{PSLE_PRODUCT.priceDisplay}</span>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-3)' }}>one-off</span>
+              </div>
+              <Link href="/psle-practice-papers" className="btn" style={{ marginTop: 8, background: 'var(--green)', color: 'var(--cream)', justifyContent: 'center', padding: '11px 18px', fontSize: 14 }}>
+                View Papers →
+              </Link>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* O-LEVEL PRACTICE PAPERS */}
+      <section style={{ background: 'var(--cream)', borderBottom: '1px solid var(--rule)', padding: '64px 0' }}>
+        <div className="wrap">
+          <div className="sec-head" style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto 32px' }}>
+            <div className="sec-label" style={{ justifyContent: 'center' }}>
+              <span style={{ background: 'var(--navy-soft)', color: 'var(--navy)', padding: '3px 10px', borderRadius: 999, fontSize: 10 }}>SINGAPORE &middot; SECONDARY</span>
+              <span style={{ marginLeft: 8 }}>O-Level Maths Practice Papers</span>
+            </div>
+            <h2>Ten O-Level Maths papers, <em>fully worked</em>.</h2>
+            <p className="sec-sub" style={{ margin: '0 auto' }}>
+              A complete set of exam-style questions with full step-by-step solutions. Instant PDF download. <em style={{ color: 'var(--ink-3)' }}>Independent resource, not affiliated with SEAB, Cambridge Assessment, or MOE.</em>
+            </p>
+          </div>
+          <div style={{ maxWidth: 400, margin: '0 auto' }}>
+            <article style={{ background: 'var(--paper)', border: '2px solid var(--navy)', borderRadius: 14, padding: 24, display: 'flex', flexDirection: 'column', gap: 10, position: 'relative' }}>
+              <span style={{ position: 'absolute', top: 10, right: 10, fontFamily: 'var(--mono)', fontSize: 9.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#fff', background: 'var(--navy)', padding: '3px 9px', borderRadius: 999 }}>
+                Best seller
+              </span>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--navy)' }}>Complete bundle</span>
+              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 600, color: 'var(--ink)', margin: 0, letterSpacing: '-0.015em' }}>10-Paper Set</h3>
+              <p style={{ fontSize: 13, color: 'var(--ink-3)', lineHeight: 1.5, margin: 0 }}>Full syllabus breadth, full worked solutions</p>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, margin: '6px 0' }}>
+                <span style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.02em', lineHeight: 1 }}>{OLEVEL_PRODUCT.priceDisplay}</span>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-3)' }}>one-off</span>
+              </div>
+              <Link href="/olevel-practice-papers" className="btn" style={{ marginTop: 8, background: 'var(--navy)', color: '#fff', justifyContent: 'center', padding: '11px 18px', fontSize: 14 }}>
+                View Papers →
+              </Link>
+            </article>
+          </div>
         </div>
       </section>
 
