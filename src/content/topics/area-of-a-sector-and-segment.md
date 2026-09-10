@@ -1,13 +1,13 @@
 ---
-title: "Area of a Sector and Segment – GCSE Maths Revision Guide"
-description: "Area of a sector and segment for GCSE Maths Higher — sector area formula, segment area equals sector minus triangle, with worked examples."
+title: "Area of a Segment – GCSE Maths Higher Guide"
+description: "How to find the area of a segment for GCSE Maths Higher: segment area equals sector minus triangle (½r² sin θ), with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["area of a sector GCSE", "area of a segment GCSE Maths", "sector area formula", "segment area sector minus triangle", "area of sector and segment Higher", "GCSE circle area revision", "sector segment calculations"]
+keywords: ["area of a segment GCSE", "segment area formula", "sector minus triangle", "area of sector and segment Higher", "GCSE circle area revision"]
 tier: "Higher only"
 strand: "Geometry & Measures"
 topicNumber: 224

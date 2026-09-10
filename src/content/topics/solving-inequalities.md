@@ -7,7 +7,7 @@ category: "Algebra"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["solving inequalities", "inequalities GCSE", "number line inequality", "linear inequalities", "inequality notation"]
+keywords: ["solving inequalities", "how to solve inequalities", "solve inequalities gcse", "inequalities GCSE", "linear inequalities"]
 tier: "Foundation & Higher"
 strand: "Algebra"
 topicNumber: 15

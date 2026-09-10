@@ -1,13 +1,13 @@
 ---
-title: "Arc Length – GCSE Maths Revision Guide"
-description: "Learn how to calculate arc length using the formula (theta/360) x 2 pi r, with step-by-step worked examples and GCSE exam practice questions."
+title: "Arc Length Formula – GCSE Maths Step-by-Step Method"
+description: "How to find arc length using the formula (theta/360) x 2 pi r. Step-by-step method with worked examples and GCSE exam practice questions."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 6
-keywords: ["arc length", "arc length formula", "GCSE arc length", "fraction of a circle", "arc length from angle"]
+keywords: ["arc length formula", "how to find arc length", "arc length from angle", "GCSE arc length questions"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 153

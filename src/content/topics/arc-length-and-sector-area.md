@@ -1,13 +1,13 @@
 ---
 title: "Arc Length and Sector Area – GCSE Maths Guide"
-description: "Master arc length and sector area for GCSE Maths with clear formulas, worked examples at Foundation and Higher, and practice questions."
+description: "Arc length and sector area for GCSE Maths: formulas, the sector perimeter method, worked examples at Foundation and Higher, and practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["arc length GCSE", "sector area GCSE", "circle formulas", "fraction of a circle", "GCSE maths geometry"]
+keywords: ["arc length and sector area", "arc length of a sector", "length of a sector", "sector arc length", "GCSE circle formulas"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 53

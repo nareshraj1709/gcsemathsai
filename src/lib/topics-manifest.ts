@@ -1416,14 +1416,14 @@ Practise angles on a straight line and at a point with instant feedback free on 
 `,
   "arc-length-and-sector-area": `---
 title: "Arc Length and Sector Area – GCSE Maths Guide"
-description: "Master arc length and sector area for GCSE Maths with clear formulas, worked examples at Foundation and Higher, and practice questions."
+description: "Arc length and sector area for GCSE Maths: formulas, the sector perimeter method, worked examples at Foundation and Higher, and practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["arc length GCSE", "sector area GCSE", "circle formulas", "fraction of a circle", "GCSE maths geometry"]
+keywords: ["arc length and sector area", "arc length of a sector", "length of a sector", "sector arc length", "GCSE circle formulas"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 53
@@ -1573,15 +1573,15 @@ Want instant feedback on arc and sector questions? Try [GCSEMathsAI](https://www
 Arc length and sector area calculations are based on finding a fraction of the full circle. The fraction is always θ / 360, where θ is the angle at the centre. Arc length uses the circumference formula and sector area uses the area formula, each multiplied by that fraction. Remember that the perimeter of a sector includes the two radii as well as the arc. These questions appear at both tiers and are typically worth 2–4 marks, so learning the formulas and practising rearrangements is essential for picking up straightforward marks in the exam.
 `,
   "arc-length": `---
-title: "Arc Length – GCSE Maths Revision Guide"
-description: "Learn how to calculate arc length using the formula (theta/360) x 2 pi r, with step-by-step worked examples and GCSE exam practice questions."
+title: "Arc Length Formula – GCSE Maths Step-by-Step Method"
+description: "How to find arc length using the formula (theta/360) x 2 pi r. Step-by-step method with worked examples and GCSE exam practice questions."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 6
-keywords: ["arc length", "arc length formula", "GCSE arc length", "fraction of a circle", "arc length from angle"]
+keywords: ["arc length formula", "how to find arc length", "arc length from angle", "GCSE arc length questions"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 153
@@ -2111,15 +2111,15 @@ Practise area of a parallelogram questions with instant feedback — completely 
 - A rectangle is a special case of a parallelogram where the perpendicular height equals the side length.
 `,
   "area-of-a-sector-and-segment": `---
-title: "Area of a Sector and Segment – GCSE Maths Revision Guide"
-description: "Area of a sector and segment for GCSE Maths Higher — sector area formula, segment area equals sector minus triangle, with worked examples."
+title: "Area of a Segment – GCSE Maths Higher Guide"
+description: "How to find the area of a segment for GCSE Maths Higher: segment area equals sector minus triangle (½r² sin θ), with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["area of a sector GCSE", "area of a segment GCSE Maths", "sector area formula", "segment area sector minus triangle", "area of sector and segment Higher", "GCSE circle area revision", "sector segment calculations"]
+keywords: ["area of a segment GCSE", "segment area formula", "sector minus triangle", "area of sector and segment Higher", "GCSE circle area revision"]
 tier: "Higher only"
 strand: "Geometry & Measures"
 topicNumber: 224
@@ -10834,15 +10834,15 @@ Practise finding a shorter side questions with instant feedback — completely f
 - Check your answer by verifying a² + b² = c² with all three sides.
 `,
   "finding-the-equation-of-a-line": `---
-title: "Finding the Equation of a Line – GCSE Maths Revision Guide"
-description: "Learn how to find the equation of a straight line for GCSE Maths. Covers gradient and a point, two points, parallel and perpendicular lines with worked examples."
+title: "How to Find the Equation of a Line – GCSE Maths Guide"
+description: "Step-by-step methods for finding the equation of a straight line for GCSE Maths: from gradient and a point, from two points, and parallel/perpendicular lines."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Algebra"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["equation of a line gcse", "find equation from gradient and point", "equation from two points", "parallel and perpendicular lines gcse", "y = mx + c gcse"]
+keywords: ["how to find the equation of a line", "find equation from gradient and point", "equation of a line from two points", "parallel and perpendicular lines gcse"]
 tier: "Foundation & Higher"
 strand: "Algebra"
 topicNumber: 92
@@ -15184,7 +15184,7 @@ category: "Algebra"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["linear graphs gcse", "equation of a line gcse", "y equals mx plus c", "gradient and intercept", "straight line graphs gcse maths"]
+keywords: ["equation of a line gcse", "linear graphs gcse", "line equation", "y equals mx plus c", "gradient and intercept"]
 tier: "Foundation & Higher"
 strand: "Algebra"
 topicNumber: 25
@@ -25511,15 +25511,15 @@ Ready to practise these skills with instant, personalised feedback? Try our smar
 Scatter graphs plot pairs of data to show relationships between two variables. You need to identify the type of correlation — **positive** (points rise), **negative** (points fall) or **none** (no pattern) — and describe its strength. A **line of best fit** follows the trend and passes through the mean point when given. Use the line to make estimates: **interpolation** (within the data range) is reliable; **extrapolation** (outside the data range) is not. Always remember that correlation does not prove causation. In the exam, plot neatly, label axes, show reading lines, and relate your answers to the context of the question.
 `,
   "sector-area": `---
-title: "Sector Area – GCSE Maths Revision Guide"
-description: "Master sector area with the formula (theta/360) x pi r squared, perimeter of a sector, worked examples, and GCSE exam-style practice questions."
+title: "Sector Area Formula – GCSE Maths Step-by-Step Method"
+description: "How to find sector area using the formula (theta/360) x pi r squared, plus perimeter of a sector. Step-by-step method with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["sector area", "area of a sector", "sector area formula", "perimeter of a sector", "GCSE sector questions"]
+keywords: ["sector area formula", "how to find sector area", "perimeter of a sector", "GCSE sector area questions"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 154
@@ -28079,7 +28079,7 @@ category: "Algebra"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["solving inequalities", "inequalities GCSE", "number line inequality", "linear inequalities", "inequality notation"]
+keywords: ["solving inequalities", "how to solve inequalities", "solve inequalities gcse", "inequalities GCSE", "linear inequalities"]
 tier: "Foundation & Higher"
 strand: "Algebra"
 topicNumber: 15

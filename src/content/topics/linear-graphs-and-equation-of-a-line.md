@@ -7,7 +7,7 @@ category: "Algebra"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 8
-keywords: ["linear graphs gcse", "equation of a line gcse", "y equals mx plus c", "gradient and intercept", "straight line graphs gcse maths"]
+keywords: ["equation of a line gcse", "linear graphs gcse", "line equation", "y equals mx plus c", "gradient and intercept"]
 tier: "Foundation & Higher"
 strand: "Algebra"
 topicNumber: 25

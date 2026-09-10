@@ -1,13 +1,13 @@
 ---
-title: "Finding the Equation of a Line – GCSE Maths Revision Guide"
-description: "Learn how to find the equation of a straight line for GCSE Maths. Covers gradient and a point, two points, parallel and perpendicular lines with worked examples."
+title: "How to Find the Equation of a Line – GCSE Maths Guide"
+description: "Step-by-step methods for finding the equation of a straight line for GCSE Maths: from gradient and a point, from two points, and parallel/perpendicular lines."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Algebra"
 categoryColour: "blue"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["equation of a line gcse", "find equation from gradient and point", "equation from two points", "parallel and perpendicular lines gcse", "y = mx + c gcse"]
+keywords: ["how to find the equation of a line", "find equation from gradient and point", "equation of a line from two points", "parallel and perpendicular lines gcse"]
 tier: "Foundation & Higher"
 strand: "Algebra"
 topicNumber: 92

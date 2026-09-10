@@ -1,13 +1,13 @@
 ---
-title: "Sector Area – GCSE Maths Revision Guide"
-description: "Master sector area with the formula (theta/360) x pi r squared, perimeter of a sector, worked examples, and GCSE exam-style practice questions."
+title: "Sector Area Formula – GCSE Maths Step-by-Step Method"
+description: "How to find sector area using the formula (theta/360) x pi r squared, plus perimeter of a sector. Step-by-step method with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
 categoryColour: "green"
 author: "GCSEMathsAI Team"
 readMins: 7
-keywords: ["sector area", "area of a sector", "sector area formula", "perimeter of a sector", "GCSE sector questions"]
+keywords: ["sector area formula", "how to find sector area", "perimeter of a sector", "GCSE sector area questions"]
 tier: "Foundation & Higher"
 strand: "Geometry & Measures"
 topicNumber: 154
