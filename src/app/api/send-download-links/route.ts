@@ -7,6 +7,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { getSkuById, isKnownSkuId } from '@/lib/predicted-papers'
 import { isPsleSkuId, PSLE_PRODUCT, PSLE_SKU_ID } from '@/lib/psle-papers'
+import { isOlevelSkuId, OLEVEL_PRODUCT, OLEVEL_SKU_ID } from '@/lib/olevel-papers'
 
 export const runtime = 'nodejs'
 
@@ -40,14 +41,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'not paid' }, { status: 402 })
   }
 
-  // Identify which product this session paid for. PSLE is checked first since
-  // it's a distinct product line from the GCSE predicted papers.
+  // Identify which product this session paid for. PSLE and O-Level are
+  // checked first since they're distinct product lines from the GCSE
+  // predicted papers (and, for O-Level, share PSLE's Stripe Payment Link —
+  // client_reference_id is the only thing that tells them apart).
   const ref = session.client_reference_id
   const isPsle = isPsleSkuId(ref)
+  const isOlevel = isOlevelSkuId(ref)
   const skuId = isKnownSkuId(ref) ? ref : 'bundle' // GCSE over-delivers bundle when unidentified (see /api/purchase)
 
-  const downloadSkuSegment = isPsle ? PSLE_SKU_ID : skuId
-  const files = isPsle ? PSLE_PRODUCT.files : (getSkuById(skuId)?.files ?? [])
+  const downloadSkuSegment = isPsle ? PSLE_SKU_ID : isOlevel ? OLEVEL_SKU_ID : skuId
+  const files = isPsle ? PSLE_PRODUCT.files : isOlevel ? OLEVEL_PRODUCT.files : (getSkuById(skuId)?.files ?? [])
   if (files.length === 0) return NextResponse.json({ error: 'catalogue missing sku' }, { status: 500 })
 
   const linkFor = (filename: string) =>
@@ -58,7 +62,7 @@ export async function POST(req: NextRequest) {
     `<li style="margin:6px 0"><a href="${linkFor(f.filename)}" style="color:#1b6a4f;text-decoration:underline">${f.label}</a></li>`
   ).join('')
 
-  const productName = isPsle ? 'PSLE Maths practice papers' : 'predicted papers'
+  const productName = isPsle ? 'PSLE Maths practice papers' : isOlevel ? 'O-Level Maths practice papers' : 'predicted papers'
   const resend = new Resend(resendKey)
   const { error } = await resend.emails.send({
     from: 'GCSEMathsAI <noreply@gcsemathsai.co.uk>',

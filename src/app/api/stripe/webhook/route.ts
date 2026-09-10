@@ -11,6 +11,7 @@ import { createClient } from '@supabase/supabase-js'
 import crypto from 'crypto'
 import { getSkuByStripePriceId, isKnownSkuId } from '@/lib/predicted-papers'
 import { isPsleSkuId } from '@/lib/psle-papers'
+import { isOlevelSkuId } from '@/lib/olevel-papers'
 
 export const runtime = 'nodejs'
 
@@ -88,6 +89,12 @@ export async function POST(req: NextRequest) {
   // and amount-based fallback below so a PSLE purchase never gets logged as
   // a GCSE 'bundle' sale.
   if (isPsleSkuId(ref)) {
+    skuId = ref
+  }
+  // O-Level shares PSLE's Stripe Payment Link — client_reference_id is the
+  // only thing that tells them apart, so it must be checked before any
+  // GCSE fallback below.
+  if (isOlevelSkuId(ref)) {
     skuId = ref
   }
 

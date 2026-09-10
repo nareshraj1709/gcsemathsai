@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 const monoLabel = { fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const }
 
 type Purchase = {
-  sku_id: 'paper2' | 'paper3' | 'bundle' | 'foundation_paper2' | 'foundation_paper3' | 'foundation_bundle' | 'psle_bundle'
+  sku_id: 'paper2' | 'paper3' | 'bundle' | 'foundation_paper2' | 'foundation_paper3' | 'foundation_bundle' | 'psle_bundle' | 'olevel_bundle'
   title: string
   email: string | null
   amount_total: number | null

@@ -16,6 +16,7 @@ import {
   entitlingSkus, isKnownSkuId,
 } from '@/lib/predicted-papers'
 import { PSLE_SKU_ID, PSLE_FILES } from '@/lib/psle-papers'
+import { OLEVEL_SKU_ID, OLEVEL_FILES } from '@/lib/olevel-papers'
 import { applyWatermark } from '@/lib/watermark-pdf'
 
 export const runtime = 'nodejs'
@@ -84,12 +85,14 @@ async function verifyByStripeSession(sessionId: string, skuId: string): Promise<
 type Props = { params: Promise<{ sku: string; file: string }> }
 
 /**
- * PSLE is a separate, single-SKU product line — handled entirely here rather
- * than folded into the GCSE family/tier machinery below, so it can never
- * collide with or be affected by changes to the GCSE catalogue.
+ * Shared handler for standalone, single-SKU product lines (PSLE, O-Level) —
+ * kept entirely separate from the GCSE family/tier machinery below, so they
+ * can never collide with or be affected by changes to the GCSE catalogue.
  */
-async function handlePsleDownload(req: NextRequest, decodedFile: string): Promise<NextResponse> {
-  if (!PSLE_FILES.some(f => f.filename === decodedFile)) {
+async function handleStandaloneDownload(
+  req: NextRequest, decodedFile: string, contentFolder: string, files: Array<{ filename: string }>,
+): Promise<NextResponse> {
+  if (!files.some(f => f.filename === decodedFile)) {
     return NextResponse.json({ error: 'unknown file for this sku' }, { status: 404 })
   }
 
@@ -112,7 +115,7 @@ async function handlePsleDownload(req: NextRequest, decodedFile: string): Promis
     return NextResponse.json({ error: 'session does not entitle this file' }, { status: 403 })
   }
 
-  const filePath = path.join(process.cwd(), 'content', 'psle-papers', decodedFile)
+  const filePath = path.join(process.cwd(), 'content', contentFolder, decodedFile)
   let raw: Buffer
   try { raw = await fs.readFile(filePath) }
   catch { return NextResponse.json({ error: 'file missing on server' }, { status: 404 }) }
@@ -143,7 +146,10 @@ export async function GET(req: NextRequest, { params }: Props) {
   }
 
   if (sku === PSLE_SKU_ID) {
-    return handlePsleDownload(req, decodedFile)
+    return handleStandaloneDownload(req, decodedFile, 'psle-papers', PSLE_FILES)
+  }
+  if (sku === OLEVEL_SKU_ID) {
+    return handleStandaloneDownload(req, decodedFile, 'olevel-papers', OLEVEL_FILES)
   }
 
   if (!fileBelongsToSku(sku, decodedFile) && !fileBelongsToBundle(sku, decodedFile)) {

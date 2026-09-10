@@ -5,6 +5,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSkuById, getSkuByStripePriceId, isKnownSkuId } from '@/lib/predicted-papers'
 import { isPsleSkuId, PSLE_PRODUCT } from '@/lib/psle-papers'
+import { isOlevelSkuId, OLEVEL_PRODUCT } from '@/lib/olevel-papers'
 
 export const runtime = 'nodejs'
 
@@ -48,6 +49,18 @@ export async function GET(req: NextRequest) {
       amount_total: session.amount_total ?? null,
       currency: session.currency ?? 'sgd',
       files: PSLE_PRODUCT.files.map(f => ({ filename: f.filename, label: f.label })),
+    })
+  }
+  // O-Level shares PSLE's Stripe Payment Link by choice — told apart purely
+  // by client_reference_id, checked before any GCSE fallback below.
+  if (isOlevelSkuId(ref)) {
+    return NextResponse.json({
+      sku_id: OLEVEL_PRODUCT.id,
+      title: OLEVEL_PRODUCT.title,
+      email: session.customer_details?.email || session.customer_email || null,
+      amount_total: session.amount_total ?? null,
+      currency: session.currency ?? 'sgd',
+      files: OLEVEL_PRODUCT.files.map(f => ({ filename: f.filename, label: f.label })),
     })
   }
   if (!skuId && itemsRes.ok) {
