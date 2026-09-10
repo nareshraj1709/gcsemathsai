@@ -3,22 +3,21 @@
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { PSLE_PRODUCT, getPsleCheckoutUrl } from '@/lib/psle-papers'
+import { PSLE_PRODUCT } from '@/lib/psle-papers'
+import { OLEVEL_PRODUCT } from '@/lib/olevel-papers'
 
-const EXAM_DATE = new Date('2026-09-25T00:00:00+08:00') // Singapore time
+const EXAM_DATE = new Date('2026-09-25T00:00:00+08:00') // Singapore time, PSLE only — no confirmed O-Level date to count down to
 
 function daysLeft(): number {
   const ms = EXAM_DATE.getTime() - Date.now()
   return Math.max(0, Math.ceil(ms / (1000 * 60 * 60 * 24)))
 }
 
-const checkoutUrl = getPsleCheckoutUrl()
-
 export default function PslePromoBanner() {
   const pathname = usePathname()
   const isHome = pathname === '/'
   const isBlog = pathname === '/blog' || pathname?.startsWith('/blog/')
-  const isPsleLanding = pathname === '/psle-practice-papers'
+  const isProductLanding = pathname === '/psle-practice-papers' || pathname === '/olevel-practice-papers'
 
   const [days, setDays] = useState<number | null>(null)
   const [dismissed, setDismissed] = useState(true)
@@ -31,19 +30,20 @@ export default function PslePromoBanner() {
 
   useEffect(() => {
     try {
-      setDismissed(sessionStorage.getItem('psle-banner-dismissed') === '1')
+      setDismissed(sessionStorage.getItem('exam-papers-banner-dismissed') === '1')
     } catch {
       setDismissed(false)
     }
   }, [pathname])
 
   const dismiss = () => {
-    try { sessionStorage.setItem('psle-banner-dismissed', '1') } catch {}
+    try { sessionStorage.setItem('exam-papers-banner-dismissed', '1') } catch {}
     setDismissed(true)
   }
 
-  // Don't show on the PSLE landing page itself, once past exam day, or once dismissed this session.
-  if (isPsleLanding || dismissed || days === null || days <= 0) return null
+  // Don't show on either product's own landing page, once dismissed this session,
+  // or once PSLE's countdown has passed (O-Level has no date to gate on).
+  if (isProductLanding || dismissed || days === null || days <= 0) return null
   if (!isHome && !isBlog) return null
 
   const dayLabel = `${days} day${days === 1 ? '' : 's'} to PSLE`
@@ -69,14 +69,21 @@ export default function PslePromoBanner() {
             {dayLabel}
           </span>
           <span style={{ fontSize: 13.5, fontWeight: 600, color: '#fff' }}>
-            PSLE Maths Practice Papers — 10 papers, full solutions, instant download
+            Singapore exam practice papers — full solutions, instant download
           </span>
           <Link href="/psle-practice-papers" style={{
             display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--gold)', color: '#fff',
             padding: '6px 16px', borderRadius: 999, fontSize: 12.5, fontWeight: 700,
             fontFamily: 'var(--sans)', textDecoration: 'none', flexShrink: 0,
           }}>
-            Get Papers — {PSLE_PRODUCT.priceDisplay}
+            PSLE — {PSLE_PRODUCT.priceDisplay}
+          </Link>
+          <Link href="/olevel-practice-papers" style={{
+            display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--navy)', color: '#fff',
+            padding: '6px 16px', borderRadius: 999, fontSize: 12.5, fontWeight: 700,
+            fontFamily: 'var(--sans)', textDecoration: 'none', flexShrink: 0,
+          }}>
+            O-Level — {OLEVEL_PRODUCT.priceDisplay}
           </Link>
           <button onClick={dismiss} aria-label="Dismiss" style={{
             background: 'none', border: 'none', color: '#fff', fontSize: 18, fontWeight: 700,
@@ -123,23 +130,23 @@ export default function PslePromoBanner() {
           {dayLabel}
         </span>
         <p style={{ fontSize: 13.5, color: '#fff', lineHeight: 1.5, margin: '0 0 12px', fontWeight: 500 }}>
-          Prepping a P6 student? 10 PSLE Maths practice papers with full solutions.
+          Singapore exam practice papers, fully worked — pick your level:
         </p>
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' as const }}>
+        <div style={{ display: 'grid', gap: 8 }}>
           <Link href="/psle-practice-papers" style={{
-            display: 'inline-flex', alignItems: 'center', background: '#fff', color: 'var(--navy)',
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: '#fff', color: 'var(--navy)',
             padding: '8px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 700,
             fontFamily: 'var(--sans)', textDecoration: 'none',
           }}>
-            View papers
+            <span>PSLE Papers</span><span>{PSLE_PRODUCT.priceDisplay}</span>
           </Link>
-          <a href={checkoutUrl} style={{
-            display: 'inline-flex', alignItems: 'center', background: 'var(--gold)', color: '#fff',
+          <Link href="/olevel-practice-papers" style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--gold)', color: '#fff',
             padding: '8px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 700,
             fontFamily: 'var(--sans)', textDecoration: 'none',
           }}>
-            {PSLE_PRODUCT.priceDisplay}
-          </a>
+            <span>O-Level Papers</span><span>{OLEVEL_PRODUCT.priceDisplay}</span>
+          </Link>
         </div>
       </div>
     </>
