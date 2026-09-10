@@ -50,6 +50,7 @@ export default function PslePromoBanner() {
 
   if (isHome) {
     // Red/urgent, sticky at the very top of the viewport.
+    // All colours below are solid (no translucent overlays) so text never blends with the background.
     return (
       <div style={{
         position: 'sticky', top: 0, zIndex: 200,
@@ -62,12 +63,12 @@ export default function PslePromoBanner() {
         }}>
           <span style={{
             fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.06em',
-            textTransform: 'uppercase' as const, background: 'rgba(255,255,255,0.18)',
+            textTransform: 'uppercase' as const, background: '#fff', color: 'var(--burgundy)',
             padding: '3px 10px', borderRadius: 999, flexShrink: 0,
           }}>
             {dayLabel}
           </span>
-          <span style={{ fontSize: 13.5, fontWeight: 600 }}>
+          <span style={{ fontSize: 13.5, fontWeight: 600, color: '#fff' }}>
             PSLE Maths Practice Papers — 10 papers, full solutions, instant download
           </span>
           <Link href="/psle-practice-papers" style={{
@@ -78,7 +79,7 @@ export default function PslePromoBanner() {
             Get Papers — {PSLE_PRODUCT.priceDisplay}
           </Link>
           <button onClick={dismiss} aria-label="Dismiss" style={{
-            background: 'none', border: 'none', color: 'rgba(255,255,255,0.7)', fontSize: 16,
+            background: 'none', border: 'none', color: '#fff', fontSize: 18, fontWeight: 700,
             cursor: 'pointer', padding: '2px 4px', lineHeight: 1, flexShrink: 0,
           }}>&times;</button>
         </div>
@@ -86,37 +87,61 @@ export default function PslePromoBanner() {
     )
   }
 
-  // Blog: blue/professional, not sticky — sits at the top of the post content.
+  // Blog: navy, floating card on the right-hand side of the viewport at desktop
+  // widths. Independent of each post's own layout/TOC, so it shows on every
+  // post regardless of that post's content. Collapses to a full-width bottom
+  // bar on narrow screens so it never overlaps article text on mobile.
   return (
-    <div style={{
-      background: 'var(--navy)', color: '#fff', padding: '12px 16px',
-    }}>
-      <div style={{
-        maxWidth: 900, margin: '0 auto', display: 'flex', alignItems: 'center',
-        justifyContent: 'center', gap: 12, flexWrap: 'wrap' as const, textAlign: 'center',
-      }}>
+    <>
+      <style>{`
+        .psle-blog-banner {
+          position: fixed; right: 20px; top: 140px; z-index: 150;
+          width: 260px; background: var(--navy); color: #fff; border-radius: 14px;
+          padding: 18px 18px; box-shadow: 0 16px 48px -12px rgba(14,31,23,0.35);
+        }
+        @media (max-width: 1180px) {
+          .psle-blog-banner { top: auto; bottom: 16px; right: 16px; }
+        }
+        @media (max-width: 640px) {
+          .psle-blog-banner {
+            left: 12px; right: 12px; bottom: 12px; top: auto; width: auto;
+            padding: 14px 16px;
+          }
+        }
+      `}</style>
+      <div className="psle-blog-banner">
+        <button onClick={dismiss} aria-label="Dismiss" style={{
+          position: 'absolute', top: 8, right: 10, background: 'none', border: 'none',
+          color: '#fff', fontSize: 18, fontWeight: 700, cursor: 'pointer', lineHeight: 1,
+        }}>&times;</button>
         <span style={{
-          fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700, letterSpacing: '0.06em',
-          textTransform: 'uppercase' as const, background: 'var(--navy-soft)', color: 'var(--navy)',
-          padding: '3px 10px', borderRadius: 999, flexShrink: 0,
+          display: 'inline-block', fontFamily: 'var(--mono)', fontSize: 10.5, fontWeight: 700,
+          letterSpacing: '0.06em', textTransform: 'uppercase' as const,
+          background: 'var(--navy-soft)', color: 'var(--navy)',
+          padding: '3px 10px', borderRadius: 999, marginBottom: 10,
         }}>
           {dayLabel}
         </span>
-        <span style={{ fontSize: 13.5 }}>
-          Prepping a P6 student? <Link href="/psle-practice-papers" style={{ color: '#fff', textDecoration: 'underline', fontWeight: 700 }}>10 PSLE Maths practice papers with full solutions</Link>
-        </span>
-        <a href={checkoutUrl} style={{
-          display: 'inline-flex', alignItems: 'center', gap: 6, background: '#fff', color: 'var(--navy)',
-          padding: '6px 16px', borderRadius: 999, fontSize: 12.5, fontWeight: 700,
-          fontFamily: 'var(--sans)', textDecoration: 'none', flexShrink: 0,
-        }}>
-          {PSLE_PRODUCT.priceDisplay}
-        </a>
-        <button onClick={dismiss} aria-label="Dismiss" style={{
-          background: 'none', border: 'none', color: 'rgba(255,255,255,0.7)', fontSize: 16,
-          cursor: 'pointer', padding: '2px 4px', lineHeight: 1, flexShrink: 0,
-        }}>&times;</button>
+        <p style={{ fontSize: 13.5, color: '#fff', lineHeight: 1.5, margin: '0 0 12px', fontWeight: 500 }}>
+          Prepping a P6 student? 10 PSLE Maths practice papers with full solutions.
+        </p>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' as const }}>
+          <Link href="/psle-practice-papers" style={{
+            display: 'inline-flex', alignItems: 'center', background: '#fff', color: 'var(--navy)',
+            padding: '8px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 700,
+            fontFamily: 'var(--sans)', textDecoration: 'none',
+          }}>
+            View papers
+          </Link>
+          <a href={checkoutUrl} style={{
+            display: 'inline-flex', alignItems: 'center', background: 'var(--gold)', color: '#fff',
+            padding: '8px 14px', borderRadius: 8, fontSize: 12.5, fontWeight: 700,
+            fontFamily: 'var(--sans)', textDecoration: 'none',
+          }}>
+            {PSLE_PRODUCT.priceDisplay}
+          </a>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
