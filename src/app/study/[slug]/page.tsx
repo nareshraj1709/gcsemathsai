@@ -11,25 +11,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const entry = CONTENT.find(c => toSlug(c.topic, c.subtopic) === slug)
   if (!entry) return { title: 'Study — GCSEMathsAI' }
   const url = `${BASE}/study/${slug}`
+  const title = `${entry.subtopic} — Revision Notes & Key Facts | GCSEMathsAI`
+  const description = `Quick GCSE Maths revision notes for ${entry.subtopic.toLowerCase()}: key facts, formulas and common mistakes at a glance, plus free video lessons.`
   return {
-    title: `${entry.subtopic} — GCSE Maths Study Notes | GCSEMathsAI`,
-    description: entry.overview,
+    title,
+    description,
     keywords: [
-      entry.subtopic, entry.topic, 'GCSE Maths', `${entry.subtopic} GCSE`,
-      `${entry.subtopic} revision`, 'study notes', 'worked examples', 'exam tips',
+      `${entry.subtopic} revision notes`, `${entry.subtopic} GCSE cheat sheet`,
+      `${entry.subtopic} key facts`, 'GCSE maths quick revision', `${entry.subtopic} video lesson`,
     ],
     alternates: { canonical: url },
     openGraph: {
-      title: `${entry.subtopic} — GCSE Maths Study Notes`,
-      description: entry.overview,
+      title,
+      description,
       url,
       type: 'article',
       siteName: 'GCSEMathsAI',
     },
     twitter: {
       card: 'summary',
-      title: `${entry.subtopic} — GCSE Maths Study Notes`,
-      description: entry.overview,
+      title,
+      description,
     },
   }
 }
@@ -172,6 +174,12 @@ export default async function StudyTopicPage({ params }: Props) {
 
         {/* ── LEFT: notes ─────────────────────────────────────── */}
         <div className="flex-1 min-w-0">
+
+          <p style={{ fontSize: 13, color: '#6B7280', lineHeight: 1.6, marginBottom: 20, fontStyle: 'italic' }}>
+            Revising {entry.subtopic.toLowerCase()} the night before an exam? These are condensed revision notes — the
+            facts, formulas and mistakes examiners actually mark, with no long explanations. Prefer a full walkthrough
+            with step-by-step reasoning instead? Search &ldquo;{entry.subtopic} GCSE&rdquo; on the site for the complete guide.
+          </p>
 
           <Section title="Key facts to remember" emoji="🔑" color={meta.color} bg={bg}>
             <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>

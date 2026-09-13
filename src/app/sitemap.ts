@@ -22,19 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/formula-sheet`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${BASE}/formulas`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE}/formulas/Number/01_integers-place-value-ordering.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/02_factors-multiples-primes.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/03_powers-roots-indices.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/04_fractions.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/05_decimals.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/06_percentages.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/07_ratio.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/08_proportion.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/09_standard-form.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/10_surds.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/11_bounds-error-intervals.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/12_estimation.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${BASE}/formulas/Number/13_product-rule-counting.html`, lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
+    // The legacy /formulas/Number/*.html pages are intentionally excluded here —
+    // they're a "deluxe sheet" companion linked from the current /formulas/[slug]
+    // pages, not meant to rank independently. Submitting near-duplicate content
+    // via the sitemap just dilutes crawl budget (GSC: "Crawled - not indexed").
     { url: `${BASE}/topics`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/community`, lastModified: now, changeFrequency: 'daily', priority: 0.8 },
