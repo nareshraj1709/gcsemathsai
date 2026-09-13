@@ -1,6 +1,6 @@
 ---
-title: "Percentage Profit and Loss – GCSE Maths Revision Guide"
-description: "Master percentage profit and loss for GCSE Maths. Calculate profit or loss as a percentage of cost price, find selling prices and break-even points."
+title: "Percentage Profit & Loss – GCSE Maths Guide"
+description: "Calculate percentage profit and loss for GCSE Maths: selling price, cost price, break-even points, with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Ratio"

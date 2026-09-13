@@ -1,6 +1,6 @@
 ---
-title: "Graph Transformations GCSE – Translations & Reflections"
-description: "Master graph transformations for GCSE Maths Higher tier. Learn translations, reflections, stretches with f(x) notation and worked examples."
+title: "Graph Transformations – GCSE Maths Higher"
+description: "Graph transformations for GCSE Maths Higher: translations, reflections and stretches using f(x) notation, with worked examples."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"

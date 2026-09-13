@@ -1,6 +1,6 @@
 ---
-title: "Reflections – GCSE Maths Revision Guide"
-description: "Learn how to reflect shapes in the x-axis, y-axis, y = x, y = -x, and other mirror lines with worked examples and GCSE practice questions."
+title: "Reflections – GCSE Maths Worked Examples"
+description: "Reflect shapes for GCSE Maths in the x-axis, y-axis, y = x and other mirror lines, with worked examples and practice questions."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"

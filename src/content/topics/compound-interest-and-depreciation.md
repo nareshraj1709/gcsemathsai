@@ -1,6 +1,6 @@
 ---
-title: "Compound Interest & Depreciation – GCSE Guide"
-description: "Master compound interest and depreciation for GCSE Maths with step-by-step methods, worked examples, and practice questions."
+title: "Compound Interest & Depreciation – Formula"
+description: "Calculate compound interest and depreciation for GCSE Maths using the multiplier method, with worked examples and exam-style practice."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Ratio"

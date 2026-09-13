@@ -1,6 +1,6 @@
 ---
-title: "Cosine Rule – GCSE Maths Revision Guide"
-description: "Master the cosine rule for GCSE Higher Maths — learn to find sides and angles in non-right-angled triangles with worked examples and practice."
+title: "Cosine Rule – Sides & Angles (GCSE Higher)"
+description: "Use the cosine rule for GCSE Maths Higher to find sides and angles in non-right-angled triangles, with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"

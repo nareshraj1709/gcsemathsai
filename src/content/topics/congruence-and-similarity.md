@@ -1,6 +1,6 @@
 ---
-title: "Congruence and Similarity – GCSE Maths Guide"
-description: "Master congruence and similarity for GCSE Maths with congruence conditions, similar shapes, area and volume scale factors, and practice questions."
+title: "Congruence & Similarity – Rules & Scale Factors"
+description: "Congruence and similarity for GCSE Maths: congruence conditions, similar shapes, and area/volume scale factors, with worked examples."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"

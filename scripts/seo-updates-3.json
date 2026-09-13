@@ -1,0 +1,50 @@
+{
+  "cumulative-frequency-and-box-plots": {
+    "title": "Cumulative Frequency & Box Plots – Explained",
+    "description": "Draw cumulative frequency diagrams and box plots for GCSE Maths, with median, quartiles, worked examples and exam-style practice."
+  },
+  "angles-in-a-triangle": {
+    "title": "Angles in a Triangle – Rules & Examples",
+    "description": "Angle rules in a triangle for GCSE Maths: angle sum of 180°, isosceles triangles, and the exterior angle theorem, with worked examples."
+  },
+  "percentage-profit-and-loss": {
+    "title": "Percentage Profit & Loss – GCSE Maths Guide",
+    "description": "Calculate percentage profit and loss for GCSE Maths: selling price, cost price, break-even points, with worked examples and practice."
+  },
+  "compound-interest-and-depreciation": {
+    "title": "Compound Interest & Depreciation – Formula",
+    "description": "Calculate compound interest and depreciation for GCSE Maths using the multiplier method, with worked examples and exam-style practice."
+  },
+  "time-series-graphs": {
+    "title": "Time Series Graphs – Trends & Moving Averages",
+    "description": "Plot time series graphs for GCSE Maths: identify trends and seasonal variation, and calculate moving averages, with worked examples."
+  },
+  "cosine-rule": {
+    "title": "Cosine Rule – Sides & Angles (GCSE Higher)",
+    "description": "Use the cosine rule for GCSE Maths Higher to find sides and angles in non-right-angled triangles, with worked examples and practice."
+  },
+  "graph-transformations": {
+    "title": "Graph Transformations – GCSE Maths Higher",
+    "description": "Graph transformations for GCSE Maths Higher: translations, reflections and stretches using f(x) notation, with worked examples."
+  },
+  "congruence-and-similarity": {
+    "title": "Congruence & Similarity – Rules & Scale Factors",
+    "description": "Congruence and similarity for GCSE Maths: congruence conditions, similar shapes, and area/volume scale factors, with worked examples."
+  },
+  "parallel-and-perpendicular-lines": {
+    "title": "Parallel & Perpendicular Lines – GCSE Guide",
+    "description": "Parallel and perpendicular line rules for GCSE Maths: same gradient means parallel, product of gradients = −1 means perpendicular."
+  },
+  "reflections": {
+    "title": "Reflections – GCSE Maths Worked Examples",
+    "description": "Reflect shapes for GCSE Maths in the x-axis, y-axis, y = x and other mirror lines, with worked examples and practice questions."
+  },
+  "finding-a-shorter-side-pythagoras": {
+    "title": "Finding a Shorter Side – Pythagoras (GCSE)",
+    "description": "Find a shorter side using Pythagoras' theorem for GCSE Maths by rearranging the formula, with worked examples and practice."
+  },
+  "inequalities-on-a-graph": {
+    "title": "Inequalities on a Graph – GCSE Maths Guide",
+    "description": "Represent inequalities on a graph for GCSE Maths: draw boundary lines, use solid or dashed lines, and shade the correct region."
+  }
+}

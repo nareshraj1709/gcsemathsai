@@ -1,6 +1,6 @@
 ---
-title: "Parallel and Perpendicular Lines – GCSE Maths Revision Guide"
-description: "Learn parallel and perpendicular line rules at GCSE. Same gradient means parallel, product of gradients = −1 means perpendicular. Worked examples."
+title: "Parallel & Perpendicular Lines – GCSE Guide"
+description: "Parallel and perpendicular line rules for GCSE Maths: same gradient means parallel, product of gradients = −1 means perpendicular."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Algebra"

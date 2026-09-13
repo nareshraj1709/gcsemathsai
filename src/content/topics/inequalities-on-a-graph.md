@@ -1,6 +1,6 @@
 ---
-title: "Inequalities on a Graph – GCSE Maths Revision Guide"
-description: "Learn how to represent inequalities on a graph at GCSE. Draw boundary lines, use solid or dashed lines, and shade the correct region."
+title: "Inequalities on a Graph – GCSE Maths Guide"
+description: "Represent inequalities on a graph for GCSE Maths: draw boundary lines, use solid or dashed lines, and shade the correct region."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Algebra"

@@ -1,6 +1,6 @@
 ---
-title: "Cumulative Frequency and Box Plots – GCSE Maths"
-description: "Master cumulative frequency diagrams and box plots for GCSE Maths Higher with step-by-step methods, worked examples and practice questions."
+title: "Cumulative Frequency & Box Plots – Explained"
+description: "Draw cumulative frequency diagrams and box plots for GCSE Maths, with median, quartiles, worked examples and exam-style practice."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Statistics & Probability"

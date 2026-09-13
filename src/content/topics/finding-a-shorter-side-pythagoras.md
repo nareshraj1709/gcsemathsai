@@ -1,6 +1,6 @@
 ---
-title: "Finding a Shorter Side (Pythagoras) – GCSE Maths Revision Guide"
-description: "Learn how to find a shorter side using Pythagoras' theorem by rearranging the formula, with worked examples and practice questions for GCSE Maths."
+title: "Finding a Shorter Side – Pythagoras (GCSE)"
+description: "Find a shorter side using Pythagoras' theorem for GCSE Maths by rearranging the formula, with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"

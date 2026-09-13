@@ -995,8 +995,8 @@ Need more practice on angle rules? Try [GCSEMathsAI](https://www.gcsemathsai.co.
 Angle rules and parallel line properties are tested on virtually every GCSE Maths paper. The basic rules — angles on a straight line (180°), around a point (360°), and vertically opposite angles (equal) — combine with the three parallel line rules: alternate angles (equal), corresponding angles (equal), and co-interior angles (sum to 180°). Always state the rule you are using, mark angles on the diagram as you go, and check your answers add up correctly. These questions carry straightforward marks, so accuracy and clear reasoning will serve you well.
 `,
   "angles-in-a-triangle": `---
-title: "Angles in a Triangle – GCSE Maths Revision Guide"
-description: "Angles in a triangle for GCSE Maths — angle sum of 180 degrees, isosceles base angles, equilateral triangles, and the exterior angle theorem explained."
+title: "Angles in a Triangle – Rules & Examples"
+description: "Angle rules in a triangle for GCSE Maths: angle sum of 180°, isosceles triangles, and the exterior angle theorem, with worked examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
@@ -4713,8 +4713,8 @@ Practise composite functions questions with instant feedback — completely free
 - To solve fg(x) = k, find the composite expression first, then solve the equation.
 `,
   "compound-interest-and-depreciation": `---
-title: "Compound Interest & Depreciation – GCSE Guide"
-description: "Master compound interest and depreciation for GCSE Maths with step-by-step methods, worked examples, and practice questions."
+title: "Compound Interest & Depreciation – Formula"
+description: "Calculate compound interest and depreciation for GCSE Maths using the multiplier method, with worked examples and exam-style practice."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Ratio"
@@ -5465,8 +5465,8 @@ Ready to practise these skills with instant, personalised feedback? Try our smar
 Conditional probability finds the likelihood of an event **given that** another event has already occurred. The key formula is P(B | A) = P(A ∩ B) ÷ P(A). In practice, you restrict the sample space to only those outcomes where the given event has happened, then calculate from there. "Without replacement" problems are the most common application — the total decreases after each pick, changing the probabilities. Use tree diagrams, two-way tables or Venn diagrams to organise your working. To test for independence, check whether P(B | A) = P(B). Always read the question carefully to identify which event is the "given" event, show the formula, and present your working clearly to earn full marks.
 `,
   "congruence-and-similarity": `---
-title: "Congruence and Similarity – GCSE Maths Guide"
-description: "Master congruence and similarity for GCSE Maths with congruence conditions, similar shapes, area and volume scale factors, and practice questions."
+title: "Congruence & Similarity – Rules & Scale Factors"
+description: "Congruence and similarity for GCSE Maths: congruence conditions, similar shapes, and area/volume scale factors, with worked examples."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"
@@ -6289,8 +6289,8 @@ Practise coordinates and plotting questions with instant feedback — completely
 - Use a cross for accuracy when plotting on graph paper.
 `,
   "cosine-rule": `---
-title: "Cosine Rule – GCSE Maths Revision Guide"
-description: "Master the cosine rule for GCSE Higher Maths — learn to find sides and angles in non-right-angled triangles with worked examples and practice."
+title: "Cosine Rule – Sides & Angles (GCSE Higher)"
+description: "Use the cosine rule for GCSE Maths Higher to find sides and angles in non-right-angled triangles, with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
@@ -6540,8 +6540,8 @@ Practise cubic and reciprocal graph questions with instant feedback free on [GCS
 - A negative coefficient reflects the standard shape across the x-axis.
 `,
   "cumulative-frequency-and-box-plots": `---
-title: "Cumulative Frequency and Box Plots – GCSE Maths"
-description: "Master cumulative frequency diagrams and box plots for GCSE Maths Higher with step-by-step methods, worked examples and practice questions."
+title: "Cumulative Frequency & Box Plots – Explained"
+description: "Draw cumulative frequency diagrams and box plots for GCSE Maths, with median, quartiles, worked examples and exam-style practice."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Statistics & Probability"
@@ -10713,8 +10713,8 @@ Practise factors, multiples and primes questions with instant feedback — compl
 - Use a factor tree to express any number as a product of primes in index notation.
 `,
   "finding-a-shorter-side-pythagoras": `---
-title: "Finding a Shorter Side (Pythagoras) – GCSE Maths Revision Guide"
-description: "Learn how to find a shorter side using Pythagoras' theorem by rearranging the formula, with worked examples and practice questions for GCSE Maths."
+title: "Finding a Shorter Side – Pythagoras (GCSE)"
+description: "Find a shorter side using Pythagoras' theorem for GCSE Maths by rearranging the formula, with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
@@ -12852,8 +12852,8 @@ Practise graph transformations with instant feedback free on [GCSEMathsAI](https
 - Always state the type of transformation and its details when answering exam questions.
 `,
   "graph-transformations": `---
-title: "Graph Transformations GCSE – Translations & Reflections"
-description: "Master graph transformations for GCSE Maths Higher tier. Learn translations, reflections, stretches with f(x) notation and worked examples."
+title: "Graph Transformations – GCSE Maths Higher"
+description: "Graph transformations for GCSE Maths Higher: translations, reflections and stretches using f(x) notation, with worked examples."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"
@@ -13787,8 +13787,8 @@ Master indices with unlimited expertly crafted practice. [Create your free accou
 - Index laws are used throughout algebra, standard form, and growth/decay problems.
 `,
   "inequalities-on-a-graph": `---
-title: "Inequalities on a Graph – GCSE Maths Revision Guide"
-description: "Learn how to represent inequalities on a graph at GCSE. Draw boundary lines, use solid or dashed lines, and shade the correct region."
+title: "Inequalities on a Graph – GCSE Maths Guide"
+description: "Represent inequalities on a graph for GCSE Maths: draw boundary lines, use solid or dashed lines, and shade the correct region."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Algebra"
@@ -17532,8 +17532,8 @@ Challenge yourself with Higher-tier graph questions on [GCSEMathsAI](https://www
 - Always plot a few key coordinates to ensure accuracy when sketching.
 `,
   "parallel-and-perpendicular-lines": `---
-title: "Parallel and Perpendicular Lines – GCSE Maths Revision Guide"
-description: "Learn parallel and perpendicular line rules at GCSE. Same gradient means parallel, product of gradients = −1 means perpendicular. Worked examples."
+title: "Parallel & Perpendicular Lines – GCSE Guide"
+description: "Parallel and perpendicular line rules for GCSE Maths: same gradient means parallel, product of gradients = −1 means perpendicular."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Algebra"
@@ -18338,8 +18338,8 @@ Practise percentage of an amount questions with instant feedback — completely 
 - Show your working clearly to earn method marks on every GCSE exam board.
 `,
   "percentage-profit-and-loss": `---
-title: "Percentage Profit and Loss – GCSE Maths Revision Guide"
-description: "Master percentage profit and loss for GCSE Maths. Calculate profit or loss as a percentage of cost price, find selling prices and break-even points."
+title: "Percentage Profit & Loss – GCSE Maths Guide"
+description: "Calculate percentage profit and loss for GCSE Maths: selling price, cost price, break-even points, with worked examples and practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Ratio"
@@ -24071,8 +24071,8 @@ Practise recurring decimals to fractions questions with instant feedback — com
 - Always simplify your final fraction by dividing by the HCF.
 `,
   "reflections": `---
-title: "Reflections – GCSE Maths Revision Guide"
-description: "Learn how to reflect shapes in the x-axis, y-axis, y = x, y = -x, and other mirror lines with worked examples and GCSE practice questions."
+title: "Reflections – GCSE Maths Worked Examples"
+description: "Reflect shapes for GCSE Maths in the x-axis, y-axis, y = x and other mirror lines, with worked examples and practice questions."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
@@ -31021,8 +31021,8 @@ Practise systematic listing and the product rule for free on GCSEMathsAI.
 Systematic listing means writing out all possible outcomes in an organised way by fixing one element and varying the rest. The product rule for counting gives the total number of outcomes as the product of the choices at each stage: m × n × p × ... If items cannot be repeated, reduce the number of choices at each subsequent stage. Use the product rule for "how many" questions and systematic listing when the question asks you to show all possibilities. Always cross-check your list count against the product rule to make sure nothing is missing.
 `,
   "time-series-graphs": `---
-title: "Time Series Graphs – GCSE Maths Revision Guide"
-description: "Time series graphs GCSE Maths revision: plot data over time, identify trends and seasonal variation, and calculate moving averages step by step."
+title: "Time Series Graphs – Trends & Moving Averages"
+description: "Plot time series graphs for GCSE Maths: identify trends and seasonal variation, and calculate moving averages, with worked examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Statistics & Probability"

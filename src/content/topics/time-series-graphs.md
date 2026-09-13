@@ -1,6 +1,6 @@
 ---
-title: "Time Series Graphs – GCSE Maths Revision Guide"
-description: "Time series graphs GCSE Maths revision: plot data over time, identify trends and seasonal variation, and calculate moving averages step by step."
+title: "Time Series Graphs – Trends & Moving Averages"
+description: "Plot time series graphs for GCSE Maths: identify trends and seasonal variation, and calculate moving averages, with worked examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Statistics & Probability"

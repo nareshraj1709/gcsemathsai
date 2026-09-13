@@ -1,6 +1,6 @@
 ---
-title: "Angles in a Triangle – GCSE Maths Revision Guide"
-description: "Angles in a triangle for GCSE Maths — angle sum of 180 degrees, isosceles base angles, equilateral triangles, and the exterior angle theorem explained."
+title: "Angles in a Triangle – Rules & Examples"
+description: "Angle rules in a triangle for GCSE Maths: angle sum of 180°, isosceles triangles, and the exterior angle theorem, with worked examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
