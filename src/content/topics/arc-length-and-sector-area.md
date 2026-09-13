@@ -1,6 +1,6 @@
 ---
-title: "Arc Length and Sector Area – GCSE Maths Guide"
-description: "Arc length and sector area for GCSE Maths: formulas, the sector perimeter method, worked examples at Foundation and Higher, and practice questions."
+title: "Arc Length & Sector Area – Formulas & Examples"
+description: "Arc length and sector area for GCSE Maths: formulas, worked examples at Foundation and Higher, common mistakes, and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"

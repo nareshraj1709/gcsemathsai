@@ -1,6 +1,6 @@
 ---
-title: "Simultaneous Equations: Elimination – GCSE Guide"
-description: "Learn how to solve simultaneous equations using the elimination method for GCSE Maths with worked examples and practice questions."
+title: "Simultaneous Equations – Elimination Method"
+description: "Solve simultaneous equations using the elimination method for GCSE Maths, with worked examples and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"

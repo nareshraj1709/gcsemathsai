@@ -1,6 +1,6 @@
 ---
-title: "Linear Graphs & Equation of a Line – GCSE Guide"
-description: "Master linear graphs and the equation of a line for GCSE Maths. Learn y = mx + c, gradient, intercept, and parallel/perpendicular lines with worked examples."
+title: "Linear Graphs & y=mx+c – GCSE Maths Guide"
+description: "Linear graphs and the equation of a line for GCSE Maths: y = mx + c, gradient, intercept, and parallel/perpendicular lines explained."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"
@@ -148,8 +148,8 @@ Ready to practise linear graphs with instant feedback? Try unlimited GCSE Maths 
 ## Related Topics
 
 - [Quadratic Graphs](/topics/quadratic-graphs)
-- [Simultaneous Equations](/topics/simultaneous-equations)
-- [Coordinates and Midpoints](/topics/coordinates-and-midpoints)
+- [Simultaneous Equations](/topics/simultaneous-equations-graphically)
+- [Coordinates and Midpoints](/topics/coordinates-and-plotting)
 - [Graph Transformations](/topics/graph-transformations)
 
 ---

@@ -705,8 +705,8 @@ Put your proof skills to the test with unlimited practice on [GCSEMathsAI](https
 
 ## Related Topics
 
-- [Expanding and Factorising](/topics/expanding-and-factorising)
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Expanding and Factorising](/topics/factorising-expressions)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 - [Functions and Function Notation](/topics/functions-and-function-notation)
 - [Sequences and Nth Term](/topics/sequences-and-nth-term)
 
@@ -1415,8 +1415,8 @@ Practise angles on a straight line and at a point with instant feedback free on 
 - Angles on a straight line always add up to 180°. Angles at a point always add up to 360°. Vertically opposite angles are always equal. These three rules are used throughout GCSE Maths — from simple missing-angle problems to multi-step proofs. Always state the rule you are using in your working to earn reason marks in the exam.
 `,
   "arc-length-and-sector-area": `---
-title: "Arc Length and Sector Area – GCSE Maths Guide"
-description: "Arc length and sector area for GCSE Maths: formulas, the sector perimeter method, worked examples at Foundation and Higher, and practice questions."
+title: "Arc Length & Sector Area – Formulas & Examples"
+description: "Arc length and sector area for GCSE Maths: formulas, worked examples at Foundation and Higher, common mistakes, and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"
@@ -2910,8 +2910,8 @@ Ready to practise these skills with instant, personalised feedback? Try our smar
 Bar charts, pie charts and pictograms are essential data-display methods at GCSE Foundation level. **Bar charts** compare categories using rectangular bars of equal width — always label axes and start the frequency scale at zero. **Pie charts** show proportions using angles calculated with (frequency ÷ total) × 360° — always verify your angles sum to 360°. **Pictograms** use symbols with a key — read partial symbols carefully. In the exam, draw neatly with a ruler and protractor, show all calculations, and double-check totals. Mastering these charts gives you a strong platform for interpreting data across the rest of the statistics strand.
 `,
   "bearings-and-trigonometry": `---
-title: "Bearings and Trigonometry – GCSE Maths Revision Guide"
-description: "Master bearings with trigonometry: three-figure bearings, calculating distances and angles using SOHCAHTOA, and finding return bearings at GCSE."
+title: "Bearings & Trigonometry – SOHCAHTOA Guide"
+description: "Master bearings with trigonometry for GCSE Maths: three-figure bearings, SOHCAHTOA calculations, and finding return bearings."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
@@ -12575,7 +12575,7 @@ Sharpen your function skills with unlimited practice on [GCSEMathsAI](https://ww
 - [Inverse and Composite Functions](/topics/inverse-and-composite-functions)
 - [Graph Transformations](/topics/graph-transformations)
 - [Quadratic Graphs](/topics/quadratic-graphs)
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 
 ---
 
@@ -14461,7 +14461,7 @@ Practise inverse and composite functions with instant feedback on [GCSEMathsAI](
 
 - [Functions and Function Notation](/topics/functions-and-function-notation)
 - [Graph Transformations](/topics/graph-transformations)
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 - [Algebraic Proof](/topics/algebraic-proof)
 
 ---
@@ -15158,7 +15158,7 @@ Master iteration with unlimited practice on [GCSEMathsAI](https://www.gcsemathsa
 
 ## Related Topics
 
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 - [Rearranging Formulae](/topics/rearranging-formulae)
 - [Algebraic Proof](/topics/algebraic-proof)
 - [Functions and Function Notation](/topics/functions-and-function-notation)
@@ -15176,8 +15176,8 @@ Master iteration with unlimited practice on [GCSEMathsAI](https://www.gcsemathsa
 - Always show your working clearly, writing each iteration value to at least 6 decimal places.
 `,
   "linear-graphs-and-equation-of-a-line": `---
-title: "Linear Graphs & Equation of a Line – GCSE Guide"
-description: "Master linear graphs and the equation of a line for GCSE Maths. Learn y = mx + c, gradient, intercept, and parallel/perpendicular lines with worked examples."
+title: "Linear Graphs & y=mx+c – GCSE Maths Guide"
+description: "Linear graphs and the equation of a line for GCSE Maths: y = mx + c, gradient, intercept, and parallel/perpendicular lines explained."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"
@@ -15325,8 +15325,8 @@ Ready to practise linear graphs with instant feedback? Try unlimited GCSE Maths 
 ## Related Topics
 
 - [Quadratic Graphs](/topics/quadratic-graphs)
-- [Simultaneous Equations](/topics/simultaneous-equations)
-- [Coordinates and Midpoints](/topics/coordinates-and-midpoints)
+- [Simultaneous Equations](/topics/simultaneous-equations-graphically)
+- [Coordinates and Midpoints](/topics/coordinates-and-plotting)
 - [Graph Transformations](/topics/graph-transformations)
 
 ---
@@ -17933,8 +17933,8 @@ Practise percentage change questions with instant feedback — completely free o
 - This skill applies to profit/loss, depreciation, population changes, and many other contexts.
 `,
   "percentage-increase-and-decrease-multipliers": `---
-title: "Percentage Increase and Decrease Multipliers – GCSE Maths Revision Guide"
-description: "Master percentage multipliers for GCSE Maths. Use multipliers for increase and decrease, handle repeated changes, and find original values after changes."
+title: "Percentage Increase & Decrease – Multipliers"
+description: "Master percentage multipliers for GCSE Maths: increase and decrease calculations, repeated percentage change, and finding original values."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Ratio"
@@ -18090,8 +18090,8 @@ Practise percentage multiplier questions with instant feedback free on GCSEMaths
 - The multiplier method is the foundation for compound interest, depreciation and reverse percentage problems.
 `,
   "percentage-multipliers": `---
-title: "Percentage Multipliers – GCSE Maths Revision Guide"
-description: "Converting a percentage to a decimal multiplier for GCSE Maths: quick-reference table, common multipliers, and how to build one in seconds."
+title: "Percentage to Multiplier – Quick Conversion"
+description: "Convert any percentage to a decimal multiplier for GCSE Maths in seconds, with a quick-reference table and common exam-style examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Number"
@@ -18629,7 +18629,7 @@ Sharpen your percentage skills with unlimited practice on [GCSEMathsAI](https://
 - [Reverse Percentages](/topics/reverse-percentages)
 - [Ratio Basics and Sharing](/topics/ratio-basics-and-sharing)
 - [Direct and Inverse Proportion](/topics/direct-and-inverse-proportion)
-- [Fractions, Decimals and Percentages](/topics/fractions-decimals-and-percentages)
+- [Fractions, Decimals and Percentages](/topics/converting-fractions-decimals-percentages)
 
 ---
 
@@ -19231,8 +19231,8 @@ Practise constructions with instant feedback free on [GCSEMathsAI](https://www.g
 - A perpendicular bisector cuts a line segment in half at 90° and is constructed using two sets of compass arcs from each endpoint. An angle bisector divides an angle into two equal parts and is constructed using arcs from the vertex and the two points where the initial arc crosses the arms. Always leave construction arcs visible, use a compass width greater than half the segment, and keep a sharp pencil for accuracy.
 `,
   "plans-and-elevations": `---
-title: "Plans and Elevations – GCSE Maths Guide"
-description: "Learn plans and elevations for GCSE Maths Foundation with step-by-step methods, worked examples, and practice questions."
+title: "Plans and Elevations – 3D Views & Examples"
+description: "Plans and elevations for GCSE Maths: step-by-step worked examples, 3D-to-2D diagrams, common mistakes, and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"
@@ -20103,8 +20103,8 @@ Ready to practise these skills with instant, personalised feedback? Try our smar
 Probability measures how likely an event is to happen, on a scale from 0 (impossible) to 1 (certain). **Theoretical probability** divides favourable outcomes by total equally likely outcomes. **Relative frequency** estimates probability from experimental results — the more trials, the more reliable the estimate. Use P(not A) = 1 − P(A) for complementary events, and P(A or B) = P(A) + P(B) for mutually exclusive events. **Expected frequency** multiplies probability by the number of trials. Always express probabilities as fractions, decimals or percentages, simplify where possible, and remember that relative frequency is an estimate, not an exact value. These fundamentals underpin tree diagrams, Venn diagrams and conditional probability at Higher level.
 `,
   "probability-from-two-way-tables": `---
-title: "Probability from Two-Way Tables – GCSE Maths Revision Guide"
-description: "Probability from two-way tables GCSE Maths revision: calculate simple and conditional probabilities from tables with step-by-step methods and worked examples."
+title: "Probability from Two-Way Tables – GCSE Guide"
+description: "Calculate probability from two-way tables for GCSE Maths: simple and conditional probability, step-by-step methods and worked examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Statistics & Probability"
@@ -21669,8 +21669,8 @@ Practise quadratic formula and discriminant questions with instant feedback — 
 - Calculate the discriminant first to earn method marks and to check your work.
 `,
   "quadratic-graphs": `---
-title: "Quadratic Graphs GCSE – Plotting & Key Features"
-description: "Learn how to plot quadratic graphs, find turning points, roots and the line of symmetry for GCSE Maths. Includes worked examples and practice questions."
+title: "Quadratic Graphs – Plot, Roots & Turning Point"
+description: "Plot quadratic graphs for GCSE Maths and find turning points, roots and the line of symmetry, with worked examples and practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"
@@ -21826,7 +21826,7 @@ Ready to master quadratic graphs with personalised practice? Head to [GCSEMathsA
 ## Related Topics
 
 - [Linear Graphs and Equation of a Line](/topics/linear-graphs-and-equation-of-a-line)
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 - [Graph Transformations](/topics/graph-transformations)
 - [Other Graphs: Cubic, Reciprocal, Exponential](/topics/other-graphs-cubic-reciprocal-exponential)
 
@@ -22856,7 +22856,7 @@ Practise ratio questions with personalised feedback on [GCSEMathsAI](https://www
 - [Ratio Problem Solving in Context](/topics/ratio-problem-solving-in-context)
 - [Direct and Inverse Proportion](/topics/direct-and-inverse-proportion)
 - [Percentages: Increase and Decrease](/topics/percentages-increase-and-decrease)
-- [Fractions, Decimals and Percentages](/topics/fractions-decimals-and-percentages)
+- [Fractions, Decimals and Percentages](/topics/converting-fractions-decimals-percentages)
 
 ---
 
@@ -24624,7 +24624,7 @@ Perfect your reverse percentage technique with unlimited practice on [GCSEMathsA
 - [Percentages: Increase and Decrease](/topics/percentages-increase-and-decrease)
 - [Ratio Basics and Sharing](/topics/ratio-basics-and-sharing)
 - [Direct and Inverse Proportion](/topics/direct-and-inverse-proportion)
-- [Fractions, Decimals and Percentages](/topics/fractions-decimals-and-percentages)
+- [Fractions, Decimals and Percentages](/topics/converting-fractions-decimals-percentages)
 
 ---
 
@@ -26811,8 +26811,8 @@ Practise simplifying surds questions with instant feedback — completely free o
 - Always fully simplify so the number under the root has no square factors.
 `,
   "simultaneous-equations-elimination": `---
-title: "Simultaneous Equations: Elimination – GCSE Guide"
-description: "Learn how to solve simultaneous equations using the elimination method for GCSE Maths with worked examples and practice questions."
+title: "Simultaneous Equations – Elimination Method"
+description: "Solve simultaneous equations using the elimination method for GCSE Maths, with worked examples and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"
@@ -28071,8 +28071,8 @@ Practise equations with fractions with instant feedback free on [GCSEMathsAI](ht
 - This skill is essential for algebraic fractions and simultaneous equations on the Higher paper.
 `,
   "solving-inequalities": `---
-title: "Solving Inequalities – GCSE Maths Guide"
-description: "Learn how to solve linear inequalities for GCSE Maths with step-by-step methods, number line diagrams, and exam-style practice questions."
+title: "Solving Inequalities – Rules & Worked Examples"
+description: "Solve linear inequalities for GCSE Maths: step-by-step methods, number line diagrams, common mistakes, and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"
@@ -31455,8 +31455,8 @@ Practise transformations with instant expert marking at [GCSEMathsAI](https://ww
 Reflections, rotations, and translations are the three congruence transformations in GCSE Maths. To reflect, you need the mirror line. To rotate, you need the centre, angle, and direction. To translate, you need the column vector. When describing a transformation, always give every required detail — incomplete descriptions are the number one reason students lose marks. Use tracing paper for rotations, count squares carefully for reflections, and apply the vector component-by-component for translations. These questions are accessible and frequently tested, so thorough practice pays off.
 `,
   "translations-column-vectors": `---
-title: "Translations and Column Vectors – GCSE Maths Revision Guide"
-description: "Learn how to translate shapes using column vectors, apply translations on a grid, and describe translations as vectors for GCSE Maths exams."
+title: "Translations & Column Vectors – GCSE Guide"
+description: "Translate shapes using column vectors for GCSE Maths: how to apply translations on a grid and describe them as vectors, with worked examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
@@ -32718,8 +32718,8 @@ Practise using the quadratic formula questions with instant feedback — complet
 - Simplify surds when asked for exact answers; otherwise round only at the final step.
 `,
   "vectors-proving-parallel-and-collinear": `---
-title: "Vectors: Proving Parallel and Collinear – GCSE Maths Revision Guide"
-description: "Vectors proving parallel and collinear for GCSE Maths Higher — scalar multiples for parallel lines, collinear points, and ratio problems explained."
+title: "Vectors – Proving Parallel & Collinear (Higher)"
+description: "Prove vectors are parallel or collinear for GCSE Maths Higher: scalar multiples, ratio problems, and worked exam-style examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"

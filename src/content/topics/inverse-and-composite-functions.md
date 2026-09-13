@@ -155,7 +155,7 @@ Practise inverse and composite functions with instant feedback on [GCSEMathsAI](
 
 - [Functions and Function Notation](/topics/functions-and-function-notation)
 - [Graph Transformations](/topics/graph-transformations)
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 - [Algebraic Proof](/topics/algebraic-proof)
 
 ---

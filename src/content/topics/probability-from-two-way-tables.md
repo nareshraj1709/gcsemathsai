@@ -1,6 +1,6 @@
 ---
-title: "Probability from Two-Way Tables – GCSE Maths Revision Guide"
-description: "Probability from two-way tables GCSE Maths revision: calculate simple and conditional probabilities from tables with step-by-step methods and worked examples."
+title: "Probability from Two-Way Tables – GCSE Guide"
+description: "Calculate probability from two-way tables for GCSE Maths: simple and conditional probability, step-by-step methods and worked examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Statistics & Probability"

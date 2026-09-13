@@ -1,6 +1,6 @@
 ---
-title: "Solving Inequalities – GCSE Maths Guide"
-description: "Learn how to solve linear inequalities for GCSE Maths with step-by-step methods, number line diagrams, and exam-style practice questions."
+title: "Solving Inequalities – Rules & Worked Examples"
+description: "Solve linear inequalities for GCSE Maths: step-by-step methods, number line diagrams, common mistakes, and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"

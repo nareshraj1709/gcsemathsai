@@ -1,6 +1,6 @@
 ---
-title: "Plans and Elevations – GCSE Maths Guide"
-description: "Learn plans and elevations for GCSE Maths Foundation with step-by-step methods, worked examples, and practice questions."
+title: "Plans and Elevations – 3D Views & Examples"
+description: "Plans and elevations for GCSE Maths: step-by-step worked examples, 3D-to-2D diagrams, common mistakes, and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"

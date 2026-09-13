@@ -133,7 +133,7 @@ Master iteration with unlimited practice on [GCSEMathsAI](https://www.gcsemathsa
 
 ## Related Topics
 
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 - [Rearranging Formulae](/topics/rearranging-formulae)
 - [Algebraic Proof](/topics/algebraic-proof)
 - [Functions and Function Notation](/topics/functions-and-function-notation)

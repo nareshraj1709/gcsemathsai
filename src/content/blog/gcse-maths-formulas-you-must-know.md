@@ -1,6 +1,6 @@
 ---
-title: "GCSE Maths Formula Sheet: Every Formula You Need to Know (2026)"
-description: "The complete GCSE Maths formula list for AQA, Edexcel and OCR — what's on the exam formula sheet, what you must memorise, and worked examples showing how to apply each one."
+title: "GCSE Maths Formula Sheet – Every Formula (2026)"
+description: "The complete GCSE Maths formula sheet for AQA, Edexcel and OCR: what you must memorise, what's given in the exam, and worked examples for each formula."
 date: "17 March 2026"
 dateISO: "2026-03-17"
 category: "Reference"
@@ -10,7 +10,7 @@ readMins: 10
 keywords: ["gcse maths formulas you must know", "gcse maths formulas to memorise", "which formulas are given gcse maths", "gcse maths formulae explained", "higher maths formula sheet", "gcse maths formula list"]
 ---
 
-One of the most common revision mistakes is memorising formulae that are actually given on the exam paper — and failing to memorise the ones that are not. This guide tells you exactly which formulae each board provides, which ones you must know from memory, and how to apply them.
+One of the most common revision mistakes is memorising formulae that are actually given on the exam paper — and failing to memorise the ones that are not. This guide tells you exactly which formulae each board provides, which ones you must know from memory, and how to apply them. Want them all in one place? [Download the free GCSE Maths formula sheet PDF](/formula-sheet).
 
 ## What Is on the GCSE Maths Formula Sheet?
 
@@ -68,6 +68,8 @@ $$\text{Arc length} = \frac{\theta}{360} \times 2\pi r$$
 
 **Area of a sector (Higher):**
 $$\text{Sector area} = \frac{\theta}{360} \times \pi r^2$$
+
+See our [arc length and sector area guide](/topics/arc-length-and-sector-area) for the full method, worked examples, and common mistakes.
 
 ---
 

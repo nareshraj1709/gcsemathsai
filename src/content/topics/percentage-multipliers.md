@@ -1,6 +1,6 @@
 ---
-title: "Percentage Multipliers – GCSE Maths Revision Guide"
-description: "Converting a percentage to a decimal multiplier for GCSE Maths: quick-reference table, common multipliers, and how to build one in seconds."
+title: "Percentage to Multiplier – Quick Conversion"
+description: "Convert any percentage to a decimal multiplier for GCSE Maths in seconds, with a quick-reference table and common exam-style examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Number"

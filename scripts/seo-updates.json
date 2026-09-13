@@ -1,0 +1,50 @@
+{
+  "arc-length-and-sector-area": {
+    "title": "Arc Length & Sector Area – Formulas & Examples",
+    "description": "Arc length and sector area for GCSE Maths: formulas, worked examples at Foundation and Higher, common mistakes, and exam-style practice questions."
+  },
+  "plans-and-elevations": {
+    "title": "Plans and Elevations – 3D Views & Examples",
+    "description": "Plans and elevations for GCSE Maths: step-by-step worked examples, 3D-to-2D diagrams, common mistakes, and exam-style practice questions."
+  },
+  "solving-inequalities": {
+    "title": "Solving Inequalities – Rules & Worked Examples",
+    "description": "Solve linear inequalities for GCSE Maths: step-by-step methods, number line diagrams, common mistakes, and exam-style practice questions."
+  },
+  "linear-graphs-and-equation-of-a-line": {
+    "title": "Linear Graphs & y=mx+c – GCSE Maths Guide",
+    "description": "Linear graphs and the equation of a line for GCSE Maths: y = mx + c, gradient, intercept, and parallel/perpendicular lines explained."
+  },
+  "percentage-increase-and-decrease-multipliers": {
+    "title": "Percentage Increase & Decrease – Multipliers",
+    "description": "Master percentage multipliers for GCSE Maths: increase and decrease calculations, repeated percentage change, and finding original values."
+  },
+  "translations-column-vectors": {
+    "title": "Translations & Column Vectors – GCSE Guide",
+    "description": "Translate shapes using column vectors for GCSE Maths: how to apply translations on a grid and describe them as vectors, with worked examples."
+  },
+  "quadratic-graphs": {
+    "title": "Quadratic Graphs – Plot, Roots & Turning Point",
+    "description": "Plot quadratic graphs for GCSE Maths and find turning points, roots and the line of symmetry, with worked examples and practice questions."
+  },
+  "percentage-multipliers": {
+    "title": "Percentage to Multiplier – Quick Conversion",
+    "description": "Convert any percentage to a decimal multiplier for GCSE Maths in seconds, with a quick-reference table and common exam-style examples."
+  },
+  "bearings-and-trigonometry": {
+    "title": "Bearings & Trigonometry – SOHCAHTOA Guide",
+    "description": "Master bearings with trigonometry for GCSE Maths: three-figure bearings, SOHCAHTOA calculations, and finding return bearings."
+  },
+  "vectors-proving-parallel-and-collinear": {
+    "title": "Vectors – Proving Parallel & Collinear (Higher)",
+    "description": "Prove vectors are parallel or collinear for GCSE Maths Higher: scalar multiples, ratio problems, and worked exam-style examples."
+  },
+  "simultaneous-equations-elimination": {
+    "title": "Simultaneous Equations – Elimination Method",
+    "description": "Solve simultaneous equations using the elimination method for GCSE Maths, with worked examples and exam-style practice questions."
+  },
+  "probability-from-two-way-tables": {
+    "title": "Probability from Two-Way Tables – GCSE Guide",
+    "description": "Calculate probability from two-way tables for GCSE Maths: simple and conditional probability, step-by-step methods and worked examples."
+  }
+}

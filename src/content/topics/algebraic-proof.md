@@ -146,8 +146,8 @@ Put your proof skills to the test with unlimited practice on [GCSEMathsAI](https
 
 ## Related Topics
 
-- [Expanding and Factorising](/topics/expanding-and-factorising)
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Expanding and Factorising](/topics/factorising-expressions)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 - [Functions and Function Notation](/topics/functions-and-function-notation)
 - [Sequences and Nth Term](/topics/sequences-and-nth-term)
 

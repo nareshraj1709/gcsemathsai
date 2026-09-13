@@ -140,7 +140,7 @@ Perfect your reverse percentage technique with unlimited practice on [GCSEMathsA
 - [Percentages: Increase and Decrease](/topics/percentages-increase-and-decrease)
 - [Ratio Basics and Sharing](/topics/ratio-basics-and-sharing)
 - [Direct and Inverse Proportion](/topics/direct-and-inverse-proportion)
-- [Fractions, Decimals and Percentages](/topics/fractions-decimals-and-percentages)
+- [Fractions, Decimals and Percentages](/topics/converting-fractions-decimals-percentages)
 
 ---
 

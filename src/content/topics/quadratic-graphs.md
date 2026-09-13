@@ -1,6 +1,6 @@
 ---
-title: "Quadratic Graphs GCSE – Plotting & Key Features"
-description: "Learn how to plot quadratic graphs, find turning points, roots and the line of symmetry for GCSE Maths. Includes worked examples and practice questions."
+title: "Quadratic Graphs – Plot, Roots & Turning Point"
+description: "Plot quadratic graphs for GCSE Maths and find turning points, roots and the line of symmetry, with worked examples and practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"
@@ -156,7 +156,7 @@ Ready to master quadratic graphs with personalised practice? Head to [GCSEMathsA
 ## Related Topics
 
 - [Linear Graphs and Equation of a Line](/topics/linear-graphs-and-equation-of-a-line)
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 - [Graph Transformations](/topics/graph-transformations)
 - [Other Graphs: Cubic, Reciprocal, Exponential](/topics/other-graphs-cubic-reciprocal-exponential)
 

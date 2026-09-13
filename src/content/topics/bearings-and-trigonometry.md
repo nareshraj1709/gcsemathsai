@@ -1,6 +1,6 @@
 ---
-title: "Bearings and Trigonometry – GCSE Maths Revision Guide"
-description: "Master bearings with trigonometry: three-figure bearings, calculating distances and angles using SOHCAHTOA, and finding return bearings at GCSE."
+title: "Bearings & Trigonometry – SOHCAHTOA Guide"
+description: "Master bearings with trigonometry for GCSE Maths: three-figure bearings, SOHCAHTOA calculations, and finding return bearings."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"

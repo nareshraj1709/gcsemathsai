@@ -1,6 +1,6 @@
 ---
-title: "Percentage Increase and Decrease Multipliers – GCSE Maths Revision Guide"
-description: "Master percentage multipliers for GCSE Maths. Use multipliers for increase and decrease, handle repeated changes, and find original values after changes."
+title: "Percentage Increase & Decrease – Multipliers"
+description: "Master percentage multipliers for GCSE Maths: increase and decrease calculations, repeated percentage change, and finding original values."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Ratio"

@@ -136,7 +136,7 @@ Practise ratio questions with personalised feedback on [GCSEMathsAI](https://www
 - [Ratio Problem Solving in Context](/topics/ratio-problem-solving-in-context)
 - [Direct and Inverse Proportion](/topics/direct-and-inverse-proportion)
 - [Percentages: Increase and Decrease](/topics/percentages-increase-and-decrease)
-- [Fractions, Decimals and Percentages](/topics/fractions-decimals-and-percentages)
+- [Fractions, Decimals and Percentages](/topics/converting-fractions-decimals-percentages)
 
 ---
 

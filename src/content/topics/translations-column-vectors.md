@@ -1,6 +1,6 @@
 ---
-title: "Translations and Column Vectors – GCSE Maths Revision Guide"
-description: "Learn how to translate shapes using column vectors, apply translations on a grid, and describe translations as vectors for GCSE Maths exams."
+title: "Translations & Column Vectors – GCSE Guide"
+description: "Translate shapes using column vectors for GCSE Maths: how to apply translations on a grid and describe them as vectors, with worked examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"

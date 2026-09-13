@@ -146,7 +146,7 @@ Sharpen your function skills with unlimited practice on [GCSEMathsAI](https://ww
 - [Inverse and Composite Functions](/topics/inverse-and-composite-functions)
 - [Graph Transformations](/topics/graph-transformations)
 - [Quadratic Graphs](/topics/quadratic-graphs)
-- [Solving Quadratic Equations](/topics/solving-quadratic-equations)
+- [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
 
 ---
 

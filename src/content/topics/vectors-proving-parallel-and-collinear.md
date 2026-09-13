@@ -1,6 +1,6 @@
 ---
-title: "Vectors: Proving Parallel and Collinear – GCSE Maths Revision Guide"
-description: "Vectors proving parallel and collinear for GCSE Maths Higher — scalar multiples for parallel lines, collinear points, and ratio problems explained."
+title: "Vectors – Proving Parallel & Collinear (Higher)"
+description: "Prove vectors are parallel or collinear for GCSE Maths Higher: scalar multiples, ratio problems, and worked exam-style examples."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Geometry"
