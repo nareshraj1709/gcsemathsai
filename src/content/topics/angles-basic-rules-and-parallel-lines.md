@@ -1,6 +1,6 @@
 ---
-title: "Angles: Basic Rules & Parallel Lines – GCSE Guide"
-description: "Learn angle rules and parallel line angles for GCSE Maths with step-by-step methods, worked examples, and practice questions."
+title: "Angle Rules & Parallel Lines – GCSE Guide"
+description: "Angle rules and parallel line angles for GCSE Maths: alternate, corresponding and co-interior angles, with worked examples and practice."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"

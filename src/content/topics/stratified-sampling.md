@@ -1,6 +1,6 @@
 ---
-title: "Stratified Sampling – GCSE Maths Revision Guide"
-description: "Master stratified sampling for GCSE Maths Higher with proportional representation, sample size calculations, worked examples and practice."
+title: "Stratified Sampling – Step-by-Step Method"
+description: "Calculate stratified samples for GCSE Maths: proportional representation, sample size calculations, worked examples and exam practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Statistics & Probability"

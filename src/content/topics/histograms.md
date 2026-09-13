@@ -1,6 +1,6 @@
 ---
-title: "Histograms – GCSE Maths Higher Revision Guide"
-description: "Learn how to draw and interpret histograms for GCSE Maths Higher with frequency density, worked examples and practice questions."
+title: "Histograms – Frequency Density Explained"
+description: "Draw and interpret GCSE Maths histograms using frequency density, with worked examples, common mistakes, and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Statistics & Probability"

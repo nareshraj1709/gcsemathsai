@@ -1,6 +1,6 @@
 ---
-title: "Writing in Standard Form – GCSE Maths Revision Guide"
-description: "Learn how to convert large and small numbers to standard form (A times 10 to the n) for GCSE Maths with clear rules and worked examples."
+title: "How to Write Numbers in Standard Form – GCSE"
+description: "Convert large and small numbers into standard form (A × 10ⁿ) for GCSE Maths, with clear rules, worked examples, and practice questions."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Number"

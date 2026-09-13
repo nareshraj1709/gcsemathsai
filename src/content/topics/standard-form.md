@@ -1,6 +1,6 @@
 ---
-title: "Standard Form – GCSE Maths Revision Guide"
-description: "Master standard form for GCSE Maths with step-by-step methods for writing, calculating, and converting standard form numbers."
+title: "Standard Form – GCSE Maths Complete Guide"
+description: "Standard form for GCSE Maths: writing, converting, and calculating with very large and very small numbers, at Foundation and Higher tier."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Number"

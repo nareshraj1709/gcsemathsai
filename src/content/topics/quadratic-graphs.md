@@ -13,7 +13,7 @@ strand: "Algebra"
 topicNumber: 26
 ---
 
-Quadratic graphs appear on every GCSE Maths paper and are worth significant marks at both Foundation and Higher tier. You need to recognise the characteristic U-shape (or inverted U-shape), plot quadratics from a table of values, and identify key features such as roots, turning points and lines of symmetry. At Higher level, you must also sketch quadratics from their equation and use completing the square to find the turning point. This guide covers everything you need.
+Quadratic graphs appear on every GCSE Maths paper and are worth significant marks at both Foundation and Higher tier. You need to recognise the characteristic U-shape (or inverted U-shape), plot quadratics from a table of values, and identify key features such as roots, turning points and lines of symmetry. At Higher level, you must also sketch quadratics from their equation and use [completing the square](/topics/completing-the-square-method) to find the turning point. This guide covers everything you need.
 
 ## What Is a Quadratic Graph?
 
@@ -157,6 +157,7 @@ Ready to master quadratic graphs with personalised practice? Head to [GCSEMathsA
 
 - [Linear Graphs and Equation of a Line](/topics/linear-graphs-and-equation-of-a-line)
 - [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
+- [Completing the Square](/topics/completing-the-square-method) — the fastest way to find a quadratic's turning point
 - [Graph Transformations](/topics/graph-transformations)
 - [Other Graphs: Cubic, Reciprocal, Exponential](/topics/other-graphs-cubic-reciprocal-exponential)
 

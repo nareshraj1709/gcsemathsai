@@ -1,6 +1,6 @@
 ---
-title: "Fractions – GCSE Maths Revision Guide"
-description: "Master fractions for GCSE Maths with step-by-step methods, worked examples, and practice questions for Foundation and Higher tiers."
+title: "Fraction Rules & Arithmetic – GCSE Guide"
+description: "GCSE Maths fraction rules: how to add, subtract, multiply and divide fractions, plus mixed numbers, with worked examples and practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Number"

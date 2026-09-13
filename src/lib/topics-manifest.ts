@@ -851,8 +851,8 @@ Practise angles in parallel lines with instant feedback free on [GCSEMathsAI](ht
 - Alternate angles (Z-shape) are equal. Corresponding angles (F-shape) are equal. Co-interior angles (C/U-shape) add up to 180°. These rules only work when lines are parallel. Always state the rule name in your working for full marks, and draw letter shapes on diagrams to avoid confusing the relationships.
 `,
   "angles-basic-rules-and-parallel-lines": `---
-title: "Angles: Basic Rules & Parallel Lines – GCSE Guide"
-description: "Learn angle rules and parallel line angles for GCSE Maths with step-by-step methods, worked examples, and practice questions."
+title: "Angle Rules & Parallel Lines – GCSE Guide"
+description: "Angle rules and parallel line angles for GCSE Maths: alternate, corresponding and co-interior angles, with worked examples and practice."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Geometry & Measures"
@@ -4289,8 +4289,8 @@ Practise comparing data sets and more for free on GCSEMathsAI.
 Comparing data sets requires two statements: one comparing an **average** (mean or median) and one comparing a **measure of spread** (range or IQR). Both must be in context. Use the median and IQR when data is given in box plots; use the mean and range when given raw data or frequency tables. A higher average means the typical value is greater. A smaller spread means the data is more consistent. Structure your answer clearly with linking words and always refer to what the data represents.
 `,
   "completing-the-square-method": `---
-title: "Completing the Square Method – GCSE Maths Revision Guide"
-description: "Master the completing the square method for GCSE Maths Higher tier with turning points, solving equations, worked examples, and practice."
+title: "Completing the Square – Method & Examples"
+description: "Complete the square for GCSE Maths Higher: find turning points, solve quadratic equations, with worked examples and practice questions."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Algebra"
@@ -11814,8 +11814,8 @@ Practise fractions of amounts questions with instant feedback — completely fre
 - Show every step of your working to secure method marks on exam papers.
 `,
   "fractions": `---
-title: "Fractions – GCSE Maths Revision Guide"
-description: "Master fractions for GCSE Maths with step-by-step methods, worked examples, and practice questions for Foundation and Higher tiers."
+title: "Fraction Rules & Arithmetic – GCSE Guide"
+description: "GCSE Maths fraction rules: how to add, subtract, multiply and divide fractions, plus mixed numbers, with worked examples and practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Number"
@@ -13336,8 +13336,8 @@ Practise HCF and LCM questions with instant feedback — completely free on GCSE
 - Check your answer: HCF × LCM = the product of the two original numbers.
 `,
   "histograms": `---
-title: "Histograms – GCSE Maths Higher Revision Guide"
-description: "Learn how to draw and interpret histograms for GCSE Maths Higher with frequency density, worked examples and practice questions."
+title: "Histograms – Frequency Density Explained"
+description: "Draw and interpret GCSE Maths histograms using frequency density, with worked examples, common mistakes, and exam-style practice questions."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Statistics & Probability"
@@ -21683,7 +21683,7 @@ strand: "Algebra"
 topicNumber: 26
 ---
 
-Quadratic graphs appear on every GCSE Maths paper and are worth significant marks at both Foundation and Higher tier. You need to recognise the characteristic U-shape (or inverted U-shape), plot quadratics from a table of values, and identify key features such as roots, turning points and lines of symmetry. At Higher level, you must also sketch quadratics from their equation and use completing the square to find the turning point. This guide covers everything you need.
+Quadratic graphs appear on every GCSE Maths paper and are worth significant marks at both Foundation and Higher tier. You need to recognise the characteristic U-shape (or inverted U-shape), plot quadratics from a table of values, and identify key features such as roots, turning points and lines of symmetry. At Higher level, you must also sketch quadratics from their equation and use [completing the square](/topics/completing-the-square-method) to find the turning point. This guide covers everything you need.
 
 ## What Is a Quadratic Graph?
 
@@ -21827,6 +21827,7 @@ Ready to master quadratic graphs with personalised practice? Head to [GCSEMathsA
 
 - [Linear Graphs and Equation of a Line](/topics/linear-graphs-and-equation-of-a-line)
 - [Solving Quadratic Equations](/topics/solving-quadratic-equations-factorising)
+- [Completing the Square](/topics/completing-the-square-method) — the fastest way to find a quadratic's turning point
 - [Graph Transformations](/topics/graph-transformations)
 - [Other Graphs: Cubic, Reciprocal, Exponential](/topics/other-graphs-cubic-reciprocal-exponential)
 
@@ -29220,8 +29221,8 @@ Practise square numbers and cube numbers questions with instant feedback — com
 - Recognising square and cube numbers helps in many other topics including surds and Pythagoras.
 `,
   "standard-form": `---
-title: "Standard Form – GCSE Maths Revision Guide"
-description: "Master standard form for GCSE Maths with step-by-step methods for writing, calculating, and converting standard form numbers."
+title: "Standard Form – GCSE Maths Complete Guide"
+description: "Standard form for GCSE Maths: writing, converting, and calculating with very large and very small numbers, at Foundation and Higher tier."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Number"
@@ -29499,8 +29500,8 @@ Practise stem-and-leaf diagrams and more for free on GCSEMathsAI.
 A stem-and-leaf diagram displays raw data by splitting values into stems and leaves, keeping every data point visible. Leaves must be in ascending order and a key is essential. You can read the median, mode and range directly from the diagram. Back-to-back stem-and-leaf diagrams allow direct comparison of two data sets — always comment on an average and a measure of spread. Use (n + 1) ÷ 2 to find the median position for listed data.
 `,
   "stratified-sampling": `---
-title: "Stratified Sampling – GCSE Maths Revision Guide"
-description: "Master stratified sampling for GCSE Maths Higher with proportional representation, sample size calculations, worked examples and practice."
+title: "Stratified Sampling – Step-by-Step Method"
+description: "Calculate stratified samples for GCSE Maths: proportional representation, sample size calculations, worked examples and exam practice."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Statistics & Probability"
@@ -34219,8 +34220,8 @@ Practise volume of a sphere questions with instant feedback — completely free 
 - To find the radius from volume, rearrange to r³ = 3V ÷ (4pi) and cube-root.
 `,
   "writing-in-standard-form": `---
-title: "Writing in Standard Form – GCSE Maths Revision Guide"
-description: "Learn how to convert large and small numbers to standard form (A times 10 to the n) for GCSE Maths with clear rules and worked examples."
+title: "How to Write Numbers in Standard Form – GCSE"
+description: "Convert large and small numbers into standard form (A × 10ⁿ) for GCSE Maths, with clear rules, worked examples, and practice questions."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Number"

@@ -1,6 +1,6 @@
 ---
-title: "Completing the Square Method – GCSE Maths Revision Guide"
-description: "Master the completing the square method for GCSE Maths Higher tier with turning points, solving equations, worked examples, and practice."
+title: "Completing the Square – Method & Examples"
+description: "Complete the square for GCSE Maths Higher: find turning points, solve quadratic equations, with worked examples and practice questions."
 date: "23 May 2026"
 dateISO: "2026-05-23"
 category: "Algebra"

@@ -1,0 +1,30 @@
+{
+  "fractions": {
+    "title": "Fraction Rules & Arithmetic – GCSE Guide",
+    "description": "GCSE Maths fraction rules: how to add, subtract, multiply and divide fractions, plus mixed numbers, with worked examples and practice questions."
+  },
+  "writing-in-standard-form": {
+    "title": "How to Write Numbers in Standard Form – GCSE",
+    "description": "Convert large and small numbers into standard form (A × 10ⁿ) for GCSE Maths, with clear rules, worked examples, and practice questions."
+  },
+  "standard-form": {
+    "title": "Standard Form – GCSE Maths Complete Guide",
+    "description": "Standard form for GCSE Maths: writing, converting, and calculating with very large and very small numbers, at Foundation and Higher tier."
+  },
+  "histograms": {
+    "title": "Histograms – Frequency Density Explained",
+    "description": "Draw and interpret GCSE Maths histograms using frequency density, with worked examples, common mistakes, and exam-style practice questions."
+  },
+  "stratified-sampling": {
+    "title": "Stratified Sampling – Step-by-Step Method",
+    "description": "Calculate stratified samples for GCSE Maths: proportional representation, sample size calculations, worked examples and exam practice."
+  },
+  "angles-basic-rules-and-parallel-lines": {
+    "title": "Angle Rules & Parallel Lines – GCSE Guide",
+    "description": "Angle rules and parallel line angles for GCSE Maths: alternate, corresponding and co-interior angles, with worked examples and practice."
+  },
+  "completing-the-square-method": {
+    "title": "Completing the Square – Method & Examples",
+    "description": "Complete the square for GCSE Maths Higher: find turning points, solve quadratic equations, with worked examples and practice questions."
+  }
+}
