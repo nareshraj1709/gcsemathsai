@@ -9178,8 +9178,8 @@ Practise exchange rate problems with instant feedback free on GCSEMathsAI.
 - Always check your answer is reasonable given the exchange rate.
 `,
   "expanding-brackets": `---
-title: "Expanding Brackets – GCSE Maths Revision"
-description: "Master expanding single and double brackets in GCSE Maths with step-by-step methods, worked examples, and practice questions."
+title: "Expanding Single & Double Brackets – GCSE"
+description: "Expand single and double brackets for GCSE Maths: step-by-step methods, worked examples, common mistakes, and exam-style practice."
 date: "18 March 2026"
 dateISO: "2026-03-18"
 category: "Algebra"
