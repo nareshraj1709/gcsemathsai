@@ -29,6 +29,10 @@ A **locus** (plural: loci) is the path traced by a set of points that obey a par
 
 [FORMULA: Locus of points equidistant from two intersecting lines = angle bisector of the two lines]
 
+[DIAGRAM: construction | variant=locus-point | radiusLabel=fixed distance]
+
+[DIAGRAM: construction | variant=perpendicular-bisector | caption=Equidistant from two points: the perpendicular bisector]
+
 ## Step-by-Step Method
 
 1. **Read the rule** carefully and identify which standard locus applies.
@@ -40,6 +44,8 @@ A **locus** (plural: loci) is the path traced by a set of points that obey a par
 
 **Question:** A treasure is buried less than 4 m from a tree T. Show the region where the treasure could be on a scale drawing (1 cm = 1 m).
 
+[DIAGRAM: construction | variant=locus-point | radiusLabel=4 m | caption=Shade inside the circle — closer than 4 m]
+
 **Working:**
 
 The locus of points 4 m from T is a circle of radius 4 cm (at the scale of 1 cm = 1 m). Draw a circle of radius 4 cm centred on T. The treasure is less than 4 m away, so shade the interior of the circle.
@@ -49,6 +55,8 @@ The locus of points 4 m from T is a circle of radius 4 cm (at the scale of 1 cm 
 ## Worked Example 2 — Higher Level
 
 **Question:** Two points A and B are 6 cm apart. A point P must be closer to A than to B. Construct and shade the region where P can be.
+
+[DIAGRAM: construction | variant=perpendicular-bisector | caption=Shade the A-side of the bisector]
 
 **Working:**
 
@@ -61,6 +69,8 @@ Shade the region on the same side as A.
 ## Worked Example 3 — Exam Style
 
 **Question:** A dog is attached to a post P by a lead of length 5 m. A straight wall runs 3 m from P. Using a scale of 1 cm = 1 m, shade the region the dog can reach.
+
+[DIAGRAM: construction | variant=region | radiusLabel=5 m | caption=Two conditions combined: within the lead's reach AND on the near side of the wall]
 
 **Working:**
 

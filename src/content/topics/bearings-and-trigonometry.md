@@ -41,6 +41,8 @@ In exam diagrams, north is always straight up the page unless otherwise stated. 
 
 **Question:** Town B is due east of Town A. What is the bearing of B from A?
 
+[DIAGRAM: bearing | bearing=90 | fromLabel=A | toLabel=B]
+
 **Working:**
 North is straight up. Due east is a 90° clockwise rotation from north.
 
@@ -49,6 +51,8 @@ North is straight up. Due east is a 90° clockwise rotation from north.
 ## Worked Example 2 — Higher Level
 
 **Question:** A ship sails from port P on a bearing of 060° for 80 km to reach point Q. It then sails due south for 50 km to reach point R. Find the direct distance from P to R to 1 decimal place.
+
+[DIAGRAM: triangle | sideC=80 km | sideA=50 km | angleB=120 | sideB=? | unknown=b | caption=The triangle formed at Q, where the interior angle is 180° − 60° = 120°]
 
 **Working:**
 From the diagram, the angle at Q between the north line and PQ is 060°. Since QR is due south, the angle PQR (inside the triangle at Q) is 180° − 60° = 120°.
@@ -63,6 +67,8 @@ PR = √12900 = 113.6 (1 d.p.)
 ## Worked Example 3 — Exam Style
 
 **Question:** The bearing of B from A is 125°. Find the bearing of A from B.
+
+[DIAGRAM: bearing | bearing=125 | fromLabel=A | toLabel=B]
 
 **Working:**
 The return bearing = 125° + 180° = 305°.

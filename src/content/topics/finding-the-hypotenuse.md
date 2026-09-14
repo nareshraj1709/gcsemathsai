@@ -29,6 +29,8 @@ To find the hypotenuse, you square the two known sides, add them together, and t
 
 [FORMULA: c = √(a² + b²)]
 
+[DIAGRAM: right-triangle | opposite=a | adjacent=b | hypotenuse=c | hideAngle=true | unknown=hypotenuse | caption=c is always opposite the right angle]
+
 ### Pythagorean Triples
 
 Pythagorean triples are sets of three whole numbers that satisfy Pythagoras' theorem perfectly, with no rounding needed. Recognising them saves time in exams:
@@ -50,6 +52,8 @@ Pythagorean triples are sets of three whole numbers that satisfy Pythagoras' the
 
 **Question:** A right-angled triangle has shorter sides of 6 cm and 8 cm. Find the hypotenuse.
 
+[DIAGRAM: right-triangle | opposite=8 cm | adjacent=6 cm | hypotenuse=? | hideAngle=true | unknown=hypotenuse]
+
 **Working:**
 c² = a² + b²
 c² = 6² + 8²
@@ -63,6 +67,8 @@ c = √100
 
 **Question:** A right-angled triangle has legs of 7.5 cm and 10 cm. Find the hypotenuse. Give your answer to 1 decimal place.
 
+[DIAGRAM: right-triangle | opposite=10 cm | adjacent=7.5 cm | hypotenuse=? | hideAngle=true | unknown=hypotenuse]
+
 **Working:**
 c² = 7.5² + 10²
 c² = 56.25 + 100
@@ -74,6 +80,8 @@ c = √156.25
 ## Worked Example 3 — Exam Style
 
 **Question:** A rectangular field measures 40 m by 30 m. A path runs diagonally from one corner to the opposite corner. How long is the path?
+
+[DIAGRAM: right-triangle | opposite=30 m | adjacent=40 m | hypotenuse=? | hideAngle=true | unknown=hypotenuse | caption=The diagonal path is the hypotenuse of the right-angled triangle formed by two sides of the field]
 
 **Working:**
 The diagonal of a rectangle creates two right-angled triangles. The diagonal is the hypotenuse.

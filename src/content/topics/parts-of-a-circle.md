@@ -29,6 +29,12 @@ A **circle** is the set of all points that are the same distance from a fixed ce
 - **Sector:** The region enclosed by two radii and an arc — shaped like a pizza slice.
 - **Segment:** The region between a chord and the arc it cuts off.
 
+[DIAGRAM: circle | variant=basic | radiusLabel=r | caption=Radius and diameter — the two lengths every other circle formula is built from]
+
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r | caption=A sector: the "pizza slice" bounded by two radii and an arc]
+
+[DIAGRAM: circle | variant=segment | angle=100 | caption=A segment: the region between a chord and the arc it cuts off]
+
 ### Key Formulas
 
 [FORMULA: Circumference = 2πr = πd]
@@ -60,6 +66,8 @@ A **circle** is the set of all points that are the same distance from a fixed ce
 
 **Question:** A circle has a radius of 8 cm. Find the diameter, circumference, and area.
 
+[DIAGRAM: circle | variant=basic | radiusLabel=8 cm]
+
 **Working:**
 
 Step 1 — Diameter = 2 × 8 = 16 cm.
@@ -73,6 +81,8 @@ Step 3 — Area = π × 8² = 64π ≈ 201.1 cm² (1 d.p.).
 ## Worked Example 2 — Higher Level
 
 **Question:** A chord AB divides a circle of radius 10 cm into two segments. The chord is 12 cm long. Find the distance from the centre to the chord.
+
+[DIAGRAM: right-triangle | opposite=6 cm | adjacent=? | hypotenuse=10 cm | hideAngle=true | unknown=adjacent | caption=Triangle OMA: the radius (hypotenuse), half the chord, and the perpendicular distance OM]
 
 **Working:**
 
@@ -89,6 +99,8 @@ Step 4 — OM = √(10² − 6²) = √(100 − 36) = √64 = 8 cm.
 ## Worked Example 3 — Exam Style
 
 **Question:** A tangent to a circle meets a radius at point P on the circumference. The radius OP = 5 cm and the tangent extends to point T where OT = 13 cm. Find the length of the tangent PT.
+
+[DIAGRAM: circle | variant=tangent | radiusLabel=5 cm | caption=The tangent is perpendicular to the radius at P, so triangle OPT is right-angled]
 
 **Working:**
 

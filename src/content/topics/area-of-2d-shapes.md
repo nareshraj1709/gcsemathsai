@@ -28,6 +28,8 @@ $$A = l \times w$$
 $$A = \frac{1}{2} \times b \times h$$
 where b is the base and h is the **perpendicular** height.
 
+[DIAGRAM: shape | variant=triangle-base-height | base=base | height=height]
+
 **Parallelogram:**
 $$A = b \times h$$
 where h is the perpendicular height, not the slant side.
@@ -36,12 +38,16 @@ where h is the perpendicular height, not the slant side.
 $$A = \frac{1}{2}(a + b) \times h$$
 where a and b are the two parallel sides and h is the perpendicular distance between them.
 
+[DIAGRAM: shape | variant=trapezium | a=a | b=b | height=h]
+
 **Circle:**
 $$A = \pi r^2$$
 
 **Sector of a circle:**
 $$A = \frac{\theta}{360} \times \pi r^2$$
 where θ is the angle at the centre.
+
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r]
 
 **Kite:**
 $$A = \frac{1}{2} \times d_1 \times d_2$$

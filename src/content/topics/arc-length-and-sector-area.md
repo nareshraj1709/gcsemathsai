@@ -35,6 +35,8 @@ Both depend on two things: the **radius** of the circle and the **angle** at the
 
 The fraction θ / 360 tells you what fraction of the full circle the sector represents. If the angle is 90°, the sector is 90/360 = 1/4 of the circle.
 
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r | caption=A 90° sector is exactly a quarter of the full circle]
+
 ### Perimeter of a Sector
 
 Be careful — the **perimeter** of a sector is not just the arc length. It is:
@@ -70,6 +72,8 @@ Sometimes you are given the arc length or sector area and asked to find the angl
 
 **Question:** A sector has a radius of 8 cm and an angle of 90°. Calculate the arc length and the area of the sector. Give your answers to 1 decimal place.
 
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=8 cm]
+
 **Working:**
 
 Arc length = (90 / 360) × 2 × π × 8
@@ -87,6 +91,8 @@ Sector area = (90 / 360) × π × 8²
 ## Worked Example 2 — Higher Level
 
 **Question:** A sector has an area of 40 cm² and a radius of 6 cm. Find the angle of the sector. Give your answer to the nearest degree.
+
+[DIAGRAM: circle | variant=sector | angle=127 | radiusLabel=6 cm | caption=θ is what we're solving for]
 
 **Working:**
 

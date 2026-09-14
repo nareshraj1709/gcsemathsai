@@ -25,6 +25,10 @@ When you look at a 3D object from different directions, you see different 2D sha
 
 Each view is a flat 2D drawing that shows the outline of what you would see from that direction. Hidden edges are not usually drawn unless the question asks for them.
 
+[DIAGRAM: isometric | l=3 | w=2 | h=2 | caption=The 3D solid]
+
+[DIAGRAM: plans-elevations | caption=The same solid's three flat views]
+
 ### Why Are They Useful?
 
 Plans and elevations are used by architects, engineers, and designers to communicate the shape of 3D objects using flat 2D drawings. In GCSE Maths, they test your spatial reasoning — your ability to think about shapes in three dimensions.

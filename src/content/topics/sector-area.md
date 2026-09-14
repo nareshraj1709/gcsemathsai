@@ -27,6 +27,8 @@ A sector is the region enclosed by two radii and an arc. The area of a sector is
 
 [FORMULA: Area of a full circle = πr²]
 
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r]
+
 ## Step-by-Step Method
 
 1. **Identify the radius** (r) and the **angle at the centre** (θ).
@@ -38,6 +40,8 @@ A sector is the region enclosed by two radii and an arc. The area of a sector is
 ## Worked Example 1 — Foundation Level
 
 **Question:** Find the area of a sector with radius 6 cm and angle 90°. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=6 cm]
 
 **Working:**
 

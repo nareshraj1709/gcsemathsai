@@ -40,6 +40,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 - A and H → use **cos**
 - O and A → use **tan**
 
+[DIAGRAM: right-triangle | opposite=O | adjacent=A | hypotenuse=H | angleLabel=θ° | caption=Label O, A, H relative to θ before picking a ratio]
+
 ---
 
 ## Step-by-Step Method
@@ -68,6 +70,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 
 *In a right-angled triangle, the angle is 35° and the hypotenuse is 10 cm. Find the length of the side opposite the 35° angle. Give your answer to 1 decimal place.*
 
+[DIAGRAM: right-triangle | opposite=? | hypotenuse=10 cm | angleLabel=35° | unknown=opposite]
+
 **Step 1:** Label: H = 10, O = ?, angle = 35°.
 
 **Step 2:** O and H → use sin.
@@ -79,6 +83,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 ### Finding an Angle
 
 *A right-angled triangle has an opposite side of 7 cm and an adjacent side of 4 cm. Find the angle.*
+
+[DIAGRAM: right-triangle | opposite=7 cm | adjacent=4 cm | angleLabel=? | unknown=angle]
 
 **Step 1:** O = 7, A = 4 → use tan.
 
@@ -92,6 +98,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 
 *A right-angled triangle has an angle of 52° and the side adjacent to this angle is 8 cm. Find the hypotenuse. Give your answer to 3 significant figures.*
 
+[DIAGRAM: right-triangle | adjacent=8 cm | hypotenuse=? | angleLabel=52° | unknown=hypotenuse]
+
 **Step 1:** A = 8, H = ?, angle = 52°.
 
 **Step 2:** A and H → use cos.
@@ -103,6 +111,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 ### Multi-Step Problem
 
 *A vertical flagpole is supported by a wire attached to the top of the pole and anchored 6 m from the base. The wire makes an angle of 70° with the ground. Find the height of the flagpole and the length of the wire.*
+
+[DIAGRAM: right-triangle | opposite=height? | adjacent=6 m | hypotenuse=wire? | angleLabel=70° | caption=The flagpole is opposite the 70° angle; the wire is the hypotenuse]
 
 **Height (opposite):** tan 70° = h/6, so h = 6 × tan 70° = 6 × 2.7475 = **16.5 m** (1 d.p.).
 

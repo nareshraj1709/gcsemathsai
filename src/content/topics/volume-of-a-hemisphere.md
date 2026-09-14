@@ -31,6 +31,8 @@ A **hemisphere** is half of a sphere, created by cutting a sphere along a great 
 
 The total surface area includes the curved part (half the sphere's surface area of 4πr²) plus the flat circular base (πr²).
 
+[DIAGRAM: solid3d | shape=hemisphere | radius=r]
+
 ## Step-by-Step Method
 
 ### Finding the Volume
@@ -50,6 +52,8 @@ The total surface area includes the curved part (half the sphere's surface area 
 This topic is Higher only, but this example uses straightforward numbers.
 
 **Question:** Find the volume of a hemisphere with radius 6 cm. Give your answer in terms of π.
+
+[DIAGRAM: solid3d | shape=hemisphere | radius=6 cm]
 
 **Working:**
 

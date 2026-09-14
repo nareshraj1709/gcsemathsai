@@ -25,6 +25,8 @@ Every triangle has three interior angles that always add up to **180°**. This i
 
 [FORMULA: Exterior angle of a triangle = sum of the two opposite interior angles]
 
+[DIAGRAM: angle | variant=exterior | angleA=50 | angleB=70]
+
 - **Equilateral triangle:** All three sides are equal and all three angles are **60°**.
 - **Isosceles triangle:** Two sides are equal and the **base angles** (the angles opposite the equal sides) are equal.
 - **Scalene triangle:** No sides are equal and no angles are equal.
@@ -48,6 +50,8 @@ Every triangle has three interior angles that always add up to **180°**. This i
 
 **Question:** A triangle has angles of 72° and 53°. Find the third angle.
 
+[DIAGRAM: triangle | angleB=72 | angleC=53 | angleA=? | unknown=A]
+
 **Working:**
 
 Step 1 — Add the known angles: 72° + 53° = 125°.
@@ -59,6 +63,8 @@ Step 2 — Subtract from 180°: 180° − 125° = 55°.
 ## Worked Example 2 — Higher Level
 
 **Question:** In an isosceles triangle, the angle between the two equal sides is 34°. Find the base angles.
+
+[DIAGRAM: triangle | angleA=34 | angleB=? | angleC=? | unknown=B | caption=The two base angles are equal]
 
 **Working:**
 

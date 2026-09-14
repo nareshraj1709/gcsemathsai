@@ -30,6 +30,12 @@ Knowing the properties of 3D shapes — faces, edges, and vertices — is essent
 
 This formula works for all **convex polyhedra** (3D shapes with flat faces and no indentations). It does not apply to shapes with curved surfaces like cylinders, cones, or spheres.
 
+[DIAGRAM: cuboid | length=l | width=w | height=h | caption=A cuboid: 6 faces, 12 edges, 8 vertices]
+
+[DIAGRAM: solid3d | shape=pyramid | height=h | slant=l | caption=A square-based pyramid: 5 faces, 8 edges, 5 vertices]
+
+[DIAGRAM: solid3d | shape=triangular-prism | base=base | length=length | caption=A triangular prism: 5 faces, 9 edges, 6 vertices]
+
 ### Key 3D Shapes
 
 | Shape | Faces | Edges | Vertices | F + V − E |
@@ -61,6 +67,8 @@ This formula works for all **convex polyhedra** (3D shapes with flat faces and n
 ## Worked Example 1 — Foundation Level
 
 **Question:** A shape has 6 faces and 8 vertices. Use Euler's formula to find the number of edges. Name the shape.
+
+[DIAGRAM: cuboid | length=l | width=w | height=h]
 
 **Working:**
 
@@ -753,6 +761,12 @@ When a straight line (called a transversal) crosses two parallel lines, it creat
 
 **Alternate angles** sit on opposite sides of the transversal, between the parallel lines — trace the letter Z or a backwards Z to spot them. **Corresponding angles** sit in the same position at each intersection — trace the letter F to spot them. **Co-interior angles** sit on the same side of the transversal, between the parallel lines — they form a C or U shape and always sum to 180°.
 
+[DIAGRAM: angle | variant=parallel | pairType=alternate | known=65 | caption=Alternate (Z) angles — equal]
+
+[DIAGRAM: angle | variant=parallel | pairType=corresponding | known=65 | caption=Corresponding (F) angles — equal]
+
+[DIAGRAM: angle | variant=parallel | pairType=co-interior | known=65 | caption=Co-interior (C/U) angles — sum to 180°]
+
 ## Step-by-Step Method
 
 1. **Confirm the lines are parallel.** Look for arrows on the diagram. The rules only apply to parallel lines.
@@ -765,6 +779,8 @@ When a straight line (called a transversal) crosses two parallel lines, it creat
 
 **Question:** A transversal crosses two parallel lines. One of the alternate angles is 72°. Find the other.
 
+[DIAGRAM: angle | variant=parallel | pairType=alternate | known=72]
+
 **Working:**
 
 Alternate angles are equal (Z-angles).
@@ -776,6 +792,8 @@ The other angle = 72°.
 ## Worked Example 2 — Higher Level
 
 **Question:** A transversal crosses two parallel lines. An angle of (3x + 15)° and a co-interior angle of (5x − 7)° are marked. Find x and both angles.
+
+[DIAGRAM: angle | variant=parallel | pairType=co-interior | known=79.5 | caption=These two angles sum to 180°]
 
 **Working:**
 
@@ -877,6 +895,8 @@ Angles measure the amount of turn between two lines that meet at a point. In GCS
 - **Angles in a triangle** add up to **180°**.
 - **Angles in a quadrilateral** add up to **360°**.
 
+[DIAGRAM: angle | variant=straight-line | split=118 | value1=118° | value2=62°]
+
 ### Parallel Line Angle Rules
 
 When a straight line (called a **transversal**) crosses two parallel lines, it creates several pairs of related angles:
@@ -884,6 +904,8 @@ When a straight line (called a **transversal**) crosses two parallel lines, it c
 - **Alternate angles** (also called Z-angles) — angles on opposite sides of the transversal, between the parallel lines. They are **equal**.
 - **Corresponding angles** (also called F-angles) — angles in matching positions at each intersection. They are **equal**.
 - **Co-interior angles** (also called allied angles or C-angles) — angles on the same side of the transversal, between the parallel lines. They add up to **180°**.
+
+[DIAGRAM: angle | variant=parallel | pairType=alternate | known=65 | caption=Alternate (Z-angle) pair — equal]
 
 ### How to Spot Parallel Lines
 
@@ -901,6 +923,8 @@ Look for arrows on the lines in the diagram. A single arrow on two lines means t
 ## Worked Example 1 — Foundation Level
 
 **Question:** Two angles on a straight line are 3x° and (2x + 30)°. Find the value of x and both angles.
+
+[DIAGRAM: angle | variant=straight-line | split=90 | value1=3x° | value2=(2x+30)°]
 
 **Working:**
 
@@ -923,6 +947,8 @@ Step 4 — Check: 90 + 90 = 180° ✓
 ## Worked Example 2 — Higher Level
 
 **Question:** Lines PQ and RS are parallel. A transversal crosses PQ at point A and RS at point B. Angle PAB = 3x + 10° and angle RBA = 2x + 20°. Find the size of angle PAB. Give a reason for each step.
+
+[DIAGRAM: angle | variant=parallel | pairType=alternate | known=3x+10 | caption=Angle PAB and angle RBA are alternate angles]
 
 **Working:**
 
@@ -1021,6 +1047,8 @@ Every triangle has three interior angles that always add up to **180°**. This i
 
 [FORMULA: Exterior angle of a triangle = sum of the two opposite interior angles]
 
+[DIAGRAM: angle | variant=exterior | angleA=50 | angleB=70]
+
 - **Equilateral triangle:** All three sides are equal and all three angles are **60°**.
 - **Isosceles triangle:** Two sides are equal and the **base angles** (the angles opposite the equal sides) are equal.
 - **Scalene triangle:** No sides are equal and no angles are equal.
@@ -1044,6 +1072,8 @@ Every triangle has three interior angles that always add up to **180°**. This i
 
 **Question:** A triangle has angles of 72° and 53°. Find the third angle.
 
+[DIAGRAM: triangle | angleB=72 | angleC=53 | angleA=? | unknown=A]
+
 **Working:**
 
 Step 1 — Add the known angles: 72° + 53° = 125°.
@@ -1055,6 +1085,8 @@ Step 2 — Subtract from 180°: 180° − 125° = 55°.
 ## Worked Example 2 — Higher Level
 
 **Question:** In an isosceles triangle, the angle between the two equal sides is 34°. Find the base angles.
+
+[DIAGRAM: triangle | angleA=34 | angleB=? | angleC=? | unknown=B | caption=The two base angles are equal]
 
 **Working:**
 
@@ -1164,6 +1196,8 @@ At every vertex: **interior angle + exterior angle = 180°** (they form a straig
 [FORMULA: Each exterior angle of a regular polygon = 360° / n]
 
 A **regular polygon** has all sides equal and all angles equal. For irregular polygons, you can only find the sum of the angles — individual angles will differ.
+
+[DIAGRAM: angle | variant=polygon | sides=5 | caption=A regular pentagon, with one interior and one exterior angle marked]
 
 ### Common Polygon Names
 
@@ -1312,6 +1346,8 @@ When two or more angles sit along a straight line, they form a half-turn. When a
 
 Vertically opposite angles are formed when two straight lines cross. The pairs of angles directly across from each other are always equal.
 
+[DIAGRAM: angle | variant=point | angles=65,48,67,180 | caption=Angles at a point (or split across a straight line) always add to a fixed total]
+
 ## Step-by-Step Method
 
 1. **Identify the type of angle arrangement.** Decide whether the angles lie on a straight line, meet at a point, or are vertically opposite.
@@ -1339,6 +1375,8 @@ x = 180 − 113 = 67
 
 **Question:** Four angles meet at a point. They are 2x°, 3x°, x + 40°, and 120°. Find x.
 
+[DIAGRAM: angle | variant=point | angles=66.7,100,73.3,120 | caption=Four angles meeting at a point always sum to 360°]
+
 **Working:**
 
 Angles at a point sum to 360°.
@@ -1356,6 +1394,8 @@ x = 33.3° (1 d.p.)
 ## Worked Example 3 — Exam Style
 
 **Question:** Two straight lines cross. One of the four angles formed is labelled (3y − 10)° and the vertically opposite angle is labelled (2y + 25)°. Find the value of y and the size of each angle.
+
+[DIAGRAM: angle | variant=point | angles=95,85,95,85 | caption=Vertically opposite angles (95° and 95°, 85° and 85°) are equal]
 
 **Working:**
 
@@ -1451,6 +1491,8 @@ Both depend on two things: the **radius** of the circle and the **angle** at the
 
 The fraction θ / 360 tells you what fraction of the full circle the sector represents. If the angle is 90°, the sector is 90/360 = 1/4 of the circle.
 
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r | caption=A 90° sector is exactly a quarter of the full circle]
+
 ### Perimeter of a Sector
 
 Be careful — the **perimeter** of a sector is not just the arc length. It is:
@@ -1486,6 +1528,8 @@ Sometimes you are given the arc length or sector area and asked to find the angl
 
 **Question:** A sector has a radius of 8 cm and an angle of 90°. Calculate the arc length and the area of the sector. Give your answers to 1 decimal place.
 
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=8 cm]
+
 **Working:**
 
 Arc length = (90 / 360) × 2 × π × 8
@@ -1503,6 +1547,8 @@ Sector area = (90 / 360) × π × 8²
 ## Worked Example 2 — Higher Level
 
 **Question:** A sector has an area of 40 cm² and a radius of 6 cm. Find the angle of the sector. Give your answer to the nearest degree.
+
+[DIAGRAM: circle | variant=sector | angle=127 | radiusLabel=6 cm | caption=θ is what we're solving for]
 
 **Working:**
 
@@ -1601,6 +1647,8 @@ An arc is a curved section of the circumference of a circle. The arc length depe
 
 Here θ is the angle at the centre in degrees and r is the radius.
 
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r | caption=The arc length is the fraction θ/360 of the full circumference]
+
 ## Step-by-Step Method
 
 1. **Identify the radius** (r) and the **angle at the centre** (θ) from the question or diagram.
@@ -1611,6 +1659,8 @@ Here θ is the angle at the centre in degrees and r is the radius.
 ## Worked Example 1 — Foundation Level
 
 **Question:** A sector has a radius of 8 cm and an angle of 90°. Find the arc length. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=8 cm]
 
 **Working:**
 
@@ -1627,6 +1677,8 @@ Arc length = (90 / 360) × 2 × π × 8
 ## Worked Example 2 — Higher Level
 
 **Question:** An arc of a circle with radius 12 cm has a length of 15 cm. Find the angle at the centre. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=sector | angle=72 | radiusLabel=12 cm | caption=The angle θ here is what we're solving for]
 
 **Working:**
 
@@ -1733,6 +1785,8 @@ $$A = l \\times w$$
 $$A = \\frac{1}{2} \\times b \\times h$$
 where b is the base and h is the **perpendicular** height.
 
+[DIAGRAM: shape | variant=triangle-base-height | base=base | height=height]
+
 **Parallelogram:**
 $$A = b \\times h$$
 where h is the perpendicular height, not the slant side.
@@ -1741,12 +1795,16 @@ where h is the perpendicular height, not the slant side.
 $$A = \\frac{1}{2}(a + b) \\times h$$
 where a and b are the two parallel sides and h is the perpendicular distance between them.
 
+[DIAGRAM: shape | variant=trapezium | a=a | b=b | height=h]
+
 **Circle:**
 $$A = \\pi r^2$$
 
 **Sector of a circle:**
 $$A = \\frac{\\theta}{360} \\times \\pi r^2$$
 where θ is the angle at the centre.
+
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r]
 
 **Kite:**
 $$A = \\frac{1}{2} \\times d_1 \\times d_2$$
@@ -1900,6 +1958,8 @@ For semicircles (half circles) and quarter circles, you calculate the full circl
 
 [FORMULA: Quarter circle area = ¼ pi r²]
 
+[DIAGRAM: circle | variant=basic | radiusLabel=r]
+
 ## Step-by-Step Method
 
 1. Check whether you are given the radius or the diameter. If given the diameter, halve it to get the radius.
@@ -1909,6 +1969,8 @@ For semicircles (half circles) and quarter circles, you calculate the full circl
 ## Worked Example 1 — Foundation Level
 
 **Question:** A circle has a radius of 5 cm. Find its area. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=basic | radiusLabel=5 cm]
 
 **Working:**
 A = pi r²
@@ -2015,6 +2077,8 @@ This is why A = base × perpendicular height gives the same result as the area o
 
 Diagrams often show a dashed line from one vertex perpendicular to the base — this dashed line is the height you need.
 
+[DIAGRAM: shape | variant=parallelogram | base=base | height=height]
+
 ### Key Formulas
 
 [FORMULA: A = base × perpendicular height]
@@ -2030,6 +2094,8 @@ Diagrams often show a dashed line from one vertex perpendicular to the base — 
 ## Worked Example 1 — Foundation Level
 
 **Question:** A parallelogram has a base of 8 cm and a perpendicular height of 5 cm. Find its area.
+
+[DIAGRAM: shape | variant=parallelogram | base=8 cm | height=5 cm]
 
 **Working:**
 A = base × height
@@ -2146,6 +2212,8 @@ A **minor** sector or segment is the smaller one (angle less than 180°); a **ma
 
 The triangle formed inside a sector has two sides equal to the radius (r) with the included angle θ, so you use Area = ½ × r × r × sin θ = ½r² sin θ.
 
+[DIAGRAM: circle | variant=segment | angle=120 | caption=Segment area = sector area − triangle area (the gold region minus the triangle inside it)]
+
 ## Step-by-Step Method
 
 ### Finding the Area of a Sector
@@ -2166,6 +2234,8 @@ This topic is Higher only, but this example uses a straightforward sector.
 
 **Question:** Find the area of a sector with radius 9 cm and angle 80°. Give your answer to 1 decimal place.
 
+[DIAGRAM: circle | variant=sector | angle=80 | radiusLabel=9 cm]
+
 **Working:**
 
 Step 1 — Area = (80/360) × π × 9².
@@ -2179,6 +2249,8 @@ Step 3 — 18π ≈ 56.5 cm².
 ## Worked Example 2 — Higher Level
 
 **Question:** Find the area of the minor segment of a circle with radius 10 cm and central angle 120°. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=segment | angle=120]
 
 **Working:**
 
@@ -2280,6 +2352,8 @@ The area formula works because a trapezium can be thought of as the average of t
 
 [FORMULA: For a compound shape containing a trapezium, find the trapezium area separately and add or subtract as needed]
 
+[DIAGRAM: shape | variant=trapezium | a=a | b=b | height=h]
+
 ## Step-by-Step Method
 
 1. Identify the two parallel sides (a and b) — these are the sides that run in the same direction.
@@ -2289,6 +2363,8 @@ The area formula works because a trapezium can be thought of as the average of t
 ## Worked Example 1 — Foundation Level
 
 **Question:** A trapezium has parallel sides of 6 cm and 10 cm and a perpendicular height of 4 cm. Find its area.
+
+[DIAGRAM: shape | variant=trapezium | a=6 cm | b=10 cm | height=4 cm]
 
 **Working:**
 A = ½(a + b) × h
@@ -2401,6 +2477,8 @@ The key to applying these formulas correctly is identifying the correct pair: th
 
 [FORMULA: A = ½ab sin C, where a and b are two sides and C is the included angle between them (Higher tier)]
 
+[DIAGRAM: shape | variant=triangle-base-height | base=base | height=height]
+
 ## Step-by-Step Method
 
 1. Identify the base — any side of the triangle can be chosen as the base.
@@ -2410,6 +2488,8 @@ The key to applying these formulas correctly is identifying the correct pair: th
 ## Worked Example 1 — Foundation Level
 
 **Question:** A triangle has a base of 10 cm and a perpendicular height of 6 cm. Find its area.
+
+[DIAGRAM: shape | variant=triangle-base-height | base=10 cm | height=6 cm]
 
 **Working:**
 A = ½ × base × height
@@ -2422,6 +2502,8 @@ A = 30
 ## Worked Example 2 — Higher Level
 
 **Question:** Triangle PQR has PQ = 9 cm, PR = 12 cm, and the included angle P = 40°. Find the area correct to 1 decimal place.
+
+[DIAGRAM: triangle | sideB=12 cm | sideC=9 cm | angleA=40]
 
 **Working:**
 A = ½ab sin C
@@ -2534,6 +2616,8 @@ Both approaches — adding simpler areas or subtracting cut-outs — are equally
 
 **Question:** An L-shaped room has overall dimensions 10 m by 8 m. A 4 m by 3 m rectangle is missing from one corner. Find the area of the room.
 
+[DIAGRAM: shape | variant=lshape | width=10 | height=8 | cutWidth=4 | cutHeight=3]
+
 **Working:**
 Full rectangle area = 10 × 8 = 80 m²
 Missing rectangle area = 4 × 3 = 12 m²
@@ -2544,6 +2628,8 @@ L-shape area = 80 − 12 = 68
 ## Worked Example 2 — Higher Level
 
 **Question:** A shape consists of a rectangle measuring 14 cm by 6 cm with a semicircle removed from one of the longer sides. The semicircle has a diameter of 6 cm. Find the shaded area to 1 decimal place.
+
+[DIAGRAM: shape | variant=rectangle-semicircle-cutout | width=14 | height=6 | diameter=6]
 
 **Working:**
 Rectangle area = 14 × 6 = 84 cm²
@@ -2556,6 +2642,8 @@ Shaded area = 84 − 14.137... = 69.862...
 ## Worked Example 3 — Exam Style
 
 **Question:** A shape is made from a trapezium on top of a rectangle. The rectangle is 12 cm wide and 5 cm tall. The trapezium has parallel sides of 12 cm (bottom, shared with the rectangle) and 8 cm (top), with a perpendicular height of 4 cm. Find the total area.
+
+[DIAGRAM: shape | variant=rectangle-plus-trapezium | width=12 | height=5 | top=8 | trapHeight=4]
 
 **Working:**
 Rectangle area = 12 × 5 = 60 cm²
@@ -2645,6 +2733,8 @@ Here, **a** and **b** are any two sides, and **C** is the angle **between** thos
 
 All three forms give the same result — choose the one that uses the two sides and included angle you know.
 
+[DIAGRAM: triangle | sideA=a | sideB=b | angleC=C | caption=a and b meet at vertex C — that's the included angle in ½ab sin C]
+
 ### When to Use This Formula
 
 Use ½ab sin C when you have:
@@ -2667,6 +2757,8 @@ This topic is Higher only, but this example uses straightforward values.
 
 **Question:** Find the area of a triangle with sides 8 cm and 11 cm and an included angle of 40°.
 
+[DIAGRAM: triangle | sideA=8 cm | sideB=11 cm | angleC=40]
+
 **Working:**
 
 Step 1 — a = 8, b = 11, C = 40°.
@@ -2682,6 +2774,8 @@ Step 4 — Area = ½ × 8 × 11 × 0.6428 = 0.5 × 56.565 = 28.3 cm² (1 d.p.).
 ## Worked Example 2 — Higher Level
 
 **Question:** Triangle PQR has PQ = 14 cm, PR = 9 cm, and area = 50.4 cm². Find angle P.
+
+[DIAGRAM: triangle | sideC=14 cm | sideB=9 cm | angleA=? | unknown=A | caption=P is where the two given sides meet — that's the angle we want]
 
 **Working:**
 
@@ -2952,6 +3046,8 @@ In exam diagrams, north is always straight up the page unless otherwise stated. 
 
 **Question:** Town B is due east of Town A. What is the bearing of B from A?
 
+[DIAGRAM: bearing | bearing=90 | fromLabel=A | toLabel=B]
+
 **Working:**
 North is straight up. Due east is a 90° clockwise rotation from north.
 
@@ -2960,6 +3056,8 @@ North is straight up. Due east is a 90° clockwise rotation from north.
 ## Worked Example 2 — Higher Level
 
 **Question:** A ship sails from port P on a bearing of 060° for 80 km to reach point Q. It then sails due south for 50 km to reach point R. Find the direct distance from P to R to 1 decimal place.
+
+[DIAGRAM: triangle | sideC=80 km | sideA=50 km | angleB=120 | sideB=? | unknown=b | caption=The triangle formed at Q, where the interior angle is 180° − 60° = 120°]
 
 **Working:**
 From the diagram, the angle at Q between the north line and PQ is 060°. Since QR is due south, the angle PQR (inside the triangle at Q) is 180° − 60° = 120°.
@@ -2974,6 +3072,8 @@ PR = √12900 = 113.6 (1 d.p.)
 ## Worked Example 3 — Exam Style
 
 **Question:** The bearing of B from A is 125°. Find the bearing of A from B.
+
+[DIAGRAM: bearing | bearing=125 | fromLabel=A | toLabel=B]
 
 **Working:**
 The return bearing = 125° + 180° = 305°.
@@ -3057,6 +3157,10 @@ A **bearing** is an angle that describes the direction of one point from another
 
 If the angle is less than 100°, you add a leading zero to make it three digits. For example, an angle of 72° is written as a bearing of **072°**.
 
+[DIAGRAM: bearing | bearing=72 | fromLabel=A | toLabel=B | caption=The bearing of B from A: turn clockwise from north until facing B]
+
+
+
 ### Key Vocabulary
 
 - **Bearing of B from A** — stand at A, face north, and turn clockwise until you face B. The angle you turn through is the bearing.
@@ -3104,6 +3208,8 @@ Since all north lines are parallel, when you draw north lines at different point
 
 **Question:** The bearing of town B from town A is 135°. Find the bearing of town A from town B.
 
+[DIAGRAM: bearing | bearing=135 | fromLabel=A | toLabel=B | caption=The bearing of B from A is 135°]
+
 **Working:**
 
 Step 1 — The bearing of B from A is 135°. Since 135° < 180°, the back bearing is:
@@ -3116,6 +3222,8 @@ Step 2 — Check: 315° is between 0° and 360° ✓ and is a three-figure numbe
 ## Worked Example 2 — Higher Level
 
 **Question:** A ship sails from port P on a bearing of 060° for 12 km to point Q. It then sails on a bearing of 150° for 9 km to point R. Find the direct distance from P to R and the bearing of R from P. Give your answers to 1 decimal place.
+
+[DIAGRAM: right-triangle | opposite=9 km | adjacent=12 km | hypotenuse=? | angleLabel=90° | unknown=hypotenuse | caption=The extracted triangle PQR — the two bearings turn out to make a right angle at Q]
 
 **Working:**
 
@@ -3785,11 +3893,19 @@ Circle theorems are a set of rules that describe the relationship between angles
 
 ### The Theorems You Must Know
 
+[DIAGRAM: circle-theorem | theorem=centre-circumference | centreAngle=130]
+
 1. **The angle at the centre is twice the angle at the circumference** when both are subtended by the same arc.
 2. **The angle in a semicircle is 90°.** Any angle subtended by a diameter at the circumference is a right angle.
+
+[DIAGRAM: circle-theorem | theorem=semicircle]
 3. **Angles in the same segment are equal.** Angles subtended by the same chord on the same side of the chord are equal.
 4. **Opposite angles in a cyclic quadrilateral sum to 180°.** A cyclic quadrilateral has all four vertices on the circumference.
+
+[DIAGRAM: circle-theorem | theorem=cyclic-quad | angleA=100]
 5. **The tangent to a circle is perpendicular to the radius at the point of contact.** The angle between a tangent and a radius is 90°.
+
+[DIAGRAM: circle | variant=tangent | radiusLabel=r]
 6. **Two tangents drawn from an external point are equal in length.**
 7. **The alternate segment theorem.** The angle between a tangent and a chord equals the angle in the alternate segment.
 8. **The perpendicular from the centre to a chord bisects the chord.**
@@ -3814,6 +3930,8 @@ Circle theorems are a set of rules that describe the relationship between angles
 ## Worked Example 1 — Higher Level
 
 **Question:** Points A, B, and C lie on the circumference of a circle with centre O. Angle AOB = 130°. Find angle ACB.
+
+[DIAGRAM: circle-theorem | theorem=centre-circumference | centreAngle=130 | caption=Angle ACB is what we're finding]
 
 **Working:**
 
@@ -3928,6 +4046,8 @@ You may be asked to leave your answer in terms of π (an exact answer) or to giv
 
 [FORMULA: d = C ÷ π and r = C ÷ (2π), for finding dimensions from a given circumference]
 
+[DIAGRAM: circle | variant=basic | radiusLabel=r]
+
 ## Step-by-Step Method
 
 1. Identify whether you are given the radius or the diameter.
@@ -3937,6 +4057,8 @@ You may be asked to leave your answer in terms of π (an exact answer) or to giv
 ## Worked Example 1 — Foundation Level
 
 **Question:** A circle has a diameter of 14 cm. Find the circumference. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=basic | radiusLabel=7 cm]
 
 **Working:**
 C = πd
@@ -5491,6 +5613,8 @@ Two shapes are **congruent** if they have the same shape and the same size. All 
 
 Two shapes are **similar** if they have the same shape but not necessarily the same size. All corresponding angles are equal, and all corresponding sides are in the same ratio. One shape is an enlargement of the other.
 
+[DIAGRAM: triangle-pair | labels1=A,B,C | labels2=D,E,F | scale2=1.6 | angleMarkA=1 | angleMarkB=2 | angleMarkC=3 | caption=Similar triangles: matching angle arcs, but the second triangle is a scaled-up copy]
+
 ### Conditions for Congruent Triangles
 
 To prove two triangles are congruent, you must show one of these four conditions:
@@ -5646,6 +5770,8 @@ Two triangles are **congruent** if one can be placed exactly on top of the other
 
 The included angle in SAS sits between the two known sides. The included side in ASA sits between the two known angles.
 
+[DIAGRAM: triangle-pair | labels1=A,B,C | labels2=D,E,F | tickA=1 | tickB=1 | tickC=0 | scale2=1 | caption=Two triangles are congruent when one of the four conditions matches — here, two sides marked equal]
+
 ## Step-by-Step Method
 
 1. **Identify the two triangles** you need to prove congruent.
@@ -5657,6 +5783,8 @@ The included angle in SAS sits between the two known sides. The included side in
 ## Worked Example 1 — Foundation Level
 
 **Question:** Triangle PQR has sides PQ = 5 cm, QR = 7 cm, and PR = 9 cm. Triangle XYZ has sides XY = 5 cm, YZ = 7 cm, and XZ = 9 cm. Are the triangles congruent? Give a reason.
+
+[DIAGRAM: triangle-pair | labels1=P,Q,R | labels2=X,Y,Z | tickA=1 | tickB=2 | tickC=3 | caption=Matching tick marks show each pair of corresponding sides is equal — SSS]
 
 **Working:**
 
@@ -5778,9 +5906,15 @@ A **locus** (plural: **loci**) is the set of all points that satisfy a particula
 3. **Equidistant from two points** — the perpendicular bisector of the line segment joining the two points.
 4. **Equidistant from two lines** — the angle bisector of the angle formed by the two lines.
 
+[DIAGRAM: construction | variant=locus-point]
+
+[DIAGRAM: construction | variant=locus-line]
+
 ## Step-by-Step Method
 
 ### Constructing a Perpendicular Bisector
+
+[DIAGRAM: construction | variant=perpendicular-bisector]
 
 1. Set your compasses to more than half the length of the line segment.
 2. Place the compass point on one end of the line and draw arcs above and below.
@@ -5789,6 +5923,8 @@ A **locus** (plural: **loci**) is the set of all points that satisfy a particula
 5. This line is the perpendicular bisector — it crosses the original line at 90° and cuts it exactly in half.
 
 ### Constructing an Angle Bisector
+
+[DIAGRAM: construction | variant=angle-bisector]
 
 1. Place the compass point on the vertex of the angle and draw an arc that crosses both arms of the angle.
 2. Place the compass point on one intersection and draw an arc between the two arms.
@@ -6319,6 +6455,8 @@ The cosine rule comes in two forms: one for finding a side (when you know two si
 
 [FORMULA: cos A = (b² + c² − a²) ÷ (2bc) (finding an angle)]
 
+[DIAGRAM: triangle | sideA=a | sideB=b | sideC=c | angleA=A | caption=Side a is always opposite angle A, side b opposite angle B, and so on]
+
 ## Step-by-Step Method
 
 1. Label the triangle: the side you want to find (or the side opposite the angle you want) is a, and the other two sides are b and c.
@@ -6329,6 +6467,8 @@ The cosine rule comes in two forms: one for finding a side (when you know two si
 ## Worked Example 1 — Foundation Level
 
 **Question:** In triangle ABC, AB = 7 cm, AC = 9 cm and angle A = 60°. Find BC to 1 decimal place.
+
+[DIAGRAM: triangle | sideB=9 cm | sideC=7 cm | angleA=60 | sideA=? | unknown=a | caption=BC is opposite angle A, so it's side a]
 
 **Working:**
 Let a = BC, b = AC = 9, c = AB = 7, angle A = 60°.
@@ -6345,6 +6485,8 @@ a = √67
 
 **Question:** A triangle has sides 6 cm, 10 cm and 13 cm. Find the largest angle to 1 decimal place.
 
+[DIAGRAM: triangle | sideA=13 cm | sideB=6 cm | sideC=10 cm | angleA=? | unknown=A | caption=The largest angle is always opposite the longest side]
+
 **Working:**
 The largest angle is opposite the longest side (13 cm). Let a = 13, b = 6, c = 10.
 cos A = (b² + c² − a²) ÷ (2bc)
@@ -6359,6 +6501,8 @@ A = cos⁻¹(−0.275)
 ## Worked Example 3 — Exam Style
 
 **Question:** Two walkers leave a campsite. Walker A walks 5 km on a bearing of 040°. Walker B walks 8 km on a bearing of 130°. Find the distance between the two walkers to 1 decimal place.
+
+[DIAGRAM: triangle | sideB=5 km | sideC=8 km | angleA=90 | sideA=? | unknown=a | caption=The campsite angle between the two paths is 130° − 40° = 90°]
 
 **Working:**
 The angle between the two paths at the campsite = 130° − 40° = 90°.
@@ -7167,6 +7311,8 @@ The shapes are mirror images. The midpoint of (1, 2) and (5, 2) is (3, 2). The m
 ## Worked Example 2 — Higher Level
 
 **Question:** Triangle P has vertices at (2, 1), (4, 1), (4, 3). Triangle Q has vertices at (−1, 2), (−1, 4), (−3, 4). Fully describe the single transformation that maps P to Q.
+
+[DIAGRAM: transform | variant=rotate | shape=2,1;4,1;4,3 | cx=0 | cy=0 | angle=90 | caption=Testing a 90° anticlockwise rotation about the origin]
 
 **Working:**
 The triangle has been rotated. The orientation has changed and the shape is congruent. Testing 90° anticlockwise about the origin: (2, 1) → (−1, 2), (4, 1) → (−1, 4), (4, 3) → (−3, 4). All points match.
@@ -8172,6 +8318,8 @@ An enlargement scales a shape from a fixed point called the **centre of enlargem
 
 A scale factor greater than 1 makes the shape larger. A scale factor between 0 and 1 makes it smaller. A negative scale factor (Higher) produces an image on the opposite side of the centre and inverted.
 
+[DIAGRAM: transform | variant=enlarge | shape=1,1;2,1;1,2 | cx=0 | cy=0 | scaleFactor=2 | caption=Every vertex moves along a ray from the centre, twice as far out]
+
 ## Step-by-Step Method
 
 1. **Identify the centre of enlargement** and the scale factor from the question.
@@ -8183,6 +8331,8 @@ A scale factor greater than 1 makes the shape larger. A scale factor between 0 a
 ## Worked Example 1 — Foundation Level
 
 **Question:** Enlarge the triangle with vertices A(1, 1), B(3, 1), and C(1, 3) by scale factor 2 from the centre (0, 0).
+
+[DIAGRAM: transform | variant=enlarge | shape=1,1;3,1;1,3 | cx=0 | cy=0 | scaleFactor=2]
 
 **Working:**
 
@@ -8199,6 +8349,8 @@ C(1, 3) maps to C'(2, 6)
 ## Worked Example 2 — Higher Level
 
 **Question:** Enlarge the shape with vertex P(4, 6) by scale factor 1/2 from centre (2, 2).
+
+[DIAGRAM: transform | variant=enlarge | shape=4,6 | cx=2 | cy=2 | scaleFactor=0.5]
 
 **Working:**
 
@@ -8962,7 +9114,11 @@ Instead of using a calculator, you must know the exact (surd or fraction) values
 
 **The 45-45-90 triangle:** Take a right-angled isosceles triangle with two short sides of length 1. By Pythagoras, the hypotenuse = sqrt(2). Then sin 45° = 1/sqrt(2) and cos 45° = 1/sqrt(2).
 
+[DIAGRAM: right-triangle | opposite=1 | adjacent=1 | hypotenuse=√2 | angleLabel=45° | caption=The 45-45-90 triangle: two equal legs give sin 45° = cos 45° = 1/√2]
+
 **The 30-60-90 triangle:** Take an equilateral triangle with side length 2 and cut it in half vertically. The resulting right-angled triangle has a hypotenuse of 2, a short side of 1, and a remaining side of sqrt(3) (by Pythagoras). This gives sin 30° = 1/2, cos 30° = sqrt(3)/2, sin 60° = sqrt(3)/2, and cos 60° = 1/2.
+
+[DIAGRAM: right-triangle | opposite=√3 | adjacent=1 | hypotenuse=2 | angleLabel=60° | caption=The 30-60-90 triangle, made by halving an equilateral triangle of side 2]
 
 ## Step-by-Step Method
 
@@ -10054,6 +10210,8 @@ If a triangle has interior angles A, B, and C, and the exterior angle at C is ca
 
 [FORMULA: D = A + B]
 
+[DIAGRAM: angle | variant=exterior | angleA=50 | angleB=70]
+
 ### Proof Using Angle Facts
 
 Step 1 — The interior angles of a triangle sum to 180°: A + B + C = 180°.
@@ -10082,6 +10240,8 @@ Step 5 — Therefore D = A + B.
 ## Worked Example 1 — Foundation Level
 
 **Question:** In triangle ABC, angle A = 55° and angle B = 70°. Side BC is extended to point D. Find the exterior angle ACD.
+
+[DIAGRAM: angle | variant=exterior | angleA=55 | angleB=70]
 
 **Working:**
 
@@ -10743,6 +10903,8 @@ After subtracting, you take the square root to find the missing side. You should
 
 [FORMULA: a = √(c² − b²)]
 
+[DIAGRAM: right-triangle | opposite=a | adjacent=b | hypotenuse=c | hideAngle=true | unknown=opposite | caption=c is the known hypotenuse, b the known shorter side — a is what we're finding]
+
 ## Step-by-Step Method
 
 1. Identify the hypotenuse (c) — the longest side, opposite the right angle.
@@ -10755,6 +10917,8 @@ After subtracting, you take the square root to find the missing side. You should
 ## Worked Example 1 — Foundation Level
 
 **Question:** A right-angled triangle has a hypotenuse of 13 cm and one side of 5 cm. Find the other side.
+
+[DIAGRAM: right-triangle | opposite=? | adjacent=5 cm | hypotenuse=13 cm | hideAngle=true | unknown=opposite]
 
 **Working:**
 a² = c² − b²
@@ -10769,6 +10933,8 @@ a = √144
 
 **Question:** A right-angled triangle has a hypotenuse of 20 cm and one leg of 11 cm. Find the other leg to 1 decimal place.
 
+[DIAGRAM: right-triangle | opposite=? | adjacent=11 cm | hypotenuse=20 cm | hideAngle=true | unknown=opposite]
+
 **Working:**
 a² = 20² − 11²
 a² = 400 − 121
@@ -10780,6 +10946,8 @@ a = √279
 ## Worked Example 3 — Exam Style
 
 **Question:** A ladder is 6.5 m long and leans against a vertical wall. The foot of the ladder is 2.5 m from the base of the wall. How high up the wall does the ladder reach?
+
+[DIAGRAM: right-triangle | opposite=? | adjacent=2.5 m | hypotenuse=6.5 m | hideAngle=true | unknown=opposite | caption=The ladder is the hypotenuse; the height up the wall is the unknown opposite side]
 
 **Working:**
 The ladder is the hypotenuse. The distance from the wall is one shorter side. The height is the other.
@@ -11019,6 +11187,8 @@ To find the hypotenuse, you square the two known sides, add them together, and t
 
 [FORMULA: c = √(a² + b²)]
 
+[DIAGRAM: right-triangle | opposite=a | adjacent=b | hypotenuse=c | hideAngle=true | unknown=hypotenuse | caption=c is always opposite the right angle]
+
 ### Pythagorean Triples
 
 Pythagorean triples are sets of three whole numbers that satisfy Pythagoras' theorem perfectly, with no rounding needed. Recognising them saves time in exams:
@@ -11040,6 +11210,8 @@ Pythagorean triples are sets of three whole numbers that satisfy Pythagoras' the
 
 **Question:** A right-angled triangle has shorter sides of 6 cm and 8 cm. Find the hypotenuse.
 
+[DIAGRAM: right-triangle | opposite=8 cm | adjacent=6 cm | hypotenuse=? | hideAngle=true | unknown=hypotenuse]
+
 **Working:**
 c² = a² + b²
 c² = 6² + 8²
@@ -11053,6 +11225,8 @@ c = √100
 
 **Question:** A right-angled triangle has legs of 7.5 cm and 10 cm. Find the hypotenuse. Give your answer to 1 decimal place.
 
+[DIAGRAM: right-triangle | opposite=10 cm | adjacent=7.5 cm | hypotenuse=? | hideAngle=true | unknown=hypotenuse]
+
 **Working:**
 c² = 7.5² + 10²
 c² = 56.25 + 100
@@ -11064,6 +11238,8 @@ c = √156.25
 ## Worked Example 3 — Exam Style
 
 **Question:** A rectangular field measures 40 m by 30 m. A path runs diagonally from one corner to the opposite corner. How long is the path?
+
+[DIAGRAM: right-triangle | opposite=30 m | adjacent=40 m | hypotenuse=? | hideAngle=true | unknown=hypotenuse | caption=The diagonal path is the hypotenuse of the right-angled triangle formed by two sides of the field]
 
 **Working:**
 The diagonal of a rectangle creates two right-angled triangles. The diagonal is the hypotenuse.
@@ -14082,6 +14258,8 @@ An **interior angle** is the angle inside a polygon at each vertex. An **exterio
 
 [FORMULA: Interior angle + exterior angle = 180°]
 
+[DIAGRAM: angle | variant=polygon | sides=6 | caption=A regular hexagon: interior and exterior angles at each vertex sum to 180°]
+
 ## Step-by-Step Method
 
 1. **Count the number of sides** (n) of the polygon.
@@ -14092,6 +14270,8 @@ An **interior angle** is the angle inside a polygon at each vertex. An **exterio
 ## Worked Example 1 — Foundation Level
 
 **Question:** Find the sum of the interior angles of a hexagon.
+
+[DIAGRAM: angle | variant=polygon | sides=6]
 
 **Working:**
 
@@ -14104,6 +14284,8 @@ Sum of interior angles = (6 − 2) × 180° = 4 × 180° = 720°
 ## Worked Example 2 — Higher Level
 
 **Question:** Each exterior angle of a regular polygon is 24°. How many sides does the polygon have? Find each interior angle.
+
+[DIAGRAM: angle | variant=polygon | sides=15]
 
 **Working:**
 
@@ -14758,6 +14940,8 @@ Key features:
 - All edges are drawn to scale — lengths are preserved along the three isometric axes.
 - Circles and curves appear as ellipses on isometric drawings.
 
+[DIAGRAM: isometric | l=3 | w=2 | h=2 | caption=A 3 × 2 × 2 cuboid block drawn on an isometric grid]
+
 ### Comparison with Plans and Elevations
 
 | View | What it shows |
@@ -14766,6 +14950,8 @@ Key features:
 | **Front elevation** | Looking from the front |
 | **Side elevation** | Looking from the side |
 | **Isometric drawing** | 3D representation showing all three dimensions |
+
+[DIAGRAM: plans-elevations]
 
 ## Step-by-Step Method
 
@@ -15372,6 +15558,10 @@ A **locus** (plural: loci) is the path traced by a set of points that obey a par
 
 [FORMULA: Locus of points equidistant from two intersecting lines = angle bisector of the two lines]
 
+[DIAGRAM: construction | variant=locus-point | radiusLabel=fixed distance]
+
+[DIAGRAM: construction | variant=perpendicular-bisector | caption=Equidistant from two points: the perpendicular bisector]
+
 ## Step-by-Step Method
 
 1. **Read the rule** carefully and identify which standard locus applies.
@@ -15383,6 +15573,8 @@ A **locus** (plural: loci) is the path traced by a set of points that obey a par
 
 **Question:** A treasure is buried less than 4 m from a tree T. Show the region where the treasure could be on a scale drawing (1 cm = 1 m).
 
+[DIAGRAM: construction | variant=locus-point | radiusLabel=4 m | caption=Shade inside the circle — closer than 4 m]
+
 **Working:**
 
 The locus of points 4 m from T is a circle of radius 4 cm (at the scale of 1 cm = 1 m). Draw a circle of radius 4 cm centred on T. The treasure is less than 4 m away, so shade the interior of the circle.
@@ -15392,6 +15584,8 @@ The locus of points 4 m from T is a circle of radius 4 cm (at the scale of 1 cm 
 ## Worked Example 2 — Higher Level
 
 **Question:** Two points A and B are 6 cm apart. A point P must be closer to A than to B. Construct and shade the region where P can be.
+
+[DIAGRAM: construction | variant=perpendicular-bisector | caption=Shade the A-side of the bisector]
 
 **Working:**
 
@@ -15404,6 +15598,8 @@ Shade the region on the same side as A.
 ## Worked Example 3 — Exam Style
 
 **Question:** A dog is attached to a post P by a lead of length 5 m. A straight wall runs 3 m from P. Using a scale of 1 cm = 1 m, shade the region the dog can reach.
+
+[DIAGRAM: construction | variant=region | radiusLabel=5 m | caption=Two conditions combined: within the lead's reach AND on the near side of the wall]
 
 **Working:**
 
@@ -16851,6 +17047,8 @@ This topic is Higher only, but this example uses simple coordinates.
 
 **Question:** Triangle A has vertices at (2, 1), (4, 1), and (2, 3). Enlarge it by scale factor −1 about the origin (0, 0).
 
+[DIAGRAM: transform | variant=enlarge | shape=2,1;4,1;2,3 | cx=0 | cy=0 | scaleFactor=-1 | caption=A negative scale factor sends the image through the centre to the opposite side, inverted]
+
 **Working:**
 
 Step 1 — Scale factor −1 means each point moves to the opposite side of the origin at the same distance.
@@ -16864,6 +17062,8 @@ Step 3 — The image is the same size as the original but inverted through the o
 ## Worked Example 2 — Higher Level
 
 **Question:** Enlarge triangle B with vertices (1, 2), (3, 2), and (1, 5) by scale factor −2 about the centre (1, 1).
+
+[DIAGRAM: transform | variant=enlarge | shape=1,2;3,2;1,5 | cx=1 | cy=1 | scaleFactor=-2]
 
 **Working:**
 
@@ -16964,6 +17164,12 @@ A **net** is a flat 2D shape that can be folded along its edges to form a 3D sha
 
 A single 3D shape can have several different valid nets. For example, a cube has **11 distinct nets**.
 
+[DIAGRAM: net | shape=cuboid]
+
+[DIAGRAM: net | shape=triangular-prism]
+
+[DIAGRAM: net | shape=square-pyramid]
+
 ### Key Nets to Know
 
 | 3D shape | Faces in the net |
@@ -17009,6 +17215,8 @@ Step 3 — The net forms a cross shape. Label all dimensions.
 ## Worked Example 2 — Higher Level
 
 **Question:** A cylinder has radius 4 cm and height 9 cm. Sketch its net and find the total surface area.
+
+[DIAGRAM: net | shape=cylinder]
 
 **Working:**
 
@@ -17691,6 +17899,12 @@ A **circle** is the set of all points that are the same distance from a fixed ce
 - **Sector:** The region enclosed by two radii and an arc — shaped like a pizza slice.
 - **Segment:** The region between a chord and the arc it cuts off.
 
+[DIAGRAM: circle | variant=basic | radiusLabel=r | caption=Radius and diameter — the two lengths every other circle formula is built from]
+
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r | caption=A sector: the "pizza slice" bounded by two radii and an arc]
+
+[DIAGRAM: circle | variant=segment | angle=100 | caption=A segment: the region between a chord and the arc it cuts off]
+
 ### Key Formulas
 
 [FORMULA: Circumference = 2πr = πd]
@@ -17722,6 +17936,8 @@ A **circle** is the set of all points that are the same distance from a fixed ce
 
 **Question:** A circle has a radius of 8 cm. Find the diameter, circumference, and area.
 
+[DIAGRAM: circle | variant=basic | radiusLabel=8 cm]
+
 **Working:**
 
 Step 1 — Diameter = 2 × 8 = 16 cm.
@@ -17735,6 +17951,8 @@ Step 3 — Area = π × 8² = 64π ≈ 201.1 cm² (1 d.p.).
 ## Worked Example 2 — Higher Level
 
 **Question:** A chord AB divides a circle of radius 10 cm into two segments. The chord is 12 cm long. Find the distance from the centre to the chord.
+
+[DIAGRAM: right-triangle | opposite=6 cm | adjacent=? | hypotenuse=10 cm | hideAngle=true | unknown=adjacent | caption=Triangle OMA: the radius (hypotenuse), half the chord, and the perpendicular distance OM]
 
 **Working:**
 
@@ -17751,6 +17969,8 @@ Step 4 — OM = √(10² − 6²) = √(100 − 36) = √64 = 8 cm.
 ## Worked Example 3 — Exam Style
 
 **Question:** A tangent to a circle meets a radius at point P on the circumference. The radius OP = 5 cm and the tangent extends to point T where OT = 13 cm. Find the length of the tangent PT.
+
+[DIAGRAM: circle | variant=tangent | radiusLabel=5 cm | caption=The tangent is perpendicular to the radius at P, so triangle OPT is right-angled]
 
 **Working:**
 
@@ -18845,6 +19065,8 @@ When a semicircle or quarter circle is attached to a straight shape, the diamete
 
 **Question:** An L-shaped room has outer dimensions 10 m by 8 m. A 4 m by 3 m rectangle is cut from the top-right corner. Find the perimeter.
 
+[DIAGRAM: shape | variant=lshape | width=10 | height=8 | cutWidth=4 | cutHeight=3]
+
 **Working:**
 
 Step 1 — The outer edges along the bottom = 10 m. The left side = 8 m.
@@ -18860,6 +19082,8 @@ Step 4 — Perimeter = 10 + 5 + 4 + 3 + 6 + 8 = 36 m.
 ## Worked Example 2 — Higher Level
 
 **Question:** A shape consists of a rectangle 12 cm by 6 cm with a semicircle attached to one of the shorter ends. Find the perimeter. Give your answer to 1 decimal place.
+
+[DIAGRAM: shape | variant=rectangle-semicircle-end | width=12 | height=6]
 
 **Working:**
 
@@ -18956,6 +19180,8 @@ The perimeter is the **total distance around the outside** of a two-dimensional 
 **Rectangle:**
 $$P = 2(l + w)$$
 
+[DIAGRAM: shape | variant=rectangle | base=l | height=w]
+
 **Square:**
 $$P = 4s$$
 
@@ -19008,6 +19234,8 @@ In many questions, not all sides are labelled. Use these strategies:
 
 *An L-shaped garden has dimensions as shown: the overall length is 14 m, overall width is 9 m, and the cut-out rectangle is 5 m by 4 m. Find the perimeter.*
 
+[DIAGRAM: shape | variant=lshape | width=14 | height=9 | cutWidth=5 | cutHeight=4]
+
 **Step 1:** Work out any missing sides.
 - The horizontal lengths are: 14 m (top), 5 m (step in), and 14 − 5 = 9 m (bottom section).
 - The vertical lengths are: 9 m (left), 4 m (step down), and 9 − 4 = 5 m (right section).
@@ -19021,6 +19249,8 @@ In many questions, not all sides are labelled. Use these strategies:
 ## Worked Example 2 — Higher Level
 
 *A shape is made from a rectangle (10 cm by 6 cm) with a semicircle added to one of the shorter ends. Find the perimeter of the shape. Give your answer to 1 decimal place.*
+
+[DIAGRAM: shape | variant=rectangle-semicircle-end | width=10 | height=6]
 
 **Step 1:** Identify the outer edges.
 - Two long sides of the rectangle: 10 cm each.
@@ -19140,6 +19370,10 @@ An **angle bisector** is a line that divides an angle exactly in half. Every poi
 
 [FORMULA: Any point on the perpendicular bisector of AB is equidistant from A and B]
 
+[DIAGRAM: construction | variant=perpendicular-bisector]
+
+[DIAGRAM: construction | variant=angle-bisector]
+
 ## Step-by-Step Method
 
 ### Constructing a Perpendicular Bisector
@@ -19162,6 +19396,8 @@ An **angle bisector** is a line that divides an angle exactly in half. Every poi
 
 **Question:** Construct the perpendicular bisector of a line segment AB that is 8 cm long.
 
+[DIAGRAM: construction | variant=perpendicular-bisector | caption=AB = 8 cm]
+
 **Working:**
 
 Draw AB = 8 cm. Set compass to about 5 cm (more than half of 8 cm). Place compass on A and draw arcs above and below. Keep the same compass width, place on B, and draw arcs above and below. Mark the two intersection points and draw a straight line through them. This line passes through the midpoint of AB (4 cm from each end) at 90°.
@@ -19171,6 +19407,8 @@ Draw AB = 8 cm. Set compass to about 5 cm (more than half of 8 cm). Place compas
 ## Worked Example 2 — Higher Level
 
 **Question:** Construct the bisector of an angle of 70°.
+
+[DIAGRAM: construction | variant=angle-bisector | caption=Each half of the 70° angle is 35°]
 
 **Working:**
 
@@ -19256,6 +19494,10 @@ When you look at a 3D object from different directions, you see different 2D sha
 - **Side elevation** — the view from **directly to the side** (usually the right-hand side, unless stated otherwise).
 
 Each view is a flat 2D drawing that shows the outline of what you would see from that direction. Hidden edges are not usually drawn unless the question asks for them.
+
+[DIAGRAM: isometric | l=3 | w=2 | h=2 | caption=The 3D solid]
+
+[DIAGRAM: plans-elevations | caption=The same solid's three flat views]
 
 ### Why Are They Useful?
 
@@ -20847,6 +21089,8 @@ A **quadrilateral** is any closed 2D shape with exactly four straight sides and 
 
 **Question:** A parallelogram has one angle of 65°. Find the other three angles.
 
+[DIAGRAM: shape | variant=parallelogram | base=base | height=height | caption=Opposite angles in a parallelogram are equal; adjacent angles sum to 180°]
+
 **Working:**
 
 Step 1 — Opposite angles in a parallelogram are equal, so the angle opposite 65° is also 65°.
@@ -20991,6 +21235,8 @@ A triangle can be described by both classifications — for example, a "right-an
 ## Worked Example 1 — Foundation Level
 
 **Question:** A triangle has sides of 5 cm, 5 cm, and 7 cm. Classify the triangle and find all its angles given that the angle opposite the 7 cm side is 88.9°.
+
+[DIAGRAM: triangle | sideA=7 cm | sideB=5 cm | sideC=5 cm | angleA=88.9 | angleB=45.55 | angleC=45.55 | caption=The two equal sides make the base angles equal — a defining property of isosceles triangles]
 
 **Working:**
 
@@ -21258,6 +21504,8 @@ In two dimensions, Pythagoras' theorem finds the hypotenuse of a right-angled tr
 
 The space diagonal of a cuboid goes from one corner to the opposite corner, passing through the interior of the shape.
 
+[DIAGRAM: cuboid | length=a | width=b | height=c | showDiagonal=true | showFaceDiagonal=true | caption=The green dashed line is the base diagonal (step 1); the gold line is the space diagonal (step 2)]
+
 ## Step-by-Step Method
 
 1. **Draw or label the 3D shape** with all given dimensions.
@@ -21271,6 +21519,8 @@ The space diagonal of a cuboid goes from one corner to the opposite corner, pass
 This topic is Higher only, but this example uses simpler numbers.
 
 **Question:** A cuboid has dimensions 3 cm by 4 cm by 12 cm. Find the length of the space diagonal.
+
+[DIAGRAM: cuboid | length=3 cm | width=4 cm | height=12 cm | showDiagonal=true | showFaceDiagonal=true]
 
 **Working:**
 
@@ -21288,6 +21538,8 @@ Space diagonal = sqrt(5² + 12²) = sqrt(25 + 144) = sqrt(169) = 13 cm
 
 **Question:** A cuboid measures 6 cm by 8 cm by 10 cm. Find the space diagonal. Give your answer to 1 decimal place.
 
+[DIAGRAM: cuboid | length=6 cm | width=8 cm | height=10 cm | showDiagonal=true]
+
 **Working:**
 
 Using the direct formula:
@@ -21299,6 +21551,8 @@ d = sqrt(6² + 8² + 10²) = sqrt(36 + 64 + 100) = sqrt(200) = 14.142...
 ## Worked Example 3 — Exam Style
 
 **Question:** A square-based pyramid has a base edge of 8 cm and a slant height of 10 cm. Find the vertical height of the pyramid.
+
+[DIAGRAM: right-triangle | opposite=? | adjacent=4 cm | hypotenuse=10 cm | hideAngle=true | unknown=opposite | caption=The hidden right-angled triangle: vertical height, half the base edge, and the slant height]
 
 **Working:**
 
@@ -21382,6 +21636,8 @@ where **c is the hypotenuse** — the longest side, always opposite the right an
 
 This formula is **not given** on the AQA, Edexcel or OCR formula sheets. You must memorise it.
 
+[DIAGRAM: right-triangle | opposite=a | adjacent=b | hypotenuse=c | hideAngle=true | caption=c is always the hypotenuse — the longest side, opposite the right angle]
+
 ### Identifying the Hypotenuse
 
 - It is always opposite the right angle (marked with a small square).
@@ -21425,6 +21681,8 @@ $$d = \\sqrt{l^2 + w^2 + h^2}$$
 
 *A right-angled triangle has legs of 5 cm and 12 cm. Find the hypotenuse.*
 
+[DIAGRAM: right-triangle | opposite=12 cm | adjacent=5 cm | hypotenuse=? | hideAngle=true | unknown=hypotenuse]
+
 **Step 1:** c² = a² + b² = 5² + 12² = 25 + 144 = 169.
 
 **Step 2:** c = √169 = **13 cm**.
@@ -21432,6 +21690,8 @@ $$d = \\sqrt{l^2 + w^2 + h^2}$$
 ### Finding a Shorter Side
 
 *A right-angled triangle has hypotenuse 15 cm and one leg of 9 cm. Find the other leg.*
+
+[DIAGRAM: right-triangle | opposite=? | adjacent=9 cm | hypotenuse=15 cm | hideAngle=true | unknown=opposite]
 
 **Step 1:** a² = c² − b² = 15² − 9² = 225 − 81 = 144.
 
@@ -21442,6 +21702,8 @@ $$d = \\sqrt{l^2 + w^2 + h^2}$$
 ## Worked Example 2 — Higher Level
 
 *A cuboid measures 6 cm by 4 cm by 3 cm. Find the length of the space diagonal AG. Give your answer to 1 decimal place.*
+
+[DIAGRAM: cuboid | length=6 cm | width=4 cm | height=3 cm | showDiagonal=true | caption=The gold line is the space diagonal AG — found by applying Pythagoras twice]
 
 **Step 1:** Find the diagonal across the base (let us call it AC).
 $$AC = \\sqrt{6^2 + 4^2} = \\sqrt{36 + 16} = \\sqrt{52}$$
@@ -24101,6 +24363,8 @@ A reflection creates a mirror image of a shape across a given line, called the *
 
 [FORMULA: Reflection in y = −x: (x, y) maps to (−y, −x)]
 
+[DIAGRAM: transform | variant=reflect | line=y-axis | shape=1,1;3,1;1,4 | caption=Reflecting a triangle in the y-axis]
+
 ## Step-by-Step Method
 
 1. **Draw the mirror line** on the coordinate grid if it is not already shown.
@@ -24112,6 +24376,8 @@ A reflection creates a mirror image of a shape across a given line, called the *
 ## Worked Example 1 — Foundation Level
 
 **Question:** Reflect the triangle with vertices A(1, 3), B(4, 3), and C(4, 1) in the x-axis.
+
+[DIAGRAM: transform | variant=reflect | line=x-axis | shape=1,3;4,3;4,1]
 
 **Working:**
 
@@ -24128,6 +24394,8 @@ C(4, 1) maps to C'(4, −1)
 ## Worked Example 2 — Higher Level
 
 **Question:** Reflect the point P(3, 5) in the line y = x. State the coordinates of the image.
+
+[DIAGRAM: transform | variant=reflect | line=y=x | shape=3,5]
 
 **Working:**
 
@@ -24670,6 +24938,8 @@ A rotation turns every point of a shape through the same angle about a fixed poi
 
 To describe a rotation fully you must state three things: the **centre** of rotation, the **angle** of rotation, and the **direction** (clockwise or anticlockwise). For 180°, direction is not required since clockwise and anticlockwise give the same result.
 
+[DIAGRAM: transform | variant=rotate | shape=1,1;3,1;1,4 | cx=0 | cy=0 | angle=-90 | caption=A 90° clockwise rotation about the origin]
+
 ## Step-by-Step Method
 
 1. **Identify the centre of rotation** from the question or diagram.
@@ -24680,6 +24950,8 @@ To describe a rotation fully you must state three things: the **centre** of rota
 ## Worked Example 1 — Foundation Level
 
 **Question:** Rotate the triangle with vertices A(1, 2), B(3, 2), and C(3, 4) by 90° clockwise about the origin.
+
+[DIAGRAM: transform | variant=rotate | shape=1,2;3,2;3,4 | cx=0 | cy=0 | angle=-90]
 
 **Working:**
 
@@ -24697,6 +24969,8 @@ C(3, 4) maps to C'(4, −3)
 
 **Question:** Rotate the point P(−2, 5) by 180° about the origin.
 
+[DIAGRAM: transform | variant=rotate | shape=-2,5 | cx=0 | cy=0 | angle=180]
+
 **Working:**
 
 180° about (0, 0): (x, y) maps to (−x, −y).
@@ -24708,6 +24982,8 @@ P(−2, 5) maps to P'(2, −5).
 ## Worked Example 3 — Exam Style
 
 **Question:** Triangle A is mapped to triangle B by a rotation. Vertex (1, 3) on A maps to (3, −1) on B. The centre of rotation is the origin. Describe the rotation fully.
+
+[DIAGRAM: transform | variant=rotate | shape=1,3 | cx=0 | cy=0 | angle=-90]
 
 **Working:**
 
@@ -25540,6 +25816,8 @@ A sector is the region enclosed by two radii and an arc. The area of a sector is
 
 [FORMULA: Area of a full circle = πr²]
 
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r]
+
 ## Step-by-Step Method
 
 1. **Identify the radius** (r) and the **angle at the centre** (θ).
@@ -25551,6 +25829,8 @@ A sector is the region enclosed by two radii and an arc. The area of a sector is
 ## Worked Example 1 — Foundation Level
 
 **Question:** Find the area of a sector with radius 6 cm and angle 90°. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=6 cm]
 
 **Working:**
 
@@ -26072,6 +26352,8 @@ Two shapes are **similar** if one is an enlargement of the other. This means all
 
 If the linear scale factor from shape A to shape B is k, then areas are multiplied by k² and volumes by k³.
 
+[DIAGRAM: triangle-pair | labels1=A | labels2=B | scale2=1.7 | angleMarkA=1 | angleMarkB=2 | angleMarkC=3 | caption=Similar shapes keep every angle the same — only the size changes]
+
 ## Step-by-Step Method
 
 1. **Identify corresponding sides** by matching angles or using the diagram.
@@ -26083,6 +26365,8 @@ If the linear scale factor from shape A to shape B is k, then areas are multipli
 ## Worked Example 1 — Foundation Level
 
 **Question:** Triangles A and B are similar. Triangle A has sides 4 cm, 6 cm, and 8 cm. The shortest side of triangle B is 10 cm. Find the other two sides of triangle B.
+
+[DIAGRAM: triangle-pair | labels1=A | labels2=B | scale2=1.6 | tickA=1 | tickB=2 | tickC=3 | caption=Matching tick styles mark corresponding sides — each pair is in the same ratio, k = 2.5]
 
 **Working:**
 
@@ -27344,6 +27628,8 @@ The sine rule also has an ambiguous case: when you are given two sides and a non
 
 [FORMULA: sin A/a = sin B/b = sin C/c (for finding angles)]
 
+[DIAGRAM: triangle | sideA=a | sideB=b | sideC=c | angleA=A | angleB=B | caption=Each side sits opposite its matching angle — a matched pair is what lets you use the sine rule]
+
 ## Step-by-Step Method
 
 1. Label the triangle so that side a is opposite angle A, side b is opposite angle B, etc.
@@ -27356,6 +27642,8 @@ The sine rule also has an ambiguous case: when you are given two sides and a non
 ## Worked Example 1 — Foundation Level
 
 **Question:** In triangle ABC, angle A = 50°, angle B = 70° and side a = 10 cm. Find side b to 1 decimal place.
+
+[DIAGRAM: triangle | sideA=10 cm | angleA=50 | angleB=70 | sideB=? | unknown=b | caption=Side a and angle A are the complete pair — side b is what we're finding]
 
 **Working:**
 Use the sine rule for finding a side:
@@ -27371,6 +27659,8 @@ b = 13.055 × 0.9397
 
 **Question:** In triangle PQR, side p = 14 cm, side q = 9 cm and angle P = 80°. Find angle Q to 1 decimal place.
 
+[DIAGRAM: triangle | sideA=14 cm | sideB=9 cm | angleA=80 | angleB=? | unknown=B | caption=P and Q here map to the triangle's A and B — side p/angle P is the complete pair]
+
 **Working:**
 Use the sine rule for finding an angle:
 sin P/p = sin Q/q
@@ -27385,6 +27675,8 @@ Q = sin⁻¹(0.6331)
 ## Worked Example 3 — Exam Style
 
 **Question:** Two ships leave a port. Ship A sails on a bearing of 060° for 15 km. Ship B sails on a bearing of 120° for 20 km. The angle between the two paths at the port is 60°. The angle at Ship B is 42°. Find the distance between the two ships to 1 decimal place.
+
+[DIAGRAM: triangle | angleA=60 | angleB=42 | angleC=78 | sideB=15 km | sideA=? | unknown=a | caption=The port angle sits opposite the distance we want between the ships]
 
 **Working:**
 Angle at Ship A = 180° − 60° − 42° = 78°.
@@ -27599,6 +27891,8 @@ It is essential that your calculator is set to degree mode (not radians) for GCS
 
 [FORMULA: θ = tan⁻¹(Opposite ÷ Adjacent)]
 
+[DIAGRAM: right-triangle | opposite=O | adjacent=A | hypotenuse=H | angleLabel=θ | unknown=angle | caption=This time the angle itself is the unknown]
+
 ## Step-by-Step Method
 
 1. Label the two known sides as O, A, or H relative to the unknown angle.
@@ -27610,6 +27904,8 @@ It is essential that your calculator is set to degree mode (not radians) for GCS
 ## Worked Example 1 — Foundation Level
 
 **Question:** A right-angled triangle has an opposite side of 6 cm and a hypotenuse of 10 cm. Find the angle θ. Give your answer to 1 decimal place.
+
+[DIAGRAM: right-triangle | opposite=6 cm | hypotenuse=10 cm | angleLabel=? | unknown=angle]
 
 **Working:**
 Label: O = 6, H = 10.
@@ -27623,6 +27919,8 @@ sin θ = 6 ÷ 10 = 0.6
 
 **Question:** A right-angled triangle has an adjacent side of 8 cm and an opposite side of 15 cm. Find the angle θ to 1 decimal place.
 
+[DIAGRAM: right-triangle | opposite=15 cm | adjacent=8 cm | angleLabel=? | unknown=angle]
+
 **Working:**
 Label: O = 15, A = 8.
 O and A are involved, so use tan.
@@ -27634,6 +27932,8 @@ tan θ = 15 ÷ 8 = 1.875
 ## Worked Example 3 — Exam Style
 
 **Question:** A 5 m ladder leans against a wall. The base of the ladder is 1.5 m from the wall. Find the angle the ladder makes with the ground. Give your answer to 1 decimal place.
+
+[DIAGRAM: right-triangle | adjacent=1.5 m | hypotenuse=5 m | angleLabel=? | unknown=angle | caption=The angle with the ground is between the ladder (hypotenuse) and the adjacent side]
 
 **Working:**
 The ladder is the hypotenuse (H = 5). The distance from the wall is the adjacent side to the angle at the ground (A = 1.5).
@@ -27720,6 +28020,8 @@ Once the sides are labelled, you choose the ratio that connects the known side t
 
 [FORMULA: tan θ = Opposite ÷ Adjacent (TOA)]
 
+[DIAGRAM: right-triangle | opposite=O | adjacent=A | hypotenuse=H | angleLabel=θ° | caption=O and A are defined relative to the angle θ — swap the angle and they swap too]
+
 ## Step-by-Step Method
 
 1. Label the sides O, A, and H relative to the given angle.
@@ -27732,6 +28034,8 @@ Once the sides are labelled, you choose the ratio that connects the known side t
 ## Worked Example 1 — Foundation Level
 
 **Question:** In a right-angled triangle, the angle is 40° and the hypotenuse is 12 cm. Find the side opposite the 40° angle. Give your answer to 1 decimal place.
+
+[DIAGRAM: right-triangle | opposite=? | hypotenuse=12 cm | angleLabel=40° | unknown=opposite]
 
 **Working:**
 Label: H = 12, O = ?, angle = 40°.
@@ -27746,6 +28050,8 @@ O = 12 × 0.6428
 
 **Question:** In a right-angled triangle, the angle is 62° and the side opposite is 15 cm. Find the hypotenuse. Give your answer to 3 significant figures.
 
+[DIAGRAM: right-triangle | opposite=15 cm | hypotenuse=? | angleLabel=62° | unknown=hypotenuse]
+
 **Working:**
 Label: O = 15, H = ?, angle = 62°.
 O and H are involved, so use sin (SOH).
@@ -27758,6 +28064,8 @@ H = 15 ÷ 0.8829
 ## Worked Example 3 — Exam Style
 
 **Question:** A ramp makes an angle of 25° with the horizontal ground. The ramp is 8 m long. How high does the ramp rise vertically? Give your answer to 1 decimal place.
+
+[DIAGRAM: right-triangle | opposite=? | hypotenuse=8 m | angleLabel=25° | unknown=opposite | caption=The ramp is the hypotenuse; the vertical rise is opposite the 25° angle]
 
 **Working:**
 The ramp is the hypotenuse (H = 8 m). The vertical rise is opposite the 25° angle (O = ?).
@@ -29971,6 +30279,10 @@ The slant height l is the distance measured along the surface from the base edge
 
 [FORMULA: l = √(r² + h²), using Pythagoras to find the slant height from the radius and vertical height]
 
+[DIAGRAM: solid3d | shape=cone | radius=r | height=h | slant=l]
+
+[DIAGRAM: net | shape=cone | caption=Unrolled, the curved surface becomes a sector of radius l]
+
 ## Step-by-Step Method
 
 1. Identify the radius r, vertical height h, and slant height l. If the slant height is not given, use Pythagoras: l = √(r² + h²).
@@ -29981,6 +30293,8 @@ The slant height l is the distance measured along the surface from the base edge
 ## Worked Example 1 — Foundation Level
 
 **Question:** A cone has a base radius of 5 cm and a slant height of 13 cm. Find the total surface area to 1 decimal place.
+
+[DIAGRAM: solid3d | shape=cone | radius=5 cm | slant=13 cm]
 
 **Working:**
 Curved SA = πrl = π × 5 × 13 = 65π
@@ -30094,6 +30408,10 @@ The **surface area** of a 3D shape is the total area of all its faces. A cuboid 
 
 In the open-top version, only one of the two lw faces is counted — the base but not the missing top.
 
+[DIAGRAM: cuboid | length=l | width=w | height=h]
+
+[DIAGRAM: net | shape=cuboid | caption=Six rectangular faces in three matching pairs]
+
 ## Step-by-Step Method
 
 1. Identify the length (l), width (w), and height (h) of the cuboid.
@@ -30105,6 +30423,8 @@ In the open-top version, only one of the two lw faces is counted — the base bu
 ## Worked Example 1 — Foundation Level
 
 **Question:** Find the surface area of a cuboid with length 8 cm, width 5 cm, and height 3 cm.
+
+[DIAGRAM: cuboid | length=8 cm | width=5 cm | height=3 cm]
 
 **Working:**
 
@@ -30220,6 +30540,8 @@ If you "unroll" the curved surface, it becomes a rectangle. The width of that re
 
 An open cylinder (like a tin without a lid) is missing one or both circular ends. You must read the question carefully to determine how many circles to include in your calculation.
 
+[DIAGRAM: net | shape=cylinder | caption=Unroll the curved surface and it becomes a rectangle — width = circumference, height = h]
+
 ### Key Formulas
 
 [FORMULA: Total surface area (closed) = 2 pi r² + 2 pi rh]
@@ -30236,6 +30558,8 @@ An open cylinder (like a tin without a lid) is missing one or both circular ends
 ## Worked Example 1 — Foundation Level
 
 **Question:** A closed cylinder has radius 3 cm and height 10 cm. Find its total surface area to 1 decimal place.
+
+[DIAGRAM: solid3d | shape=cylinder | radius=3 cm | height=10 cm]
 
 **Working:**
 Two circles = 2 × pi × 3² = 2 × 9pi = 18pi
@@ -30349,6 +30673,8 @@ For a hemisphere (half a sphere), the curved surface area is 2πr² (half of 4π
 
 [FORMULA: Total surface area of a hemisphere = 2πr² + πr² = 3πr²]
 
+[DIAGRAM: solid3d | shape=sphere | radius=r]
+
 ## Step-by-Step Method
 
 1. Identify the radius. If the diameter is given, halve it.
@@ -30358,6 +30684,8 @@ For a hemisphere (half a sphere), the curved surface area is 2πr² (half of 4π
 ## Worked Example 1 — Foundation Level
 
 **Question:** A sphere has a radius of 7 cm. Find the surface area to 1 decimal place.
+
+[DIAGRAM: solid3d | shape=sphere | radius=7 cm]
 
 **Working:**
 SA = 4πr²
@@ -30474,6 +30802,10 @@ The **total surface area** is the sum of all five face areas.
 
 Each rectangular face has one dimension equal to the **length** (or depth) of the prism and the other equal to one **side of the triangular cross-section**.
 
+[DIAGRAM: solid3d | shape=triangular-prism | base=base | length=length]
+
+[DIAGRAM: net | shape=triangular-prism]
+
 ## Step-by-Step Method
 
 1. Sketch or identify the triangular cross-section. Note its base and perpendicular height.
@@ -30486,6 +30818,8 @@ Each rectangular face has one dimension equal to the **length** (or depth) of th
 ## Worked Example 1 — Foundation Level
 
 **Question:** A triangular prism has a cross-section that is a right-angled triangle with base 6 cm and height 8 cm. The hypotenuse is 10 cm and the prism length is 15 cm. Find the total surface area.
+
+[DIAGRAM: solid3d | shape=triangular-prism | base=6 cm | length=15 cm]
 
 **Working:**
 
@@ -30608,6 +30942,8 @@ Surface area is the **total area of all the outer faces** of a three-dimensional
 **Cuboid:**
 $$SA = 2(lw + lh + wh)$$
 
+[DIAGRAM: cuboid | length=l | width=w | height=h]
+
 **Cube:**
 $$SA = 6s^2$$
 
@@ -30618,12 +30954,18 @@ $$SA = 2 \\times \\text{cross-sectional area} + \\text{sum of rectangular faces}
 - Curved surface area: $CSA = 2\\pi rh$
 - Total surface area: $SA = 2\\pi rh + 2\\pi r^2$
 
+[DIAGRAM: solid3d | shape=cylinder | radius=r | height=h]
+
 **Cone:**
 - Curved surface area: $CSA = \\pi rl$, where l is the slant height
 - Total surface area: $SA = \\pi rl + \\pi r^2$
 
+[DIAGRAM: solid3d | shape=cone | radius=r | height=h | slant=l]
+
 **Sphere:**
 $$SA = 4\\pi r^2$$
+
+[DIAGRAM: solid3d | shape=sphere | radius=r]
 
 **Hemisphere:**
 $$SA = 3\\pi r^2$$ (curved surface + flat circle)
@@ -30645,6 +30987,10 @@ On AQA and Edexcel formula sheets, the curved surface area of a cone (πrl) and 
 ### Nets
 
 Imagining a shape **unfolded into its net** can help. A cylinder unfolds into two circles and a rectangle. A cone unfolds into a circle and a sector.
+
+[DIAGRAM: net | shape=cylinder]
+
+[DIAGRAM: net | shape=cone]
 
 ---
 
@@ -30781,6 +31127,8 @@ Symmetry is a fundamental GCSE Maths topic tested at both Foundation and Higher 
 
 [FORMULA: A regular polygon with n sides has n lines of symmetry and rotational symmetry of order n]
 
+[DIAGRAM: symmetry | sides=6 | caption=A regular hexagon: every dashed line is a line of symmetry]
+
 | Shape | Lines of symmetry | Order of rotational symmetry |
 |-------|-------------------|------------------------------|
 | Equilateral triangle | 3 | 3 |
@@ -30810,6 +31158,8 @@ Symmetry is a fundamental GCSE Maths topic tested at both Foundation and Higher 
 ## Worked Example 1 — Foundation Level
 
 **Question:** State the number of lines of symmetry and the order of rotational symmetry of a regular pentagon.
+
+[DIAGRAM: symmetry | sides=5]
 
 **Working:**
 
@@ -31190,6 +31540,8 @@ To fully describe an enlargement you must state:
 
 [FORMULA: Volume scale factor = (linear scale factor)³]
 
+[DIAGRAM: transform | variant=enlarge | shape=1,1;2,1;1,2 | cx=0 | cy=0 | scaleFactor=2]
+
 ## Step-by-Step Method
 
 ### Performing an Enlargement
@@ -31214,6 +31566,8 @@ To fully describe an enlargement you must state:
 ## Worked Example 1 — Foundation Level
 
 **Question:** Enlarge triangle ABC with vertices A(1, 1), B(3, 1), and C(1, 3) by scale factor 2 from the centre of enlargement (0, 0).
+
+[DIAGRAM: transform | variant=enlarge | shape=1,1;3,1;1,3 | cx=0 | cy=0 | scaleFactor=2]
 
 **Working:**
 
@@ -31324,6 +31678,8 @@ A **reflection** flips a shape over a **mirror line** (line of reflection). Ever
 To describe a reflection, you must state:
 - The **line of reflection** (e.g. x = 2, y = −1, y = x, the x-axis, the y-axis).
 
+[DIAGRAM: transform | variant=reflect | line=y-axis | shape=1,1;3,1;1,4]
+
 ### Rotation
 
 A **rotation** turns a shape around a fixed point called the **centre of rotation**. Every point on the shape moves through the same angle.
@@ -31333,12 +31689,16 @@ To describe a rotation, you must state:
 - The **direction** of rotation (clockwise or anticlockwise) — not needed for 180°.
 - The **centre of rotation** (e.g. the origin, the point (1, 3)).
 
+[DIAGRAM: transform | variant=rotate | shape=1,1;3,1;1,4 | cx=0 | cy=0 | angle=-90]
+
 ### Translation
 
 A **translation** slides a shape without turning or flipping it. Every point moves the same distance in the same direction.
 
 To describe a translation, you must state:
 - The **column vector** that describes the movement, e.g. (3 over −2) means 3 right and 2 down.
+
+[DIAGRAM: transform | variant=translate | shape=-4,-3;-2,-3;-4,0 | dx=3 | dy=-2]
 
 ### Key Properties
 
@@ -31377,6 +31737,8 @@ All three transformations produce an image that is **congruent** to the original
 ## Worked Example 1 — Foundation Level
 
 **Question:** Triangle P has vertices at (1, 1), (1, 4), and (3, 1). Translate triangle P by the vector (4 over −2). Write down the coordinates of the image.
+
+[DIAGRAM: transform | variant=translate | shape=1,1;1,4;3,1 | dx=4 | dy=-2]
 
 **Working:**
 
@@ -31484,6 +31846,8 @@ A positive top number means move right; negative means move left. A positive bot
 
 [FORMULA: New coordinates: (x + a, y + b) where the vector is (a over b)]
 
+[DIAGRAM: transform | variant=translate | shape=-4,-3;-2,-3;-4,0 | dx=4 | dy=2 | caption=Every vertex slides by the same vector]
+
 ## Step-by-Step Method
 
 1. **Read the column vector.** The top number is the horizontal shift; the bottom number is the vertical shift.
@@ -31494,6 +31858,8 @@ A positive top number means move right; negative means move left. A positive bot
 ## Worked Example 1 — Foundation Level
 
 **Question:** Translate the triangle with vertices A(2, 3), B(5, 3), and C(5, 6) by the vector (3 over −2).
+
+[DIAGRAM: transform | variant=translate | shape=2,3;5,3;5,6 | dx=3 | dy=-2]
 
 **Working:**
 
@@ -31510,6 +31876,8 @@ C(5, 6) maps to C'(5 + 3, 6 − 2) = C'(8, 4)
 ## Worked Example 2 — Higher Level
 
 **Question:** Shape P is translated to shape Q. A vertex of P is at (−1, 4) and the corresponding vertex of Q is at (3, 1). Describe the translation fully.
+
+[DIAGRAM: transform | variant=translate | shape=-1,4 | dx=4 | dy=-3]
 
 **Working:**
 
@@ -31637,6 +32005,8 @@ To find the angle between a line and a plane:
 
 **Question:** A cuboid has length 8 cm, width 6 cm, and height 5 cm. Calculate the length of the space diagonal AG. Then find the angle that AG makes with the base ABCD. Give your answers to 1 decimal place.
 
+[DIAGRAM: cuboid | length=8 cm | width=6 cm | height=5 cm | showDiagonal=true | showFaceDiagonal=true]
+
 **Working:**
 
 Step 1 — Find the diagonal of the base AC.
@@ -31652,6 +32022,8 @@ AG² = AC² + CG² = 100 + 25 = 125
 AG = √125 = 11.2 cm (1 d.p.)
 
 Step 3 — Find the angle between AG and the base.
+
+[DIAGRAM: right-triangle | opposite=5 cm | adjacent=10 cm | hypotenuse=11.2 cm | angleLabel=? | unknown=angle | caption=Triangle ACG extracted from the cuboid — a flat 2D triangle you can solve normally]
 
 The angle is at A in triangle ACG.
 tan θ = opposite / adjacent = CG / AC = 5 / 10 = 0.5
@@ -31675,6 +32047,8 @@ Step 2 — Identify the right-angled triangle.
 The triangle is formed by: the vertical height (12 cm), the half-diagonal of the base (√50 cm), and the slant edge.
 
 Step 3 — Find the angle between the slant edge and the base.
+
+[DIAGRAM: right-triangle | opposite=12 cm | adjacent=√50 cm | hypotenuse=? | angleLabel=? | unknown=angle | caption=Height, half-diagonal, and slant edge form the right-angled triangle inside the pyramid]
 
 tan θ = opposite / adjacent = 12 / √50
 tan θ = 12 / 7.0711…
@@ -31778,6 +32152,8 @@ $$\\text{Area} = \\frac{1}{2}ab\\sin C$$
 
 where a and b are two sides and C is the **included angle** (the angle between them).
 
+[DIAGRAM: triangle | sideA=a | sideB=b | sideC=c | angleA=A | angleB=B | caption=The shared labelling convention for both rules — side a is always opposite angle A]
+
 ### Which Formulas Are Given?
 
 On AQA and Edexcel, all three formulas above are provided on the formula sheet. However, you still need to know **when and how** to use them.
@@ -31832,6 +32208,8 @@ Use the cosine rule when you have:
 
 *In triangle PQR, angle P = 42°, angle Q = 73° and side p (opposite P) = 9 cm. Find side q (opposite Q).*
 
+[DIAGRAM: triangle | angleA=42 | angleB=73 | sideA=9 cm | sideB=? | unknown=b]
+
 **Step 1:** Use the sine rule: p/sin P = q/sin Q.
 
 **Step 2:** 9/sin 42° = q/sin 73°.
@@ -31847,6 +32225,8 @@ Use the cosine rule when you have:
 ## Worked Example 2 — Cosine Rule
 
 *In triangle ABC, AB = 8 cm, AC = 11 cm and angle A = 55°. Find BC.*
+
+[DIAGRAM: triangle | sideB=11 cm | sideC=8 cm | angleA=55 | sideA=? | unknown=a | caption=BC is opposite angle A]
 
 **Step 1:** The included angle is A, so we are finding side a (BC), with b = 11 and c = 8 (or vice versa — the labelling is flexible).
 
@@ -31865,6 +32245,8 @@ $$\\text{Area} = \\frac{1}{2} \\times 11 \\times 8 \\times \\sin 55° = 44 \\tim
 ### Finding an Angle with the Cosine Rule
 
 *In a triangle, the sides are 7 cm, 9 cm and 12 cm. Find the largest angle.*
+
+[DIAGRAM: triangle | sideA=12 cm | sideB=7 cm | sideC=9 cm | angleA=? | unknown=A | caption=The largest angle is opposite the longest side]
 
 The largest angle is opposite the longest side (12 cm). Let a = 12, b = 7, c = 9.
 
@@ -31987,6 +32369,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 - A and H → use **cos**
 - O and A → use **tan**
 
+[DIAGRAM: right-triangle | opposite=O | adjacent=A | hypotenuse=H | angleLabel=θ° | caption=Label O, A, H relative to θ before picking a ratio]
+
 ---
 
 ## Step-by-Step Method
@@ -32015,6 +32399,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 
 *In a right-angled triangle, the angle is 35° and the hypotenuse is 10 cm. Find the length of the side opposite the 35° angle. Give your answer to 1 decimal place.*
 
+[DIAGRAM: right-triangle | opposite=? | hypotenuse=10 cm | angleLabel=35° | unknown=opposite]
+
 **Step 1:** Label: H = 10, O = ?, angle = 35°.
 
 **Step 2:** O and H → use sin.
@@ -32026,6 +32412,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 ### Finding an Angle
 
 *A right-angled triangle has an opposite side of 7 cm and an adjacent side of 4 cm. Find the angle.*
+
+[DIAGRAM: right-triangle | opposite=7 cm | adjacent=4 cm | angleLabel=? | unknown=angle]
 
 **Step 1:** O = 7, A = 4 → use tan.
 
@@ -32039,6 +32427,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 
 *A right-angled triangle has an angle of 52° and the side adjacent to this angle is 8 cm. Find the hypotenuse. Give your answer to 3 significant figures.*
 
+[DIAGRAM: right-triangle | adjacent=8 cm | hypotenuse=? | angleLabel=52° | unknown=hypotenuse]
+
 **Step 1:** A = 8, H = ?, angle = 52°.
 
 **Step 2:** A and H → use cos.
@@ -32050,6 +32440,8 @@ Once you have labelled the sides, look at which two sides are involved (the one 
 ### Multi-Step Problem
 
 *A vertical flagpole is supported by a wire attached to the top of the pole and anchored 6 m from the base. The wire makes an angle of 70° with the ground. Find the height of the flagpole and the length of the wire.*
+
+[DIAGRAM: right-triangle | opposite=height? | adjacent=6 m | hypotenuse=wire? | angleLabel=70° | caption=The flagpole is opposite the 70° angle; the wire is the hypotenuse]
 
 **Height (opposite):** tan 70° = h/6, so h = 6 × tan 70° = 6 × 2.7475 = **16.5 m** (1 d.p.).
 
@@ -32751,6 +33143,8 @@ Three points A, B, and C are **collinear** (they lie on the same straight line) 
 
 [FORMULA: If AB = k × AC and both share point A, then A, B, and C are collinear]
 
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | showAB=true | caption=To prove parallel lines, express each segment in terms of the same base vectors a and b]
+
 ## Step-by-Step Method
 
 ### Proving Lines Are Parallel
@@ -32774,6 +33168,8 @@ This topic is Higher only, but this example uses a basic setup.
 
 **Question:** OA = **a** and OB = **b**. M is the midpoint of AB. Find OM in terms of **a** and **b**.
 
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | showMidpoint=true]
+
 **Working:**
 
 Step 1 — AB = AO + OB = −**a** + **b** = **b** − **a**.
@@ -32787,6 +33183,8 @@ Step 3 — OM = OA + AM = **a** + ½(**b** − **a**) = **a** + ½**b** − ½**
 ## Worked Example 2 — Higher Level
 
 **Question:** In triangle OAB, OA = **a** and OB = **b**. P is the point on OA such that OP = (2/3)**a**. Q is the point on OB such that OQ = (2/3)**b**. Prove that PQ is parallel to AB.
+
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | showAB=true | pointOnOA=0.667 | pointOnOB=0.667 | caption=P and Q sit at the same ratio along OA and OB, so PQ is parallel to AB]
 
 **Working:**
 
@@ -32885,6 +33283,8 @@ A **vector** is a quantity that has both magnitude and direction. In GCSE Maths,
 
 The vector from point A to point B is written as **AB** (with an arrow above). The reverse journey, from B to A, is **−AB**.
 
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | caption=OA = a, OB = b, so AB = b − a]
+
 ### Key Concepts
 
 - **Equal vectors** have the same magnitude and direction. They do not need to start at the same point.
@@ -32927,6 +33327,8 @@ The vector from point A to point B is written as **AB** (with an arrow above). T
 ## Worked Example 1 — Higher Level
 
 **Question:** OA = **a** and OB = **b**. M is the midpoint of AB. Find the vector OM in terms of **a** and **b**.
+
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | showMidpoint=true | caption=M is the midpoint of AB — OM is the gold dashed route]
 
 **Working:**
 
@@ -33330,23 +33732,33 @@ $$V = s^3$$
 **Cuboid:**
 $$V = l \\times w \\times h$$
 
+[DIAGRAM: cuboid | length=l | width=w | height=h]
+
 **Prism (any):**
 $$V = \\text{cross-sectional area} \\times \\text{length}$$
 
 **Cylinder:**
 $$V = \\pi r^2 h$$
 
+[DIAGRAM: solid3d | shape=cylinder | radius=r | height=h]
+
 **Cone:**
 $$V = \\frac{1}{3}\\pi r^2 h$$
 
+[DIAGRAM: solid3d | shape=cone | radius=r | height=h | slant=l]
+
 **Sphere:**
 $$V = \\frac{4}{3}\\pi r^3$$
+
+[DIAGRAM: solid3d | shape=sphere | radius=r]
 
 **Hemisphere:**
 $$V = \\frac{2}{3}\\pi r^3$$
 
 **Pyramid:**
 $$V = \\frac{1}{3} \\times \\text{base area} \\times h$$
+
+[DIAGRAM: solid3d | shape=pyramid | height=h | slant=l]
 
 ### Which Formulas Are Given?
 
@@ -33506,6 +33918,8 @@ A frustum is the solid left when the top of a cone is cut off by a plane paralle
 
 [FORMULA: Volume of a frustum = volume of large cone minus volume of small cone]
 
+[DIAGRAM: solid3d | shape=cone | radius=r | height=h | slant=l]
+
 ## Step-by-Step Method
 
 1. Identify the radius (r) and the perpendicular height (h) — not the slant height.
@@ -33515,6 +33929,8 @@ A frustum is the solid left when the top of a cone is cut off by a plane paralle
 ## Worked Example 1 — Foundation Level
 
 **Question:** A cone has a base radius of 6 cm and a perpendicular height of 10 cm. Find its volume. Give your answer in terms of pi.
+
+[DIAGRAM: solid3d | shape=cone | radius=6 cm | height=10 cm]
 
 **Working:**
 V = ⅓ pi r² h
@@ -33628,6 +34044,8 @@ Cylinders appear in many real-world contexts — water tanks, cans, pipes, and c
 
 [FORMULA: To find h from volume: h = V ÷ (pi r²)]
 
+[DIAGRAM: solid3d | shape=cylinder | radius=r | height=h]
+
 ## Step-by-Step Method
 
 1. Check whether you have been given the radius or the diameter. If given the diameter, halve it.
@@ -33637,6 +34055,8 @@ Cylinders appear in many real-world contexts — water tanks, cans, pipes, and c
 ## Worked Example 1 — Foundation Level
 
 **Question:** A cylinder has radius 4 cm and height 10 cm. Find its volume to 1 decimal place.
+
+[DIAGRAM: solid3d | shape=cylinder | radius=4 cm | height=10 cm]
 
 **Working:**
 V = pi r² h
@@ -33751,6 +34171,8 @@ A **hemisphere** is half of a sphere, created by cutting a sphere along a great 
 
 The total surface area includes the curved part (half the sphere's surface area of 4πr²) plus the flat circular base (πr²).
 
+[DIAGRAM: solid3d | shape=hemisphere | radius=r]
+
 ## Step-by-Step Method
 
 ### Finding the Volume
@@ -33770,6 +34192,8 @@ The total surface area includes the curved part (half the sphere's surface area 
 This topic is Higher only, but this example uses straightforward numbers.
 
 **Question:** Find the volume of a hemisphere with radius 6 cm. Give your answer in terms of π.
+
+[DIAGRAM: solid3d | shape=hemisphere | radius=6 cm]
 
 **Working:**
 
@@ -33887,6 +34311,8 @@ Prism questions at GCSE range from straightforward triangular prisms on Foundati
 
 [FORMULA: For a triangular prism: V = ½ × base × height × length]
 
+[DIAGRAM: solid3d | shape=triangular-prism | base=base | length=length]
+
 ## Step-by-Step Method
 
 1. Identify the cross-section — the 2D shape that stays the same along the length of the prism.
@@ -33898,6 +34324,8 @@ Prism questions at GCSE range from straightforward triangular prisms on Foundati
 
 **Question:** A triangular prism has a triangular cross-section with base 8 cm and perpendicular height 5 cm. The prism is 12 cm long. Find its volume.
 
+[DIAGRAM: solid3d | shape=triangular-prism | base=8 cm | length=12 cm]
+
 **Working:**
 Cross-section area = ½ × 8 × 5 = 20 cm²
 Volume = 20 × 12 = 240
@@ -33907,6 +34335,8 @@ Volume = 20 × 12 = 240
 ## Worked Example 2 — Higher Level
 
 **Question:** A prism has a trapezoidal cross-section. The trapezium has parallel sides of 6 cm and 10 cm and a perpendicular height of 4 cm. The prism is 15 cm long. Find its volume.
+
+[DIAGRAM: shape | variant=trapezium | a=6 cm | b=10 cm | height=4 cm | caption=The cross-section — this shape is repeated along the full 15 cm length]
 
 **Working:**
 Cross-section area = ½(6 + 10) × 4 = ½ × 16 × 4 = 32 cm²
@@ -34006,6 +34436,8 @@ Understanding why the factor is ⅓ is helpful: three identical pyramids can be 
 
 [FORMULA: For a square-based pyramid with base side s: base area = s², so V = ⅓ × s² × h]
 
+[DIAGRAM: solid3d | shape=pyramid | height=h | slant=l]
+
 ## Step-by-Step Method
 
 1. Calculate the area of the base — use the appropriate area formula for the base shape (square, rectangle, triangle, etc.).
@@ -34015,6 +34447,8 @@ Understanding why the factor is ⅓ is helpful: three identical pyramids can be 
 ## Worked Example 1 — Foundation Level
 
 **Question:** A square-based pyramid has a base with side length 6 cm and a perpendicular height of 10 cm. Find its volume.
+
+[DIAGRAM: solid3d | shape=pyramid | height=10 cm]
 
 **Working:**
 Base area = 6² = 36 cm²
@@ -34128,6 +34562,8 @@ A hemisphere is exactly half of a sphere, so its volume is half the sphere volum
 
 [FORMULA: Volume of a hemisphere = ²⁄₃ pi r³]
 
+[DIAGRAM: solid3d | shape=sphere | radius=r]
+
 ## Step-by-Step Method
 
 1. Check whether you have the radius or the diameter. If given the diameter, halve it.
@@ -34137,6 +34573,8 @@ A hemisphere is exactly half of a sphere, so its volume is half the sphere volum
 ## Worked Example 1 — Foundation Level
 
 **Question:** A sphere has a radius of 6 cm. Find its volume in terms of pi.
+
+[DIAGRAM: solid3d | shape=sphere | radius=6 cm]
 
 **Working:**
 V = ⁴⁄₃ pi r³

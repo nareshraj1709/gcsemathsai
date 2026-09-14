@@ -31,6 +31,8 @@ For a hemisphere (half a sphere), the curved surface area is 2πr² (half of 4π
 
 [FORMULA: Total surface area of a hemisphere = 2πr² + πr² = 3πr²]
 
+[DIAGRAM: solid3d | shape=sphere | radius=r]
+
 ## Step-by-Step Method
 
 1. Identify the radius. If the diameter is given, halve it.
@@ -40,6 +42,8 @@ For a hemisphere (half a sphere), the curved surface area is 2πr² (half of 4π
 ## Worked Example 1 — Foundation Level
 
 **Question:** A sphere has a radius of 7 cm. Find the surface area to 1 decimal place.
+
+[DIAGRAM: solid3d | shape=sphere | radius=7 cm]
 
 **Working:**
 SA = 4πr²

@@ -24,6 +24,8 @@ A **reflection** flips a shape over a **mirror line** (line of reflection). Ever
 To describe a reflection, you must state:
 - The **line of reflection** (e.g. x = 2, y = −1, y = x, the x-axis, the y-axis).
 
+[DIAGRAM: transform | variant=reflect | line=y-axis | shape=1,1;3,1;1,4]
+
 ### Rotation
 
 A **rotation** turns a shape around a fixed point called the **centre of rotation**. Every point on the shape moves through the same angle.
@@ -33,12 +35,16 @@ To describe a rotation, you must state:
 - The **direction** of rotation (clockwise or anticlockwise) — not needed for 180°.
 - The **centre of rotation** (e.g. the origin, the point (1, 3)).
 
+[DIAGRAM: transform | variant=rotate | shape=1,1;3,1;1,4 | cx=0 | cy=0 | angle=-90]
+
 ### Translation
 
 A **translation** slides a shape without turning or flipping it. Every point moves the same distance in the same direction.
 
 To describe a translation, you must state:
 - The **column vector** that describes the movement, e.g. (3 over −2) means 3 right and 2 down.
+
+[DIAGRAM: transform | variant=translate | shape=-4,-3;-2,-3;-4,0 | dx=3 | dy=-2]
 
 ### Key Properties
 
@@ -77,6 +83,8 @@ All three transformations produce an image that is **congruent** to the original
 ## Worked Example 1 — Foundation Level
 
 **Question:** Triangle P has vertices at (1, 1), (1, 4), and (3, 1). Translate triangle P by the vector (4 over −2). Write down the coordinates of the image.
+
+[DIAGRAM: transform | variant=translate | shape=1,1;1,4;3,1 | dx=4 | dy=-2]
 
 **Working:**
 

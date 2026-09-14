@@ -29,6 +29,8 @@ Cylinders appear in many real-world contexts — water tanks, cans, pipes, and c
 
 [FORMULA: To find h from volume: h = V ÷ (pi r²)]
 
+[DIAGRAM: solid3d | shape=cylinder | radius=r | height=h]
+
 ## Step-by-Step Method
 
 1. Check whether you have been given the radius or the diameter. If given the diameter, halve it.
@@ -38,6 +40,8 @@ Cylinders appear in many real-world contexts — water tanks, cans, pipes, and c
 ## Worked Example 1 — Foundation Level
 
 **Question:** A cylinder has radius 4 cm and height 10 cm. Find its volume to 1 decimal place.
+
+[DIAGRAM: solid3d | shape=cylinder | radius=4 cm | height=10 cm]
 
 **Working:**
 V = pi r² h

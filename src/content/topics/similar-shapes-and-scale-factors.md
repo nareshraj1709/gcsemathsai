@@ -29,6 +29,8 @@ Two shapes are **similar** if one is an enlargement of the other. This means all
 
 If the linear scale factor from shape A to shape B is k, then areas are multiplied by k² and volumes by k³.
 
+[DIAGRAM: triangle-pair | labels1=A | labels2=B | scale2=1.7 | angleMarkA=1 | angleMarkB=2 | angleMarkC=3 | caption=Similar shapes keep every angle the same — only the size changes]
+
 ## Step-by-Step Method
 
 1. **Identify corresponding sides** by matching angles or using the diagram.
@@ -40,6 +42,8 @@ If the linear scale factor from shape A to shape B is k, then areas are multipli
 ## Worked Example 1 — Foundation Level
 
 **Question:** Triangles A and B are similar. Triangle A has sides 4 cm, 6 cm, and 8 cm. The shortest side of triangle B is 10 cm. Find the other two sides of triangle B.
+
+[DIAGRAM: triangle-pair | labels1=A | labels2=B | scale2=1.6 | tickA=1 | tickB=2 | tickC=3 | caption=Matching tick styles mark corresponding sides — each pair is in the same ratio, k = 2.5]
 
 **Working:**
 

@@ -25,6 +25,8 @@ Two shapes are **congruent** if they have the same shape and the same size. All 
 
 Two shapes are **similar** if they have the same shape but not necessarily the same size. All corresponding angles are equal, and all corresponding sides are in the same ratio. One shape is an enlargement of the other.
 
+[DIAGRAM: triangle-pair | labels1=A,B,C | labels2=D,E,F | scale2=1.6 | angleMarkA=1 | angleMarkB=2 | angleMarkC=3 | caption=Similar triangles: matching angle arcs, but the second triangle is a scaled-up copy]
+
 ### Conditions for Congruent Triangles
 
 To prove two triangles are congruent, you must show one of these four conditions:

@@ -27,6 +27,8 @@ An enlargement scales a shape from a fixed point called the **centre of enlargem
 
 A scale factor greater than 1 makes the shape larger. A scale factor between 0 and 1 makes it smaller. A negative scale factor (Higher) produces an image on the opposite side of the centre and inverted.
 
+[DIAGRAM: transform | variant=enlarge | shape=1,1;2,1;1,2 | cx=0 | cy=0 | scaleFactor=2 | caption=Every vertex moves along a ray from the centre, twice as far out]
+
 ## Step-by-Step Method
 
 1. **Identify the centre of enlargement** and the scale factor from the question.
@@ -38,6 +40,8 @@ A scale factor greater than 1 makes the shape larger. A scale factor between 0 a
 ## Worked Example 1 — Foundation Level
 
 **Question:** Enlarge the triangle with vertices A(1, 1), B(3, 1), and C(1, 3) by scale factor 2 from the centre (0, 0).
+
+[DIAGRAM: transform | variant=enlarge | shape=1,1;3,1;1,3 | cx=0 | cy=0 | scaleFactor=2]
 
 **Working:**
 
@@ -54,6 +58,8 @@ C(1, 3) maps to C'(2, 6)
 ## Worked Example 2 — Higher Level
 
 **Question:** Enlarge the shape with vertex P(4, 6) by scale factor 1/2 from centre (2, 2).
+
+[DIAGRAM: transform | variant=enlarge | shape=4,6 | cx=2 | cy=2 | scaleFactor=0.5]
 
 **Working:**
 

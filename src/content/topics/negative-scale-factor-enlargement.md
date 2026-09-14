@@ -55,6 +55,8 @@ This topic is Higher only, but this example uses simple coordinates.
 
 **Question:** Triangle A has vertices at (2, 1), (4, 1), and (2, 3). Enlarge it by scale factor −1 about the origin (0, 0).
 
+[DIAGRAM: transform | variant=enlarge | shape=2,1;4,1;2,3 | cx=0 | cy=0 | scaleFactor=-1 | caption=A negative scale factor sends the image through the centre to the opposite side, inverted]
+
 **Working:**
 
 Step 1 — Scale factor −1 means each point moves to the opposite side of the origin at the same distance.
@@ -68,6 +70,8 @@ Step 3 — The image is the same size as the original but inverted through the o
 ## Worked Example 2 — Higher Level
 
 **Question:** Enlarge triangle B with vertices (1, 2), (3, 2), and (1, 5) by scale factor −2 about the centre (1, 1).
+
+[DIAGRAM: transform | variant=enlarge | shape=1,2;3,2;1,5 | cx=1 | cy=1 | scaleFactor=-2]
 
 **Working:**
 

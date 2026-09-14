@@ -31,6 +31,8 @@ Three points A, B, and C are **collinear** (they lie on the same straight line) 
 
 [FORMULA: If AB = k × AC and both share point A, then A, B, and C are collinear]
 
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | showAB=true | caption=To prove parallel lines, express each segment in terms of the same base vectors a and b]
+
 ## Step-by-Step Method
 
 ### Proving Lines Are Parallel
@@ -54,6 +56,8 @@ This topic is Higher only, but this example uses a basic setup.
 
 **Question:** OA = **a** and OB = **b**. M is the midpoint of AB. Find OM in terms of **a** and **b**.
 
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | showMidpoint=true]
+
 **Working:**
 
 Step 1 — AB = AO + OB = −**a** + **b** = **b** − **a**.
@@ -67,6 +71,8 @@ Step 3 — OM = OA + AM = **a** + ½(**b** − **a**) = **a** + ½**b** − ½**
 ## Worked Example 2 — Higher Level
 
 **Question:** In triangle OAB, OA = **a** and OB = **b**. P is the point on OA such that OP = (2/3)**a**. Q is the point on OB such that OQ = (2/3)**b**. Prove that PQ is parallel to AB.
+
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | showAB=true | pointOnOA=0.667 | pointOnOB=0.667 | caption=P and Q sit at the same ratio along OA and OB, so PQ is parallel to AB]
 
 **Working:**
 

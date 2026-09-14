@@ -27,6 +27,8 @@ An arc is a curved section of the circumference of a circle. The arc length depe
 
 Here θ is the angle at the centre in degrees and r is the radius.
 
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=r | caption=The arc length is the fraction θ/360 of the full circumference]
+
 ## Step-by-Step Method
 
 1. **Identify the radius** (r) and the **angle at the centre** (θ) from the question or diagram.
@@ -37,6 +39,8 @@ Here θ is the angle at the centre in degrees and r is the radius.
 ## Worked Example 1 — Foundation Level
 
 **Question:** A sector has a radius of 8 cm and an angle of 90°. Find the arc length. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=sector | angle=90 | radiusLabel=8 cm]
 
 **Working:**
 
@@ -53,6 +57,8 @@ Arc length = (90 / 360) × 2 × π × 8
 ## Worked Example 2 — Higher Level
 
 **Question:** An arc of a circle with radius 12 cm has a length of 15 cm. Find the angle at the centre. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=sector | angle=72 | radiusLabel=12 cm | caption=The angle θ here is what we're solving for]
 
 **Working:**
 

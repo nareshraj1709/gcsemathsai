@@ -29,6 +29,8 @@ The cosine rule comes in two forms: one for finding a side (when you know two si
 
 [FORMULA: cos A = (b² + c² − a²) ÷ (2bc) (finding an angle)]
 
+[DIAGRAM: triangle | sideA=a | sideB=b | sideC=c | angleA=A | caption=Side a is always opposite angle A, side b opposite angle B, and so on]
+
 ## Step-by-Step Method
 
 1. Label the triangle: the side you want to find (or the side opposite the angle you want) is a, and the other two sides are b and c.
@@ -39,6 +41,8 @@ The cosine rule comes in two forms: one for finding a side (when you know two si
 ## Worked Example 1 — Foundation Level
 
 **Question:** In triangle ABC, AB = 7 cm, AC = 9 cm and angle A = 60°. Find BC to 1 decimal place.
+
+[DIAGRAM: triangle | sideB=9 cm | sideC=7 cm | angleA=60 | sideA=? | unknown=a | caption=BC is opposite angle A, so it's side a]
 
 **Working:**
 Let a = BC, b = AC = 9, c = AB = 7, angle A = 60°.
@@ -55,6 +59,8 @@ a = √67
 
 **Question:** A triangle has sides 6 cm, 10 cm and 13 cm. Find the largest angle to 1 decimal place.
 
+[DIAGRAM: triangle | sideA=13 cm | sideB=6 cm | sideC=10 cm | angleA=? | unknown=A | caption=The largest angle is always opposite the longest side]
+
 **Working:**
 The largest angle is opposite the longest side (13 cm). Let a = 13, b = 6, c = 10.
 cos A = (b² + c² − a²) ÷ (2bc)
@@ -69,6 +75,8 @@ A = cos⁻¹(−0.275)
 ## Worked Example 3 — Exam Style
 
 **Question:** Two walkers leave a campsite. Walker A walks 5 km on a bearing of 040°. Walker B walks 8 km on a bearing of 130°. Find the distance between the two walkers to 1 decimal place.
+
+[DIAGRAM: triangle | sideB=5 km | sideC=8 km | angleA=90 | sideA=? | unknown=a | caption=The campsite angle between the two paths is 130° − 40° = 90°]
 
 **Working:**
 The angle between the two paths at the campsite = 130° − 40° = 90°.

@@ -25,6 +25,8 @@ Angles measure the amount of turn between two lines that meet at a point. In GCS
 - **Angles in a triangle** add up to **180°**.
 - **Angles in a quadrilateral** add up to **360°**.
 
+[DIAGRAM: angle | variant=straight-line | split=118 | value1=118° | value2=62°]
+
 ### Parallel Line Angle Rules
 
 When a straight line (called a **transversal**) crosses two parallel lines, it creates several pairs of related angles:
@@ -32,6 +34,8 @@ When a straight line (called a **transversal**) crosses two parallel lines, it c
 - **Alternate angles** (also called Z-angles) — angles on opposite sides of the transversal, between the parallel lines. They are **equal**.
 - **Corresponding angles** (also called F-angles) — angles in matching positions at each intersection. They are **equal**.
 - **Co-interior angles** (also called allied angles or C-angles) — angles on the same side of the transversal, between the parallel lines. They add up to **180°**.
+
+[DIAGRAM: angle | variant=parallel | pairType=alternate | known=65 | caption=Alternate (Z-angle) pair — equal]
 
 ### How to Spot Parallel Lines
 
@@ -49,6 +53,8 @@ Look for arrows on the lines in the diagram. A single arrow on two lines means t
 ## Worked Example 1 — Foundation Level
 
 **Question:** Two angles on a straight line are 3x° and (2x + 30)°. Find the value of x and both angles.
+
+[DIAGRAM: angle | variant=straight-line | split=90 | value1=3x° | value2=(2x+30)°]
 
 **Working:**
 
@@ -71,6 +77,8 @@ Step 4 — Check: 90 + 90 = 180° ✓
 ## Worked Example 2 — Higher Level
 
 **Question:** Lines PQ and RS are parallel. A transversal crosses PQ at point A and RS at point B. Angle PAB = 3x + 10° and angle RBA = 2x + 20°. Find the size of angle PAB. Give a reason for each step.
+
+[DIAGRAM: angle | variant=parallel | pairType=alternate | known=3x+10 | caption=Angle PAB and angle RBA are alternate angles]
 
 **Working:**
 

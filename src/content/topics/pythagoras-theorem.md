@@ -25,6 +25,8 @@ where **c is the hypotenuse** — the longest side, always opposite the right an
 
 This formula is **not given** on the AQA, Edexcel or OCR formula sheets. You must memorise it.
 
+[DIAGRAM: right-triangle | opposite=a | adjacent=b | hypotenuse=c | hideAngle=true | caption=c is always the hypotenuse — the longest side, opposite the right angle]
+
 ### Identifying the Hypotenuse
 
 - It is always opposite the right angle (marked with a small square).
@@ -68,6 +70,8 @@ $$d = \sqrt{l^2 + w^2 + h^2}$$
 
 *A right-angled triangle has legs of 5 cm and 12 cm. Find the hypotenuse.*
 
+[DIAGRAM: right-triangle | opposite=12 cm | adjacent=5 cm | hypotenuse=? | hideAngle=true | unknown=hypotenuse]
+
 **Step 1:** c² = a² + b² = 5² + 12² = 25 + 144 = 169.
 
 **Step 2:** c = √169 = **13 cm**.
@@ -75,6 +79,8 @@ $$d = \sqrt{l^2 + w^2 + h^2}$$
 ### Finding a Shorter Side
 
 *A right-angled triangle has hypotenuse 15 cm and one leg of 9 cm. Find the other leg.*
+
+[DIAGRAM: right-triangle | opposite=? | adjacent=9 cm | hypotenuse=15 cm | hideAngle=true | unknown=opposite]
 
 **Step 1:** a² = c² − b² = 15² − 9² = 225 − 81 = 144.
 
@@ -85,6 +91,8 @@ $$d = \sqrt{l^2 + w^2 + h^2}$$
 ## Worked Example 2 — Higher Level
 
 *A cuboid measures 6 cm by 4 cm by 3 cm. Find the length of the space diagonal AG. Give your answer to 1 decimal place.*
+
+[DIAGRAM: cuboid | length=6 cm | width=4 cm | height=3 cm | showDiagonal=true | caption=The gold line is the space diagonal AG — found by applying Pythagoras twice]
 
 **Step 1:** Find the diagonal across the base (let us call it AC).
 $$AC = \sqrt{6^2 + 4^2} = \sqrt{36 + 16} = \sqrt{52}$$

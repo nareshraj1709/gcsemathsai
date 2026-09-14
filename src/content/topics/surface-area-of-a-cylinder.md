@@ -23,6 +23,8 @@ If you "unroll" the curved surface, it becomes a rectangle. The width of that re
 
 An open cylinder (like a tin without a lid) is missing one or both circular ends. You must read the question carefully to determine how many circles to include in your calculation.
 
+[DIAGRAM: net | shape=cylinder | caption=Unroll the curved surface and it becomes a rectangle — width = circumference, height = h]
+
 ### Key Formulas
 
 [FORMULA: Total surface area (closed) = 2 pi r² + 2 pi rh]
@@ -39,6 +41,8 @@ An open cylinder (like a tin without a lid) is missing one or both circular ends
 ## Worked Example 1 — Foundation Level
 
 **Question:** A closed cylinder has radius 3 cm and height 10 cm. Find its total surface area to 1 decimal place.
+
+[DIAGRAM: solid3d | shape=cylinder | radius=3 cm | height=10 cm]
 
 **Working:**
 Two circles = 2 × pi × 3² = 2 × 9pi = 18pi

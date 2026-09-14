@@ -21,6 +21,12 @@ A **net** is a flat 2D shape that can be folded along its edges to form a 3D sha
 
 A single 3D shape can have several different valid nets. For example, a cube has **11 distinct nets**.
 
+[DIAGRAM: net | shape=cuboid]
+
+[DIAGRAM: net | shape=triangular-prism]
+
+[DIAGRAM: net | shape=square-pyramid]
+
 ### Key Nets to Know
 
 | 3D shape | Faces in the net |
@@ -66,6 +72,8 @@ Step 3 — The net forms a cross shape. Label all dimensions.
 ## Worked Example 2 — Higher Level
 
 **Question:** A cylinder has radius 4 cm and height 9 cm. Sketch its net and find the total surface area.
+
+[DIAGRAM: net | shape=cylinder]
 
 **Working:**
 

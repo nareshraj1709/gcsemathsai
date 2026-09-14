@@ -31,6 +31,10 @@ The slant height l is the distance measured along the surface from the base edge
 
 [FORMULA: l = √(r² + h²), using Pythagoras to find the slant height from the radius and vertical height]
 
+[DIAGRAM: solid3d | shape=cone | radius=r | height=h | slant=l]
+
+[DIAGRAM: net | shape=cone | caption=Unrolled, the curved surface becomes a sector of radius l]
+
 ## Step-by-Step Method
 
 1. Identify the radius r, vertical height h, and slant height l. If the slant height is not given, use Pythagoras: l = √(r² + h²).
@@ -41,6 +45,8 @@ The slant height l is the distance measured along the surface from the base edge
 ## Worked Example 1 — Foundation Level
 
 **Question:** A cone has a base radius of 5 cm and a slant height of 13 cm. Find the total surface area to 1 decimal place.
+
+[DIAGRAM: solid3d | shape=cone | radius=5 cm | slant=13 cm]
 
 **Working:**
 Curved SA = πrl = π × 5 × 13 = 65π

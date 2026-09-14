@@ -221,6 +221,18 @@ a.auto-link:hover {
   line-height: 1.6;
 }
 
+.diagram-figure {
+  background: var(--paper);
+  border: 1.5px solid var(--rule);
+  border-radius: 12px;
+  padding: 16px 20px 12px;
+  margin: 24px auto !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.diagram-figure svg { max-width: 100%; height: auto; }
+
 /* ========= MOBILE MENU ========= */
 .mobile-menu-overlay {
   position: fixed; top: 72px; left: 0; right: 0; bottom: 0;

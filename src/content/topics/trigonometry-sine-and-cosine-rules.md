@@ -41,6 +41,8 @@ $$\text{Area} = \frac{1}{2}ab\sin C$$
 
 where a and b are two sides and C is the **included angle** (the angle between them).
 
+[DIAGRAM: triangle | sideA=a | sideB=b | sideC=c | angleA=A | angleB=B | caption=The shared labelling convention for both rules — side a is always opposite angle A]
+
 ### Which Formulas Are Given?
 
 On AQA and Edexcel, all three formulas above are provided on the formula sheet. However, you still need to know **when and how** to use them.
@@ -95,6 +97,8 @@ Use the cosine rule when you have:
 
 *In triangle PQR, angle P = 42°, angle Q = 73° and side p (opposite P) = 9 cm. Find side q (opposite Q).*
 
+[DIAGRAM: triangle | angleA=42 | angleB=73 | sideA=9 cm | sideB=? | unknown=b]
+
 **Step 1:** Use the sine rule: p/sin P = q/sin Q.
 
 **Step 2:** 9/sin 42° = q/sin 73°.
@@ -110,6 +114,8 @@ Use the cosine rule when you have:
 ## Worked Example 2 — Cosine Rule
 
 *In triangle ABC, AB = 8 cm, AC = 11 cm and angle A = 55°. Find BC.*
+
+[DIAGRAM: triangle | sideB=11 cm | sideC=8 cm | angleA=55 | sideA=? | unknown=a | caption=BC is opposite angle A]
 
 **Step 1:** The included angle is A, so we are finding side a (BC), with b = 11 and c = 8 (or vice versa — the labelling is flexible).
 
@@ -128,6 +134,8 @@ $$\text{Area} = \frac{1}{2} \times 11 \times 8 \times \sin 55° = 44 \times 0.81
 ### Finding an Angle with the Cosine Rule
 
 *In a triangle, the sides are 7 cm, 9 cm and 12 cm. Find the largest angle.*
+
+[DIAGRAM: triangle | sideA=12 cm | sideB=7 cm | sideC=9 cm | angleA=? | unknown=A | caption=The largest angle is opposite the longest side]
 
 The largest angle is opposite the longest side (12 cm). Let a = 12, b = 7, c = 9.
 

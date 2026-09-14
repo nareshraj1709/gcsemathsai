@@ -29,6 +29,8 @@ A rotation turns every point of a shape through the same angle about a fixed poi
 
 To describe a rotation fully you must state three things: the **centre** of rotation, the **angle** of rotation, and the **direction** (clockwise or anticlockwise). For 180°, direction is not required since clockwise and anticlockwise give the same result.
 
+[DIAGRAM: transform | variant=rotate | shape=1,1;3,1;1,4 | cx=0 | cy=0 | angle=-90 | caption=A 90° clockwise rotation about the origin]
+
 ## Step-by-Step Method
 
 1. **Identify the centre of rotation** from the question or diagram.
@@ -39,6 +41,8 @@ To describe a rotation fully you must state three things: the **centre** of rota
 ## Worked Example 1 — Foundation Level
 
 **Question:** Rotate the triangle with vertices A(1, 2), B(3, 2), and C(3, 4) by 90° clockwise about the origin.
+
+[DIAGRAM: transform | variant=rotate | shape=1,2;3,2;3,4 | cx=0 | cy=0 | angle=-90]
 
 **Working:**
 
@@ -56,6 +60,8 @@ C(3, 4) maps to C'(4, −3)
 
 **Question:** Rotate the point P(−2, 5) by 180° about the origin.
 
+[DIAGRAM: transform | variant=rotate | shape=-2,5 | cx=0 | cy=0 | angle=180]
+
 **Working:**
 
 180° about (0, 0): (x, y) maps to (−x, −y).
@@ -67,6 +73,8 @@ P(−2, 5) maps to P'(2, −5).
 ## Worked Example 3 — Exam Style
 
 **Question:** Triangle A is mapped to triangle B by a rotation. Vertex (1, 3) on A maps to (3, −1) on B. The centre of rotation is the origin. Describe the rotation fully.
+
+[DIAGRAM: transform | variant=rotate | shape=1,3 | cx=0 | cy=0 | angle=-90]
 
 **Working:**
 

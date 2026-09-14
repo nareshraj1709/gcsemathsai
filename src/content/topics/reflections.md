@@ -29,6 +29,8 @@ A reflection creates a mirror image of a shape across a given line, called the *
 
 [FORMULA: Reflection in y = −x: (x, y) maps to (−y, −x)]
 
+[DIAGRAM: transform | variant=reflect | line=y-axis | shape=1,1;3,1;1,4 | caption=Reflecting a triangle in the y-axis]
+
 ## Step-by-Step Method
 
 1. **Draw the mirror line** on the coordinate grid if it is not already shown.
@@ -40,6 +42,8 @@ A reflection creates a mirror image of a shape across a given line, called the *
 ## Worked Example 1 — Foundation Level
 
 **Question:** Reflect the triangle with vertices A(1, 3), B(4, 3), and C(4, 1) in the x-axis.
+
+[DIAGRAM: transform | variant=reflect | line=x-axis | shape=1,3;4,3;4,1]
 
 **Working:**
 
@@ -56,6 +60,8 @@ C(4, 1) maps to C'(4, −1)
 ## Worked Example 2 — Higher Level
 
 **Question:** Reflect the point P(3, 5) in the line y = x. State the coordinates of the image.
+
+[DIAGRAM: transform | variant=reflect | line=y=x | shape=3,5]
 
 **Working:**
 

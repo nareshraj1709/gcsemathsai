@@ -29,6 +29,8 @@ A frustum is the solid left when the top of a cone is cut off by a plane paralle
 
 [FORMULA: Volume of a frustum = volume of large cone minus volume of small cone]
 
+[DIAGRAM: solid3d | shape=cone | radius=r | height=h | slant=l]
+
 ## Step-by-Step Method
 
 1. Identify the radius (r) and the perpendicular height (h) — not the slant height.
@@ -38,6 +40,8 @@ A frustum is the solid left when the top of a cone is cut off by a plane paralle
 ## Worked Example 1 — Foundation Level
 
 **Question:** A cone has a base radius of 6 cm and a perpendicular height of 10 cm. Find its volume. Give your answer in terms of pi.
+
+[DIAGRAM: solid3d | shape=cone | radius=6 cm | height=10 cm]
 
 **Working:**
 V = ⅓ pi r² h

@@ -29,6 +29,8 @@ A hemisphere is exactly half of a sphere, so its volume is half the sphere volum
 
 [FORMULA: Volume of a hemisphere = ²⁄₃ pi r³]
 
+[DIAGRAM: solid3d | shape=sphere | radius=r]
+
 ## Step-by-Step Method
 
 1. Check whether you have the radius or the diameter. If given the diameter, halve it.
@@ -38,6 +40,8 @@ A hemisphere is exactly half of a sphere, so its volume is half the sphere volum
 ## Worked Example 1 — Foundation Level
 
 **Question:** A sphere has a radius of 6 cm. Find its volume in terms of pi.
+
+[DIAGRAM: solid3d | shape=sphere | radius=6 cm]
 
 **Working:**
 V = ⁴⁄₃ pi r³

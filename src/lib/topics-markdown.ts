@@ -1,6 +1,7 @@
 import matter from "gray-matter";
 import { Marked } from "marked";
 import { TOPICS_MD_CONTENT } from "./topics-manifest";
+import { renderDiagram, type DiagramParams } from "./diagram-svgs";
 
 // Configure marked for topics (same renderer as blog)
 const topicMarked = new Marked({
@@ -71,6 +72,18 @@ export function getTopicPost(slug: string): TopicPost | null {
   return parse(slug, raw);
 }
 
+function parseDiagramParams(raw: string): DiagramParams {
+  const params: DiagramParams = {};
+  for (const segment of raw.split("|").slice(1)) {
+    const eq = segment.indexOf("=");
+    if (eq === -1) continue;
+    const key = segment.slice(0, eq).trim();
+    const value = segment.slice(eq + 1).trim();
+    if (key) params[key] = value;
+  }
+  return params;
+}
+
 export function renderTopicMarkdown(content: string): string {
   // Transform [FORMULA: ...] blocks into styled HTML
   let processed = content.replace(
@@ -81,6 +94,15 @@ export function renderTopicMarkdown(content: string): string {
   processed = processed.replace(
     /\[ANSWER:\s*(.+?)\]/g,
     '<div class="answer-block"><strong>Answer:</strong> $1</div>'
+  );
+  // Transform [DIAGRAM: type | k=v | k=v] tokens into inline SVG figures
+  processed = processed.replace(
+    /\[DIAGRAM:\s*([^\]]+?)\]/g,
+    (_match, body: string) => {
+      const type = body.split("|")[0].trim();
+      const params = parseDiagramParams(body);
+      return renderDiagram(type, params);
+    }
   );
   const result = topicMarked.parse(processed);
   return typeof result === "string" ? result : "";

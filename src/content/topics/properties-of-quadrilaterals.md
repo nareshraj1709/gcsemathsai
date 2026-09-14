@@ -49,6 +49,8 @@ A **quadrilateral** is any closed 2D shape with exactly four straight sides and 
 
 **Question:** A parallelogram has one angle of 65°. Find the other three angles.
 
+[DIAGRAM: shape | variant=parallelogram | base=base | height=height | caption=Opposite angles in a parallelogram are equal; adjacent angles sum to 180°]
+
 **Working:**
 
 Step 1 — Opposite angles in a parallelogram are equal, so the angle opposite 65° is also 65°.

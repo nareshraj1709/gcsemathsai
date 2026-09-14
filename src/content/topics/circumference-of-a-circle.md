@@ -31,6 +31,8 @@ You may be asked to leave your answer in terms of π (an exact answer) or to giv
 
 [FORMULA: d = C ÷ π and r = C ÷ (2π), for finding dimensions from a given circumference]
 
+[DIAGRAM: circle | variant=basic | radiusLabel=r]
+
 ## Step-by-Step Method
 
 1. Identify whether you are given the radius or the diameter.
@@ -40,6 +42,8 @@ You may be asked to leave your answer in terms of π (an exact answer) or to giv
 ## Worked Example 1 — Foundation Level
 
 **Question:** A circle has a diameter of 14 cm. Find the circumference. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=basic | radiusLabel=7 cm]
 
 **Working:**
 C = πd

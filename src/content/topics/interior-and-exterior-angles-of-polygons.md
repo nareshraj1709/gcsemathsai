@@ -31,6 +31,8 @@ An **interior angle** is the angle inside a polygon at each vertex. An **exterio
 
 [FORMULA: Interior angle + exterior angle = 180°]
 
+[DIAGRAM: angle | variant=polygon | sides=6 | caption=A regular hexagon: interior and exterior angles at each vertex sum to 180°]
+
 ## Step-by-Step Method
 
 1. **Count the number of sides** (n) of the polygon.
@@ -41,6 +43,8 @@ An **interior angle** is the angle inside a polygon at each vertex. An **exterio
 ## Worked Example 1 — Foundation Level
 
 **Question:** Find the sum of the interior angles of a hexagon.
+
+[DIAGRAM: angle | variant=polygon | sides=6]
 
 **Working:**
 
@@ -53,6 +57,8 @@ Sum of interior angles = (6 − 2) × 180° = 4 × 180° = 720°
 ## Worked Example 2 — Higher Level
 
 **Question:** Each exterior angle of a regular polygon is 24°. How many sides does the polygon have? Find each interior angle.
+
+[DIAGRAM: angle | variant=polygon | sides=15]
 
 **Working:**
 

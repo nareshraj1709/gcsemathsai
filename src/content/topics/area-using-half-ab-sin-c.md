@@ -30,6 +30,8 @@ Here, **a** and **b** are any two sides, and **C** is the angle **between** thos
 
 All three forms give the same result — choose the one that uses the two sides and included angle you know.
 
+[DIAGRAM: triangle | sideA=a | sideB=b | angleC=C | caption=a and b meet at vertex C — that's the included angle in ½ab sin C]
+
 ### When to Use This Formula
 
 Use ½ab sin C when you have:
@@ -52,6 +54,8 @@ This topic is Higher only, but this example uses straightforward values.
 
 **Question:** Find the area of a triangle with sides 8 cm and 11 cm and an included angle of 40°.
 
+[DIAGRAM: triangle | sideA=8 cm | sideB=11 cm | angleC=40]
+
 **Working:**
 
 Step 1 — a = 8, b = 11, C = 40°.
@@ -67,6 +71,8 @@ Step 4 — Area = ½ × 8 × 11 × 0.6428 = 0.5 × 56.565 = 28.3 cm² (1 d.p.).
 ## Worked Example 2 — Higher Level
 
 **Question:** Triangle PQR has PQ = 14 cm, PR = 9 cm, and area = 50.4 cm². Find angle P.
+
+[DIAGRAM: triangle | sideC=14 cm | sideB=9 cm | angleA=? | unknown=A | caption=P is where the two given sides meet — that's the angle we want]
 
 **Working:**
 

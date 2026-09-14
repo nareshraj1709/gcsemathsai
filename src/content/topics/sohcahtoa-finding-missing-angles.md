@@ -31,6 +31,8 @@ It is essential that your calculator is set to degree mode (not radians) for GCS
 
 [FORMULA: θ = tan⁻¹(Opposite ÷ Adjacent)]
 
+[DIAGRAM: right-triangle | opposite=O | adjacent=A | hypotenuse=H | angleLabel=θ | unknown=angle | caption=This time the angle itself is the unknown]
+
 ## Step-by-Step Method
 
 1. Label the two known sides as O, A, or H relative to the unknown angle.
@@ -42,6 +44,8 @@ It is essential that your calculator is set to degree mode (not radians) for GCS
 ## Worked Example 1 — Foundation Level
 
 **Question:** A right-angled triangle has an opposite side of 6 cm and a hypotenuse of 10 cm. Find the angle θ. Give your answer to 1 decimal place.
+
+[DIAGRAM: right-triangle | opposite=6 cm | hypotenuse=10 cm | angleLabel=? | unknown=angle]
 
 **Working:**
 Label: O = 6, H = 10.
@@ -55,6 +59,8 @@ sin θ = 6 ÷ 10 = 0.6
 
 **Question:** A right-angled triangle has an adjacent side of 8 cm and an opposite side of 15 cm. Find the angle θ to 1 decimal place.
 
+[DIAGRAM: right-triangle | opposite=15 cm | adjacent=8 cm | angleLabel=? | unknown=angle]
+
 **Working:**
 Label: O = 15, A = 8.
 O and A are involved, so use tan.
@@ -66,6 +72,8 @@ tan θ = 15 ÷ 8 = 1.875
 ## Worked Example 3 — Exam Style
 
 **Question:** A 5 m ladder leans against a wall. The base of the ladder is 1.5 m from the wall. Find the angle the ladder makes with the ground. Give your answer to 1 decimal place.
+
+[DIAGRAM: right-triangle | adjacent=1.5 m | hypotenuse=5 m | angleLabel=? | unknown=angle | caption=The angle with the ground is between the ladder (hypotenuse) and the adjacent side]
 
 **Working:**
 The ladder is the hypotenuse (H = 5). The distance from the wall is the adjacent side to the angle at the ground (A = 1.5).

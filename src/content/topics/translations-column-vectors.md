@@ -27,6 +27,8 @@ A positive top number means move right; negative means move left. A positive bot
 
 [FORMULA: New coordinates: (x + a, y + b) where the vector is (a over b)]
 
+[DIAGRAM: transform | variant=translate | shape=-4,-3;-2,-3;-4,0 | dx=4 | dy=2 | caption=Every vertex slides by the same vector]
+
 ## Step-by-Step Method
 
 1. **Read the column vector.** The top number is the horizontal shift; the bottom number is the vertical shift.
@@ -37,6 +39,8 @@ A positive top number means move right; negative means move left. A positive bot
 ## Worked Example 1 — Foundation Level
 
 **Question:** Translate the triangle with vertices A(2, 3), B(5, 3), and C(5, 6) by the vector (3 over −2).
+
+[DIAGRAM: transform | variant=translate | shape=2,3;5,3;5,6 | dx=3 | dy=-2]
 
 **Working:**
 
@@ -53,6 +57,8 @@ C(5, 6) maps to C'(5 + 3, 6 − 2) = C'(8, 4)
 ## Worked Example 2 — Higher Level
 
 **Question:** Shape P is translated to shape Q. A vertex of P is at (−1, 4) and the corresponding vertex of Q is at (3, 1). Describe the translation fully.
+
+[DIAGRAM: transform | variant=translate | shape=-1,4 | dx=4 | dy=-3]
 
 **Working:**
 

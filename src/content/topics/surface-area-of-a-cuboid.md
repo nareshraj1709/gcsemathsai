@@ -31,6 +31,10 @@ The **surface area** of a 3D shape is the total area of all its faces. A cuboid 
 
 In the open-top version, only one of the two lw faces is counted — the base but not the missing top.
 
+[DIAGRAM: cuboid | length=l | width=w | height=h]
+
+[DIAGRAM: net | shape=cuboid | caption=Six rectangular faces in three matching pairs]
+
 ## Step-by-Step Method
 
 1. Identify the length (l), width (w), and height (h) of the cuboid.
@@ -42,6 +46,8 @@ In the open-top version, only one of the two lw faces is counted — the base bu
 ## Worked Example 1 — Foundation Level
 
 **Question:** Find the surface area of a cuboid with length 8 cm, width 5 cm, and height 3 cm.
+
+[DIAGRAM: cuboid | length=8 cm | width=5 cm | height=3 cm]
 
 **Working:**
 

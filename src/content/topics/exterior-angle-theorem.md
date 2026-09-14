@@ -27,6 +27,8 @@ If a triangle has interior angles A, B, and C, and the exterior angle at C is ca
 
 [FORMULA: D = A + B]
 
+[DIAGRAM: angle | variant=exterior | angleA=50 | angleB=70]
+
 ### Proof Using Angle Facts
 
 Step 1 — The interior angles of a triangle sum to 180°: A + B + C = 180°.
@@ -55,6 +57,8 @@ Step 5 — Therefore D = A + B.
 ## Worked Example 1 — Foundation Level
 
 **Question:** In triangle ABC, angle A = 55° and angle B = 70°. Side BC is extended to point D. Find the exterior angle ACD.
+
+[DIAGRAM: angle | variant=exterior | angleA=55 | angleB=70]
 
 **Working:**
 

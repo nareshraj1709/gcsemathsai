@@ -27,6 +27,8 @@ In two dimensions, Pythagoras' theorem finds the hypotenuse of a right-angled tr
 
 The space diagonal of a cuboid goes from one corner to the opposite corner, passing through the interior of the shape.
 
+[DIAGRAM: cuboid | length=a | width=b | height=c | showDiagonal=true | showFaceDiagonal=true | caption=The green dashed line is the base diagonal (step 1); the gold line is the space diagonal (step 2)]
+
 ## Step-by-Step Method
 
 1. **Draw or label the 3D shape** with all given dimensions.
@@ -40,6 +42,8 @@ The space diagonal of a cuboid goes from one corner to the opposite corner, pass
 This topic is Higher only, but this example uses simpler numbers.
 
 **Question:** A cuboid has dimensions 3 cm by 4 cm by 12 cm. Find the length of the space diagonal.
+
+[DIAGRAM: cuboid | length=3 cm | width=4 cm | height=12 cm | showDiagonal=true | showFaceDiagonal=true]
 
 **Working:**
 
@@ -57,6 +61,8 @@ Space diagonal = sqrt(5² + 12²) = sqrt(25 + 144) = sqrt(169) = 13 cm
 
 **Question:** A cuboid measures 6 cm by 8 cm by 10 cm. Find the space diagonal. Give your answer to 1 decimal place.
 
+[DIAGRAM: cuboid | length=6 cm | width=8 cm | height=10 cm | showDiagonal=true]
+
 **Working:**
 
 Using the direct formula:
@@ -68,6 +74,8 @@ d = sqrt(6² + 8² + 10²) = sqrt(36 + 64 + 100) = sqrt(200) = 14.142...
 ## Worked Example 3 — Exam Style
 
 **Question:** A square-based pyramid has a base edge of 8 cm and a slant height of 10 cm. Find the vertical height of the pyramid.
+
+[DIAGRAM: right-triangle | opposite=? | adjacent=4 cm | hypotenuse=10 cm | hideAngle=true | unknown=opposite | caption=The hidden right-angled triangle: vertical height, half the base edge, and the slant height]
 
 **Working:**
 

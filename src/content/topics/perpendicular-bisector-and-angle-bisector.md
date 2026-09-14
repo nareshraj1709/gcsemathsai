@@ -29,6 +29,10 @@ An **angle bisector** is a line that divides an angle exactly in half. Every poi
 
 [FORMULA: Any point on the perpendicular bisector of AB is equidistant from A and B]
 
+[DIAGRAM: construction | variant=perpendicular-bisector]
+
+[DIAGRAM: construction | variant=angle-bisector]
+
 ## Step-by-Step Method
 
 ### Constructing a Perpendicular Bisector
@@ -51,6 +55,8 @@ An **angle bisector** is a line that divides an angle exactly in half. Every poi
 
 **Question:** Construct the perpendicular bisector of a line segment AB that is 8 cm long.
 
+[DIAGRAM: construction | variant=perpendicular-bisector | caption=AB = 8 cm]
+
 **Working:**
 
 Draw AB = 8 cm. Set compass to about 5 cm (more than half of 8 cm). Place compass on A and draw arcs above and below. Keep the same compass width, place on B, and draw arcs above and below. Mark the two intersection points and draw a straight line through them. This line passes through the midpoint of AB (4 cm from each end) at 90°.
@@ -60,6 +66,8 @@ Draw AB = 8 cm. Set compass to about 5 cm (more than half of 8 cm). Place compas
 ## Worked Example 2 — Higher Level
 
 **Question:** Construct the bisector of an angle of 70°.
+
+[DIAGRAM: construction | variant=angle-bisector | caption=Each half of the 70° angle is 35°]
 
 **Working:**
 

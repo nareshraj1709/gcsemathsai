@@ -31,6 +31,8 @@ Once the sides are labelled, you choose the ratio that connects the known side t
 
 [FORMULA: tan θ = Opposite ÷ Adjacent (TOA)]
 
+[DIAGRAM: right-triangle | opposite=O | adjacent=A | hypotenuse=H | angleLabel=θ° | caption=O and A are defined relative to the angle θ — swap the angle and they swap too]
+
 ## Step-by-Step Method
 
 1. Label the sides O, A, and H relative to the given angle.
@@ -43,6 +45,8 @@ Once the sides are labelled, you choose the ratio that connects the known side t
 ## Worked Example 1 — Foundation Level
 
 **Question:** In a right-angled triangle, the angle is 40° and the hypotenuse is 12 cm. Find the side opposite the 40° angle. Give your answer to 1 decimal place.
+
+[DIAGRAM: right-triangle | opposite=? | hypotenuse=12 cm | angleLabel=40° | unknown=opposite]
 
 **Working:**
 Label: H = 12, O = ?, angle = 40°.
@@ -57,6 +61,8 @@ O = 12 × 0.6428
 
 **Question:** In a right-angled triangle, the angle is 62° and the side opposite is 15 cm. Find the hypotenuse. Give your answer to 3 significant figures.
 
+[DIAGRAM: right-triangle | opposite=15 cm | hypotenuse=? | angleLabel=62° | unknown=hypotenuse]
+
 **Working:**
 Label: O = 15, H = ?, angle = 62°.
 O and H are involved, so use sin (SOH).
@@ -69,6 +75,8 @@ H = 15 ÷ 0.8829
 ## Worked Example 3 — Exam Style
 
 **Question:** A ramp makes an angle of 25° with the horizontal ground. The ramp is 8 m long. How high does the ramp rise vertically? Give your answer to 1 decimal place.
+
+[DIAGRAM: right-triangle | opposite=? | hypotenuse=8 m | angleLabel=25° | unknown=opposite | caption=The ramp is the hypotenuse; the vertical rise is opposite the 25° angle]
 
 **Working:**
 The ramp is the hypotenuse (H = 8 m). The vertical rise is opposite the 25° angle (O = ?).

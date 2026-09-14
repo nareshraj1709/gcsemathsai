@@ -27,6 +27,12 @@ Knowing the properties of 3D shapes — faces, edges, and vertices — is essent
 
 This formula works for all **convex polyhedra** (3D shapes with flat faces and no indentations). It does not apply to shapes with curved surfaces like cylinders, cones, or spheres.
 
+[DIAGRAM: cuboid | length=l | width=w | height=h | caption=A cuboid: 6 faces, 12 edges, 8 vertices]
+
+[DIAGRAM: solid3d | shape=pyramid | height=h | slant=l | caption=A square-based pyramid: 5 faces, 8 edges, 5 vertices]
+
+[DIAGRAM: solid3d | shape=triangular-prism | base=base | length=length | caption=A triangular prism: 5 faces, 9 edges, 6 vertices]
+
 ### Key 3D Shapes
 
 | Shape | Faces | Edges | Vertices | F + V − E |
@@ -58,6 +64,8 @@ This formula works for all **convex polyhedra** (3D shapes with flat faces and n
 ## Worked Example 1 — Foundation Level
 
 **Question:** A shape has 6 faces and 8 vertices. Use Euler's formula to find the number of edges. Name the shape.
+
+[DIAGRAM: cuboid | length=l | width=w | height=h]
 
 **Working:**
 

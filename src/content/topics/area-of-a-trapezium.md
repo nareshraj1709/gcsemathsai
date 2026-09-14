@@ -29,6 +29,8 @@ The area formula works because a trapezium can be thought of as the average of t
 
 [FORMULA: For a compound shape containing a trapezium, find the trapezium area separately and add or subtract as needed]
 
+[DIAGRAM: shape | variant=trapezium | a=a | b=b | height=h]
+
 ## Step-by-Step Method
 
 1. Identify the two parallel sides (a and b) — these are the sides that run in the same direction.
@@ -38,6 +40,8 @@ The area formula works because a trapezium can be thought of as the average of t
 ## Worked Example 1 — Foundation Level
 
 **Question:** A trapezium has parallel sides of 6 cm and 10 cm and a perpendicular height of 4 cm. Find its area.
+
+[DIAGRAM: shape | variant=trapezium | a=6 cm | b=10 cm | height=4 cm]
 
 **Working:**
 A = ½(a + b) × h

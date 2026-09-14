@@ -41,6 +41,8 @@ Both approaches — adding simpler areas or subtracting cut-outs — are equally
 
 **Question:** An L-shaped room has overall dimensions 10 m by 8 m. A 4 m by 3 m rectangle is missing from one corner. Find the area of the room.
 
+[DIAGRAM: shape | variant=lshape | width=10 | height=8 | cutWidth=4 | cutHeight=3]
+
 **Working:**
 Full rectangle area = 10 × 8 = 80 m²
 Missing rectangle area = 4 × 3 = 12 m²
@@ -51,6 +53,8 @@ L-shape area = 80 − 12 = 68
 ## Worked Example 2 — Higher Level
 
 **Question:** A shape consists of a rectangle measuring 14 cm by 6 cm with a semicircle removed from one of the longer sides. The semicircle has a diameter of 6 cm. Find the shaded area to 1 decimal place.
+
+[DIAGRAM: shape | variant=rectangle-semicircle-cutout | width=14 | height=6 | diameter=6]
 
 **Working:**
 Rectangle area = 14 × 6 = 84 cm²
@@ -63,6 +67,8 @@ Shaded area = 84 − 14.137... = 69.862...
 ## Worked Example 3 — Exam Style
 
 **Question:** A shape is made from a trapezium on top of a rectangle. The rectangle is 12 cm wide and 5 cm tall. The trapezium has parallel sides of 12 cm (bottom, shared with the rectangle) and 8 cm (top), with a perpendicular height of 4 cm. Find the total area.
+
+[DIAGRAM: shape | variant=rectangle-plus-trapezium | width=12 | height=5 | top=8 | trapHeight=4]
 
 **Working:**
 Rectangle area = 12 × 5 = 60 cm²

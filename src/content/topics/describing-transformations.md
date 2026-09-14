@@ -56,6 +56,8 @@ The shapes are mirror images. The midpoint of (1, 2) and (5, 2) is (3, 2). The m
 
 **Question:** Triangle P has vertices at (2, 1), (4, 1), (4, 3). Triangle Q has vertices at (−1, 2), (−1, 4), (−3, 4). Fully describe the single transformation that maps P to Q.
 
+[DIAGRAM: transform | variant=rotate | shape=2,1;4,1;4,3 | cx=0 | cy=0 | angle=90 | caption=Testing a 90° anticlockwise rotation about the origin]
+
 **Working:**
 The triangle has been rotated. The orientation has changed and the shape is congruent. Testing 90° anticlockwise about the origin: (2, 1) → (−1, 2), (4, 1) → (−1, 4), (4, 3) → (−3, 4). All points match.
 

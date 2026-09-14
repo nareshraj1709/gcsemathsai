@@ -24,6 +24,8 @@ A **vector** is a quantity that has both magnitude and direction. In GCSE Maths,
 
 The vector from point A to point B is written as **AB** (with an arrow above). The reverse journey, from B to A, is **−AB**.
 
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | caption=OA = a, OB = b, so AB = b − a]
+
 ### Key Concepts
 
 - **Equal vectors** have the same magnitude and direction. They do not need to start at the same point.
@@ -66,6 +68,8 @@ The vector from point A to point B is written as **AB** (with an arrow above). T
 ## Worked Example 1 — Higher Level
 
 **Question:** OA = **a** and OB = **b**. M is the midpoint of AB. Find the vector OM in terms of **a** and **b**.
+
+[DIAGRAM: vector-triangle | labelA=a | labelB=b | showMidpoint=true | caption=M is the midpoint of AB — OM is the gold dashed route]
 
 **Working:**
 

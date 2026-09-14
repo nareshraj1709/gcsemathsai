@@ -29,6 +29,12 @@ When a straight line (called a transversal) crosses two parallel lines, it creat
 
 **Alternate angles** sit on opposite sides of the transversal, between the parallel lines — trace the letter Z or a backwards Z to spot them. **Corresponding angles** sit in the same position at each intersection — trace the letter F to spot them. **Co-interior angles** sit on the same side of the transversal, between the parallel lines — they form a C or U shape and always sum to 180°.
 
+[DIAGRAM: angle | variant=parallel | pairType=alternate | known=65 | caption=Alternate (Z) angles — equal]
+
+[DIAGRAM: angle | variant=parallel | pairType=corresponding | known=65 | caption=Corresponding (F) angles — equal]
+
+[DIAGRAM: angle | variant=parallel | pairType=co-interior | known=65 | caption=Co-interior (C/U) angles — sum to 180°]
+
 ## Step-by-Step Method
 
 1. **Confirm the lines are parallel.** Look for arrows on the diagram. The rules only apply to parallel lines.
@@ -41,6 +47,8 @@ When a straight line (called a transversal) crosses two parallel lines, it creat
 
 **Question:** A transversal crosses two parallel lines. One of the alternate angles is 72°. Find the other.
 
+[DIAGRAM: angle | variant=parallel | pairType=alternate | known=72]
+
 **Working:**
 
 Alternate angles are equal (Z-angles).
@@ -52,6 +60,8 @@ The other angle = 72°.
 ## Worked Example 2 — Higher Level
 
 **Question:** A transversal crosses two parallel lines. An angle of (3x + 15)° and a co-interior angle of (5x − 7)° are marked. Find x and both angles.
+
+[DIAGRAM: angle | variant=parallel | pairType=co-interior | known=79.5 | caption=These two angles sum to 180°]
 
 **Working:**
 

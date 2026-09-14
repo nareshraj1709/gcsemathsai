@@ -39,6 +39,8 @@ To fully describe an enlargement you must state:
 
 [FORMULA: Volume scale factor = (linear scale factor)³]
 
+[DIAGRAM: transform | variant=enlarge | shape=1,1;2,1;1,2 | cx=0 | cy=0 | scaleFactor=2]
+
 ## Step-by-Step Method
 
 ### Performing an Enlargement
@@ -63,6 +65,8 @@ To fully describe an enlargement you must state:
 ## Worked Example 1 — Foundation Level
 
 **Question:** Enlarge triangle ABC with vertices A(1, 1), B(3, 1), and C(1, 3) by scale factor 2 from the centre of enlargement (0, 0).
+
+[DIAGRAM: transform | variant=enlarge | shape=1,1;3,1;1,3 | cx=0 | cy=0 | scaleFactor=2]
 
 **Working:**
 

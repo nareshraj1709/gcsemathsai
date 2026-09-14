@@ -31,6 +31,8 @@ Prism questions at GCSE range from straightforward triangular prisms on Foundati
 
 [FORMULA: For a triangular prism: V = ½ × base × height × length]
 
+[DIAGRAM: solid3d | shape=triangular-prism | base=base | length=length]
+
 ## Step-by-Step Method
 
 1. Identify the cross-section — the 2D shape that stays the same along the length of the prism.
@@ -42,6 +44,8 @@ Prism questions at GCSE range from straightforward triangular prisms on Foundati
 
 **Question:** A triangular prism has a triangular cross-section with base 8 cm and perpendicular height 5 cm. The prism is 12 cm long. Find its volume.
 
+[DIAGRAM: solid3d | shape=triangular-prism | base=8 cm | length=12 cm]
+
 **Working:**
 Cross-section area = ½ × 8 × 5 = 20 cm²
 Volume = 20 × 12 = 240
@@ -51,6 +55,8 @@ Volume = 20 × 12 = 240
 ## Worked Example 2 — Higher Level
 
 **Question:** A prism has a trapezoidal cross-section. The trapezium has parallel sides of 6 cm and 10 cm and a perpendicular height of 4 cm. The prism is 15 cm long. Find its volume.
+
+[DIAGRAM: shape | variant=trapezium | a=6 cm | b=10 cm | height=4 cm | caption=The cross-section — this shape is repeated along the full 15 cm length]
 
 **Working:**
 Cross-section area = ½(6 + 10) × 4 = ½ × 16 × 4 = 32 cm²

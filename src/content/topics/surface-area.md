@@ -24,6 +24,8 @@ Surface area is the **total area of all the outer faces** of a three-dimensional
 **Cuboid:**
 $$SA = 2(lw + lh + wh)$$
 
+[DIAGRAM: cuboid | length=l | width=w | height=h]
+
 **Cube:**
 $$SA = 6s^2$$
 
@@ -34,12 +36,18 @@ $$SA = 2 \times \text{cross-sectional area} + \text{sum of rectangular faces}$$
 - Curved surface area: $CSA = 2\pi rh$
 - Total surface area: $SA = 2\pi rh + 2\pi r^2$
 
+[DIAGRAM: solid3d | shape=cylinder | radius=r | height=h]
+
 **Cone:**
 - Curved surface area: $CSA = \pi rl$, where l is the slant height
 - Total surface area: $SA = \pi rl + \pi r^2$
 
+[DIAGRAM: solid3d | shape=cone | radius=r | height=h | slant=l]
+
 **Sphere:**
 $$SA = 4\pi r^2$$
+
+[DIAGRAM: solid3d | shape=sphere | radius=r]
 
 **Hemisphere:**
 $$SA = 3\pi r^2$$ (curved surface + flat circle)
@@ -61,6 +69,10 @@ On AQA and Edexcel formula sheets, the curved surface area of a cone (πrl) and 
 ### Nets
 
 Imagining a shape **unfolded into its net** can help. A cylinder unfolds into two circles and a rectangle. A cone unfolds into a circle and a sector.
+
+[DIAGRAM: net | shape=cylinder]
+
+[DIAGRAM: net | shape=cone]
 
 ---
 

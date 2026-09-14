@@ -21,11 +21,19 @@ Circle theorems are a set of rules that describe the relationship between angles
 
 ### The Theorems You Must Know
 
+[DIAGRAM: circle-theorem | theorem=centre-circumference | centreAngle=130]
+
 1. **The angle at the centre is twice the angle at the circumference** when both are subtended by the same arc.
 2. **The angle in a semicircle is 90°.** Any angle subtended by a diameter at the circumference is a right angle.
+
+[DIAGRAM: circle-theorem | theorem=semicircle]
 3. **Angles in the same segment are equal.** Angles subtended by the same chord on the same side of the chord are equal.
 4. **Opposite angles in a cyclic quadrilateral sum to 180°.** A cyclic quadrilateral has all four vertices on the circumference.
+
+[DIAGRAM: circle-theorem | theorem=cyclic-quad | angleA=100]
 5. **The tangent to a circle is perpendicular to the radius at the point of contact.** The angle between a tangent and a radius is 90°.
+
+[DIAGRAM: circle | variant=tangent | radiusLabel=r]
 6. **Two tangents drawn from an external point are equal in length.**
 7. **The alternate segment theorem.** The angle between a tangent and a chord equals the angle in the alternate segment.
 8. **The perpendicular from the centre to a chord bisects the chord.**
@@ -50,6 +58,8 @@ Circle theorems are a set of rules that describe the relationship between angles
 ## Worked Example 1 — Higher Level
 
 **Question:** Points A, B, and C lie on the circumference of a circle with centre O. Angle AOB = 130°. Find angle ACB.
+
+[DIAGRAM: circle-theorem | theorem=centre-circumference | centreAngle=130 | caption=Angle ACB is what we're finding]
 
 **Working:**
 

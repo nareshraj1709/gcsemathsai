@@ -58,6 +58,8 @@ To find the angle between a line and a plane:
 
 **Question:** A cuboid has length 8 cm, width 6 cm, and height 5 cm. Calculate the length of the space diagonal AG. Then find the angle that AG makes with the base ABCD. Give your answers to 1 decimal place.
 
+[DIAGRAM: cuboid | length=8 cm | width=6 cm | height=5 cm | showDiagonal=true | showFaceDiagonal=true]
+
 **Working:**
 
 Step 1 — Find the diagonal of the base AC.
@@ -73,6 +75,8 @@ AG² = AC² + CG² = 100 + 25 = 125
 AG = √125 = 11.2 cm (1 d.p.)
 
 Step 3 — Find the angle between AG and the base.
+
+[DIAGRAM: right-triangle | opposite=5 cm | adjacent=10 cm | hypotenuse=11.2 cm | angleLabel=? | unknown=angle | caption=Triangle ACG extracted from the cuboid — a flat 2D triangle you can solve normally]
 
 The angle is at A in triangle ACG.
 tan θ = opposite / adjacent = CG / AC = 5 / 10 = 0.5
@@ -96,6 +100,8 @@ Step 2 — Identify the right-angled triangle.
 The triangle is formed by: the vertical height (12 cm), the half-diagonal of the base (√50 cm), and the slant edge.
 
 Step 3 — Find the angle between the slant edge and the base.
+
+[DIAGRAM: right-triangle | opposite=12 cm | adjacent=√50 cm | hypotenuse=? | angleLabel=? | unknown=angle | caption=Height, half-diagonal, and slant edge form the right-angled triangle inside the pyramid]
 
 tan θ = opposite / adjacent = 12 / √50
 tan θ = 12 / 7.0711…

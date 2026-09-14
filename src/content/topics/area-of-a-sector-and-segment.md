@@ -34,6 +34,8 @@ A **minor** sector or segment is the smaller one (angle less than 180°); a **ma
 
 The triangle formed inside a sector has two sides equal to the radius (r) with the included angle θ, so you use Area = ½ × r × r × sin θ = ½r² sin θ.
 
+[DIAGRAM: circle | variant=segment | angle=120 | caption=Segment area = sector area − triangle area (the gold region minus the triangle inside it)]
+
 ## Step-by-Step Method
 
 ### Finding the Area of a Sector
@@ -54,6 +56,8 @@ This topic is Higher only, but this example uses a straightforward sector.
 
 **Question:** Find the area of a sector with radius 9 cm and angle 80°. Give your answer to 1 decimal place.
 
+[DIAGRAM: circle | variant=sector | angle=80 | radiusLabel=9 cm]
+
 **Working:**
 
 Step 1 — Area = (80/360) × π × 9².
@@ -67,6 +71,8 @@ Step 3 — 18π ≈ 56.5 cm².
 ## Worked Example 2 — Higher Level
 
 **Question:** Find the area of the minor segment of a circle with radius 10 cm and central angle 120°. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=segment | angle=120]
 
 **Working:**
 

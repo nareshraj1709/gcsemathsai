@@ -36,6 +36,8 @@ At every vertex: **interior angle + exterior angle = 180°** (they form a straig
 
 A **regular polygon** has all sides equal and all angles equal. For irregular polygons, you can only find the sum of the angles — individual angles will differ.
 
+[DIAGRAM: angle | variant=polygon | sides=5 | caption=A regular pentagon, with one interior and one exterior angle marked]
+
 ### Common Polygon Names
 
 | Sides | Name | Sum of interior angles |

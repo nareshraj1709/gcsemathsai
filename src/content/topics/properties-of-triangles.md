@@ -63,6 +63,8 @@ A triangle can be described by both classifications — for example, a "right-an
 
 **Question:** A triangle has sides of 5 cm, 5 cm, and 7 cm. Classify the triangle and find all its angles given that the angle opposite the 7 cm side is 88.9°.
 
+[DIAGRAM: triangle | sideA=7 cm | sideB=5 cm | sideC=5 cm | angleA=88.9 | angleB=45.55 | angleC=45.55 | caption=The two equal sides make the base angles equal — a defining property of isosceles triangles]
+
 **Working:**
 
 Step 1 — Two sides are equal (5 cm and 5 cm), so the triangle is **isosceles**.

@@ -29,6 +29,8 @@ The sine rule also has an ambiguous case: when you are given two sides and a non
 
 [FORMULA: sin A/a = sin B/b = sin C/c (for finding angles)]
 
+[DIAGRAM: triangle | sideA=a | sideB=b | sideC=c | angleA=A | angleB=B | caption=Each side sits opposite its matching angle — a matched pair is what lets you use the sine rule]
+
 ## Step-by-Step Method
 
 1. Label the triangle so that side a is opposite angle A, side b is opposite angle B, etc.
@@ -41,6 +43,8 @@ The sine rule also has an ambiguous case: when you are given two sides and a non
 ## Worked Example 1 — Foundation Level
 
 **Question:** In triangle ABC, angle A = 50°, angle B = 70° and side a = 10 cm. Find side b to 1 decimal place.
+
+[DIAGRAM: triangle | sideA=10 cm | angleA=50 | angleB=70 | sideB=? | unknown=b | caption=Side a and angle A are the complete pair — side b is what we're finding]
 
 **Working:**
 Use the sine rule for finding a side:
@@ -56,6 +60,8 @@ b = 13.055 × 0.9397
 
 **Question:** In triangle PQR, side p = 14 cm, side q = 9 cm and angle P = 80°. Find angle Q to 1 decimal place.
 
+[DIAGRAM: triangle | sideA=14 cm | sideB=9 cm | angleA=80 | angleB=? | unknown=B | caption=P and Q here map to the triangle's A and B — side p/angle P is the complete pair]
+
 **Working:**
 Use the sine rule for finding an angle:
 sin P/p = sin Q/q
@@ -70,6 +76,8 @@ Q = sin⁻¹(0.6331)
 ## Worked Example 3 — Exam Style
 
 **Question:** Two ships leave a port. Ship A sails on a bearing of 060° for 15 km. Ship B sails on a bearing of 120° for 20 km. The angle between the two paths at the port is 60°. The angle at Ship B is 42°. Find the distance between the two ships to 1 decimal place.
+
+[DIAGRAM: triangle | angleA=60 | angleB=42 | angleC=78 | sideB=15 km | sideA=? | unknown=a | caption=The port angle sits opposite the distance we want between the ships]
 
 **Working:**
 Angle at Ship A = 180° − 60° − 42° = 78°.

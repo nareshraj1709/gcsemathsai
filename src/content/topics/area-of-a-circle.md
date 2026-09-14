@@ -31,6 +31,8 @@ For semicircles (half circles) and quarter circles, you calculate the full circl
 
 [FORMULA: Quarter circle area = ¼ pi r²]
 
+[DIAGRAM: circle | variant=basic | radiusLabel=r]
+
 ## Step-by-Step Method
 
 1. Check whether you are given the radius or the diameter. If given the diameter, halve it to get the radius.
@@ -40,6 +42,8 @@ For semicircles (half circles) and quarter circles, you calculate the full circl
 ## Worked Example 1 — Foundation Level
 
 **Question:** A circle has a radius of 5 cm. Find its area. Give your answer to 1 decimal place.
+
+[DIAGRAM: circle | variant=basic | radiusLabel=5 cm]
 
 **Working:**
 A = pi r²

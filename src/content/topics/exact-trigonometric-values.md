@@ -35,7 +35,11 @@ Instead of using a calculator, you must know the exact (surd or fraction) values
 
 **The 45-45-90 triangle:** Take a right-angled isosceles triangle with two short sides of length 1. By Pythagoras, the hypotenuse = sqrt(2). Then sin 45° = 1/sqrt(2) and cos 45° = 1/sqrt(2).
 
+[DIAGRAM: right-triangle | opposite=1 | adjacent=1 | hypotenuse=√2 | angleLabel=45° | caption=The 45-45-90 triangle: two equal legs give sin 45° = cos 45° = 1/√2]
+
 **The 30-60-90 triangle:** Take an equilateral triangle with side length 2 and cut it in half vertically. The resulting right-angled triangle has a hypotenuse of 2, a short side of 1, and a remaining side of sqrt(3) (by Pythagoras). This gives sin 30° = 1/2, cos 30° = sqrt(3)/2, sin 60° = sqrt(3)/2, and cos 60° = 1/2.
+
+[DIAGRAM: right-triangle | opposite=√3 | adjacent=1 | hypotenuse=2 | angleLabel=60° | caption=The 30-60-90 triangle, made by halving an equilateral triangle of side 2]
 
 ## Step-by-Step Method
 

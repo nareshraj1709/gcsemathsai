@@ -34,6 +34,10 @@ The **total surface area** is the sum of all five face areas.
 
 Each rectangular face has one dimension equal to the **length** (or depth) of the prism and the other equal to one **side of the triangular cross-section**.
 
+[DIAGRAM: solid3d | shape=triangular-prism | base=base | length=length]
+
+[DIAGRAM: net | shape=triangular-prism]
+
 ## Step-by-Step Method
 
 1. Sketch or identify the triangular cross-section. Note its base and perpendicular height.
@@ -46,6 +50,8 @@ Each rectangular face has one dimension equal to the **length** (or depth) of th
 ## Worked Example 1 — Foundation Level
 
 **Question:** A triangular prism has a cross-section that is a right-angled triangle with base 6 cm and height 8 cm. The hypotenuse is 10 cm and the prism length is 15 cm. Find the total surface area.
+
+[DIAGRAM: solid3d | shape=triangular-prism | base=6 cm | length=15 cm]
 
 **Working:**
 

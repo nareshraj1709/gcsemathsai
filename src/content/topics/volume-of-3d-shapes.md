@@ -27,23 +27,33 @@ $$V = s^3$$
 **Cuboid:**
 $$V = l \times w \times h$$
 
+[DIAGRAM: cuboid | length=l | width=w | height=h]
+
 **Prism (any):**
 $$V = \text{cross-sectional area} \times \text{length}$$
 
 **Cylinder:**
 $$V = \pi r^2 h$$
 
+[DIAGRAM: solid3d | shape=cylinder | radius=r | height=h]
+
 **Cone:**
 $$V = \frac{1}{3}\pi r^2 h$$
 
+[DIAGRAM: solid3d | shape=cone | radius=r | height=h | slant=l]
+
 **Sphere:**
 $$V = \frac{4}{3}\pi r^3$$
+
+[DIAGRAM: solid3d | shape=sphere | radius=r]
 
 **Hemisphere:**
 $$V = \frac{2}{3}\pi r^3$$
 
 **Pyramid:**
 $$V = \frac{1}{3} \times \text{base area} \times h$$
+
+[DIAGRAM: solid3d | shape=pyramid | height=h | slant=l]
 
 ### Which Formulas Are Given?
 

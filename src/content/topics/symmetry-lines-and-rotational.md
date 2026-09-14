@@ -26,6 +26,8 @@ Symmetry is a fundamental GCSE Maths topic tested at both Foundation and Higher 
 
 [FORMULA: A regular polygon with n sides has n lines of symmetry and rotational symmetry of order n]
 
+[DIAGRAM: symmetry | sides=6 | caption=A regular hexagon: every dashed line is a line of symmetry]
+
 | Shape | Lines of symmetry | Order of rotational symmetry |
 |-------|-------------------|------------------------------|
 | Equilateral triangle | 3 | 3 |
@@ -55,6 +57,8 @@ Symmetry is a fundamental GCSE Maths topic tested at both Foundation and Higher 
 ## Worked Example 1 — Foundation Level
 
 **Question:** State the number of lines of symmetry and the order of rotational symmetry of a regular pentagon.
+
+[DIAGRAM: symmetry | sides=5]
 
 **Working:**
 

@@ -29,6 +29,8 @@ The key to applying these formulas correctly is identifying the correct pair: th
 
 [FORMULA: A = ½ab sin C, where a and b are two sides and C is the included angle between them (Higher tier)]
 
+[DIAGRAM: shape | variant=triangle-base-height | base=base | height=height]
+
 ## Step-by-Step Method
 
 1. Identify the base — any side of the triangle can be chosen as the base.
@@ -38,6 +40,8 @@ The key to applying these formulas correctly is identifying the correct pair: th
 ## Worked Example 1 — Foundation Level
 
 **Question:** A triangle has a base of 10 cm and a perpendicular height of 6 cm. Find its area.
+
+[DIAGRAM: shape | variant=triangle-base-height | base=10 cm | height=6 cm]
 
 **Working:**
 A = ½ × base × height
@@ -50,6 +54,8 @@ A = 30
 ## Worked Example 2 — Higher Level
 
 **Question:** Triangle PQR has PQ = 9 cm, PR = 12 cm, and the included angle P = 40°. Find the area correct to 1 decimal place.
+
+[DIAGRAM: triangle | sideB=12 cm | sideC=9 cm | angleA=40]
 
 **Working:**
 A = ½ab sin C

@@ -29,6 +29,8 @@ After subtracting, you take the square root to find the missing side. You should
 
 [FORMULA: a = √(c² − b²)]
 
+[DIAGRAM: right-triangle | opposite=a | adjacent=b | hypotenuse=c | hideAngle=true | unknown=opposite | caption=c is the known hypotenuse, b the known shorter side — a is what we're finding]
+
 ## Step-by-Step Method
 
 1. Identify the hypotenuse (c) — the longest side, opposite the right angle.
@@ -41,6 +43,8 @@ After subtracting, you take the square root to find the missing side. You should
 ## Worked Example 1 — Foundation Level
 
 **Question:** A right-angled triangle has a hypotenuse of 13 cm and one side of 5 cm. Find the other side.
+
+[DIAGRAM: right-triangle | opposite=? | adjacent=5 cm | hypotenuse=13 cm | hideAngle=true | unknown=opposite]
 
 **Working:**
 a² = c² − b²
@@ -55,6 +59,8 @@ a = √144
 
 **Question:** A right-angled triangle has a hypotenuse of 20 cm and one leg of 11 cm. Find the other leg to 1 decimal place.
 
+[DIAGRAM: right-triangle | opposite=? | adjacent=11 cm | hypotenuse=20 cm | hideAngle=true | unknown=opposite]
+
 **Working:**
 a² = 20² − 11²
 a² = 400 − 121
@@ -66,6 +72,8 @@ a = √279
 ## Worked Example 3 — Exam Style
 
 **Question:** A ladder is 6.5 m long and leans against a vertical wall. The foot of the ladder is 2.5 m from the base of the wall. How high up the wall does the ladder reach?
+
+[DIAGRAM: right-triangle | opposite=? | adjacent=2.5 m | hypotenuse=6.5 m | hideAngle=true | unknown=opposite | caption=The ladder is the hypotenuse; the height up the wall is the unknown opposite side]
 
 **Working:**
 The ladder is the hypotenuse. The distance from the wall is one shorter side. The height is the other.

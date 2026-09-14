@@ -25,6 +25,10 @@ A **bearing** is an angle that describes the direction of one point from another
 
 If the angle is less than 100°, you add a leading zero to make it three digits. For example, an angle of 72° is written as a bearing of **072°**.
 
+[DIAGRAM: bearing | bearing=72 | fromLabel=A | toLabel=B | caption=The bearing of B from A: turn clockwise from north until facing B]
+
+
+
 ### Key Vocabulary
 
 - **Bearing of B from A** — stand at A, face north, and turn clockwise until you face B. The angle you turn through is the bearing.
@@ -72,6 +76,8 @@ Since all north lines are parallel, when you draw north lines at different point
 
 **Question:** The bearing of town B from town A is 135°. Find the bearing of town A from town B.
 
+[DIAGRAM: bearing | bearing=135 | fromLabel=A | toLabel=B | caption=The bearing of B from A is 135°]
+
 **Working:**
 
 Step 1 — The bearing of B from A is 135°. Since 135° < 180°, the back bearing is:
@@ -84,6 +90,8 @@ Step 2 — Check: 315° is between 0° and 360° ✓ and is a three-figure numbe
 ## Worked Example 2 — Higher Level
 
 **Question:** A ship sails from port P on a bearing of 060° for 12 km to point Q. It then sails on a bearing of 150° for 9 km to point R. Find the direct distance from P to R and the bearing of R from P. Give your answers to 1 decimal place.
+
+[DIAGRAM: right-triangle | opposite=9 km | adjacent=12 km | hypotenuse=? | angleLabel=90° | unknown=hypotenuse | caption=The extracted triangle PQR — the two bearings turn out to make a right angle at Q]
 
 **Working:**
 

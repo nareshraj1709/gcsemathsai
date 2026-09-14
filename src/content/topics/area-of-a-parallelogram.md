@@ -25,6 +25,8 @@ This is why A = base × perpendicular height gives the same result as the area o
 
 Diagrams often show a dashed line from one vertex perpendicular to the base — this dashed line is the height you need.
 
+[DIAGRAM: shape | variant=parallelogram | base=base | height=height]
+
 ### Key Formulas
 
 [FORMULA: A = base × perpendicular height]
@@ -40,6 +42,8 @@ Diagrams often show a dashed line from one vertex perpendicular to the base — 
 ## Worked Example 1 — Foundation Level
 
 **Question:** A parallelogram has a base of 8 cm and a perpendicular height of 5 cm. Find its area.
+
+[DIAGRAM: shape | variant=parallelogram | base=8 cm | height=5 cm]
 
 **Working:**
 A = base × height

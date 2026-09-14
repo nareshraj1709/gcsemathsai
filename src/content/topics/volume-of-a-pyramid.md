@@ -29,6 +29,8 @@ Understanding why the factor is ⅓ is helpful: three identical pyramids can be 
 
 [FORMULA: For a square-based pyramid with base side s: base area = s², so V = ⅓ × s² × h]
 
+[DIAGRAM: solid3d | shape=pyramid | height=h | slant=l]
+
 ## Step-by-Step Method
 
 1. Calculate the area of the base — use the appropriate area formula for the base shape (square, rectangle, triangle, etc.).
@@ -38,6 +40,8 @@ Understanding why the factor is ⅓ is helpful: three identical pyramids can be 
 ## Worked Example 1 — Foundation Level
 
 **Question:** A square-based pyramid has a base with side length 6 cm and a perpendicular height of 10 cm. Find its volume.
+
+[DIAGRAM: solid3d | shape=pyramid | height=10 cm]
 
 **Working:**
 Base area = 6² = 36 cm²

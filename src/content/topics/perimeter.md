@@ -24,6 +24,8 @@ The perimeter is the **total distance around the outside** of a two-dimensional 
 **Rectangle:**
 $$P = 2(l + w)$$
 
+[DIAGRAM: shape | variant=rectangle | base=l | height=w]
+
 **Square:**
 $$P = 4s$$
 
@@ -76,6 +78,8 @@ In many questions, not all sides are labelled. Use these strategies:
 
 *An L-shaped garden has dimensions as shown: the overall length is 14 m, overall width is 9 m, and the cut-out rectangle is 5 m by 4 m. Find the perimeter.*
 
+[DIAGRAM: shape | variant=lshape | width=14 | height=9 | cutWidth=5 | cutHeight=4]
+
 **Step 1:** Work out any missing sides.
 - The horizontal lengths are: 14 m (top), 5 m (step in), and 14 − 5 = 9 m (bottom section).
 - The vertical lengths are: 9 m (left), 4 m (step down), and 9 − 4 = 5 m (right section).
@@ -89,6 +93,8 @@ In many questions, not all sides are labelled. Use these strategies:
 ## Worked Example 2 — Higher Level
 
 *A shape is made from a rectangle (10 cm by 6 cm) with a semicircle added to one of the shorter ends. Find the perimeter of the shape. Give your answer to 1 decimal place.*
+
+[DIAGRAM: shape | variant=rectangle-semicircle-end | width=10 | height=6]
 
 **Step 1:** Identify the outer edges.
 - Two long sides of the rectangle: 10 cm each.

@@ -29,6 +29,8 @@ When two or more angles sit along a straight line, they form a half-turn. When a
 
 Vertically opposite angles are formed when two straight lines cross. The pairs of angles directly across from each other are always equal.
 
+[DIAGRAM: angle | variant=point | angles=65,48,67,180 | caption=Angles at a point (or split across a straight line) always add to a fixed total]
+
 ## Step-by-Step Method
 
 1. **Identify the type of angle arrangement.** Decide whether the angles lie on a straight line, meet at a point, or are vertically opposite.
@@ -56,6 +58,8 @@ x = 180 − 113 = 67
 
 **Question:** Four angles meet at a point. They are 2x°, 3x°, x + 40°, and 120°. Find x.
 
+[DIAGRAM: angle | variant=point | angles=66.7,100,73.3,120 | caption=Four angles meeting at a point always sum to 360°]
+
 **Working:**
 
 Angles at a point sum to 360°.
@@ -73,6 +77,8 @@ x = 33.3° (1 d.p.)
 ## Worked Example 3 — Exam Style
 
 **Question:** Two straight lines cross. One of the four angles formed is labelled (3y − 10)° and the vertically opposite angle is labelled (2y + 25)°. Find the value of y and the size of each angle.
+
+[DIAGRAM: angle | variant=point | angles=95,85,95,85 | caption=Vertically opposite angles (95° and 95°, 85° and 85°) are equal]
 
 **Working:**
 

@@ -32,9 +32,15 @@ A **locus** (plural: **loci**) is the set of all points that satisfy a particula
 3. **Equidistant from two points** — the perpendicular bisector of the line segment joining the two points.
 4. **Equidistant from two lines** — the angle bisector of the angle formed by the two lines.
 
+[DIAGRAM: construction | variant=locus-point]
+
+[DIAGRAM: construction | variant=locus-line]
+
 ## Step-by-Step Method
 
 ### Constructing a Perpendicular Bisector
+
+[DIAGRAM: construction | variant=perpendicular-bisector]
 
 1. Set your compasses to more than half the length of the line segment.
 2. Place the compass point on one end of the line and draw arcs above and below.
@@ -43,6 +49,8 @@ A **locus** (plural: **loci**) is the set of all points that satisfy a particula
 5. This line is the perpendicular bisector — it crosses the original line at 90° and cuts it exactly in half.
 
 ### Constructing an Angle Bisector
+
+[DIAGRAM: construction | variant=angle-bisector]
 
 1. Place the compass point on the vertex of the angle and draw an arc that crosses both arms of the angle.
 2. Place the compass point on one intersection and draw an arc between the two arms.

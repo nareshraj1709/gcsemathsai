@@ -31,6 +31,8 @@ Two triangles are **congruent** if one can be placed exactly on top of the other
 
 The included angle in SAS sits between the two known sides. The included side in ASA sits between the two known angles.
 
+[DIAGRAM: triangle-pair | labels1=A,B,C | labels2=D,E,F | tickA=1 | tickB=1 | tickC=0 | scale2=1 | caption=Two triangles are congruent when one of the four conditions matches — here, two sides marked equal]
+
 ## Step-by-Step Method
 
 1. **Identify the two triangles** you need to prove congruent.
@@ -42,6 +44,8 @@ The included angle in SAS sits between the two known sides. The included side in
 ## Worked Example 1 — Foundation Level
 
 **Question:** Triangle PQR has sides PQ = 5 cm, QR = 7 cm, and PR = 9 cm. Triangle XYZ has sides XY = 5 cm, YZ = 7 cm, and XZ = 9 cm. Are the triangles congruent? Give a reason.
+
+[DIAGRAM: triangle-pair | labels1=P,Q,R | labels2=X,Y,Z | tickA=1 | tickB=2 | tickC=3 | caption=Matching tick marks show each pair of corresponding sides is equal — SSS]
 
 **Working:**
 

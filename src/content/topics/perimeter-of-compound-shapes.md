@@ -45,6 +45,8 @@ When a semicircle or quarter circle is attached to a straight shape, the diamete
 
 **Question:** An L-shaped room has outer dimensions 10 m by 8 m. A 4 m by 3 m rectangle is cut from the top-right corner. Find the perimeter.
 
+[DIAGRAM: shape | variant=lshape | width=10 | height=8 | cutWidth=4 | cutHeight=3]
+
 **Working:**
 
 Step 1 — The outer edges along the bottom = 10 m. The left side = 8 m.
@@ -60,6 +62,8 @@ Step 4 — Perimeter = 10 + 5 + 4 + 3 + 6 + 8 = 36 m.
 ## Worked Example 2 — Higher Level
 
 **Question:** A shape consists of a rectangle 12 cm by 6 cm with a semicircle attached to one of the shorter ends. Find the perimeter. Give your answer to 1 decimal place.
+
+[DIAGRAM: shape | variant=rectangle-semicircle-end | width=12 | height=6]
 
 **Working:**
 

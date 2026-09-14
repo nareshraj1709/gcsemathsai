@@ -25,6 +25,8 @@ Key features:
 - All edges are drawn to scale — lengths are preserved along the three isometric axes.
 - Circles and curves appear as ellipses on isometric drawings.
 
+[DIAGRAM: isometric | l=3 | w=2 | h=2 | caption=A 3 × 2 × 2 cuboid block drawn on an isometric grid]
+
 ### Comparison with Plans and Elevations
 
 | View | What it shows |
@@ -33,6 +35,8 @@ Key features:
 | **Front elevation** | Looking from the front |
 | **Side elevation** | Looking from the side |
 | **Isometric drawing** | 3D representation showing all three dimensions |
+
+[DIAGRAM: plans-elevations]
 
 ## Step-by-Step Method
 
