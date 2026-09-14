@@ -56,8 +56,11 @@ function wrap(id: string, inner: string, viewBox = '0 0 320 240', caption?: stri
   const cap = caption
     ? `<figcaption style="font-size:12.5px;color:var(--ink-3);text-align:center;margin-top:6px;font-style:italic;">${esc(caption)}</figcaption>`
     : ''
+  const parts = viewBox.trim().split(/\s+/).map(Number)
+  const vbWidth = parts[2] && Number.isFinite(parts[2]) ? parts[2] : 320
+  const vbHeight = parts[3] && Number.isFinite(parts[3]) ? parts[3] : 240
   return `<figure class="diagram-figure" style="max-width:420px;">
-<svg viewBox="${viewBox}" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(caption || 'diagram')}">
+<svg viewBox="${viewBox}" width="${vbWidth}" height="${vbHeight}" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(caption || 'diagram')}">
 <defs>
 <marker id="${id}-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
 <path d="M0,0 L10,5 L0,10 z" fill="${INK2}"/>
