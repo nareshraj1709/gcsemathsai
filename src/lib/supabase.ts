@@ -5,10 +5,19 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
 export const supabase = createClient(supabaseUrl, supabaseKey, {
   global: {
-    fetch: (input, init) => {
-      const timeout = AbortSignal.timeout(12000)
-      const signal = init?.signal ? AbortSignal.any([init.signal, timeout]) : timeout
-      return fetch(input, { ...init, signal })
+    fetch: async (input, init) => {
+      const controller = new AbortController()
+      const abort = () => controller.abort()
+      const source = init?.signal
+      if (source?.aborted) abort()
+      else source?.addEventListener('abort', abort, { once: true })
+      const timer = setTimeout(abort, 12000)
+      try {
+        return await fetch(input, { ...init, signal: controller.signal })
+      } finally {
+        clearTimeout(timer)
+        source?.removeEventListener('abort', abort)
+      }
     },
   },
 })
