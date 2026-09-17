@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllMarkdownPosts, getMarkdownPost, renderMarkdown, extractTOC } from '@/lib/markdown'
 import { BLOG_POSTS, getPost, type Block } from '@/lib/blog-posts'
+import ArticleHero from '@/components/ArticleHero'
+import Footer from '@/components/Footer'
 import ArticlePractice from '@/components/ArticlePractice'
 import QuickQuizGenerator from '@/components/QuickQuizGenerator'
 import { autoLinkTopics } from '@/lib/auto-linker'
@@ -217,7 +219,6 @@ export default async function BlogPostPage({ params }: Props) {
     const rawHtmlContent = renderMarkdown(md.content)
     const htmlContent = autoLinkTopics(rawHtmlContent, slug)
     const toc = extractTOC(md.content)
-    const colours = COLOUR_MAP[md.categoryColour] ?? COLOUR_MAP.purple
     const otherMd = getAllMarkdownPosts().filter(p => p.slug !== md.slug).slice(0, 2)
     const otherTs = BLOG_POSTS.slice(0, 3 - otherMd.length)
     const quiz = getQuizProps(slug)
@@ -226,34 +227,13 @@ export default async function BlogPostPage({ params }: Props) {
       <main className="blog-article-page" style={{ minHeight: '100vh', background: 'var(--cream)' }}>
         <BlogJsonLd title={md.title} description={md.description} slug={slug} date={md.dateISO} author={md.author} />
 
-        {/* Hero */}
-        <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)' }}>
-          <div style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(28px, 4vw, 56px) clamp(20px, 4vw, 40px)' }}>
-            <Link href="/blog" style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-3)', textDecoration: 'none' }}>← Back to blog</Link>
-            <div style={{ maxWidth: 760, marginTop: 18 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16, flexWrap: 'wrap' }}>
-                <span className={colours.badge} style={{ fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 999, fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                  {md.category}
-                </span>
-                <span style={{ fontSize: 11, color: 'var(--ink-3)', fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 700 }}>{md.readMins} min read</span>
-              </div>
-              <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 46px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.08, color: 'var(--ink)', margin: '0 0 16px' }}>
-                {md.title}
-              </h1>
-              <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(15px, 1.7vw, 18px)', color: 'var(--ink-2)', lineHeight: 1.55, marginBottom: 20, fontWeight: 500 }}>{md.description}</p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'var(--ink-3)' }}>
-                <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'var(--green)', color: 'var(--cream)', display: 'grid', placeItems: 'center', fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 13, fontStyle: 'italic' }}>G</div>
-                <span style={{ fontWeight: 600, color: 'var(--ink-2)' }}>{md.author}</span>
-                <span>·</span>
-                <span>{md.date}</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ArticleHero slug={slug} title={md.title} description={md.description} category={md.category} author={md.author} date={md.date} readMins={md.readMins}/>
 
         {/* Body + TOC */}
         <div className="blog-article-body" style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(32px, 4vw, 56px) clamp(20px, 4vw, 40px)', display: 'grid', gridTemplateColumns: '1fr', gap: 40 }}>
-          <div style={{ minWidth: 0 }}><ArticlePractice slug={slug} /><article className="blog-prose" dangerouslySetInnerHTML={{ __html: htmlContent }} /></div>
+          <div className="article-reading-column" style={{ minWidth: 0 }}>
+            {toc.length>0&&<details className="article-mobile-toc"><summary>In this guide</summary><nav aria-label="Article contents">{toc.map(item=><a key={item.id} href={`#${item.id}`}>{item.text}</a>)}</nav></details>}
+            <ArticlePractice slug={slug} /><article className="blog-prose" dangerouslySetInnerHTML={{ __html: htmlContent }} /></div>
 
           {/* Sticky TOC at lg+ */}
           {toc.length > 0 && (
@@ -314,6 +294,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
         <PredictedPapersPromo variant="footer" source={`blog-${slug}`} />
+        <Footer/>
       </main>
     )
   }
@@ -323,36 +304,15 @@ export default async function BlogPostPage({ params }: Props) {
   if (!ts) notFound()
   const quiz = getQuizProps(slug)
 
-  const colours = COLOUR_MAP[ts.categoryColour] ?? COLOUR_MAP.purple
   const otherPosts = BLOG_POSTS.filter(p => p.slug !== ts.slug).slice(0, 3)
 
   return (
-    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+    <main className="blog-article-page" style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <BlogJsonLd title={ts.title} description={ts.metaDescription} slug={slug} date={ts.date} author={ts.author} />
 
-      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)' }}>
-        <div style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(28px, 4vw, 56px) clamp(20px, 4vw, 40px)' }}>
-          <Link href="/blog" style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-3)', textDecoration: 'none' }}>← Back to blog</Link>
-          <div style={{ maxWidth: 760, marginTop: 18 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16, flexWrap: 'wrap' }}>
-              <span className={colours.badge} style={{ fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 999, fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                {ts.category}
-              </span>
-              <span style={{ fontSize: 11, color: 'var(--ink-3)', fontFamily: 'var(--mono)', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 700 }}>{ts.readMins} min read</span>
-            </div>
-            <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 46px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1.08, color: 'var(--ink)', margin: '0 0 16px' }}>{ts.title}</h1>
-            <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(15px, 1.7vw, 18px)', color: 'var(--ink-2)', lineHeight: 1.55, marginBottom: 20, fontWeight: 500 }}>{ts.excerpt}</p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'var(--ink-3)' }}>
-              <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'var(--green)', color: 'var(--cream)', display: 'grid', placeItems: 'center', fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 13, fontStyle: 'italic' }}>G</div>
-              <span style={{ fontWeight: 600, color: 'var(--ink-2)' }}>{ts.author}</span>
-              <span>·</span>
-              <span>{ts.date}</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ArticleHero slug={slug} title={ts.title} description={ts.excerpt} category={ts.category} author={ts.author} date={ts.date} readMins={ts.readMins}/>
 
-      <article style={{ maxWidth: 760, margin: '0 auto', padding: 'clamp(32px, 4vw, 56px) clamp(20px, 4vw, 40px)' }}>
+      <article className="article-legacy-body" style={{ maxWidth: 760, margin: '0 auto', padding: 'clamp(32px, 4vw, 56px) clamp(20px, 4vw, 40px)' }}>
         <ArticlePractice slug={slug} />
         {ts.blocks.map((block, i) => <RenderBlock key={i} block={block} />)}
         <div style={{ marginTop: 32 }}>
@@ -377,6 +337,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
       <PredictedPapersPromo variant="footer" source={`blog-${slug}`} />
+        <Footer/>
     </main>
   )
 }

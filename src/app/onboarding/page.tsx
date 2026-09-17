@@ -1,7 +1,8 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Logo from '@/components/Logo'
+import { withAuthTimeout, authError } from '@/lib/auth-journey'
 import { getProfileFromCache, saveProfile, loadProfile } from '@/lib/profile'
 import { supabase } from '@/lib/supabase'
 
@@ -36,6 +37,9 @@ type Data = { name: string; year: string; board: string; goal: string }
 
 export default function Onboarding() {
   const router = useRouter()
+  const [saving, setSaving] = useState(false)
+  const [saveError, setSaveError] = useState('')
+  const savingRef = useRef(false)
   const [step, setStep] = useState(0)
   const [data, setData] = useState<Data>({ name: "", year: "", board: "", goal: "" })
   const [isEditing, setIsEditing] = useState(false)
@@ -97,13 +101,17 @@ export default function Onboarding() {
   const handleYearSelect = (opt: string) => setData({ ...data, year: opt })
 
   const handleNext = async () => {
-    if (isLast) {
-      saveProfile(data)
-      const { data: { session } } = await supabase.auth.getSession()
+    if (savingRef.current) return
+    if (!isLast) { setStep(s => s + 1); return }
+    savingRef.current = true; setSaving(true); setSaveError('')
+    try {
+      const saved = await withAuthTimeout(saveProfile(data), 28000)
+      if (!saved) throw new Error('Account service network error')
+      const { data: { session }, error } = await withAuthTimeout(supabase.auth.getSession())
+      if (error) throw error
       router.push(session ? '/dashboard' : '/learn')
-    } else {
-      setStep(s => s + 1)
-    }
+    } catch (cause) { setSaveError(authError(cause)) }
+    finally { savingRef.current = false; setSaving(false) }
   }
 
   return (
@@ -178,7 +186,8 @@ export default function Onboarding() {
             </div>
           )}
 
-          <button onClick={handleNext} disabled={!value} style={{
+          <div role="alert">{saveError}</div>
+          <button onClick={handleNext} disabled={!value || saving} style={{
             marginTop: 24, width: "100%", padding: "14px",
             borderRadius: 12, border: "none",
             background: value
@@ -191,11 +200,11 @@ export default function Onboarding() {
             boxShadow: value ? "0 4px 16px rgba(15,79,58,0.3)" : "none",
             transition: "all 0.2s",
           }}>
-            {isLast ? (isEditing ? "Save changes →" : "Go to my dashboard →") : "Continue →"}
+            {saving ? "Saving?" : isLast ? (isEditing ? "Save changes →" : "Go to my dashboard →") : "Continue →"}
           </button>
 
           {step > 0 && (
-            <button onClick={() => setStep(s => s - 1)} style={{
+            <button disabled={saving} onClick={() => setStep(s => s - 1)} style={{
               marginTop: 12, width: "100%", padding: "10px",
               background: "none", border: "none", color: C.mid,
               fontSize: 14, cursor: "pointer", fontFamily: font.body,

@@ -31,7 +31,7 @@ export default function StrandAccordion({ strand, icon, colour, bg, topics, defa
   const foundationCount = topics.length - higherCount
 
   return (
-    <div style={{
+    <div className="strand-card" style={{
       marginBottom: 16,
       border: '1px solid var(--rule)',
       borderRadius: 14,
@@ -39,6 +39,7 @@ export default function StrandAccordion({ strand, icon, colour, bg, topics, defa
       background: 'var(--paper)',
     }}>
       <button
+        aria-expanded={open}
         onClick={() => setOpen(o => !o)}
         style={{
           width: '100%',
@@ -118,7 +119,7 @@ export default function StrandAccordion({ strand, icon, colour, bg, topics, defa
         <div style={{
           padding: '16px 18px',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
           gap: 10,
         }}>
           {topics.map((topic, idx) => (

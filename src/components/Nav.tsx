@@ -67,7 +67,7 @@ export default function Nav() {
     { label: "Home", path: "/" },
     { label: "Topics", path: "/topics" },
     { label: "Practice", path: "/learn" },
-    { label: "Diagnostic", path: "/diagnostic" },
+    { label: "Quizzes", path: "/diagnostic" },
     { label: "Papers", path: "/papers" },
     { label: "Formulas", path: "/formulas" },
     { label: "Glossary", path: "/glossary" },
@@ -79,7 +79,7 @@ export default function Nav() {
     { label: "Home", path: "/" },
     { label: "Topics", path: "/topics" },
     { label: "Practice", path: "/learn" },
-    { label: "Diagnostic", path: "/diagnostic" },
+    { label: "Quizzes", path: "/diagnostic" },
     { label: "Papers", path: "/papers" },
     { label: "Formulas", path: "/formulas" },
     { label: "Glossary", path: "/glossary" },
@@ -114,9 +114,9 @@ export default function Nav() {
       <div className="topbar">
         <div className="wrap">
           <div className="left">
-            <span>EST. 2024 &middot; LONDON</span>
+            <span>A LITTLE PRACTICE, EVERY DAY</span>
             <span>&middot;</span>
-            <span>MMXXVI SPECIFICATION</span>
+            <span>GCSE MATHS</span>
           </div>
           <div className="right">
             <Link href="/aqa" onClick={() => setMenuOpen(false)}>AQA</Link>
@@ -157,7 +157,7 @@ export default function Nav() {
             {!isMobile && !user && (
               <>
                 <button className="btn btn-ghost" onClick={() => navigate('/auth')}>Log in</button>
-                <button className="btn btn-primary" onClick={() => navigate('/auth')}>Start for free</button>
+                <button className="btn btn-primary" onClick={() => navigate('/auth?mode=signup')}>Start for free</button>
               </>
             )}
             {!isMobile && user && (
@@ -288,7 +288,7 @@ export default function Nav() {
             {!user ? (
               <div style={{ display: 'flex', gap: 10 }}>
                 <button className="btn btn-outline" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate('/auth')}>Log in</button>
-                <button className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate('/auth')}>Start free</button>
+                <button className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }} onClick={() => navigate('/auth?mode=signup')}>Start free</button>
               </div>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>

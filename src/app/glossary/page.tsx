@@ -31,7 +31,7 @@ export default function GlossaryIndexPage() {
   const grouped = getGlossaryByCategory()
 
   return (
-    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+    <main className="resource-hub" style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       {/* Hero */}
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
         <span className={MONO_BADGE} style={{ ...monoBadgeStyle, color: 'var(--green)', background: 'var(--green-soft)', marginBottom: 16 }}>

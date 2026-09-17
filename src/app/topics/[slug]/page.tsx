@@ -69,7 +69,7 @@ export default async function TopicPage({ params }: Props) {
   const nextTopic = currentIdx < allTopics.length - 1 ? allTopics[currentIdx + 1] : null
 
   return (
-    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+    <main className="topic-detail-page" style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <style dangerouslySetInnerHTML={{ __html: `
         .topic-prose a { color: var(--green) !important; }
         .topic-prose a:hover { text-decoration: underline; }

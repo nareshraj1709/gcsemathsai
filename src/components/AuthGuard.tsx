@@ -1,20 +1,25 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { withAuthTimeout } from '@/lib/auth-journey'
 import { supabase } from '@/lib/supabase'
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter()
   const [ready, setReady] = useState(false)
+  const [failed, setFailed] = useState(false)
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    let active = true
+    withAuthTimeout(supabase.auth.getSession()).then(({ data: { session } }) => {
+      if (!active) return
       if (!session) {
         router.replace('/auth')
       } else {
         setReady(true)
       }
-    })
+    }).catch(() => { if (active) setFailed(true) })
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
       if (event === 'SIGNED_OUT' || event === 'TOKEN_REFRESHED') {
@@ -25,8 +30,10 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
       }
     })
 
-    return () => subscription.unsubscribe()
+    return () => { active = false; subscription.unsubscribe() }
   }, [router])
+
+  if (failed) return <main className="auth-shell"><section className="auth-card"><h1>We could not check your session</h1><p>Please try logging in again, or continue practising without an account.</p><Link className="btn btn-primary" href="/auth">Return to login</Link><p><Link href="/diagnostic">Try a free quiz</Link></p></section></main>
 
   if (!ready) {
     return (

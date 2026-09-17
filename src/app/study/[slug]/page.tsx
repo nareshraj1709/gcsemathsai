@@ -114,7 +114,7 @@ export default async function StudyTopicPage({ params }: Props) {
   }
 
   return (
-    <main style={{ minHeight: '100vh', background: '#F8F7FF', fontFamily: "'Trebuchet MS', sans-serif" }}>
+    <main className="study-detail-page" style={{ minHeight: '100vh', background: 'var(--cream)', fontFamily: 'var(--sans)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

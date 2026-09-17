@@ -60,3 +60,34 @@ test('every topic has a non-empty structurally valid quiz', () => {
     }
   }
 });
+
+const { authError, callbackIntent, withAuthTimeout } = require('../src/lib/auth-journey.ts');
+const { filterGuides, guideGroup } = require('../src/lib/guide-presentation.ts');
+test('account errors explain service failures without blaming the student or revealing internals', () => {
+  assert.match(authError(new TypeError('Failed to fetch')), /account service/);
+  assert.match(authError({ message: 'Email not confirmed' }), /confirmation link/);
+  assert.match(authError({ message: 'Invalid login credentials' }), /do not match/);
+  assert.doesNotMatch(authError(new Error('private database detail')), /private database/);
+});
+test('confirmation supports both existing recovery links and the explicit recovery redirect', () => {
+  assert.deepEqual(callbackIntent('?flow=recovery', ''), { recovery: true, failed: false });
+  assert.deepEqual(callbackIntent('', '#type=recovery&access_token=example'), { recovery: true, failed: false });
+  assert.equal(callbackIntent('?error=access_denied', '').failed, true);
+  assert.equal(callbackIntent('', '#error_description=expired').failed, true);
+  assert.deepEqual(callbackIntent('', ''), { recovery: false, failed: false });
+});
+test('account operations time out and preserve successful results and service errors', async () => {
+  assert.equal(await withAuthTimeout(Promise.resolve(7), 50), 7);
+  await assert.rejects(withAuthTimeout(Promise.reject(new Error('original')), 50), /original/);
+  await assert.rejects(withAuthTimeout(new Promise(() => {}), 10), /timed out/);
+});
+test('revision library combines topic filters with case-insensitive multiword search', () => {
+  const guides = [
+    { slug: 'quadratic-equations', title: 'Solving quadratic equations', excerpt: 'Factorising for Higher GCSE', category: 'Algebra' },
+    { slug: 'circle-theorems', title: 'Circle theorems', excerpt: 'Higher geometry examples', category: 'Geometry' },
+  ];
+  assert.equal(guideGroup(guides[0]), 'Algebra');
+  assert.equal(filterGuides(guides, 'All guides', ' HIGHER quadratic ')[0].slug, 'quadratic-equations');
+  assert.equal(filterGuides(guides, 'Geometry', 'quadratic').length, 0);
+  assert.equal(filterGuides(guides, 'All guides', '').length, 2);
+});

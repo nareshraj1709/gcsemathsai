@@ -70,7 +70,7 @@ export default function TopicsIndexPage() {
   }
 
   return (
-    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+    <main className="resource-hub" style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 

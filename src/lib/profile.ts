@@ -111,7 +111,7 @@ export async function loadProfile(): Promise<Profile | null> {
  * Save profile to both localStorage and Supabase.
  * Always writes to localStorage; Supabase write is best-effort with retry.
  */
-export async function saveProfile(profile: Profile): Promise<void> {
+export async function saveProfile(profile: Profile): Promise<boolean> {
   // 1. Always write to localStorage (instant)
   setProfileCache(profile)
 
@@ -119,7 +119,7 @@ export async function saveProfile(profile: Profile): Promise<void> {
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
       const { data: { session } } = await supabase.auth.getSession()
-      if (!session) return
+      if (!session) return true
 
       const { error } = await supabase.from('profiles').upsert({
         id: session.user.id,
@@ -131,7 +131,7 @@ export async function saveProfile(profile: Profile): Promise<void> {
         updated_at: new Date().toISOString(),
       })
 
-      if (!error) return // success
+      if (!error) return true // success
       if (attempt === 0) {
         // Wait briefly before retry
         await new Promise(r => setTimeout(r, 500))
@@ -142,6 +142,7 @@ export async function saveProfile(profile: Profile): Promise<void> {
       }
     }
   }
+  return false
 }
 
 /**

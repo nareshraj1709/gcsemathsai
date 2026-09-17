@@ -1,292 +1,68 @@
 'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { Suspense, useRef, useState } from 'react'
+import Link from 'next/link'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
-import { loadProfile } from '@/lib/profile'
-
-const C = {
-  ink: "var(--ink)",
-  green: "var(--green)",
-  greenMid: "var(--green-mid)",
-  greenSoft: "var(--green-soft)",
-  mid: "var(--ink-3)",
-  border: "var(--rule)",
-  cream: "var(--cream)",
-  paper: "var(--paper)",
-  success: "#059669",
-  red: "#DC2626",
-}
-
-const font = {
-  display: "var(--serif)",
-  body: "var(--sans)",
-}
+import { clearProfileCache, loadProfile } from '@/lib/profile'
+import { authError, withAuthTimeout } from '@/lib/auth-journey'
 
 type Mode = 'login' | 'signup' | 'forgot'
-
-export default function Auth() {
+function AuthForm() {
   const router = useRouter()
+  const params = useSearchParams()
+  const [mode, setMode] = useState<Mode>(params.get('mode') === 'signup' ? 'signup' : params.get('mode') === 'forgot' ? 'forgot' : 'login')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [mode, setMode] = useState<Mode>('login')
+  const [visible, setVisible] = useState(false)
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
-  const [messageType, setMessageType] = useState<'info' | 'error' | 'success'>('info')
-
-  const showMessage = (text: string, type: 'info' | 'error' | 'success' = 'info') => {
-    setMessage(text)
-    setMessageType(type)
+  const [error, setError] = useState(false)
+  const busy = useRef(false)
+  const switchMode = (next: Mode) => { setMode(next); setMessage(''); setError(false); setPassword('') }
+  async function enterAccount() {
+    clearProfileCache()
+    const profile = await withAuthTimeout(loadProfile())
+    router.replace(profile?.year && profile?.board ? '/dashboard' : '/onboarding')
   }
-
-  const friendlyError = (msg: string): string => {
-    if (msg.includes('Invalid login credentials')) return 'Incorrect email or password. Please try again.'
-    if (msg.includes('Email not confirmed')) return 'Please check your email and confirm your account first.'
-    if (msg.includes('User already registered')) return 'An account with this email already exists. Try logging in instead.'
-    if (msg.includes('Password should be at least')) return 'Password must be at least 6 characters long.'
-    if (msg.includes('rate limit') || msg.includes('too many')) return 'Too many attempts. Please wait a moment and try again.'
-    if (msg.includes('network') || msg.includes('fetch')) return 'Connection error. Please check your internet and try again.'
-    return msg
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    if (busy.current) return
+    busy.current = true; setLoading(true); setMessage(''); setError(false)
+    try {
+      if (mode === 'login') {
+        const result = await withAuthTimeout(supabase.auth.signInWithPassword({ email: email.trim(), password }))
+        if (result.error) throw result.error
+        await enterAccount()
+      } else if (mode === 'signup') {
+        const result = await withAuthTimeout(supabase.auth.signUp({ email: email.trim(), password, options: { emailRedirectTo: `${window.location.origin}/auth/callback` } }))
+        if (result.error) throw result.error
+        if (result.data.session) await enterAccount()
+        else if (result.data.user?.identities?.length === 0) {
+          setMode('login'); setMessage('You may already have an account. Log in below or choose Reset password.')
+        } else {
+          setPassword(''); setMessage('Check your email for a confirmation link, then open it to finish setting up your account. Check your spam folder too.')
+        }
+      } else {
+        const result = await withAuthTimeout(supabase.auth.resetPasswordForEmail(email.trim(), { redirectTo: `${window.location.origin}/auth/callback?flow=recovery` }))
+        if (result.error) throw result.error
+        setMessage('If there is an account for this email, you will receive a password reset link. Check your inbox and spam folder.')
+      }
+    } catch (cause) { setError(true); setMessage(authError(cause)) }
+    finally { busy.current = false; setLoading(false) }
   }
-
-  const handleLogin = async () => {
-    if (!email.trim() || !password.trim()) {
-      showMessage('Please enter your email and password.', 'error')
-      return
-    }
-    setLoading(true)
-    showMessage('')
-    const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password })
-    if (error) {
-      showMessage(friendlyError(error.message), 'error')
-    } else {
-      const profile = await loadProfile()
-      router.push(profile?.year && profile?.board ? '/dashboard' : '/onboarding')
-    }
-    setLoading(false)
-  }
-
-  const handleSignup = async () => {
-    if (!email.trim()) {
-      showMessage('Please enter your email address.', 'error')
-      return
-    }
-    if (password.length < 6) {
-      showMessage('Password must be at least 6 characters long.', 'error')
-      return
-    }
-    setLoading(true)
-    showMessage('')
-    const { data, error } = await supabase.auth.signUp({
-      email: email.trim(),
-      password,
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback`,
-      },
-    })
-    if (error) {
-      showMessage(friendlyError(error.message), 'error')
-    } else if (data.user && data.user.identities && data.user.identities.length === 0) {
-      // Supabase returns a user with empty identities when the email is already registered
-      showMessage('An account with this email already exists. Please log in instead.', 'error')
-      setMode('login')
-    } else {
-      showMessage('Check your email to confirm your account! You may need to check your spam folder.', 'success')
-    }
-    setLoading(false)
-  }
-
-  const handleForgotPassword = async () => {
-    if (!email.trim() || !email.includes('@')) {
-      showMessage('Please enter a valid email address.', 'error')
-      return
-    }
-    setLoading(true)
-    showMessage('')
-    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
-      redirectTo: `${window.location.origin}/auth/callback`,
-    })
-    if (error) {
-      showMessage(friendlyError(error.message), 'error')
-    } else {
-      showMessage('Password reset link sent! Check your email (and spam folder).', 'success')
-    }
-    setLoading(false)
-  }
-
-  const handleSubmit = () => {
-    if (mode === 'login') handleLogin()
-    else if (mode === 'signup') handleSignup()
-    else handleForgotPassword()
-  }
-
-  const switchMode = (newMode: Mode) => {
-    setMode(newMode)
-    setMessage('')
-    setPassword('')
-  }
-
-  const heading = mode === 'login' ? 'Welcome back' : mode === 'signup' ? 'Create your account' : 'Reset your password'
-  const subtext = mode === 'login'
-    ? 'Log in to your GCSEMathsAI account'
-    : mode === 'signup'
-    ? 'Free for every student — no card required'
-    : 'Enter your email and we\'ll send a reset link'
-
-  const buttonLabel = loading
-    ? 'Please wait…'
-    : mode === 'login'
-    ? 'Log in'
-    : mode === 'signup'
-    ? 'Create account'
-    : 'Send reset link'
-
-  const msgBg = messageType === 'error' ? '#FFF5F5' : messageType === 'success' ? '#F0FDF4' : 'var(--green-soft)'
-  const msgColor = messageType === 'error' ? C.red : messageType === 'success' ? C.success : C.green
-
-  return (
-    <div style={{
-      minHeight: "100vh", background: C.cream,
-      display: "flex", alignItems: "center", justifyContent: "center",
-      padding: 24, fontFamily: font.body,
-    }}>
-      <div style={{
-        background: C.paper, borderRadius: 24, border: `1px solid ${C.border}`,
-        padding: "40px 36px", width: "100%", maxWidth: 420,
-        boxShadow: "0 4px 32px rgba(15,79,58,0.08)",
-      }}>
-        <div style={{ textAlign: "center", marginBottom: 32 }}>
-          <div style={{
-            width: 48, height: 48, borderRadius: 14, margin: "0 auto 12px",
-            background: `linear-gradient(135deg, var(--green), var(--green-mid))`,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: 22, color: "#fff", boxShadow: "0 4px 16px rgba(15,79,58,0.3)",
-          }}>✦</div>
-          <h1 style={{ fontFamily: font.display, fontSize: 24, color: C.ink, margin: "0 0 4px" }}>
-            {heading}
-          </h1>
-          <p style={{ color: C.mid, fontSize: 14, margin: 0 }}>
-            {subtext}
-          </p>
-        </div>
-
-        {/* Email field — always shown */}
-        <div style={{ marginBottom: 16 }}>
-          <label style={{ fontSize: 13, fontWeight: 600, color: C.ink, display: "block", marginBottom: 6 }}>
-            Email
-          </label>
-          <input
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="your@email.com"
-            onKeyDown={e => e.key === 'Enter' && (mode === 'forgot' ? handleSubmit() : undefined)}
-            autoComplete="email"
-            style={{
-              width: "100%", padding: "12px 14px", borderRadius: 10,
-              border: `1.5px solid ${C.border}`, fontSize: 15,
-              fontFamily: font.body, outline: "none", boxSizing: "border-box",
-              transition: "border-color 0.2s",
-            }}
-            onFocus={e => e.currentTarget.style.borderColor = 'var(--green)'}
-            onBlur={e => e.currentTarget.style.borderColor = 'var(--rule)'}
-          />
-        </div>
-
-        {/* Password field — hidden on forgot password */}
-        {mode !== 'forgot' && (
-          <div style={{ marginBottom: 8 }}>
-            <label style={{ fontSize: 13, fontWeight: 600, color: C.ink, display: "block", marginBottom: 6 }}>
-              Password
-            </label>
-            <input
-              type="password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              placeholder="••••••••"
-              onKeyDown={e => e.key === 'Enter' && handleSubmit()}
-              autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
-              style={{
-                width: "100%", padding: "12px 14px", borderRadius: 10,
-                border: `1.5px solid ${C.border}`, fontSize: 15,
-                fontFamily: font.body, outline: "none", boxSizing: "border-box",
-                transition: "border-color 0.2s",
-              }}
-              onFocus={e => e.currentTarget.style.borderColor = C.green}
-              onBlur={e => e.currentTarget.style.borderColor = C.border}
-            />
-            {mode === 'signup' && (
-              <p style={{ fontSize: 11, color: C.mid, marginTop: 4, marginBottom: 0 }}>
-                Must be at least 6 characters
-              </p>
-            )}
-          </div>
-        )}
-
-        {/* Forgot password link — only on login */}
-        {mode === 'login' && (
-          <div style={{ textAlign: "right", marginBottom: 8 }}>
-            <span
-              onClick={() => switchMode('forgot')}
-              style={{ fontSize: 13, color: C.green, fontWeight: 600, cursor: "pointer" }}
-            >
-              Forgot password?
-            </span>
-          </div>
-        )}
-
-        {/* Message */}
-        {message && (
-          <p style={{
-            fontSize: 13, textAlign: "center", color: msgColor,
-            background: msgBg, borderRadius: 8, padding: "10px 14px",
-            marginBottom: 16, marginTop: 8,
-          }}>{message}</p>
-        )}
-
-        {/* Submit button */}
-        <button
-          onClick={handleSubmit}
-          disabled={loading}
-          style={{
-            width: "100%", padding: "13px", borderRadius: 10, border: "none",
-            background: `linear-gradient(135deg, var(--green), var(--green-mid))`,
-            color: "#fff", fontWeight: 700, fontSize: 16, cursor: loading ? "not-allowed" : "pointer",
-            fontFamily: font.body, marginTop: 8,
-            boxShadow: "0 4px 16px rgba(15,79,58,0.3)",
-            opacity: loading ? 0.7 : 1,
-          }}
-        >
-          {buttonLabel}
-        </button>
-
-        {/* Mode switching */}
-        <div style={{ textAlign: "center", marginTop: 16 }}>
-          {mode === 'login' && (
-            <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
-              No account?{' '}
-              <span onClick={() => switchMode('signup')} style={{ color: C.green, fontWeight: 600, cursor: "pointer" }}>
-                Sign up free
-              </span>
-            </p>
-          )}
-          {mode === 'signup' && (
-            <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
-              Already have an account?{' '}
-              <span onClick={() => switchMode('login')} style={{ color: C.green, fontWeight: 600, cursor: "pointer" }}>
-                Log in
-              </span>
-            </p>
-          )}
-          {mode === 'forgot' && (
-            <p style={{ fontSize: 13, color: C.mid, margin: 0 }}>
-              Remember your password?{' '}
-              <span onClick={() => switchMode('login')} style={{ color: C.green, fontWeight: 600, cursor: "pointer" }}>
-                Back to login
-              </span>
-            </p>
-          )}
-        </div>
-      </div>
-    </div>
-  )
+  return <main className="auth-shell"><section className="auth-card" aria-labelledby="auth-title">
+    <span className="studio-eyebrow">YOUR NEXT STEP IN MATHS</span>
+    <h1 id="auth-title">{mode === 'login' ? 'Welcome back' : mode === 'signup' ? 'Make progress, your way.' : 'Reset your password'}</h1>
+    <p>{mode === 'signup' ? 'Create your free account and set up your year group, exam board and learning goals.' : mode === 'forgot' ? 'We will email you a link to choose a new password.' : 'Log in to continue your learning.'}</p>
+    {message && <div className="auth-notice" data-error={error} role={error ? 'alert' : 'status'}>{message}</div>}
+    <form onSubmit={submit} aria-busy={loading}>
+      <label htmlFor="auth-email">Email address</label><input id="auth-email" name="email" type="email" autoComplete="email" required value={email} onChange={e => setEmail(e.target.value)} disabled={loading}/>
+      {mode !== 'forgot' && <><label htmlFor="auth-password">Password</label><div className="auth-password"><input id="auth-password" name="password" type={visible ? 'text' : 'password'} autoComplete={mode === 'signup' ? 'new-password' : 'current-password'} required minLength={mode === 'signup' ? 6 : undefined} value={password} onChange={e => setPassword(e.target.value)} disabled={loading}/><button type="button" className="auth-text-button" onClick={() => setVisible(v => !v)} aria-label={visible ? 'Hide password' : 'Show password'}>{visible ? 'Hide' : 'Show'}</button></div>{mode === 'signup' && <p>Use at least 6 characters. A longer, unique password is best.</p>}</>}
+      <button type="submit" className="btn btn-primary" disabled={loading}>{loading ? 'Please wait…' : mode === 'login' ? 'Log in' : mode === 'signup' ? 'Create free account' : 'Send reset link'}</button>
+    </form>
+    {mode === 'login' && <button className="auth-text-button" disabled={loading} onClick={() => switchMode('forgot')}>Reset password</button>}
+    <p>{mode === 'login' ? 'New here? ' : 'Already have an account? '}<button className="auth-text-button" disabled={loading} onClick={() => switchMode(mode === 'login' ? 'signup' : 'login')}>{mode === 'login' ? 'Create a free account' : 'Log in'}</button></p>
+    <div className="auth-guest"><p>You can start learning right now, without an account.</p><Link href="/diagnostic">Try a free quiz →</Link><p><Link href="/topics">Browse topic guides</Link></p></div>
+  </section></main>
 }
+export default function Auth() { return <Suspense fallback={<main className="auth-shell"><p>Loading account options…</p></main>}><AuthForm/></Suspense> }

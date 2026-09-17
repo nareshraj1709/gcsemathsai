@@ -35,7 +35,7 @@ export default function DiagnosticIndexPage() {
   const totalQuestions = allSets.reduce((sum, s) => sum + s.questions.length, 0)
 
   return (
-    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+    <main className="resource-hub" style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 20px' }}><LearningProgress /></div>
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--gold)', marginBottom: 14, display: 'inline-flex', alignItems: 'center', gap: 8 }}>

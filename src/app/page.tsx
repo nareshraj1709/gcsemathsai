@@ -129,6 +129,10 @@ export default function Home() {
         </div>
       </section>
 
+      <nav className="home-study-paths wrap" aria-label="Choose your next study step">
+        {[{ href: '/topics', icon: '01', title: 'Understand a topic', text: 'Clear explanations. Worked examples.' }, { href: '/diagnostic', icon: '02', title: 'Try five questions', text: 'Free quizzes. Instant explanations.' }, { href: '/blog', icon: '03', title: 'Find your study rhythm', text: 'Revision plans. Practical advice.' }].map(item => <Link key={item.href} href={item.href}><span>{item.icon}</span><div><h2>{item.title}</h2><p>{item.text}</p></div><span aria-hidden="true">↗</span></Link>)}
+      </nav>
+
       {/* PREDICTED PAPERS — top of page */}
       <section style={{ background: 'var(--paper)', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)', padding: '64px 0' }}>
         <div className="wrap">

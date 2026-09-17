@@ -32,7 +32,7 @@ export default function FormulasIndexPage() {
   const totalSheets = sheets.length
 
   return (
-    <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+    <main className="resource-hub" style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
         <span style={{ ...monoLabel, color: 'var(--green)', background: 'var(--green-soft)', padding: '4px 14px', borderRadius: 999, display: 'inline-block', marginBottom: 16 }}>
           Formula Sheets · {totalSheets} topics
