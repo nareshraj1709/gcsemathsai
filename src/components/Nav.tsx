@@ -1,10 +1,16 @@
 'use client'
-import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useState, useEffect, useSyncExternalStore } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { getProfileFromCache, clearProfileCache } from '@/lib/profile'
 
 type Profile = { name?: string; year?: string; board?: string }
+function subscribeProfile(notify: () => void) {
+  window.addEventListener('storage', notify)
+  return () => window.removeEventListener('storage', notify)
+}
+function profileSnapshot() { return JSON.stringify(getProfileFromCache()) }
 
 export default function Nav() {
   const router = useRouter()
@@ -13,7 +19,9 @@ export default function Nav() {
   const [isMobile, setIsMobile] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
-  const [profile, setProfile] = useState<Profile | null>(null)
+  const profile: Profile | null = JSON.parse(useSyncExternalStore(subscribeProfile, profileSnapshot, () => 'null'))
+  const [previousPath, setPreviousPath] = useState(pathname)
+  if (previousPath !== pathname) { setPreviousPath(pathname); setMenuOpen(false); setUserMenuOpen(false) }
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user))
@@ -24,18 +32,11 @@ export default function Nav() {
   }, [])
 
   useEffect(() => {
-    const cached = getProfileFromCache()
-    if (cached) setProfile(cached as Profile)
-  }, [pathname])
-
-  useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 1100)
     check()
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
   }, [])
-
-  useEffect(() => { setMenuOpen(false); setUserMenuOpen(false) }, [pathname])
 
   useEffect(() => {
     if (!userMenuOpen) return
@@ -52,7 +53,6 @@ export default function Nav() {
     setUserMenuOpen(false)
     await supabase.auth.signOut()
     clearProfileCache()
-    setProfile(null)
     router.push('/')
   }
 
@@ -119,11 +119,11 @@ export default function Nav() {
             <span>MMXXVI SPECIFICATION</span>
           </div>
           <div className="right">
-            <a onClick={() => navigate('/topics')}>AQA</a>
+            <Link href="/aqa" onClick={() => setMenuOpen(false)}>AQA</Link>
             <span>&middot;</span>
-            <a onClick={() => navigate('/topics')}>Edexcel</a>
+            <Link href="/edexcel" onClick={() => setMenuOpen(false)}>Edexcel</Link>
             <span>&middot;</span>
-            <a onClick={() => navigate('/topics')}>OCR</a>
+            <Link href="/ocr" onClick={() => setMenuOpen(false)}>OCR</Link>
             <span style={{ opacity: 0.5 }}>|</span>
             <span className="est">Foundation + Higher</span>
           </div>
@@ -133,22 +133,22 @@ export default function Nav() {
       {/* MAIN NAV */}
       <nav className="main-nav">
         <div className="wrap">
-          <a className="logo" onClick={() => navigate('/')}>
+          <Link className="logo" href="/" onClick={() => setMenuOpen(false)}>
             <span className="logo-mark">&Sigma;</span>
             GCSEMaths
-          </a>
+          </Link>
 
           {/* Desktop menu */}
           {!isMobile && (
             <div className="menu">
               {links.map(l => (
-                <button
+                <Link
                   key={l.label}
                   className={`menu-link${isActive(l.path) ? ' active' : ''}`}
-                  onClick={() => navigate(l.path)}
+                  href={l.path} onClick={() => setMenuOpen(false)}
                 >
                   {l.label}
-                </button>
+                </Link>
               ))}
             </div>
           )}
@@ -255,24 +255,24 @@ export default function Nav() {
         <div className="mobile-menu-overlay" onClick={() => setMenuOpen(false)}>
           <div className="mobile-menu-panel" onClick={e => e.stopPropagation()}>
             {links.map(l => (
-              <button
+              <Link
                 key={l.label}
                 className={`menu-item${isActive(l.path) ? ' active' : ''}`}
-                onClick={() => navigate(l.path)}
+                href={l.path} onClick={() => setMenuOpen(false)}
               >
                 {l.label}
-              </button>
+              </Link>
             ))}
             <div style={{ height: 1, background: 'var(--rule)', margin: '8px 0' }} />
             <div style={{ padding: '8px 14px 4px', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--ink-3)', textTransform: 'uppercase', fontFamily: 'var(--mono)' }}>Resources</div>
             {resourceLinks.map(r => (
-              <button
+              <Link
                 key={r.path}
                 className={`menu-item${pathname.startsWith(r.path) ? ' active' : ''}`}
-                onClick={() => navigate(r.path)}
+                href={r.path} onClick={() => setMenuOpen(false)}
               >
                 {r.label}
-              </button>
+              </Link>
             ))}
             <div style={{ height: 1, background: 'var(--rule)', margin: '8px 0' }} />
 

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllMarkdownPosts, getMarkdownPost, renderMarkdown, extractTOC } from '@/lib/markdown'
 import { BLOG_POSTS, getPost, type Block } from '@/lib/blog-posts'
+import ArticlePractice from '@/components/ArticlePractice'
 import QuickQuizGenerator from '@/components/QuickQuizGenerator'
 import { autoLinkTopics } from '@/lib/auto-linker'
 import PredictedPapersPromo from '@/components/PredictedPapersPromo'
@@ -252,7 +253,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Body + TOC */}
         <div className="blog-article-body" style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(32px, 4vw, 56px) clamp(20px, 4vw, 40px)', display: 'grid', gridTemplateColumns: '1fr', gap: 40 }}>
-          <article className="blog-prose" style={{ minWidth: 0 }} dangerouslySetInnerHTML={{ __html: htmlContent }} />
+          <div style={{ minWidth: 0 }}><ArticlePractice slug={slug} /><article className="blog-prose" dangerouslySetInnerHTML={{ __html: htmlContent }} /></div>
 
           {/* Sticky TOC at lg+ */}
           {toc.length > 0 && (
@@ -352,6 +353,7 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       <article style={{ maxWidth: 760, margin: '0 auto', padding: 'clamp(32px, 4vw, 56px) clamp(20px, 4vw, 40px)' }}>
+        <ArticlePractice slug={slug} />
         {ts.blocks.map((block, i) => <RenderBlock key={i} block={block} />)}
         <div style={{ marginTop: 32 }}>
           <QuickQuizGenerator topic={quiz.topic} topicSlug={quiz.practiceSlug} topicLabel={quiz.label} />

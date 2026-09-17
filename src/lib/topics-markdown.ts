@@ -86,7 +86,7 @@ function parseDiagramParams(raw: string): DiagramParams {
 
 export function renderTopicMarkdown(content: string): string {
   // Transform [FORMULA: ...] blocks into styled HTML
-  let processed = content.replace(
+  let processed = content.replace(/^\s*# [^\n]+\n/, "").replace(
     /\[FORMULA:\s*(.+?)\]/g,
     '<div class="formula-block">$1</div>'
   );

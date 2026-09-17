@@ -3,7 +3,6 @@ import { Inter, JetBrains_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import NavWrapper from "@/components/NavWrapper";
 import InstallBanner from "@/components/InstallBanner";
-import PslePromoBanner from "@/components/PslePromoBanner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,11 +27,11 @@ const BASE_URL = "https://www.gcsemathsai.co.uk";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "GCSEMaths — Preparation worthy of the grade you want",
+    default: "GCSE Maths Revision, Free Topic Quizzes & Worked Examples",
     template: "%s | GCSEMaths",
   },
   description:
-    "Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner, and organised into structured revision that actually moves your grade.",
+    "Free GCSE Maths topic quizzes, worked examples, formula sheets and revision notes for AQA, Edexcel and OCR. Practise Foundation and Higher topics with instant explanations.",
   keywords: [
     "GCSE Maths", "GCSE Mathematics", "AQA Maths", "Edexcel Maths", "OCR Maths",
     "GCSE past papers", "GCSE practice questions", "GCSE maths revision online",
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: BASE_URL,
     siteName: "GCSEMaths",
-    title: "GCSEMaths — Preparation worthy of the grade you want",
+    title: "GCSE Maths Revision, Free Topic Quizzes & Worked Examples",
     description:
       "Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner.",
     images: [
@@ -59,13 +58,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "GCSEMaths — Preparation worthy of the grade you want",
+        alt: "GCSE Maths Revision, Free Topic Quizzes & Worked Examples",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GCSEMaths — Preparation worthy of the grade you want",
+    title: "GCSE Maths Revision, Free Topic Quizzes & Worked Examples",
     description:
       "Instant examiner-style marking for GCSE Maths. Study notes, timed papers and topic practice for AQA, Edexcel and OCR.",
     images: ["/og.png"],
@@ -132,7 +131,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} antialiased`}>
-        <PslePromoBanner />
         <NavWrapper />
         {children}
         <InstallBanner />

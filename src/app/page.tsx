@@ -1,4 +1,5 @@
 'use client'
+import LearningProgress from '@/components/LearningProgress'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { PREDICTED_PAPERS, FOUNDATION_PAPERS, getCheckoutUrl } from '@/lib/predicted-papers'
@@ -7,32 +8,33 @@ import { OLEVEL_PRODUCT } from '@/lib/olevel-papers'
 
 export default function Home() {
   return (
-    <>
+    <main className="home-page">
+      <div className="wrap"><LearningProgress /></div>
       {/* HERO */}
-      <section style={{ padding: '80px 0 48px', position: 'relative' }}>
+      <section style={{ padding: '40px 0 40px', position: 'relative' }}>
         <div className="wrap">
           <div className="an d1" style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 28, fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--ink-3)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' as const }}>
             <span style={{ flex: '0 0 48px', height: 1, background: 'var(--ink-3)' }} />
-            <span style={{ color: 'var(--gold)' }}>No. 1</span>
-            <span>An Oxford-style preparation for the GCSE Mathematics examination</span>
+            <span style={{ color: 'var(--gold)' }}>GCSE Maths</span>
+            <span>AQA · Edexcel · OCR</span>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1.15fr 1fr', gap: 64, alignItems: 'start' }} className="hero-grid">
             <div>
-              <h1 className="an d2">Preparation <em>worthy</em> of the <span className="underline">grade you want.</span></h1>
+              <h1 className="an d2">GCSE Maths revision. <em>Learn it.</em> <span className="underline">Practise it.</span></h1>
               <p className="an d3" style={{ fontSize: 19, color: 'var(--ink-2)', maxWidth: 540, lineHeight: 1.55, marginBottom: 36, fontWeight: 500 }}>
-                Every topic on the AQA, Edexcel and OCR specifications — taught properly, marked like a real examiner, and organised into the kind of structured revision that actually moves your grade.
+                Choose a topic, try a free quiz and learn from each answer. Worked examples and revision notes for Foundation and Higher, with no signup needed for topic quizzes.
               </p>
               <div className="an d4" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' as const, marginBottom: 40 }}>
-                <a className="btn btn-primary" href="/learn" style={{ padding: '13px 22px', fontSize: 15 }}>Begin your first topic &rarr;</a>
-                <a className="btn btn-outline" href="/topics" style={{ padding: '13px 22px', fontSize: 15 }}>View the syllabus</a>
+                <Link className="btn btn-primary" href="/diagnostic" style={{ padding: '13px 22px', fontSize: 15 }}>Try a free topic quiz &rarr;</Link>
+                <Link className="btn btn-outline" href="/topics" style={{ padding: '13px 22px', fontSize: 15 }}>View the syllabus</Link>
               </div>
               <div className="an d5" style={{ display: 'flex', gap: 32, flexWrap: 'wrap' as const, padding: '20px 0', borderTop: '1px solid var(--rule)', borderBottom: '1px solid var(--rule)' }}>
                 {[
-                  { num: <><em>73</em></>, label: 'TOPICS · FULL SPEC' },
-                  { num: '+1.8', label: 'AVG. GRADE LIFT' },
-                  { num: <>4.9<span style={{ color: 'var(--gold)', fontStyle: 'italic' }}>&#9733;</span></>, label: 'FROM 812 STUDENTS' },
-                  { num: '12,847', label: 'QUESTIONS MARKED / WK' },
+                  { num: <><em>245</em></>, label: 'TOPIC GUIDES' },
+                  { num: 'Free', label: 'TOPIC QUIZZES' },
+                  { num: 'Instant', label: 'QUIZ EXPLANATIONS' },
+                  { num: '2 tiers', label: 'FOUNDATION & HIGHER' },
                 ].map((c, i) => (
                   <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                     <div style={{ fontFamily: 'var(--serif)', fontSize: 28, fontWeight: 700, color: 'var(--ink)', lineHeight: 1, letterSpacing: '-0.02em' }}>{c.num}</div>
@@ -418,14 +420,14 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="sec-label">The Method</div>
-            <h2>Three principles that <em>actually move grades.</em></h2>
+            <h2>Build a <em>regular revision habit.</em></h2>
             <p className="sec-sub">Most revision sites give you more content. We give you the one thing a textbook can&apos;t: <b>feedback on the way you&apos;re thinking.</b></p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }} className="method-grid">
             {[
-              { num: 'I.', title: <>Marked like <em>a real examiner</em> marks.</>, desc: 'Method marks. Accuracy marks. Follow-through. When you slip up on line three, we still award what you earned on lines one and two — exactly the way AQA, Edexcel and OCR do.' },
+              { num: 'I.', title: <>Review your <em>working and reasoning.</em></>, desc: 'AI feedback helps you review your working and spot missed steps. It is practice feedback, not an official exam-board mark; check important answers against worked solutions.' },
               { num: 'II.', title: <>Built around <em>consistent</em> revision.</>, desc: "Fifteen minutes a day beats three hours on a Sunday. Your dashboard tracks where you've been, where you're weak, and what to do next." },
-              { num: 'III.', title: <>A predicted grade that <em>responds</em>.</>, desc: 'Every question you answer refines a rolling prediction of your exam grade. Know exactly which topics are holding you back.' },
+              { num: 'III.', title: <>Practice that <em>guides your revision</em>.</>, desc: 'Use your practice results to choose what to revise next. Practice scores are a guide to your next steps, not a guaranteed exam grade.' },
             ].map((m, i) => (
               <div key={i} style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: '32px 28px', transition: 'all 0.2s' }}>
                 <div style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 56, fontWeight: 500, color: 'var(--green)', lineHeight: 1, letterSpacing: '-0.03em', marginBottom: 12, opacity: 0.9 }}>{m.num}</div>
@@ -437,37 +439,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STUDENT JOURNEYS */}
-      <section>
-        <div className="wrap">
-          <div className="sec-head">
-            <div className="sec-label">Student Journeys</div>
-            <h2>The grades speak <em>for themselves.</em></h2>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }} className="journeys-grid">
-            {[
-              { quote: <>Went from a 5 to a 7 in eight weeks. The <em>method marking</em> is the thing that finally told me where I was actually losing marks.</>, name: 'Aaliyah Khan', detail: 'Year 11 \u00B7 Edexcel \u00B7 Higher', result: '5\u21927', initials: 'AK', bg: 'var(--green)' },
-              { quote: <>Fifteen minutes before dinner, every day. Didn&apos;t feel like revision — and then I <em>actually knew everything</em> on the paper.</>, name: 'Jack Martin', detail: 'Year 10 \u00B7 AQA \u00B7 Foundation', result: '4\u21925', initials: 'JM', bg: 'var(--burgundy)' },
-              { quote: <>Better than the &pound;40-an-hour tutor we were paying — and I could revise at <em>two in the morning</em> the night before the exam.</>, name: 'Priya Shah', detail: 'Year 11 \u00B7 OCR \u00B7 Higher', result: '6\u21929', initials: 'PS', bg: 'var(--navy)' },
-            ].map((j, i) => (
-              <div key={i} style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 12, padding: '32px 28px', position: 'relative', display: 'flex', flexDirection: 'column', gap: 20 }}>
-                <div style={{ position: 'absolute', top: 8, right: 28, fontFamily: 'var(--serif)', fontSize: 96, fontStyle: 'italic', fontWeight: 500, color: 'var(--green)', opacity: 0.12, lineHeight: 1 }}>&ldquo;</div>
-                <div style={{ fontFamily: 'var(--serif)', fontSize: 20, fontWeight: 500, lineHeight: 1.4, color: 'var(--ink)', letterSpacing: '-0.01em', marginBottom: 20, position: 'relative' }}>{j.quote}</div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 14, paddingTop: 18, borderTop: '1px solid var(--rule)', marginTop: 'auto' }}>
-                  <div style={{ width: 44, height: 44, borderRadius: '50%', background: j.bg, color: 'var(--cream)', display: 'grid', placeItems: 'center', fontFamily: 'var(--serif)', fontWeight: 700, fontSize: 16 }}>{j.initials}</div>
-                  <div>
-                    <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)', letterSpacing: '-0.005em' }}>{j.name}</div>
-                    <div style={{ fontFamily: 'var(--mono)', fontSize: 11.5, color: 'var(--ink-3)', fontWeight: 500, marginTop: 2 }}>{j.detail}</div>
-                  </div>
-                  <div style={{ marginLeft: 'auto', fontFamily: 'var(--serif)', fontSize: 20, fontWeight: 700, color: 'var(--green)', display: 'flex', alignItems: 'baseline', gap: 4, letterSpacing: '-0.01em' }}>
-                    {j.result}<small style={{ fontFamily: 'var(--mono)', fontSize: 10, fontWeight: 600, color: 'var(--ink-3)', letterSpacing: '0.05em', textTransform: 'uppercase' as const, fontStyle: 'normal' }}>grade</small>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section><div className="wrap">
+        <div className="sec-head"><h2>Choose your next step</h2><p>Build confidence with a short practice session, then work on what you missed.</p></div>
+        <div className="journeys-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+          {[
+            { title: 'Start with the essentials', text: 'Check fractions, percentages and basic algebra before moving on.', href: '/diagnostic/fractions' },
+            { title: 'Strengthen your algebra', text: 'Practise simplifying expressions with explanations after every answer.', href: '/diagnostic/simplifying-expressions' },
+            { title: 'Prepare for an exam', text: 'Find practice papers and official exam-board resources.', href: '/papers' },
+          ].map(route => <Link className="learning-panel" key={route.href} href={route.href}><h3>{route.title}</h3><p>{route.text}</p><span>Get started →</span></Link>)}
         </div>
-      </section>
+      </div></section>
 
       {/* FINAL CTA */}
       <section>
@@ -478,14 +459,14 @@ export default function Home() {
           }}>
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'linear-gradient(90deg, var(--green), var(--gold) 50%, var(--burgundy))' }} />
             <div style={{ maxWidth: 620, margin: '0 auto', textAlign: 'center' }}>
-              <div style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--ink-3)', fontWeight: 600, letterSpacing: '0.08em', marginBottom: 24 }}>APRIL &middot; MMXXVI</div>
-              <h2>Start tonight. <em>Thank yourself in May.</em></h2>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--ink-3)', fontWeight: 600, letterSpacing: '0.08em', marginBottom: 24 }}>YOUR NEXT REVISION SESSION</div>
+              <h2>Start with <em>one topic today.</em></h2>
               <p style={{ fontSize: 18, color: 'var(--ink-2)', lineHeight: 1.55, marginBottom: 32, fontWeight: 500 }}>
-                Free to begin, no card required. Every student who finishes the first topic earns a free copy of our GCSE Maths Formula Sheet.
+                Try a free topic quiz, review the explanations and save your result on this device. The formula sheet is free to download at any time.
               </p>
               <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' as const }}>
-                <a className="btn btn-primary" href="/learn" style={{ padding: '14px 26px', fontSize: 15 }}>Begin your first topic &rarr;</a>
-                <a className="btn btn-outline" href="/formula-sheet" style={{ padding: '14px 26px', fontSize: 15 }}>Download the formula sheet</a>
+                <Link className="btn btn-primary" href="/learn" style={{ padding: '14px 26px', fontSize: 15 }}>Begin your first topic &rarr;</Link>
+                <Link className="btn btn-outline" href="/formula-sheet" style={{ padding: '14px 26px', fontSize: 15 }}>Download the formula sheet</Link>
               </div>
               <div style={{ marginTop: 40, paddingTop: 32, borderTop: '1px solid var(--rule)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 15, color: 'var(--ink-3)', fontWeight: 500 }}>
                 &mdash; <span>the GCSEMathsAI team, London</span>
@@ -507,6 +488,6 @@ export default function Home() {
           .journeys-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
-    </>
+    </main>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Notes Review — Instant Feedback on Your Revision Notes',
   description:
     'Upload your handwritten or typed GCSE Maths revision notes and get instant feedback on completeness, accuracy and gaps.',

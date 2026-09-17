@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import QuizFinder from '@/components/QuizFinder'
+import LearningProgress from '@/components/LearningProgress'
 import { getAllDiagnosticSets } from '@/lib/diagnostic-mcqs'
 
 export const metadata: Metadata = {
@@ -34,12 +36,13 @@ export default function DiagnosticIndexPage() {
 
   return (
     <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 20px' }}><LearningProgress /></div>
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: 'clamp(40px, 6vw, 64px) 20px', textAlign: 'center' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--gold)', marginBottom: 14, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
           <span style={{ color: 'var(--gold)' }}>{'◆'}</span> Free
         </div>
         <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 600, color: 'var(--ink)', letterSpacing: '-0.02em', lineHeight: 1.1, margin: '0 auto 12px', maxWidth: 700 }}>
-          Diagnostic <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>MCQ Quizzes</em>
+          GCSE Maths <em style={{ color: 'var(--green)', fontStyle: 'italic' }}>Practice Quizzes</em>
         </h1>
         <p style={{ color: 'var(--ink-3)', fontSize: 'clamp(14px, 1.6vw, 16px)', lineHeight: 1.6, maxWidth: 560, margin: '0 auto' }}>
           {totalQuizzes} topic quizzes with {totalQuestions} questions. Each wrong answer identifies a specific misconception so you know exactly what to revise.
@@ -47,6 +50,7 @@ export default function DiagnosticIndexPage() {
       </section>
 
       <section style={{ maxWidth: 1100, margin: '0 auto', padding: 'clamp(32px, 5vw, 56px) 20px 80px' }}>
+        <QuizFinder quizzes={allSets.map(s => ({ slug: s.topicSlug, title: s.topicTitle, strand: s.strand }))} />
         {grouped.map(({ strand, sets }) => {
           const colours = STRAND_COLOURS[strand] ?? { accent: 'var(--ink)', bg: 'var(--cream)' }
           return (

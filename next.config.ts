@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   redirects: async () => [
+    { source: '/practice/gcse-maths', destination: '/diagnostic', permanent: true },
+    { source: '/practice/quadratic-equations', destination: '/diagnostic/solving-quadratic-equations-factorising', permanent: true },
     // ── /predicted-papers → /practice-papers (slug rename 2026-05) ─────────
     // The route folder is now src/app/practice-papers. These 308s consolidate
     // the previously indexed /predicted-papers URLs to the new slug without
@@ -99,6 +101,8 @@ const nextConfig: NextConfig = {
     { source: '/formulas-print/:path*', destination: '/formulas/:path*' },
   ],
   headers: async () => [
+    { source: '/formulas/Number/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }] },
+    { source: '/formulas-print/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }] },
     {
       source: '/(.*)',
       headers: [

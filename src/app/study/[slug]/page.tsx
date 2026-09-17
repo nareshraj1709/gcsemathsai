@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import ArticlePractice from '@/components/ArticlePractice'
 import Link from 'next/link'
 import { CONTENT, TOPIC_META, toSlug, type SubtopicContent } from '@/lib/study-content'
 
@@ -55,33 +57,7 @@ export default async function StudyTopicPage({ params }: Props) {
   )
   const meta = entry ? TOPIC_META[entry.topic] : null
 
-  if (!entry || !meta) {
-    const readableQuery = (slug ?? '').replace(/-/g, ' ')
-    return (
-      <main className="min-h-screen bg-gray-50 px-6 py-12">
-        <div className="max-w-lg mx-auto text-center">
-          <p className="text-5xl mb-4">🔜</p>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Notes coming soon</h1>
-          <p className="text-gray-500 text-sm mb-8">
-            We&apos;re writing the study guide for this subtopic. In the meantime, search YouTube for a free video explanation.
-          </p>
-          <a
-            href={`https://www.youtube.com/results?search_query=GCSE+maths+${encodeURIComponent(readableQuery)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-red-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm mb-6"
-          >
-            ▶ Search on YouTube
-          </a>
-          <br />
-          <Link href="/study"
-            className="inline-block border border-purple-300 text-purple-700 px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-purple-50 transition">
-            ← Back to topics
-          </Link>
-        </div>
-      </main>
-    )
-  }
+  if (!entry || !meta) notFound()
 
   const bg = sectionBg[meta.color] ?? '#F8F7FF'
   const terms: string[] = entry.videoSearchTerms && entry.videoSearchTerms.length > 0
@@ -169,6 +145,7 @@ export default async function StudyTopicPage({ params }: Props) {
         <p style={{ fontSize: 15, opacity: 0.9, maxWidth: 520, margin: '0 auto' }}>{entry.overview}</p>
       </div>
 
+      <div className="max-w-6xl mx-auto px-6"><ArticlePractice /></div>
       {/* ── Page body: notes (left) + YouTube sidebar (right) ── */}
       <div className="max-w-6xl mx-auto px-6 py-8 pb-16 flex flex-col lg:flex-row gap-8 items-start">
 

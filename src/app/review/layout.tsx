@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Session Review — See How You Did',
   description:
     'Review your GCSE Maths practice session results. See scores by question, AI evaluation, strengths, areas to improve and recommended revision topics.',

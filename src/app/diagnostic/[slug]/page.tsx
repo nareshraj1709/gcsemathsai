@@ -26,6 +26,10 @@ export default async function DiagnosticPage({ params }: Props) {
   const set = getDiagnosticSet(slug)
   if (!set) notFound()
 
+  const sameStrand = getAllDiagnosticSets().filter(s => s.strand === set.strand)
+  const index = sameStrand.findIndex(s => s.topicSlug === slug)
+  const next = sameStrand[(index + 1) % sameStrand.length]
+
   return (
     <main style={{ minHeight: '100vh', background: 'var(--cream)' }}>
       <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--rule)', padding: '32px 20px' }}>
@@ -37,10 +41,12 @@ export default async function DiagnosticPage({ params }: Props) {
       </section>
 
       <section style={{ maxWidth: 640, margin: '0 auto', padding: '40px 20px 80px' }}>
-        <DiagnosticQuiz
+        <h1 style={{ fontSize: 28, marginBottom: 20 }}>{set.topicTitle}: free practice quiz</h1>
+        <DiagnosticQuiz key={slug}
           topicSlug={set.topicSlug}
           topicTitle={set.topicTitle}
           questions={set.questions}
+          nextTopic={next && next.topicSlug !== slug ? { slug: next.topicSlug, title: next.topicTitle } : undefined}
         />
       </section>
     </main>

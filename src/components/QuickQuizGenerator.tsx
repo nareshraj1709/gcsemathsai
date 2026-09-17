@@ -73,7 +73,7 @@ function scoreMessage(score: number, total: number): string {
 
 // ── Component ────────────────────────────────────────────────────────────────
 
-export default function QuickQuizGenerator({ topic, topicSlug, topicLabel }: Props) {
+export default function QuickQuizGenerator({ topic, topicLabel }: Props) {
   const [phase, setPhase] = useState<Phase>('idle')
   const [difficulty, setDifficulty] = useState<Difficulty>('medium')
   const [count, setCount] = useState(5)
@@ -402,7 +402,7 @@ export default function QuickQuizGenerator({ topic, topicSlug, topicLabel }: Pro
           {/* CTA */}
           <div className="space-y-3">
             <Link
-              href={`/practice/${topicSlug}`}
+              href={`/practice?topic=${encodeURIComponent(topic)}&subtopic=${encodeURIComponent(label)}`}
               className="block w-full rounded-xl bg-gradient-to-r from-purple-700 to-purple-500 py-3.5 text-sm font-bold text-white shadow transition hover:-translate-y-0.5 hover:shadow-md"
             >
               Practice More Questions →

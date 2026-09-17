@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import { getAllTopics, getTopicPost, renderTopicMarkdown, extractTopicTOC } from '@/lib/topics-markdown'
 import { autoLinkTopics } from '@/lib/auto-linker'
 import { getAcademicReferences } from '@/lib/academic-references'
+import DiagnosticQuiz from '@/components/DiagnosticQuiz'
+import { getDiagnosticSet } from '@/lib/diagnostic-mcqs'
 import PredictedPapersPromo from '@/components/PredictedPapersPromo'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -52,6 +54,7 @@ export default async function TopicPage({ params }: Props) {
   const topic = getTopicPost(slug)
   if (!topic) notFound()
 
+  const quiz = getDiagnosticSet(slug)
   const rawHtml = renderTopicMarkdown(topic.content)
   const html = autoLinkTopics(rawHtml, topic.slug)
   const toc = extractTopicTOC(topic.content)
@@ -138,6 +141,17 @@ export default async function TopicPage({ params }: Props) {
 
         {/* Article content */}
         <article style={{ flex: 1, minWidth: 0, maxWidth: 760 }}>
+          <nav className="learning-actions" aria-label="Choose how to learn" style={{ marginBottom: 20 }}>
+            <a className="btn btn-primary" href="#topic-quiz">Try the free quiz</a>
+            <a className="btn btn-outline" href="#worked-examples">Read the lesson</a>
+            <Link className="btn btn-outline" href={`/formulas/${slug}`}>Formula sheet</Link>
+          </nav>
+          {quiz && <div id="topic-quiz" style={{ marginBottom: 32, scrollMarginTop: 100 }}>
+            <DiagnosticQuiz key={slug} topicSlug={slug} topicTitle={quiz.topicTitle} questions={quiz.questions} embedded
+              nextTopic={nextTopic && getDiagnosticSet(nextTopic.slug) ? { slug: nextTopic.slug, title: getDiagnosticSet(nextTopic.slug)!.topicTitle } : undefined} />
+          </div>}
+          <details className="learning-panel lg:hidden"><summary>On this page</summary><nav>{toc.map(h => <a key={h.id} href={`#${h.id}`} style={{ display: 'block', padding: '6px 0' }}>{h.text}</a>)}</nav></details>
+          <div id="worked-examples" style={{ scrollMarginTop: 100 }} />
           <div
             className="topic-prose prose prose-gray prose-lg max-w-none
               prose-headings:font-bold
@@ -326,10 +340,10 @@ export default async function TopicPage({ params }: Props) {
                 margin: '0 0 4px',
               }}>Practice this topic</p>
               <p style={{ fontSize: 12, color: 'var(--ink-3)', margin: '0 0 12px' }}>
-                Get AI-marked questions with instant feedback.
+                Try a free topic quiz with instant explanations.
               </p>
               <Link
-                href="/auth"
+                href={`/diagnostic/${slug}`}
                 style={{
                   display: 'block',
                   textAlign: 'center',
@@ -344,7 +358,7 @@ export default async function TopicPage({ params }: Props) {
                   transition: 'background 0.15s',
                 }}
               >
-                Start free &rarr;
+                Start quiz &rarr;
               </Link>
             </div>
 
@@ -395,7 +409,7 @@ export default async function TopicPage({ params }: Props) {
               color: 'var(--green)',
               textDecoration: 'none',
             }}>
-              &larr; All 245 topics
+              &larr; All {allTopics.length} topics
             </Link>
           </div>
         </aside>
