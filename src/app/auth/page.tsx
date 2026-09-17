@@ -10,7 +10,7 @@ type Mode = 'login' | 'signup' | 'forgot'
 function AuthForm() {
   const router = useRouter()
   const params = useSearchParams()
-  const [mode, setMode] = useState<Mode>(params.get('mode') === 'signup' ? 'signup' : params.get('mode') === 'forgot' ? 'forgot' : 'login')
+  const mode: Mode = params.get('mode') === 'signup' ? 'signup' : params.get('mode') === 'forgot' ? 'forgot' : 'login'
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [visible, setVisible] = useState(false)
@@ -18,7 +18,7 @@ function AuthForm() {
   const [message, setMessage] = useState('')
   const [error, setError] = useState(false)
   const busy = useRef(false)
-  const switchMode = (next: Mode) => { setMode(next); setMessage(''); setError(false); setPassword('') }
+  const switchMode = (next: Mode) => { router.replace(`/auth?mode=${next}`, { scroll: false }); setMessage(''); setError(false); setPassword('') }
   async function enterAccount() {
     clearProfileCache()
     const profile = await withAuthTimeout(loadProfile())
@@ -38,7 +38,7 @@ function AuthForm() {
         if (result.error) throw result.error
         if (result.data.session) await enterAccount()
         else if (result.data.user?.identities?.length === 0) {
-          setMode('login'); setMessage('You may already have an account. Log in below or choose Reset password.')
+          router.replace('/auth', { scroll: false }); setMessage('You may already have an account. Log in below or choose Reset password.')
         } else {
           setPassword(''); setMessage('Check your email for a confirmation link, then open it to finish setting up your account. Check your spam folder too.')
         }
